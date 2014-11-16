@@ -1,0 +1,13 @@
+
+/* Prevent blockquotes to be giant-sized */
+blockquote p {
+font-size: inherit;
+font-style: italic;
+}
+
+
+/* Nicer font for code samples */
+code, kbd, pre, samp {
+font-family: "Lucida Console","Courier New",monospace;
+font-size: 12px;
+}
