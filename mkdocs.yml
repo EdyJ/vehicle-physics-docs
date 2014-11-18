@@ -15,7 +15,8 @@ pages:
 - ['user-guide/sounds.md', 'User Guide', 'Adding sounds and audio effects']
 - ['user-guide/vehicle-interaction.md', 'User Guide', 'Interacting with vehicles']
 - ['user-guide/vehicle-setup.md', 'User Guide', 'Configuring and tunning vehicles']
-- ['user-guide/3d-models.md', 'User Guide', 'Requirements for the 3D models']
+- ['user-guide/3d-models.md', 'User Guide', 'Requirements for 3D models']
+- ['user-guide/developing-addons.md', 'User Guide', 'Writting add-on features']
 - ['components/vehicle-controller.md', 'Components', 'Vehicle Controller']
 - ['components/vehicle-input.md', 'Components', 'Vehicle Input']
 - ['components/vehicle-audio.md', 'Components', 'Vehicle Audio']
@@ -28,4 +29,6 @@ pages:
 - ['classes/wheel.md', 'Classes', 'VPCWheel']
 - ['classes/solver.md', 'Classes', 'VPSolver']
 - ['classes/databus.md', 'Classes', 'VPDataBus']
+- ['advanced/custom-components.md', 'Advanced', 'Creating custom components']
+- ['advanced/custom-vehicles.md', 'Advanced', 'Creating custom vehicles']
 
