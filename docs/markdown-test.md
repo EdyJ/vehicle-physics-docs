@@ -16,10 +16,7 @@ For full documentation visit [mkdocs.org](http://mkdocs.org).
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 
-
-## Extensions
-
-Now let's see if/how markdown extensions work:
+### Fenced code
 
 ```
 public float GetMaxPowerTorque (float rpm)
@@ -38,21 +35,21 @@ public float GetMaxPowerTorque (float rpm)
 
 ### Tables
 
-Just trying a level-3 header... and now the tables:
+Standard table:
 
 First Header  | Second Header
 ------------- | -------------
 Content Cell  | Content Cell
 Content Cell  | Content Cell
 
-A ver así
+With surrounding borders:
 
 | First Header  | Second Header |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 
-Tablas mínimas:
+Absolutely minimum tables:
 
 head 1 	| 	head 2
 -		|	-
@@ -62,9 +59,7 @@ a		|	b
 |-|
 |a|
 
-
-
-### Alerts:
+### Alerts
 
 &fa-thumbs-o-up; **Testing Bootstrap CSS** La verdad que tampoco está mal...
 {: .alert .alert-success }
@@ -72,29 +67,29 @@ a		|	b
 ** &fa-warning; Y ahora** usando un [Enlace](#){: .alert-link } que se supone coincide con el tipo de alert.
 {: .alert .alert-warning }
 
-### Admonitions:
+### Admonitions
 
 !!! warning "&fa-warning; optional explicit title within double quotes"
     Any number of other indented markdown elements.
 
     This is the second paragraph.
 
-	- Hola
-	- Esto es una
-	- Lista dentro del <del>admonition</del>
-
-	<del>Mistaken text.</del>
-
+	- This is a list with several items
+	- Everything inside the admonition
+	- And with proper spacing
 
 !!! info "&fa-info-circle; Hey!"
     You should note that the title might be automatically capitalized.
 
+### Text effects
 
-Tenemos strikethrough?
+<del>Strikethrough text.</del>
 
-<del>Mistaken text.</del>
+<u>Underline</u>
 
-### Math test
+Use <kbd>alt</kbd><kbd>f4</kbd> to enter God mode. <kbd>Ctrl</kbd><kbd>q</kbd> to quit.
+
+### Math
 
 The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
 
