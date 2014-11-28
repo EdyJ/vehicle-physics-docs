@@ -1,7 +1,7 @@
 site_name: Vehicle Physics Pro
 theme_dir: 'custom_theme'
 theme: mkdocs
-markdown_extensions: [extra, admonition, mathjax, iconfonts(prefix=fa)]
+markdown_extensions: ['extra', 'admonition', 'mathjax', 'iconfonts(base=fa,prefix=fa)']
 
 extra_css: ['css/tables.css','css/admonitions.css','css/fixes.css']
 extra_javascript: ['https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML','js/mathjaxhelper.js']
