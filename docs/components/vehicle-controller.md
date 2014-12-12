@@ -13,8 +13,8 @@ Choose one of the presets or select _Custom_ for setting up the axles and roles 
 
 ## Axles
 
-WheelColliders and visual meshes for each wheel. Some additional settings may be
-available or not depending on the vehicle type.
+WheelColliders and visual meshes for each wheel. Some settings may be available or not depending
+on the vehicle type.
 
 #### Wheels
 
@@ -36,8 +36,15 @@ Which brake system (front, rear, neutral) will control the brakes for this axle.
 
 #### Steering
 
-Steering capabilities such as steering angle and Ackerman. Also the _Toe_ alignment
-can be configured here.
+Steering settings for this axle. The relative longitudinal position configures how the steering
+affects this axle:
+
+- 1: This is a regular front axle with steering
+- 0: This axle is not affected by steering
+- -1: This axle steers the opposite of the regular steering angle (i.e. rear steering wheels)
+
+Values in between set an intermediate amount of steering for that axle. Useful for, for instance,
+multi-axle cranes with several steering axles.
 
 ## Center of mass
 

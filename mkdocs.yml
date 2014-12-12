@@ -19,6 +19,7 @@ pages:
 
 - ['markdown-test.md', 'User Guide', 'Markdown test page']
 
+- ['components/component-overview.md', 'Components', 'Component Overview']
 - ['components/vehicle-controller.md', 'Components', 'Vehicle Controller']
 - ['components/vehicle-input.md', 'Components', 'Vehicle Input']
 - ['components/vehicle-audio.md', 'Components', 'Vehicle Audio']
