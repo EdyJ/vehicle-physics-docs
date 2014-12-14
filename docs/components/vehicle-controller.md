@@ -57,7 +57,7 @@ vehicle. The vertical position affects the stability.
 !!! info "&fa-info-circle; Initial setup for the Center of Mass"
 
 	1. Create an empty child GameObject in your vehicle (<kbd>Alt</kbd><kbd>Shift</kbd><kbd>N</kbd>).
-	2. Name the GameObject CoM, then put it as Center of Mass in the vehicle controller.
+	2. Rename it as `CoM`, then reference it as Center of Mass in the vehicle controller.
 	3. Place the GameObject it in the exact center of your vehicle.
 	4. Figure out the chassis of the vehicle. Lower the vertical position (Y) of the CoM until
 		it "touches" the imaginary chassis from upside.
