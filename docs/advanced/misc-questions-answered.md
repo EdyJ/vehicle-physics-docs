@@ -27,7 +27,7 @@ Some subjective recommendations:
 Substeps | Comments
 -------- | ---------------
 1 |	Non-player vehicles that don't require precise physics such traffic, parked cars, etc.
-**2** | Minimum recommended for any player vehicle or "active" non-player vehicle (i.e. opponents) that require correct physic behavior.
+2 | Minimum recommended for any player vehicle or "active" non-player vehicle (i.e. opponents) that require precise physic behavior.
 4 | Good value for having reasonably precise results.
 8 | Nice value for having good precise results. Profiler tests show no significant penalty on using from 1 to 8 substeps.
 20 | Maximum recommended value. With Unity's default physic step (50Hz) the vehicle does its internal calculations at 1000Hz (20 x 50hz).
@@ -36,24 +36,39 @@ Reaching 40 or more substeps is typically not necessary nor recommended. Some co
 numerical oscillations on high amount of substeps.
 
 Final value depends on the specific project: CPU requirements, number and type of vehicles, expected
-precision of the physic data...
+precision...
 
-#### Vehicle shakes or becomes instable
+#### How to measure the precision of the integration?
 
-If you observe values that are quickly oscillating at the telemetry then either change the
-integration method or adjust the substeps in the Euler method:
+First ensure you understand the difference among _accuracy_ and _precision_. **Vehicle Physics Pro
+is 100% accurate in its design, implementation and behavior**. _Precision_ affects the the
+specific numeric values only, and depends on the integration method and substeps.
 
-- A single substep is likely to cause oscillating values, but usually they don't have a noticeable effect.
-- 2-8 substeps are stable in most situations.
-- 30-50 or more substeps are not recommended as the numerical oscillations can get increased.
+A simple way to measure the precision is setting the **Differential Type** to **Locked**. This
+enforces both drive wheels to rotate at the same rate. Then drive around gently and do some
+left-right turning.
 
-If the vehicle becomes instable at high speeds then either increase the tire relaxation rate or
+When using 1-4 substeps the wheels are "pursuing" each other when changing the steering direction,
+but won't likely spin at a similar rate unless direction is keep steady. The more substeps, the
+faster they will catch each other's rotation rate. With 10-20 substeps the difference in their
+rates will always be within 1-2 rpms only.
+
+#### Vehicle shakes or becomes unstable
+
+If the vehicle becomes unstable at high speeds then either increase the tire relaxation rate or
 disable the tire relaxation feature. At high speeds low relaxation rates can enter in resonance
 with lateral forces destabilizing the vehicle.
 
 !!! Info "&fa-thumbs-o-up;"
 	Tire relaxation rates can be used to simulate tires targeted to different speeds. Tires with
 	low spring rates become difficult to drive at high speeds.
+
+If you observe values that are quickly oscillating at the telemetry in a way that visibly affects the
+vehicle (shakes) then either change the integration method or adjust the substeps in the Euler method:
+
+- A single substep is likely to cause oscillating values, but usually they don't have a noticeable effect.
+- 2-8 substeps are stable in most situations.
+- 40 or more substeps are not recommended as the numerical oscillations can get increased.
 
 
 ## Engine component
