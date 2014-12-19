@@ -39,4 +39,5 @@ pages:
 - ['advanced/custom-components.md', 'Advanced', 'Creating custom components']
 - ['advanced/custom-vehicles.md', 'Advanced', 'Creating custom vehicles']
 - ['advanced/developing-addons.md', 'Advanced', 'Writting add-on features']
-
+- ['advanced/databus-reference.md', 'Advanced', 'Data Bus reference']
+- ['advanced/misc-questions-answered.md', 'Advanced', 'Miscelaneous questions answered']

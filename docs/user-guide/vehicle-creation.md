@@ -40,12 +40,8 @@ CoM
 :	The location of the Center of Mass. It has great influence in the vehicle's handling
 	and stability.
 Ackerman
-: 	The location of the reference point for the Ackerman steering geometry. It's
-	typically placed at the center of the rear axle in 4-wheeled vehicles.
-
-> NOTA: Estudiar hacer que Ackerman responda a la posición lateral. Ahí se calculará el radio
-> de giro, y se usarán las posiciones de las ruedas relativas. Ej. posicionando en la rueda trasera
-> derecha, hará que la rueda delantera derecha tenga siempre los mismos grados exactos de steering.
+: 	The location of the reference point for the Ackerman steering geometry. For 4-wheeled vehicles
+	it's typically placed at the center of the rear axle.
 
 ## Component overview
 
