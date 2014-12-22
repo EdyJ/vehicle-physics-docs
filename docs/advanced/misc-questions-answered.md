@@ -30,7 +30,7 @@ Substeps | Comments
 2 | Minimum recommended for any player vehicle or "active" non-player vehicle (i.e. opponents) that require precise physic behavior.
 4 | Good value for having reasonably precise results.
 8 | Nice value for having good precise results. Profiler tests show no significant penalty on using from 1 to 8 substeps.
-20 | Maximum recommended value. With Unity's default physic step (50Hz) the vehicle does its internal calculations at 1000Hz (20 x 50hz).
+20 | Maximum recommended value. With Unity's default physic step (0.02s, 50Hz) the vehicle does its internal calculations at 1000Hz (20 x 50hz).
 
 Reaching 40 or more substeps is typically not necessary nor recommended. Some components exhibit
 numerical oscillations on high amount of substeps.
@@ -38,11 +38,26 @@ numerical oscillations on high amount of substeps.
 Final value depends on the specific project: CPU requirements, number and type of vehicles, expected
 precision...
 
+#### Should I change the Unity's physics timestep?
+
+There's no need for changing Unity's default physics/fixed timestep (0.02). Within Vehicle Physics
+Pro you can configure the amount of integration substeps in a per-vehicle basis.
+
+Some calculations and data are extracted out of the Unity physics engine: _velocity_ and _downforce_.
+These are calculated at the Unity's physics rate.
+
+If you really need to get the most precision out of the vehicle physics then you can modify the Unity's
+fixed timestep to 0.01 (100Hz) or 0.005 (200Hz). This is NOT recommended because it can dramatically
+increase the CPU usage footprint because of the physics. Also ensure the integration substeps are
+adjusted accordingly: if fixed timestep is 0.01 (100Hz) and your vehicle is set to 10 substeps,
+then the calculations for that vehicle are done at 1000Hz.
+
 #### How to measure the precision of the integration?
 
-First ensure you understand the difference among _accuracy_ and _precision_. **Vehicle Physics Pro
-is 100% accurate in its design, implementation and behavior**. _Precision_ affects the the
-specific numeric values only, and depends on the integration method and substeps.
+Ensure you understand the [difference among _accuracy_ (or _trueness_) and _precision_](http://en.wikipedia.org/wiki/Accuracy_and_precision).
+**Vehicle Physics Pro is fully accurate in its design, implementation and behavior** giving
+reasonably precise results. _Precision_ affects the the specific numeric values only, and depends
+on the integration method and substeps.
 
 A simple way to measure the precision is setting the **Differential Type** to **Locked**. This
 enforces both drive wheels to rotate at the same rate. Then drive around gently and do some
@@ -56,44 +71,93 @@ rates will always be within 1-2 rpms only.
 #### Vehicle shakes or becomes unstable
 
 If the vehicle becomes unstable at high speeds then either increase the tire relaxation rate or
-disable the tire relaxation feature. At high speeds low relaxation rates can enter in resonance
+disable the tire relaxation feature. Low tire relaxation rates at high speeds can enter in resonance
 with lateral forces destabilizing the vehicle.
 
-!!! Info "&fa-thumbs-o-up;"
-	Tire relaxation rates can be used to simulate tires targeted to different speeds. Tires with
+!!! Info "&fa-thumbs-o-up; Pro-Tip"
+	Tire relaxation rate can be used to simulate tires targeted to different speeds. Tires with
 	low spring rates become difficult to drive at high speeds.
 
 If you observe values that are quickly oscillating at the telemetry in a way that visibly affects the
 vehicle (shakes) then either change the integration method or adjust the substeps in the Euler method:
 
 - A single substep is likely to cause oscillating values, but usually they don't have a noticeable effect.
-- 2-8 substeps are stable in most situations.
-- 40 or more substeps are not recommended as the numerical oscillations can get increased.
+- 2-8 substeps are pretty stable in most situations.
+- 40 or more substeps are not recommended as the numerical oscillations can get magnified.
 
 
 ## Engine component
 
 #### It's difficult to stall
 
-The **Idle Control** setting defines how the idle rpms are enforced:
+The **Idle Control** setting defines how the idle rpms are enforced. The Passive mode is much easier
+to stall, but requires configuring the engine friction in a specific way.
+
+Idle Control:
 
 - **Active**: Vehicle's electronic system actively applies as much torque as available for keeping
 	the idle rpms.
-- **Passive**: Engine applies the torque that compensates the friction at idle rpms. Works better
-	with a steep lineal friction setting. Also, requires the throttle to be applied for starting
+- **Passive**: Engine just applies a constant torque that compensates the friction at idle rpms.
+	Works better with a steep friction curve at idle rpm. Also, requires the throttle to be applied for starting
 	with the ignition key.
-
-The Passive mode is much easier to stall, but requires configuring the engine friction in a specific
-way.
 
 Increasing the **Stall bias** setting makes the engine more sensitive to rpms below idle. Check out
 the calculated stall rpm value at the inspector, below the engine graph.
 
 #### Stalls too easy
 
-Disabling **Can Stall** ensures the engine never stalls. Assuming Can Stall is enabled:
+Disabling **Can Stall** ensures the engine never stalls. Assuming that Can Stall is enabled, you can:
 
 - Reduce the **Stall Bias** value. Check out the calculated stall rpm value at the inspector, below the engine graph.
 - Set **Idle Control** to **Active**.
 - Change the **Clutch Type** to **Torque Converter** in Clutch Settings.
+
+#### How to configure HP?
+
+In the engine you can configure torque only, not HP. Torque is the actual value the engine transmits
+to the components downstream. Engine power or HP is just the torque multiplied by the angular
+velocity. In the engine setup you specify directly:
+
+- How much torque you want at the flywheel at two given rpm values, named _idle_ and _peak_.
+- How the engine friction behaves with angular velocity.
+- The rpm limit the engine is designed to operate at. The torque becomes zero mechanically at that point.
+
+The component calculates the engine values out of these settings. The torque curve (green curve in
+the graph) is calculated by combining friction with the specified torque values and rpm limit.
+
+The torques and rpms can be extracted directly out of actual engine torque curves. All you have
+to do is to adjust the friction curve until the actual torque curve matches the real one.
+
+#### Too much engine friction makes the wheels rotate backwards
+
+This might be either a correct behavior, or an indication that more integration steps/substeps are
+required.
+
+!!! Info "&fa-thumbs-o-up; Real driving tip"
+	Releasing the throttle in a car driving forwards makes the engine friction to brake the vehicle.
+	Too much engine friction can force the wheels actually spin at less speed than the road underneath,
+	causing wheel lock. In racing cars this effect typically arise when shifting down, and is
+	compensated using the [heel-toe](http://www.drivingfast.net/car-control/heel-toe-shifting.htm)
+	techique.
+
+A wheel rotating backwards due to huge engine friction is likely caused by the **differential**. This
+is a correct behavior. It's most likely to happen in open or low-preloaded differentials and specially
+when approaching a corner. The outer wheel getting most of the weight combined with the huge engine
+brake could make the inner wheel to spin backwards. Can be easily seen with a LEGO differential ;)
+
+You can verify whether the behavior is correct or not by setting the differential type to **Locked**.
+If now the wheels spin forwards when engine friction is applied, then the behavior with
+the other differential type is correct.
+
+If the effect can be observed even with a locked differential then try increasing the integration
+substeps to 20 (assuming a default Unity physics timestep of 0.02). Wheels should rotate forwards
+but at less speed than the road when releasing the throttle. As extreme fix, you could try
+setting the Unity physics time step to 0.01 and 10 integration steps in the Vehicle Physics solver.
+Note that this will increase the overall impact of physics in the CPU usage.
+
+
+
+
+
+
 
