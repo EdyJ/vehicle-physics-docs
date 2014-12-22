@@ -61,7 +61,7 @@ on the integration method and substeps.
 
 A simple way to measure the precision is setting the **Differential Type** to **Locked**. This
 enforces both drive wheels to rotate at the same rate. Then drive around gently and do some
-left-right turning.
+left-right turning while watching the rpm values at the telemetry.
 
 When using 1-4 substeps the wheels are "pursuing" each other when changing the steering direction,
 but won't likely spin at a similar rate unless direction is keep steady. The more substeps, the
@@ -137,8 +137,7 @@ required.
 	Releasing the throttle in a car driving forwards makes the engine friction to brake the vehicle.
 	Too much engine friction can force the wheels actually spin at less speed than the road underneath,
 	causing wheel lock. In racing cars this effect typically arise when shifting down, and is
-	compensated using the [heel-toe](http://www.drivingfast.net/car-control/heel-toe-shifting.htm)
-	techique.
+	compensated using the [heel-toe technique](http://www.drivingfast.net/car-control/heel-toe-shifting.htm).
 
 A wheel rotating backwards due to huge engine friction is likely caused by the **differential**. This
 is a correct behavior. It's most likely to happen in open or low-preloaded differentials and specially
@@ -150,7 +149,7 @@ If now the wheels spin forwards when engine friction is applied, then the behavi
 the other differential type is correct.
 
 If the effect can be observed even with a locked differential then try increasing the integration
-substeps to 20 (assuming a default Unity physics timestep of 0.02). Wheels should rotate forwards
+substeps (up to 20, assuming a default Unity physics timestep of 0.02). Wheels should rotate forwards
 but at less speed than the road when releasing the throttle. As extreme fix, you could try
 setting the Unity physics time step to 0.01 and 10 integration steps in the Vehicle Physics solver.
 Note that this will increase the overall impact of physics in the CPU usage.

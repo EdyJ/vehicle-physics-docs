@@ -1,4 +1,4 @@
-# VPVehicleControllerBase
+# VPVehicleBase
 
 Considerar poner todas las clases en una sola página **Class reference** en Advanced. De esta forma el índice de clases estará en la barra lateral, en lugar del menú.
 
