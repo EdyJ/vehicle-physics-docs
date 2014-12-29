@@ -43,24 +43,23 @@ float engineRpm = m_vehicle.data.Get(VPDChannel.Vehicle, VPDVehicle.EngineRpm) /
 
 | ValueId | Description | Units | Resolution | Example |
 | ------- | ----------- | ------| ---------- | ------- |
-|Steer		| Steering wheel position	| %		|10000	|-10000 = full left, 0 = center, +10000 = full right
-|Throttle	| Throttle pedal position	| %		|10000	|10000 = 1.0 = 100%
-|Brake		| Brake pedal position		| %		|10000	|5000 = 0.5 = 50%
-|Handbrake	| Handbrake position		| %		|10000	|5000 = 0.5 = 50%
-|Clutch		| Clutch pedal position		| %		|10000	|5000 = 0.5 = 50%
-|Gear		| Gear stick position <sup>1</sup>
-|Key		| Ignition key position <sup>2</sup>
+|Steer			| Steering wheel position	| %		|10000	|-10000 = full left, 0 = center, +10000 = full right
+|Throttle		| Throttle pedal position	| %		|10000	|10000 = 1.0 = 100%
+|Brake			| Brake pedal position		| %		|10000	|5000 = 0.5 = 50%
+|Handbrake		| Handbrake position		| %		|10000	|5000 = 0.5 = 50%
+|Clutch			| Clutch pedal position		| %		|10000	|5000 = 0.5 = 50%
+|ManualGear		| Manual gear lever position | gear | | -1 (reverse), 0 (neutral), 1, 2, 3, ...
+|AutomaticGear	| Automatic transmission mode | mode | | 0, 1, 2, 3, 4, 5<br>(M, P, R, N, D, L)<sup>1</sup>
+|Key			| Ignition key position | position | | -1 = off, 0 = drive, 1 = ignite
 
 
-<sup>1</sup> Gear stick position
-:	- Manual: -1 (R), 0 (N), 1, 2, 3...
-	- Auto: -2 (P), -1 (R), 0 (N), 1, 2, 3...
-
-	Gear stick position doesn't represent the actually engaged gear. The engaged gear is reported
-	in the Vehicle channel.
-
-<sup>2</sup> Ignition key position
-:	-1 = off, 0 = drive, 1 = ignite
+<sup>1</sup> Automatic transmission modes:
+:	- M: Manual: do not automatically engage gears. Use manual gear shifting.
+	- P: Park
+	- R: Reverse
+	- N: Neutral
+	- D: Drive: automatically engage forward gears. Gear shifting is supported as well.
+	- L: Low: first gear only.
 
 ### Vehicle channel
 
@@ -73,5 +72,7 @@ float engineRpm = m_vehicle.data.Get(VPDChannel.Vehicle, VPDVehicle.EngineRpm) /
 |EngineLoad		| How much load is demanded 				| % 	| 1000	| 200 = 0.2 = 20%
 |ClutchTorque	| Torque at the output of the clutch in Nm	| Nm	| 1000	| 150000 = 150 Nm
 |ClutchLock		| Lock ratio of the clutch					| %		| 1000	| 800 = 0.8 = 80%
+|GearboxGear 	| Engaged gear								| gear	|		| Negative = reverse, 0 = Neutral or Park, Positive = forward.
+|GearboxMode	| Actual transmission mode					| mode	|		| 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_
 
 
