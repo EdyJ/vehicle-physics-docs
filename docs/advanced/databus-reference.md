@@ -3,25 +3,27 @@
 The **Data Bus** is the standard method for communicating with vehicles in Vehicle Physics Pro. It's
 inspired in the [ODB-II standard](http://en.wikipedia.org/wiki/OBD-II_PIDs):
 
-- Inmmediate access O(1)
+- Immediate access O(1)
 - Direct, non-blocking read/write access from all clients
 - Transport only: no error control, no range checking
 - Stores integer values only. Float values are represented as fixed-resolution decimals (ie: 1.0 = 10000)
+- NaN is gracefully supported as integer: `(int)NaN = -2147483647`
+- Full forwards-backwards compatibility along versions.
 
 Add-on components can use the data bus for reading/writing the values in the bus. Values are arranged
-in _channels_. Accessing a specific data requires the pair `ChannelId, ValueId`. The standard Channels
-and their available values are referenced below.
+into _channels_. Accessing a specific data requires the pair `ChannelId, ValueId`. The standard
+Channels and their available values are referenced below.
 
 #### Accessing the data bus
 
-The bus is accessed via property **data** defined in VPVehicleBase. Use code like this in a script
+The bus is accessed via property **data** defined in VPVehicleControllerBase. Use code like this in a script
 attached to a GameObject containing a VPVehicleController component or any other
-VPVehicleBase-derived component:
+VPVehicleControllerBase-derived component:
 
 ```
 // Get a reference to the vehicle controller component
 
-VPVehicleBase vehicle = GetComponent<VPVehicleBase>();
+VPVehicleControllerBase vehicle = GetComponent<VPVehicleControllerBase>();
 
 // Set the input for the steering wheel
 
