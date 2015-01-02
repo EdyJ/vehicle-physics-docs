@@ -54,18 +54,19 @@ out of the vehicle's colliders (not recommended).
 The longitudinal position of the center of mass greatly affects the behavior and handling of the
 vehicle. The vertical position affects the stability.
 
-!!! info "&fa-info-circle; Initial setup for the Center of Mass"
+!!! info "&fa-info-circle; How to configure the Center of Mass"
 
-	1. Create an empty child GameObject in your vehicle (<kbd>Alt</kbd><kbd>Shift</kbd><kbd>N</kbd>).
-	2. Rename it as `CoM`, then reference it as Center of Mass in the vehicle controller.
-	3. Place the GameObject it in the exact center of your vehicle.
-	4. Figure out the chassis of the vehicle. Lower the vertical position (Y) of the CoM until
+	1. Create an empty child GameObject in your vehicle (<kbd>Alt</kbd><kbd>Shift</kbd><kbd>N</kbd>),
+		name it `Com`.
+	2. Set it as Center of Mass in the vehicle controller.
+	3. Locate the CoM gameobject it in the middle of your vehicle as seen from the top.
+	4. Figure out the chassis of the vehicle. Change the vertical position (Y) of the CoM until
 		it "touches" the imaginary chassis from upside.
 	5. Move the CoM longitudinally (Z) towards the position of the engine. It should be placed
 		around 2/3 of the length of the vehicle.
 
-	When playing around with your vehicle you can adjust its behavior by modifying the Z position
-	of the CoM. For adjusting the stability modify the Y position of the CoM.
+	When playing around with your vehicle you can adjust its handling behavior by modifying the Z
+	position of the CoM. For adjusting the stability modify the Y position of the CoM.
 
 ## Engine
 

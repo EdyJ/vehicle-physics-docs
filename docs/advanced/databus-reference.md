@@ -7,7 +7,7 @@ inspired in the [ODB-II standard](http://en.wikipedia.org/wiki/OBD-II_PIDs):
 - Direct, non-blocking read/write access from all clients
 - Transport only: no error control, no range checking
 - Stores integer values only. Float values are represented as fixed-resolution decimals (ie: 1.0 = 10000)
-- NaN is gracefully supported as integer: `(int)NaN = -2147483647`
+- NaN is gracefully supported as integer: <code>(int)NaN = -2147483647</code>
 - Full forwards-backwards compatibility along versions.
 
 Add-on components can use the data bus for reading/writing the values in the bus. Values are arranged

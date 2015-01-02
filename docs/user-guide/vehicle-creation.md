@@ -88,7 +88,7 @@ Suspension Distance (m)
 Spring (N/m)
 :	Springs support the weight of the vehicle. When suspension is fully elongated
 	the springs provide no force. When suspension is fully compressed the spring provide
-	_spring * suspensionDistance_ force in Newtons. A good starting value is mass*gravity*2/wheels.
+	$force = spring * suspensionDistance$ in Newtons. A good starting value is $spring = mass*gravity*2/wheels$.
 Damper (N/m^2)
 :	Dampers limit the speed of movement of the suspension. They affect the angular momentum
 	of the vehicle on weight shifting situations (accelerating, braking, banking at corners...)
