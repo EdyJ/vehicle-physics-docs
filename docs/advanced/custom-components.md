@@ -37,6 +37,10 @@ Inputs
 	(gearbox component), the position of the throttle pedal (engine component), etc. Inputs are
 	the values that can typically adjusted by the driver while driving.
 
+	In some cases the component can modify an input value for preventing it to go out of range.
+	This happens at the manual gearbox, for instance. Input gear is not allowed to have an invalid
+	value (non-existing gear).
+
 States
 :	States are a special kind of inputs that must be feed with data coming from the vehicle and
 	other components. Components use this data for their own logic. For example, the automatic
