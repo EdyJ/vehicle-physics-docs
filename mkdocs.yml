@@ -10,6 +10,9 @@ repo_url: https://github.com/EdyJ/vehicle-physics-docs
 
 pages:
 - ['index.md', 'Vehicle Physics Pro online documentation']
+
+- ['early-access.md', 'EARLY ACCESS']
+
 - ['user-guide/vehicle-creation.md', 'User Guide', 'Creating a vehicle']
 - ['user-guide/visual-effects.md', 'User Guide', 'Adding visual effects']
 - ['user-guide/sounds.md', 'User Guide', 'Adding sounds and audio effects']
