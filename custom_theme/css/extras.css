@@ -1,0 +1,44 @@
+
+
+
+
+/* Nicer font for code samples */
+/*code, kbd, pre, samp {
+font-family: "Lucida Console","Courier New",monospace;
+font-size: 12px;
+}
+*/
+
+/* Formatting for kbd items (keyboard shortcuts) */
+kbd {
+background-color: #e7e7e7;
+background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+background-image: linear-gradient(#fefefe, #e7e7e7);
+background-repeat: repeat-x;
+border-radius: 2px;
+border: 1px solid #cfcfcf;
+color: #000;
+padding: 4px 3px 2px 3px;
+line-height: 10px;
+display: inline-block;
+}
+
+
+/* Canvas diagrams should not write background */
+
+canvas {
+  background-color: transparent;
+}
+
+
+/* Nicely formatted title and subtitle on each page */
+
+h1.title {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 300;
+}
+p.title {
+    text-align: center;
+}

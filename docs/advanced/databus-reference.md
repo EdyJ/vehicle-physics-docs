@@ -10,7 +10,7 @@ inspired in the [ODB-II standard](http://en.wikipedia.org/wiki/OBD-II_PIDs):
 - NaN is gracefully supported as integer: <code>(int)NaN = -2147483647</code>
 - Full forwards-backwards compatibility along versions.
 
-Add-on components can use the data bus for reading/writing the values in the bus. Values are arranged
+Add-on components can use the data bus for reading/writing values. Values are arranged
 into _channels_. Accessing a specific data requires the pair `ChannelId, ValueId`. The standard
 Channels and their available values are referenced below.
 
@@ -58,7 +58,7 @@ float engineRpm = m_vehicle.data.Get(VPDChannel.Vehicle, VPDVehicle.EngineRpm) /
 <sup>1</sup> Automatic transmission modes:
 :	- M: Manual: do not automatically engage gears. Use manual gear shifting.
 	- P: Park
-	- R: Reverse
+	- R: Reverse. Gear shifting is supported for more than one reverse gears.
 	- N: Neutral
 	- D: Drive: automatically engage forward gears. Gear shifting is supported as well.
 	- L: Low: first gear only.

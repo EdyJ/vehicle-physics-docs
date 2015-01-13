@@ -1,6 +1,8 @@
 
 ## Vehicle Physics Pro
 
+---
+
 Vehicle Physics Pro is a comprehensive vehicle simulation library designed and conceived from
 scratch for providing an accurate and fully customizable vehicle physics.
 
@@ -29,9 +31,9 @@ Standard license (TBA)
 	and development API.
 
 Professional license add-on
-:	Available now for early access (Alpha and Beta) for $200. Provides access to the latest
-	updates via GIT repository, fully commented C# source code and exclusive content. Contact me
-	at [edytado@gmail.com](mailto:edytado@gmail.com) for more information.
+:	Available now for Early Access (Alpha and Beta) for $200. Provides access to the latest
+	updates via GIT repository, fully commented C# source code and direct support via Skype.
+	Contact me at [edytado@gmail.com](mailto:edytado@gmail.com) for more information.
 
 ### Download & setup
 

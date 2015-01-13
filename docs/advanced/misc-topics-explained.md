@@ -1,6 +1,8 @@
-# Advanced topics explained
+# Miscelaneous topics explained
 
 [TOC]
+
+---
 
 ## Solver / Numeric Integration
 
@@ -43,14 +45,15 @@ precision...
 There's no need for changing Unity's default physics/fixed timestep (0.02). Within Vehicle Physics
 Pro you can configure the amount of integration substeps in a per-vehicle basis.
 
-Some calculations and data are extracted out of the Unity physics engine: _velocity_ and _downforce_.
-These are calculated at the Unity's physics rate. Tire forces are also applied at this rate.
+Some calculations and data are extracted out of the Unity physics engine: _velocity_ and
+_downforce_. These are calculated at the Unity's physics rate. Tire forces are also applied at
+this rate.
 
-If you really need to get the most precision out of the vehicle physics then you can modify the Unity's
-fixed timestep to 0.01 (100Hz) or 0.005 (200Hz). This is NOT recommended because it can dramatically
-increase the CPU usage footprint because of the physics. Also ensure the integration substeps are
-adjusted accordingly: if fixed timestep is 0.01 (100Hz) and your vehicle is set to 10 substeps,
-then the calculations for that vehicle are done at 1000Hz.
+If you really need to get the most precision out of the vehicle physics then you can modify the
+Unity's fixed timestep to 0.01 (100Hz) or 0.005 (200Hz). This is NOT recommended because it can
+dramatically increase the CPU usage footprint because of the physics. Also ensure the
+integration substeps are adjusted accordingly: if fixed timestep is 0.01 (100Hz) and your
+vehicle is set to 10 substeps, then the calculations for that vehicle are done at 1000Hz.
 
 #### How to measure the precision of the integration?
 
@@ -78,39 +81,43 @@ with lateral forces destabilizing the vehicle.
 	Tire relaxation rate can be used to simulate tires targeted to different speeds. Tires with
 	low spring rates become difficult to drive at high speeds.
 
-If you observe values that are quickly oscillating at the telemetry in a way that visibly affects the
-vehicle (shakes) then either change the integration method or adjust the substeps in the Euler method:
+If you observe values that are quickly oscillating at the telemetry in a way that visibly affects
+the vehicle (shakes) then either change the integration method or adjust the substeps in the
+Euler method:
 
-- A single substep is likely to cause oscillating values, but usually they don't have a noticeable effect.
+- A single substep is likely to cause oscillating values, but usually they don't have a noticeable
+effect.
 - 2-8 substeps are pretty stable in most situations.
 - 40 or more substeps are not recommended as the numerical oscillations can get magnified.
 
+---
 
 ## Engine component
 
 #### It's difficult to stall
 
-The **Idle Control** setting defines how the idle rpms are enforced. The Passive mode is much easier
-to stall, but requires configuring the engine friction in a specific way.
+Increasing the **Stall bias** setting makes the engine more sensitive to rpms below idle. Check out
+the calculated stall rpm value at the inspector, below the engine graph.
 
-Idle Control:
+The **Idle Control** setting defines how the idle rpms are enforced:
 
 - **Active**: Vehicle's electronic system actively applies as much torque as available for keeping
 	the idle rpms.
 - **Passive**: Engine just applies a constant torque that compensates the friction at idle rpms.
-	Works better with a steep friction curve at idle rpm. Also, requires the throttle to be applied for starting
-	with the ignition key.
+	Works better with a steep friction curve at idle rpm. Also, requires the throttle to be applied
+	for starting the engine with the ignition key.
 
-Increasing the **Stall bias** setting makes the engine more sensitive to rpms below idle. Check out
-the calculated stall rpm value at the inspector, below the engine graph.
+The Passive mode is much easier to stall, but requires configuring the engine friction in a specific
+way.
 
 #### Stalls too easy
 
 Disabling **Can Stall** ensures the engine never stalls.
 
-Assuming that Can Stall is enabled, you can:
+Assuming Can Stall is enabled, you can:
 
-- Reduce the **Stall Bias** value. Check out the calculated stall rpm value at the inspector, below the engine graph.
+- Reduce the **Stall Bias** value. Check out the calculated stall rpm value at the inspector, below
+the engine graph.
 - Set **Idle Control** to **Active**.
 - Change the **Clutch Type** to **Torque Converter** in Clutch Settings. This clutch type doesn't
 require to be actively engaged. Vehicle may stall at rare situations, like going backwards after
@@ -119,18 +126,20 @@ spin.
 #### How to configure HP?
 
 In the engine you can configure torque only, not HP. Torque is the actual value the engine transmits
-to the components downstream. Engine power or HP is just the torque multiplied by the angular
+to the components downstream. Engine power or HP is just the torque multiplied by the  angular
 velocity. In the engine setup you specify directly:
 
 - How much torque you want at the flywheel at two given rpm values, named _idle_ and _peak_.
 - How the engine friction behaves with angular velocity.
-- The rpm limit the engine is designed to operate at. The torque becomes zero mechanically at that point.
+- The rpm limit the engine is designed to operate at. The torque mechanically becomes zero at that
+point.
 
 The component calculates the engine values out of these settings. The torque curve (green curve in
 the graph) is calculated by combining friction with the specified torque values and rpm limit.
 
-The torques and rpms can be extracted directly out of actual engine torque curves. All you have
-to do is to adjust the friction curve until the actual torque curve matches the real one.
+The torques at the specified rpms can be extracted directly out of actual engine torque curves.
+All you have to do is to adjust the friction curve until the actual torque curve and resulting HP
+match the real data.
 
 #### Too much engine friction makes the wheels rotate backwards
 
@@ -139,26 +148,27 @@ required.
 
 !!! Info "&fa-thumbs-o-up; Real driving tip"
 	Releasing the throttle in a car driving forwards makes the engine friction to brake the vehicle.
-	Too much engine friction can force the wheels actually spin at less speed than the road underneath,
-	causing wheel lock. In racing cars this effect typically arise when shifting down, and is
-	compensated using the [heel-toe technique](http://www.drivingfast.net/car-control/heel-toe-shifting.htm).
+	Too much engine friction can force the wheels actually spin at less speed than the road
+	underneath, causing wheel lock. In racing cars this effect typically arise when shifting down,
+	and is compensated using the [heel-toe technique](http://www.drivingfast.net/car-control/heel-toe-shifting.htm).
 
-A single wheel rotating backwards due to huge engine friction is likely caused by the **differential**.
-This is a correct behavior. It's most likely to happen in open or low-preloaded differentials, and
-specially when approaching a corner. The outer wheel getting most of the weight combined with the
-huge engine brake could make the inner wheel to spin backwards. Can be easily seen with a LEGO
-differential ;)
+A single wheel rotating backwards due to huge engine friction is likely caused by the
+**differential**. This is a correct behavior. It's most likely to happen in open or
+low-preloaded differentials, and specially when approaching a corner. The outer wheel getting
+most of the weight combined with the huge engine brake could make the inner wheel to spin
+backwards. Can be easily seen with a LEGO differential ;)
 
-You can verify whether the behavior is correct or not by setting the differential type to **Locked**.
-If now the wheels spin forwards when engine friction is applied, then the behavior with
-the other differential type is correct.
+You can verify whether the behavior is correct or not by setting the differential type to
+**Locked**. If now the wheels spin forwards when engine friction is applied, then the behavior
+with the other differential type is correct.
 
 If the effect can be observed even with a locked differential then try increasing the integration
-substeps (up to 20, assuming a default Unity physics timestep of 0.02). Wheels should rotate forwards
-but at less speed than the road when releasing the throttle. As extreme fix, you could try
-setting the Unity physics time step to 0.01 and 10 integration steps in the Vehicle Physics solver.
-Note that this will increase the overall impact of physics in the CPU usage.
+substeps (up to 20, assuming a default Unity physics timestep of 0.02). Wheels should rotate
+forwards but at less speed than the road when releasing the throttle. As extreme fix, you could
+try setting the Unity physics time step to 0.01 and 10 integration steps in the Vehicle
+Physics solver. Note that this will increase the overall impact of physics in the CPU usage.
 
+---
 
 ## Tire friction
 
