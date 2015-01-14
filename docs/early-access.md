@@ -11,22 +11,24 @@ Early Access to Vehicle Physics Pro is available with the Professional License a
 
 	Please have in mind that:
 
+	- **Everything is provided as is** without any warranty. **Alpha stage** means active
+	research & development, with frequent changes that will surely break dependent projects.
 	- Some components and scripts are yet to be completed and/or will be significantly modified.
-	- Some features already available in the old Edy's Vehicle Physics are yet to be ported here
-	(i.e. skidmarks, smoke)
-	- The component [VPVehicleController](components/vehicle-controller.md) is under active development and expected to receive
-	important changes.
-	- Repository contains code, scenes and libraries from past development iterations.
-	It will be cleaned up for the beta stage.
-	- Documentation is being written actively. Some parts are still missing, and documented features
-	may be described in a different way than they work right now.
+	- Some features already available in the other package [Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics)
+	are yet to be ported here (i.e. skidmarks, smoke...)
+	- Repository contains code, scenes and libraries from past development iterations. It will be
+	cleaned up soon.
+	- **Documentation is being actively written**. Some parts are still missing, and some documented
+	features may not have been developed yet or may be described in a different way than they work
+	right now. In some cases, I'm using the documentation as annotated roadmap for the upcoming
+	developments.
 
 	**The project is actually being developed in <u>Unity 4</u>**. There is a very serious
 		bug at the WheelCollider in Unity 5 (beta 19 when writing this) that turns the vehicles
 		unstable above certain speed (~100 Km/h or 60 mph). The project will be upgraded to Unity 5
 		as soon as this bug is resolved. The package will be compatible with both Unity 4 and 5.
 
-!!! info "Feedback is requested on:"
+!!! info "Feedback is welcome:"
 
 	- General: usage, workflow, integration in current projects.
 	- Scripts: class and member naming.
@@ -43,10 +45,9 @@ can browse them at [projects.edy.es](http://projects.edy.es).
 
 - **Vehicle Physics Pro** is my actual Unity project as sandbox for development. It contains all
 the evolutions of the vehicle physics scripts since I started researching my own tire model.
-- **Common Tools core** is a submodule with common tools and scripts. Goes to "Assets/Core/Common Tools core"
-	in the Unity project.
+- **Common Tools core** is a submodule with common tools and scripts.
 - **Vehicle Physics core** is the submodule that actually contains the latest vehicle physics
-scripts only. Goes to "Assets/Core/Vehicle Physics core" in the Unity project.
+scripts only.
 
 ### Setup instructions
 
@@ -103,7 +104,21 @@ calculations are done at 100Hz.
 
 ### Code and scripts
 
-The vehicle physics scripts are inside the **Core/Vehicle Physics core** folder. The main script
+Current layout:
+
+    Assets
+    |- Core
+	|	|- Common Tools core
+	|   |- Vehicle Physics core
+	|		|- Base
+	|		|- Components
+	|		|- VehicleComponents
+    |- NinjaCamp v2
+	|- Standard Assets
+	|- Vehicles
+	|- World
+
+The vehicle physics scripts are inside the **Vehicle Physics core** folder. The main script
 to look at is `VPVehicleController.cs`. This class derives from `VPVehicleControllerBase.cs` and
 overrides its virtual methods for implementing the vehicle's internals with the available classes:
 ([engine](classes/engine.md), [gearbox](classes/gearbox.md), [differential](classes/differential.md)

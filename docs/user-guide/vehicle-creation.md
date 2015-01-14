@@ -89,9 +89,9 @@ Spring (N/m)
 :	Springs support the weight of the vehicle. When suspension is fully elongated
 	the springs provide no force. When suspension is fully compressed the spring provide
 	$force = spring * suspensionDistance$ in Newtons. A good starting value is $spring = mass*gravity*2/wheels$.
-Damper (N/m^2)
+Damper (N/ms<sup>-1</sup>)
 :	Dampers limit the speed of movement of the suspension. They affect the angular momentum
-	of the vehicle on weight shifting situations (accelerating, braking, banking at corners...)
+	of the vehicle on weight shifting situations (accelerating, braking, cornering...)
 
 All other settings of the WheelCollider component can be ignored as they won't have any effect
 on the Vehicle Physics module.
