@@ -172,6 +172,14 @@ Here are bullet points represented all the different valid ways:
 + Second point
 - Third point
 
+Same bullet points with more space between bullets:
+
+* First point
+
++ Second point
+
+- Third point
+
 Now some longer bullet points:
 
 - 	A point which is a bit longer and

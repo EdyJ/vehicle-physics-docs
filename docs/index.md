@@ -26,7 +26,7 @@ State-of-the-art wheel and tire friction simulation
 
 ### Licensing
 
-Standard license (TBA)
+Standard license (To Be Announced)
 :	Will be available at the Unity Asset Store for $100. Provides the Vehicle Physics components
 	and development API.
 

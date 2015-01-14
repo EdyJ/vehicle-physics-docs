@@ -181,8 +181,8 @@ model of a tire where all frictions, forces and torques can be calculated in a m
 coherent way.
 
 There are lots of papers, docs, etc. about tires and slip ratio / slip angle. _"Don't reinvent the
-wheel"_ is a good lesson. But I strongly believe that the wheel needed to be reinvented for most
-racing games and vehicle simulations.
+wheel"_ is a good lesson, but this time I strongly believe that the wheel needed to be reinvented
+for most racing games and vehicle simulations.
 
 In my opinion the slip ratio and slip angle concepts belong to the automotive and tire industries.
 They are used to make studies, write standards, specifications, etc. but they hare hard to fit into
@@ -192,8 +192,8 @@ details given by tire and automotive manufacturers, as they use these standards 
 information.
 
 For instance, if you want your simulation to reproduce exactly the tire model XXX from manufacturer
-YYY then you need to use the slip ratio and slip angle concepts because the manufacturer will provide
-the specifications and measures on that tire using these concepts and standards.
+YYY then you need to use the slip ratio and slip angle concepts because the manufacturer will
+provide the specifications and measures on that tire using these concepts and standards.
 
 Even so, these standards are not applicable to many common situations such as low speeds and steady
 states. These situations must still be "faked" and threated separately in the simulation. Racing
