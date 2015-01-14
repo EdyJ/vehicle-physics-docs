@@ -8,6 +8,11 @@ scratch for providing an accurate and fully customizable vehicle physics.
 
 Vehicle Physics Pro is available as editor add-on for the development tool Unity 3D.
 
+!!! warning "&fa-warning; Project under development"
+
+	The project status is **Alpha**. This documentation is work in progress. [Early Access](early-access.md)
+	to the project's repository is available with the Professional License (see below).
+
 #### Features
 
 Fully flexible modular component system
@@ -27,8 +32,8 @@ State-of-the-art wheel and tire friction simulation
 ### Licensing
 
 Standard license (To Be Announced)
-:	Will be available at the Unity Asset Store for $100. Provides the Vehicle Physics components
-	and development API.
+:	Will be available at the Unity Asset Store for $100. Includes the Vehicle Physics components,
+	development API and examples.
 
 Professional license add-on
 :	Available now for Early Access (Alpha and Beta) for $200. Provides access to the latest
