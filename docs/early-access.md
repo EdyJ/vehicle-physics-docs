@@ -7,30 +7,28 @@ Early Access to Vehicle Physics Pro is available with the Professional License a
 ---
 
 
-!!! warning "&fa-warning; **Alpha stage**"
+!!! warning "&fa-warning; **Alpha stage**. Please have in mind:"
 
-	Please have in mind that:
-
-	- **Everything is provided as is** without any warranty. **Alpha stage** means active
-	research & development, with frequent changes that will surely break dependent projects.
-	- Some components and scripts are yet to be completed and/or will be significantly modified.
+	- **Alpha stage** means active research & development, with frequent changes that will surely
+	break past dependencies. **Everything is provided as is without any warranty**.
+	- Some components and scripts are yet to be written or completed.
+	- Some components and scripts will be significantly modified.
 	- Some features already available in the other package [Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics)
 	are yet to be ported here (i.e. skidmarks, smoke...)
 	- Repository contains code, scenes and libraries from past development iterations. It will be
 	cleaned up soon.
-	- **Documentation is being actively written**. Some parts are still missing, and some documented
+	- **Documentation is being actively written**. Many parts are still missing. Some documented
 	features may not have been developed yet or may be described in a different way than they work
-	right now. In some cases, I'm using the documentation as annotated roadmap for the upcoming
+	right now. In some cases I'm even using the documentation as annotated roadmap for the upcoming
 	developments.
+    - **The project is actually being developed in <u>Unity 4</u>**. There is a very serious
+	bug at the WheelCollider in Unity 5 (beta 19 when writing this) that turns the vehicles
+	unstable above certain speed (~100 Km/h or 60 mph). The project will be upgraded to Unity 5
+	as soon as this bug is resolved. The package will be compatible with both Unity 4 and 5.
 
-	**The project is actually being developed in <u>Unity 4</u>**. There is a very serious
-		bug at the WheelCollider in Unity 5 (beta 19 when writing this) that turns the vehicles
-		unstable above certain speed (~100 Km/h or 60 mph). The project will be upgraded to Unity 5
-		as soon as this bug is resolved. The package will be compatible with both Unity 4 and 5.
+!!! info "Feedback is welcome!"
 
-!!! info "Feedback is welcome:"
-
-	- General: usage, workflow, integration in current projects.
+	- General usage, workflow, integration in current projects.
 	- Scripts: class and member naming.
 	- Simulation: components, settings, behavior.
 	- Documentation: things you would want to learn, know about, or are not fully understood.

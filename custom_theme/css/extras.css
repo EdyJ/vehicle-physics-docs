@@ -3,42 +3,76 @@
 
 
 /* Nicer font for code samples */
-/*code, kbd, pre, samp {
-font-family: "Lucida Console","Courier New",monospace;
-font-size: 12px;
-}
+
+/*
+code, kbd, pre, samp
+	{
+	font-family: "Lucida Console","Courier New",monospace;
+	font-size: 12px;
+	}
 */
 
 /* Formatting for kbd items (keyboard shortcuts) */
-kbd {
-background-color: #e7e7e7;
-background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
-background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
-background-image: linear-gradient(#fefefe, #e7e7e7);
-background-repeat: repeat-x;
-border-radius: 2px;
-border: 1px solid #cfcfcf;
-color: #000;
-padding: 4px 3px 2px 3px;
-line-height: 10px;
-display: inline-block;
-}
+
+kbd
+	{
+	background-color: #e7e7e7;
+	background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+	background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+	background-image: linear-gradient(#fefefe, #e7e7e7);
+	background-repeat: repeat-x;
+	border-radius: 2px;
+	border: 1px solid #cfcfcf;
+	color: #000;
+	padding: 4px 3px 2px 3px;
+	line-height: 10px;
+	display: inline-block;
+	}
 
 
 /* Canvas diagrams should not write background */
 
-canvas {
-  background-color: transparent;
-}
+canvas
+	{
+	background-color: transparent;
+	}
 
 
 /* Nicely formatted title and subtitle on each page */
 
-h1.title {
+h1.title
+	{
     text-align: center;
     font-size: 45px;
     font-weight: 300;
-}
-p.title {
+	}
+
+p.title
+	{
     text-align: center;
-}
+	}
+
+
+/* Roadmap */
+
+p.roadmap
+	{
+	margin-left: 1em;
+	margin-bottom: 0.4em;
+	}
+
+p.roadmap.todo
+	{
+	margin-left: 2.3em;
+	}
+
+
+p.roadmap i
+	{
+	color: #4CAF50;
+	}
+
+p.roadmap.wip i
+	{
+	color: #FF9800;
+	}
