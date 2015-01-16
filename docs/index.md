@@ -4,16 +4,17 @@
 ---
 
 A comprehensive vehicle simulation library designed and conceived from scratch for providing
-fully accurate and customizable vehicle physics.
+fully accurate and customizable vehicle physics. Vehicle Physics Pro is available as editor add-on
+for [Unity 3D](http://unity3d.com).
 
-Vehicle Physics Pro is available as editor add-on for [Unity 3D](http://unity3d.com).
+Stay tunned! Follow **[@VehiclePhysics](https://twitter.com/VehiclePhysics)** on Twitter for the latest news and announcements.
 
 !!! warning "&fa-warning; Project under development"
 
 	The project status is **Alpha**. This documentation is work in progress. [Early Access](early-access.md)
 	to the project's repository is available with the [Professional License](index.md#licensing) (see below).
 
-#### Development roadmap:
+#### Development roadmap
 
 &fa-check; Base: Tire friction, solver, modular torque model
 {: .roadmap }
