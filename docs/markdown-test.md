@@ -106,6 +106,26 @@ $$
 </script>
 ```
 
+## Responsive vector graph
+
+Uses a custom build of Fabric.js that includes Text and Shadow modules.
+
+<canvas id="c" class="img-responsive" width="500px" height="300px">
+</canvas>
+<script type="text/javascript">
+	window.onload = function()
+	{
+		var canvas = new fabric.StaticCanvas('c');
+		$('#c').css("height", "auto");
+
+		canvas.add(
+			new fabric.Rect({ top: 0, left: 0, width: 100, height: 100, fill: '#f55' }),
+			new fabric.Circle({ top: 0, left: 450, radius: 50, fill: 'green' }),
+			new fabric.Triangle({ top: 200, left: 200, width: 100, height: 100, fill: 'yellow' })
+		);
+	};
+</script>
+
 ----
 
 # Markdown NPP
