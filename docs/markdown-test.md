@@ -106,7 +106,7 @@ $$
 </script>
 ```
 
-## Responsive vector graph
+## Responsive vector graphics
 
 Uses a custom build of Fabric.js that includes Text and Shadow modules.
 

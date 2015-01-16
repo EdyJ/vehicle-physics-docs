@@ -96,8 +96,8 @@ Key(s) | Function | Notes
 <kbd>alt+mouse</kbd> | Camera movement and zoom
 
 The main component that implements the vehicle simulation is **[VPVehicleController](components/vehicle-controller.md)**.
-Open the scene NinjaTest v2, select the object NinjaVehicle v2, and there you have the component
-with all its settings to play with. The actual setup of the vehicle is:
+The object **NinjaVehicle v2** in the sandbox scene contains this component with all its settings
+to play with. The actual setup of the vehicle is:
 
 - **Engine:** powerful engine (140 hp) with rather realistic stall settings.
 - **Clutch:** torque converter, which doesn't require an active clutch pedal, and makes the engine
