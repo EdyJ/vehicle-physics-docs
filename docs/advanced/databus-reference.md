@@ -44,7 +44,7 @@ float engineRpm = m_vehicle.data.Get(VPDChannel.Vehicle, VPDVehicle.EngineRpm) /
 ### StdInput channel
 
 | ValueId | Description | Units | Resolution | Example |
-| ------- | ----------- | ------| ---------- | ------- |
+| ------- | ----------- |:------:|:----------:| ------- |
 |Steer			| Steering wheel position	| %		|10000	|-10000 = full left, 0 = center, +10000 = full right
 |Throttle		| Throttle pedal position	| %		|10000	|10000 = 1.0 = 100%
 |Brake			| Brake pedal position		| %		|10000	|5000 = 0.5 = 50%
@@ -65,8 +65,8 @@ float engineRpm = m_vehicle.data.Get(VPDChannel.Vehicle, VPDVehicle.EngineRpm) /
 
 ### Vehicle channel
 
-| ValueId | Description | Units | Resolution | Example |
-| ------- | ----------- | ------| ---------- | ------- |
+| ValueId | Description | Units  | Resolution | Example |
+| ------- | ----------- |:------:|:----------:| ------- |
 |Speed			| Vehicle absolute velocity					| m/s	| 1000	| 14500 = 14.5 m/s
 |EngineRpm		| Engine RPMs								| rpm	| 1000	| 1200000 = 1200 rpm
 |EngineStalled	| Is the engine stalled? 		 			| 		|       | 0 = normal operation, 1 = engine stalled

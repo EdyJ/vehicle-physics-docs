@@ -26,8 +26,8 @@ from 10 substeps and above.
 
 Some subjective recommendations:
 
-Substeps | Comments
--------- | ---------------
+Substeps  | Comments
+:--------:| ---------------
 1 |	Non-player vehicles that don't require precise physics such traffic, parked cars, etc.
 2 | Minimum recommended for any player vehicle or "active" non-player vehicle (i.e. opponents) that require precise physic behavior.
 4 | Good value for having reasonably precise results.

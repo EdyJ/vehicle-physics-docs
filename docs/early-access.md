@@ -9,10 +9,11 @@ Early Access to Vehicle Physics Pro is available with the Professional License a
 
 !!! warning "&fa-warning; **Alpha stage**. Please have in mind:"
 
-	- **Alpha stage** means active research & development, with frequent changes that will surely
+	**Alpha stage** means active research & development, with frequent changes that will surely
 	break past dependencies. **Everything is provided as is without any warranty**.
+
 	- Some components and scripts are yet to be written or completed.
-	- Some components and scripts will be significantly modified.
+	- Some actual components and scripts will be significantly modified.
 	- Some features already available in the other package [Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics)
 	are yet to be ported here (i.e. skidmarks, smoke...)
 	- Repository contains code, scenes and libraries from past development iterations. It will be
@@ -22,11 +23,11 @@ Early Access to Vehicle Physics Pro is available with the Professional License a
 	right now. In some cases I'm even using the documentation as annotated roadmap for the upcoming
 	developments.
     - **The project is actually being developed in <u>Unity 4</u>**. There is a very serious
-	bug at the WheelCollider in Unity 5 (beta 19 when writing this) that turns the vehicles
+	bug at the WheelCollider in Unity 5 (beta 20 when writing this) that turns the vehicles
 	unstable above certain speed (~100 Km/h or 60 mph). The project will be upgraded to Unity 5
 	as soon as this bug is resolved. The package will be compatible with both Unity 4 and 5.
 
-!!! info "Feedback is welcome!"
+!!! info "&fa-thumbs-o-up; Feedback is welcome!"
 
 	- General usage, workflow, integration in current projects.
 	- Scripts: class and member naming.
@@ -36,7 +37,7 @@ Early Access to Vehicle Physics Pro is available with the Professional License a
 
 	Feel free to write me to [edytado@gmail.com](mailto:edytado@gmail.com).
 
-### Repositories
+### Project setup
 
 As professional licensee you should have received credentials for accessing the repositories. You
 can browse them at [projects.edy.es](http://projects.edy.es).
@@ -47,7 +48,7 @@ the evolutions of the vehicle physics scripts since I started researching my own
 - **Vehicle Physics core** is the submodule that actually contains the latest vehicle physics
 scripts only.
 
-### Setup instructions
+Instructions:
 
 1.	Clone the **Vehicle Physics Pro** repository locally.
 
@@ -64,36 +65,46 @@ scripts only.
 
 4.	Now you can open the project at the folder **vehicle-physics-pro** with Unity 4.
 
-### Where to look at
+### Sandbox scene
 
-The latest developments are located in the folder **NinjaCamp v2**. The actual sandbox scene I'm
-using for development and testing is **NinjaTest v2** in this folder.
+The development scenes, tests, etc are located in the folder **NinjaCamp v2**. The actual sandbox
+scene I'm using for development and testing is **NinjaTest v2** in this folder.
 
 When playing the scene the vehicle begins with the engine off. For starting the engine:
 
-1. Press <kbd>K</kbd> for moving the ignition key from "Off" to "Drive" (check out the telemetry window)
+1. Press <kbd>K</kbd> for moving the ignition key from "Off" to "Drive" (check out the telemetry
+window)
 2. Press and hold <kbd>K</kbd> for moving the ignition key to "Start" and actually start the engine.
 
-	<kbd>Ctrl-K</kbd> moves the ignition key back to the "Off" switching off the engine.
+	<kbd>ctrl-K</kbd> moves the ignition key back to the "Off" switching off the engine.
+
+##### Keys used
+
+Key(s) | Function | Notes
+:------:| -------- | -----
+<kbd>K</kbd> | Ignition key | Press to move from "Off" to "Drive". Press and Hold for "Start". <kbd>ctrl+K</kbd> moves the key back to "Off".
+<kbd>left</kbd><kbd>right</kbd> | Steering |
+<kbd>up</kbd> | Throttle |
+<kbd>down</kbd> | Brakes |
+<kbd>shift</kbd> | Clutch | Actual vehicle setup uses a Torque Converter, which doens't require active clutch. Still, the clutch can be used to completely disengage the engine from the transmission.
+<kbd>space</kbd> | Handbrake | Affects rear wheels. Clutch should be used if vehicle uses a standard clutch to prevent the engine to stall.
+<kbd>ctrl+space</kbd> | Toogle all brakes | Brakes are toggled in all wheels.
+<kbd>R</kbd> | Reverse gear | If auto-shift is enabled R requires the vehicle to be nearly stopped and brakes released.
+<kbd>N</kbd> | Neutral gear | Auto-shift will engage first gear when throttle is applied.
+<kbd>P</kbd> | Park mode | Must be allowed in the gearbox settings.
+<kbd>1</kbd>-<kbd>5</kbd> | Engage gears |
+<kbd>alt+mouse</kbd> | Camera movement and zoom
 
 The main component that implements the vehicle simulation is **[VPVehicleController](components/vehicle-controller.md)**.
 Open the scene NinjaTest v2, select the object NinjaVehicle v2, and there you have the component
 with all its settings to play with. The actual setup of the vehicle is:
 
-- **Engine:** powerful engine (140 hp) with rather realistic stall settings. Ignition key is controlled
-with <kbd>K</kbd> as described above.
+- **Engine:** powerful engine (140 hp) with rather realistic stall settings.
 - **Clutch:** torque converter, which doesn't require an active clutch pedal, and makes the engine
 harder to stall. Still, clutch can be manually engaged with <kbd>shift</kbd>.
-- **Gearbox:** manual 5-speed gearbox with auto-shift. Forward gears are automatically engaged. Reverse
-gear is engaged with <kbd>R</kbd>. Neutral gear is engaged with <kbd>N</kbd>. Forward gears can
-be manually engaged with <kbd>1</kbd>-<kbd>5</kbd>. If enabled, Park mode is toggled with <kbd>P</kbd>.
+- **Gearbox:** manual 5-speed gearbox with auto-shift enabled
 - **Differential:** 20% viscous differential at the driven rear axle.
-- **Brakes:** 70:30 balanced to the front. Handbrake is controlled with <kbd>Space</kbd> and affects
-the rear axle. <kbd>Ctrl+Space</kbd> toggles all brakes in all wheels.
-
-	Note that handbrake affects the powered wheels. Thus, best practice is to engage clutch (<kbd>shift</kbd>)
-when applying handbrake for avoiding the engine to stall.
-
+- **Brakes:** 70:30 balanced to the front.
 - **Tire friction:** Isotropic Pacejka friction with a peak coefficient of friction of 1.1. Tire
 relaxation is enabled with a rate simulating standard road wheels.
 - **Solver:** Euler with two integration steps. Physic step is 0.02 seconds (50Hz), so vehicle
@@ -126,12 +137,12 @@ the final torques and calculate the tire forces.
 
 Vehicles are internally modeled as a graph of connected objects that derive from [VPComponent](classes/component.md).
 Each component can receive input torques and produce output torques. Wheels ([VPCWheel](classes/wheel.md))
-are components that receive torques at their inputs only. Motors ([VPCEngine](classes/engine.md))
-are components that produce torques at their outputs only. Other components have torque inputs and
+are components that receive torques at their inputs. Motors ([VPCEngine](classes/engine.md))
+are components that produce torques at their outputs. Other components have torque inputs and
 torque outputs. This allows to simulate any kind of internal configuration of the vehicle by
 connecting components in any combination.
 
-Vehicle components are created, initialized and connected within the [VPVehicleController](components/vehicle-controller.md)
-object, `OnInitialize` method. Check out the comments in the file `VPVehicleControllerBase.cs` for
+Vehicle components are created, initialized and connected within the `VPVehicleController.cs`
+script, `OnInitialize` method. Check out the comments in the file `VPVehicleControllerBase.cs` for
 indications on how the vehicles are implemented and simulated by overriding the virtual methods.
 
