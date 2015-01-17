@@ -34,16 +34,13 @@ Stay tunned! Follow **[@VehiclePhysics](https://twitter.com/VehiclePhysics)** on
 Vehicle presets and axle setup
 {: .roadmap .todo }
 
+Scenes and vehicles for tests
+{: .roadmap .todo }
+
 Repository clean up
 {: .roadmap .todo }
 
-Test scenes and vehicles
-{: .roadmap .todo }
-
 **Enter the Beta stage!**
-{: .roadmap .todo }
-
-Additional components
 {: .roadmap .todo }
 
 Anisotropic tire friction
@@ -52,13 +49,7 @@ Anisotropic tire friction
 Skidmarks and smoke
 {: .roadmap .todo }
 
-Audio
-{: .roadmap .todo }
-
-Aerodynamics
-{: .roadmap .todo }
-
-Sample scenes and vehicles
+Additional components
 {: .roadmap .todo }
 
 Documentation
