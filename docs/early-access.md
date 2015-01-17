@@ -1,7 +1,8 @@
 
 # Early Access {: .title }
 
-Early Access to Vehicle Physics Pro is available with the Professional License add-on ($200).
+Early Access to Vehicle Physics Pro is available with the [Professional License](index.md#licensing)
+add-on ($200).
 {: .title }
 
 ---
