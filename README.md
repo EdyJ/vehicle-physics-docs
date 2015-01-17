@@ -1,9 +1,7 @@
 # vehicle-physics-docs
 
-Documentation sources for the package [Vehicle Physics Pro](http://vehiclephysics.com) for Unity 3D.
-
-Documentación is online [here](http://vehiclephysics.com). **This repository contains the sources
-for the documentation only.**
+Sources for the documentation at [Vehicle Physics Pro](http://vehiclephysics.com). This repository
+contains the sources for the documentation site only.
 
 Follow [@VehiclePhysics](https://twitter.com/VehiclePhysics) for latest news and updates on the
 project.
