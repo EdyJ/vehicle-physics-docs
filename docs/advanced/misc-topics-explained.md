@@ -32,7 +32,7 @@ Substeps  | Comments
 2 | Minimum recommended for any player vehicle or "active" non-player vehicle (i.e. opponents) that require precise physic behavior.
 4 | Good value for having reasonably precise results.
 8 | Nice value for having good precise results. Profiler tests show no significant penalty on using from 1 to 8 substeps.
-20 | Maximum recommended value. With Unity's default physic step (0.02s, 50Hz) the vehicle does its internal calculations at 1000Hz (20 x 50hz).
+20 | Maximum recommended value. With Unity's default physic step (0.02s, 50Hz) the vehicle does its internal calculations at **1000 Hz** (20 x 50hz).
 
 Reaching 40 or more substeps is typically not necessary nor recommended. Some components exhibit
 numerical oscillations on high amount of substeps.
@@ -64,7 +64,7 @@ on the integration method and substeps.
 
 A simple way to measure the precision is setting the **Differential Type** to **Locked**. This
 enforces both drive wheels to rotate at the same rate. Then drive around gently and do some
-left-right turning while watching the rpm values at the telemetry.
+left-right turning while watching the rotation rate of the drive wheels at the telemetry.
 
 When using 1-4 substeps the wheels are "pursuing" each other when changing the steering direction,
 but won't likely spin at a similar rate unless direction is keep steady. The more substeps, the
@@ -122,6 +122,11 @@ the engine graph.
 - Change the **Clutch Type** to **Torque Converter** in Clutch Settings. This clutch type doesn't
 require to be actively engaged. Vehicle may stall at rare situations, like going backwards after
 spin.
+
+!!! Info "&fa-thumbs-o-up; Pro-Tip"
+	Having a Torque Converter with a manual transmission is not a common setup but can greatly
+	improve the gameplay. The user doesn't have to worry about clutch and still can apply throttle
+	gently for maneuvering at low speeds.
 
 #### How to configure HP?
 

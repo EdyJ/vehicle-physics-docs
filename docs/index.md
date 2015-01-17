@@ -37,16 +37,31 @@ Vehicle presets and axle setup
 Repository clean up
 {: .roadmap .todo }
 
+Test scenes and vehicles
+{: .roadmap .todo }
+
 **Enter the Beta stage!**
 {: .roadmap .todo }
 
-Sample scenes and vehicles
+Additional components
 {: .roadmap .todo }
 
 Anisotropic tire friction
 {: .roadmap .todo }
 
-Complete the documentation
+Skidmarks and smoke
+{: .roadmap .todo }
+
+Audio
+{: .roadmap .todo }
+
+Aerodynamics
+{: .roadmap .todo }
+
+Sample scenes and vehicles
+{: .roadmap .todo }
+
+Documentation
 {: .roadmap .todo }
 
 ---

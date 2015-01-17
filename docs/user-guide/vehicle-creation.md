@@ -91,7 +91,7 @@ Spring (N/m)
 	$force = spring * suspensionDistance$ in Newtons. A good starting value is $spring = mass*gravity*2/wheels$.
 Damper (N/ms<sup>-1</sup>)
 :	Dampers limit the speed of movement of the suspension. They affect the angular momentum
-	of the vehicle on weight shifting situations (accelerating, braking, cornering...)
+	of the vehicle on weight shifting situations (accelerating, braking, cornering...).
 
 All other settings of the WheelCollider component can be ignored as they won't have any effect
 on the Vehicle Physics module.
