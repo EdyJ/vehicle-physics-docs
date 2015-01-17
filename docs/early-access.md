@@ -146,3 +146,10 @@ Vehicle components are created, initialized and connected within the `VPVehicleC
 script, `OnInitialize` method. Check out the comments in the file `VPVehicleControllerBase.cs` for
 indications on how the vehicles are implemented and simulated by overriding the virtual methods.
 
+!!! info "&fa-info-circle; Useful resources"
+
+	- [Early Preview article in the Blog](www.edy.es/dev/2014/11/early-preview-of-vehicle-physics-pro/)
+	- [Development screenshots and videos](https://twitter.com/VehiclePhysics/media)
+	- [Miscellaneous topics explained](advanced/misc-topics-explained.md)
+	- [Data Bus reference](advanced/databus-reference.md)
+

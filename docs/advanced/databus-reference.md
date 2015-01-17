@@ -14,6 +14,9 @@ Add-on components can use the data bus for reading/writing values. Values are ar
 into _channels_. Accessing a specific data requires the pair `ChannelId, ValueId`. The standard
 Channels and their available values are referenced below.
 
+For examples on how to use the Data Bus, check out the scripts `VPStandardInput.cs` (method
+`Update`) and `VPVehicleController.cs` (methods `DoUpdateComponents` and `DoUpdateData`).
+
 #### Accessing the data bus
 
 The bus is accessed via property **data** defined in VPVehicleControllerBase. Use code like this in a script
