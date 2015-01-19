@@ -7,7 +7,10 @@ A comprehensive vehicle simulation library designed and conceived from scratch f
 fully accurate and customizable vehicle physics. Vehicle Physics Pro is available as editor add-on
 for [Unity 3D](http://unity3d.com).
 
-Stay tunned! Follow **[@VehiclePhysics](https://twitter.com/VehiclePhysics)** on Twitter for the latest news and announcements.
+Check out an early preview [here](www.edy.es/dev/2014/11/early-preview-of-vehicle-physics-pro/).
+
+Stay tunned! Follow **[@VehiclePhysics](https://twitter.com/VehiclePhysics)** on Twitter for the
+latest news and announcements.
 
 !!! warning "&fa-warning; Project under development"
 
@@ -68,7 +71,7 @@ Fully flexible modular component system
 
 AAA+ vehicle physics simulation
 
-:	It's built around a physics solver providing accurate results for all vehicle types and setups.
+:	Built around a physics solver providing accurate results for all vehicle types and setups.
 	The precision of the numeric results depends on the integration steps only.
 
 State-of-the-art wheel and tire friction simulation
@@ -80,9 +83,18 @@ Realistic and coherent
 
 : 	The underlying concept is a custom vehicle simulation model based on essential physics facts:
 	forces, torques and frictions. This model is easier to understand and simpler to calculate than
-	the commonly used models, yet providing physically accurate realistic results.
+	the commonly used models, yet providing physically accurate and realistic results.
 
 ### Licensing
+
+&fa-warning; License versions, terms, content and pricing are _not_ definitive. Anything may change
+for the package launch.
+{: .alert .alert-warning }
+
+Free edition (To Be Announced)
+
+:	Free edition contains the [Vehicle Controller](components/vehicle-controller.md) component
+	supporting a single vehicle per scene. Will be available at the Asset Store for free.
 
 Standard license (To Be Announced)
 
@@ -91,9 +103,32 @@ Standard license (To Be Announced)
 
 Professional license add-on
 
-:	Available now for [Early Access](early-access.md) (Alpha and Beta) for $200. Provides access to
-	the latest 	updates via GIT repository, fully commented C# source code and direct support via
+:	Available now for [Early Access](early-access.md) (Alpha and Beta) for **$200**. Provides access
+	to the latest updates via GIT repository, fully commented C# source code and direct support via
 	Skype. 	Contact me at [edytado@gmail.com](mailto:edytado@gmail.com) for more information.
+
+Site license
+
+:	Covers unlimited developers from a single studio providing Professional level access. Priced
+	$2000 - the equivalent to 1 Professional + 18 Standard licenses.
+
+
+#### Compare editions
+
+| Features | Free | Standard | Professional | Site |
+|----------|:----:|:--------:|:------------:|:----:|
+Full-featured [Vehicle Controller](components/vehicle-controller.md) component	| &fa-check;	| &fa-check;	| &fa-check; | &fa-check;	|
+Example scenes and tutorials	 						| &fa-check;	| &fa-check;	| &fa-check; | &fa-check;	|
+Unlimited vehicles on each scene						|	| &fa-check; | &fa-check; | &fa-check;	|
+Advanced example vehicles (APC, sport car...)			|	| &fa-check;	| &fa-check;	| &fa-check;	|
+Support for custom vehicles and components 				|	| &fa-check; | &fa-check; | &fa-check;	|
+Additional vehicles and components with source code		|	| &fa-check; | &fa-check; | &fa-check;	|
+Email support											|	| &fa-check;	| &fa-check;	| &fa-check;	|
+Full source code										|	|	| &fa-check; | &fa-check;	|
+Access to the GIT repository							|	|	| &fa-check;	| &fa-check;	|
+Direct support via Skype / Telegram						|	| 	| &fa-check;	| &fa-check;	|
+License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
+Price												| **Free** | **$100** | **$200** | **$2000** |
 
 ### Download & setup
 

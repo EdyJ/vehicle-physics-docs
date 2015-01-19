@@ -7,7 +7,6 @@ add-on ($200).
 
 ---
 
-
 !!! warning "&fa-warning; **Alpha stage**. Please have in mind:"
 
 	**Alpha stage** means active research & development, with frequent changes that will surely
