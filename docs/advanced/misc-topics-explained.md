@@ -92,7 +92,7 @@ effect.
 
 ---
 
-## Engine component
+## Engine
 
 #### It's difficult to stall
 
@@ -206,3 +206,55 @@ games are mostly in the "high speed" mode, so they don't care. But many common n
 produce incoherent results using the slip ratio and slip angle concepts. The tire model in Vehicle
 Physics Pro provides perfectly coherent behaviors at any speed, with perfectly defined continuous
 transitions between any state.
+
+---
+
+## Vehicle behavior
+
+#### Too much understeer!
+
+That will probably be the correct behavior for realistic settings. I'd like to quote [this forum
+post from Stefano Cassillo](http://www.gamedev.net/topic/631886-car-physics-sharing-work-ideas-formulas-and-car-parameters/page-2#entry4986662)
+developer of the [Assetto Corsa](http://www.assettocorsa.net) simulator, regarding lateral friction:
+
+> Tire lateral grip
+>
+> It depends a lot.. **a typical road tire will give you 1.0 - 1.1 G..** with load sensitivity and all you should get close to 1.0G on a skidpad. A normal road car with 1.0G lateral acc is considered VERY good (ie. the BMW Mini scores a tad less than 1.0G and is considered a very good handling car).
+>
+> **Casual players usually find this VERY low..** this has lots of possible explanations:
+>
+> 1. No real experience with real cars.. and I mean track experience in a competitive way, not the kind of experience you get being an idiot on public roads.
+>
+> 2. The result of 1 is that no driving skills are developed... typical sign, Joe-I-Go-Fast goes too fast into a corner, the car will understeer and he turns more into the corner, making understeer worse and going even more wide into the wall.
+>
+> 3. They are used to other games either arcade a-la PGR or F1 games where cars have huge amount of grip.
+
+Vehicle Physics Pro will implement these solutions:
+
+Automatic steering angle limit
+:	It will limit the maximum steering angle to the value that provides most lateral grip at the
+	actual vehicle speed.
+
+	In my opinion most of the understeer problem is a perception issue. Without steering wheel +
+	force feedback there's no clear idea on when the tires are performing their maximum grip. By
+	limiting the angle with speed you give the driver a clear perception on how much the vehicle
+	can steer at the actual speed (with the actual tires). Thus, they learn to brake on sharp
+	turns in order to allow more steering angle. Choosing the correct balance among speed & steering
+	angle on each turn gives the vehicle the best racing line.
+
+	This solution had been implemented in the former Edy's Vehicle Physics package under the driver
+	aid "ESP".
+
+Arcade mode
+:	A component that will enforce the vehicle to steer no matter the actual tire settings. Should
+	be used when this kind of gameplay is required by the project.
+
+#### Drift settings
+
+Use the same settings as real drift cars. This is quoted from [WhateverMan at gamedev.net](http://www.gamedev.net/topic/664785-car-physics-turbochargers-and-friends/#entry5205193):
+
+> ALSO about drift cars, what I said earlier, 52/48 was 52% on the front and 48% on the back.
+> Drift cars are Front Rear Layout cars. You need more weight on the front because you control
+> with your wheels and lighter rear to get more wheel spin. Later you use rear wings aerodynamics
+> to balance the angles with speed requirement.
+

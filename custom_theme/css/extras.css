@@ -12,6 +12,13 @@ code, kbd, pre, samp
 	}
 */
 
+/* H5 in bold */
+
+h5, .h5
+	{
+	font-weight: bold;
+	}
+
 /* Formatting for kbd items (keyboard shortcuts) */
 
 kbd
