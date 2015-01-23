@@ -7,7 +7,7 @@ A comprehensive vehicle simulation library designed and conceived from scratch f
 fully accurate and customizable vehicle physics. Vehicle Physics Pro is available as editor add-on
 for [Unity 3D](http://unity3d.com).
 
-Check out an early preview [here](www.edy.es/dev/2014/11/early-preview-of-vehicle-physics-pro/).
+Check out an early preview [here](http://www.edy.es/dev/2014/11/early-preview-of-vehicle-physics-pro/).
 
 Stay tunned! Follow **[@VehiclePhysics](https://twitter.com/VehiclePhysics)** on Twitter for the
 latest news and announcements.
