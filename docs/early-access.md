@@ -148,7 +148,7 @@ indications on how the vehicles are implemented and simulated by overriding the 
 
 !!! info "&fa-info-circle; Useful resources"
 
-	- [Early Preview article in the Blog](www.edy.es/dev/2014/11/early-preview-of-vehicle-physics-pro/)
+	- [Early Preview article in the Blog](http://www.edy.es/dev/2014/11/early-preview-of-vehicle-physics-pro/)
 	- [Development screenshots and videos](https://twitter.com/VehiclePhysics/media)
 	- [Miscellaneous topics explained](advanced/misc-topics-explained.md)
 	- [Data Bus reference](advanced/databus-reference.md)
