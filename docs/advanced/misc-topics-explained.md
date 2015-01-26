@@ -201,6 +201,16 @@ There are lots of papers, docs, etc. about tires and slip ratio / slip angle. _"
 wheel"_ is a good lesson, but this time I strongly believe that the wheel needed to be reinvented
 for most racing games and vehicle simulations.
 
+Here's a quote from my article [Facts and Myths of the Pacejka curves](http://www.edy.es/dev/2011/12/facts-and-myths-on-the-pacejka-curves/):
+
+> The lateral force is based on the slip angle. However the slip angle does not account for any
+> variation with the speed. Intuitively, the forces generated at high speed must be greater than
+> the forces at low speed with the same slip angles. But V = (0.2, 0.1) results in the same slip
+> angle (and thus the same force) as V = (20, 10).
+
+The above statement is based on Brian Beckman's thoughts about the Magic Formula not accounting for
+any variation of the force with speed (reference: [The Physics Of Racing, chapter 22](http://phors.locost7.info/phors22.htm)).
+
 In my opinion the slip ratio and slip angle concepts belong to the automotive and tire industries.
 They are used to make studies, write standards, specifications, etc. but they hare hard to fit into
 games and vehicle simulations in a coherent way. Slip ratio, slip angle and all their related
