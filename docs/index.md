@@ -126,6 +126,7 @@ Additional vehicles and components with source code		|	| &fa-check; | &fa-check;
 Email support											|	| &fa-check;	| &fa-check;	| &fa-check;	|
 Full source code										|	|	| &fa-check; | &fa-check;	|
 Access to the GIT repository							|	|	| &fa-check;	| &fa-check;	|
+Exclusive content and examples							|	|	| &fa-check; | &fa-check;	|
 Direct support via Skype / Telegram						|	| 	| &fa-check;	| &fa-check;	|
 License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
 Price												| **Free** | **$100** | **$200** | **$2000** |
