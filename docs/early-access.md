@@ -23,9 +23,10 @@ add-on ($200).
 	right now. In some cases I'm even using the documentation as annotated roadmap for the upcoming
 	developments.
     - **The project is actually being developed in <u>Unity 4</u>**. There is a very serious
-	bug at the WheelCollider in Unity 5 (beta 20 when writing this) that turns the vehicles
-	unstable above certain speed (~100 Km/h or 60 mph). The project will be upgraded to Unity 5
-	as soon as this bug is resolved. The package will be compatible with both Unity 4 and 5.
+	bug at the WheelCollider in Unity 5 (beta 21 when writing this) that turns the vehicles
+	unstable above certain speed (~120 Km/h or 75 mph). The project will be upgraded to Unity 5
+	as soon as this bug is resolved. The Vehicle Physics core package will be compatible with both
+	Unity 4 and 5.
 
 !!! info "&fa-thumbs-o-up; Feedback is welcome!"
 
