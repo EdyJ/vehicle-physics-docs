@@ -66,6 +66,9 @@ Instructions:
 
 4.	Now you can open the project at the folder **vehicle-physics-pro** with Unity 4.
 
+You could configure **GIT with ssh** for using the repositories without having to entering your
+credentials each time. [Instructions here](http://projects.edy.es/trac/edy_vehicle-physics/wiki/GitSetup)
+
 ### Sandbox scene
 
 The development scenes, tests, etc are located in the folder **NinjaCamp v2**. The actual sandbox
