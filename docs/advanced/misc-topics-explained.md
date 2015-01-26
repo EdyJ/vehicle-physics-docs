@@ -128,7 +128,19 @@ spin.
 	improve the gameplay. The user doesn't have to worry about clutch and still can apply throttle
 	gently for maneuvering at low speeds.
 
-#### How to configure HP?
+#### How to ignite the engine at the beginning of the scene?
+
+Two ways:
+
+- Disable **Can Stall**. Engine will be always on, without possibility of stall.
+
+- Keep sending the value "1" to `StdInput.Key` via the [Data Bus](databus-reference.md)
+until the value `Vehicle.EngineStalled` returns "0". Then send a "0" to `StdInput.Key`.
+
+	This procedure actually moves the ignition key to the ignite position. Once ignited (vehicle
+	is no longer stalled) it moves the key back to normal operation.
+
+#### How to configure the horsepower (HP)?
 
 In the engine you can configure torque only, not HP. Torque is the actual value the engine transmits
 to the components downstream. Engine power or HP is just the torque multiplied by the  angular
@@ -213,8 +225,10 @@ transitions between any state.
 
 #### Too much understeer!
 
-That will probably be the correct behavior for realistic settings. I'd like to quote [this forum
-post from Stefano Cassillo](http://www.gamedev.net/topic/631886-car-physics-sharing-work-ideas-formulas-and-car-parameters/page-2#entry4986662)
+That will probably be the correct behavior for realistic settings. Most vehicles tend to understeer
+as natural behavior.
+
+I'd like to quote [this forum post from Stefano Cassillo](http://www.gamedev.net/topic/631886-car-physics-sharing-work-ideas-formulas-and-car-parameters/page-2#entry4986662),
 developer of the [Assetto Corsa](http://www.assettocorsa.net) simulator, regarding lateral friction:
 
 > Tire lateral grip
@@ -245,6 +259,9 @@ Automatic steering angle limit
 	This solution had been implemented in the former Edy's Vehicle Physics package under the driver
 	aid "ESP".
 
+Force feedback
+:	Allowing the use of steering wheel controllers for feeling the v
+
 Arcade mode
 :	A component that will enforce the vehicle to steer no matter the actual tire settings. Should
 	be used when this kind of gameplay is required by the project.
@@ -258,3 +275,16 @@ Use the same settings as real drift cars. This is quoted from [WhateverMan at ga
 > with your wheels and lighter rear to get more wheel spin. Later you use rear wings aerodynamics
 > to balance the angles with speed requirement.
 
+---
+
+## Custom components and vehicles
+
+#### How to control the vehicle my way? (i.e. mobile controller, AI, ...)
+
+Create your own input component, i.e. VPCustomInput, for sending your input values (throttle, brakes
+steering...) to the vehicle via [Data Bus](databus-reference.md). Use the included standard input
+component `VPStandardInput.cs` as example on how to send the values. Add your custom input component
+to the vehicle GameObject instead of [VPStandardInput](../components/vehicle-input.md).
+
+Do not modify the included scripts, as future updates may override your changes. The package is
+designed so any functionality could be added via custom scripts.
