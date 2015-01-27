@@ -46,6 +46,24 @@ canvas
 	}
 
 
+/* Responsive images */
+
+img
+	{
+	display: block;
+	margin: 20px auto;
+	max-width: 93%;
+	height: auto;
+	}
+
+
+img.img-medium
+	{
+	width: 520px;
+	}
+
+
+
 /* Nicely formatted centered title and subtitle */
 
 h1.title

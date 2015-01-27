@@ -74,6 +74,8 @@ credentials each time. [Instructions here](http://projects.edy.es/trac/edy_vehic
 The development scenes, tests, etc are located in the folder **NinjaCamp v2**. The actual sandbox
 scene I'm using for development and testing is **NinjaTest v2** in this folder.
 
+[![Vehicle Physics Pro Alpha Sandbox scene](img/vehicle-physics-pro-alpha-sandbox-02.jpg)](img/vehicle-physics-pro-alpha-sandbox-02.jpg)
+
 When playing the scene the vehicle begins with the engine off. For starting the engine:
 
 1. Press <kbd>K</kbd> for moving the ignition key from "Off" to "Drive" (check out the telemetry
@@ -157,3 +159,11 @@ indications on how the vehicles are implemented and simulated by overriding the 
 	- [Miscellaneous topics explained](advanced/misc-topics-explained.md)
 	- [Data Bus reference](advanced/databus-reference.md)
 
+### Components
+
+Actual inspector for the vehicle GameObject. Gearbox is work in progress at the time of taking
+this capture:
+
+![Vehicle Physics Pro Alpha Inspector](img/vehicle-physics-pro-alpha-inspector.png)
+
+---

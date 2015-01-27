@@ -17,6 +17,8 @@ latest news and announcements.
 	The project status is **Alpha**. This documentation is work in progress. [Early Access](early-access.md)
 	to the project's repository is available with the [Professional License](index.md#licensing) (see below).
 
+[![Vehicle Physics Pro Alpha Sandbox scene](img/vehicle-physics-pro-alpha-sandbox-02.jpg){: .img-medium }](img/vehicle-physics-pro-alpha-sandbox-02.jpg)
+
 #### Development roadmap
 
 &fa-check; Base: Tire friction, solver, modular torque model
