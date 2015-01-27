@@ -31,8 +31,8 @@ Substeps  | Comments
 1 |	Non-player vehicles that don't require precise physics such traffic, parked cars, etc.
 2 | Minimum recommended for any player vehicle or "active" non-player vehicle (i.e. opponents) that require precise physic behavior.
 4 | Good value for having reasonably precise results.
-8 | Nice value for having good precise results. Profiler tests show no significant penalty on using from 1 to 8 substeps.
-20 | Maximum recommended value. With Unity's default physic step (0.02s, 50Hz) the vehicle does its internal calculations at **1000 Hz** (20 x 50hz).
+8 | Recommended value for having good precise results. Profiler tests show no significant penalty on using from 1 to 8 substeps.
+20 | Maximum recommended value. At Unity's default physic step (0.02s, 50Hz) the vehicle does its internal calculations at **1000 Hz** (20 x 50hz).
 
 Reaching 40 or more substeps is typically not necessary nor recommended. Some components exhibit
 numerical oscillations on high amount of substeps.
@@ -42,8 +42,8 @@ precision...
 
 #### Should I change the Unity's physics timestep?
 
-There's no need for changing Unity's default physics/fixed timestep (0.02). Within Vehicle Physics
-Pro you can configure the amount of integration substeps in a per-vehicle basis.
+There's no need for changing Unity's default physics/fixed timestep (0.02, 50Hhz). Within Vehicle
+Physics Pro you can configure the number of integration substeps in a per-vehicle basis.
 
 Some calculations and data are extracted out of the Unity physics engine: _velocity_ and
 _downforce_. These are calculated at the Unity's physics rate. Tire forces are also applied at
@@ -67,7 +67,7 @@ enforces both drive wheels to rotate at the same rate. Then drive around gently 
 left-right turning while watching the rotation rate of the drive wheels at the telemetry.
 
 When using 1-4 substeps the wheels are "pursuing" each other when changing the steering direction,
-but won't likely spin at a similar rate unless direction is keep steady. The more substeps, the
+but won't likely spin at a the same rate unless steering is kept steady. The more substeps, the
 faster they will catch each other's rotation rate. With 10-20 substeps the difference in their
 rates will always be within 1-2 rpms only.
 
@@ -138,7 +138,7 @@ Two ways:
 until the value `Vehicle.EngineStalled` returns "0". Then send a "0" to `StdInput.Key`.
 
 	This procedure actually moves the ignition key to the ignite position. Once ignited (vehicle
-	is no longer stalled) it moves the key back to normal operation.
+	is no longer stalled) the key is moved back to normal operation.
 
 #### How to configure the horsepower (HP)?
 
@@ -166,8 +166,8 @@ required.
 !!! Info "&fa-thumbs-o-up; Real driving tip"
 	Releasing the throttle in a car driving forwards makes the engine friction to brake the vehicle.
 	Too much engine friction can force the wheels actually spin at less speed than the road
-	underneath, causing wheel lock. In racing cars this effect typically arise when shifting down,
-	and is compensated using the [heel-toe technique](http://www.drivingfast.net/car-control/heel-toe-shifting.htm).
+	underneath, causing wheel lock. In racing cars this effect is typically observed when shifting
+	down, and is compensated using the [heel-toe technique](http://www.drivingfast.net/car-control/heel-toe-shifting.htm).
 
 A single wheel rotating backwards due to huge engine friction is likely caused by the
 **differential**. This is a correct behavior. It's most likely to happen in open or
@@ -208,7 +208,7 @@ Here's a quote from my article [Facts and Myths of the Pacejka curves](http://ww
 > the forces at low speed with the same slip angles. But V = (0.2, 0.1) results in the same slip
 > angle (and thus the same force) as V = (20, 10).
 
-The above statement is based on Brian Beckman's thoughts about the Magic Formula not accounting for
+This quote is based on Brian Beckman's thoughts about the Magic Formula not accounting for
 any variation of the force with speed (reference: [The Physics Of Racing, chapter 22](http://phors.locost7.info/phors22.htm)).
 
 In my opinion the slip ratio and slip angle concepts belong to the automotive and tire industries.
@@ -270,7 +270,8 @@ Automatic steering angle limit
 	aid "ESP".
 
 Force feedback
-:	Allowing the use of steering wheel controllers for feeling the v
+:	Allowing the use of steering wheel controllers for feeling the actual grip of the tire while
+	cornering.
 
 Arcade mode
 :	A component that will enforce the vehicle to steer no matter the actual tire settings. Should
@@ -289,12 +290,15 @@ Use the same settings as real drift cars. This is quoted from [WhateverMan at ga
 
 ## Custom components and vehicles
 
-#### How to control the vehicle my way? (i.e. mobile controller, AI, ...)
+#### How to control the vehicle my way? (mobile controller, AI, ...)
 
 Create your own input component, i.e. VPCustomInput, for sending your input values (throttle, brakes
 steering...) to the vehicle via [Data Bus](databus-reference.md). Use the included standard input
 component `VPStandardInput.cs` as example on how to send the values. Add your custom input component
 to the vehicle GameObject instead of [VPStandardInput](../components/vehicle-input.md).
 
-Do not modify the included scripts, as future updates may override your changes. The package is
+Do not modify the original scripts, as future updates may override your changes. The package is
 designed so any functionality could be added via custom scripts.
+
+---
+
