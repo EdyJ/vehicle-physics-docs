@@ -5,7 +5,7 @@ inspired in the [ODB-II standard](http://en.wikipedia.org/wiki/OBD-II_PIDs):
 
 - Immediate access O(1)
 - Direct, non-blocking read/write access from all clients
-- Transport only: no error control, no range checking
+- Data transport only: no error control, no range checking
 - Stores integer values only. Float values are represented as fixed-resolution decimals (ie: 1.0 = 10000)
 - NaN is gracefully supported as integer: <code>(int)NaN = -2147483647</code>
 - Full forwards-backwards compatibility along versions.
@@ -41,8 +41,8 @@ float engineRpm = m_vehicle.data.Get(VPDChannel.Vehicle, VPDVehicle.EngineRpm) /
 
 | ChannelId | Type | Description |
 | --------- | ---- | ----------- |
-| StdInput	| Write only	| States of the vehicle input elements |
-| Vehicle	| Read only		| State values of the internal components of the vehicle |
+| StdInput	| Write&nbsp;only	| States of the vehicle input elements.<br>Intended for writing, but the states can be read for representing the actual positions of the elements in the vehicle 3D model (i.e. steering wheel, gear stick...) |
+| Vehicle	| Read&nbsp;only		| State values of the internal components of the vehicle |
 
 ### StdInput channel
 
@@ -53,9 +53,9 @@ float engineRpm = m_vehicle.data.Get(VPDChannel.Vehicle, VPDVehicle.EngineRpm) /
 |Brake			| Brake pedal position		| %		|10000	|5000 = 0.5 = 50%
 |Handbrake		| Handbrake position		| %		|10000	|5000 = 0.5 = 50%
 |Clutch			| Clutch pedal position		| %		|10000	|5000 = 0.5 = 50%
-|ManualGear		| Manual gear lever position | gear | | -1 (reverse), 0 (neutral), 1, 2, 3, ...
-|AutomaticGear	| Automatic transmission mode | mode | | 0, 1, 2, 3, 4, 5<br>(M, P, R, N, D, L)<sup>1</sup>
-|Key			| Ignition key position | position | | -1 = off, 0 = drive, 1 = ignite
+|ManualGear		| Manual gear lever position | gear number | | -1 (reverse), 0 (neutral), 1, 2, 3, ...
+|AutomaticGear	| Automatic transmission mode | gear mode | | 0, 1, 2, 3, 4, 5<br>(M, P, R, N, D, L)<sup>1</sup>
+|Key			| Ignition key position | key position | | -1 = off, 0 = drive, 1 = ignite
 
 
 <sup>1</sup> Automatic transmission modes:
@@ -63,7 +63,7 @@ float engineRpm = m_vehicle.data.Get(VPDChannel.Vehicle, VPDVehicle.EngineRpm) /
 	- P: Park
 	- R: Reverse. Gear shifting is supported for more than one reverse gears.
 	- N: Neutral
-	- D: Drive: automatically engage forward gears. Gear shifting is supported as well.
+	- D: Drive: automatically engage forward gears. Gear shifting is supported for forward gears.
 	- L: Low: first gear only.
 
 ### Vehicle channel
@@ -77,7 +77,7 @@ float engineRpm = m_vehicle.data.Get(VPDChannel.Vehicle, VPDVehicle.EngineRpm) /
 |EngineLoad		| How much load is demanded 				| % 	| 1000	| 200 = 0.2 = 20%
 |ClutchTorque	| Torque at the output of the clutch in Nm	| Nm	| 1000	| 150000 = 150 Nm
 |ClutchLock		| Lock ratio of the clutch					| %		| 1000	| 800 = 0.8 = 80%
-|GearboxGear 	| Engaged gear								| gear	|		| Negative = reverse, 0 = Neutral or Park, Positive = forward.
-|GearboxMode	| Actual transmission mode					| mode	|		| 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_
+|GearboxGear 	| Engaged gear								| gear number	|		| Negative = reverse, 0 = Neutral or Park, Positive = forward.
+|GearboxMode	| Actual transmission mode					| gear mode		|		| 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_
 
 
