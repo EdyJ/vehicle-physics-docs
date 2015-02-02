@@ -37,6 +37,14 @@ m_vehicle.data.Set(VPDChannel.StdInput, VPDStdInput.Steer, Input.GetAxis("Horizo
 float engineRpm = m_vehicle.data.Get(VPDChannel.Vehicle, VPDVehicle.EngineRpm) / 1000.0f;
 ```
 
+The bus can also be accessed via [] operators: `data[channel][value]`
+
+```
+m_vehicle.data[VPDChannel.StdInput][VPDStdInput.Steer] = Input.GetAxis("Horizontal") * 10000;
+
+float engineRpm = m_vehicle.data[VPDChannel.Vehicle][VPDVehicle.EngineRpm];
+```
+
 ### Data Channels
 
 | ChannelId | Type | Description |
