@@ -33,11 +33,11 @@ latest news and announcements.
 &fa-check; Engine + clutch
 {: .roadmap }
 
-&fa-gear:spin; Gearbox
-{: .roadmap .wip }
+&fa-check; Gearbox
+{: .roadmap }
 
-Vehicle presets and axle setup
-{: .roadmap .todo }
+&fa-gear:spin; Vehicle presets and axle setup
+{: .roadmap .wip }
 
 Scenes and vehicles for tests
 {: .roadmap .todo }
