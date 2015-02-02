@@ -165,8 +165,8 @@ indications on how the vehicles are implemented and simulated by overriding the 
 
 ### Components
 
-Actual inspector for the vehicle GameObject. Gearbox is work in progress at the time of taking
-this capture:
+Actual inspector for the vehicle GameObject. The Vehicle Controller component exposes several
+development properties:
 
 ![Vehicle Physics Pro Alpha Inspector](img/vehicle-physics-pro-alpha-inspector.png)
 
