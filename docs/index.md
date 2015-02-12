@@ -121,7 +121,7 @@ Site license
 |----------|:----:|:--------:|:------------:|:----:|
 Full-featured [Vehicle Controller](components/vehicle-controller.md) component	| &fa-check;	| &fa-check;	| &fa-check; | &fa-check;	|
 Example scenes and tutorials	 						| &fa-check;	| &fa-check;	| &fa-check; | &fa-check;	|
-Unlimited vehicles on each scene						|	| &fa-check; | &fa-check; | &fa-check;	|
+Unlimited simultaneous vehicles on each scene			|	| &fa-check; | &fa-check; | &fa-check;	|
 Advanced example vehicles (APC, sport car...)			|	| &fa-check;	| &fa-check;	| &fa-check;	|
 Support for custom vehicles and components 				|	| &fa-check; | &fa-check; | &fa-check;	|
 Additional vehicles and components with source code		|	| &fa-check; | &fa-check; | &fa-check;	|

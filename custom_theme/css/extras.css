@@ -101,3 +101,11 @@ p.roadmap.wip i
 	{
 	color: #FF9800;
 	}
+
+
+/* Indented paragraphs */
+
+p.indent
+	{
+	margin-left: 26px;
+	}
