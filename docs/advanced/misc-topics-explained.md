@@ -328,6 +328,20 @@ Automatic steering angle limit
 	This solution had been implemented in the former Edy's Vehicle Physics package under the driver
 	aid "ESP".
 
+Aerodynamics
+:	Aerodynamic components provide extra downforce with the speed. This downforce increases the grip
+	at the tires. Balancing the amount of aerodynamic downforce among front and rear axles can
+	configure the understeer / oversteer behavior at high speeds.
+
+	Aerodynamics requires keeping an eye on the suspension (you can use the Telemetry). The extra
+	downforce will compress the suspension as well. It's better the suspension not to reach 100%
+	compression (1.0). Stiffer springs might be required for avoiding that.
+
+Simplified aerodynamics
+:	A simplified aerodynamics mode can be used for increasing the downforce (and thus grip) without
+	adding extra drag with speed. Greatly increasing this force can make the vehicle behave very
+	arcade style. Same considerations on the suspension as realistic aerodynamics are applied.
+
 Force feedback
 :	Allowing the use of steering wheel controllers for feeling the actual grip of the tire while
 	cornering.
