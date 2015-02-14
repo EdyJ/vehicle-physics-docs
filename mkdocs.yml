@@ -44,3 +44,5 @@ pages:
 - ['advanced/developing-addons.md', 'Advanced', 'Writting add-on features']
 - ['advanced/databus-reference.md', 'Advanced', 'Data Bus reference']
 - ['advanced/misc-topics-explained.md', 'Advanced', 'Miscelaneous topics explained']
+- ['advanced/how-suspensions-work.md', 'Advanced', 'How suspensions work']
+
