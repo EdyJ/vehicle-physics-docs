@@ -29,14 +29,20 @@ produced proportionally to the _contact depth_:
 <script type="text/javascript">
 	window.onload = function()
 	{
-		var tmp = new TextureCanvas({});
+		var tmp = new texturecanvas(
+			{
+			canvasId: 'c',
+			width: 18,
+			height: 14,
+			fill: '#AAA',
+			});
 
-		var canvas = new fabric.StaticCanvas('c');
-		$('#c').css("height", "auto");
+		// var canvas = new fabric.StaticCanvas('c');
+		// $('#c').css("height", "auto");
 
-		canvas.add(
-			new fabric.Rect({ top: 0, left: 0, width: 300, height: 250, fill: '#AAA' })
-		);
+		// canvas.add(
+			// new fabric.Rect({ top: 0, left: 0, width: 300, height: 250, fill: '#AAA' })
+		// );
 	};
 </script>
 
