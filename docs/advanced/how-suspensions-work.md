@@ -27,14 +27,14 @@ produced proportionally to the _contact depth_:
 <canvas id="fig1" class="img-responsive" width="300px" height="250px">
 </canvas>
 <script type="text/javascript">
-	window.onload = function()
+	var drawCanvas = function()
 		{
 		var canvas = new texturecanvas(
 			{
 			canvasId: 'fig1',
 			width: 18,
 			height: 14,
-			fill: '#AAA',
+
 			});
 
 		canvas.Line([ 4, 3, 15, 3],
@@ -50,9 +50,10 @@ produced proportionally to the _contact depth_:
 
 		// canvas.Rect([4, 3, 11, 1], { stroke: "magenta", strokeWidth: 3 });
 		canvas.Rect([0, 0, 18, 14], { fill: "transparent", stroke: "magenta", strokeWidth: 3 });
-
-
 		};
+
+	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
+	else if (window.attachEvent) window.attachEvent('onload', drawCanvas);
 </script>
 
 

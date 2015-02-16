@@ -8,18 +8,17 @@ function texturecanvas (canvasSettings)
 	// Create and fill canvas
 
 	self.canvasElement = $('#' + self.settings.canvasId);
-
 	self.pixelsWidth = self.canvasElement.width();
 	self.pixelsHeight = self.canvasElement.height();
 	self.scaleX = self.pixelsWidth / self.settings.width;
 	self.scaleY = self.pixelsHeight / self.settings.height;
 
-	self.canvasElement.css("height", "auto");
 	self.canvas = new fabric.StaticCanvas(self.settings.canvasId);
+	self.canvasElement.css("height", "auto");
 
-	console.log(self.pixelsWidth + " x " + self.pixelsHeight + ";  " + self.scaleX + " x " + self.scaleY);
+	// console.log(self.pixelsWidth + " x " + self.pixelsHeight + ";  " + self.scaleX + " x " + self.scaleY);
 
-	if (self.settings.fill != undefined)
+	if (self.settings.fill)
 		{
 		self.canvas.add(
 			new fabric.Rect({ top: 0, left: 0, width: self.pixelsWidth, height: self.pixelsHeight, fill: self.settings.fill })
@@ -77,8 +76,6 @@ function texturecanvas (canvasSettings)
 			options.width -= options.strokeWidth;
 			}
 
-		console.log(options);
-
 		self.canvas.add(new fabric.Rect(options));
 		}
 
@@ -122,5 +119,4 @@ function texturecanvas (canvasSettings)
 		if (value != undefined) value *= self.scaleY;
 		return value
 		}
-
 	}
