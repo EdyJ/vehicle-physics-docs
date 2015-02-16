@@ -113,7 +113,7 @@ Uses a custom build of Fabric.js that includes Text and Shadow modules.
 <canvas id="c" class="img-responsive" width="500px" height="300px">
 </canvas>
 <script type="text/javascript">
-	window.onload = function()
+	var drawCanvas = function ()
 	{
 		var canvas = new fabric.StaticCanvas('c');
 		$('#c').css("height", "auto");
@@ -123,8 +123,47 @@ Uses a custom build of Fabric.js that includes Text and Shadow modules.
 			new fabric.Circle({ top: 0, left: 450, radius: 50, fill: 'green' }),
 			new fabric.Triangle({ top: 200, left: 200, width: 100, height: 100, fill: 'yellow' })
 		);
-	};
+
+	}
+
+	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
+	else if (window.attachEvent) window.attachEvent('onload', drawCanvas);
 </script>
+
+And now our own texturecanvas.js helper using Fabric.js internally:
+
+<canvas id="fig1" class="img-responsive" width="300px" height="250px">
+</canvas>
+<script type="text/javascript">
+	var drawCanvas = function ()
+		{
+		var canvas = new texturecanvas(
+			{
+			canvasId: 'fig1',
+			width: 18,
+			height: 14,
+			fill: '#AAA',
+			});
+
+
+		canvas.Line([ 4, 3, 15, 3],
+			{
+			stroke: "#000",
+			strokeWidth: 3,
+			});
+
+		canvas.Circle([9, 7, 0.25], { fill: 'green' });
+		canvas.Rect([4, 3, 11, 1], { fill: "yellow" });
+		canvas.Circle([4, 3, 0.25], { fill: 'blue' });
+		canvas.Circle([15, 3, 0.25], { fill: 'cyan' });
+
+		canvas.Rect([0, 0, 18, 14], { fill: "transparent", stroke: "magenta", strokeWidth: 3 });
+		};
+
+	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
+	else if (window.attachEvent) window.attachEvent('onload', drawCanvas);
+</script>
+
 
 ----
 
