@@ -8,8 +8,8 @@ function texturecanvas (canvasSettings)
 	// Create and fill canvas
 
 	self.canvasElement = $('#' + self.settings.canvasId);
-	self.pixelsWidth = self.canvasElement.width();
-	self.pixelsHeight = self.canvasElement.height();
+	self.pixelsWidth = self.canvasElement.width()-1;
+	self.pixelsHeight = self.canvasElement.height()-1;
 	self.scaleX = self.pixelsWidth / self.settings.width;
 	self.scaleY = self.pixelsHeight / self.settings.height;
 
@@ -80,6 +80,36 @@ function texturecanvas (canvasSettings)
 		}
 
 
+	self.Grid = function (options)
+		{
+		var points = [ 0, 0, 0, 0 ];
+
+		if (!options.originX) options.originX = 'center';
+		if (!options.originY) options.originY = 'center';
+
+		for (var i=0; i <= self.settings.width; i++)
+			{
+			points[0] = i;
+			points[2] = i;
+			points[1] = 0;
+			points[3] = self.settings.height;
+
+			self.Line(points, options);
+			}
+
+		for (var i=0; i <= self.settings.height; i++)
+			{
+			points[0] = 0;
+			points[2] = self.settings.width;
+			points[1] = i;
+			points[3] = i;
+
+			self.Line(points, options);
+			}
+
+		}
+
+
 	// Scaling methods, mostly internal
 
 
@@ -95,28 +125,28 @@ function texturecanvas (canvasSettings)
 
 	self.ConvertPosX = function (value)
 		{
-		if (value != undefined) value *= self.scaleX;
+		if (value != undefined) value = Math.round(value * self.scaleX);
 		return value;
 		}
 
 
 	self.ConvertPosY = function (value)
 		{
-		if (value != undefined) value = self.pixelsHeight - value * self.scaleY;
+		if (value != undefined) value = Math.round(self.pixelsHeight - value * self.scaleY);
 		return value;
 		}
 
 
 	self.ConvertWidth = function (value)
 		{
-		if (value != undefined) value *= self.scaleX;
+		if (value != undefined) value = Math.round(value * self.scaleX);
 		return value;
 		}
 
 
 	self.ConvertHeight = function (value)
 		{
-		if (value != undefined) value *= self.scaleY;
+		if (value != undefined) value = Math.round(value * self.scaleY);
 		return value
 		}
 	}
