@@ -13,6 +13,9 @@ function texturecanvas (canvasSettings)
 	self.scaleX = self.pixelsWidth / self.settings.width;
 	self.scaleY = self.pixelsHeight / self.settings.height;
 
+	self.originX = 0;
+	self.originY = 0;
+
 	self.canvas = new fabric.StaticCanvas(self.settings.canvasId);
 	self.canvasElement.css("height", "auto");
 
@@ -87,26 +90,25 @@ function texturecanvas (canvasSettings)
 		if (!options.originX) options.originX = 'center';
 		if (!options.originY) options.originY = 'center';
 
-		for (var i=0; i <= self.settings.width; i++)
+		for (var i=0, x = -self.originX; i <= self.settings.width; x++, i++)
 			{
-			points[0] = i;
-			points[2] = i;
-			points[1] = 0;
+			points[0] = x;
+			points[1] = -self.originY;
+			points[2] = x;
 			points[3] = self.settings.height;
 
 			self.Line(points, options);
 			}
 
-		for (var i=0; i <= self.settings.height; i++)
+		for (var i=0, y = -self.originY; i <= self.settings.height; y++, i++)
 			{
-			points[0] = 0;
+			points[0] = -self.originX;
+			points[1] = y;
 			points[2] = self.settings.width;
-			points[1] = i;
-			points[3] = i;
+			points[3] = y;
 
 			self.Line(points, options);
 			}
-
 		}
 
 
@@ -125,14 +127,14 @@ function texturecanvas (canvasSettings)
 
 	self.ConvertPosX = function (value)
 		{
-		if (value != undefined) value = Math.round(value * self.scaleX);
+		if (value != undefined) value = Math.round((value + self.originX) * self.scaleX);
 		return value;
 		}
 
 
 	self.ConvertPosY = function (value)
 		{
-		if (value != undefined) value = Math.round(self.pixelsHeight - value * self.scaleY);
+		if (value != undefined) value = Math.round(self.pixelsHeight - (value + self.originY) * self.scaleY);
 		return value;
 		}
 

@@ -24,23 +24,33 @@ When a wheel is lifted from the ground the suspension produces no force. At the 
 possible it also won't produce any force. As the spring gets more compressed, more force is
 produced proportionally to the _contact depth_:
 
-<canvas id="fig1" class="img-responsive" width="300px" height="250px">
+<canvas id="fig1" class="img-responsive" width="340px" height="256px">
 </canvas>
 <script type="text/javascript">
 	var drawCanvas = function()
 		{
 		var canvas = new texturecanvas(
 			{
-			canvasId: 'fig1',
-			width: 18,
-			height: 14,
+			canvasId: "fig1",
+			width: 19,
+			height: 15,
 			});
 
+		canvas.originX = 5;
+		canvas.originY = 3;
 
 		canvas.Grid({ stroke: "#BBF", strokeWidth: 0.5 });
 
-		canvas.Line([ 3.5, 3, 15, 3], { stroke: "#000", strokeWidth: 3, });
-		canvas.Line([ 4, 2.5, 4, 13], { stroke: "#000", strokeWidth: 3, });
+		canvas.Line([ 9, -0.5, 9, 8 ], { stroke: "blue", strokeWidth: 1, strokeDashArray: [5, 5] });
+		canvas.Line([ -0.5, 8, 9, 8 ], { stroke: "blue", strokeWidth: 1, strokeDashArray: [5, 5] });
+		canvas.Line([ 5, -0.5, 5, 4.5 ], { stroke: "slateblue", strokeWidth: 1, strokeDashArray: [5, 5] });
+		canvas.Line([ -0.5, 4.5, 5, 4.5 ], { stroke: "slateblue", strokeWidth: 1, strokeDashArray: [5, 5] });
+
+		canvas.Line([ 0, 0, 9, 8 ], { stroke: "red", strokeWidth: 3 });
+		canvas.Line([ 9, 8, 9, 10 ], { stroke: "red", strokeWidth: 3 });
+
+		canvas.Line([ -0.5, 0, 11, 0 ], { stroke: "#333", strokeWidth: 2 });
+		canvas.Line([ 0, -0.5, 0, 10 ], { stroke: "#333", strokeWidth: 2 });
 		};
 
 	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
@@ -78,6 +88,8 @@ resting, cruising at constant speed or under constant acceleration. The suspensi
 specific wheel can then be calculated as:
 
 $$suspensionPosition = \frac{weight \cdot{gravity}}{stiffness}$$
+
+where $weight$ is the actual weight being supported by that wheel.
 
 ### Studying the oscillating behavior
 
