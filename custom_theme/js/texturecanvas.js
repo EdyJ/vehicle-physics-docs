@@ -10,8 +10,8 @@ function texturecanvas (canvasSettings)
 	// Canvas dimensions
 
 	self.canvasElement = $('#' + self.settings.canvasId);
-	self.pixelsWidth = self.canvasElement.width()-1;
-	self.pixelsHeight = self.canvasElement.height()-1;
+	self.pixelsWidth = self.settings.pixelsWidth? self.settings.pixelsWidth-1 : self.canvasElement.width()-1;
+	self.pixelsHeight = self.settings.pixelsHeight? self.settings.pixelsHeight-1 : self.canvasElement.height()-1;
 	self.scaleX = self.pixelsWidth / self.settings.width;
 	self.scaleY = self.pixelsHeight / self.settings.height;
 

@@ -32,6 +32,8 @@ produced proportionally to the _contact depth_:
 		var canvas = new texturecanvas(
 			{
 			canvasId: "fig1",
+			pixelsWidth: 390,
+			pixelsHeight: 320,
 			width: 23,
 			height: 18,
 			originX: 6,
