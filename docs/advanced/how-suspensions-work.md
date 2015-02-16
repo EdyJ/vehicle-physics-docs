@@ -34,22 +34,13 @@ produced proportionally to the _contact depth_:
 			canvasId: 'fig1',
 			width: 18,
 			height: 14,
-
 			});
 
-		canvas.Line([ 4, 3, 15, 3],
-			{
-			stroke: "#000",
-			strokeWidth: 3,
-			});
 
-		canvas.Circle([9, 7, 0.25], { fill: 'green' });
-		canvas.Rect([4, 3, 11, 1], { fill: "yellow" });
-		canvas.Circle([4, 3, 0.25], { fill: 'green' });
-		canvas.Circle([15, 3, 0.25], { fill: 'green' });
+		canvas.Grid({ stroke: "#BBF", strokeWidth: 0.5 });
 
-		// canvas.Rect([4, 3, 11, 1], { stroke: "magenta", strokeWidth: 3 });
-		canvas.Rect([0, 0, 18, 14], { fill: "transparent", stroke: "magenta", strokeWidth: 3 });
+		canvas.Line([ 3.5, 3, 15, 3], { stroke: "#000", strokeWidth: 3, });
+		canvas.Line([ 4, 2.5, 4, 13], { stroke: "#000", strokeWidth: 3, });
 		};
 
 	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
