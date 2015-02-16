@@ -24,7 +24,7 @@ When a wheel is lifted from the ground the suspension produces no force. At the 
 possible it also won't produce any force. As the spring gets more compressed, more force is
 produced proportionally to the _contact depth_:
 
-<canvas id="fig1" class="img-responsive" width="340px" height="256px">
+<canvas id="fig1" class="img-responsive" width="390px" height="320px">
 </canvas>
 <script type="text/javascript">
 	var drawCanvas = function()
@@ -32,12 +32,11 @@ produced proportionally to the _contact depth_:
 		var canvas = new texturecanvas(
 			{
 			canvasId: "fig1",
-			width: 19,
-			height: 15,
+			width: 23,
+			height: 18,
+			originX: 6,
+			originY: 4,
 			});
-
-		canvas.originX = 5;
-		canvas.originY = 3;
 
 		canvas.Grid({ stroke: "#BBF", strokeWidth: 0.5 });
 
@@ -51,6 +50,15 @@ produced proportionally to the _contact depth_:
 
 		canvas.Line([ -0.5, 0, 11, 0 ], { stroke: "#333", strokeWidth: 2 });
 		canvas.Line([ 0, -0.5, 0, 10 ], { stroke: "#333", strokeWidth: 2 });
+
+		canvas.Text([ 13.5, 0, 0.75 ], "Contact\ndepth (m)", { fill: "#444", fontWeight: "bold" });
+		canvas.Text([ 0, 11.5, 0.75 ], "Force\n(N)", { fill: "#444", fontWeight: "bold" });
+
+		canvas.Text([ 9.5, -1, 0.75 ], "suspension\ndistance", { fill: "blue", originY: "top" });
+		canvas.Text([ 4.5, -1, 0.75 ], "suspension\nposition", { fill: "slateblue", originY: "top" });
+
+		canvas.Text([ -1, 8, 0.75 ], "max force", { fill: "blue", originX: "right" });
+		canvas.Text([ -1, 4.5, 0.75 ], "suspension\nforce", { fill: "slateblue", originX: "right", textAlign: "right" });
 		};
 
 	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
@@ -58,8 +66,8 @@ produced proportionally to the _contact depth_:
 </script>
 
 
-The compression limit is the _**suspension distance**_. Beyond this point the spring cannot compress
-further and a hard contact with the rigid body is produced.
+The compression limit is the _**suspension distance**_. Beyond this point the spring has reached its
+maximum force and cannot compress further. A hard contact with the rigid body is produced.
 
 The slope of the force line is given by the _stiffness_ $K$. The more _stiffness_, more steep slope.
 
