@@ -7,16 +7,27 @@ function texturecanvas (canvasSettings)
 
 	// Create and fill canvas
 
+	// Canvas dimensions
+
 	self.canvasElement = $('#' + self.settings.canvasId);
 	self.pixelsWidth = self.canvasElement.width()-1;
 	self.pixelsHeight = self.canvasElement.height()-1;
 	self.scaleX = self.pixelsWidth / self.settings.width;
 	self.scaleY = self.pixelsHeight / self.settings.height;
 
+	// Canvas settings
+
 	self.originX = self.settings.originX? self.settings.originX : 0;
 	self.originY = self.settings.originY? self.settings.originY : 0;
 
+	self.fontHeight = self.settings.fontHeight? self.settings.fontHeight : 1;
+
+	// Actually create and configure the canvas
+
 	self.canvas = new fabric.StaticCanvas(self.settings.canvasId);
+
+	// fabric.Object.prototype.fontSize
+
 	self.canvasElement.css("height", "auto");
 
 	// console.log(self.pixelsWidth + " x " + self.pixelsHeight + ";  " + self.scaleX + " x " + self.scaleY);
@@ -36,8 +47,9 @@ function texturecanvas (canvasSettings)
 
 	self.Line = function (points, options)
 		{
-		self.ConvertPoints(points);
+		self.TransformPoints(points);
 
+		if (!options) options = {};
 		if (!options.originX) options.originX = 'center';
 		if (!options.originY) options.originY = 'center';
 
@@ -49,8 +61,9 @@ function texturecanvas (canvasSettings)
 
 	self.Circle = function (points, options)
 		{
-		self.ConvertPoints(points);
+		self.TransformPoints(points);
 
+		if (!options) options = {};
 		options.left = points[0];
 		options.top = points[1];
 		options.radius = points[2];
@@ -66,10 +79,11 @@ function texturecanvas (canvasSettings)
 
 	self.Rect = function (points, options)
 		{
-		options.left = self.ConvertPosX(points[0]);
-		options.top = self.ConvertPosY(points[1]);
-		options.width = self.ConvertWidth(points[2]);
-		options.height = self.ConvertHeight(points[3]);
+		if (!options) options = {};
+		options.left = self.TransformX(points[0]);
+		options.top = self.TransformY(points[1]);
+		options.width = self.TransformWidth(points[2]);
+		options.height = self.TransformHeight(points[3]);
 
 		options.top -= options.height;
 
@@ -83,10 +97,34 @@ function texturecanvas (canvasSettings)
 		}
 
 
+	// Text: [ x, y, size ]
+
+	self.Text = function (points, text, options)
+		{
+		if (!options) options = {};
+
+		options.fontSize = self.TransformHeight(points[2]);
+		self.TransformPoints(points);
+		options.left = points[0];
+		options.top = points[1];
+
+		if (!options.originX) options.originX = 'center';
+		if (!options.originY) options.originY = 'center';
+		if (!options.textAlign) options.textAlign = 'center';
+		if (!options.fontFamily) options.fontFamily = 'Helvetica';
+
+		self.canvas.add(new fabric.Text(text, options));
+		}
+
+
+
+    // Grid
+
 	self.Grid = function (options)
 		{
 		var points = [ 0, 0, 0, 0 ];
 
+		if (!options) options = {};
 		if (!options.originX) options.originX = 'center';
 		if (!options.originY) options.originY = 'center';
 
@@ -115,38 +153,38 @@ function texturecanvas (canvasSettings)
 	// Scaling methods, mostly internal
 
 
-	self.ConvertPoints = function (points)
+	self.TransformPoints = function (points)
 		{
 		for (var i = 0; i < points.length; i += 2)
 			{
-			points[i] = self.ConvertPosX(points[i]);
-			points[i+1] = self.ConvertPosY(points[i+1]);
+			points[i] = self.TransformX(points[i]);
+			points[i+1] = self.TransformY(points[i+1]);
 			}
 		}
 
 
-	self.ConvertPosX = function (value)
+	self.TransformX = function (value)
 		{
 		if (value != undefined) value = Math.round((value + self.originX) * self.scaleX);
 		return value;
 		}
 
 
-	self.ConvertPosY = function (value)
+	self.TransformY = function (value)
 		{
 		if (value != undefined) value = Math.round(self.pixelsHeight - (value + self.originY) * self.scaleY);
 		return value;
 		}
 
 
-	self.ConvertWidth = function (value)
+	self.TransformWidth = function (value)
 		{
 		if (value != undefined) value = Math.round(value * self.scaleX);
 		return value;
 		}
 
 
-	self.ConvertHeight = function (value)
+	self.TransformHeight = function (value)
 		{
 		if (value != undefined) value = Math.round(value * self.scaleY);
 		return value
