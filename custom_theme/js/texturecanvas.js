@@ -1,68 +1,126 @@
 
 
-function texturecanvas (parameters)
+function texturecanvas (canvasSettings)
 	{
 	var self = this;
-
-	console.log(parameters);
+	self.settings = canvasSettings;
 
 	// Create and fill canvas
 
-	self.canvasElement = $('#' + parameters.canvasId);
+	self.canvasElement = $('#' + self.settings.canvasId);
 
 	self.pixelsWidth = self.canvasElement.width();
 	self.pixelsHeight = self.canvasElement.height();
-	self.scaleX = self.pixelsWidth / parameters.width;
-	self.scaleY = self.pixelsHeight / parameters.height;
+	self.scaleX = self.pixelsWidth / self.settings.width;
+	self.scaleY = self.pixelsHeight / self.settings.height;
 
 	self.canvasElement.css("height", "auto");
-	self.canvas = new fabric.StaticCanvas(parameters.canvasId);
+	self.canvas = new fabric.StaticCanvas(self.settings.canvasId);
 
-	console.log(self.pixelsWidth + " x " + self.pixelsHeight);
+	console.log(self.pixelsWidth + " x " + self.pixelsHeight + ";  " + self.scaleX + " x " + self.scaleY);
 
-
-	if (parameters.fill != undefined)
+	if (self.settings.fill != undefined)
 		{
 		self.canvas.add(
-			new fabric.Rect({ top: 0, left: 0, width: self.pixelsWidth, height: self.pixelsHeight, parameters.fill: '#AAA' })
+			new fabric.Rect({ top: 0, left: 0, width: self.pixelsWidth, height: self.pixelsHeight, fill: self.settings.fill })
 			);
 		}
 
 
-	// Scaling methods
+	// Drawing methods
 
 
-	self.Scale = function (scaleParams)
+	// Line: [ x1, y1, x2, y2 ]
+
+	self.Line = function (points, options)
 		{
-		// Convert any scaleParams parameter into the canvas scale
+		self.ConvertPoints(points);
 
-		scaleParams.x1 = ConvertPosX(scaleParams.x1);
-		scaleParams.y1 = ConvertPosY(scaleParams.y1);
-		scaleParams.x2 = ConvertPosX(scaleParams.x2);
-		scaleParams.y2 = ConvertPosY(scaleParams.y2);
-		scaleParams.left = ConvertPosX(scaleParams.left);
-		scaleParams.top = ConvertPosY(scaleParams.top);
-		scaleParams.width = ConverWidth(scaleParams.width);
-		scaleParams.height = ConvertHeight(scaleParams.height);
+		if (!options.originX) options.originX = 'center';
+		if (!options.originY) options.originY = 'center';
+
+		self.canvas.add(new fabric.Line(points, options));
 		}
 
 
-	self.CovertPosX = function (posValue)
+	// Circle: [ x, y, radius ]
+
+	self.Circle = function (points, options)
 		{
-		if (posValue != undefined) posValue *= self.scaleX;
-		return posValue;
+		self.ConvertPoints(points);
+
+		options.left = points[0];
+		options.top = points[1];
+		options.radius = points[2];
+
+		if (!options.originX) options.originX = 'center';
+		if (!options.originY) options.originY = 'center';
+
+		self.canvas.add(new fabric.Circle(options));
 		}
 
 
-	self.CovertPosY = function (posValue)
+	// Rect: [ x, y, width, height ]
+
+	self.Rect = function (points, options)
 		{
-		if (posValue != undefined) posValue *= self.scaleY;
-		return posValue;
+		options.left = self.ConvertPosX(points[0]);
+		options.top = self.ConvertPosY(points[1]);
+		options.width = self.ConvertWidth(points[2]);
+		options.height = self.ConvertHeight(points[3]);
+
+		options.top -= options.height;
+
+		if (options.strokeWidth)
+			{
+			options.height -= options.strokeWidth;
+			options.width -= options.strokeWidth;
+			}
+
+		console.log(options);
+
+		self.canvas.add(new fabric.Rect(options));
 		}
 
 
-	self.ConvertWidth
-	self.ConvertHeight
+	// Scaling methods, mostly internal
 
+
+	self.ConvertPoints = function (points)
+		{
+		for (var i = 0; i < points.length; i += 2)
+			{
+			points[i] = self.ConvertPosX(points[i]);
+			points[i+1] = self.ConvertPosY(points[i+1]);
+			}
+		}
+
+
+	self.ConvertPosX = function (value)
+		{
+		if (value != undefined) value *= self.scaleX;
+		return value;
+		}
+
+
+	self.ConvertPosY = function (value)
+		{
+		if (value != undefined) value = self.pixelsHeight - value * self.scaleY;
+		return value;
+		}
+
+
+	self.ConvertWidth = function (value)
+		{
+		if (value != undefined) value *= self.scaleX;
+		return value;
+		}
+
+
+	self.ConvertHeight = function (value)
+		{
+		if (value != undefined) value *= self.scaleY;
+		return value
+		}
 
 	}

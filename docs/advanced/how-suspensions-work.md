@@ -24,26 +24,35 @@ When a wheel is lifted from the ground the suspension produces no force. At the 
 possible it also won't produce any force. As the spring gets more compressed, more force is
 produced proportionally to the _contact depth_:
 
-<canvas id="c" class="img-responsive" width="300px" height="250px">
+<canvas id="fig1" class="img-responsive" width="300px" height="250px">
 </canvas>
 <script type="text/javascript">
 	window.onload = function()
-	{
-		var tmp = new texturecanvas(
+		{
+		var canvas = new texturecanvas(
 			{
-			canvasId: 'c',
+			canvasId: 'fig1',
 			width: 18,
 			height: 14,
 			fill: '#AAA',
 			});
 
-		// var canvas = new fabric.StaticCanvas('c');
-		// $('#c').css("height", "auto");
+		canvas.Line([ 4, 3, 15, 3],
+			{
+			stroke: "#000",
+			strokeWidth: 3,
+			});
 
-		// canvas.add(
-			// new fabric.Rect({ top: 0, left: 0, width: 300, height: 250, fill: '#AAA' })
-		// );
-	};
+		canvas.Circle([9, 7, 0.25], { fill: 'green' });
+		canvas.Rect([4, 3, 11, 1], { fill: "yellow" });
+		canvas.Circle([4, 3, 0.25], { fill: 'green' });
+		canvas.Circle([15, 3, 0.25], { fill: 'green' });
+
+		// canvas.Rect([4, 3, 11, 1], { stroke: "magenta", strokeWidth: 3 });
+		canvas.Rect([0, 0, 18, 14], { fill: "transparent", stroke: "magenta", strokeWidth: 3 });
+
+
+		};
 </script>
 
 
@@ -81,16 +90,25 @@ $$suspensionPosition = \frac{weight \cdot{gravity}}{stiffness}$$
 ### Studying the oscillating behavior
 
 The suspension properties can be studied from the point of view of the oscillating behavior
-([Harmonic oscillator](http://en.wikipedia.org/wiki/Harmonic_oscillator)) in order to better
-understand the reactions of the vehicle.
+([Harmonic oscillator](http://en.wikipedia.org/wiki/Harmonic_oscillator)). The associated concepts
+are used to study the reactions of the suspension in different situations.
 
-Given the force produced by the suspension at a steady state (_contact speed_ = 0) the equivalent
-_**sprung mass**_ value for studying that situation can be calculated as:
+If the vehicle is under constant acceleration (accelerating / braking / cornering) the _weight_ is
+redistributed among the wheels. Wheels will be supporting more or less load than in rest position.
+This effectively modifies the oscillating properties of the suspensions at those specific
+situations, thus having different reactions. For instance, imagine a racing car heavily braking at
+the end of a long straight before entering a slow curve. If that part of the track is a bumpy
+surface then the suspension must be set up properly for ensuring correct handling while braking
+over the bumps. Studying the oscillating behavior of the suspension in this detail is critical for
+setting up racing cars that react properly on every situation.
+
+Given the force produced by the suspension at a specific steady state (_contact speed_ = 0) the
+equivalent _**sprung mass**_ value for studying that situation can be calculated as:
 
 $$sprungMass = \frac{suspensionForce}{gravity}$$
 
-When the vehicle is at rest or under constant acceleration the sum of the sprung masses of the
-wheels matches exactly the mass of the vehicle.
+When the vehicle is at rest, cruising at constant speed or under constant acceleration the sum of
+the sprung masses of all the wheels matches the mass of the vehicle exactly.
 
 Using the _sprung mass_ you can calculate the _**natural frequency**_ for the spring under that
 load. The _natural frequency_ is the speed at which the spring can respond to changes in load:
@@ -119,13 +137,6 @@ In under-damped suspensions ($dampingRatio < 1$) the frequency at which the syst
 different than the _natural frequency_:
 
 $$underdampedFrequency = naturalFrequency \cdot{\sqrt{1-dampingRatio^2}}$$
-
-These concepts are used to study the reactions of the suspension in different situations. If the
-vehicle is under constant acceleration (accelerating / braking / cornering) the _weight_ is
-redistributed among the wheels. Wheels will be supporting more or less load than in rest position.
-This effectively modifies the _natural frequency_ and _damping ratio_ of the suspensions at those
-specific situations, thus having different reactions. In reality studying the oscillating behavior
-in this detail is critical for setting up racing cars that react properly on every situation.
 
 ### Springs and simulation steps
 
