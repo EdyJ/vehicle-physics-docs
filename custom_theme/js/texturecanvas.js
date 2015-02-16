@@ -13,8 +13,8 @@ function texturecanvas (canvasSettings)
 	self.scaleX = self.pixelsWidth / self.settings.width;
 	self.scaleY = self.pixelsHeight / self.settings.height;
 
-	self.originX = 0;
-	self.originY = 0;
+	self.originX = self.settings.originX? self.settings.originX : 0;
+	self.originY = self.settings.originY? self.settings.originY : 0;
 
 	self.canvas = new fabric.StaticCanvas(self.settings.canvasId);
 	self.canvasElement.css("height", "auto");
