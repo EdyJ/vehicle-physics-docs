@@ -33,10 +33,10 @@ produced proportionally to the _contact depth_:
 			{
 			canvasId: "fig1",
 			pixelsWidth: 390,
-			pixelsHeight: 320,
-			width: 23,
-			height: 18,
-			originX: 6,
+			pixelsHeight: 300,
+			width: 24,
+			height: 17,
+			originX: 7,
 			originY: 4,
 			});
 
@@ -48,13 +48,13 @@ produced proportionally to the _contact depth_:
 		canvas.Line([ -0.5, 4.5, 5, 4.5 ], { stroke: "slateblue", strokeWidth: 1, strokeDashArray: [5, 5] });
 
 		canvas.Line([ 0, 0, 9, 8 ], { stroke: "red", strokeWidth: 3 });
-		canvas.Line([ 9, 8, 9, 10 ], { stroke: "red", strokeWidth: 3 });
+		canvas.Line([ 9, 8, 11, 8 ], { stroke: "red", strokeWidth: 3 });
 
 		canvas.Line([ -0.5, 0, 11, 0 ], { stroke: "#333", strokeWidth: 2 });
-		canvas.Line([ 0, -0.5, 0, 10 ], { stroke: "#333", strokeWidth: 2 });
+		canvas.Line([ 0, -0.5, 0, 9.5 ], { stroke: "#333", strokeWidth: 2 });
 
 		canvas.Text([ 13.5, 0, 0.75 ], "Contact\ndepth (m)", { fill: "#444", fontWeight: "bold" });
-		canvas.Text([ 0, 11.5, 0.75 ], "Force\n(N)", { fill: "#444", fontWeight: "bold" });
+		canvas.Text([ 0, 11, 0.75 ], "Force\n(N)", { fill: "#444", fontWeight: "bold" });
 
 		canvas.Text([ 9.5, -1, 0.75 ], "suspension\ndistance", { fill: "blue", originY: "top" });
 		canvas.Text([ 4.5, -1, 0.75 ], "suspension\nposition", { fill: "slateblue", originY: "top" });
