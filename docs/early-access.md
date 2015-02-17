@@ -102,6 +102,9 @@ Key(s) | Function | Notes
 <kbd>1</kbd>-<kbd>5</kbd> | Engage gear | Auto-shift might discard the change and choose a more convenient gear
 <kbd>Page up</kbd><kbd>Page down</kbd> | Gear mode | Select the different gear modes in Automatic transmission (M P R N D L). The actual modes may be engaged or not depending on specific conditions (i.e. Reverse requires the vehicle to be nearly stopped).
 <kbd>alt+mouse</kbd> | Camera movement and zoom
+<kbd>Escape</kbd> | Reset scene
+<kbd>T</kbd> | Toggle slow motion mode
+
 
 The main component that implements the vehicle simulation is **[VPVehicleController](components/vehicle-controller.md)**.
 The object **NinjaVehicle v2** in the sandbox scene contains this component with all its settings
