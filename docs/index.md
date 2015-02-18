@@ -105,9 +105,13 @@ Standard license (To Be Announced)
 
 Professional license add-on
 
-:	Available now for [Early Access](early-access.md) (Alpha and Beta) for **$200**. Provides access
-	to the latest updates via GIT repository, fully commented C# source code and direct support via
-	Skype. 	Contact me at [edytado@gmail.com](mailto:edytado@gmail.com) for more information.
+:	Provides access to the latest updates via GIT repository, fully commented C# source code and
+	direct support via Skype.
+
+	The Professional License add-on is available now for [Early Access](early-access.md) (Alpha and Beta) for **$200** without requiring
+	the Standard license. This offer will be lifted after the first version has been published at
+	the Unity Asset Store. Contact me at [edytado@gmail.com](mailto:edytado@gmail.com) for more information.
+	{: .alert .alert-info }
 
 Site license
 
@@ -117,7 +121,7 @@ Site license
 
 #### Compare editions
 
-| Features | Free | Standard | Professional | Site |
+| Features | <center>Free</center> | <center>Standard</center> | <center>Professional</center> | <center>Site</center> |
 |----------|:----:|:--------:|:------------:|:----:|
 Full-featured [Vehicle Controller](components/vehicle-controller.md) component	| &fa-check;	| &fa-check;	| &fa-check; | &fa-check;	|
 Example scenes and tutorials	 						| &fa-check;	| &fa-check;	| &fa-check; | &fa-check;	|
@@ -131,7 +135,9 @@ Access to the GIT repository							|	|	| &fa-check;	| &fa-check;	|
 Exclusive content and examples							|	|	| &fa-check; | &fa-check;	|
 Direct support via Skype / Telegram						|	| 	| &fa-check;	| &fa-check;	|
 License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
-Price												| **Free** | **$100** | **$200** | **$2000** |
+**Price**												| **Free** | **$100** | **+$200** <sup>1</sup> | **$2000** |
+
+<sup>1</sup> _Professional license is an add-on to the Standard license._
 
 ### Download & setup
 
