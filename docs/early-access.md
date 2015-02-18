@@ -131,10 +131,11 @@ Current layout:
     Assets
     |- Core
 	|	|- Common Tools core
-	|   |- Vehicle Physics core
+	|	|- Vehicle Physics core
 	|		|- Base
+	|		|- Classes
 	|		|- Components
-	|		|- VehicleComponents
+	|		|- Editor
     |- NinjaCamp v2
 	|- Standard Assets
 	|- Vehicles
@@ -145,11 +146,11 @@ to look at is `VPVehicleController.cs`. This class derives from `VPVehicleContro
 overrides its virtual methods for implementing the vehicle's internals with the available classes:
 ([engine](classes/engine.md), [gearbox](classes/gearbox.md), [differential](classes/differential.md)
 ...). [VPVehicleControllerBase](classes/vehicle-controller-base.md) contains the integration solver
-class ([VPSolver](classes/solver.md)) and the wheels ([VPCWheel](classes/wheel.md)), which receive
+class ([VPSolver](classes/solver.md)) and the wheels ([VPWheel](classes/wheel.md)), which receive
 the final torques and calculate the tire forces.
 
 Vehicles are internally modeled as a graph of connected objects that derive from [VPComponent](classes/component.md).
-Each component can receive input torques and produce output torques. Wheels ([VPCWheel](classes/wheel.md))
+Each component can receive input torques and produce output torques. Wheels ([VPWheel](classes/wheel.md))
 are components that receive torques at their inputs. Motors ([VPCEngine](classes/engine.md))
 are components that produce torques at their outputs. Other components have torque inputs and
 torque outputs. This allows to simulate any kind of internal configuration of the vehicle by

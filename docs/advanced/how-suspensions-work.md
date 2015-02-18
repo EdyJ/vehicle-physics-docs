@@ -152,7 +152,7 @@ different than the _natural frequency_:
 
 $$underdampedFrequency = naturalFrequency \cdot{\sqrt{1-dampingRatio^2}}$$
 
-### Springs and simulation steps
+### Suspension and simulation steps
 
 Another interesting concept for the simulation is the number of simulating updates that will occur
 during each spring oscillation. This number is given by the _**alpha**_ ratio:
