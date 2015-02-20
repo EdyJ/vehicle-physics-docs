@@ -215,38 +215,41 @@ $\mu$ is the coefficient of friction of the tire with the surface.
 
 The force $F_z$ supported by the wheel depends on several factors: weight, acceleration,
 aerodynamics. When the vehicle is accelerating part of its weight is transfered from front to rear
-wheels. RWD (Rear Wheel Drive) vehicles have better acceleration because of the extra grip. When the
-vehicle is braking part of the weight is transfered to the front wheels. This is why brake systems
-apply more brake power to the front wheels (_brake bias_).
+wheels. RWD (Rear Wheel Drive) vehicles have better acceleration because of the increased downforce
+on the drive wheels while accelerating provides extra grip. When the vehicle is braking part of the
+weight is transfered to the front wheels which get their grip increased while braking. This is why
+brake systems typically apply more brake power to the front wheels (_brake bias_).
+
+!!! Info "&fa-thumbs-o-up; Tip"
+	The more weight the more grip but also less acceleration due to the vehicle's mass. As rule of
+	thumb an acceleration of 1G requires all the wheels to perform a coefficient of friction of
+	$\mu = 1$.
 
 The coefficient of friction $\mu$ is given by the tire friction curve combined with the amount of
 slip. A simplified friction curve depends on the surface grip only. A realistic curve depends on
 many factors: camber, temperature, pressure, surface grip, vertical downforce, tire wear...
 
 Aerodynamics have a huge influence on grip because it greatly increments $F_z$ at high speeds.
-Formula-1 vehicles can achieve a lateral acceleration of 4G at high speed curves. Without the effect
-of aerodynamics this would mean tires with coefficient of friction $\mu$ of 4. Typical road tires
-can reach 1. Racing slick tires can perform in the range of 1.7 - 1.9. Only aerodynamics can
-increase the grip further.
+Formula-1 vehicles can achieve a sustained lateral acceleration of 4G at high speed curves. Without
+the effect of aerodynamics this would mean tires with coefficient of friction $\mu$ of 4. Typical
+road tires can reach 1. Racing slick tires can perform in the range of 1.7 - 1.9. Only aerodynamics
+can increase the grip further.
 
 When the torque is greater than the grip of the wheel, the excess of torque causes wheel spin, and
-the tire slips over the surface. Typically, the more slip the less grip. In addition, forward slip
-reduces the tire's sideways grip and the vehicle can easily slide sideways.
+the tire slips over the surface. In typical friction curves exceeding certain slip value reduces
+the grip. In addition, forward slip reduces the tire's sideways grip so the vehicle can easily
+slide sideways.
 
 ##### Tips for improving grip and acceleration
 
 - Keep forward slip under control. A rev limiter can be set up in the engine so the first gear gets
-a controlled amount of power, limiting the slip on standing starts.
+a controlled amount of spin, limiting the slip on standing starts.
 - A Traction Control system cuts the engine power for limiting the forward slip and thus increase
 the grip.
 - Use aerodynamics for increasing grip at high speeds. Aerodynamic components must be balanced among
 front and rear axles.
 - Rear-Wheel-Drive and All-Wheel-Drive vehicles have better acceleration than Front-Wheel-Drive
 vehicles.
-
-The more weight, the more grip but also less acceleration due to the vehicle's mass. As rule of
-thumb an acceleration of 1G requires that all the wheels to perform a coefficient of friction of
-1.0.
 
 #### Slip ratio and slip angle
 
