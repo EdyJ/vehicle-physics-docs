@@ -373,5 +373,22 @@ to the vehicle GameObject instead of [VPStandardInput](../components/vehicle-inp
 Do not modify the original scripts, as future updates may override your changes. The package is
 designed so any functionality could be added via custom scripts.
 
+#### Scaling vehicles
+
+Use of scale has these conditions:
+
+- Scale must be 1 in the vehicle's root GameObject, which holds the Rigidbody and the [VPVehicleController](../components/vehicle-controller.md)
+components.
+- Scale must be 1 in all VPWhelColliders components and along their ancestor lines up to vehicle's
+root.
+
+You can scale the GameObjects containing visual meshes only. A good practice is to put all the
+visual components under a child GameObject in the vehicle's root. This way scaling this child object
+would scale all visual meshes as well.
+
+You'll have however to manually relocate the GameObjects containing the VPWheelCollider components
+to their scaled positions, then modify radius, suspensionDistance and center accordingly.
+Do not modify the transform.scale value of a VPWheelCollider component or any of its ancestors.
+
 ---
 
