@@ -40,10 +40,10 @@ produced proportionally to the _contact depth_:
 			originY: 4,
 			});
 
-		canvas.Grid({ stroke: "#BBF", strokeWidth: 0.5 });
+		canvas.Grid({ stroke: "#BBF", strokeWidth: 0.4 });
 
-		canvas.Line([ 9, -0.5, 9, 8 ], { stroke: "blue", strokeWidth: 1, strokeDashArray: [5, 5] });
-		canvas.Line([ -0.5, 8, 9, 8 ], { stroke: "blue", strokeWidth: 1, strokeDashArray: [5, 5] });
+		canvas.Line([ 9, -0.5, 9, 8 ], { stroke: "slateblue", strokeWidth: 1, strokeDashArray: [5, 5] });
+		canvas.Line([ -0.5, 8, 9, 8 ], { stroke: "slateblue", strokeWidth: 1, strokeDashArray: [5, 5] });
 		canvas.Line([ 5, -0.5, 5, 4.5 ], { stroke: "slateblue", strokeWidth: 1, strokeDashArray: [5, 5] });
 		canvas.Line([ -0.5, 4.5, 5, 4.5 ], { stroke: "slateblue", strokeWidth: 1, strokeDashArray: [5, 5] });
 
@@ -56,10 +56,10 @@ produced proportionally to the _contact depth_:
 		canvas.Text([ 13.5, 0, 0.75 ], "Contact\ndepth (m)", { fill: "#444", fontWeight: "bold" });
 		canvas.Text([ 0, 11, 0.75 ], "Force\n(N)", { fill: "#444", fontWeight: "bold" });
 
-		canvas.Text([ 9.5, -1, 0.75 ], "suspension\ndistance", { fill: "blue", originY: "top" });
+		canvas.Text([ 9.5, -1, 0.75 ], "suspension\ndistance", { fill: "slateblue", originY: "top" });
 		canvas.Text([ 4.5, -1, 0.75 ], "suspension\nposition", { fill: "slateblue", originY: "top" });
 
-		canvas.Text([ -1, 8, 0.75 ], "max force", { fill: "blue", originX: "right" });
+		canvas.Text([ -1, 8, 0.75 ], "max force", { fill: "slateblue", originX: "right" });
 		canvas.Text([ -1, 4.5, 0.75 ], "suspension\nforce", { fill: "slateblue", originX: "right", textAlign: "right" });
 		};
 
@@ -88,6 +88,8 @@ the new weight distribution.
 among the wheels, varying their suspension positions accordingly. For instance, accelerating makes
 a certain amount of weight (depending on the actual acceleration) to be transfered from front
 wheels to rear wheels. Similar effects happen when braking and cornering.
+- Aerodynamic surfaces push the vehicle down with speed, increasing the load on the wheels and
+compressing their suspensions accordingly.
 
 The _**suspension force**_ is calculated as:
 
@@ -113,8 +115,10 @@ This effectively modifies the oscillating properties of the suspensions at those
 situations, thus having different reactions. For instance, imagine a racing car heavily braking at
 the end of a long straight before entering a slow curve. If that part of the track is a bumpy
 surface then the suspension must be set up properly for ensuring correct handling while braking
-over the bumps. Studying the oscillating behavior of the suspension in this detail is critical for
-setting up racing cars that react properly on every situation.
+over the bumps. Another example is the downforce caused by aerodynamic surfaces. Suspension will
+have different behavior on high speeds due to the extra sustained load. Studying the oscillating
+behavior of the suspension in this detail is critical for setting up racing cars that react properly
+on every situation.
 
 Given the force produced by the suspension at a specific steady state (_contact speed_ = 0) the
 equivalent _**sprung mass**_ value for studying that situation can be calculated as:
