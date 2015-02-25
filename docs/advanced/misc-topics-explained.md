@@ -355,7 +355,24 @@ Arcade mode
 
 #### Drift settings
 
-Use the same settings as real drift cars. This is quoted from [WhateverMan at gamedev.net](http://www.gamedev.net/topic/664785-car-physics-turbochargers-and-friends/#entry5205193):
+Use the same settings as real drift cars. Hints:
+
+Center of Mass and weight balance
+:	The longitudinal position of the center of mass should distribute the weight around 52/48 (52%
+	on the front and 48% on the back).
+
+Differential
+:	Choose either _Locked_ or _Clutch Pack_ with increased pack friction and/or decreased power
+	angle. The goal is the differential to get locked when applying power easily.
+
+Engine and gearbox
+:	Engine should be powerful enough to make the drive wheels to slip rather easily. The gear ratio
+	and the throttle should be tunned for keeping the wheel's spin rate under control. Too few spin
+	rate and the car won't drift. Too much spin rate can cause the vehicle to loose the control. A
+	rev limiter can be set up in the engine for ensuring that the drive wheels don't exceed the
+	optimum spin rate.
+
+This is quoted from [WhateverMan at gamedev.net](http://www.gamedev.net/topic/664785-car-physics-turbochargers-and-friends/#entry5205193):
 
 > ALSO about drift cars, what I said earlier, 52/48 was 52% on the front and 48% on the back.
 > Drift cars are Front Rear Layout cars. You need more weight on the front because you control
