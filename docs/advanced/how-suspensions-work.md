@@ -144,10 +144,9 @@ over-damped or critically-damped:
 $$dampingRatio = \frac{damper}{2 \sqrt{stiffness \cdot{sprungMass}}}$$
 
 A _damping ratio_ greater than 1.0 means over-damping (sluggish suspension), a value of exactly 1.0
-is critically-damped, and a value less than 1.0 is under-damped (bouncy suspension). Typical cars
-are slightly over-damped. Realistic values are mostly close to the critical damping, in the range
-of 0.8 and 1.2. The _damper rate_ that targets a specific _damping ratio_ can be calculated by
-rearranging the equation above:
+is critically-damped, and a value less than 1.0 is under-damped (bouncy suspension). Values for
+realistic vehicles are in the range of 0.2 and 0.6. The _damper rate_ that targets a specific
+_damping ratio_ can be calculated by rearranging the equation above:
 
 $$damper = dampingRatio \cdot{2} \sqrt{stiffness \cdot{sprungMass}}$$
 
