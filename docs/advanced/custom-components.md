@@ -28,9 +28,9 @@ A component exposes several types of public members:
 Settings
 :	A serializable class with the configuration values of the component. This class
 	may be exposed and serialized at the inspector by the host controller.
-	A public member `settings` must	be declared as well. These settings define how the component
-	is designed. They are likely to	change during fine-tunning in the Editor, but rarely in the
-	final application.
+	A public member `settings` must	be declared in the component as well. These settings define how
+	the component is designed. They are likely to change during fine-tunning the vehicle in the
+	Editor, but rarely in the final application.
 
 Inputs
 :	The values that come from the driver's controls. Examples: the position of the gear lever
@@ -38,17 +38,17 @@ Inputs
 	the values that can typically adjusted by the driver while driving.
 
 	In some cases the component can modify an input value for preventing it to go out of range.
-	This happens at the manual gearbox, for instance. Input gear is not allowed to have an invalid
+	This happens at the manual gearbox, for instance. Gear lever is not allowed to have an invalid
 	value (non-existing gear).
 
 States
-:	States are a special kind of inputs that must be feed with data coming from the vehicle and
-	other components. Components use this data for their own logic. For example, the automatic
-	gearbox requires knowing the actual speed of the vehicle for deciding whether is correct to
-	engage a gear or not.
+:	States are a special kind of inputs that must be feed continuously with data coming from the
+	vehicle and other components. Components use this data for their own logic. For example, the
+	automatic gearbox requires knowing the actual speed of the vehicle for deciding whether is
+	correct to engage a gear or not.
 
 Sensors
-:	Sensors are information from the internal component that is exposed to the vehicle controller.
+:	Sensors expose internal information from the component to the vehicle controller.
 	Examples: the rpm values of the engine, the actually engaged gear in the gearbox, etc.
 
 The Vehicle Controller host is responsible of feeding the components with the appropriate inputs and

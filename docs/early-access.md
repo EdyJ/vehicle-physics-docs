@@ -90,7 +90,7 @@ Key(s) | Function | Notes
 <kbd>left</kbd><kbd>right</kbd> | Steering |
 <kbd>up</kbd> | Throttle |
 <kbd>down</kbd> | Brakes |
-<kbd>shift</kbd> | Clutch | Actual vehicle setup uses a Torque Converter, which doens't require active clutch. Still, the clutch can be used to completely disengage the engine from the transmission.
+<kbd>shift</kbd> | Clutch | Actual vehicle setup uses a Torque Converter, which doesn't require active clutch. Still, the clutch can be used to completely disengage the engine from the transmission.
 <kbd>space</kbd> | Handbrake | Affects rear wheels. Clutch should be used if vehicle uses a standard clutch to prevent the engine to stall.
 <kbd>ctrl+space</kbd> | Toogle all brakes | Brakes are toggled in all wheels.
 <kbd>R</kbd> | Reverse gear | If auto-shift is enabled R requires the vehicle to be nearly stopped and brakes released.
