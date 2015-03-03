@@ -39,10 +39,10 @@ latest news and announcements.
 &fa-gear:spin; Vehicle presets and axle setup
 {: .roadmap .wip }
 
-Scenes and vehicles for tests
+Repository clean up and upgrade to Unity 5
 {: .roadmap .todo }
 
-Repository clean up
+Scenes and vehicles for tests
 {: .roadmap .todo }
 
 **Enter the Beta stage!**
