@@ -47,13 +47,13 @@ the evolutions of the vehicle physics scripts since I started researching my own
 - **Vehicle Physics core** is the submodule that actually contains the latest vehicle physics
 scripts only.
 
-Instructions:
+##### Setting up the project locally:
 
-1.	Clone the **Vehicle Physics Pro** repository locally.
+1.	Clone the **Vehicle Physics Pro** repository locally. Go to a folder of your choice, then:
 
 		> git clone ssh://git@projects.edy.es/edy/vehicle-physics-pro.git
 
-2.	Check out the **wip** branch (_master_ branch is an obsolete iteration)
+2.	Check out the **wip** branch (_master_ branch is an obsolete iteration):
 
 		> cd vehicle-physics-pro
 		> git checkout wip
@@ -64,7 +64,13 @@ Instructions:
 
 4.	Now you can open the project at the folder **vehicle-physics-pro** with Unity 4.
 
-You could configure **GIT with ssh** for using the repositories without having to entering your
+	Whenever you update the base repository and/or change the working revision (or branch), you must
+	update the submodules as well for ensuring they are checked out to the correct revision:
+
+		> git fetch --recurse-submodules
+		> git submodule update --recursive
+
+You may configure **GIT with ssh** for using the repositories without having to entering your
 credentials each time. [Instructions here](http://projects.edy.es/trac/edy_vehicle-physics/wiki/GitSetup)
 
 ### Sandbox scene
