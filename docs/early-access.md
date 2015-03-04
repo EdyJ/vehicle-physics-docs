@@ -47,9 +47,13 @@ the evolutions of the vehicle physics scripts since I started researching my own
 - **Vehicle Physics core** is the submodule that actually contains the latest vehicle physics
 scripts only.
 
-##### Setting up the project locally:
+##### Setting up the project locally
 
 1.	Clone the **Vehicle Physics Pro** repository locally. Go to a folder of your choice, then:
+
+		> git clone http://projects.edy.es/git/edy/vehicle-physics-pro.git
+
+	or, if you've configured the access via ssh (see below):
 
 		> git clone ssh://git@projects.edy.es/edy/vehicle-physics-pro.git
 
@@ -70,8 +74,18 @@ scripts only.
 		> git fetch --recurse-submodules
 		> git submodule update --recursive
 
-You may configure **GIT with ssh** for using the repositories without having to entering your
-credentials each time. [Instructions here](http://projects.edy.es/trac/edy_vehicle-physics/wiki/GitSetup)
+##### Configuring repository access via ssh
+
+Configuring ssh access allows performing the common operations on the repository without having to
+enter your credentials each time.
+
+1.	Generate the ssh keys. Follow the steps 1 to 3 at the [GitHub's step-by-step guide for
+generating ssh keys](https://help.github.com/articles/generating-ssh-keys/).
+
+2.	Configure the ssh public key at [your profile in the project's pages](http://projects.edy.es/users/my_profile#public_keys).
+
+If you already had cloned the repository via http then you need to modify the remote's URL. Follow
+the [instructions for changing a remote's URL](https://help.github.com/articles/changing-a-remote-s-url/).
 
 ### Sandbox scene
 
