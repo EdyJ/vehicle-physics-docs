@@ -92,7 +92,9 @@ the [instructions for changing a remote's URL](https://help.github.com/articles/
 The development scenes, tests, etc are located in the folder **NinjaCamp v2**. The actual sandbox
 scene I'm using for development and testing is **NinjaTest v2** in this folder.
 
-[![Vehicle Physics Pro Alpha Sandbox scene](img/vehicle-physics-pro-alpha-sandbox-02.jpg)](img/vehicle-physics-pro-alpha-sandbox-02.jpg)
+<a href="https://build.cloud.unity3d.com/distro/install?id=byoMUerIo" target="_blank">![Vehicle Physics Pro Alpha Sandbox scene](img/vehicle-physics-pro-alpha-sandbox-02.jpg)</a>
+
+_<center>Click the image for playing the Web Demo</center>_
 
 When playing the scene the vehicle begins with the engine off. For starting the engine:
 

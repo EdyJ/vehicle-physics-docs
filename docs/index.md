@@ -9,6 +9,8 @@ for [Unity 3D](http://unity3d.com).
 
 Check out an early preview [here](http://www.edy.es/dev/2014/11/early-preview-of-vehicle-physics-pro/).
 
+Play the latest Web Demo scene [here](early-access.md#sandbox-scene).
+
 Stay tunned! Follow **[@VehiclePhysics](https://twitter.com/VehiclePhysics)** on Twitter for the
 latest news and announcements.
 
@@ -17,7 +19,7 @@ latest news and announcements.
 	The project status is **Alpha**. This documentation is work in progress. [Early Access](early-access.md)
 	to the project's repository is available with the [Professional License](index.md#licensing) (see below).
 
-[![Vehicle Physics Pro Alpha Sandbox scene](img/vehicle-physics-pro-alpha-sandbox-02.jpg){: .img-medium }](img/vehicle-physics-pro-alpha-sandbox-02.jpg)
+[![Vehicle Physics Pro Alpha Sandbox scene](img/vehicle-physics-pro-alpha-sandbox-02.jpg){: .img-medium }](early-access.md#sandbox-scene)
 
 #### Development roadmap
 
