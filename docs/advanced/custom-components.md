@@ -20,6 +20,29 @@ simulating the physical shaft that connects two components in a vehicle's drivet
 the shaft connecting the gearbox with the differential, or the halfshafts connecting the differential
 with the wheels, are simulated via inputs and outputs.
 
+### Component connections and torque flow
+
+The `VPComponent.Connect` method connects an input of a component to an output of a different
+component. For this, the Connect method creates a `VPComponent.Connection` object an ensures both
+components have access to it. This Connection object is the placeholder for the torque and momentum
+values that are transmitted upwards and downwards among the components.
+
+The actual torque and momentum flow occurs at the `VPComponent` class, specifically at the methods
+`ComputeStateUpwards` and `EvaluateTorqueDownstream`. At ComputeStateUpwards the component takes the
+momentum and reaction torque values from the Connection objects accessed at each output. These
+values have been placed there by the component connected at each output. The component processes
+them, then places the result at the Connection object accessed at the input. The upper component in
+the chain will take them for processing, and so on. The ending point is the Engine, which takes the
+momentum and reaction torque values at its output, processes them, and generates a drive torque that
+is placed at the output as well.
+
+Then an opposite flow happens at EvaluateTorqueDownstream. The component reads the amount of drive
+torque the upper component has placed at the Connection object at its input. It processes that
+torque value, then places the resulting values at its outputs for, for the components downstream to
+receive and process them as well. The ending points now are the wheels, which received the drive
+torque at their input, combine it with the brake torque and tire friction, compute a new momentum
+value, calculate a tire force and a reaction torque. The momentum and the reaction torque are then
+sent upwards through the input, and the cycle repeats.
 
 ### Public interface
 
