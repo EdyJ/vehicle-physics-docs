@@ -22,9 +22,8 @@ add-on ($200).
 	features may not have been developed yet or may be described in a different way than they work
 	right now. In some cases I'm even using the documentation as annotated roadmap for the upcoming
 	developments.
-    - **The project is actually being developed in <u>Unity 4</u>**. It will be upgraded to Unity 5
-	before entering the Beta stage. The Vehicle Physics core package is already compatible with both
-	Unity 4 and 5.
+    - **Two test projects are available, one for Unity 4 and other for Unity 5** (see [Project Setup](#project-setup)
+	below). They will be merged into a single Unity 5 project before entering the Beta stage.
 
 !!! info "&fa-thumbs-o-up; Feedback is welcome!"
 
@@ -41,13 +40,17 @@ add-on ($200).
 As professional licensee you should have received credentials for accessing the repositories. You
 can browse them at [projects.edy.es](http://projects.edy.es).
 
-- **Vehicle Physics Pro** is my actual Unity project as sandbox for development. It contains all
-the evolutions of the vehicle physics scripts since I started researching my own tire model.
+- **Vehicle Physics Pro** is the Unity 4 project I'm using as sandbox for development. It contains
+all the evolutions of the vehicle physics scripts since I started researching my own tire model.
+- **Vehicle Test Platform** is an Unity 5 project I'm using to test the compatibility with Unity 5.
 - **Common Tools core** is a submodule with common tools and scripts.
 - **Vehicle Physics core** is the submodule that actually contains the latest vehicle physics
 scripts only.
 
 ##### Setting up the project locally
+
+Choose among the Unity 4 or Unity 5 project. Unity 4 is "Vehicle Physics Pro". Unity 5 is "Vehicle
+Test Platform". These instructions refer to the first one.
 
 1.	Clone the **Vehicle Physics Pro** repository locally. Go to a folder of your choice, then:
 
@@ -89,8 +92,10 @@ the [instructions for changing a remote's URL](https://help.github.com/articles/
 
 ### Sandbox scene
 
-The development scenes, tests, etc are located in the folder **NinjaCamp v2**. The actual sandbox
-scene I'm using for development and testing is **NinjaTest v2** in this folder.
+Unity 4 (project "Vehicle Physics Pro"): Two working scenes under the folder **NinjaCamp v2**:
+**NinjaTest v2** and **NinjaTest v2 APC**.
+
+Unity 5 (project "Vehicle Test Platform"): Scene **Scenes\Playground Vehicle Physics**.
 
 <a href="https://build.cloud.unity3d.com/distro/install?id=byoMUerIo" target="_blank">![Vehicle Physics Pro Alpha Sandbox scene](img/vehicle-physics-pro-alpha-sandbox-02.jpg)</a>
 
@@ -165,16 +170,15 @@ The vehicle physics scripts are inside the **Vehicle Physics core** folder. The 
 to look at is `VPVehicleController.cs`. This class derives from `VPVehicleControllerBase.cs` and
 overrides its virtual methods for implementing the vehicle's internals with the available classes:
 ([engine](classes/engine.md), [gearbox](classes/gearbox.md), [differential](classes/differential.md)
-...). [VPVehicleControllerBase](classes/vehicle-controller-base.md) contains the integration solver
-class ([VPSolver](classes/solver.md)) and the wheels ([VPWheel](classes/wheel.md)), which receive
-the final torques and calculate the tire forces.
+...). [VPVehicleControllerBase](classes/vehicle-base.md) contains the integration solver and the
+wheels, which receive the final torques and calculate the tire forces.
 
 Vehicles are internally modeled as a graph of connected objects that derive from [VPComponent](classes/component.md).
-Each component can receive input torques and produce output torques. Wheels ([VPWheel](classes/wheel.md))
-are components that receive torques at their inputs. Motors ([VPCEngine](classes/engine.md))
-are components that produce torques at their outputs. Other components have torque inputs and
-torque outputs. This allows to simulate any kind of internal configuration of the vehicle by
-connecting components in any combination.
+Each component can receive input torques and produce output torques. Wheels are components that
+receive torques at their inputs. Motors ([VPCEngine](classes/engine.md)) are components that produce
+torques at their outputs. Other components have torque inputs and torque outputs. This allows to
+simulate any kind of internal configuration of the vehicle by connecting components in any
+combination.
 
 Vehicle components are created, initialized and connected within the `VPVehicleController.cs`
 script, `OnInitialize` method. Check out the comments in the file `VPVehicleControllerBase.cs` for
@@ -189,9 +193,18 @@ indications on how the vehicles are implemented and simulated by overriding the 
 
 ### Components
 
+#### VPWheelCollider
+
+Wheels require this component, which replaces the stock WheelCollider:
+
+![Vehicle Physics Pro Wheel Collider](img/vehicle-physics-pro-wheel-collider.png)
+
+
+#### VPVehicleController and add-ons
+
 Actual inspector for the vehicle GameObject. The Vehicle Controller component exposes several
 development properties:
 
-![Vehicle Physics Pro Alpha Inspector](img/vehicle-physics-pro-alpha-inspector.png)
+![Vehicle Physics Pro Beta Inspector](img/vehicle-physics-pro-beta-inspector.png)
 
 ---

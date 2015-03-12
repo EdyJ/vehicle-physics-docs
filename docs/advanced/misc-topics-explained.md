@@ -24,6 +24,11 @@ The more substeps, the more precise are the results but CPU usage is increased. 
 no significant penalty on using 1 to 8 substeps. CPU usage as shown at the profiler gets increased
 from 10 substeps and above.
 
+!!! Info "&fa-thumbs-o-up; Tip"
+	As rule of thumb the minimum recommended substeps for a vehicle is $number\_of\_powered\_wheels / 2$.
+	Thus, 8-wheeled vehicles with all-wheels-drive shouldn't use less than 4 substeps. AWD cars
+	should use 2 or more substeps.
+
 Some subjective recommendations:
 
 Substeps  | Comments
@@ -34,7 +39,7 @@ Substeps  | Comments
 8 | Recommended value for having good precise results. Profiler tests show no significant penalty on using from 1 to 8 substeps.
 20 | Maximum recommended value. At Unity's default physic step (0.02s, 50Hz) the vehicle does its internal calculations at **1000 Hz** (20 x 50hz).
 
-Reaching 40 or more substeps is typically not necessary nor recommended. Some components exhibit
+More than 20 substeps is typically not necessary nor recommended. Some components exhibit
 numerical oscillations on high amount of substeps.
 
 Final value depends on the specific project: CPU requirements, number and type of vehicles, expected
@@ -62,9 +67,10 @@ Ensure you understand the [difference among _accuracy_ (or _trueness_) and _prec
 reasonably precise results. _Precision_ affects the the specific numeric values only, and depends
 on the integration method and substeps.
 
-A simple way to measure the precision is setting the **Differential Type** to **Locked**. This
-enforces both drive wheels to rotate at the same rate. Then drive around gently and do some
-left-right turning while watching the rotation rate of the drive wheels at the telemetry.
+A simple way to measure the precision is setting the **Differential Type** to **Locked** in a RWD
+(rear wheel drive) vehicle. This enforces both drive wheels to rotate at the same rate. Then drive
+around gently and do some left-right turning while watching the rotation rate of the drive wheels at
+the telemetry.
 
 When using 1-4 substeps the wheels are "pursuing" each other when changing the steering direction,
 but won't likely spin at a the same rate unless steering is kept steady. The more substeps, the
@@ -73,13 +79,13 @@ rates will always be within 1-2 rpms only.
 
 #### Vehicle shakes or becomes unstable
 
-If the vehicle becomes unstable at high speeds then either increase the tire relaxation rate or
-disable the tire relaxation feature. Low tire relaxation rates at high speeds can enter in resonance
-with lateral forces destabilizing the vehicle.
+If the vehicle becomes unstable at high speeds then either increase the tire side deflection rate or
+disable the tire side deflection feature. Low side deflection rates at high speeds can enter in
+resonance with lateral forces destabilizing the vehicle.
 
 !!! Info "&fa-thumbs-o-up; Pro-Tip"
-	Tire relaxation rate can be used to simulate tires targeted to different speeds. Tires with
-	low spring rates become difficult to drive at high speeds.
+	Tire side deflection rate can be used to simulate tires targeted to different speeds. Tires with
+	low rates become difficult to drive at high speeds.
 
 If you observe values that are quickly oscillating at the telemetry in a way that visibly affects
 the vehicle (shakes) then either change the integration method or adjust the substeps in the
@@ -88,7 +94,7 @@ Euler method:
 - A single substep is likely to cause oscillating values, but usually they don't have a noticeable
 effect.
 - 2-8 substeps are pretty stable in most situations.
-- 40 or more substeps are not recommended as the numerical oscillations can get magnified.
+- More than 20 substeps are not recommended as the numerical oscillations can get magnified.
 
 ---
 

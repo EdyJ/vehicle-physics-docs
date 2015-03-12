@@ -38,11 +38,11 @@ latest news and announcements.
 &fa-check; Gearbox
 {: .roadmap }
 
-&fa-gear:spin; Vehicle presets and axle setup
-{: .roadmap .wip }
+&fa-check; Transmission and axle setup
+{: .roadmap }
 
-Repository clean up and upgrade to Unity 5
-{: .roadmap .todo }
+&fa-gear:spin; Repository clean up and upgrade to Unity 5
+{: .roadmap .wip }
 
 Scenes and vehicles for tests
 {: .roadmap .todo }
