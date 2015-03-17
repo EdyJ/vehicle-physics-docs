@@ -75,7 +75,9 @@ Test Platform". These instructions refer to the first one.
 	update the submodules as well for ensuring they are checked out to the correct revision:
 
 		> git fetch --recurse-submodules
-		> git submodule update --recursive
+		> git submodule update --init --recursive
+
+	The _--init_ switch ensures that any new submodule is fetched and initialized as well.
 
 ##### Configuring repository access via ssh
 
