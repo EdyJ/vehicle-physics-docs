@@ -71,13 +71,12 @@ Test Platform". These instructions refer to the first one.
 
 4.	Now you can open the project at the folder **vehicle-physics-pro** with Unity 4.
 
-	Whenever you update the base repository and/or change the working revision (or branch), you must
-	update the submodules as well for ensuring they are checked out to the correct revision:
+	Upgrading to the latest revision:
 
-		> git fetch --recurse-submodules
+		> git pull --recurse-submodules
 		> git submodule update --init --recursive
 
-	The _--init_ switch ensures that any new submodule is fetched and initialized as well.
+	The above is also necessary after changing the current branch in your local repository.
 
 ##### Configuring repository access via ssh
 
