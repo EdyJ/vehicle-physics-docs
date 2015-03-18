@@ -22,6 +22,8 @@ add-on ($200).
 	developments.
     - **This is an Unity 5 project**, but the repository also contains a branch for Unity 4. Vehicle
 	Physics Pro is compatible with both.
+	- **[Blender](http://www.blender.org)** must be installed for the 3D objects to be imported.
+	This requirement will be lifted at some point during the Beta stage.
 
 !!! info "&fa-thumbs-o-up; Feedback is welcome!"
 
