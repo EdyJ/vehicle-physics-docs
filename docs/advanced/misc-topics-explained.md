@@ -372,11 +372,23 @@ Differential
 	angle. The goal is the differential to get locked when applying power easily.
 
 Engine and gearbox
-:	Engine should be powerful enough to make the drive wheels to slip rather easily. The gear ratio
+:	Engine should be powerful enough to make the rear wheels to slip rather easily. The gear ratio
 	and the throttle should be tunned for keeping the wheel's spin rate under control. Too few spin
-	rate and the car won't drift. Too much spin rate can cause the vehicle to loose the control. A
-	rev limiter can be set up in the engine for ensuring that the drive wheels don't exceed the
-	optimum spin rate.
+	rate and the car won't drift. Too much spin rate and the vehicle will drift too much and loose
+	control. A rev limiter can be set up in the engine for ensuring that the rear wheels don't
+	exceed the optimum spin rate.
+
+Transmission
+:	A configuration that works good is all-wheel-drive with a center **Torque Splitter**. The
+	transmission is configured to power the rear axle, but part of the drive power is routed to the
+	front axle. The amount of drive that gets routed is defined by the parameter **stiffness** of
+	the Torque Splitter:
+
+	- 0 = disengaged. No connection between front and rear axles.
+	- 1 = locked. Both axles are connected with a rigid axle (same as Locked differential).
+
+	Any value in between (default is 0.5) configures the behavior of the vehicle when rear wheels
+	are skidding. A good value gives the driver a nice control on the drifting direction.
 
 This is quoted from [WhateverMan at gamedev.net](http://www.gamedev.net/topic/664785-car-physics-turbochargers-and-friends/#entry5205193):
 
@@ -384,6 +396,28 @@ This is quoted from [WhateverMan at gamedev.net](http://www.gamedev.net/topic/66
 > Drift cars are Front Rear Layout cars. You need more weight on the front because you control
 > with your wheels and lighter rear to get more wheel spin. Later you use rear wings aerodynamics
 > to balance the angles with speed requirement.
+
+#### Handbrake has little effect in AWD
+
+The best solution is to use a transmission configuration with a center **Torque Splitter** and
+disengaging it when the handbrake is applied. This disconnects the rear axle from the front axle
+(and the rest of the transmission), so rear wheels can get freely locked without affecting the
+front axle.
+
+The option for disengaging front and rear axles when handbrake is applied can be found at the
+component VPStandardInput.
+
+The reason for this behavior is that in AWD both axles are connected via center differential or
+torque splitter. Thus, locking the rear axle will affect the front axle as well. Most likely the
+front wheels will be braked as well.
+
+If the center differential is configured as Open then you will observe that the front axle is almost
+unaffected by handbrake. However, an open center differential is not good for donut/drifting because
+the power will be mostly routed towards the front wheels (as they're typically less loaded when
+applying throttle). On the other hand, setting up the center differential as Locked means that the
+handbrake will effectively affect both axles equally, thus acting like a regular brake. A Torque
+Splitter with stiffness > 0 will also transmit part of the effect of the handbrake to the front
+axle.
 
 ---
 
