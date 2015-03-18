@@ -16,14 +16,12 @@ add-on ($200).
 	- Some actual components and scripts will be significantly modified.
 	- Some features already available in the other package [Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics)
 	are yet to be ported here (i.e. skidmarks, smoke...)
-	- Repository contains code, scenes and libraries from past development iterations. It will be
-	cleaned up soon.
 	- **Documentation is being actively written**. Many parts are still missing. Some documented
 	features may not have been developed yet or may be described in a different way than they work
 	right now. In some cases I'm even using the documentation as annotated roadmap for the upcoming
 	developments.
-    - **Two test projects are available, one for Unity 4 and other for Unity 5** (see [Project Setup](#project-setup)
-	below). They will be merged into a single Unity 5 project before entering the Beta stage.
+    - **This is an Unity 5 project**, but the repository also contains a branch for Unity 4. Vehicle
+	Physics Pro is compatible with both.
 
 !!! info "&fa-thumbs-o-up; Feedback is welcome!"
 
@@ -40,43 +38,36 @@ add-on ($200).
 As professional licensee you should have received credentials for accessing the repositories. You
 can browse them at [projects.edy.es](http://projects.edy.es).
 
-- **Vehicle Physics Pro** is the Unity 4 project I'm using as sandbox for development. It contains
-all the evolutions of the vehicle physics scripts since I started researching my own tire model.
-- **Vehicle Test Platform** is an Unity 5 project I'm using to test the compatibility with Unity 5.
+- **Vehicle Physics Pro** is the main project.
 - **Common Tools core** is a submodule with common tools and scripts.
 - **Vehicle Physics core** is the submodule that actually contains the latest vehicle physics
 scripts only.
+- **Vehicle Physics core assets** is a submodule with common objects, materials and textures used
+across different vehicle physics projects.
 
 ##### Setting up the project locally
 
-Choose among the Unity 4 or Unity 5 project. Unity 4 is "Vehicle Physics Pro". Unity 5 is "Vehicle
-Test Platform". These instructions refer to the first one.
+1.	Clone the repository **Vehicle Physics Pro** locally. Go to a folder of your choice, then:
 
-1.	Clone the **Vehicle Physics Pro** repository locally. Go to a folder of your choice, then:
-
-		> git clone http://projects.edy.es/git/edy/vehicle-physics-pro.git
+		> git clone --depth=1 http://projects.edy.es/git/edy/vehicle-physics-pro.git
 
 	or, if you've configured the access via ssh (see below):
 
-		> git clone ssh://git@projects.edy.es/edy/vehicle-physics-pro.git
+		> git clone --depth=1 ssh://git@projects.edy.es/edy/vehicle-physics-pro.git
 
-2.	Check out the **wip** branch (_master_ branch is an obsolete iteration):
+2. 	Fetch and update the submodules:
 
 		> cd vehicle-physics-pro
-		> git checkout wip
+		> git submodule update --depth=1 --init --recursive
 
-3. 	Fetch and update the submodules:
+3.	Now you can open the project at the folder **vehicle-physics-pro** with Unity 5.
 
-		> git submodule update --init --recursive
+##### Upgrading to the latest revision
 
-4.	Now you can open the project at the folder **vehicle-physics-pro** with Unity 4.
+	> git pull --recurse-submodules
+	> git submodule update --init --recursive
 
-	Upgrading to the latest revision:
-
-		> git pull --recurse-submodules
-		> git submodule update --init --recursive
-
-	The above is also necessary after changing the current branch in your local repository.
+The above is also necessary after changing the current branch in your local repository.
 
 ##### Configuring repository access via ssh
 
@@ -93,10 +84,7 @@ the [instructions for changing a remote's URL](https://help.github.com/articles/
 
 ### Sandbox scene
 
-Unity 4 (project "Vehicle Physics Pro"): Two working scenes under the folder **NinjaCamp v2**:
-**NinjaTest v2** and **NinjaTest v2 APC**.
-
-Unity 5 (project "Vehicle Test Platform"): Scene **Scenes\Playground Vehicle Physics**.
+The scenes for tests are under the folder _Scenes_.
 
 <a href="https://build.cloud.unity3d.com/distro/install?id=byoMUerIo" target="_blank">![Vehicle Physics Pro Alpha Sandbox scene](img/vehicle-physics-pro-alpha-sandbox-02.jpg)</a>
 
@@ -133,8 +121,8 @@ Key(s) | Function | Notes
 
 
 The main component that implements the vehicle simulation is **[VPVehicleController](components/vehicle-controller.md)**.
-The object **NinjaVehicle v2** in the sandbox scene contains this component with all its settings
-to play with.
+The object **VP Test Vehicle** in the pickup test scene contains this component with all its
+settings to play with.
 
 The actual setup of the vehicle is:
 
@@ -142,13 +130,14 @@ The actual setup of the vehicle is:
 - **Clutch:** torque converter, which doesn't require an active clutch pedal, and makes the engine
 harder to stall. Still, clutch can be manually engaged with <kbd>shift</kbd>.
 - **Gearbox:** manual 5-speed gearbox with auto-shift enabled
-- **Differential:** 20% viscous differential at the driven rear axle.
+- **Transmission:** AWD with main drive power at the rear axle and a torque splitter routing part of
+the power to the front axle.
 - **Brakes:** 70:30 balanced to the front.
+- **Steering:** standard Ackerman geometry.
 - **Tire friction:** Isotropic Pacejka friction with a peak coefficient of friction of 1.1. Tire
 relaxation is enabled with a rate simulating standard road wheels.
 - **Solver:** Euler with two integration steps. Physic step is 0.02 seconds (50Hz), so vehicle
 calculations are done at 100Hz.
-- Other settings are mostly part of the development tests.
 
 ### Code and scripts
 
@@ -158,20 +147,20 @@ Current layout:
     |- Core
 	|	|- Common Tools core
 	|	|- Vehicle Physics core
-	|		|- Base
-	|		|- Classes
-	|		|- Components
-	|		|- Editor
-    |- NinjaCamp v2
-	|- Standard Assets
+	|	|	|- Base
+	|	|	|- Classes
+	|	|	|- Components
+	|	|	|- Editor
+	|   |- Vehicle Physics core assets
+    |- Scenes
 	|- Vehicles
 	|- World
 
 The vehicle physics scripts are inside the **Vehicle Physics core** folder. The main script
-to look at is `VPVehicleController.cs`. This class derives from `VPVehicleControllerBase.cs` and
+to look at is `VPVehicleController.cs`. This class derives from `VPVehicleBase.cs` and
 overrides its virtual methods for implementing the vehicle's internals with the available classes:
 ([engine](classes/engine.md), [gearbox](classes/gearbox.md), [differential](classes/differential.md)
-...). [VPVehicleControllerBase](classes/vehicle-base.md) contains the integration solver and the
+...). [VPVehicleBase](classes/vehicle-base.md) contains the integration solver and the
 wheels, which receive the final torques and calculate the tire forces.
 
 Vehicles are internally modeled as a graph of connected objects that derive from [VPComponent](classes/component.md).
@@ -182,7 +171,7 @@ simulate any kind of internal configuration of the vehicle by connecting compone
 combination.
 
 Vehicle components are created, initialized and connected within the `VPVehicleController.cs`
-script, `OnInitialize` method. Check out the comments in the file `VPVehicleControllerBase.cs` for
+script, `OnInitialize` method. Check out the comments in the file `VPVehicleBase.cs` for
 indications on how the vehicles are implemented and simulated by overriding the virtual methods.
 
 !!! info "&fa-info-circle; Useful resources"

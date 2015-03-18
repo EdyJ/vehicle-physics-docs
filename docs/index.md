@@ -41,11 +41,11 @@ latest news and announcements.
 &fa-check; Transmission and axle setup
 {: .roadmap }
 
-&fa-gear:spin; Repository clean up and upgrade to Unity 5
-{: .roadmap .wip }
+&fa-check; Repository clean up and upgrade to Unity 5
+{: .roadmap }
 
-Scenes and vehicles for tests
-{: .roadmap .todo }
+&fa-gear:spin; Scenes and vehicles for tests
+{: .roadmap .wip }
 
 **Enter the Beta stage!**
 {: .roadmap .todo }
