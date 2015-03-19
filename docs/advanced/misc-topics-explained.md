@@ -404,19 +404,23 @@ disengaging it when the handbrake is applied. This disconnects the rear axle fro
 (and the rest of the transmission), so rear wheels can get freely locked without affecting the
 front axle.
 
-The option for disengaging front and rear axles when handbrake is applied can be found at the
-component VPStandardInput.
+The option for disengaging the central transmission element when handbrake is applied can be found
+at the component [VPStandardInput](../components/vehicle-input.md).
 
-The reason for this behavior is that in AWD both axles are connected via center differential or
-torque splitter. Thus, locking the rear axle will affect the front axle as well. Most likely the
-front wheels will be braked as well.
+In addition you can use the splitter's _preload_ settings for configure how much torque is allowed
+to be transmitted while handbraking. This allows a great control on how much the vehicle gets
+affected by the handbrake.
 
-If the center differential is configured as Open then you will observe that the front axle is almost
-unaffected by handbrake. However, an open center differential is not good for donut/drifting because
-the power will be mostly routed towards the front wheels (as they're typically less loaded when
-applying throttle). On the other hand, setting up the center differential as Locked means that the
-handbrake will effectively affect both axles equally, thus acting like a regular brake. A Torque
-Splitter with stiffness > 0 will also transmit part of the effect of the handbrake to the front
+The reason for this behavior of the handbrake is that in AWD both axles are connected via center
+differential or torque splitter. Thus, locking the rear axle will affect the front axle as well.
+Most likely the front wheels will be braked as well.
+
+If the center differential is configured as Open then the front axle is almost unaffected by
+handbrake. However, an open center differential is not good for donut/drifting because the power
+will be mostly routed towards the front wheels (as they're typically less loaded when applying
+throttle). On the other hand, setting up the center differential as Locked means that the handbrake
+will effectively affect both axles equally, thus acting like a regular brake. A Torque Splitter with
+_stiffness_ and/or _preload_ > 0 will also transmit part of the effect of the handbrake to the front
 axle.
 
 ---

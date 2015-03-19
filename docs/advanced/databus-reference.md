@@ -51,6 +51,7 @@ float engineRpm = m_vehicle.data[VPDChannel.Vehicle][VPDVehicle.EngineRpm];
 | --------- | ---- | ----------- |
 | StdInput	| Write&nbsp;only	| States of the vehicle input elements.<br>Intended for writing, but the states can be read for representing the actual positions of the elements in the vehicle 3D model (i.e. steering wheel, gear stick...) |
 | Vehicle	| Read&nbsp;only		| State values of the internal components of the vehicle |
+| Settings	| Read/Write		| Common configuration settings. Values here might not be implemented in all vehicles |
 
 ### StdInput channel
 
@@ -76,7 +77,7 @@ float engineRpm = m_vehicle.data[VPDChannel.Vehicle][VPDVehicle.EngineRpm];
 	- L (5): Low: first gear only.
 
 **<sup>2</sup> GearShift** value is reset to 0 when the vehicle has acknowledged and processed the
-input. Successive gear shift commands can be grouped by adding/substracting +-1 to this bus value.
+input. Successive gear shift commands can be grouped by adding/subtracting +-1 to this bus value.
 
 ### Vehicle channel
 
@@ -92,4 +93,16 @@ input. Successive gear shift commands can be grouped by adding/substracting +-1 
 |GearboxGear 	| Engaged gear								| gear number	|		| Negative = reverse, 0 = Neutral or Park, Positive = forward.
 |GearboxMode	| Actual transmission mode					| gear mode		|		| 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_
 
+### Settings channel
 
+| ValueId | Description | Units  | Resolution | Example |
+| ------- | ----------- |:------:|:----------:| ------- |
+|DifferentialLock	| Override lock setting at the differential<sup>1</sup>	|	|	| 0 = no override, 1 = force locked differential, 2 = force open differential
+|TransmissionLock	| Override lock setting at the transmission<sup>2</sup>	|	|	| 0 = no override, 1 = force locked transmission, 2 = force unlocked / open transmission
+
+**<sup>1</sup> DifferentialLock** affects the axle differentials only.
+
+**<sup>2</sup> TransmissionLock** affects the element connecting the front-rear parts of the
+transmission. This might be either a differential or a torque splitter.
+
+---
