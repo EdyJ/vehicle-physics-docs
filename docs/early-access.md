@@ -84,6 +84,15 @@ generating ssh keys](https://help.github.com/articles/generating-ssh-keys/).
 If you already had cloned the repository via http then you need to modify the remote's URL. Follow
 the [instructions for changing a remote's URL](https://help.github.com/articles/changing-a-remote-s-url/).
 
+##### Setting up the project in Unity 4
+
+The branch **Unity4** contains the project for Unity 4.
+
+	> git clone --depth=1 http://projects.edy.es/git/edy/vehicle-physics-pro.git
+	> cd vehicle-physics-pro
+	> git checkout Unity4
+	> git submodule update --depth=1 --init --recursive
+
 ### Sandbox scene
 
 The scenes for tests are under the folder _Scenes_.
