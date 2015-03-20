@@ -141,6 +141,19 @@ License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
 
 <sup>1</sup> _Professional license is an add-on to the Standard license._
 
+### Comparison with Edy's Vehicle Physics
+
+[Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics/) (available [at the Asset Store](https://www.assetstore.unity3d.com/#/content/403))
+is mostly a wrapper around the stock WheelCollider component included in Unity. It provides fixes,
+usability and other features not included by default. This involves a number of limitations, as most
+parameters have no real physic behavior - they just do some kind of adjustment to the vehicle
+vehavior.
+
+**Vehicle Physics Pro** is a complete AAA-grade vehicle physics simulation engine. Includes a custom
+tire friction model and a full-featured drivetrain simulation providing all the realistic effects
+you expect from actual vehicles. All parameters have a correspondence with real physics, so real
+world parameters will have an accurate result in the simulation.
+
 ### Download & setup
 
 To Be Announced.
