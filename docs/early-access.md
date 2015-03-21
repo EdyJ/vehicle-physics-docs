@@ -60,7 +60,7 @@ across different vehicle physics projects.
 2. 	Fetch and update the submodules:
 
 		> cd vehicle-physics-pro
-		> git submodule update --depth=1 --init --recursive
+		> git submodule update --init --recursive
 
 3.	Now you can open the project at the folder **vehicle-physics-pro** with Unity 5.
 
@@ -69,7 +69,7 @@ across different vehicle physics projects.
 	> git pull --recurse-submodules
 	> git submodule update --init --recursive
 
-The above is also necessary after changing the current branch in your local repository.
+The above is also necessary after checking out any branch in the local repository.
 
 ##### Configuring repository access via ssh
 
