@@ -17,8 +17,10 @@ Personally I prefer to use Euler with 4 substeps rather than RK4.
 
 #### Euler substeps
 
-**Substeps** are subdivisions of the Unity physics time steps. Euler can use from 1 to any
-number of substeps. Runge-Kutta 4 (RK4) takes 4 substeps always.
+**Substeps** are subdivisions of the Unity physics time steps that are used for calculating the
+internal torques, forces and momentums of the components in the vehicle. Euler can use from 1 to any
+number of substeps. Runge-Kutta 4 (RK4) takes 4 substeps always. This setting can be configured
+per-vehicle.
 
 The more substeps, the more precise are the results but CPU usage is increased. However I've noticed
 no significant penalty on using 1 to 8 substeps. CPU usage as shown at the profiler gets increased
