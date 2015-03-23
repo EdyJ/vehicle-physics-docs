@@ -86,13 +86,22 @@ the [instructions for changing a remote's URL](https://help.github.com/articles/
 
 ##### Setting up the project in Unity 4
 
-The branch **master-unity4** contains the project for Unity 4.
+1.	Clone the branch **master-unity4**, which contains the project for Unity 4. Go to a folder of
+	your choice, then:
 
-	> git clone -b master-unity4 --single-branch --depth=1 http://projects.edy.es/git/edy/vehicle-physics-pro.git
+		> git clone -b master-unity4 --single-branch --depth=1 http://projects.edy.es/git/edy/vehicle-physics-pro.git
 
-or, if you've configured the access via ssh:
+	or, if you've configured the access via ssh:
 
-	> git clone -b master-unity4 --single-branch --depth=1 ssh://git@projects.edy.es/edy/vehicle-physics-pro.git
+		> git clone -b master-unity4 --single-branch --depth=1 ssh://git@projects.edy.es/edy/vehicle-physics-pro.git
+
+2. 	Fetch and update the submodules:
+
+		> cd vehicle-physics-pro
+		> git submodule update --init --recursive
+
+3.	Now you can open the project at the folder **vehicle-physics-pro** with Unity 4. The sandbox
+	scenes for development are located in the folder _NinjaCamp v2_.
 
 ### Sandbox scene
 
