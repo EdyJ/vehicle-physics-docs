@@ -110,15 +110,23 @@ Professional license add-on
 :	Provides access to the latest updates via GIT repository, fully commented C# source code and
 	direct support via Skype.
 
-	The Professional License add-on is available now for [Early Access](early-access.md) (Alpha and Beta) for **$200** without requiring
-	the Standard license. This offer will be lifted after the first version has been published at
-	the Unity Asset Store. Contact me at [edytado@gmail.com](mailto:edytado@gmail.com) for more information.
+	The Professional License add-on is available now for [Early Access](early-access.md) (Alpha and
+	Beta) for **$200** without requiring the Standard license. This offer will be lifted after the
+	first version has been published at the Unity Asset Store. Contact me at [edytado@gmail.com](mailto:edytado@gmail.com)
+	for more information.
 	{: .alert .alert-info }
 
 Site license
 
 :	Covers unlimited developers from a single studio providing Professional level access. Priced
-	$2000 - the equivalent to 1 Professional + 18 Standard licenses.
+	$2000 - the equivalent to 1 Professional + 18 Standard licenses. Includes 5 hours of expert
+	assistance.
+
+Paid expert assistance
+
+:	Let me take a depth look at your project and I'll propose solutions to your specific issues
+	with vehicles. I can also configure your vehicles to match your project's specifications. [Ask me](mailto:edytado@gmail.com)
+	me for a quote.
 
 
 #### Compare editions
@@ -137,9 +145,12 @@ Access to the GIT repository							|	|	| &fa-check;	| &fa-check;	|
 Exclusive content and examples							|	|	| &fa-check; | &fa-check;	|
 Direct support via Skype / Telegram						|	| 	| &fa-check;	| &fa-check;	|
 License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
-**Price**												| **Free** | **$100** | **+$200** <sup>1</sup> | **$2000** |
+Expert assistance										|	|	|	| &fa-check;<sup>1</sup>	|
+**Price**												| **Free** | **$100** | **+$200** <sup>2</sup> | **$2000** |
 
-<sup>1</sup> _Professional license is an add-on to the Standard license._
+<sup>1</sup> _Site license includes 5 hours of expert assistance._
+
+<sup>2</sup> _Professional license is an add-on to the Standard license._
 
 ### Comparison with Edy's Vehicle Physics
 
