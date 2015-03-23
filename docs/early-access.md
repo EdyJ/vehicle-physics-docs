@@ -86,12 +86,13 @@ the [instructions for changing a remote's URL](https://help.github.com/articles/
 
 ##### Setting up the project in Unity 4
 
-The branch **Unity4** contains the project for Unity 4.
+The branch **master-unity4** contains the project for Unity 4.
 
-	> git clone --depth=1 http://projects.edy.es/git/edy/vehicle-physics-pro.git
-	> cd vehicle-physics-pro
-	> git checkout Unity4
-	> git submodule update --depth=1 --init --recursive
+	> git clone -b master-unity4 --single-branch --depth=1 http://projects.edy.es/git/edy/vehicle-physics-pro.git
+
+or, if you've configured the access via ssh:
+
+	> git clone -b master-unity4 --single-branch --depth=1 ssh://git@projects.edy.es/edy/vehicle-physics-pro.git
 
 ### Sandbox scene
 
