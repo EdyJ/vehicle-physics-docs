@@ -29,3 +29,9 @@ font-style: italic;
 }
 
 
+/* Margin is zero after an UL inside an OL (Bootstrap) */
+
+ol ul
+	{
+	margin-bottom: 10px;
+	}

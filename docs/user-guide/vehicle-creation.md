@@ -1,116 +1,154 @@
 # Creating a vehicle
 
-Start here: <kbd>GameObject > Create Other > Vehicle</kbd>
+### Base hierarchy and components
 
-A basic 4-wheeled vehicle will be added to the scene. This vehicle is fully functional.
-You can hit <kbd>Play</kbd> at the Editor and drive around with it in your scenery.
+1.	Create an empty GameObject in the scene (<kbd>ctrl-shift-N</kbd>). Name it **Vehicle**. Add
+	these components (from the Component menu):
 
-The vehicle GameObject is structured as follows:
+	- Component > Vehicle Physics > Vehicle Controller _(a RigidBody is added automatically)_
+	- Component > Vehicle Physics > Vehicle Input
 
-    Vehicle
-    |- Mesh
-	|	|- Body mesh
-	|   |- WheelFL mesh
-    |   |- WheelFR mesh
-    |   |- WheelRL mesh
-    |   |- WheelRR mesh
-    |- Body Colliders
-	|   |- Collider
-	|- Wheel Colliders
-	|	|- WheelFL
-	|	|- WheelFR
-	|	|- WheelFR
-	|	|- WheelFR
-	|- CoM
-	|- Ackerman
+2.	Create a child GameObject (<kbd>ctrl-alt-N</kbd>). Name it **WheelColliders**.
 
-Vehicle
-: 	Contains the main components for the vehicle: Rigidbody, Vehicle Controller, Vehicle
-	Input, Vehicle Sounds, Vehicle Effects.
-Mesh
-: 	All the visual parts go here. You can remove the sample parts and import your 3D model here.
+3.	Create four children GameObjects under WheelColliders. Name them **WheelFL, WheelFR, WheelRL,
+	WheelRR**. Your vehicle GameObject should be like this:
 
-Body Colliders
-:	The invisible colliders for the vehicle's body go here.
+		Vehicle
+		|- WheelColliders
+			|- WheelFL
+			|- WheelFR
+			|- WheelRL
+			|- WheelRR
 
-Wheel Colliders
-: 	The WheelCollider components, one per wheel. They are located at the actual positions of the
-	vehicle's wheels.
-CoM
-:	The location of the Center of Mass. It has great influence in the vehicle's handling
-	and stability.
-Ackerman
-: 	The location of the reference point for the Ackerman steering geometry. For 4-wheeled vehicles
-	it's typically placed at the center of the rear axle.
+4.	Select the four WheelXX GameObjects, then add a **VPWheelCollider** component to them:
+
+	- Component > Vehicle Physics > Wheel Collider
+
+5.	Add the vehicle mesh as child of Vehicle. Mesh should reside in its own-sub hierarchy entirely:
+
+		Vehicle
+		|- WheelColliders
+		|	|- WheelFL
+		|	|- WheelFR
+		|	|- WheelRL
+		|	|- WheelRR
+        |- My3DVehicle
+			|  (hierarchy here is specific to each 3D vehicle)
+			|- MeshBody
+			|- MeshFrontLeft
+			|- MeshFrontRight
+			|- MeshRearLeft
+			|- MeshRearRight
+			|-   ...
+
+6.	For each VPWheelCollider component (WheelXX) configure the property **Visual objects > Wheel**
+	to they corresponding counterpart in the mesh. E.g. _WheelFL > Visual objects > Wheel_ to
+	_MeshFrontLeft_.
+
+7.	Select the four WheelXX components. Then click at the context menu for the VPWheelCollider
+	component and choose **Adjust position and radius to the Wheel mesh**. VPWheelColliders are
+	automagically adjusted to fit the wheel meshes.
+
+8.	Add or configure the **vehicle collider**. The 3D vehicles usually come with a simplified shape
+	of the vehicle (collider). This is used for collision detection. Add a **MeshCollider**
+	component to the collider's object and mark is as **Convex**.
+
+	If the vehicle comes without collider you can add a Cube as child of the Vehicle object, then
+	scale it to roughly match the shape of the vehicle.
+
+	!!! warning "&fa-warning; At least one convex collider is mandatory in the vehicle"
+		A vehicle without colliders will show a very weird and unnatural behavior as soon as the
+		simulation starts (Unity physics bug).
+
+### Configure the components
+
+Rigidbody
+:	- mass depending on the vehicle. Typical car is 1000-2000 Kg.
+	- drag, angular drag = 0
+	- Interpolate recommended.
+
+VP Vehicle Controller
+:	- **Axles** > **Left Wheel** and **Right Wheel** of each axle must point to the corresponding
+		VPWheelCollider component (the WheelXX objects).
+
+Enough for now! Click <kbd>Play</kbd>. The vehicle is now live in the scene and you can drive it
+around using the standard keys.
 
 ## Component overview
 
 Essential:
 
 - Rigidbody: mass
-- WheelColliders: radius, mass, suspension distance, spring, damper
-- Vehicle Controller
-- Vehicle Input
+- VP Wheel Collider: radius, mass, suspension distance, spring, damper
+- VP Vehicle Controller: axles
+- VP Standard Input
 
 Accessory:
 
-- Vehicle Sounds
-- Vehicle Effects
-- Vehicle Lights
-- Vehicle Dashboard
-- Vehicle Telemetry
+- VP Audio
+- VP Telemetry
+- VP Aero Surface
+- _Vehicle Effects_
+- _Vehicle Lights_
+- _Vehicle Dashboard_
 
 Scene:
 
 - Skidmarks
 - Surface
 
-## Setting up the vehicle
 
-#### Rigidbody
+#### VP Wheel Collider
 
-Configure the **mass** of the vehicle here.
+Basic properties of the wheels and the suspension parameters.
 
-#### WheelColliders
-
-Configure the basic properties of the wheels and the suspension parameters:
-
-Radius (m)
-:	It should match the radius of the wheel meshes so their rotation rate will be
-	correctly matched
 Mass (Kg)
 : 	Use a value that roughly matches the real wheels. Small values (less than 10) are
-	not recommended because numerical stability gets reduced. This value doesn't need to be accurate
-	because it has rather more influence in the numerical stability than in the physic effects.
+	not recommended because numerical stability may be affected. This value doesn't need to be
+	precise because it has rather more influence in the numerical stability than in the physic
+	effects.
+
+Radius (m)
+:	It should match the radius of the wheel meshes for their rotation rate to be correctly matched.
+
 Suspension Distance (m)
 : 	Distance of the suspension travel from fully compressed to fully elongated.
+
+Suspension Anchor (%)
+:	How much the suspension is visually compressed in the vehicle's 3D model. This defines where
+	the limits of the suspension will be in the simulated vehicle.
 
 Spring (N/m)
 :	Springs support the weight of the vehicle. When suspension is fully elongated
 	the springs provide no force. When suspension is fully compressed the spring provide
-	$force = spring * suspensionDistance$ in Newtons. A good starting value is $spring = mass*gravity*2/wheels$.
+	$force = spring * suspensionDistance$ in Newtons.
+
 Damper (N/ms<sup>-1</sup>)
 :	Dampers limit the speed of movement of the suspension. They affect the angular momentum
 	of the vehicle on weight shifting situations (accelerating, braking, cornering...).
 
-All other settings of the WheelCollider component can be ignored as they won't have any effect
-on the Vehicle Physics module.
+#### VP Vehicle Controller
 
-#### Vehicle Controller
+Vehicle dynamics and functional components.
 
-The vehicle dynamics and functional components are handled and configured here.
+Center of mass
+:	Should be located around the middle-top of the chassis and slightly biased towards the position
+	of the engine.
 
-Vehicle Type
-:	Set up a predefined vehicle type or custom. The available options will vary depending on the
-	vehicle type.
 Axles
-:	Reference the WheelColliders and wheel meshes for each wheel. Also set up axle roles.
+:	Reference the wheels (VPWheelCollider) and set up each axle's features.
+
+Transmission
+:	How many driven axles and how they will be connected together and with the engine.
+
+Steering
+:	Angle, ackerman, toe.
 
 Brakes
 :	Brake power, brake bias, handbrake.
 
-Steering
-:	Angle, ackerman, toe.
+Tires
+:	Tire friction model and friction curves.
 
 Engine
 :	Torque and rpms, idle, inertia, friction, can stall.
@@ -121,11 +159,38 @@ Clutch
 Gearbox
 :	Gearbox type and ratios.
 
-Differential
-:	Differential type and specific settings.
+Differential or Axle Differential
+:	Differential(s) connecting the two wheels of the same axle.
 
-Tires
-:	Tire friction model and friction curves.
+Inter-Axle Differential (if configured at Transmission)
+:	Differential(s) connecting two axle differentials together.
+
+Center differential (if configured at Transmission)
+:	A differential connecting the _front_ and _rear_ sections of the transmission together and with
+	the drivetrain upwards.
+
+Torque splitter (if configured at Transmission)
+:	Connects the _front_ and _rear_ sections of the transmission together and with the drivetrain
+	upwards. The torque splitter couples the drivetrain with one of the sections, and routes a
+	configured portion of the drive power to the other section.
 
 
-#### Vehicle Input
+#### VP Standard Input
+
+Reads Unity's standard Input system for controlling the vehicle.
+
+Throttle And Brake Mode
+:	Whether throttle and brake axis control the throttle and brakes only, or if Reverse is
+	automatically engaged.
+
+Brake On Throttle Backwards
+:	Throttle engages brakes when applied while the vehicle is moving backwards.
+
+Apply Clutch On Handbrake
+:	Clutch is applied for disengaging the engine from the transmission when handbrake is applied.
+
+Unlock Transmission On Handbrake
+:	Ensures than the front-rear sections of the transmission are disconnected from each other when
+	handbrake is applied.
+
+---
