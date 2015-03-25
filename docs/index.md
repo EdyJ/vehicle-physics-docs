@@ -105,13 +105,15 @@ Standard license (To Be Announced)
 :	Will be available at the Unity Asset Store for $100. Includes the Vehicle Physics components,
 	development API and examples.
 
+	_This product requires a license per seat._
+
 Professional license add-on
 
-:	Provides access to the latest updates via GIT repository, fully commented C# source code and
-	direct support via Skype.
+:	A power-up to the Standard license providing access to the latest updates via GIT repository,
+	fully commented C# source code and direct support via Skype.
 
 	The Professional License add-on is available now for [Early Access](early-access.md) (Alpha and
-	Beta) for **$200** without requiring the Standard license. This offer will be lifted after the
+	Beta) for **$200** per seat without requiring the Standard license. This offer will be lifted after the
 	first version has been published at the Unity Asset Store. Contact me at [edytado@gmail.com](mailto:edytado@gmail.com)
 	for more information.
 	{: .alert .alert-info }
@@ -158,7 +160,7 @@ Expert assistance										|	|	|	| &fa-check;<sup>1</sup>	|
 is mostly a wrapper around the stock WheelCollider component included in Unity. It provides fixes,
 usability and other features not included by default. This involves a number of limitations, as most
 parameters have no real physic behavior - they just do some kind of adjustment to the vehicle
-vehavior.
+behavior.
 
 **Vehicle Physics Pro** is a complete AAA-grade vehicle physics simulation engine. Includes a custom
 tire friction model and a full-featured drivetrain simulation providing all the realistic effects
