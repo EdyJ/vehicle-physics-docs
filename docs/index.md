@@ -89,6 +89,14 @@ Realistic and coherent
 	forces, torques and frictions. This model is easier to understand and simpler to calculate than
 	the commonly used models, yet providing physically accurate and realistic results.
 
+Unity 5: All problems in the WheelCollider are fixed
+
+:	- Suspension works as expected, including correct reactions to changes in mass and springs.
+	- Real-world units are used everywhere (N/m for springs, Ns/m for dampers) with physically
+	realistic effects.
+	- Rotation of the wheel component and/or any of its ancestors is fully supported.
+	- Camber and its effects are supported.
+
 ### Licensing
 
 &fa-warning; License versions, terms, content and pricing are _not_ definitive. Anything may change
@@ -157,15 +165,16 @@ Expert assistance										|	|	|	| &fa-check;<sup>1</sup>	|
 ### Comparison with Edy's Vehicle Physics
 
 [Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics/) (available [at the Asset Store](https://www.assetstore.unity3d.com/#/content/403))
-is mostly a wrapper around the stock WheelCollider component included in Unity. It provides fixes,
-usability and other features not included by default. This involves a number of limitations, as most
-parameters have no real physic behavior - they just do some kind of adjustment to the vehicle
-behavior.
+is a simple vehicle physics simulation model focused on the ease of configuring the vehicle's
+behavior. Provides fairly _realistic-looking_ vehicle reactions targeted for arcade and
+gameplay-based games.
 
 **Vehicle Physics Pro** is a complete AAA-grade vehicle physics simulation engine. Includes a custom
 tire friction model and a full-featured drivetrain simulation providing all the realistic effects
 you expect from actual vehicles. All parameters have a correspondence with real physics, so real
-world parameters will have an accurate result in the simulation.
+world parameters have an accurate result in the simulation. The reactions of the vehicle under
+each situation are configured in a physically realistic way according to the configuration of the
+vehicle's components.
 
 ### Download & setup
 
