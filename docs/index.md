@@ -134,7 +134,7 @@ Site license
 
 Paid expert assistance
 
-:	Let me take a depth look at your project and I'll propose solutions to your specific issues
+:	Let me take a close look at your project and I'll propose solutions to your specific issues
 	with vehicles. I can also configure your vehicles to match your project's specifications. [Ask me](mailto:edytado@gmail.com)
 	me for a quote.
 
@@ -164,18 +164,38 @@ Expert assistance										|	|	|	| &fa-check;<sup>1</sup>	|
 
 ### Comparison with Edy's Vehicle Physics
 
-[Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics/) (available [at the Asset Store](https://www.assetstore.unity3d.com/#/content/403))
+[Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics/) (**EVP**, available [at the Asset Store](https://www.assetstore.unity3d.com/#/content/403))
 is a simple vehicle physics simulation model focused on the ease of configuring the vehicle's
 behavior. Provides fairly _realistic-looking_ vehicle reactions targeted for arcade and
 gameplay-based games.
 
-**Vehicle Physics Pro** is a complete AAA-grade vehicle physics simulation engine. Includes a custom
-tire friction model and a full-featured drivetrain simulation providing all the realistic effects
-you expect from actual vehicles. All parameters have a correspondence with real physics, so real
-world parameters have an accurate result in the simulation. The reactions of the vehicle under
+Vehicle Physics Pro (**VPP**) is a complete AAA-grade vehicle physics simulation engine. Includes a
+custom tire friction model and a full-featured drivetrain simulation providing all the realistic
+effects you expect from actual vehicles. All parameters have a correspondence with real physics, so
+real world parameters have an accurate result in the simulation. The reactions of the vehicle under
 each situation are configured in a physically realistic way according to the configuration of the
 vehicle's components.
+
+I find the vehicle in EVP more stable
+:	EVP already implements the driving aids (TC, ABS, ESP) while these are not available in VPP yet.
+	You can try disabling the driving aids in the Vehicle Controller in EVP.
+
+	Also, EVP uses a flat friction model which is very forgiving. A similar model is also available
+	in VPP (the "Constant" friction curve). You might find the vehicle in VPP more stable using this
+	model.
+
+Which product is better for performance on mobile low-mid end?
+:	Both products have roughly the same performance at their default settings. In VPP the
+	requirements might get increased depending on the specific settings of each vehicle
+	(integration substeps, number of components in the transmission, etc). In EVP the performance
+	depends on the total number of wheels in the scene.
+
+	I plan to include an absolutely simple Vehicle Controller component in VPP as part of the
+	documentation for [Creating Custom Vehicles](advanced/custom-vehicles.md). This example could be
+	used also for ensuring the most performance out of the VPP simulation.
 
 ### Download & setup
 
 To Be Announced.
+
+---
