@@ -149,6 +149,7 @@ Unlimited simultaneous vehicles on each scene			|	| &fa-check; | &fa-check; | &f
 Advanced example vehicles (APC, sport car...)			|	| &fa-check;	| &fa-check;	| &fa-check;	|
 Support for custom vehicles and components 				|	| &fa-check; | &fa-check; | &fa-check;	|
 Additional vehicles and components with source code		|	| &fa-check; | &fa-check; | &fa-check;	|
+Controller for mobile devices			 				|	| &fa-check; | &fa-check; | &fa-check;	|
 Email support											|	| &fa-check;	| &fa-check;	| &fa-check;	|
 Full source code										|	|	| &fa-check; | &fa-check;	|
 Access to the GIT repository							|	|	| &fa-check;	| &fa-check;	|
@@ -167,9 +168,9 @@ Expert assistance										|	|	|	| &fa-check;<sup>1</sup>	|
 [Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics/) (**EVP**, available [at the Asset Store](https://www.assetstore.unity3d.com/#/content/403))
 is a simple vehicle physics simulation model focused on the ease of configuring the vehicle's
 behavior. Provides fairly _realistic-looking_ vehicle reactions targeted for arcade and
-gameplay-based games.
+gameplay-based games (GTA style).
 
-Vehicle Physics Pro (**VPP**) is a complete AAA-grade vehicle physics simulation engine. Includes a
+Vehicle Physics Pro (**VPP**) is a strictly realistic vehicle physics simulation engine. Includes a
 custom tire friction model and a full-featured drivetrain simulation providing all the realistic
 effects you expect from actual vehicles. All parameters have a correspondence with real physics, so
 real world parameters have an accurate result in the simulation. The reactions of the vehicle under
