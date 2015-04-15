@@ -456,5 +456,18 @@ You'll have however to manually relocate the GameObjects containing the VPWheelC
 to their scaled positions, then modify radius, suspensionDistance and center accordingly.
 Do not modify the transform.scale value of a VPWheelCollider component or any of its ancestors.
 
+#### How many wheels are grounded?
+
+Check out the property `wheelState` in [VPVehicleBase](../classes/vehicle-base.md). It lets you
+access the array of state variables for all wheels. You can use foreach () and count how many wheels
+have the flag `wheelState.grounded` enabled.
+
+[VPVehicleController](../components/vehicle-controller.md) (derived from `VPVehicleBase`) adds the
+wheels to the `wheelState` array in the same order as they're specified in the `Axles` property.
+Typically, the order is front to rear, left and right. But this order not strictly enforced, it
+might vary if the user specifies axes in a different order. Also, custom vehicle controllers might
+add the wheels to the array in a different order. Front to rear, left-right is the recommended
+convention.
+
 ---
 
