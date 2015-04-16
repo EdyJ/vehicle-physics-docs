@@ -19,14 +19,14 @@ For examples on how to use the Data Bus, check out the scripts `VPStandardInput.
 
 #### Accessing the data bus
 
-The bus is accessed via property **data** defined in VPVehicleControllerBase. Use code like this in a script
+The bus is accessed via property **data** defined in VPVehicleBase. Use code like this in a script
 attached to a GameObject containing a VPVehicleController component or any other
-VPVehicleControllerBase-derived component:
+VPVehicleBase-derived component:
 
 ```
 // Get a reference to the vehicle controller component
 
-VPVehicleControllerBase vehicle = GetComponent<VPVehicleControllerBase>();
+VPVehicleBase vehicle = GetComponent<VPVehicleBase>();
 
 // Set the input for the steering wheel
 
