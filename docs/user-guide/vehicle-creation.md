@@ -24,7 +24,8 @@
 
 	- Component > Vehicle Physics > Wheel Collider
 
-5.	Add the vehicle mesh as child of Vehicle. Mesh should reside in its own-sub hierarchy entirely:
+5.	Add the vehicle mesh as child of your Vehicle. Mesh should reside in its own-sub hierarchy
+	entirely:
 
 		Vehicle
 		|- WheelColliders
@@ -42,10 +43,10 @@
 			|-   ...
 
 6.	For each VPWheelCollider component (WheelXX) configure the property **Visual objects > Wheel**
-	to they corresponding counterpart in the mesh. E.g. _WheelFL > Visual objects > Wheel_ to
+	to their corresponding counterpart in the mesh. E.g. _WheelFL > Visual objects > Wheel_ to
 	_MeshFrontLeft_.
 
-7.	Select the four WheelXX components. Then click at the context menu for the VPWheelCollider
+7.	Select the four WheelXX components. Then click the context menu for the VPWheelCollider
 	component and choose **Adjust position and radius to the Wheel mesh**. VPWheelColliders are
 	automagically adjusted to fit the wheel meshes.
 

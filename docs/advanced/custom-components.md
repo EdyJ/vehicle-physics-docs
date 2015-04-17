@@ -65,7 +65,7 @@ Inputs
 	value (non-existing gear).
 
 States
-:	States are a special kind of inputs that must be feed continuously with data coming from the
+:	States are a special kind of inputs that must be fed continuously with data coming from the
 	vehicle and other components. Components use this data for their own logic. For example, the
 	automatic gearbox requires knowing the actual speed of the vehicle for deciding whether is
 	correct to engage a gear or not.

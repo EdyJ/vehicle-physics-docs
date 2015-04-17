@@ -282,7 +282,7 @@ This quote is based on Brian Beckman's thoughts about the Magic Formula not acco
 any variation of the force with speed (reference: [The Physics Of Racing, chapter 22](http://phors.locost7.info/phors22.htm)).
 
 In my opinion the slip ratio and slip angle concepts belong to the automotive and tire industries.
-They are used to make studies, write standards, specifications, etc. but they hare hard to fit into
+They are used to make studies, write standards, specifications, etc. but they are hard to fit into
 games and vehicle simulations in a coherent way. Slip ratio, slip angle and all their related
 stuff are required if you need your simulation to match exactly the real specifications and product
 details given by tire and automotive manufacturers, as they use these standards for exchanging
