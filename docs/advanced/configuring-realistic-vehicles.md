@@ -1,6 +1,7 @@
 # Configuring Realistic Vehicles
 
-The specifications from real vehicles can be configured in Vehicle Physics Pro.
+These are the specifications you need out of a real vehicle for recreating it in Vehicle
+Physics Pro.
 
 ### Wheels and suspension
 
@@ -53,7 +54,7 @@ Examples: center differential, torque splitter.
 
 ### Aerodynamics
 
-- The Aerodynamic drag can estimated from the **top speed**.
+- The Aerodynamic drag can be estimated from the **top speed**.
 - The aerodynamic downforce and tire sideways friction can be estimated from the **maximum speed at
 	a curve of known radius**, and also from the **maximum lateral G supported in curves**.
 
