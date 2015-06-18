@@ -86,6 +86,11 @@ the [instructions for changing a remote's URL](https://help.github.com/articles/
 
 ##### Setting up the project in Unity 4
 
+This part is for Unity 4 only. If you're on Unity 5 you should have already the project after
+following the previous steps.
+
+Unity 4 setup:
+
 1.	Clone the branch **master-unity4**, which contains the project for Unity 4. Go to a folder of
 	your choice, then:
 
