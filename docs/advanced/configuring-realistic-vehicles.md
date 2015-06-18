@@ -42,7 +42,10 @@ situation.
 ### Engine and transmission
 
 - **Engine torque and power**. Ideally, a ["dyno" curve](https://www.google.es/search?q=engine+dyno+curve&tbm=isch)
-	if available.
+	if available. The curve shape helps also configuring the engine brake.
+- **Engine rev up/down time**. How fast the engine revs up when fully pressing throttle at neutral
+	gear, and how much time takes it to rev down to idle after releasing throttle. These data can
+	be used for estimating the engine inertia and the engine brake curve.
 - **Drive information**: front, rear, combined (details?)...
 - **Transmission type**: manual, automatic, manual with auto shift, automatic with manual shift.
 - **Number of gears and their ratios**.

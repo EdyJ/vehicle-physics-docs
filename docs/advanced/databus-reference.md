@@ -26,7 +26,7 @@ VPVehicleBase-derived component:
 ```
 // Get a reference to the vehicle controller component
 
-VPVehicleBase vehicle = GetComponent<VPVehicleBase>();
+VPVehicleBase m_vehicle = GetComponent<VPVehicleBase>();
 
 // Set the input for the steering wheel
 

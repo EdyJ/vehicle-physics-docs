@@ -427,13 +427,16 @@ axle.
 
 #### Understanding steering, friction, and lateral slip / forces
 
+**Telemetry explained**
+
 ![Vehicle Physics Pro Telemetry](img/advanced/vehicle-physics-pro-steering-telemetry-annotated.png)
 
 - Steering angle is 29 - 22 degrees for the front wheels (1)
-- Speed is at 106.3 km/h or 66 mph (5)
-- Given the above steering angle and speed, the wheels are experiencing a lateral slip of 12 - 10 m/s (4)
+- Speed is 106.3 km/h or 66 mph (5)
+- Given the above steering angle and speed, the wheels are experiencing a lateral slip of 12 - 10
+	m/s (4)
 - The slip applied to the tire friction curve results in a coefficient of friction of ~0.82
-	(not shown at the telemetry; see picture below).
+	(not shown at the telemetry; more info below).
 - Normal load on the wheels is 1952 - 4955 N (2)
 - Given the above coefficient of friction and normal load, the wheels produce a lateral force of
 	1611 - 4178 N (3)
@@ -445,11 +448,11 @@ axle.
 ![Vehicle Physics Pro Tire Friction Curve](img/advanced/vehicle-physics-pro-tire-friction-curve.png)
 
 Horizontal scale is slip in m/s. Vertical scale is coefficient of friction. The picture shows up to
-8 m/s. In this curve the peak friction is developed at 1.5 m/s only. As front wheels are
-experiencing 10-12 m/s, this means they are developing the minimum friction (a coefficient of
-friction of ~0.82).
+8 m/s. In this curve the peak friction is developed at 1.5 m/s. As front wheels are experiencing
+10-12 m/s, this means they are developing the minimum friction (a coefficient of friction of ~0.82).
 
 !!! Info "&fa-thumbs-o-up; Maximizing the lateral forces"
+
 	- Limit the steering angle with the speed for keeping the sideways slip close to the value where
 		the maximum friction is developed. This will be implemented as a driving aid. For example,
 		setting Max Steer Angle to 3 degrees in the scene above increases the cornering rate to 0.50
@@ -505,4 +508,3 @@ add the wheels to the array in a different order. Front to rear, left-right is t
 convention.
 
 ---
-
