@@ -468,11 +468,10 @@ Horizontal scale is slip in m/s. Vertical scale is coefficient of friction. The 
 This kind of problem most probably related with the damper value. Surely the damper values are too
 large. Try either reducing them, or learn how to configure the damper properly as described below.
 
-!!! Warning "&fa-warning;"
+!!! Warning "&fa-warning; Watch your damper!"
 
 	The suspension damper is implemented very _very_ badly in PhysX 3 (the underlying physics engine
-	in Unity 5). Configuring a correct value is critical for the vehicle stability. This problem
-	didn't happen in Unity 4 / PhysX 2.
+	in Unity 5). Configuring a correct value is critical for the vehicle stability.
 
 **Configuring the damper value**
 
