@@ -463,6 +463,49 @@ Horizontal scale is slip in m/s. Vertical scale is coefficient of friction. The 
 	- Configure the aerodynamic components to apply more downforce at the front wheels than at the
 		rear wheels at high speeds. This may cause oversteer behaviors as well.
 
+#### Car bouncing or shaking over the ground
+
+This kind of problem most probably related with the damper value. Surely the damper values are too
+large. Try either reducing them, or learn how to configure the damper properly as described below.
+
+!!! Warning "&fa-warning;"
+
+	The suspension damper is implemented very _very_ badly in PhysX 3 (the underlying physics engine
+	in Unity 5). Configuring a correct value is critical for the vehicle stability. This problem
+	didn't happen in Unity 4 / PhysX 2.
+
+**Configuring the damper value**
+
+First, check out the suspension _compression ratio_ for your wheels in runtime. This ratio is
+reported by the Telemetry, or via scripting with `VPWheelCollider.compressionRatio`:
+
+![Vehicle Physics Pro Suspension Telemetry](img/advanced/vehicle-physics-pro-suspension-telemetry.png)
+
+If you encounter issues at high speed, then put your vehicle at those speeds and check out the
+actual compression values. Aerodynamic forces might be compressing the suspension further at high
+speeds.
+
+Then open the VPWheelCollider inspector at the editor by selecting any wheel component in your
+vehicle:
+
+![Vehicle Physics Pro Damper Settings](img/advanced/vehicle-physics-pro-suspension-damper-setting.png)
+
+1. Unfold the "Analysis" section, then specify the **compression ratio** you want to study. This
+value doesn't have any effect on the actual configuration. It just makes the calculations and shows
+the results.
+2. Configure the **damper rate** value at the suspension settings.
+3. Watch the resulting **damping ratio** value for that damper value.
+
+This _damping ratio_ defines the behavior of the vehicle according to the dampers. I've studied
+several settings with these results:
+
+- &lt; 0.3: safe values working as expected.
+- 0.3 - 1.0: mostly stable but may expose unrealistic behaviors such as the vehicle being "glued" or artificially pushed towards the ground.
+- 1.0 - 1.6: potentially unstable and unrealistically behaving on many situations.
+- &gt; 1.6: mostly unstable, bounces, shakes, etc.
+
+I'd recommend you to use damper values so the damper ration stay at 0.3 - 0.4 at most.
+
 ---
 
 ## Custom components and vehicles
