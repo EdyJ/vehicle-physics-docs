@@ -12,7 +12,7 @@ Feedback, improvements and corrections to the docs are welcome, specially typo a
 Feel free to submit your contributions via comments and/or pull requests.
 
 Documents are plain markdown files. You don't need any special procedure for editing, just a text
-editor. Previewing the HTML result requies
+editor. Previewing the HTML result requires building the docs.
 
 ## Building & previewing the docs
 
