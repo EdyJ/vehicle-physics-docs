@@ -1,9 +1,11 @@
 
-/* Prevent blockquotes to be giant-sized */
-blockquote p {
-font-size: inherit;
-font-style: italic;
-}
+/* Prevent blockquotes to be giant-sized. Also makes them italic. */
+
+blockquote p
+	{
+	font-size: inherit;
+	font-style: italic;
+	}
 
 /* Solves the problem of jumping to section and being hidden by fixed nav-bar */
 /* https://github.com/twbs/bootstrap/issues/1768 */
@@ -21,17 +23,41 @@ font-style: italic;
 */
 
 /* Hides the prev, next and github links when browser width is between 768 and 1200px */
-@media (min-width: 768px) and (max-width: 1199px) {
-	.nav.navbar-nav.navbar-right
+@media (min-width: 768px) and (max-width: 1199px)
 	{
+	.nav.navbar-nav.navbar-right
+		{
 		display: none;
+		}
 	}
-}
 
 
-/* Margin is zero after an UL inside an OL (Bootstrap) */
+/* Add a margin after an UL inside an OL (Bootstrap leaves no margin)
+Example: http://vehiclephysics.com/user-guide/vehicle-creation/
+*/
 
 ol ul
 	{
 	margin-bottom: 10px;
+	}
+
+
+/* Reduce the giant size of the upper and lower margins of the nav in compressed mode
+(when it's not displayed as sidebar)
+*/
+
+.bs-sidenav
+	{
+    margin-top: 10px;
+    margin-bottom: 10px;
+	}
+
+
+/* H5 in bold
+(it's barely perceptible as header now)
+*/
+
+h5, .h5
+	{
+	font-weight: bold;
 	}
