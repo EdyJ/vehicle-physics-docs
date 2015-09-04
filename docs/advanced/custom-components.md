@@ -78,11 +78,3 @@ The Vehicle Controller host is responsible of feeding the components with the ap
 states, as well as exposing and using the sensors correctly. These values are typically to be
 read, exposed and exchanged through the data bus.
 
-
-
-
-
-
-
-
-

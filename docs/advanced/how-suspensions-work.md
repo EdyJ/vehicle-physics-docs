@@ -166,4 +166,3 @@ Applying the [Nyquist theorem](http://en.wikipedia.org/wiki/Nyquist–Shannon_sa
 can deduct that a physically correct simulation should have _alpha_ >= 2. Smaller values won't
 likely cause noticeable artifacts, only the produced forces won't be physically precise.
 
----

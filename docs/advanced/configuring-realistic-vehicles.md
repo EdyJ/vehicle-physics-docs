@@ -60,5 +60,3 @@ Examples: center differential, torque splitter.
 - The Aerodynamic drag can be estimated from the **top speed**.
 - The aerodynamic downforce and tire sideways friction can be estimated from the **maximum speed at
 	a curve of known radius**, and also from the **maximum lateral G supported in curves**.
-
----

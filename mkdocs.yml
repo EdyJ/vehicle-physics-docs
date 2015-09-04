@@ -2,6 +2,7 @@ site_name: Vehicle Physics Pro
 site_description: Documentation for Vehicle Physics Pro (VPP), a realistic vehicle simulation model for Unity 3D
 site_author: Angel "Edy" Garcia
 repo_url: https://github.com/EdyJ/vehicle-physics-docs
+
 strict: true
 google_analytics: [ 'UA-58719504-1', 'auto' ]
 

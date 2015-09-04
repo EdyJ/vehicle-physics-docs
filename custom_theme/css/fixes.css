@@ -61,3 +61,12 @@ h5, .h5
 	{
 	font-weight: bold;
 	}
+
+
+/* Fix exagerated padding at the bottom of the content column (was 100px)
+*/
+
+div.col-md-9
+	{
+	padding-bottom: 40px;
+	}
