@@ -429,7 +429,7 @@ axle.
 
 **Telemetry explained**
 
-![Vehicle Physics Pro Telemetry](img/advanced/vehicle-physics-pro-steering-telemetry-annotated.png)
+![Vehicle Physics Pro Telemetry](/img/advanced/vehicle-physics-pro-steering-telemetry-annotated.png)
 
 - Steering angle is 29 - 22 degrees for the front wheels (1)
 - Speed is 106.3 km/h or 66 mph (5)
@@ -445,7 +445,7 @@ axle.
 
 **Tire Friction Curve**
 
-![Vehicle Physics Pro Tire Friction Curve](img/advanced/vehicle-physics-pro-tire-friction-curve.png)
+![Vehicle Physics Pro Tire Friction Curve](/img/advanced/vehicle-physics-pro-tire-friction-curve.png)
 
 Horizontal scale is slip in m/s. Vertical scale is coefficient of friction. The picture shows up to
 8 m/s. In this curve the peak friction is developed at 1.5 m/s. As front wheels are experiencing
@@ -478,7 +478,7 @@ large. Try either reducing them, or learn how to configure the damper properly a
 First, check out the suspension _compression ratio_ for your wheels in runtime. This ratio is
 reported by the Telemetry, or via scripting with `VPWheelCollider.compressionRatio`:
 
-![Vehicle Physics Pro Suspension Telemetry](img/advanced/vehicle-physics-pro-suspension-telemetry.png)
+![Vehicle Physics Pro Suspension Telemetry](/img/advanced/vehicle-physics-pro-suspension-telemetry.png)
 
 If you encounter issues at high speed, then put your vehicle at those speeds and check out the
 actual compression values. Aerodynamic forces might be compressing the suspension further at high
@@ -487,7 +487,7 @@ speeds.
 Then open the VPWheelCollider inspector at the editor by selecting any wheel component in your
 vehicle:
 
-![Vehicle Physics Pro Damper Settings](img/advanced/vehicle-physics-pro-suspension-damper-setting.png)
+![Vehicle Physics Pro Damper Settings](/img/advanced/vehicle-physics-pro-suspension-damper-setting.png)
 
 1. Specify the **compression ratio** you want to study under the "Analysis" section. This
 section doesn't have any effect on the actual configuration. It just makes the calculations and shows
