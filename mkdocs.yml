@@ -7,8 +7,8 @@ strict: true
 theme_dir: 'custom_theme'
 theme: cerulean
 
-extra_css: ['css/tables.css', 'css/admonitions.css', 'css/fixes.css', 'css/extras.css']
-extra_javascript: ['https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML','js/mathjaxhelper.js','js/fabric.custom.min.js','js/texturecanvas.js','js/analytics.js']
+extra_css: [ 'css/tables.css', 'css/admonitions.css', 'css/fixes.css', 'css/extras.css' ]
+extra_javascript: [ 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML', 'js/mathjaxhelper.js', 'js/fabric.custom.min.js', 'js/texturecanvas.js', 'js/analytics.js' ]
 
 markdown_extensions:
   - extra
