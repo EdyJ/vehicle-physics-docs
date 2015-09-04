@@ -3,12 +3,13 @@ site_description: Documentation for Vehicle Physics Pro (VPP), a realistic vehic
 site_author: Angel "Edy" Garcia
 repo_url: https://github.com/EdyJ/vehicle-physics-docs
 strict: true
+google_analytics: [ 'UA-58719504-1', 'auto' ]
 
 theme_dir: 'custom_theme'
 theme: cerulean
 
 extra_css: [ 'css/tables.css', 'css/admonitions.css', 'css/fixes.css', 'css/extras.css' ]
-extra_javascript: [ 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML', 'js/mathjaxhelper.js', 'js/fabric.custom.min.js', 'js/texturecanvas.js', 'js/analytics.js' ]
+extra_javascript: [ 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML', 'js/mathjaxhelper.js', 'js/fabric.custom.min.js', 'js/texturecanvas.js' ]
 
 markdown_extensions:
   - extra
