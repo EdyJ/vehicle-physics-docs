@@ -222,5 +222,3 @@ Actual inspector for the vehicle GameObject. The Vehicle Controller component ex
 development properties:
 
 ![Vehicle Physics Pro Beta Inspector](img/vehicle-physics-pro-beta-inspector.png)
-
----

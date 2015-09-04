@@ -198,5 +198,3 @@ Which product is better for performance on mobile low-mid end?
 ### Download & setup
 
 To Be Announced.
-
----

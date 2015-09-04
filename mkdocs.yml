@@ -1,46 +1,59 @@
 site_name: Vehicle Physics Pro
-theme_dir: 'custom_theme'
-theme: cerulean
-markdown_extensions: ['extra', 'admonition', 'mathjax', 'iconfonts(base=fa,prefix=fa-)']
-
-extra_css: ['css/tables.css','css/admonitions.css','css/fixes.css','css/extras.css']
-extra_javascript: ['https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML','js/mathjaxhelper.js','js/fabric.custom.min.js','js/texturecanvas.js','js/analytics.js']
-
+site_description: Documentation for Vehicle Physics Pro (VPP), a realistic vehicle simulation model for Unity 3D
+site_author: Angel "Edy" Garcia
 repo_url: https://github.com/EdyJ/vehicle-physics-docs
 
+strict: true
+google_analytics: [ 'UA-58719504-1', 'auto' ]
+
+theme_dir: 'custom_theme'
+theme: cerulean
+
+extra_css: [ 'css/tables.css', 'css/admonitions.css', 'css/fixes.css', 'css/extras.css' ]
+extra_javascript: [ 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML', 'js/mathjaxhelper.js', 'js/fabric.custom.min.js', 'js/texturecanvas.js' ]
+
+markdown_extensions:
+  - extra
+  - admonition
+  - iconfonts:
+      base: "fa"
+      prefix: "fa-"
+  - mathjax
+
 pages:
-- ['index.md', 'Vehicle Physics Pro online documentation']
+- "&#8201;": index.md
+- EARLY ACCESS: early-access.md
+- User Guide:
+  - Creating a vehicle: user-guide/vehicle-creation.md
+  - Adding visual effects: user-guide/visual-effects.md
+  - Adding sounds and audio effects: user-guide/sounds.md
+  - Interacting with vehicles: user-guide/vehicle-interaction.md
+  - Configuring and tunning vehicles: user-guide/vehicle-setup.md
+  - Requirements for 3D models: user-guide/3d-models.md
+  - Markdown test page: markdown-test.md
+- Components:
+  - Vehicle Controller: components/vehicle-controller.md
+  - Wheel Collider: components/wheel-collider.md
+  - Vehicle Input: components/vehicle-input.md
+  - Vehicle Audio: components/vehicle-audio.md
+  - Vehicle Telemetry: components/vehicle-telemetry.md
+  - Skidmarks and Smoke: components/skidmarks-and-smoke.md
+- Classes:
+  - VPVehicleBase: classes/vehicle-base.md
+  - VPComponent: classes/component.md
+  - VPCEngine: classes/engine.md
+  - VPCGearbox: classes/gearbox.md
+  - VPTransmission: classes/transmission.md
+  - VPCDifferential: classes/differential.md
+  - VPBrakes: classes/brakes.md
+  - VPSteering: classes/steering.md
+  - Other classes: classes/extra-classes.md
+- Advanced:
+  - Creating custom components: advanced/custom-components.md
+  - Creating custom vehicles: advanced/custom-vehicles.md
+  - Writting add-on features: advanced/developing-addons.md
+  - Data Bus reference: advanced/databus-reference.md
+  - Miscelaneous topics explained: advanced/misc-topics-explained.md
+  - How suspensions work: advanced/how-suspensions-work.md
+  - Configuring realistic vehicles: advanced/configuring-realistic-vehicles.md
 
-- ['early-access.md', 'EARLY ACCESS']
-
-- ['user-guide/vehicle-creation.md', 'User Guide', 'Creating a vehicle']
-- ['user-guide/visual-effects.md', 'User Guide', 'Adding visual effects']
-- ['user-guide/sounds.md', 'User Guide', 'Adding sounds and audio effects']
-- ['user-guide/vehicle-interaction.md', 'User Guide', 'Interacting with vehicles']
-- ['user-guide/vehicle-setup.md', 'User Guide', 'Configuring and tunning vehicles']
-- ['user-guide/3d-models.md', 'User Guide', 'Requirements for 3D models']
-
-- ['markdown-test.md', 'User Guide', 'Markdown test page']
-
-- ['components/vehicle-controller.md', 'Components', 'Vehicle Controller']
-- ['components/wheel-collider.md', 'Components', 'Wheel Collider']
-- ['components/vehicle-input.md', 'Components', 'Vehicle Input']
-- ['components/vehicle-audio.md', 'Components', 'Vehicle Audio']
-- ['components/vehicle-telemetry.md', 'Components', 'Vehicle Telemetry']
-- ['components/skidmarks-and-smoke.md', 'Components', 'Skidmarks and Smoke']
-- ['classes/vehicle-base.md', 'Classes', 'VPVehicleBase']
-- ['classes/component.md', 'Classes', 'VPComponent']
-- ['classes/engine.md', 'Classes', 'VPCEngine']
-- ['classes/gearbox.md', 'Classes', 'VPCGearbox']
-- ['classes/transmission.md', 'Classes', 'VPTransmission']
-- ['classes/differential.md', 'Classes', 'VPCDifferential']
-- ['classes/brakes.md', 'Classes', 'VPBrakes']
-- ['classes/steering.md', 'Classes', 'VPSteering']
-- ['classes/extra-classes.md', 'Classes', 'Other classes']
-- ['advanced/custom-components.md', 'Advanced', 'Creating custom components']
-- ['advanced/custom-vehicles.md', 'Advanced', 'Creating custom vehicles']
-- ['advanced/developing-addons.md', 'Advanced', 'Writting add-on features']
-- ['advanced/databus-reference.md', 'Advanced', 'Data Bus reference']
-- ['advanced/misc-topics-explained.md', 'Advanced', 'Miscelaneous topics explained']
-- ['advanced/how-suspensions-work.md', 'Advanced', 'How suspensions work']
-- ['advanced/configuring-realistic-vehicles.md', 'Advanced', 'Configuring realistic vehicles']

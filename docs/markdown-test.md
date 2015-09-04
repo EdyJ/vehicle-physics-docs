@@ -203,11 +203,14 @@ A block of code follows:
 
 ----
 
-> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+Consecutive blockquotes "\>" are grouped as paragrahps in a single blockquote:
+
+> This is a blockquote. Lorem ipsum dolor sit amet,
 > consectetuer adipiscing elit.
 
-> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+> This is another blockquote, which is separated in the source md file. Lorem ipsum dolor sit amet,
 consectetuer adipiscing elit.
+
 
 > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
 id sem consectetuer libero luctus adipiscing.

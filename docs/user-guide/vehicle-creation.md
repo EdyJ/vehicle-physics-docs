@@ -194,4 +194,3 @@ Unlock Transmission On Handbrake
 :	Ensures than the front-rear sections of the transmission are disconnected from each other when
 	handbrake is applied.
 
----

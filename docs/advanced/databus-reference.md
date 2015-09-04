@@ -104,5 +104,3 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 
 **<sup>2</sup> TransmissionLock** affects the element connecting the front-rear parts of the
 transmission. This might be either a differential or a torque splitter.
-
----
