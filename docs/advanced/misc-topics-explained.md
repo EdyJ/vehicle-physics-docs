@@ -98,6 +98,52 @@ effect.
 - 2-8 substeps are pretty stable in most situations.
 - More than 20 substeps are not recommended as the numerical oscillations can get magnified.
 
+#### Advanced integration parameters
+
+Some vehicle components expose these for fine tunning the integration of the forces and torques.
+
+##### Damping
+
+Numerical damping heps preventing resonances. When integrating the vehicle dynamics, the reaction
+torque is accounted from the previous integration step. If this value is used as-is, it might
+happen the integrated sequence to be oscillating between two values.
+
+The damping ratio (exposed as `damping` in the component) counteracts this effect by multiplying the
+reaction torque before entering the equations. This helps the solver to reach a stable result
+without numeric oscillations or resonances. The drawback is that the actual numeric result might
+be less precise.
+
+Typical values are 0.9 - 1.0, with 1.0 meaning no damping is applied. In most cases the best value
+is the component's default and it shouldn't need to be modified.
+
+Components that expose `damping` are those that use the reaction torque in their calculations.
+This includes VPCEngine, VPCGearbox (for P-park mode) and VPCDifferential, among others.
+
+##### Viscous coupling rate
+
+The viscous couplings (a.k.a. "lock ratio") should be integrated at a fixed rate. Otherwise, the
+actual torque results would depend of the actual integration rate and substeps. Defining a fixed
+rate (exposed as `viscousCouplingRate` in the affected component) ensures viscous couplings to
+result in the same torque values for a given lock ratio, independently of the actual integration
+rate, substeps or integration method.
+
+!!! warning "&fa-warning; Important:"
+
+	Modifying the viscous coupling rate results in different physics behaviors! Components that
+	implement a viscous coupling will modify their torque / angular velocity results for the same
+	situations.
+
+Components that expose `viscousCouplingRate` include:
+
+- VPCEngine: clutch in LockRatio or TorqueConverter modes
+- VPCDifferential: lock ratio in Viscous mode
+- VPCTorqueSplitter: stiffness parameter
+
+The configured rate must be equal or greater than the physics solver rate (physics delta time and
+substeps). Otherwise the viscous couplings will be integrated at the actual solver rate.
+
+In most cases you shouldn't need to modify the component's default value.
+
 ---
 
 ## Engine
