@@ -142,6 +142,23 @@ substeps). Otherwise the viscous couplings will be integrated at the actual solv
 
 In most cases you shouldn't need to modify the solver's default values.
 
+##### Tire impulse ratio
+
+Exposed per vehicle as `VPVehicleBase.tireImpulseRatio`. The default value of 0.5 works correctly
+on most vehicles.
+
+- It can be raised on vehicles with low center of mass (F1 and racing cars) for enhancing the effect
+of the transition from slip to adherent.
+- It should be lowered on vehicles with elevated center of mass, as these will possibly expose
+numerical instabilities at the tire forces.
+
+The solver calculates the impulses that keep the tires adherent to the surface. These are the
+_ideal_ impulses for the same vertical level as the center of mass. Tire forces are applied at a
+different vertical level (contact points), so these forces induce a torque in the vehicle as side
+effect. This torque can lead to numerical instabilities in the tire forces, being bigger with the
+vertical distance from the contact points to the center of mass. The tire impulse ratio prevents
+this effect by multiplying the calculated impulse before being applied to the vehicle as tire force.
+
 ---
 
 ## Engine
