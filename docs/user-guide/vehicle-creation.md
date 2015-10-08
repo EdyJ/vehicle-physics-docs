@@ -58,14 +58,14 @@
 	scale it to roughly match the shape of the vehicle.
 
 	!!! warning "&fa-warning; At least one convex collider is mandatory in the vehicle"
-		A vehicle without colliders will show a very weird and unnatural behavior as soon as the
-		simulation starts (Unity physics bug).
+		A vehicle without colliders require the inertia tensor to be explictly set (Rigidbody.inertiaTensor),
+		or it will show a very weird and unnatural behavior as soon as the simulation starts.
 
 ### Configure the components
 
 Rigidbody
 :	- mass depending on the vehicle. Typical car is 1000-2000 Kg.
-	- drag, angular drag = 0
+	- drag = 0, angular drag = 0
 	- Interpolate recommended.
 
 VP Vehicle Controller
@@ -75,13 +75,24 @@ VP Vehicle Controller
 Enough for now! Click <kbd>Play</kbd>. The vehicle is now live in the scene and you can drive it
 around using the standard keys.
 
-## Component overview
+
+### Configure the cameras
+
+### Add sounds
+
+### Ground materials and tire effects
+
+### Visual effects
+
+## Vehicle configuration guide
+
+TO-DO: move elsewhere (specific section?)
 
 Essential:
 
 - Rigidbody: mass
 - VP Wheel Collider: radius, mass, suspension distance, spring, damper
-- VP Vehicle Controller: axles
+- VP Vehicle Controller: axles, center of mass
 - VP Standard Input
 
 Accessory:
@@ -89,19 +100,22 @@ Accessory:
 - VP Audio
 - VP Telemetry
 - VP Aero Surface
-- _Vehicle Effects_
-- _Vehicle Lights_
-- _Vehicle Dashboard_
+- _Vehicle Tire Effects_
+- _Vehicle Visual Effects_
 
 Scene:
 
-- Skidmarks
-- Surface
+- Ground Material Manager
 
 
 #### VP Wheel Collider
 
-Basic properties of the wheels and the suspension parameters.
+There is one VPWheelCollider component per wheel. It configures the basic properties of the wheels
+and the suspension parameters.
+
+Together with the mass (Rigidbody) and the center of mass (VPVehicleController), the suspension
+settings define most of the vehicle's behavior and reactions without the engine and powertrain
+settings.
 
 Mass (Kg)
 : 	Use a value that roughly matches the real wheels. Small values (less than 10) are
@@ -155,10 +169,10 @@ Engine
 :	Torque and rpms, idle, inertia, friction, can stall.
 
 Clutch
-:	Clutch type. Parameters if type is Torque Converter.
+:	Clutch type and parameters.
 
 Gearbox
-:	Gearbox type and ratios.
+:	Gearbox type and ratios, auto-shift, park mode.
 
 Differential or Axle Differential
 :	Differential(s) connecting the two wheels of the same axle.

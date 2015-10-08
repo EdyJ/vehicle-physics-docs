@@ -1,8 +1,8 @@
 
 # Early Access {: .title }
 
-Early Access to Vehicle Physics Pro is available with the [Professional License](index.md#licensing)
-add-on ($200).
+Early Access to Vehicle Physics Pro is now available with the [Professional License](index.md#licensing)
+add-on.<br>The Professional license is offered at 50% discount during the development stage (<del> \$640 </del> &nbsp; **\$320**).
 {: .title }
 
 ---
@@ -15,7 +15,7 @@ add-on ($200).
 	- Some components and scripts are yet to be written or completed.
 	- Some actual components and scripts will be significantly modified.
 	- Some features already available in the other package [Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics)
-	are yet to be ported here (i.e. skidmarks, smoke...)
+	are yet to be ported here (i.e. driving aids...)
 	- **Documentation is being actively written**. Many parts are still missing. Some documented
 	features may not have been developed yet or may be described in a different way than they work
 	right now. In some cases I'm even using the documentation as annotated roadmap for the upcoming
