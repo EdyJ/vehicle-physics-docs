@@ -44,6 +44,12 @@ latest news and announcements.
 &fa-check; Repository clean up and upgrade to Unity 5
 {: .roadmap }
 
+&fa-check; Skidmarks, smoke, tire trails
+{: .roadmap }
+
+&fa-check; Vehicle audio: engine, turbo, impacts, tire skid...
+{: .roadmap }
+
 &fa-gear:spin; Scenes and vehicles for tests
 {: .roadmap .wip }
 
@@ -53,14 +59,15 @@ latest news and announcements.
 Anisotropic tire friction
 {: .roadmap .todo }
 
-Skidmarks and smoke
+Documentation
+{: .roadmap .todo }
+
+**First release!**
 {: .roadmap .todo }
 
 Additional components
 {: .roadmap .todo }
 
-Documentation
-{: .roadmap .todo }
 
 ---
 
