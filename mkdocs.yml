@@ -25,10 +25,7 @@ pages:
 - EARLY ACCESS: early-access.md
 - User Guide:
   - Creating a vehicle: user-guide/vehicle-creation.md
-  - Adding visual effects: user-guide/visual-effects.md
-  - Adding sounds and audio effects: user-guide/sounds.md
-  - Interacting with vehicles: user-guide/vehicle-interaction.md
-  - Configuring and tunning vehicles: user-guide/vehicle-setup.md
+  - Vehicle setup guide: user-guide/vehicle-setup.md
   - Requirements for 3D models: user-guide/3d-models.md
   - Markdown test page: markdown-test.md
 - Components:
