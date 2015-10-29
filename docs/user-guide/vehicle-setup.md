@@ -29,9 +29,11 @@ The **anchor (%)** simply defines how much the suspension is compressed in the 3
 means the suspension is fully compressed and can only be extended. 0.5 means the suspension is half
 compressed.
 
-As rule of thumb, configure the **spring rate (N/m)** so each suspension can support up to twice of
-the distributed weight. The maximum weight of each wheel is displayed at the `VPWheelCollider`
-inspector.
+##### Springs
+
+Springs sustain the weight of the vehicle. As rule of thumb, configure the **spring rate (N/m)**
+so each suspension can support up to twice of the distributed weight. The maximum weight of each
+wheel is displayed at the `VPWheelCollider` inspector.
 
 Example:
 
@@ -40,12 +42,19 @@ Example:
 - Suspension springs should support up to 2000 Kg each.
 - Thus, if the weight is evenly distributed at rest each suspension would be at half of its travel.
 
-Of course, you can always apply real values to the suspension or any other values that fit better
+Of course, you can always apply real values to the springs or any other values that fit better
 with your vehicle.
 
-The **damper rate (N/ms<sup>-1</sup>)** should be configured so the oscillating behavior resembles
-the real vehicle. You can drop the vehicle from some height (<kbd>Enter</kbd> key by default) and
-observe the result. A rough starting point for the damper rate is around 1/10 of the spring rate.
+##### Dampers
+
+Dampers (aka _shock absorbers_) limit the suspension movement and damp the spring oscillations.
+They damper setup affects the angular momentum of the vehicle on weight shifting situations
+(accelerating, braking, cornering...).
+
+The **damper rate (N/ms<sup>-1</sup>)** should be configured so the
+oscillating behavior resembles the real vehicle. You can drop the vehicle from some height
+(<kbd>Enter</kbd> key by default) and observe the result. A rough starting point for the damper
+rate is around 1/10 of the spring rate.
 
 ### Center of Mass
 
@@ -162,132 +171,3 @@ only engages the 2nd gear if the vehicle's speed is above the **2nd gear min spe
 
 The Park mode is characteristic of the Automatic transmissions, but it can be simulated in Manual
 transmissions as well (**Allow Park mode**).
-
-
----
-
-Essential:
-
-- Rigidbody: mass
-- VP Wheel Collider: radius, mass, suspension distance, spring, damper
-- VP Vehicle Controller: axles, center of mass
-- VP Standard Input
-
-Accessory:
-
-- VP Audio
-- VP Telemetry
-- VP Aero Surface
-- _Vehicle Tire Effects_
-- _Vehicle Visual Effects_
-
-Scene:
-
-- Ground Material Manager
-
-
-
-
-
-_TO-DO: Decide what to do with this_
-
-#### VP Wheel Collider
-
-There is one VPWheelCollider component per wheel. It configures the basic properties of the wheels
-and the suspension parameters.
-
-Together with the mass (Rigidbody) and the center of mass (VPVehicleController), the suspension
-settings define most of the vehicle's behavior and reactions before the engine and powertrain
-settings.
-
-Mass (Kg)
-: 	Use a value that roughly matches the real wheels. Small values (less than 10) are
-	not recommended because numerical stability may be affected. This value doesn't need to be
-	precise because it has rather more influence in the numerical stability than in the physic
-	effects.
-
-Radius (m)
-:	It should match the radius of the wheel meshes for their rotation rate to be correctly matched.
-
-Suspension Distance (m)
-: 	Distance of the suspension travel from fully compressed to fully elongated.
-
-Suspension Anchor (%)
-:	How much the suspension is visually compressed in the vehicle's 3D model. This defines where
-	the limits of the suspension will be in the simulated vehicle.
-
-Spring (N/m)
-:	Springs support the weight of the vehicle. When suspension is fully elongated
-	the springs provide no force. When suspension is fully compressed the spring provide
-	$force = spring * suspensionDistance$ in Newtons.
-
-Damper (N/ms<sup>-1</sup>)
-:	Dampers limit the speed of movement of the suspension. They affect the angular momentum
-	of the vehicle on weight shifting situations (accelerating, braking, cornering...).
-
-#### VP Vehicle Controller
-
-Vehicle dynamics and functional components.
-
-Center of mass
-:	Should be located around the middle-top of the chassis and slightly biased towards the position
-	of the engine.
-
-Axles
-:	Reference the wheels (VPWheelCollider) and set up each axle's features.
-
-Transmission
-:	How many driven axles and how they will be connected together and with the engine.
-
-Steering
-:	Angle, ackerman, toe.
-
-Brakes
-:	Brake power, brake bias, handbrake.
-
-Tires
-:	Tire friction model and friction curves.
-
-Engine
-:	Torque and rpms, idle, inertia, friction, can stall.
-
-Clutch
-:	Clutch type and parameters.
-
-Gearbox
-:	Gearbox type and ratios, auto-shift, park mode.
-
-Differential or Axle Differential
-:	Differential(s) connecting the two wheels of the same axle.
-
-Inter-Axle Differential (if configured at Transmission)
-:	Differential(s) connecting two axle differentials together.
-
-Center differential (if configured at Transmission)
-:	A differential connecting the _front_ and _rear_ sections of the transmission together and with
-	the drivetrain upwards.
-
-Torque splitter (if configured at Transmission)
-:	Connects the _front_ and _rear_ sections of the transmission together and with the drivetrain
-	upwards. The torque splitter couples the drivetrain with one of the sections, and routes a
-	configured portion of the drive power to the other section.
-
-
-#### VP Standard Input
-
-Reads Unity's standard Input system for controlling the vehicle.
-
-Throttle And Brake Mode
-:	Whether throttle and brake axis control the throttle and brakes only, or if Reverse is
-	automatically engaged.
-
-Brake On Throttle Backwards
-:	Throttle engages brakes when applied while the vehicle is moving backwards.
-
-Apply Clutch On Handbrake
-:	Clutch is applied for disengaging the engine from the transmission when handbrake is applied.
-
-Unlock Transmission On Handbrake
-:	Ensures than the front-rear sections of the transmission are disconnected from each other when
-	handbrake is applied.
-
