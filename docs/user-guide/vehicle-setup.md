@@ -3,7 +3,7 @@
 This guide assumes you have your vehicle rigged according to the [Creating a Vehicle](vehicle-creation.md)
 section. Your vehicle should have already passed the first test drive.
 
-- It's recommended to configure at least audio for the engine in the component VPAudio.
+- It's recommended to configure at least the engine audio in the component VPAudio.
 - If you're modifying the values in runtime in the Editor, **remember to backup your values before
 	exiting Play mode**. Either note them down to paper, or use the Copy Component / Paste Component
 	Values functionality from the component's context menu.
@@ -20,6 +20,8 @@ Set the vehicle's mass at the rigidbody.
 
 ### Suspension
 
+The suspension is configured per-wheel at the `VPWheelCollider` components.
+
 The **suspension distance (m)** should be configured for matching the vehicle's specifications.
 
 The **anchor (%)** simply defines how much the suspension is compressed in the 3D model (in Edit time).
@@ -27,8 +29,8 @@ The **anchor (%)** simply defines how much the suspension is compressed in the 3
 means the suspension is fully compressed and can only be extended. 0.5 means the suspension is half
 compressed.
 
-Configure the **spring rate (N/m)** at the VPWheelColliders so each suspension can support up to
-twice of the distributed weight. The maximum weight of each wheel is displayed at the VPWheelCollider
+As rule of thumb, configure the **spring rate (N/m)** so each suspension can support up to twice of
+the distributed weight. The maximum weight of each wheel is displayed at the `VPWheelCollider`
 inspector.
 
 Example:
@@ -36,8 +38,10 @@ Example:
 - Vehicle mass: 4000 Kg.
 - For 4 wheels, this is 1000 Kg each
 - Suspension springs should support up to 2000 Kg each.
+- Thus, if the weight is evenly distributed at rest each suspension would be at half of its travel.
 
-Thus, if the weight is evenly distributed each suspension at rest would be at half of their travel.
+Of course, you can always apply real values to the suspension or any other values that fit better
+with your vehicle.
 
 The **damper rate (N/ms<sup>-1</sup>)** should be configured so the oscillating behavior resembles
 the real vehicle. You can drop the vehicle from some height (<kbd>Enter</kbd> key by default) and
@@ -45,7 +49,7 @@ observe the result. A rough starting point for the damper rate is around 1/10 of
 
 ### Center of Mass
 
-Add a gameobject to the vehicle and name it CoM. Set its reference at VPVehicleController >
+Add a gameobject to the vehicle and name it **CoM**. Set its reference at VPVehicleController >
 **Center Of Mass**. You might want to set **Runtime Com Changes** as "Editor Only", so you could
 modify the position of the CoM and see the results in runtime.
 
@@ -79,13 +83,15 @@ accordingly as well.
 
 The engine torque curve is the sum of two curves: _ideal_ torque curve (dotted orange) and
 _friction_ torque curve (dashed red). The result of adding those curves together is the _final_
-engine torque curve (green).
+engine torque curve (green). When you watch at a [dyno torque curve](https://www.google.es/search?q=dyno+curve&tbm=isch)
+you're really watching this green curve.
 
 The **final torque curve** is guaranteed to cross three key values:
 
-- **Idle Rpm**: rpms and torque (Nm) at idle (yellow circle)
-- **Peak Rpm**: rpms and torque (Nm) where the _ideal_ engine produces the maximum torque (white circle)
-- **Max Rpm**: the value where the _final_ engine torque becomes zero (orange circle)
+- **Idle Rpm** (yellow circle): rpms and torque (Nm) at idle.
+- **Peak Rpm** (white circle): rpms and torque (Nm) where the _ideal_ engine produces the maximum
+	torque. This not necessarily the same point where the maximum _final_ torque is reached.
+- **Max Rpm** (orange circle): the value where the _final_ engine torque becomes zero.
 
 The **Curve Bias** parameters have some influence in the transitions between Ilde and Peak.
 
@@ -107,7 +113,7 @@ If the engine **Can Stall** the parameters can be configured as well:
 - **Stall Bias**: how "easy" is to stall the engine once the rpms fall below the idle value. 0 means
 	the engine is hard to stall. 1 means easy to stall.
 - **Extra Friction (Nm)**: a stalled engine increments the engine friction by this value.
-- **Starter Reliability**: how "easy" is to the starter (<kbd>K</kbd> keyt by default) to start
+- **Starter Reliability**: how "easy" is to the starter (<kbd>K</kbd> key by default) to start
 	the engine. 0 won't likely be able to start the engine. 1 will quickly start the engine.
 	Intermediate values (depending on the actual engine settings) gradually add some difficulty and
 	random factor.
