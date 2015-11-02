@@ -50,6 +50,9 @@ latest news and announcements.
 &fa-check; Vehicle audio: engine, turbo, impacts, tire skid...
 {: .roadmap }
 
+&fa-gear:spin; Minor bug fixes and code polishing
+{: .roadmap .wip }
+
 &fa-gear:spin; Scenes and vehicles for tests
 {: .roadmap .wip }
 
@@ -99,7 +102,7 @@ Realistic and coherent
 ### Licensing
 
 &fa-warning; License versions, terms, content and pricing are _not_ definitive. Anything may change
-for the package launch.
+during the development stage.
 {: .alert .alert-warning }
 
 &fa-info; The Professional License add-on is available now for [Early Access](early-access.md) (Alpha and
@@ -164,7 +167,7 @@ May be licensed by companies with anual revenue / funds / budget in excess of US
 
 > Notes:
 >
-> <sup>1</sup> _Free and Professional licenses are may not be licensed by any commercial or
+> <sup>1</sup> _Free and Professional licenses may not be licensed by any commercial or
 > non-commercial entity with annual gross revenues, funds (including crowfunding), or total anual
 > budget in excess of US\$100,000._
 >
