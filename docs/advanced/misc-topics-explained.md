@@ -227,6 +227,17 @@ The torques at the specified rpms can be extracted directly out of actual engine
 All you have to do is to adjust the friction curve until the actual torque curve and resulting HP
 match the real data.
 
+#### Rpms decrease very slowly when releasing the throttle
+
+The rate the rpms decrease when releasing the throttle depends on the engine friction and the
+engine inertia.
+
+- The _Engine Friction_ is shown as a red line in the engine inspector. The more friciton at a given
+rpms, more _brake effect_ the engine will produce when no throttle is applied.
+- The _Engine Inertia_ setting also affects the rpm change rate overall. It's the rotational
+equivalent for the mass. The more inertia, rpms will change slower. The less inertia, rpms will
+change faster.
+
 #### Too much engine friction makes the wheels rotate backwards
 
 This might be either a correct behavior, or an indication that more integration steps/substeps are
