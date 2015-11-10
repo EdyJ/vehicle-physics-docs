@@ -106,7 +106,7 @@ during the development stage.
 {: .alert .alert-warning }
 
 &fa-info; The Professional License add-on is available now for [Early Access](early-access.md) (Alpha and
-Beta) for **$320** without requiring the Standard license. This offer will be lifted after the
+Beta) for **$290** without requiring the Standard license. This offer will be lifted after the
 first version has been published at the Unity Asset Store. Contact me at [edytado@gmail.com](mailto:edytado@gmail.com)
 for more information.
 {: .alert .alert-info }
@@ -129,7 +129,7 @@ Professional license add-on
 Enterprise license
 
 :	Covers unlimited developers from a single studio providing Professional level access and
-	includes 30 days of Expert Assistance.
+	includes Expert Assistance the first 30 days.
 
 	This license is suitable for commercial entities with annual gross revenues (based on prior
 	fiscal year) of US\$100,000 or more, or that have raised funds (including but not limited to
@@ -146,7 +146,7 @@ Expert Assistance
 
 #### Compare editions
 
-| Features | <center>Free&nbsp;<sup>1</sup></center> | <center>Standard&nbsp;<sup>2</sup></center> | <center>Professional&nbsp;<sup>1</sup></center> | <center>Enterprise</center> |
+| Features | <center>Free</center> | <center>Standard</center> | <center>Professional</center> | <center>Enterprise</center> |
 |----------|:----:|:--------:|:------------:|:----:|
 Full-featured [Vehicle Controller](components/vehicle-controller.md) component	| &fa-check;	| &fa-check;	| &fa-check; | &fa-check;	|
 Example scenes and vehicles		 						| &fa-check; | &fa-check; | &fa-check; | &fa-check; |
@@ -160,18 +160,19 @@ Full source code										|	|	| &fa-check; | &fa-check;	|
 Access to the GIT repository							|	|	| &fa-check;	| &fa-check;	|
 Exclusive high-quality scenes and vehicles				|	|	| &fa-check; | &fa-check;	|
 Direct support via Skype / Telegram						|	| 	| &fa-check;	| &fa-check;	|
+Priority support and consultancy services				|	| 	| 	| &fa-check;	|
 License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
 May be licensed by companies with anual revenue / funds / budget in excess of US\$100,000	|	| 	|	| &fa-check;	|
 30 days of Expert Assistance							|	|	|	| &fa-check;	|
-**Price**												| **Free** | **$160** | <del>\$640</del> **$320** | **$5760** |
+**Price**												| Free | $160 | <del>\$480</del> **$290** | **$4800** |
 
 > Notes:
 >
-> <sup>1</sup> _Free and Professional licenses may not be licensed by any commercial or
-> non-commercial entity with annual gross revenues, funds (including crowfunding), or total anual
+> - _Free, Standard and Professional licenses may not be licensed by any commercial or
+> non-commercial entity with annual gross revenues, funds (including crowfunding), or total annual
 > budget in excess of US\$100,000._
 >
-> <sup>2</sup> _Professional license is an add-on to the Standard license._
+> - _Professional license is an add-on to the Standard license._
 
 ### Comparison with Edy's Vehicle Physics
 
