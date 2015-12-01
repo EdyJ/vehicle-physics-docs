@@ -68,9 +68,16 @@
 	If the vehicle comes without collider you can add a Cube as child of the Vehicle object, then
 	scale it to roughly match the shape of the vehicle.
 
-	!!! warning "&fa-warning; At least one convex collider is mandatory in the vehicle"
+	!!! warning "&fa-warning:lg; VPWheelCollider components must be located _**inside**_ the vehicle's colliders"
+		Ensure that the top half of each VPWheelCollider component is positioned **inside** regular
+		convex colliders belonging to the vehicle's main rigidbody. No joint-attached bodies and
+		colliders are valid here. Otherwise, strange behaviors and side effects may happen when
+		the vehicle makes contact with other objects.
+
+	!!! warning "&fa-warning:lg; At least one convex collider is mandatory in the vehicle"
 		A vehicle without colliders require the inertia tensor to be explicitly set (Rigidbody.inertiaTensor),
-		or it will show a very weird and unnatural behavior as soon as the simulation starts.
+		or it will show a very weird and unnatural behavior as soon as the simulation starts. Also,
+		as described above, bad things will happen when contacting other objects.
 
 
 ### First test drive
@@ -100,7 +107,8 @@ Click <kbd>Play</kbd>. The vehicle is now live in the scene and you can drive it
 around using the standard keys. Wheels should move and steer properly.
 
 You can now head to the [Vehicle Configuration Guide](vehicle-setup.md) for configuring the
-vehicle dynamics, or continue here for adding further components such as audio and visual effects.
+vehicle dynamics (engine, brakes, etc), or continue here for adding further components and features
+such as audio and visual effects.
 
 
 ### Cameras

@@ -48,7 +48,7 @@ with your vehicle.
 ##### Dampers
 
 Dampers (aka _shock absorbers_) limit the suspension movement and damp the spring oscillations.
-They damper setup affects the angular momentum of the vehicle on weight shifting situations
+The damper setup affects the angular momentum of the vehicle on weight shifting situations
 (accelerating, braking, cornering...).
 
 The **damper rate (N/ms<sup>-1</sup>)** should be configured so the
@@ -88,7 +88,7 @@ accordingly as well.
 
 ### Engine
 
-[_Engine graphic_]
+[TO-DO: _Engine graphic_]
 
 The engine torque curve is the sum of two curves: _ideal_ torque curve (dotted orange) and
 _friction_ torque curve (dashed red). The result of adding those curves together is the _final_
@@ -147,7 +147,7 @@ The **Transmission type** can be either manual or automatic:
 	- Each gear change takes **Gear transition time (s)** to shift from a gear to another.
 	- A minimum of **Shift interval (s)** time is enforced before a new gear shift.
 
-[Pics of manual vs. automatic transmissions]
+[TO-DO: Pics of manual vs. automatic transmissions]
 
 The **Gear Ratios** define the power ratio that is applied to the engine torque. If the first gear
 ratio is 3.84, this means that the torque at the output of the gearbox in first gear will be 3.84
@@ -156,7 +156,7 @@ times the torque applied by the engine. The rotational velocity will be 3.84 tim
 Any number of gears and ratios can be configured for both forward and reverse gears. Standard cars
 have 4 - 6 gears. Trucks can have 12, 18 or even more.
 
-[Pics of car vs gear ratios]
+[TO-DO: Pics of car vs gear ratios]
 
 Requirements for gear ratios are:
 
