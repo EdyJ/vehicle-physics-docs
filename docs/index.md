@@ -14,7 +14,7 @@ Play the latest Web Demo scene [here](early-access.md#sandbox-scene).
 Stay tunned! Follow **[@VehiclePhysics](https://twitter.com/VehiclePhysics)** on Twitter for the
 latest news and announcements.
 
-!!! warning "&fa-warning; Project under development"
+!!! warning "&fa-warning:lg; Project under development"
 
 	The project status is **Alpha**. This documentation is work in progress. [Early Access](early-access.md)
 	to the project's repository is available with the [Professional License](index.md#licensing) (see below).
@@ -101,11 +101,11 @@ Realistic and coherent
 
 ### Licensing
 
-&fa-warning; License versions, terms, content and pricing are _not_ definitive. Anything may change
+&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive. Anything may change
 during the development stage.
 {: .alert .alert-warning }
 
-&fa-info; The Professional License add-on is available now for [Early Access](early-access.md) (Alpha and
+&fa-info-circle:lg; The Professional License add-on is available now for [Early Access](early-access.md) (Alpha and
 Beta) for **$290** without requiring the Standard license. This offer will be lifted after the
 first version has been published at the Unity Asset Store. Contact me at [edytado@gmail.com](mailto:edytado@gmail.com)
 for more information.
@@ -164,6 +164,7 @@ Priority support and consultancy services				|	| 	| 	| &fa-check;	|
 License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
 May be licensed by companies with anual revenue / funds / budget in excess of US\$100,000	|	| 	|	| &fa-check;	|
 30 days of Expert Assistance							|	|	|	| &fa-check;	|
+Flat license for all other present and future Vehicle Physics products<br>([Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics/))|	| 	| 	| &fa-check;	|
 **Price**												| Free | $160 | <del>\$480</del> **$290** | **$4800** |
 
 > Notes:
@@ -173,6 +174,8 @@ May be licensed by companies with anual revenue / funds / budget in excess of US
 > budget in excess of US\$100,000._
 >
 > - _Professional license is an add-on to the Standard license._
+>
+> - _Licenses may be upgraded anytime by paying the price difference._
 
 ### Comparison with Edy's Vehicle Physics
 
