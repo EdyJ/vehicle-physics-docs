@@ -611,7 +611,7 @@ Do not modify the transform.scale value of a VPWheelCollider component or any of
 
 #### How many wheels are grounded?
 
-Check out the property `wheelState` in [VPVehicleBase](../classes/vehicle-base.md). It lets you
+Check out the property `wheelState` in any controller that inherits from `VehicleBase`. It lets you
 access the array of state variables for all wheels. You can use foreach () and count how many wheels
 have the flag `wheelState.grounded` enabled.
 

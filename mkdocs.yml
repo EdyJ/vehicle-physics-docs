@@ -24,31 +24,33 @@ pages:
 - "&#8201;": index.md
 - EARLY ACCESS: early-access.md
 - User Guide:
-  - Creating a vehicle: user-guide/vehicle-creation.md
+  - Creating vehicles: user-guide/vehicle-creation.md
   - Vehicle setup guide: user-guide/vehicle-setup.md
   - Requirements for 3D models: user-guide/3d-models.md
   - Markdown test page: markdown-test.md
 - Components:
   - Vehicle Controller: components/vehicle-controller.md
   - Wheel Collider: components/wheel-collider.md
-  - Vehicle Input: components/vehicle-input.md
-  - Vehicle Audio: components/vehicle-audio.md
-  - Vehicle Telemetry: components/vehicle-telemetry.md
-  - Skidmarks and Smoke: components/skidmarks-and-smoke.md
-- Classes:
-  - VPVehicleBase: classes/vehicle-base.md
-  - VPComponent: classes/component.md
-  - VPCEngine: classes/engine.md
-  - VPCGearbox: classes/gearbox.md
-  - VPTransmission: classes/transmission.md
-  - VPCDifferential: classes/differential.md
-  - VPBrakes: classes/brakes.md
-  - VPSteering: classes/steering.md
-  - Other classes: classes/extra-classes.md
+  - Vehicle input: components/vehicle-input.md
+  - Vehicle add-ons: components/vehicle-addons.md
+  - Debug add-ons: components/vehicle-debug.md
+  - Ground materials: components/ground-materials.md
+- Blocks:
+  - Steering: blocks/steering.md
+  - Brakes: blocks/brakes.md
+  - Tires: blocks/tires.md
+  - Powertrain: blocks/transmission.md
+  - Differential: blocks/differential.md
+  - Torque Splitter: blocks/torque-splitter.md
+  - Engine: blocks/engine.md
+  - Clutch: blocks/clutch.md
+  - Gearbox: blocks/gearbox.md
+  - Retarder: blocks/retarder.md
+  - Other blocks: blocks/extra-blocks.md
 - Advanced:
-  - Creating custom components: advanced/custom-components.md
   - Creating custom vehicles: advanced/custom-vehicles.md
-  - Writting add-on features: advanced/developing-addons.md
+  - Creating custom blocks: advanced/custom-blocks.md
+  - Writing add-on features: advanced/custom-addons.md
   - Data Bus reference: advanced/databus-reference.md
   - Miscelaneous topics explained: advanced/misc-topics-explained.md
   - How suspensions work: advanced/how-suspensions-work.md

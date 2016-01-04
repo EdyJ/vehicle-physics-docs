@@ -28,7 +28,6 @@ add-on.<br>The Professional license is offered at discounted price during the de
 !!! info "&fa-thumbs-o-up; Feedback is welcome!"
 
 	- General usage, workflow, integration in current projects.
-	- Scripts: class and member naming.
 	- Simulation: components, settings, behavior.
 	- Documentation: things you would want to learn, know about, or are not fully understood.
 	- Documentation: typo and grammar fixes.
@@ -174,31 +173,31 @@ Current layout:
 	|	|- Common Tools core
 	|	|- Vehicle Physics core
 	|	|	|- Base
-	|	|	|- Classes
+	|	|	|- Blocks
 	|	|	|- Components
 	|	|	|- Editor
 	|   |- Vehicle Physics core assets
+	|- Extensions
     |- Scenes
 	|- Vehicles
 	|- World
 
 The vehicle physics scripts are inside the **Vehicle Physics core** folder. The main script
-to look at is `VPVehicleController.cs`. This class derives from `VPVehicleBase.cs` and
-overrides its virtual methods for implementing the vehicle's internals with the available classes:
-([engine](classes/engine.md), [gearbox](classes/gearbox.md), [differential](classes/differential.md)
-...). [VPVehicleBase](classes/vehicle-base.md) contains the integration solver and the
-wheels, which receive the final torques and calculate the tire forces.
+to look at is the Vehicle Controller component at Components\VPVehicleController.cs. This component
+inherits from `VehiclePhysics.VehicleBase` and overrides its virtual methods for implementing the
+vehicle's internals using the available blocks: ([engine](blocks/engine.md), [gearbox](blocks/gearbox.md),
+[differential](blocks/differential.md)...). `VehicleBase` at Core\VehicleBase.cs manages the
+integration solver and the wheels, which computes the the final tire forces.
 
-Vehicles are internally modeled as a graph of connected objects that derive from [VPComponent](classes/component.md).
-Each component can receive input torques and produce output torques. Wheels are components that
-receive torques at their inputs. Motors ([VPCEngine](classes/engine.md)) are components that produce
-torques at their outputs. Other components have torque inputs and torque outputs. This allows to
-simulate any kind of internal configuration of the vehicle by connecting components in any
-combination.
+Vehicles are internally modeled as a graph of connected blocks that derive from `VehiclePhysics.Block`.
+Each block can receive input torques and produce output torques. Wheels are blocks that receive
+torques at their inputs. Motors are blocks that produce torques at their outputs. Other blocks have
+torque inputs and torque outputs. This allows to simulate any kind of internal configuration of the
+vehicle by connecting blocks in any combination.
 
-Vehicle components are created, initialized and connected within the `VPVehicleController.cs`
-script, `OnInitialize` method. Check out the comments in the file `VPVehicleBase.cs` for
-indications on how the vehicles are implemented and simulated by overriding the virtual methods.
+Vehicle blocks are created, initialized and connected within the `VPVehicleController.cs`
+script, `OnInitialize` method. Check out the comments in the file `VehicleBase.cs` for indications
+on how the vehicles are implemented and simulated by overriding the virtual methods.
 
 !!! info "&fa-info-circle; Useful resources"
 
@@ -211,7 +210,7 @@ indications on how the vehicles are implemented and simulated by overriding the 
 
 #### VPWheelCollider
 
-Wheels require this component, which replaces the stock WheelCollider:
+Wheels are implemented with this component, which replaces the stock WheelCollider:
 
 ![Vehicle Physics Pro Wheel Collider](img/vehicle-physics-pro-wheel-collider.png)
 

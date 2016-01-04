@@ -3,13 +3,9 @@
 
 ---
 
-A comprehensive vehicle simulation library designed and conceived from scratch for providing
-fully accurate and customizable vehicle physics. Vehicle Physics Pro is available as editor add-on
-for [Unity 3D](http://unity3d.com).
+Vehicle Physics Pro is an advanced vehicle simulation kit providing fully realistic and accurate
+vehicle physics in [Unity 3D](http://unity3d.com).
 
-Check out an early preview [here](http://www.edy.es/dev/2014/11/early-preview-of-vehicle-physics-pro/).
-
-Play the latest Web Demo scene [here](early-access.md#sandbox-scene).
 
 Stay tunned! Follow **[@VehiclePhysics](https://twitter.com/VehiclePhysics)** on Twitter for the
 latest news and announcements.
@@ -50,14 +46,14 @@ latest news and announcements.
 &fa-check; Vehicle audio: engine, turbo, impacts, tire skid...
 {: .roadmap }
 
-&fa-gear:spin; Minor bug fixes and code polishing
+&fa-check; Minor bug fixes and code polishing
+{: .roadmap }
+
+&fa-check; Scenes and vehicles for tests
 {: .roadmap .wip }
 
-&fa-gear:spin; Scenes and vehicles for tests
+&fa-gear:spin; **Enter the Beta stage!**
 {: .roadmap .wip }
-
-**Enter the Beta stage!**
-{: .roadmap .todo }
 
 Anisotropic tire friction
 {: .roadmap .todo }
@@ -76,14 +72,14 @@ Additional components
 
 ### Features
 
-Fully flexible modular component system
+Modular implementation
 
-:	Vehicle components are independent units with inputs and/or outputs that can be connected in
-	any combination. Any vehicle setup can be emulated by arranging and connecting components.
-	Package includes standard vehicle components such as engine, clutch, gearbox, differential,
+:	Vehicle blocks are independent units with inputs and/or outputs that can be connected in
+	any combination. Any vehicle setup can be emulated by arranging and connecting blocks.
+	Package includes standard vehicle blocks such as engine, clutch, gearbox, differential,
 	torque splitter, and more.
 
-AAA+ vehicle physics simulation
+Advanced AAA+ vehicle physics simulation
 
 :	Built around a physics solver providing accurate results for all vehicle types and setups.
 	The precision of the numeric results depends on the integration steps only.
@@ -153,8 +149,7 @@ Example scenes and vehicles		 						| &fa-check; | &fa-check; | &fa-check; | &fa
 Unlimited simultaneous vehicles on each scene			|	| &fa-check; | &fa-check; | &fa-check;	|
 Advanced pre-configured vehicles (APC, sport car...)	|	| &fa-check; | &fa-check; | &fa-check;	|
 Support for custom vehicles and components 				|	| &fa-check; | &fa-check; | &fa-check;	|
-Additional vehicles and components with source code		|	| &fa-check; | &fa-check; | &fa-check;	|
-Controller for mobile devices			 				|	| &fa-check; | &fa-check; | &fa-check;	|
+Mobile touch-based controller							|	| &fa-check; | &fa-check; | &fa-check;	|
 Email support											|	| &fa-check;	| &fa-check;	| &fa-check;	|
 Full source code										|	|	| &fa-check; | &fa-check;	|
 Access to the GIT repository							|	|	| &fa-check;	| &fa-check;	|
@@ -188,8 +183,7 @@ Vehicle Physics Pro (**VPP**) is a strictly realistic vehicle physics simulation
 advanced tire friction model and a full-featured drivetrain simulation providing all the realistic
 effects you expect from actual vehicles. All parameters have a correspondence with real physics, so
 real world parameters have an accurate result in the simulation. The reactions of the vehicle under
-each situation are configured in a physically realistic way according to the configuration of the
-vehicle's components.
+each situation are configured in a physically realistic way according to its setup.
 
 I find the vehicle in EVP more stable
 :	EVP already implements the driving aids (TC, ABS, ESP) while these are not available in VPP yet.
@@ -202,12 +196,11 @@ I find the vehicle in EVP more stable
 Which product is better for performance on mobile low-mid end?
 :	Both products have roughly the same performance at their default settings. In VPP the
 	requirements might get increased depending on the specific settings of each vehicle
-	(integration substeps, number of components in the transmission, etc). In EVP the performance
+	(integration substeps, number of blocks in the powertrain, etc). In EVP the performance
 	depends on the total number of wheels in the scene.
 
-	I plan to include an absolutely simple Vehicle Controller component in VPP as part of the
-	documentation for [Creating Custom Vehicles](advanced/custom-vehicles.md). This example could be
-	used also for ensuring the most performance out of the VPP simulation.
+	The controller example at [Creating Custom Vehicles](advanced/custom-vehicles.md) may be used
+	for ensuring the most performance out of the VPP simulation.
 
 ### Download & setup
 
