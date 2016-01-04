@@ -18,7 +18,7 @@ Personally I prefer to use Euler with 4 substeps rather than RK4.
 #### Euler substeps
 
 **Substeps** are subdivisions of the Unity physics time steps that are used for calculating the
-internal torques, forces and momentums of the components in the vehicle. Euler can use from 1 to any
+internal torques, forces and momentums at every block in the vehicle. Euler can use from 1 to any
 number of substeps. Runge-Kutta 4 (RK4) takes 4 substeps always. This setting can be configured
 per-vehicle.
 
@@ -41,8 +41,8 @@ Substeps  | Comments
 8 | Recommended value for having good precise results. Profiler tests show no significant penalty on using from 1 to 8 substeps.
 20 | Maximum recommended value. At Unity's default physic step (0.02s, 50Hz) the vehicle does its internal calculations at **1000 Hz** (20 x 50hz).
 
-More than 20 substeps is typically not necessary nor recommended. Some components exhibit
-numerical oscillations on high amount of substeps.
+More than 20 substeps is typically not necessary nor recommended. Some blocks may exhibit numerical
+oscillations on high amount of substeps.
 
 Final value depends on the specific project: CPU requirements, number and type of vehicles, expected
 precision...
@@ -104,38 +104,38 @@ effect.
 
 Numerical damping heps preventing resonances. When integrating the vehicle dynamics, the reaction
 torque is accounted from the previous integration step. If this value is used as-is, it might
-happen the integrated sequence to be oscillating between two values.
+happen the integrated sequence to be quickly oscillating between two values.
 
-The damping ratio (exposed as `damping` in the affected components) counteracts this effect by
+The damping ratio (exposed as `damping` in the affected blocks) counteracts this effect by
 multiplying the reaction torque before entering the equations. This helps the solver to reach a
 stable result without numeric oscillations or resonances. The drawback is that the actual numeric
 result might be less precise.
 
 Typical values are 0.9 - 1.0, with 1.0 meaning no damping is applied. In most cases the best value
-is the component's default and it shouldn't need to be modified.
+is the block's default and it shouldn't need to be modified.
 
-Components that expose `damping` are those that use the reaction torque in their calculations.
-This includes VPCEngine, VPCGearbox (for Park mode) and VPCDifferential, among others.
+Blocks that expose `damping` are those that use the reaction torque in their calculations.
+This includes Engine, Gearbox (for the Park mode) and Differential, among others.
 
 ##### Viscous coupling rate
 
 The viscous couplings (a.k.a. "lock ratio") should be always integrated at a given rate. Otherwise,
-the actual torque results would depend of the current integration rate and substeps. Defining a
-fixed rate (`VPSolver.viscousCouplingRate`) ensures viscous couplings to result in the same torque
-values for a given lock ratio, independently of the actual integration rate, substeps or integration
-method.
+the computed torque would depend of the current integration rate and substeps. Defining a
+fixed rate (`VehiclePhysics.Solver.viscousCouplingRate`) ensures viscous couplings to result in the
+same torque values for a given lock ratio, independently of the actual integration rate, substeps
+or integration method.
 
 !!! warning "&fa-warning; Important:"
 
-	Modifying the viscous coupling rate results in different physics behaviors! Components that
+	Modifying the viscous coupling rate results in different physics behaviors! Blocks that
 	implement a viscous coupling will modify their torque / angular velocity results for the same
 	situations.
 
-Components affected by `VPSolver.viscousCouplingRate` include:
+Blocks affected by `VehiclePhysics.Solver.viscousCouplingRate` include:
 
-- VPCEngine: clutch in LockRatio or TorqueConverter modes
-- VPCDifferential: lock ratio in Viscous mode
-- VPCTorqueSplitter: stiffness parameter
+- Engine: clutch in LockRatio or TorqueConverter modes
+- Differential: lock ratio in Viscous mode
+- TorqueSplitter: stiffness parameter
 
 The configured rate must be equal or greater than the physics solver rate (physics delta time and
 substeps). Otherwise the viscous couplings will be integrated at the actual solver rate.
@@ -144,8 +144,8 @@ In most cases you shouldn't need to modify the solver's default values.
 
 ##### Tire impulse ratio
 
-Exposed per vehicle as `VPVehicleBase.tireImpulseRatio`. The default value of 0.5 works correctly
-on most vehicles.
+Exposed per vehicle as `VehiclePhysics.VehicleBase.tireImpulseRatio`. The default value of 0.5 works
+correctly on most vehicles.
 
 - It can be raised on vehicles with low center of mass (F1 and racing cars) for enhancing the effect
 of the transition from slip to adherent.
@@ -212,7 +212,7 @@ until the value `Vehicle.EngineStalled` returns "0". Then send a "0" to `StdInpu
 #### How to configure the horsepower (HP)?
 
 In the engine you can configure torque only, not HP. Torque is the actual value the engine transmits
-to the components downstream. Engine power or HP is just the torque multiplied by the  angular
+to the blocks downstream. Engine power or HP is just the torque multiplied by the  angular
 velocity. In the engine setup you specify directly:
 
 - How much torque you want at the flywheel at two given rpm values, named _idle_ and _peak_.
@@ -220,7 +220,7 @@ velocity. In the engine setup you specify directly:
 - The rpm limit the engine is designed to operate at. The torque mechanically becomes zero at that
 point.
 
-The component calculates the engine values out of these settings. The torque curve (green curve in
+The block calculates the engine values out of these settings. The torque curve (green curve in
 the graph) is calculated by combining friction with the specified torque values and rpm limit.
 
 The torques at the specified rpms can be extracted directly out of actual engine torque curves.
@@ -584,7 +584,7 @@ I'd recommend you to use damper values so the damper ratio stays at 0.3 - 0.4 at
 
 #### How to control the vehicle my way? (mobile controller, AI, ...)
 
-Create your own input component, i.e. VPCustomInput, for sending your input values (throttle, brakes
+Create your own input component, i.e. CustomInput, for sending your input values (throttle, brakes
 steering...) to the vehicle via [Data Bus](databus-reference.md). Use the included standard input
 component `VPStandardInput.cs` as example on how to send the values. Add your custom input component
 to the vehicle GameObject instead of [VPStandardInput](../components/vehicle-input.md).
@@ -611,14 +611,14 @@ Do not modify the transform.scale value of a VPWheelCollider component or any of
 
 #### How many wheels are grounded?
 
-Check out the property `wheelState` in any controller that inherits from `VehicleBase`. It lets you
-access the array of state variables for all wheels. You can use foreach () and count how many wheels
-have the flag `wheelState.grounded` enabled.
+Check out the property `wheelState` in any controller that inherits from `VehiclePhysics.VehicleBase`.
+It lets you access the array of state variables for all wheels. You can use foreach () and count how
+many wheels have the flag `wheelState.grounded` enabled.
 
-[VPVehicleController](../components/vehicle-controller.md) (derived from `VPVehicleBase`) adds the
-wheels to the `wheelState` array in the same order as they're specified in the `Axles` property.
-Typically, the order is front to rear, left and right. But this order not strictly enforced, it
-might vary if the user specifies axes in a different order. Also, custom vehicle controllers might
-add the wheels to the array in a different order. Front to rear, left-right is the recommended
-convention.
+[VPVehicleController](../components/vehicle-controller.md) (derived from `VehiclePhysics.VehicleBase`)
+adds the wheels to the `wheelState` array in the same order as they're specified in the `Axles`
+property. Typically, the order is front to rear, left and right. But this order not strictly
+enforced, it might vary if the user specifies axes in a different order. Also, custom vehicle
+controllers might add the wheels to the array in a different order. Front to rear, left-right is
+the recommended convention.
 
