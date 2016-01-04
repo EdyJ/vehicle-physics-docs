@@ -8,8 +8,8 @@ VehicleBase.
 
 #### OnInitialize
 
-Configure the number of wheels here by calling SetNumberOfWheels(n). Then create, configure and
-connect all your blocks here. Use the Block.Connect method.
+Configure the number of wheels by calling SetNumberOfWheels(n). Then create, configure and
+connect all your blocks. Use the Block.Connect method.
 
 Wheels can be accessed via wheels[n] and wheelsState[n] after calling SetNumberOfWheels:
 
@@ -25,17 +25,47 @@ Wheels can be accessed via wheels[n] and wheelsState[n] after calling SetNumberO
 	- steerable
 
 Important: you must configure each WheelState with the corresponding the WheelCollider
-WheelState.wheelCol. Also, ensure to flag the proper wheels as steerable (used by the force
-feedback calculations).
+WheelState.wheelCol. Also, ensure to flag the steering wheels as steerable (this is used by the
+force feedback calculations).
+
+
+#### DoSteer
+
+Set up WheelState.steerAngle (degrees) in the wheels, either directly or via Steering helper class.
+This is done in its own method for allowing the wheels to steer smoothly even in slow motion.
+
+#### DoExternalSuspensionForce
+
+Optional: Set up WheelState.externalUpForce (Newtons) and externalUpForceFactor.
+
+Used for implementing advanced suspension parts such as anti-roll bars.
+
+#### DoUpdateBlocks
+
+Update the inputs and states for your blocks: engine, brakes, gear, etc.
+Called before each integration step.
+
+
+#### DoUpdateData
+
+Populate the data bus with the actual values of the vehicle.
+Called after each integration step.
+
+
+#### OnUpdate
+
+The Update() equivalent. Adjust visual and per-frame stuff here. Do Update-related things.
+
+Do NOT override the standard Update, FixedUpdate, or LateUpdate in the derived classes.
 
 
 ## Example source code
 
-This is the minimum code required for a custom 4-wheeled vehicle controller with steering and
-rear-powered wheels in Vehicle Physics Pro.
+This is the minimum code required for implementing a custom 4-wheeled vehicle controller with
+steering and rear-powered wheels in Vehicle Physics Pro.
 
 The drive power is provided by a direct drive motor (think on an ideal electric engine) that
-provides a maximum torque (maxDriveTorque) and can reach a maximum RPMs (maxDriveRpm). Rear
+provides up to a maximum torque (maxDriveTorque) and can reach a maximum RPMs (maxDriveRpm). Rear
 wheels are connected to the direct drive with a differential in the default configuration (Open).
 
 This example doesn't make use of the data bus. Instead, it exposes the properties driveInput,
