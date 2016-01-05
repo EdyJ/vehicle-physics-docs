@@ -50,14 +50,14 @@ latest news and announcements.
 &fa-check; Vehicle audio: engine, turbo, impacts, tire skid...
 {: .roadmap }
 
-&fa-gear:spin; Minor bug fixes and code polishing
-{: .roadmap .wip }
+&fa-check; Minor bug fixes and code polishing
+{: .roadmap }
 
-&fa-gear:spin; Scenes and vehicles for tests
-{: .roadmap .wip }
+&fa-check; Scenes and vehicles for tests
+{: .roadmap }
 
-**Enter the Beta stage!**
-{: .roadmap .todo }
+&fa-gear:spin; **Enter the Beta stage!**
+{: .roadmap .wip }
 
 Anisotropic tire friction
 {: .roadmap .todo }
