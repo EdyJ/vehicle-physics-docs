@@ -1,3 +1,2 @@
-
-# VPTransmission
+# Transmission helper
 

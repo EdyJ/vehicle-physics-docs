@@ -1,12 +1,11 @@
-# Additional classes
+# Extra blocks
 
 Available for special vehicle setups or non-standard vehicles.
 
-## VPCTorqueSplitter
+## Gear block
 
-## VPCGear
+## DirectDrive block
 
-## VPCDirectDrive
+## Brake block
 
-## VPCInertialDrive
 
