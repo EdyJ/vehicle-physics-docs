@@ -50,7 +50,7 @@ latest news and announcements.
 {: .roadmap }
 
 &fa-check; Scenes and vehicles for tests
-{: .roadmap .wip }
+{: .roadmap }
 
 &fa-gear:spin; **Enter the Beta stage!**
 {: .roadmap .wip }
