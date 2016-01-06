@@ -2,10 +2,11 @@
 
 The vehicle-equivalent of Unity's character controller. Simulates most types of vehicles.
 
+< pic: vehicle controller inspector, everything folded >
+
 &fa-thumbs-o-up; You can [write your own custom vehicle controller](../advanced/custom-vehicles.md){: .alert-link }
 for special types of vehicles not directly covered by the stock Vehicle Controller component.
 {: .alert .alert-info }
-
 
 ### Center of mass
 
@@ -34,6 +35,8 @@ vehicle. The vertical position affects the stability.
 Each axle references the left-right wheels ([VPWheelCollider](../components/wheel-collider))
 components) and configure its features.
 
+< pic: axles unfolded >
+
 ##### Left-right wheels
 
 The [VPWheelCollider](../components/wheel-collider) component for each wheel of the axle.
@@ -59,11 +62,15 @@ Steering settings for this axle:
 
 Steering parameters for the vehicle: angle, Ackerman, toe...
 
+< pic: steering >
+
 Details: [Steering helper](../blocks/steering.md)
 
 ### Brakes
 
 Brake parameters for the vehicle, including brake power, brake balance and handbrake.
+
+< pic: brakes >
 
 Details: [Brakes helper](../blocks/brakes.md)
 
@@ -71,12 +78,16 @@ Details: [Brakes helper](../blocks/brakes.md)
 
 Tire friction model and settings for the wheels of the vehicle.
 
+< pic: tires >
+
 Details: [Tire friction](../blocks/tires.md)
 
 ### Powertrain
 
 Configures the driven axles and the elements makes the connections among them and with the drive
 torque upstream.
+
+< pic: powertrain >
 
 The powertrain settings can define up to 4 driven axles connected in a variety of ways using
 differentials in several configurations (open, locked) and torque splitters. Each configuration
@@ -86,6 +97,8 @@ Depending on the chosen configuration, different additional parts will be availa
 
 Differential or Axle Differential
 :	Differentials connecting two wheels of the same axle.
+
+< pic: differential >
 
 Inter-axle Differential
 :	Differentials connecting two axle differentials together before routing the connection upstream
@@ -98,6 +111,8 @@ Center Differential
 Torque Splitter
 :	A device that provides dynamic torque routing among two outputs.
 
+< pic: torque splitter >
+
 Details:
 
 - [Powertrain helper](../blocks/powertrain.md)
@@ -107,6 +122,8 @@ Details:
 ### Engine
 
 Set up the engine of the vehicle.
+
+< pic: engine >
 
 &fa-thumbs-o-up; Feel free to play with these values while monitoring the resulting engine
 performance data in the graph and below it. If the combination of values is not correct a warning
@@ -119,6 +136,8 @@ Details: [Engine block](../blocks/engine.md)
 
 The clutch couples the engine with the transmission and powertrain.
 
+< pic: clutch >
+
 - Lock ratio: a kind of ideal coupling based on locking percent.
 - Disc friction: realistic clutch providing a limited torque coupling.
 - Torque converter: smooth coupling based on the angular velocity. This device is commonly used with
@@ -130,8 +149,10 @@ Details: [Clutch block](../blocks/clutch.md)
 
 Transmission type, gear ratios and transmission settings.
 
+< pic: gearbox >
+
 - Automatic transmission
-- Automatic transmission with manual shifting
+- Automatic transmission with manual shifting (M)
 - Manual transmission
 - Manual transmission with automatic shifting
 
@@ -142,63 +163,13 @@ Details: [Gearbox block](../blocks/gearbox.md)
 
 ### Retarder
 
+< pic: retarder >
+
 Retarder brake based on angular velocity. The retarder brake is commonly used in trucks, buses
 and heavy vehicles.
 
 Details: [Retarder block](../blocks/retarder.md)
 
-## Advanced / Experimental settings
+### Advanced / Experimental settings
 
-#### Tire side deflection
-
-Spring rate for the tire side to deflect and bend when sliding laterally. It can be used to
-simulate tires targeted to different speeds. Tires with low rates (8-20) may become difficult to
-drive at high speeds.
-
-This setting will be moved to Tire Friction at some point
-
-#### Tire impulse ratio
-
-The default value of 0.5 works correctly on most vehicles.
-
-- It can be raised on vehicles with low center of mass (F1 and racing cars) for enhancing the effect
-of the transition from slip to adherent.
-- It should be lowered on vehicles with elevated center of mass if they experiment visible
-instabilities at rest.
-
-!!! Info "&fa-gear; Tech details"
-	The VPP solver calculates the impulses that keep the tires adherent to the surface. These are the
-	_ideal_ impulses for the same vertical level as the center of mass. Tire forces are applied at a
-	different vertical level (contact points), so these forces induce a torque in the vehicle as side
-	effect. This torque can lead to numerical instabilities in the tire forces, being bigger with the
-	vertical distance from the contact points to the center of mass. The tire impulse ratio prevents
-	this effect by multiplying the calculated impulse before being applied to the vehicle as tire
-	force.
-
-#### Wheel sleep velocity
-
-Wheels moving slower than this speed are allowed to sleep when no other forces / torques that can
-move them are present.
-
-#### Integration steps and method
-
-**Substeps** are subdivisions of the Unity physics time steps that are used for calculating the
-internal torques, forces and momentums at every block in the vehicle. The more substeps, the more
-precise are the numeric results but CPU usage is increased.
-
-A minimum value of 2 substeps is recommended. Multi-driven-axle vehicles should configure at least
-two substeps per driven axle.
-
-Detailed information: [Solver substeps explained](../advanced/misc-topics-explained.md#solver-numeric-integration)
-
-#### Runtime CoM changes
-
-How the changes to the Center Of Mass are handled:
-
-- Disabled: Center of Mass is configured when enabling the vehicle only. Changing CoM requires
-	disabling/enabling the component for the new CoM to take effect.
-- Editor only: Runtime modifications to the CoM take effect immediately when playing the project
-	within the Unity Editor only. This is useful for configuring it at runtime.
-- Editor and Builds (_NOT RECOMMENDED_): Any modification to the CoM take effects immediately in
-	the project. This is not recommended as modifying the CoM triggers a bunch of expensive
-	calculations in the Unity physics engine.
+These are detailed at the [VehicleBase reference](../advanced/vehiclebase-reference.md).

@@ -7,6 +7,15 @@ This component implements the wheel colling entity in Unity 3D:
 - Comprehensive wheel gizmo at the Scene view
 - Visual meshes for wheel, brake caliper and suspension geometry
 
+< pic: component inspector >
+
+&fa-thumbs-o-up; The context menu option **"Adjust position and radius to the Wheel mesh"** at
+the VPWheelCollider component automatically calculates position, radius and center to match the
+visual Wheel mesh specified at Visual Objects.
+{: .alert .alert-info }
+
+< pic: context menu at the component inspector, option pointed >
+
 ### Mass, radius
 
 The mass should be roughly the mass of the wheel.
@@ -16,11 +25,6 @@ The radius should match the actual radius of the wheel mesh.
 The **inertia** is calculated as $ 1/2 m r^2 $. Note that if the inertia is too small it may have
 adverse effects in the numeric stability. Ensure to use a mass large enough for the wheel.
 
-&fa-thumbs-o-up; The context menu option **"Adjust position and radius to the Wheel mesh"**
-automatically calculates position, radius and center to match the visual Wheel mesh specified at
-Visual Objects.
-{: .alert .alert-info }
-
 ### Center
 
 Position offset to the center of the wheel.
@@ -29,10 +33,10 @@ The `VPWheelCollider` component should be placed in the same position as its cor
 Wheel transform (but _not_ in the same hierarchy, see Visual Objects below). Then the center
 property is used to match the actual position of the wheel.
 
-&fa-thumbs-o-up; The context menu option **"Adjust position and radius to the Wheel mesh"**
-automatically calculates position, radius and center to match the visual Wheel mesh specified at
-Visual Objects.
-{: .alert .alert-info }
+The best position for the wheel collider's center is the outer part of the wheel. It provides better
+accuracy and stability.
+
+< pic: capture of the gizmo at the proper position >
 
 ### Suspension parameters
 
@@ -58,8 +62,7 @@ Damper rate ($N/ms^{-1}$)
 	cornering...).
 
 	&fa-warning; Dampers are very badly implemented in PhysX 3 / Unity 5. A damper value too high
-	will surely cause weird behaviors and unnatural reactions. You can use the **suspension analysis**
-	tool (below) to configure the dampers correctly.
+	will surely cause weird behaviors and unnatural reactions. [Learn more](../advanced/misc-topics-explained#car-bouncing-or-shaking-over-the-ground){: .alert-link }
 	{: .alert .alert-warning }
 
 ### Suspension analysis tool
@@ -67,20 +70,17 @@ Damper rate ($N/ms^{-1}$)
 Expand the "Analysis" section under the Suspension settings of the VPWheelCollider component
 (select any wheel collider in your vehicle's hierarchy)
 
+< pic: component with analysis expanded >
+
 The suspension analysis tool doesn't have effect on the actual suspension behavior. It just
 calculates the suspension data based on the given compression ratio at rest.
 
-1) Play the scene and ensure the vehicle is at rest
+1. Play the scene and ensure the vehicle is at rest.
+2. Watch the telemetry for the compression ratio for the wheel you want to analyze.
+3. Specify that compression ratio in the analysis tool. It computes and shows the resulting values.
 
-2) Watch the telemetry for the compression ratio for the wheel you want to analyze.
-
-3) Specify that compression ratio in the analysis tool. It computes and shows the resulting values.
-
-Interpreting the values:
-http://vehiclephysics.com/advanced/how-suspensions-work/
-
-Fine tunning the dampers:
-http://vehiclephysics.com/advanced/misc-topics-explained/#car-bouncing-or-shaking-over-the-ground
+Read [how suspensions work](../advanced/how-suspensions-work.md) for interpreting and understanding
+the values.
 
 ### Visual objects
 
@@ -94,12 +94,15 @@ components. They will be positioned and/or rotated according to the state of the
 {: .alert .alert-warning }
 
 Suspension
-:	Suspension
+:	Moves vertically as for the suspension compression.
 
 Caliper
-:	Caliper
+:	Moves vertically as for the suspension compression and rotates around the Y axis as for the
+	steering.
 
 Wheel
-:	Wheel
+:	Moves vertically as for the suspension compression, rotates around the Y axis as for the
+	steering, and rotates around the X axis as for the wheel's angular velocity.
 
-
+Suspension, Caliper and Wheel transform can be parented together in any way. They will be moved
+and rotated correctly.

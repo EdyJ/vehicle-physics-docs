@@ -55,13 +55,19 @@ latest news and announcements.
 &fa-gear:spin; **Enter the Beta stage!**
 {: .roadmap .wip }
 
-Anisotropic tire friction
-{: .roadmap .todo }
+&fa-gear:spin; Documentation
+{: .roadmap .wip }
 
-Documentation
+Replay system
 {: .roadmap .todo }
 
 **First release!**
+{: .roadmap .todo }
+
+Anisotropic tire friction
+{: .roadmap .todo }
+
+Generic steering wheel support
 {: .roadmap .todo }
 
 Additional components

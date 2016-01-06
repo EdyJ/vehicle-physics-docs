@@ -1,63 +1,14 @@
 # Custom Vehicle Controllers
 
+Vehicle Physics Pro includes [VPVehicleController](../components/vehicle-controller.md), a
+full-featured vehicle controller ready for simulating most types of vehicles. If you need a kind of
+vehicle not supported by VPVehicleBase then you can write your own vehicle controller easily.
+
 A vehicle controller derives from `VehiclePhysics.VehicleBase`. It implements the logic of the
-vehicle by hosting the blocks representing the internal parts and overriding the methods of
-VehicleBase.
+vehicle by overriding the virtual methods and instancing and connecting the blocks representing the
+internal parts of the vehicle.
 
-## VehicleBase overrides
-
-#### OnInitialize
-
-Configure the number of wheels by calling SetNumberOfWheels(n). Then create, configure and
-connect all your blocks. Use the Block.Connect method.
-
-Wheels can be accessed via wheels[n] and wheelsState[n] after calling SetNumberOfWheels:
-
-"wheels" are the actual Wheel blocks. Required settings:
-
-	- radius
-	- mass
-	- tireFriction
-
-"wheelsState" are the meaningful values of the wheels. Required settings:
-
-	- wheelCol
-	- steerable
-
-Important: you must configure each WheelState with the corresponding the WheelCollider
-WheelState.wheelCol. Also, ensure to flag the steering wheels as steerable (this is used by the
-force feedback calculations).
-
-
-#### DoSteer
-
-Set up WheelState.steerAngle (degrees) in the wheels, either directly or via Steering helper class.
-This is done in its own method for allowing the wheels to steer smoothly even in slow motion.
-
-#### DoExternalSuspensionForce
-
-Optional: Set up WheelState.externalUpForce (Newtons) and externalUpForceFactor.
-
-Used for implementing advanced suspension parts such as anti-roll bars.
-
-#### DoUpdateBlocks
-
-Update the inputs and states for your blocks: engine, brakes, gear, etc.
-Called before each integration step.
-
-
-#### DoUpdateData
-
-Populate the data bus with the actual values of the vehicle.
-Called after each integration step.
-
-
-#### OnUpdate
-
-The Update() equivalent. Adjust visual and per-frame stuff here. Do Update-related things.
-
-Do NOT override the standard Update, FixedUpdate, or LateUpdate in the derived classes.
-
+The virtual methods and their roles are detailed at [VehicleBase reference](vehiclebase-reference.md).
 
 ## Example source code
 
@@ -68,16 +19,15 @@ The drive power is provided by a direct drive motor (think on an ideal electric 
 provides up to a maximum torque (maxDriveTorque) and can reach a maximum RPMs (maxDriveRpm). Rear
 wheels are connected to the direct drive with a differential in the default configuration (Open).
 
-This example doesn't make use of the data bus. Instead, it exposes the properties driveInput,
-brakeInput and steerInput. The SimpleVehicleControllerInput.cs script reads the standard Unity
-Input and modifies these properties for controlling the vehicle.
+This example doesn't make use of the [data bus](databus-reference.md). Instead, it exposes the
+properties driveInput, brakeInput and steerInput. The SimpleVehicleControllerInput.cs script reads
+the standard Unity Input and modifies these properties for controlling the vehicle.
 
 
 **SimpleVehicleController.cs**
 ```
 using UnityEngine;
 using VehiclePhysics;
-
 
 public class SimpleVehicleController : VehicleBase
 	{
@@ -100,12 +50,10 @@ public class SimpleVehicleController : VehicleBase
 	[Range(-1,1)]
 	public float steerInput = 0.0f;
 
-
 	// Internal vehicle blocks (powertrain)
 
 	DirectDrive m_directDrive;
 	Differential m_differential;
-
 
 	// Initialize the controller and blocks
 
@@ -139,10 +87,9 @@ public class SimpleVehicleController : VehicleBase
 		Block.Connect(m_differential, 0, m_directDrive, 0);
 		}
 
-
 	// WheelState and Wheel objects must be initialized with a minimum data per wheel
 
-	void ConfigureWheelData(WheelState ws, Wheel wheel, VPWheelCollider wheelCol, bool steerable = false)
+	void ConfigureWheelData (WheelState ws, Wheel wheel, VPWheelCollider wheelCol, bool steerable = false)
 		{
 		ws.wheelCol = wheelCol;
 		ws.steerable = steerable;
@@ -150,7 +97,6 @@ public class SimpleVehicleController : VehicleBase
 		wheel.radius = wheelCol.radius;
 		wheel.mass = wheelCol.mass;
 		}
-
 
 	// Steering is done separately for allowing smooth movement of the wheels
 	// even in slow motion.
@@ -161,7 +107,6 @@ public class SimpleVehicleController : VehicleBase
 		wheelState[0].steerAngle = angle;
 		wheelState[1].steerAngle = angle;
 		}
-
 
 	// Set up the state values at the blocks, tires, etc.
 
@@ -186,17 +131,17 @@ public class SimpleVehicleController : VehicleBase
 
 **SimpleVehicleControllerInput.cs**
 ```
+using UnityEngine;
+
 [RequireComponent(typeof(SimpleVehicleController))]
 public class SimpleVehicleControllerInput : MonoBehaviour
 	{
 	SimpleVehicleController m_vehicle;
 
-
 	void OnEnable ()
 		{
 		m_vehicle = GetComponent<SimpleVehicleController>();
 		}
-
 
 	void Update ()
 		{

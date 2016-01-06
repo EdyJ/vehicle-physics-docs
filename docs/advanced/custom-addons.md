@@ -1,4 +1,4 @@
-# Writing add-on features
+# Creating add-on components
 
 You can write Unity components requiring a VehiclePhysics.VehicleBase component for adding or
 modifying the vehicle's behavior. Deriving from VehicleBase makes the add-on component compatible
