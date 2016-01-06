@@ -106,9 +106,9 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 | SettingsData | Description | Units  | Resolution | Example |
 | ------------ | ----------- |:------:|:----------:| ------- |
 |DifferentialLock	| Override lock setting at the differential<sup>1</sup>	|	|	| 0 = no override, 1 = force locked differential, 2 = force open differential
-|TransmissionLock	| Override lock setting at the transmission<sup>2</sup>	|	|	| 0 = no override, 1 = force locked transmission, 2 = force unlocked / open transmission
+|DrivelineLock		| Override lock setting at the driveline<sup>2</sup>	|	|	| 0 = no override, 1 = force locked driveline, 2 = force unlocked / open driveline
 
 **<sup>1</sup> DifferentialLock** affects the axle differentials only.
 
-**<sup>2</sup> TransmissionLock** affects the element connecting the front-rear parts of the
-transmission. This might be either a differential or a torque splitter.
+**<sup>2</sup> DrivelineLock** affects the element connecting the front-rear parts of the
+driveline. This might be either a differential or a torque splitter.

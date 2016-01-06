@@ -39,7 +39,7 @@ pages:
   - Steering: blocks/steering.md
   - Brakes: blocks/brakes.md
   - Tires: blocks/tires.md
-  - Powertrain: blocks/powertrain.md
+  - Driveline: blocks/driveline.md
   - Differential: blocks/differential.md
   - Torque Splitter: blocks/torque-splitter.md
   - Engine: blocks/engine.md

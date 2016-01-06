@@ -435,9 +435,9 @@ Engine and gearbox
 	control. A rev limiter can be set up in the engine for ensuring that the rear wheels don't
 	exceed the optimum spin rate.
 
-Transmission
+Driveline
 :	A configuration that works good is all-wheel-drive with a center **Torque Splitter**. The
-	transmission is configured to power the rear axle, but part of the drive power is routed to the
+	drivetrain is configured to power the rear axle, but part of the drive power is routed to the
 	front axle. The amount of drive that gets routed is defined by the parameter **stiffness** of
 	the Torque Splitter:
 
@@ -456,12 +456,12 @@ This is quoted from [WhateverMan at gamedev.net](http://www.gamedev.net/topic/66
 
 #### Handbrake has little effect in AWD
 
-The best solution is to use a transmission configuration with a center **Torque Splitter** and
+The best solution is to use a driveline configuration with a center **Torque Splitter** and
 disengaging it when the handbrake is applied. This disconnects the rear axle from the front axle
-(and the rest of the transmission), so rear wheels can get freely locked without affecting the
+(and the rest of the driveline), so rear wheels can get freely locked without affecting the
 front axle.
 
-The option for disengaging the central transmission element when handbrake is applied can be found
+The option for disengaging the central driveline element when handbrake is applied can be found
 at the component [VPStandardInput](../components/vehicle-input.md).
 
 In addition you can use the splitter's _preload_ settings for configure how much torque is allowed

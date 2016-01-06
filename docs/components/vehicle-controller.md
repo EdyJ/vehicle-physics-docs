@@ -82,14 +82,14 @@ Tire friction model and settings for the wheels of the vehicle.
 
 Details: [Tire friction](../blocks/tires.md)
 
-### Powertrain
+### Driveline
 
 Configures the driven axles and the elements makes the connections among them and with the drive
 torque upstream.
 
-< pic: powertrain >
+< pic: driveline >
 
-The powertrain settings can define up to 4 driven axles connected in a variety of ways using
+The driveline settings can define up to 4 driven axles connected in a variety of ways using
 differentials in several configurations (open, locked) and torque splitters. Each configuration
 is briefly described in the Editor.
 
@@ -115,7 +115,7 @@ Torque Splitter
 
 Details:
 
-- [Powertrain helper](../blocks/powertrain.md)
+- [Driveline helper](../blocks/driveline.md)
 - [Differential block](../blocks/differential.md)
 - [Torque Splitter block](../blocks/torque-splitter.md)
 
@@ -134,7 +134,7 @@ Details: [Engine block](../blocks/engine.md)
 
 ### Clutch
 
-The clutch couples the engine with the transmission and powertrain.
+The clutch couples the engine with the transmission and driveline.
 
 < pic: clutch >
 
