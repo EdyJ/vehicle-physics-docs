@@ -6,6 +6,11 @@ includes steering, throttle, brakes, gear lever, etc.
 The vehicle receives the input data at the [data bus](../advanced/databus-reference.md),
 Input channel (`VehiclePhysics.Channel.Input`).
 
+&fa-thumbs-o-up; You could write your own input component easily by [writing an add-on component](../advanced/custom-addons.md)
+that modifies the values of the [Input channel at the Data Bus](../advanced/databus-reference.md#input-channel).
+For example, an AI controller or a remote player.
+{: .alert .alert-info }
+
 #### The ignition key
 
 Press and _hold_ the control assigned to the ignition key (<kbd>K</kbd> by default) for starting the
