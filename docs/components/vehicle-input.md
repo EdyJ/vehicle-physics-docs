@@ -23,7 +23,7 @@ The vehicle implements the ignition key with three positions: OFF, ON, and IGNIT
 - Pressing and holding keeps IGNITE applied until released or the engine gets started.
 - Pressing the key-off control (<kbd>Ctrl-K</kbd> by default) moves the key from ON to OFF.
 
-### Standard Input (VPStandardInput)
+### VPStandardInput
 
 Reads the input from Unity's standard Input class, which is configured at Edit > Project Settings >
 Input.
@@ -102,7 +102,7 @@ reverse throttle, brake, handbrake, steer, clutch, ignition.
 Useful for debug or fine-testing purposes in the Editor. Can also be used for modifying the input
 from scripting without having to deactivate the VPStandardInput component.
 
-### Logitech Input (VPLogitechInput)
+### VPLogitechInput
 
 Supports the Logitech G27 controller with force feedback.
 

@@ -1,4 +1,4 @@
-# Vehicle Controller (VPVehicleControler)
+# VPVehicleControler
 
 The vehicle-equivalent of Unity's character controller. Simulates most types of vehicles.
 

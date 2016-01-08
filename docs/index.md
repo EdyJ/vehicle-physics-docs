@@ -34,7 +34,7 @@ latest news and announcements.
 &fa-check; Gearbox
 {: .roadmap }
 
-&fa-check; Transmission and axle setup
+&fa-check; Driveline and axle setup
 {: .roadmap }
 
 &fa-check; Repository clean up and upgrade to Unity 5
@@ -59,6 +59,9 @@ latest news and announcements.
 {: .roadmap .wip }
 
 Replay system
+{: .roadmap .todo }
+
+Advanced graphic telemetry
 {: .roadmap .todo }
 
 **First release!**

@@ -1,4 +1,4 @@
-# Wheel Collider (VPWheelCollider)
+# VPWheelCollider
 
 This component implements the wheel colling entity in Unity 3D:
 

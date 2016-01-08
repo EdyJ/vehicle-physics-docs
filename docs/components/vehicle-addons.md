@@ -5,7 +5,7 @@ These components are all optional, each one adding new functionality and feature
 You could [write your own add-on components](../advanced/custom-addons.md) easily if the provided
 components don't cover your needs or you need other features.
 
-### Audio (VPAudio)
+### VPAudio
 
 Manages and plays the audio effects of the vehicle.
 
@@ -62,7 +62,7 @@ Wind
 :	AudioSource played based on the vehicle's velocity. It must be part of the hierarchy of the
 	vehicle and positioned properly, typically around the center of the vehicle.
 
-### Tire effects (VPTireEffects)
+### VPTireEffects
 
 Triggers the tire marks and particle effects based on the state of the tire and the ground material
 being contacted.
@@ -109,18 +109,105 @@ Limit Intensity Time
 The internally accounted time is decreased when the tires are not skidding.
 
 
-### Visual effects (VPVisualEffects)
+### VPVisualEffects
 
+Controls different visual effects in the vehicle
+
+< pic: VPVisualEffects Inspector >
 
 ##### Steering wheel
 
+Rotates the vehicle's steering wheel object according to the actual steering value.
+
+Steering Wheel
+:	Transform for the steering wheel geometry. It will be rotated locally around the Z axis.
+
+Degrees Of Rotation
+:	Total degrees of rotation of the steering wheel. It can be configured to match the value of
+	actual steering input controllers.
+
 ##### Lights
+
+Shows or hides the given objects for simulating the various lights of the vehicle. All of them
+are optional.
+
+Brake Lights Glow
+:	Objects representing brake lights glowing
+
+Brake Lights Off
+:	Object representing brake lights not glowing
+
+Reverse Lights Glow
+:	Objects representing reverse lights glowing
+
+Brake Lights Off
+:	Object representing reverse lights not glowing
 
 ##### Dashboard
 
+Gauges and lights of the vehicle's dashboard.
 
-### Aerodynamic surfaces (VPAeroSurface)
+Rpm Gauge
+:	Transform for the rpm gauge. It will be rotated locally around the Z axis.
+
+Rpm Max
+:	Maximum RPMs shown at the dashboard
+
+Rpm Min Angle, Rpm Max Angle
+:	Angles for the Rpm Gauge at the minimum (0 rpm) and maximum (Rpm Max) values.
+
+Speed Gauge
+:	Transform for the speed gauge. It will be rotated locally around the Z axis.
+
+Speed Max Kph
+:	Maximum speed in Km/h shown at the dashboard
+
+Speed Min Angle, Speed Max Angle
+:	Angles for the Speed Gauge at the minimum (0 rpm) and maximum (Speed Max Kph) values.
+
+These objects will be shown or hidden based on the actual state of the vehicle:
+
+Dashboard On
+:	Objects representing the dashboard turned on and glowing
+
+Dashboard Off
+:	Objects representing the dashboard turned off
+
+Stalled Lights On
+:	Object representing the dashboard indicators for the stalled vehicle (typically battery, etc)
+	turned on and glowing.
+
+Stalled Lights Off
+:	Object representing the above indicators turned off (not glowing).
+
+Handbrake Lights On
+:	Object representing the dashboard indicator for the handbrake turned on and glowing.
+
+Handbrake Lights Off
+:	Object representing the dashboard indicator for the handbrake turned off (not glowing).
+
+### VPAeroSurface
 
 Stand-alone component (it doesn't require a VehicleBase-derived component) providing drag and
-downforce based on the velocity of the vehicle.
+downforce based on the velocity of the vehicle. The forces are applied to the vehicle at the
+position of the GameObject containing this component.
 
+The recommended setup is having two VPAeroSurface components at each axle, one at the front axle
+and the other at the rear axle. Thus, the components can configure the behavior of the vehicle at
+high speeds.
+
+< pic: VPAeroSurface inspector >
+
+Drag Coefficient
+:	Coefficient for the drag force with the speed. The force is applied counteracting the vehicle's
+	velocity.
+
+Downforce Coefficient
+:	Coefficient for the downforce with the speed. The force is applied that the transform's position
+	and the transform.down direction.
+
+The force magnitudes are calculated with a simple quadratic formula:
+
+$$ F = \rho \times v^2 $$
+
+where $F$ is the force in Newtons, $\rho$ is the coefficient and $v$ is the vehicle's speed in m/s.
