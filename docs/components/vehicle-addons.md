@@ -1,6 +1,6 @@
 # Vehicle Add-ons
 
-These components are all optional, each one adding new functionality and features to the vehicle.
+Optional components each one adding new functionality and features to the vehicle.
 
 You could [write your own add-on components](../advanced/custom-addons.md) easily if the provided
 components don't cover your needs or you need other features.
