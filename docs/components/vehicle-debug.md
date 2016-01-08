@@ -9,9 +9,28 @@ Shows detailed numeric data on the internal state of the vehicle and each wheel 
 
 < pic: VPTelemetry GUI >
 
+##### Wheel telemetry
 
+- Name of the wheel GameObject.
+- Spin rpm (angular velocity).
+- Steer: degrees of rotation as per steering.
+- Susp: suspension compression percent (%) or suspension distance (m), depending on the option
+	_Contact Depth As Suspension_.
+- Load: wheel load in Newtons (N) or kilograms (Kg), depending on the option _Show Load In Kg_.
+- Torque: torques acting on the wheel in Newtons-meter (Nm): Drive torque $T_d$, brake torque $T_b$,
+	reaction torque $T_r$.
+- Force: tire forces in Newtons (N): lateral force $F_x$, longitudinal force $F_y$.
+- Slip: tire slip velocities in m/s: lateral slip $S_x$, longitudinal slip $S_y$, combined slip $S_c$.
 
+##### Vehicle telemetry
 
+- Sum of all loads in the wheel, in both Newtons (N) and kilograms (Kg).
+- Speed: longitudinal, lateral, absolute in m/s. Speed also in Km/h and mph.
+- Acceleration: longitudinal, lateral in $m/s^2$. G-force measure.
+- Angular velocity Y: turning velocity around the vertical axis, in rads/s.
+- Engine: load in percent (%), produced torque in Nm. State of the engine: Off, Stalled, Ok.
+- Clutch: lock ratio in percent (%), pass-thru torque in Nm.
+- Engine RPM, engaged gear, automatic gear position.
 
 < pic: VPTelemetry Inspector >
 
@@ -22,7 +41,7 @@ Contact Depth As Suspension
 :	Shows the suspension values (Susp column) as compressed distance (m) instead of compression
 	ratio (%).
 
-Show Load in Kg
+Show Load In Kg
 :	Shows the load per wheel (Load column) in Kg (weight) instead of Newtons (force).
 
 Enable Hot Key, Hot Key

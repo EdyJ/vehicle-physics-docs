@@ -1,7 +1,5 @@
 # Ground Materials
 
-
-
 ### VPGroundMaterialManager
 
 Manages the different ground materials in the scene associating each one with an Unity PhysicMaterial.
