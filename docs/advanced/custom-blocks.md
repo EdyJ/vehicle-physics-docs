@@ -88,7 +88,7 @@ with the given ratio.
 
 **SimpleGear.cs**
 ```
-using VehiclePhysics
+using VehiclePhysics;
 
 public class SimpleGear : Block
 	{
