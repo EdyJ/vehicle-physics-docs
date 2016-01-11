@@ -192,9 +192,8 @@ Stand-alone component (it doesn't require a VehicleBase-derived component) provi
 downforce based on the velocity of the vehicle. The forces are applied to the vehicle at the
 position of the GameObject containing this component.
 
-The recommended setup is having two VPAeroSurface components at each axle, one at the front axle
-and the other at the rear axle. Thus, the components can configure the behavior of the vehicle at
-high speeds.
+The recommended setup is having a VPAeroSurface GameObject at the middle of each axle, at least
+at front and rear. These components can configure the behavior of the vehicle at high speeds.
 
 < pic: VPAeroSurface inspector >
 

@@ -2,18 +2,23 @@
 
 Controls the camera movement based on a target object. Allows several camera modes.
 
+To make the camera compatible with VR the Camera component must be located in a child GameObject
+of VRCameraController.
+
 < pic: VPCameraController inspector with settings folded >
 
-
 Mode
+:	How the camera moves and rotates with regards to the Target.
 
 Target
+:	Transform the camera movement will use / follow / rotate around / etc.
+	If the target GameObject contains a [VPCameraTargetConfig](#vpcameratargetconfig) component,
+	then some parameters of each mode may be loaded from it.
 
 Change Camera Key
+:	Key for cycling among the different camera modes, or `KeyCode.None` for no key.
 
-
-
-#### Attach to
+#### Attach To
 
 The camera will be attached to the specified transform, without any further movement.
 
@@ -27,7 +32,7 @@ Attach target
 	Filled with `VPCameraTargetConfig.attachToPoint` if Target contains a [VPCameraTargetConfig](#vpcameratargetconfig)
 	component.
 
-#### Smooth follow
+#### Smooth Follow
 
 The camera follows the target's velocity with smooth movements. This is the typical external vehicle
 camera.
@@ -64,11 +69,11 @@ Follow Velocity
 Velocity Damping
 :	How fast the camera responds to changes in the direction of the velocity.
 
-#### Mouse Orbit
+#### Orbit
 
 The camera moves around the target in world space.
 
-< pic: mouse orbit settings >
+< pic: orbit settings >
 
 Hot Key
 :	Hot key for selecting this mode, or `KeyCode.None` for no key.
@@ -160,3 +165,32 @@ Vertical Axis
 
 # VPCameraTargetConfig
 
+Add this component to a vehicle for configuring the camera when the vehicle is selected as Target
+in the camera controller [VPCameraController](#vpcameracontroller).
+
+< pic: VPCameraTargetConfig inspector >
+
+Look At Point
+:	Transform the camera will point at when this vehicle is selected as Target. Use the Center Of
+	Mass (CoM) of the vehicle for best results.
+
+Attach To Point
+:	Transform to attach the camera to in _Attach To_ mode. This is typically used for the
+	first-person driver view.
+
+View Distance
+:	Distance from the camera to this vehicle when selected as target. Larger vehicles require larger
+	view distances for the camera not to intersect with the geometry. Used in camera modes _Smooth
+	Follow_ and _Orbit_.
+
+View Height
+:	Vertical elevation of the camera in the _Smooth Follow_ camera mode.
+
+View Damping
+:	How fast the camera follows the direction of the vehicle in _Smooth Follow_ camera mode.
+
+View Min Distance
+:	Minimum distance to the target in _Orbit_ camera mode.
+
+View Min Angle
+:	Minimum vertical angle in _Orbit_ camera mode.
