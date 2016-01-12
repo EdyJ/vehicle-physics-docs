@@ -26,7 +26,7 @@ pages:
   - Features: overview/features.md
   - Licensing: overview/licensing.md
   - Early Access: early-access.md
-  - Comparison with EVP: overview/comparison.md
+  - Comparison with other kits: overview/comparison.md
   - Markdown test page: markdown-test.md
 - User Guide:
   - Getting started: user-guide/getting-started.md

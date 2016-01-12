@@ -1,4 +1,4 @@
-### Comparison with Edy's Vehicle Physics
+# Comparison with Edy's Vehicle Physics
 
 [Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics/) (**EVP**, available [at the Asset Store](https://www.assetstore.unity3d.com/#/content/403))
 and Vehicle Physics Pro (**VPP**) are two completely different products targeting different needs.
@@ -42,3 +42,42 @@ the scene.
 
 The controller example at [Creating Custom Vehicles](../advanced/custom-vehicles.md) may be used
 for ensuring the most performance out of the VPP simulation.
+
+# Comparison with other packages
+
+##### Robust, coherent, accurate design
+
+VPP is consolidated on a solid vehicle dynamics model. There are no guesses, no arbitrary
+assumptions. The design is physically accurate, so it accounts for all the expected and unexpected
+behaviors of the vehicles.
+
+Do you know what [driveline windup](https://en.wikipedia.org/wiki/Driveline_windup) means? I hadn't
+heard of that until I observed the effect myself while testing the simulation with heavy AWD
+vehicles.
+
+##### Fully extensible
+
+You can design your own vehicles combining the provided functional blocks in any number and
+combination you want. Two engines, each one powering one axle? Sure. Twenty wheel drive, all
+connected to a single gearbox and engine, using a myriad of differentials, torque splitters and gear
+reductions? Why not.
+
+You can even write your own functional blocks and plug them into your vehicles along with all other
+standard blocks. Want to implement a turbine engine? Continuously Variable Transmissions (CVT)? It's
+easy in Vehicle Physics Pro!
+
+##### Seamlessly integration into existing projects
+
+The VPP kit is plain C# code without any external dependency. The code uses the namespace
+`VehiclePhysics` for preventing conflicts with other code.
+
+##### Extensive, detailed documentation
+
+Take a look around and compare ;)
+
+##### GIT repository access
+
+Professional and Enterprise licensees obtain direct access to the GIT repository I use to develop
+Vehicle Physics Pro. You can use continuous integration systems
+
+

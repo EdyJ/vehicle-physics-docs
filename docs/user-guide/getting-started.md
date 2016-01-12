@@ -1,6 +1,6 @@
-# Getting started with Vehicle Physics Pro
+# Getting started
 
-Welcome to Vehicle Physics Pro! The most complete, accurate and realistic vehicle physics kit
+**Welcome to Vehicle Physics Pro!** The most complete, accurate and realistic vehicle physics kit
 available for Unity 3D.
 
 Let's play some example scenes so you could get started quickly.

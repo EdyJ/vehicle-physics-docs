@@ -43,3 +43,8 @@ generating ssh keys](https://help.github.com/articles/generating-ssh-keys/).
 	> git submodule update --init --recursive
 
 This is also necessary after checking out any branch or revision in the main repository.
+
+### Continuous Integration systems
+
+If you're using a CI system such as TeamCity, ensure to set the refresh interval to a reasonable
+rate. 1-2 times per day is enough for VPP repositories (12 hours = 720 minutes = 43200 seconds).
