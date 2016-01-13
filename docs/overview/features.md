@@ -4,13 +4,10 @@ Vehicle Physics Pro is the most complete, accurate and realistic vehicle physics
 Unity 3D. It's based on a vehicle simulation model conceived, designed and implemented from scratch
 for providing the most accurate vehicle physics and dynamics on any condition.
 
-
-
-
 ### Applications
 
 Racing games and simulators
-:	Configure the vehicles applying the real-world techniques and tricks.
+:	Configure and fine-tune the vehicles applying the real-world techniques and tricks.
 
 Training simulators
 :	Apply the specifications of the real vehicle to Vehicle Physics Pro and develop a simulator for
@@ -20,11 +17,11 @@ Prototyping
 :	Experiment with any crazy idea you may have: two engines, one per front-rear axle? Observe the
 	behavior and all the side effects!
 
-### Ease of use
+### Easy of use
 
 Vehicle Physics Pro comes with a set of ready-to-use components and vehicle prefabs to get you
-started in minutes. The VPVehicleController component includes all the necessary features for
-simulating most types of vehicles.
+started in minutes. The [VPVehicleController](../components/vehicle-controller.md) component includes all the
+necessary features for simulating most types of vehicles.
 
 ### Highly accurate simulation model
 
@@ -35,9 +32,9 @@ behaviors and side effects.
 Even exotic side effects like these happen in VPP:
 
 - [Driveline windup](https://en.wikipedia.org/wiki/Driveline_windup) (also _axle binding_ or
-	_driveline binding_) arises if the vehicle setup meets the same conditions. The binding can be
-	clearly observed at the telemetry as accumulated torques and counter-torques at the wheels,
-	even with the vehicle stopped.
+	_driveline binding_) arises if the vehicle setup uses rigid shafts for connecting the wheels.
+	The binding can be clearly observed at the telemetry as accumulated torques and counter-torques
+	at the wheels, even with the vehicle stopped.
 - Engine stall & inertial restart: release the clutch abruptly and the engine may stall. Leave
 	a stalled vehicle go downwards a slope, press clutch, engage 2nd gear, and release the clutch
 	when the vehicle has gained some velocity. The engine restarts.
@@ -45,7 +42,7 @@ Even exotic side effects like these happen in VPP:
 	causes a counter-rotation of the opposite wheel, the same exact amount but in the reverse
 	direction.
 
-None of the above has been explicitly implemented: all those effects are natural consequences of
+Nothing of the above has been explicitly implemented: all those effects are natural consequences of
 the actual core design of the simulation model, proving its accuracy.
 
 ### High Performance
@@ -77,43 +74,26 @@ VPP easily integrates into existing projects.
 The VPP kit is plain C# code without any external dependency. The code uses the namespace
 `VehiclePhysics` for preventing conflicts with other code.
 
-
-
-
-#### Highly flexible and extensible
+### Fully flexible and extensible
 
 Any wheeled vehicle real of fictitious may be simulated in Vehicle Physics Pro. The dynamics model
-uses connected functional blocks for implementing the power train. You can combine these blocks
-(engine, gearbox, differentials, ...) in any number and combination.
+connects several _functional blocks_ for implementing the power train.
 
-         ##### Fully extensible
-
-You can design your own vehicles combining the provided functional blocks in any number and
-combination you want. Two engines, each one powering one axle? Sure. Twenty wheel drive, all
-connected to a single gearbox and engine, using a myriad of differentials, torque splitters and gear
-reductions? Why not.
+You can design your own vehicles combining the provided functional blocks (engine, gearbox,
+differentials...) in any number and combination you want. Two engines, each one powering one axle?
+Sure. Twenty wheel drive, all connected to a single gearbox and engine, using a myriad of
+differentials, torque splitters and gear reductions? Why not.
 
 You can even write your own functional blocks and plug them into your vehicles along with all other
 standard blocks. Want to implement a turbine engine? Continuously Variable Transmissions (CVT)? It's
 easy in Vehicle Physics Pro!
 
+### And much more!
 
-
-
-
-##### Seamlessly integration into existing projects
-
-The VPP kit is plain C# code without any external dependency. The code uses the namespace
-`VehiclePhysics` for preventing conflicts with other code.
-
-##### Extensive, detailed documentation
-
-Take a look around ;)
-
-##### GIT repository access
-
-Professional and Enterprise licensees obtain direct access to the GIT repository I use to develop
-Vehicle Physics Pro. You can use continuous integration systems
+- Seamlessly integration into existing projects
+- Highly detailed documentation
+- GIT repository access (Professional and Enterprise licensees)
+- Redmine tracking system access (Enterprise licensees)
 
 
 
