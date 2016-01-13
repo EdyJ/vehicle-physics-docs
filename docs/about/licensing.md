@@ -1,13 +1,13 @@
 # Licensing Vehicle Physics Pro
 
-&fa-info-circle:lg; The Professional License add-on is available now for [Early Access](../early-access.md)
-(Alpha and Beta) for **$320** without requiring the Standard license. This offer will be lifted
-after the first version has been published at the Unity Asset Store. Contact me at [edytado@gmail.com](mailto:edytado@gmail.com)
+&fa-info-circle:lg; The Professional License add-on is available now for **Early Access**
+(Alpha and Beta stages) for **$320** without requiring the Standard license. This offer will be
+lifted after the first version has been published at the Unity Asset Store. Contact me at [edytado@gmail.com](mailto:edytado@gmail.com)
 for more information.
 {: .alert .alert-info }
 
 &fa-warning:lg; License versions, terms, content and pricing are _not_ definitive. Anything may
-change during the alpha and beta stages.
+change during the Alpha and Beta stages.
 {: .alert .alert-warning }
 
 Free edition (To Be Announced)

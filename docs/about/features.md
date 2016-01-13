@@ -54,7 +54,7 @@ most precision out of these powerful systems.
 
 !!! info ""
 	VPP vehicles have been tested at update rates as low as 16 Hz (physics time step of 0.06)
-	without noticeable adverse effects. This is a negligible impact on the CPU usage.
+	without noticeable adverse effects. This means a negligible impact on the CPU usage.
 
 The dynamics calculations are performed by a flexible integration solver. The substeps used by the
 solver on each integration [can be configured](../advanced/misc-topics-explained/#solver-numeric-integration)
