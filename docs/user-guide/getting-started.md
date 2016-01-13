@@ -3,11 +3,13 @@
 **Welcome to Vehicle Physics Pro!** The most complete, accurate and realistic vehicle physics kit
 available for Unity 3D.
 
-Let's play some example scenes so you could get started quickly.
-Start with Scenes/Playground Scenes/P
+Let's play some example scenes so you could get started quickly. Load the scene:
 
+ **Scenes/Playground Scenes/Playground 1k - JPickup - Standard Input**
 
-Vehicles typically begin with the engine off. For starting the engine:
+and Play it.
+
+The vehicles in all these scenes typically begin with the engine off. For starting the engine:
 
 1. Press <kbd>K</kbd> for moving the ignition key from "Off" to "Drive" (check out the telemetry
 window)
@@ -31,34 +33,34 @@ Key(s) | Function | Notes
 <kbd>Tab</kbd> | Gear Up | Auto-shift might revert to the previous gear
 <kbd>Caps Lock</kbd> | Gear Down | Auto-shift might revert to the previous gear
 <kbd>1</kbd>-<kbd>5</kbd> | Engage gear | Auto-shift might discard the change and choose a more convenient gear
-<kbd>Page up</kbd><kbd>Page down</kbd> | Gear mode | Select the different gear modes in Automatic transmission (M P R N D L). The actual modes may be engaged or not depending on specific conditions (i.e. Reverse requires the vehicle to be nearly stopped).
-<kbd>alt+mouse</kbd> | Camera movement and zoom
+<kbd>Page up</kbd><kbd>Page down</kbd> | Gear mode | Select the different gear modes if the vehicle has Automatic transmission (M P R N D L). The actual modes may be engaged or not depending on specific conditions (i.e. Reverse requires the vehicle to be nearly stopped).
+<kbd>B</kbd> | Toggle telemetry data
+<kbd>C</kbd> | Change camera
+<kbd>F1-F4</kbd> | Select different camera modes
 <kbd>Escape</kbd> | Reset scene
 <kbd>T</kbd> | Toggle slow motion mode
 
-
 The main component that implements the vehicle simulation is **[VPVehicleController](../components/vehicle-controller.md)**.
-The object **VP Test Vehicle** in the pickup test scene contains this component with all its
-settings to play with.
+The object **VPP Pickup** in the pickup test scene contains this component with all its settings to
+play with:
 
-The actual setup of the vehicle is:
+- **Axes:** references to the wheels and assign steering and brakes to them.
+- **Steering:** steering angle, ackerman, toe.
+- **Brakes:** brake torques, balance, handbrake.
+- **Tires:** tire friction model and parameters.
+- **Driveline:** driveline type and component setup (differentials, torque splitter). Current setup
+	is AWD with main drive power applied at the rear axle and a torque splitter dynamically routing
+	part of the power to the front axle.
+- **Engine:** torque and power curves, rpm limiter, stall settings.
+- **Clutch:** type of clutch and parameters. Using a torque converter is very handy when a real
+	clutch simulation (Disc Friction) is not required.
+- **Gearbox:** transmission type, gear ratios, auto-shift parameters.
+- **Retarder:** typically used by heavy vehicles, not used at the pickup (zero levels).
+- **Advanced / Experimental settings:** leave then untouched for now. [Learn more](../advanced/vehiclebase-reference.md#advanced-experimental-settings)
 
-- **Engine:** powerful engine (140 hp) with rather realistic stall settings.
-- **Clutch:** torque converter, which doesn't require an active clutch pedal, and makes the engine
-harder to stall. Still, clutch can be manually engaged with <kbd>shift</kbd>.
-- **Gearbox:** manual 5-speed gearbox with auto-shift enabled
-- **Transmission:** AWD with main drive power at the rear axle and a torque splitter routing part of
-the power to the front axle.
-- **Brakes:** 70:30 balanced to the front.
-- **Steering:** standard Ackerman geometry.
-- **Tire friction:** Isotropic Pacejka friction with a peak coefficient of friction of 1.1. Tire
-relaxation is enabled with a rate simulating standard road wheels.
-- **Solver:** Euler with two integration steps. Physic step is 0.02 seconds (50Hz), so vehicle
-calculations are done at 100Hz.
+### Vehicle Physics Pro structure
 
-### Vehicle Physics Pro insights
-
-Current project layout:
+These are the actual folders for the Vehicle Physics Pro Beta project:
 
     Assets
     |- Core

@@ -13,11 +13,11 @@ latest news and announcements.
 !!! warning "&fa-warning:lg; Project under development"
 
 	The project status is **Beta**. This documentation is work in progress. [Early Access](early-access.md)
-	to the project's repository is available with the [Professional License](index.md#licensing) (see below).
+	to the project's repository is available with the [Professional License](about/licensing.md).
 
 
 
-[![Vehicle Physics Pro Alpha Sandbox scene](img/vehicle-physics-pro-alpha-sandbox-02.jpg){: .img-medium }](early-access.md#sandbox-scene)
+![Vehicle Physics Pro Alpha Sandbox scene](img/vehicle-physics-pro-alpha-sandbox-02.jpg){: .img-medium }
 
 #### Development roadmap
 
@@ -83,17 +83,17 @@ Additional components
 
 ### Features
 
+Advanced AAA+ vehicle physics simulation
+
+:	Built around a physics solver providing accurate results for all vehicle types and setups.
+	The precision of the numeric results depends on the integration steps only.
+
 Modular implementation
 
 :	Vehicle blocks are independent units with inputs and/or outputs that can be connected in
 	any combination. Any vehicle setup can be emulated by arranging and connecting blocks.
 	Package includes standard vehicle blocks such as engine, clutch, gearbox, differential,
 	torque splitter, and more.
-
-Advanced AAA+ vehicle physics simulation
-
-:	Built around a physics solver providing accurate results for all vehicle types and setups.
-	The precision of the numeric results depends on the integration steps only.
 
 Advanced wheel and tire friction simulation
 
@@ -106,4 +106,4 @@ Realistic and coherent
 	forces, torques and frictions. This model is easier to understand and simpler to calculate than
 	the commonly used models, yet providing physically accurate and realistic results.
 
-[Learn more](overview)
+[Learn more](about/features.md)
