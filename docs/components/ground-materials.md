@@ -15,6 +15,20 @@ physic material assigned). The Ground Material Manager looks up the physic mater
 **Ground Materials** list and returns the first `GroundMaterial` object that matches the given
 physic material. If no match is found then the **Fallback** material is returned.
 
+!!! warning "&fa-warning; Loading scenes and objects from bundles"
+
+	[Unity bundles](http://docs.unity3d.com/Manual/AssetBundlesIntro.html) store copies of the
+	physic materials. When the bundle loaded, the physic materials are loaded as new _instances_,
+	not references to the original. Thus, a GroundMaterialManager existing in the scene wouldn't
+	recognize those materials.
+
+	Possible Solutions:
+	- Include the GroundMaterialManager in the bundle, so references to the physic materials are
+		preserved.
+	- Explicitly fix the references to the physic materials in the colliders after loading the
+		bundle. You can compare by name and assign a correct reference so the physic materials
+		can be found in the GroundMaterialManager list.
+
 ### GroundMaterial
 
 The `GroundMaterial` class holds the data and objects associates to a specific ground material. The

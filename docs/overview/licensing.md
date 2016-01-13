@@ -59,6 +59,7 @@ Access to the GIT repository							|	|	| &fa-check;	| &fa-check;	|
 Exclusive high-quality scenes and vehicles				|	|	| &fa-check; | &fa-check;	|
 Direct support via Skype / Telegram						|	| 	| &fa-check;	| &fa-check;	|
 Priority support and consultancy services				|	| 	| 	| &fa-check;	|
+Access to the project's tracking system (RedMine)		|	| 	| 	| &fa-check;	|
 License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
 May be licensed by companies with anual revenue / funds / budget in excess of US\$100,000	|	| 	|	| &fa-check;	|
 30 days of Expert Assistance							|	|	|	| &fa-check;	|

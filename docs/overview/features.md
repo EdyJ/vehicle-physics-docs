@@ -2,7 +2,10 @@
 
 Vehicle Physics Pro is the most complete, accurate and realistic vehicle physics kit available for
 Unity 3D. It's based on a vehicle simulation model conceived, designed and implemented from scratch
-for providing the most accurate vehicle physics on any condition.
+for providing the most accurate vehicle physics and dynamics on any condition.
+
+
+
 
 ### Applications
 
@@ -25,23 +28,27 @@ simulating most types of vehicles.
 
 ### Highly accurate simulation model
 
-Vehicle Physics Pro vehicles exhibit all behaviors and side effects of each specific vehicle setup.
-Even exotic effects like these happen in VPP:
+VPP is consolidated on a solid vehicle dynamics model. There are no guesses nor arbitrary
+assumptions. The design is physically accurate, so it accounts for all the expected and unexpected
+behaviors and side effects.
+
+Even exotic side effects like these happen in VPP:
 
 - [Driveline windup](https://en.wikipedia.org/wiki/Driveline_windup) (also _axle binding_ or
 	_driveline binding_) arises if the vehicle setup meets the same conditions. The binding can be
-	clearly observed at the telemetry as accumulated torques and counter-torques affecting the
-	wheels.
-- Engine stall & inertial restart: leave a stalled vehicle go downwards a slope, press clutch, engage
-	2nd gear, and release the clutch when the vehicle has gained some velocity. The engine restarts.
+	clearly observed at the telemetry as accumulated torques and counter-torques at the wheels,
+	even with the vehicle stopped.
+- Engine stall & inertial restart: release the clutch abruptly and the engine may stall. Leave
+	a stalled vehicle go downwards a slope, press clutch, engage 2nd gear, and release the clutch
+	when the vehicle has gained some velocity. The engine restarts.
 - Differential coupling: when the engine is off and a gear or Park is engaged, rotating one wheel
 	causes a counter-rotation of the opposite wheel, the same exact amount but in the reverse
 	direction.
 
-None of the above have been explicitly implemented: all those effects are natural consequences of
+None of the above has been explicitly implemented: all those effects are natural consequences of
 the actual core design of the simulation model, proving its accuracy.
 
-### Performance
+### High Performance
 
 The dynamics concept in the core of VPP is so simple that provides an outstanding performance while
 keeping the accuracy of the simulation. This makes the kit perfectly suitable for mobile and low-end
@@ -67,19 +74,46 @@ VPP easily integrates into existing projects.
 - Menu integration (Component > Vehicle Physics)
 - Intuitive inspectors
 
-### Complete
+The VPP kit is plain C# code without any external dependency. The code uses the namespace
+`VehiclePhysics` for preventing conflicts with other code.
+
 
 
 
 #### Highly flexible and extensible
 
-Any vehicle real of fictitious may be simulated in Vehicle Physics Pro. The dynamics model uses
-connected functional blocks for implementing the power train.
+Any wheeled vehicle real of fictitious may be simulated in Vehicle Physics Pro. The dynamics model
+uses connected functional blocks for implementing the power train. You can combine these blocks
+(engine, gearbox, differentials, ...) in any number and combination.
 
-Just connect the functional
-blocks in any number and combination and make
+         ##### Fully extensible
+
+You can design your own vehicles combining the provided functional blocks in any number and
+combination you want. Two engines, each one powering one axle? Sure. Twenty wheel drive, all
+connected to a single gearbox and engine, using a myriad of differentials, torque splitters and gear
+reductions? Why not.
+
+You can even write your own functional blocks and plug them into your vehicles along with all other
+standard blocks. Want to implement a turbine engine? Continuously Variable Transmissions (CVT)? It's
+easy in Vehicle Physics Pro!
 
 
+
+
+
+##### Seamlessly integration into existing projects
+
+The VPP kit is plain C# code without any external dependency. The code uses the namespace
+`VehiclePhysics` for preventing conflicts with other code.
+
+##### Extensive, detailed documentation
+
+Take a look around ;)
+
+##### GIT repository access
+
+Professional and Enterprise licensees obtain direct access to the GIT repository I use to develop
+Vehicle Physics Pro. You can use continuous integration systems
 
 
 
