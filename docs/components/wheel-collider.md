@@ -7,14 +7,14 @@ This component implements the wheel colling entity in Unity 3D:
 - Comprehensive wheel gizmo at the Scene view
 - Visual meshes for wheel, brake caliper and suspension geometry
 
-< pic: component inspector >
+![VPP WheelCollider inspector](/img/components/vpp-wheelcollider.png)
 
 &fa-thumbs-o-up; The context menu option **"Adjust position and radius to the Wheel mesh"** at
 the VPWheelCollider component automatically calculates position, radius and center to match the
-visual Wheel mesh specified at Visual Objects.
+visual **Wheel** mesh specified at Visual Objects.
 {: .alert .alert-info }
 
-< pic: context menu at the component inspector, option pointed >
+![VPP WheelCollider context menu](/img/components/vpp-wheelcollider-context-menu.png){: .img-small }
 
 ### Mass, radius
 
@@ -30,13 +30,13 @@ adverse effects in the numeric stability. Ensure to use a mass large enough for 
 Position offset to the center of the wheel.
 
 The `VPWheelCollider` component should be placed in the same position as its corresponding visual
-Wheel transform (but _not_ in the same hierarchy, see Visual Objects below). Then the center
-property is used to match the actual position of the wheel.
+Wheel transform (but _not_ in the same hierarchy, see [Visual Objects](#visual-objects) below). Then
+the center property is used to match the actual position of the wheel.
 
 The best position for the wheel collider's center is the outer part of the wheel. It provides better
 accuracy and stability.
 
-< pic: capture of the gizmo at the proper position >
+![VPP WheelCollider position](/img/components/vpp-wheelcollider-position.png){: .img-small }
 
 ### Suspension parameters
 
@@ -68,9 +68,9 @@ Damper rate ($N/ms^{-1}$)
 ### Suspension analysis tool
 
 Expand the "Analysis" section under the Suspension settings of the VPWheelCollider component
-(select any wheel collider in your vehicle's hierarchy)
+(select any wheel collider in your vehicle's hierarchy):
 
-< pic: component with analysis expanded >
+![VPP WheelCollider suspension analysis](/img/components/vpp-wheelcollider-suspension-analysis.png){: .img-small }
 
 The suspension analysis tool doesn't have effect on the actual suspension behavior. It just
 calculates the suspension data based on the given compression ratio at rest.

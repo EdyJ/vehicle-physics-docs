@@ -56,6 +56,10 @@ img.img-medium
 	width: 520px;
 	}
 
+img.img-small
+	{
+	width: 320px;
+	}
 
 
 /* Nicely formatted centered title and subtitle */
