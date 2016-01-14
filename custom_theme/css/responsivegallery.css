@@ -29,7 +29,7 @@
 	height: 100%; /* Full height */
 	overflow: auto; /* Enable scroll if needed */
 	background-color: rgb(0,0,0); /* Fallback color */
-	background-color: rgba(0,0,0,0.85); /* Black w/ opacity */
+	background-color: rgba(0,0,0,0.92); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
@@ -56,6 +56,18 @@
 	text-decoration: none;
 	cursor: pointer;
 }
+
+#responsivegallery_caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
 
 /* Responsive Columns */
 @media only screen and (max-width: 700px){
