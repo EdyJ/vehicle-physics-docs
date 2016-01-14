@@ -2,7 +2,7 @@
 
 The vehicle-equivalent of Unity's character controller. Simulates most types of vehicles.
 
-![VPP Vehicle Controller](/img/components/vpp-vehicle-controller.png)
+![VPP Vehicle Controller](/img/components/vpp-vehicle-controller.png){: .clickview }
 
 &fa-thumbs-o-up; You can [write your own custom vehicle controller](../advanced/custom-vehicles.md){: .alert-link }
 for special types of vehicles not directly covered by the stock Vehicle Controller component.
@@ -35,7 +35,7 @@ vehicle. The vertical position affects the stability.
 Each axle references the left-right wheels ([VPWheelCollider](../components/wheel-collider))
 components) and configure its features.
 
-![VPP Vehicle Controller axles](/img/components/vpp-vehicle-controller-axles.png){: .img-small }
+![VPP Vehicle Controller axles](/img/components/vpp-vehicle-controller-axles.png){: .img-small .clickview }
 
 ##### Left-right wheels
 
