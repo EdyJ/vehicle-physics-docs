@@ -44,21 +44,25 @@ canvas
 
 img
 	{
-	display: block;
+	/*display: block;
 	margin: 20px auto;
 	max-width: 93%;
-	height: auto;
+	height: auto;*/
+	display: block;
+	margin: 20px auto;
+	max-width: 100%;
+
 	}
 
 
 img.img-medium
 	{
-	width: 520px;
+	max-width: 520px;
 	}
 
 img.img-small
 	{
-	width: 320px;
+	max-width: 320px;
 	}
 
 

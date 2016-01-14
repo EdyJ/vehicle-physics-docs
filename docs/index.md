@@ -10,6 +10,23 @@ Stay tunned! Follow **[@VehiclePhysics](https://twitter.com/VehiclePhysics)** on
 latest news and announcements.
 {: .title }
 
+<div class="row" style="margin-left:-5px; margin-right:-5px">
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-10-04_135207.jpg" alt="Comeme la pollaca1"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-10-04_141353.jpg" alt="Comeme la pollaca2"></div><div class="clearfix visible-sm"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-11-12_161446.png" alt="Comeme la pollaca3"></div><div class="clearfix visible-md"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-12-03_141956.png" alt="Comeme la pollaca4"></div><div class="clearfix visible-lg visible-sm"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-10-04_135207.jpg" alt="Comeme la pollaca1"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-10-04_141353.jpg" alt="Comeme la pollaca2"></div><div class="clearfix visible-sm visible-md"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-11-12_161446.png" alt="Comeme la pollaca3"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-12-03_141956.png" alt="Comeme la pollaca4"></div><div class="clearfix visible-lg visible-sm"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-10-04_135207.jpg" alt="Comeme la pollaca1"></div><div class="clearfix visible-md"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-10-04_141353.jpg" alt="Comeme la pollaca2"></div><div class="clearfix visible-sm"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-11-12_161446.png" alt="Comeme la pollaca3"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-12-03_141956.png" alt="Comeme la pollaca4"></div><div class="clearfix"></div>
+</div>
+
+
+
 Advanced AAA+ vehicle physics simulation
 
 :	Built around a physics solver providing accurate results for all vehicle types and setups.
@@ -53,7 +70,7 @@ Realistic and coherent
 
 	Feel free to write me to [edytado@gmail.com](mailto:edytado@gmail.com).
 
-![Vehicle Physics Pro Alpha Sandbox scene](img/vehicle-physics-pro-alpha-sandbox-02.jpg){: .img-medium }
+![Vehicle Physics Pro Alpha Sandbox scene](img/vehicle-physics-pro-alpha-sandbox-02.jpg){: .img-medium .clickview }
 
 #### Development roadmap
 

@@ -163,10 +163,10 @@ Details: [Gearbox block](../blocks/gearbox.md)
 
 ### Retarder
 
-![VPP Vehicle Controller retarder](/img/blocks/vpp-retarder-inspector.png){: .img-small }
-
 Retarder brake based on angular velocity. The retarder brake is commonly used in trucks, buses
 and heavy vehicles.
+
+![VPP Vehicle Controller retarder](/img/blocks/vpp-retarder-inspector.png){: .img-small }
 
 Details: [Retarder block](../blocks/retarder.md)
 
