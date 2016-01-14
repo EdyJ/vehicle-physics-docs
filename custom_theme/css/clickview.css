@@ -1,24 +1,14 @@
 /* Inspired on http://www.w3schools.com/css/css_image_gallery.asp (link: http://www.w3schools.com/css/tryit.asp?filename=trycss_image_gallery_responsive_js) */
+
 /* The Image */
 .clickview {
 	width: 100%;
 	height: auto;
 	cursor: pointer;
 }
-/*
-* {
-	box-sizing: border-box;
-}*/
-
-/* Add Responsiveness */
-.responsivegallery {
-	padding: 0 6px;
-	float: left;
-	width: 25%;
-}
 
 /* The Modal (background) */
-#responsivegallery_modal {
+#clickview_modal {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 9999; /* Sit on top (and over bootstrap nav bar)*/
@@ -33,14 +23,14 @@
 }
 
 /* Modal Content (image) */
-#responsivegallery_content {
+#clickview_content {
 	margin: auto;
 	display: block;
 	cursor: pointer;
 }
 
 /* The Close Button */
-#responsivegallery_close {
+#clickview_close {
 	position: absolute;
 	top: 15px;
 	right: 35px;
@@ -50,14 +40,14 @@
 	transition: 0.3s;
 }
 
-#responsivegallery_close:hover,
-#responsivegallery_close:focus {
+#clickview_close:hover,
+#clickview_close:focus {
 	color: #bbb;
 	text-decoration: none;
 	cursor: pointer;
 }
 
-#responsivegallery_caption {
+#clickview_caption {
     margin: auto;
     display: block;
     width: 80%;
@@ -68,24 +58,3 @@
     height: 150px;
 }
 
-
-/* Responsive Columns */
-@media only screen and (max-width: 700px){
-	.responsivegallery {
-		width: 50%;
-		margin: 6px 0;
-	}
-}
-
-@media only screen and (max-width: 500px){
-	.responsivegallery {
-		width: 100%;
-	}
-}
-
-/* Clear Floats */
-.clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
-}
