@@ -9,7 +9,7 @@ components don't cover your needs or you need other features.
 
 Manages and plays the audio effects of the vehicle.
 
-< pic: VPAudio inspector>
+![VPP Audio](/img/components/vpp-audio-inspector.png){: .img-small }
 
 Audio Clip Template
 :	An Unity AudioSource component that will be used as template when playing one-shot clips, such
@@ -69,7 +69,7 @@ being contacted.
 
 The actual particle emitters and tire marks renderers are managed at the [Ground Material Manager](ground-materials.md).
 
-< pic: VPTireEffects inspector >
+![VPP Tire Effects](/img/components/vpp-tire-effects-inspector.png){: .img-small }
 
 Tire width
 :	Width of the tires. Used for the tire marks and the particles.
@@ -78,9 +78,9 @@ Min Slip, Max Slip
 :	Slip range in m/s to be considered minimum and maximum for all the effects. For example, the
 	skid marks are most intense above Max Slip, and they vanish below Min Slip.
 
-	The slip value can be seen in runtime in the [Telemetry](vehicle-debug.md):
+	The effect use the _combined slip_ which can be seen in runtime in the [Telemetry](vehicle-debug.md):
 
-	< Pic: telemetry data, cropped to the Slip colum and Sc marked >
+	![VPP Telemetry combined slip](/img/components/vpp-telemetry-combined-slip.png){: .img-medium }
 
 ##### Tire Marks
 
@@ -108,12 +108,11 @@ Limit Intensity Time
 
 The internally accounted time is decreased when the tires are not skidding.
 
-
 ### VPVisualEffects
 
 Controls different visual effects in the vehicle
 
-< pic: VPVisualEffects Inspector >
+![VPP Visual Effects](/img/components/vpp-visual-effects-inspector.png){: .img-small }
 
 ##### Steering wheel
 
@@ -195,7 +194,7 @@ position of the GameObject containing this component.
 The recommended setup is having a VPAeroSurface GameObject at the middle of each axle, at least
 at front and rear. These components can configure the behavior of the vehicle at high speeds.
 
-< pic: VPAeroSurface inspector >
+![VPP Aero Surface](/img/components/vpp-aero-surface.png){: .img-medium }
 
 Drag Coefficient
 :	Coefficient for the drag force with the speed. The force is applied counteracting the vehicle's

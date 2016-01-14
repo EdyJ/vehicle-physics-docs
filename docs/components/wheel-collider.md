@@ -7,7 +7,7 @@ This component implements the wheel colling entity in Unity 3D:
 - Comprehensive wheel gizmo at the Scene view
 - Visual meshes for wheel, brake caliper and suspension geometry
 
-![VPP WheelCollider inspector](/img/components/vpp-wheelcollider.png)
+![VPP WheelCollider](/img/components/vpp-wheelcollider.png)
 
 &fa-thumbs-o-up; The context menu option **"Adjust position and radius to the Wheel mesh"** at
 the VPWheelCollider component automatically calculates position, radius and center to match the
