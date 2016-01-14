@@ -40,9 +40,13 @@ Key(s) | Function | Notes
 <kbd>Escape</kbd> | Reset scene
 <kbd>T</kbd> | Toggle slow motion mode
 
-The main component that implements the vehicle simulation is **[VPVehicleController](../components/vehicle-controller.md)**.
+##### Vehicle settings
+
+The main component that implements the vehicle simulation is **[VP Vehicle Controller](../components/vehicle-controller.md)**.
 The object **VPP Pickup** in the pickup test scene contains this component with all its settings to
 play with:
+
+< pic: inspector folded >
 
 - **Axes:** references to the wheels and assign steering and brakes to them.
 - **Steering:** steering angle, ackerman, toe.
@@ -58,7 +62,32 @@ play with:
 - **Retarder:** typically used by heavy vehicles, not used at the pickup (zero levels).
 - **Advanced / Experimental settings:** leave then untouched for now. [Learn more](../advanced/vehiclebase-reference.md#advanced-experimental-settings)
 
-### Vehicle Physics Pro structure
+Suspension is handled by the VP Wheel Collider components:
+
+< pic: scene + hierarchy + wheelcollider selected >
+
+##### Other components
+
+<: pic the other components, folded >
+
+Input
+
+Audio
+
+Tire Effects
+
+Telemetry
+
+Visual Effects
+
+Camera Target Config
+
+##### Ground Materials
+
+
+
+
+## Vehicle Physics Pro structure
 
 These are the actual folders for the Vehicle Physics Pro Beta project:
 
@@ -100,7 +129,7 @@ on how the vehicles are implemented and simulated by overriding the virtual meth
 	- [Miscellaneous topics explained](../advanced/misc-topics-explained.md)
 	- [Data Bus reference](../advanced/databus-reference.md)
 
-### Components
+## Components
 
 #### VPWheelCollider
 

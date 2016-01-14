@@ -11,7 +11,7 @@ be happy to help you.
 
 #### Usability and coherency
 
-How easy to use, easy to understand, and intuitive are other packages?
+_How easy to use, easy to understand, and intuitive are other packages?_
 
 Some kits expose a single component with everything inside it. Others artificially split the
 features into an excessive number of components, requiring each single change to be traversed around
@@ -39,7 +39,7 @@ single place.
 
 #### Extension possibilities
 
-How easy is to add new features or extensions to the vehicles for adapting them to your project?
+_How easy is to add new features or extensions to the vehicles for adapting them to your project?_
 
 Some kits are built on a monolithic script that are very hard to understand, modify or adapt.
 Others are so badly structured that the code is spread on a lot of arbitrary scripts and components,
@@ -49,8 +49,8 @@ becoming very difficult to understand, use, and extend.
 
 - You can [write custom component add-ons](../advanced/custom-addons.md) as standard Unity
 	components for adding new features or integrating the vehicles with your project.
-- You can [write custom vehicles](../advanced/custom-vehicles.md) if the provided vehicle controller
-	doesn't fit your needs.
+- You can [design and implement custom vehicles](../advanced/custom-vehicles.md) if the provided
+	vehicle controller doesn't fit your needs.
 - You can [write custom functionality blocks](../advanced/custom-blocks.md) and combine them with
 	the included blocks (engines, gears, other parts...) if you need simulating vehicle parts not
 	provided in the VPP kit.
@@ -59,7 +59,7 @@ becoming very difficult to understand, use, and extend.
 
 #### Integration into existing projects
 
-Can the vehicle physics kit be easy and harmlessly used in an existing project?
+_Can the vehicle physics kit be easy and harmlessly used in an existing project?_
 
 Some vehicle physic kits come as _Complete Project_ or _Project Template_. Those kits are typically
 someone's sandbox project for adding things, performing experiments and recording videos. But
@@ -67,7 +67,7 @@ they're _not_ designed to be easily integrated into existing projects. First, yo
 create a new project for importing the kit (otherwise it would override your own project's settings).
 Then you would have to export (!) the vehicles and scripts from the new project to .unitypackage
 files, and finally import them into your own project. In the end, you'll have a bunch of prefabs and
-a ton of integration work to be mostly guessed.
+a ton of integration work ahead.
 
 **Vehicle Physics Pro has been conceived and designed as Editor Extension**, making it
 straightforward and harmless to include into existing projects:
@@ -89,21 +89,21 @@ vehicles.
 
 #### Performance
 
-Which are the performance requirements of the package?
+_Which are the performance requirements of the package?_
 
-This gives a clue on the quality of the code and the design. Saying _"it takes 1,4% cpu usage, which
-is very low and surely it works on mobile"_ means nothing. Some packages require you to configure
-the Unity Physics engine to work at 100Hz or more (default is 50Hz). This effectively doubles the
-cpu impact for _all_ the physics. But it's justified? I think that denotes a bad and unoptimized
-design.
+The requirements give a clue on the quality of the code and the design. Saying _"it takes 1,4% cpu
+usage, which is very low and surely it works on mobile"_ means nothing. Some packages even require
+you to configure Unity Physics to work at 100Hz or more (default is 50Hz). This effectively
+doubles the cpu impact for _all_ the physics. But it's justified? I think that denotes a bad
+and unoptimized design.
 
 **Vehicle Physics Pro has been tested with physic rates as low as 16 Hz (physics time step of 0.06)
 without noticeable adverse effects.** This means a negligible impact of the vehicle physics in the
 cpu usage!
 
 In addition, the [integration substeps](../advanced/misc-topics-explained/#solver-numeric-integration)
-for the VPP solver can be configured per-vehicle. This means that you could have the Unity physics
-engine working at the default 50Hz, but the main vehicle may perform its calculations at 400Hz
+at the VPP solver can be configured per-vehicle. This means that you could have the Unity physics
+engine working at the default 50Hz, but the main vehicle could perform its calculations at 400Hz
 (8 substeps).
 
 #### Documentation
@@ -120,13 +120,22 @@ When someone ask me about a topic requiring a detailed reply, I typically add th
 documentation for everyone wondering the same topic. Check out [Miscellaneous Topics Explained](../advanced/misc-topics-explained.md).
 The VPP documentation can be edited on-the-fly for any modification or addition.
 
-#### Updates and support
+#### Source code, updates and platform support
 
-[Professional and Enterprise licensees](licensing.md) obtain direct access to the GIT repository I
-use to develop Vehicle Physics Pro. You can use continuous integration systems for keeping your
-project up to date with the latest revision without having to wait for Asset Store updates.
+_Is the source code provided? How to get updates? Does it support all platforms?_
 
-Enterprise licenses also receive credentials for the project's Redmine tracking system, so they
+Some kits provide their entire code as DLL. Others even provide _Windows only_ or platform-specific
+native (!!) DLLs.
+
+**Vehicle Physics Pro is 100% standard C# Unity code compatible with ALL platforms, present and
+future, supported by Unity 3D**.
+
+In addition, [Professional and Enterprise licensees](licensing.md) obtain direct access to the GIT
+repository I use for developing Vehicle Physics Pro. You can use continuous integration systems for
+keeping your project up to date with the latest revision without having to wait for Asset Store
+updates.
+
+Enterprise licensees also receive credentials for the project's Redmine tracking system, so they
 can open tickets for bugs and requests directly.
 
 ## Comparison with Edy's Vehicle Physics
@@ -135,7 +144,7 @@ can open tickets for bugs and requests directly.
 and Vehicle Physics Pro (**VPP**) are two completely different products targeting different needs.
 
 **EVP** provides a very simple vehicle controller where the actual _behavior_ or the vehicle is
-configured directly with a few paramters: how much can it steer, how much can it drift, how much
+configured directly with a few parameters: how much can it steer, how much can it drift, how much
 accelerates, brakes, etc. EVP is targeted to arcade vehicles requiring physically realistic
 behaviors, but the most important features being the gameplay and the handling of the vehicle.
 
