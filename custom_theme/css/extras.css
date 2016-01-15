@@ -51,6 +51,12 @@ img
 	max-width: 100%;		/* For responsive */
 	}
 
+iframe
+	{
+	display: block;
+	margin: 20px auto;
+	}
+
 
 img.img-medium
 	{
