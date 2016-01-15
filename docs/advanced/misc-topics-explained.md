@@ -602,6 +602,5 @@ many wheels have the flag `wheelState.grounded` enabled.
 adds the wheels to the `wheelState` array in the same order as they're specified in the `Axles`
 property. Typically, the order is front to rear, left and right. But this order not strictly
 enforced, it might vary if the user specifies axes in a different order. Also, custom vehicle
-controllers might add the wheels to the array in a different order. Front to rear, left-right is
-the recommended convention.
-
+controllers might add the wheels to the array in a different order. The recommend order is
+Left1, Right1, Left2, Right2, Left3, Right3, etc. being 1, 2, 3, ... the axles from front to rear.
