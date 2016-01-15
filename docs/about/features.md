@@ -2,7 +2,7 @@
 
 **Vehicle Physics Pro** is the most complete, accurate and realistic vehicle physics kit available
 for Unity 3D. It's based on a vehicle simulation model conceived, designed and implemented from
-scratch for providing the most accurate vehicle physics and dynamics on any condition.
+scratch for providing accurate vehicle physics and dynamics on any condition.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SdeJcpWNHsw" frameborder="0" allowfullscreen></iframe>
 
