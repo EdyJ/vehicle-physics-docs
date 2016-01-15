@@ -14,14 +14,14 @@ Wheels can be accessed via wheels[n] and wheelsState[n] after calling SetNumberO
 
 "wheels" are the actual Wheel blocks. Required settings:
 
-	- radius
-	- mass
-	- tireFriction
+- radius
+- mass
+- tireFriction
 
 "wheelsState" are the meaningful values of the wheels. Required settings:
 
-	- wheelCol
-	- steerable
+- wheelCol
+- steerable
 
 Important: you must configure each WheelState with the corresponding the WheelCollider
 WheelState.wheelCol. Also, ensure to flag the steering wheels as steerable (this is used by the
@@ -56,7 +56,7 @@ Do NOT override the standard Update, FixedUpdate, or LateUpdate in the derived c
 
 ## Advanced / Experimental settings
 
-< pic: advanced settings >
+![VP Vehicle Controller advanced settings](/img/components/vpp-vehicle-controller-inspector-folded.png){: .img-small .clickview }
 
 Some of these settings are likely to be changed or moved in upcoming versions. Most important are
 described here.
@@ -107,10 +107,12 @@ Detailed information: [Solver substeps explained](../advanced/misc-topics-explai
 
 How the changes to the Center Of Mass are handled:
 
-- Disabled: Center of Mass is configured when enabling the vehicle only. Changing CoM requires
-	disabling/enabling the component for the new CoM to take effect.
-- Editor only: Runtime modifications to the CoM take effect immediately when playing the project
-	within the Unity Editor only. This is useful for configuring it at runtime.
-- Editor and Builds (_NOT RECOMMENDED_): Any modification to the CoM take effects immediately in
-	the project. This is not recommended as modifying the CoM triggers a bunch of expensive
+- Disabled: Center of Mass is configured when enabling the vehicle only. Changing CoM in runtime
+	requires disabling/enabling the `VPVehicleController` component for the new CoM to have effect.
+
+- Editor only: Runtime modifications to the CoM have effect immediately when playing the project
+	within the Unity Editor only. This is useful for configuring the CoM at runtime.
+
+- Editor and Builds (_NOT RECOMMENDED_): Any modification to the CoM has effect immediately in
+	the vehicle. This is not recommended as modifying the CoM triggers a bunch of expensive
 	calculations in the Unity physics engine.

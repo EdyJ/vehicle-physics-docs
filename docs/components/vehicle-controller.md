@@ -177,4 +177,4 @@ Details: [Retarder block](../blocks/retarder.md)
 
 ### Advanced / Experimental settings
 
-These are detailed at the [VehicleBase reference](../advanced/vehiclebase-reference.md).
+These are detailed at the [VehicleBase reference](/advanced/vehiclebase-reference#advanced-experimental-settings).
