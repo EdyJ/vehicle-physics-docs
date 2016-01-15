@@ -106,9 +106,9 @@ features:
 :	Displays a overlay window with detailed numeric data on the wheels and the vehicle. Toggle with
 	the <kbd>B</kbd> key.
 
-[VP Camera Target Setup](/components/camera#vpcameratargetsetup)
+[VP Camera Target Setup](/components/camera-controller#vpcameratargetsetup)
 
-:	Configures the parameters for this vehicle to be properly pointed at with the [Camera](/components/camera)
+:	Configures the parameters for this vehicle to be properly pointed at with the [Camera Controller](/components/camera-controller)
 	component, such as minimum distance, view height, and more.
 
 #### Ground Materials
@@ -124,8 +124,8 @@ effects (marks, smoke...) on that material.
 
 #### Camera Controller
 
-The component [VP Camera Controller](/components/camera#vpcameracontroller) controls the camera
-movement based on the target vehicle and several camera modes available.
+The component [VP Camera Controller](/components/camera-controller) controls the camera movement 
+based on the target vehicle and several camera modes available.
 
 ![VP Camera Controller](/img/components/vpp-camera-controller-inspector.png){: .img-medium .clickview }
 
