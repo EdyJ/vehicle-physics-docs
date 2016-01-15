@@ -10,20 +10,22 @@ Stay tunned! Follow **[@VehiclePhysics](https://twitter.com/VehiclePhysics)** on
 latest news and announcements.
 {: .title }
 
-<div class="row" style="margin: 20px -5px">
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-10-04_135207.jpg" alt="Comeme la pollaca1"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-10-04_141353.jpg" alt="Comeme la pollaca2"></div><div class="clearfix visible-sm"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-11-12_161446.png" alt="Comeme la pollaca3"></div><div class="clearfix visible-md"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-12-03_141956.png" alt="Comeme la pollaca4"></div><div class="clearfix visible-lg visible-sm"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-10-04_135207.jpg" alt="Comeme la pollaca1"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-10-04_141353.jpg" alt="Comeme la pollaca2"></div><div class="clearfix visible-sm visible-md"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-11-12_161446.png" alt="Comeme la pollaca3"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-12-03_141956.png" alt="Comeme la pollaca4"></div><div class="clearfix visible-lg visible-sm"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-10-04_135207.jpg" alt="Comeme la pollaca1"></div><div class="clearfix visible-md"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-10-04_141353.jpg" alt="Comeme la pollaca2"></div><div class="clearfix visible-sm"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-11-12_161446.png" alt="Comeme la pollaca3"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="/img/gallery/2015-12-03_141956.png" alt="Comeme la pollaca4"></div><div class="clearfix"></div>
-</div>
+<div class="imagegallery" sm="2" md="3" lg="4" images="img/gallery/vpp-gallery-ferrari.jpg img/gallery/vpp-gallery-lancer.jpg img/gallery/vpp-gallery-huracan.jpg img/gallery/vpp-gallery-jpickup.jpg img/gallery/vpp-gallery-truck-setup.jpg"></div>
+
+<!-- div class="row" style="margin: 20px -5px">
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-ferrari.jpg" alt=""></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-lancer.jpg" alt=""></div><div class="clearfix visible-sm"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-huracan.jpg" alt=""></div><div class="clearfix visible-md"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-jpickup.jpg" alt=""></div><div class="clearfix visible-lg visible-sm"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div><div class="clearfix visible-sm visible-md"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div><div class="clearfix visible-lg visible-sm"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div><div class="clearfix visible-md"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div><div class="clearfix visible-sm"></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div>
+<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div><div class="clearfix"></div>
+</div -->
 
 
 
