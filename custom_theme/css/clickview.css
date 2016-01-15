@@ -2,7 +2,7 @@
 
 /* The Image */
 .clickview {
-	width: 100%;
+	/* width: 100%;  Removed- enlarges non-clicked pictures beyond their pixel dimensions */
 	height: auto;
 	cursor: pointer;
 }
