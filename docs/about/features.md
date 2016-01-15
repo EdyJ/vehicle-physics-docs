@@ -1,8 +1,8 @@
 # Features
 
-Vehicle Physics Pro is the most complete, accurate and realistic vehicle physics kit available for
-Unity 3D. It's based on a vehicle simulation model conceived, designed and implemented from scratch
-for providing the most accurate vehicle physics and dynamics on any condition.
+**Vehicle Physics Pro** is the most complete, accurate and realistic vehicle physics kit available
+for Unity 3D. It's based on a vehicle simulation model conceived, designed and implemented from
+scratch for providing the most accurate vehicle physics and dynamics on any condition.
 
 ### Applications
 
@@ -10,18 +10,18 @@ Racing games and simulators
 :	Configure and fine-tune the vehicles applying the real-world techniques and tricks.
 
 Training simulators
-:	Apply the specifications of the real vehicle to Vehicle Physics Pro and develop a simulator for
+:	Apply the specifications of real vehicles to Vehicle Physics Pro and build a simulator for
 	training drivers.
 
 Prototyping
-:	Experiment with any crazy idea you may have: two engines, one per front-rear axle? Observe the
-	behavior and all the side effects!
+:	Experiment with any crazy idea you may have: two engines, one per front-rear axle? Why not.
+	Observe the behavior and all the side effects!
 
-### Easy of use
+### Easy to use
 
 Vehicle Physics Pro comes with a set of ready-to-use components and vehicle prefabs to get you
-started in minutes. The [VPVehicleController](../components/vehicle-controller.md) component includes all the
-necessary features for simulating most types of vehicles.
+started in minutes. The [VPVehicleController](../components/vehicle-controller) component
+includes all the necessary features for simulating most types of vehicles.
 
 ### Highly accurate simulation model
 
@@ -43,9 +43,9 @@ Even exotic side effects like these happen in VPP:
 	direction.
 
 Nothing of the above has been explicitly implemented: all those effects are natural consequences of
-the actual core design of the simulation model, proving its accuracy.
+the actual design of the core simulation model, proving its accuracy.
 
-### High Performance
+### High performance
 
 The dynamics concept in the core of VPP is so simple that provides an outstanding performance while
 keeping the accuracy of the simulation. This makes the kit perfectly suitable for mobile and low-end

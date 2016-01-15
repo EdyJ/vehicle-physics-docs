@@ -1,13 +1,13 @@
 # Licensing Vehicle Physics Pro
 
-&fa-info-circle:lg; The Professional License add-on is available now for **Early Access**
-(Alpha and Beta stages) for **$320** without requiring the Standard license. This offer will be
-lifted after the first version has been published at the Unity Asset Store. Contact me at [edytado@gmail.com](mailto:edytado@gmail.com)
-for more information.
+&fa-info-circle:lg; **Early Access** to Vehicle Physics Pro is now available with the Professional
+and Enterprise Licenses. [Compare licenses and pricing](#compare-editions) below. Contact me at
+[edy@vehiclephysics.com](mailto:edy@vehiclephysics.com){: .alert-link } for more information.
 {: .alert .alert-info }
 
-&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive. Anything may
-change during the Alpha and Beta stages.
+&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive. They are subject
+to changes during the Beta stage. Price discounts will be removed when the first VPP version is
+released.
 {: .alert .alert-warning }
 
 Free edition (To Be Announced)
@@ -40,8 +40,7 @@ Expert Assistance
 
 :	Let me take a close look at your project and I'll propose solutions to your specific issues
 	with vehicles. I can also configure your vehicles to match your project's specifications.
-	[Ask me](mailto:edytado@gmail.com) me for a quote.
-
+	[Ask me](mailto:edy@vehiclephysics.com) me for a quote.
 
 ### Compare editions
 
@@ -68,19 +67,21 @@ Flat license for all other present and future Vehicle Physics products<br>([Edy'
 
 > Notes:
 >
-> - _Free, Standard and Professional licenses may not be licensed by any commercial or
-> non-commercial entity with annual gross revenues, funds (including crowfunding), or total annual
-> budget in excess of US\$100,000._
->
 > - _Professional license is an add-on to the Standard license._
 >
 > - _Licenses may be upgraded anytime by paying the price difference._
 
 ### Terms and conditions
 
+- _Free, Standard and Professional licenses may not be licensed by any commercial or non-commercial
+	entity with annual gross revenues, funds (including crowfunding), or total annual budget in
+	excess of US\$100,000._
+
 - No part of the source code may be disclosed to a third party.
-- Vehicle Physics Pro may be used as part of end-user products **only**. No development libraries,
-development tools, or middleware of any kind is permitted to use technologies from Vehicle Physics
-Pro.
+
+- Vehicle Physics Pro may be used as part of end-user, closed source products **only**. No
+	development libraries, development tools, open-source or middleware of any kind is permitted to
+	use technologies from Vehicle Physics Pro.
+
 - GIT credentials (Professional and Enterprise licenses) must be kept safe and private.
 
