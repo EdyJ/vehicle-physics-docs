@@ -19,6 +19,7 @@ markdown_extensions:
       base: "fa"
       prefix: "fa-"
   - mathjax
+  - codehilite
 
 pages:
 - "&#8201;": index.md
