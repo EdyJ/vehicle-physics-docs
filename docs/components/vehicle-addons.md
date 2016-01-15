@@ -9,7 +9,7 @@ components don't cover your needs or you need other features.
 
 Manages and plays the audio effects of the vehicle.
 
-![VPP Audio](/img/components/vpp-audio-inspector.png){: .img-small }
+![VP Audio](/img/components/vpp-audio-inspector.png){: .img-small .clickview }
 
 Audio Clip Template
 :	An Unity AudioSource component that will be used as template when playing one-shot clips, such
@@ -69,7 +69,7 @@ being contacted.
 
 The actual particle emitters and tire marks renderers are managed at the [Ground Material Manager](ground-materials.md).
 
-![VPP Tire Effects](/img/components/vpp-tire-effects-inspector.png){: .img-small }
+![VP Tire Effects](/img/components/vpp-tire-effects-inspector.png){: .img-small .clickview }
 
 Tire width
 :	Width of the tires. Used for the tire marks and the particles.
@@ -80,7 +80,7 @@ Min Slip, Max Slip
 
 	The effect use the _combined slip_ which can be seen in runtime in the [Telemetry](vehicle-debug.md):
 
-	![VPP Telemetry combined slip](/img/components/vpp-telemetry-combined-slip.png){: .img-medium }
+	![VP Telemetry combined slip](/img/components/vpp-telemetry-combined-slip.png){: .img-medium .clickview }
 
 ##### Tire Marks
 
@@ -112,7 +112,7 @@ The internally accounted time is decreased when the tires are not skidding.
 
 Controls different visual effects in the vehicle
 
-![VPP Visual Effects](/img/components/vpp-visual-effects-inspector.png){: .img-small }
+![VP Visual Effects](/img/components/vpp-visual-effects-inspector.png){: .img-small .clickview }
 
 ##### Steering wheel
 
@@ -194,7 +194,7 @@ position of the GameObject containing this component.
 The recommended setup is having a VPAeroSurface GameObject at the middle of each axle, at least
 at front and rear. These components can configure the behavior of the vehicle at high speeds.
 
-![VPP Aero Surface](/img/components/vpp-aero-surface.png){: .img-medium }
+![VP Aero Surface](/img/components/vpp-aero-surface.png){: .img-medium .clickview }
 
 Drag Coefficient
 :	Coefficient for the drag force with the speed. The force is applied counteracting the vehicle's

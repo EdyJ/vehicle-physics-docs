@@ -2,7 +2,7 @@
 
 The vehicle-equivalent of Unity's character controller. Simulates most types of vehicles.
 
-![VPP Vehicle Controller](/img/components/vpp-vehicle-controller.png){: .clickview }
+![VP Vehicle Controller](/img/components/vpp-vehicle-controller.png){: .clickview }
 
 &fa-thumbs-o-up; You can [write your own custom vehicle controller](../advanced/custom-vehicles.md){: .alert-link }
 for special types of vehicles not directly covered by the stock Vehicle Controller component.
@@ -35,7 +35,7 @@ vehicle. The vertical position affects the stability.
 Each axle references the left-right wheels ([VPWheelCollider](../components/wheel-collider))
 components) and configure its features.
 
-![VPP Vehicle Controller axles](/img/components/vpp-vehicle-controller-axles.png){: .img-small .clickview }
+![VP Vehicle Controller axles](/img/components/vpp-vehicle-controller-axles.png){: .img-small .clickview }
 
 ##### Left-right wheels
 
@@ -62,7 +62,7 @@ Steering settings for this axle:
 
 Steering parameters for the vehicle: angle, Ackerman, toe...
 
-![VPP Vehicle Controller steering](/img/blocks/vpp-steering-inspector.png){: .img-small }
+![VP Vehicle Controller steering](/img/blocks/vpp-steering-inspector.png){: .img-small .clickview }
 
 Details: [Steering helper](../blocks/steering.md)
 
@@ -70,7 +70,7 @@ Details: [Steering helper](../blocks/steering.md)
 
 Brake parameters for the vehicle, including brake power, brake balance and handbrake.
 
-![VPP Vehicle Controller brakes](/img/blocks/vpp-brakes-inspector.png){: .img-small }
+![VP Vehicle Controller brakes](/img/blocks/vpp-brakes-inspector.png){: .img-small .clickview }
 
 Details: [Brakes helper](../blocks/brakes.md)
 
@@ -78,7 +78,7 @@ Details: [Brakes helper](../blocks/brakes.md)
 
 Tire friction model and settings for the wheels of the vehicle.
 
-![VPP Vehicle Controller tires](/img/blocks/vpp-tires-inspector.png){: .img-small }
+![VP Vehicle Controller tires](/img/blocks/vpp-tires-inspector.png){: .img-small .clickview }
 
 Details: [Tire friction](../blocks/tires.md)
 
@@ -87,7 +87,7 @@ Details: [Tire friction](../blocks/tires.md)
 Configures the driven axles and the elements makes the connections among them and with the drive
 torque upstream.
 
-![VPP Vehicle Controller driveline](/img/blocks/vpp-driveline-inspector.png){: .img-small }
+![VP Vehicle Controller driveline](/img/blocks/vpp-driveline-inspector.png){: .img-small .clickview }
 
 The driveline settings can define up to 4 driven axles connected in a variety of ways using
 differentials in several configurations (open, locked) and torque splitters. Each configuration
@@ -98,7 +98,7 @@ Depending on the chosen configuration, different additional parts will be availa
 Differential or Axle Differential
 :	Differentials connecting two wheels of the same axle.
 
-![VPP Vehicle Controller differential](/img/blocks/vpp-differential-inspector.png){: .img-small }
+![VP Vehicle Controller differential](/img/blocks/vpp-differential-inspector.png){: .img-small .clickview }
 
 Inter-axle Differential
 :	Differentials connecting two axle differentials together before routing the connection upstream
@@ -111,7 +111,7 @@ Center Differential
 Torque Splitter
 :	A device that provides dynamic torque routing among two outputs.
 
-![VPP Vehicle Controller torque splitter](/img/blocks/vpp-torque-splitter-inspector.png){: .img-small }
+![VP Vehicle Controller torque splitter](/img/blocks/vpp-torque-splitter-inspector.png){: .img-small .clickview }
 
 Details:
 
@@ -123,7 +123,7 @@ Details:
 
 Set up the engine of the vehicle.
 
-![VPP Vehicle Controller engine](/img/blocks/vpp-engine-inspector.png){: .img-small }
+![VP Vehicle Controller engine](/img/blocks/vpp-engine-inspector.png){: .img-small .clickview }
 
 &fa-thumbs-o-up; Feel free to play with these values while monitoring the resulting engine
 performance data in the graph and below it. If the combination of values is not correct a warning
@@ -136,7 +136,7 @@ Details: [Engine block](../blocks/engine.md)
 
 The clutch couples the engine with the transmission and driveline.
 
-![VPP Vehicle Controller clutch](/img/blocks/vpp-clutch-inspector.png){: .img-small }
+![VP Vehicle Controller clutch](/img/blocks/vpp-clutch-inspector.png){: .img-small .clickview }
 
 - Lock ratio: a kind of ideal coupling based on locking percent.
 - Disc friction: realistic clutch providing a limited torque coupling.
@@ -149,7 +149,7 @@ Details: [Clutch block](../blocks/clutch.md)
 
 Transmission type, gear ratios and transmission settings.
 
-![VPP Vehicle Controller gearbox](/img/blocks/vpp-gearbox-inspector.png){: .img-small }
+![VP Vehicle Controller gearbox](/img/blocks/vpp-gearbox-inspector.png){: .img-small .clickview }
 
 - Automatic transmission
 - Automatic transmission with manual shifting (M)
@@ -166,7 +166,7 @@ Details: [Gearbox block](../blocks/gearbox.md)
 Retarder brake based on angular velocity. The retarder brake is commonly used in trucks, buses
 and heavy vehicles.
 
-![VPP Vehicle Controller retarder](/img/blocks/vpp-retarder-inspector.png){: .img-small }
+![VP Vehicle Controller retarder](/img/blocks/vpp-retarder-inspector.png){: .img-small .clickview }
 
 Details: [Retarder block](../blocks/retarder.md)
 

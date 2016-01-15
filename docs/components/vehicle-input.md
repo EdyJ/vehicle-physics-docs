@@ -28,7 +28,7 @@ The vehicle implements the ignition key with three positions: OFF, ON, and IGNIT
 Reads the input from Unity's standard Input class, which is configured at Edit > Project Settings >
 Input.
 
-![VPP Standard input](/img/components/vpp-standard-input-inspector.png){: .img-small }
+![VP Standard input](/img/components/vpp-standard-input-inspector.png){: .img-small .clickview }
 
 Throttle And Brake Mode
 :	Behavior of the vertical input axis:
@@ -72,7 +72,7 @@ Gear Shift Button
 :	Button for gear shifting. It must have positive and negative bindings defined at the Input
 	settings (_Edit > Project Settings > Input_, see pic below).
 
-![VPP Standard Input bidirectional bindings](/img/components/vpp-standard-input-bidirectional-bindings.png){: .img-small }
+![VP Standard Input bidirectional bindings](/img/components/vpp-standard-input-bidirectional-bindings.png){: .img-small .clickview }
 
 Gear Mode Select Button
 :	Button for selecting gear mode in automatic transmissions (R, N, D ...). It must have positive
@@ -111,7 +111,7 @@ the buggy LogitechSteeringWheelEnginesWrapper.dll. Proper steering wheel support
 soon for VPP.
 {: .alert .alert-warning }
 
-![VPP Logitech Input](/img/components/vpp-logitech-input-inspector.png){: .img-small }
+![VP Logitech Input](/img/components/vpp-logitech-input-inspector.png){: .img-small .clickview }
 
 ##### Input
 

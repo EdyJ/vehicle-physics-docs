@@ -7,14 +7,14 @@ This component implements the wheel colling entity in Unity 3D:
 - Comprehensive wheel gizmo at the Scene view
 - Visual meshes for wheel, brake caliper and suspension geometry
 
-![VPP WheelCollider](/img/components/vpp-wheelcollider.png)
+![VP WheelCollider](/img/components/vpp-wheelcollider.png){: .clickview }
 
 &fa-thumbs-o-up; The context menu option **"Adjust position and radius to the Wheel mesh"** at
 the VPWheelCollider component automatically calculates position, radius and center to match the
 visual **Wheel** mesh specified at Visual Objects.
 {: .alert .alert-info }
 
-![VPP WheelCollider context menu](/img/components/vpp-wheelcollider-context-menu.png){: .img-small }
+![VP WheelCollider context menu](/img/components/vpp-wheelcollider-context-menu.png){: .img-small .clickview }
 
 ### Mass, radius
 
@@ -36,7 +36,7 @@ the center property is used to match the actual position of the wheel.
 The best position for the wheel collider's center is the outer part of the wheel. It provides better
 accuracy and stability.
 
-![VPP WheelCollider position](/img/components/vpp-wheelcollider-position.png){: .img-small }
+![VP WheelCollider position](/img/components/vpp-wheelcollider-position.png){: .img-small .clickview }
 
 ### Suspension parameters
 
@@ -70,7 +70,7 @@ Damper rate ($N/ms^{-1}$)
 Expand the "Analysis" section under the Suspension settings of the VPWheelCollider component
 (select any wheel collider in your vehicle's hierarchy):
 
-![VPP WheelCollider suspension analysis](/img/components/vpp-wheelcollider-suspension-analysis.png){: .img-small }
+![VP WheelCollider suspension analysis](/img/components/vpp-wheelcollider-suspension-analysis.png){: .img-small .clickview }
 
 The suspension analysis tool doesn't have effect on the actual suspension behavior. It just
 calculates the suspension data based on the given compression ratio at rest.
