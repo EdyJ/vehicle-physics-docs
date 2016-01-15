@@ -12,7 +12,7 @@ Mode
 
 Target
 :	Transform the camera movement will use / follow / rotate around / etc.
-	If the target GameObject contains a [VPCameraTargetConfig](#vpcameratargetconfig) component,
+	If the target GameObject contains a [VPCameraTargetSetup](#vpcameratargetsetup) component,
 	then some parameters of each mode may be loaded from it.
 
 Change Camera Key
@@ -29,7 +29,7 @@ Hot Key
 
 Attach target
 :	Target transform the camera will be attached to.
-	Filled with `VPCameraTargetConfig.attachToPoint` if Target contains a [VPCameraTargetConfig](#vpcameratargetconfig)
+	Filled with `VPCameraTargetSetup.attachToPoint` if Target contains a [VPCameraTargetSetup](#vpcameratargetsetup)
 	component.
 
 #### Smooth Follow
@@ -43,12 +43,12 @@ Hot Key
 :	Hot key for selecting this mode, or `KeyCode.None` for no key.
 
 Distance
-:	Horizontal distance to the target. Filled with `VPCameraTargetConfig.viewDistance` if Target
-	contains a [VPCameraTargetConfig](#vpcameratargetconfig) component.
+:	Horizontal distance to the target. Filled with `VPCameraTargetSetup.viewDistance` if Target
+	contains a [VPCameraTargetSetup](#vpcameratargetsetup) component.
 
 Height
-:	Vertical elevation to look at the target from. Filled with `VPCameraTargetConfig.viewHeigh` if
-	Target contains a [VPCameraTargetConfig](#vpcameratargetconfig) component.
+:	Vertical elevation to look at the target from. Filled with `VPCameraTargetSetup.viewHeigh` if
+	Target contains a [VPCameraTargetSetup](#vpcameratargetsetup) component.
 
 Height Multiplier
 :	Height is multiplied by this value and applied to the position. Useful when Height is filled
@@ -59,8 +59,8 @@ Height Damping
 :	How fast the camera position responds to changes in elevation.
 
 Rotation Damping
-:	How fast the camera responds to orientation changes. Filled with `VPCameraTargetConfig.viewDamping`
-	if Target contains a [VPCameraTargetConfig](#vpcameratargetconfig) component.
+:	How fast the camera responds to orientation changes. Filled with `VPCameraTargetSetup.viewDamping`
+	if Target contains a [VPCameraTargetSetup](#vpcameratargetsetup) component.
 
 Follow Velocity
 :	If checked the camera follows the direction of the velocity. Otherwise, it always follows the
@@ -79,8 +79,8 @@ Hot Key
 :	Hot key for selecting this mode, or `KeyCode.None` for no key.
 
 Distance
-:	Horizontal distance to the target. Filled with `VPCameraTargetConfig.viewDistance` if Target
-	contains a [VPCameraTargetConfig](#vpcameratargetconfig) component.
+:	Horizontal distance to the target. Filled with `VPCameraTargetSetup.viewDistance` if Target
+	contains a [VPCameraTargetSetup](#vpcameratargetsetup) component.
 
 Min Vertical Angle, Max Vertical Angle
 :	Allowed angle range of vertical movement.
@@ -95,8 +95,8 @@ Orbit Damping
 :	How fast the camera responds to orbit movement.
 
 Min Distance, MaxDistance
-:	Allowed distance range to the target. _minDistance_ is filled with `VPCameraTargetConfig.viewDistance`
-	if Target contains a [VPCameraTargetConfig](#vpcameratargetconfig) component.
+:	Allowed distance range to the target. _minDistance_ is filled with `VPCameraTargetSetup.viewDistance`
+	if Target contains a [VPCameraTargetSetup](#vpcameratargetsetup) component.
 
 Distance Speed
 :	Speed of change of the distance to the target.
@@ -163,12 +163,12 @@ Sideways Axis
 Vertical Axis
 :	Axis name for vertical movement.
 
-# VPCameraTargetConfig
+# VPCameraTargetSetup
 
 Add this component to a vehicle for configuring the camera when the vehicle is selected as Target
 in the camera controller [VPCameraController](#vpcameracontroller).
 
-![VP Camera Target Config Inspector](/img/components/vpp-camera-target-config-inspector.png){: .img-medium .clickview }
+![VP Camera Target Setup](/img/components/vpp-camera-target-setup.png){: .img-medium .clickview }
 
 Look At Point
 :	Transform the camera will point at when this vehicle is selected as Target. Use the Center Of

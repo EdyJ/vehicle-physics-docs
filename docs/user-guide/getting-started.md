@@ -106,7 +106,7 @@ features:
 :	Displays a overlay window with detailed numeric data on the wheels and the vehicle. Toggle with
 	the <kbd>B</kbd> key.
 
-[VP Camera Target Config](/components/camera#vpcameratargetconfig)
+[VP Camera Target Setup](/components/camera#vpcameratargetsetup)
 
 :	Configures the parameters for this vehicle to be properly pointed at with the [Camera](/components/camera)
 	component, such as minimum distance, view height, and more.
