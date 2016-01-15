@@ -547,19 +547,21 @@ vehicle:
 1. Specify the **compression ratio** you want to study under the "Analysis" section. This
 section doesn't have any effect on the actual configuration. It just makes the calculations and shows
 the results.
+
 2. Configure the **damper rate** value at the suspension settings.
+
 3. Watch the resulting **damping ratio** value for that damper value.
 
 This _damping ratio_ defines the behavior of the vehicle according to the dampers. I've studied
 several settings with these results:
 
-- &lt; 0.3: safe values working as expected.
-- 0.3 - 1.0: mostly stable but may expose unrealistic behaviors such as the vehicle being "glued" or
+- **&lt; 0.3:** safe values working as expected.
+- **0.3 - 1.0:** mostly stable but may expose unrealistic behaviors such as the vehicle being "glued" or
 	artificially pushed towards the ground.
-- 1.0 - 1.6: potentially unstable and unrealistically behaving on many situations.
-- &gt; 1.6: mostly unstable, bounces, shakes, etc.
+- **1.0 - 1.6:** potentially unstable and unrealistically behaving on many situations.
+- **&gt; 1.6:** mostly unstable, bounces, shakes, etc.
 
-I'd recommend you to use damper values so the damper ratio stays at 0.3 - 0.4 at most.
+I'd recommend you to use damper values so the damper ratio stays at **0.3 - 0.4** at most.
 
 ---
 

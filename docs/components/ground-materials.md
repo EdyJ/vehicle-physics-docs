@@ -34,9 +34,9 @@ match the colliders without physic material assigned.
 
 ### GroundMaterial
 
-The `GroundMaterial` class holds the data and objects associates to a specific ground material. The
-Ground Materials are defined and managed at the VPGroundMaterialManager component. Ground Materials
-are used by the vehicle and its add-ons.
+The class `VehiclePhysics.GroundMaterial` holds the data and objects associates to a specific ground
+material. The Ground Materials are defined and managed at the VPGroundMaterialManager component.
+Ground Materials are used by the vehicle and its add-ons.
 
 ![VP Ground Material Inspector](/img/components/vpp-ground-material-inspector.png){: .img-small .clickview }
 

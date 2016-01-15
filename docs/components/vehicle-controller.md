@@ -4,6 +4,11 @@ The vehicle-equivalent of Unity's character controller. Simulates most types of 
 
 ![VP Vehicle Controller](/img/components/vpp-vehicle-controller.png){: .clickview }
 
+The vehicle controller exposes the settings for the center of mass, axles and powertrain: steering,
+brakes, tires, driveline, engine, clutch, gearbox and retarder. Other settings for the wheels
+(radius, mass) and suspension (spring, damper) are configured at each [VP Wheel Collider](wheel-collider)
+component independently.
+
 &fa-thumbs-o-up; You can [write your own custom vehicle controller](../advanced/custom-vehicles.md){: .alert-link }
 for special types of vehicles not directly covered by the stock Vehicle Controller component.
 {: .alert .alert-info }

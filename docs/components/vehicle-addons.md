@@ -9,12 +9,12 @@ components don't cover your needs or you need other features.
 
 Manages and plays the audio effects of the vehicle.
 
-![VP Audio](/img/components/vpp-audio-inspector.png){: .img-small .clickview }
+![VP Audio](/img/components/vpp-audio.png){: .img-medium .clickview }
 
 Audio Clip Template
 :	An Unity AudioSource component that will be used as template when playing one-shot clips, such
 	as impacts. Each one-time audio effect copies this AudioSource, plays the corresponding
-	audio clip once at the effect position, then destroys the copy. The AudioSurce doesn't
+	audio clip once at the effect position, then destroys the copy. This AudioSurce doesn't
 	need to be part of the hierarchy of the vehicle.
 
 Engine

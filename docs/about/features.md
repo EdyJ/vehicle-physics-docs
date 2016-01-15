@@ -19,6 +19,10 @@ Prototyping
 :	Experiment with any crazy idea you may have: two engines, one per front-rear axle? Why not.
 	Observe the behavior and all the side effects!
 
+Learning and Teaching
+:	Learn how real vehicles and internal parts work: basics, requirements, behaviors, side-effects,
+	configuration techniques, performance tips...
+
 ### Easy to use
 
 Vehicle Physics Pro comes with a set of ready-to-use components and vehicle prefabs to get you
