@@ -1,8 +1,8 @@
 
 ## Vehicle Physics Pro
 
-Advanced vehicle simulation kit providing fully realistic and accurate
-vehicle physics in [Unity 3D](http://unity3d.com).
+Advanced vehicle simulation kit for [Unity 3D](http://unity3d.com) providing fully realistic and
+accurate vehicle physics.
 
 !!! warning "&fa-warning:lg; Project under development: **Beta stage**"
 

@@ -5,7 +5,7 @@ topics when considering adopting any vehicle physics kits in your own project:
 
 [TOC]
 
-&fa-question-circle:lg; Any questions? Feel free to [contact me](mailto:edytado@gmail.com) and I'll
+&fa-question-circle:lg; Any questions? Feel free to [contact me](mailto:edy@vehiclephysics.com) and I'll
 be happy to help you.
 {: .alert .alert-success }
 
@@ -23,15 +23,17 @@ scene for the change to be coherent.
 **Vehicle Physics Pro is designed with coherency in mind**. The code is well structured in scripts
 and components. It's easy to intuitively understand the role of each script and component:
 
-- A single [VPVehicleController](../components/vehicle-controller.md) script provides the entire
+- A single [VPVehicleController](../components/vehicle-controller) script provides the entire
 	vehicle physics and dynamics (axles, engine, gearbox, etc.)
-- The component [VPWheelCollider](../components/wheel-collider.md) implements the wheel entity,
+
+- The component [VPWheelCollider](../components/wheel-collider) implements the wheel entity,
 	the suspension settings and draws the wheel gizmo.
+
 - A set of add-on components can be **optionally** added to the vehicle for providing extra
-	features: [input](../components/vehicle-input.md),
-	[debug](../components/vehicle-debug.md),
-	[ground materials](../components/ground-materials.md),
-	[audio, visual effects, etc](../components/vehicle-addons.md).
+	features: [input](../components/vehicle-input),
+	[debug](../components/vehicle-debug),
+	[ground materials](../components/ground-materials),
+	[audio, visual effects, etc](../components/vehicle-addons).
 
 VPP is nicely structured and the parameters are centralized at several levels: scene-wide,
 vehicle-wide, etc. Whenever you need to modify something you will have to modify it only once at a
@@ -47,15 +49,18 @@ becoming very difficult to understand, use, and extend.
 
 **Vehicle Physics Pro is designed to be easily extensible and adaptable at several levels:**
 
-- You can [write custom component add-ons](../advanced/custom-addons.md) as standard Unity
+- You can [write custom component add-ons](../advanced/custom-addons) as standard Unity
 	components for adding new features or integrating the vehicles with your project.
-- You can [design and implement custom vehicles](../advanced/custom-vehicles.md) if the provided
+
+- You can [design and implement custom vehicles](../advanced/custom-vehicles) if the provided
 	vehicle controller doesn't fit your needs.
-- You can [write custom functionality blocks](../advanced/custom-blocks.md) and combine them with
+
+- You can [write custom functionality blocks](../advanced/custom-blocks) and combine them with
 	the included blocks (engines, gears, other parts...) if you need simulating vehicle parts not
 	provided in the VPP kit.
-- You can [write your own ground material manager](../components/ground-materials.md) if you want
-	to manage the ground materials in your own way.
+
+- You can [write your own ground material manager](../components/ground-materials) if you want
+	to manage the ground materials in your own way (i.e. weather, changing track conditions...).
 
 #### Integration into existing projects
 
@@ -114,11 +119,11 @@ professional product today deserves a truly professional documentation.
 **The Vehicle Physics Pro site expose all you want to know in a comprehensive and coherent
 structure**. Take a look around. It's even [hosted at GitHub](https://github.com/EdyJ/vehicle-physics-docs)
 and I'm open to additions, fixes, collaborations, etc. I update the documentation frequently while
-developing VPP.
+developing VPP. The site uses responsive design so it can be read even with mobile devices.
 
 When someone ask me about a topic requiring a detailed reply, I typically add the reply later to the
 documentation for everyone wondering the same topic. Check out [Miscellaneous Topics Explained](../advanced/misc-topics-explained.md).
-The VPP documentation can be edited on-the-fly for any modification or addition.
+The VPP documentation can be edited quickly for any modification or addition.
 
 #### Source code, updates and platform support
 
@@ -130,13 +135,16 @@ native (!!) DLLs.
 **Vehicle Physics Pro is 100% standard C# Unity code compatible with ALL platforms, present and
 future, supported by Unity 3D**.
 
-In addition, [Professional and Enterprise licensees](licensing.md) obtain direct access to the GIT
-repository I use for developing Vehicle Physics Pro. You can use continuous integration systems for
-keeping your project up to date with the latest revision without having to wait for Asset Store
-updates.
+In addition, [Professional and Enterprise licensees](licensing.md) obtain direct access to the full
+source code via GIT repository, the same I use for developing Vehicle Physics Pro. You can use
+continuous integration systems for keeping your project up to date with the latest revision without
+having to wait for Asset Store updates.
 
 Enterprise licensees also receive credentials for the project's Redmine tracking system, so they
 can open tickets for bugs and requests directly.
+
+In the Free and Standard licenses a portion of the source code of VPP (inner vehicle physics and
+dynamics) is provided as cross-platform .NET DLL assembly, compatible with all platforms.
 
 ## Comparison with Edy's Vehicle Physics
 
