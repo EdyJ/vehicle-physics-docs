@@ -1,4 +1,3 @@
-
 function SetBootstrapCols(row, attr)
 {
 	var a = row.attributes[attr];
@@ -13,14 +12,12 @@ for (var i = 0; i < galleries.length; i++)
 	row.className += " row";
 	row.setAttribute("style", "margin: 20px -5px");
 
-	var images = row.attributes["images"].value.split(" ");
+	var images = row.childNodes;
 
 	var xs = SetBootstrapCols(row, "xs");
 	var sm = SetBootstrapCols(row, "sm");
 	var md = SetBootstrapCols(row, "md");
 	var lg = SetBootstrapCols(row, "lg");
-
-	//console.log(xs + " " + sm + " " + md + " " + lg);
 
 	var xsCurrent = 0;
 	var smCurrent = 0;
@@ -29,16 +26,14 @@ for (var i = 0; i < galleries.length; i++)
 
 	for (var j = 0; j < images.length; ++j)
 	{
-		if (images[j] == "") continue;
+		var imgnode = images[j];
+		if (imgnode.localName != "img") continue;
+
 		var divnode = document.createElement("div")
 		divnode.setAttribute("class", "col-xs-" + xs + " col-sm-" + sm + " col-md-" + md + " col-lg-" + lg);
 		divnode.setAttribute("style", "padding:5px");
 
-		var imgnode = document.createElement("img")
-		imgnode.setAttribute("class", "clickview");
 		imgnode.setAttribute("style", "margin:0");
-		imgnode.setAttribute("src", images[j]);
-		//console.log(images[j]);
 
 		divnode.appendChild(imgnode);
 		row.appendChild(divnode);

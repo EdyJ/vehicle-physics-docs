@@ -10,23 +10,15 @@ Stay tunned! Follow **[@VehiclePhysics](https://twitter.com/VehiclePhysics)** on
 latest news and announcements.
 {: .title }
 
-<div class="imagegallery" sm="2" md="3" lg="4" images="img/gallery/vpp-gallery-ferrari.jpg img/gallery/vpp-gallery-lancer.jpg img/gallery/vpp-gallery-huracan.jpg img/gallery/vpp-gallery-jpickup.jpg img/gallery/vpp-gallery-truck-setup.jpg"></div>
+<div class="imagegallery" sm="2" md="3" lg="4" style="display:none">
+	<img class="clickview" src="img/gallery/vpp-ferrari.jpg"  alt="Ferrari">
+	<img class="clickview" src="img/gallery/vpp-lancer.jpg">
+	<img class="clickview" src="img/gallery/vpp-huracan.jpg">
+	<img class="clickview" src="img/gallery/vpp-jpickup.jpg">
+	<img class="clickview" src="img/gallery/vpp-ferrari-burnout.jpg">
 
-<!-- div class="row" style="margin: 20px -5px">
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-ferrari.jpg" alt=""></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-lancer.jpg" alt=""></div><div class="clearfix visible-sm"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-huracan.jpg" alt=""></div><div class="clearfix visible-md"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-jpickup.jpg" alt=""></div><div class="clearfix visible-lg visible-sm"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div><div class="clearfix visible-sm visible-md"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div><div class="clearfix visible-lg visible-sm"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div><div class="clearfix visible-md"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div><div class="clearfix visible-sm"></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div>
-<div class="col-sm-6 col-md-4 col-lg-3" style="padding:5px"> <img class="clickview" style="margin:0" src="img/gallery/vpp-gallery-.jpg" alt=""></div><div class="clearfix"></div>
-</div -->
 
+</div>
 
 
 Advanced AAA+ vehicle physics simulation
