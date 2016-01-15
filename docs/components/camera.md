@@ -2,10 +2,10 @@
 
 Controls the camera movement based on a target object. Allows several camera modes.
 
-To make the camera compatible with VR the Camera component must be located in a child GameObject
-of VRCameraController.
+To make the camera compatible with VR the main camera component must be located in a child
+GameObject of VRCameraController.
 
-< pic: VPCameraController inspector with settings folded >
+![VP Camera Controller Inspector](/img/components/vpp-camera-controller-inspector.png){: .img-medium .clickview }
 
 Mode
 :	How the camera moves and rotates with regards to the Target.
@@ -22,7 +22,7 @@ Change Camera Key
 
 The camera will be attached to the specified transform, without any further movement.
 
-< pic: Attach to settings >
+![VP Camera Controller Attach-To](/img/components/vpp-camera-controller-inspector-attach-to.png){: .img-small .clickview }
 
 Hot Key
 :	Hot key for selecting this mode, or `KeyCode.None` for no key.
@@ -37,7 +37,7 @@ Attach target
 The camera follows the target's velocity with smooth movements. This is the typical external vehicle
 camera.
 
-< pic: Smooth follow settings >
+![VP Camera Controller Smooth-Follow](/img/components/vpp-camera-controller-inspector-smooth-follow.png){: .img-small .clickview }
 
 Hot Key
 :	Hot key for selecting this mode, or `KeyCode.None` for no key.
@@ -73,7 +73,7 @@ Velocity Damping
 
 The camera moves around the target in world space.
 
-< pic: orbit settings >
+![VP Camera Controller Orbit](/img/components/vpp-camera-controller-inspector-orbit.png){: .img-small .clickview }
 
 Hot Key
 :	Hot key for selecting this mode, or `KeyCode.None` for no key.
@@ -121,7 +121,7 @@ Distance Axis
 Looks at the target from a fixed point in world space. Uses the actual position of the camera
 when the mode is selected.
 
-< pic: Look At settings >
+![VP Camera Controller Look-At](/img/components/vpp-camera-controller-inspector-look-at.png){: .img-small .clickview }
 
 Hot Key
 :	Hot key for selecting this mode, or `KeyCode.None` for no key.
@@ -152,7 +152,7 @@ Movement Damping
 :	How fast the camera position respond to the movement.
 
 These axis must be defined at the Unity Input settings (Edit > Project Settings > Input), or left
-blank for no assignment.
+blank for no assignment:
 
 Forward Axis
 :	Axis name for forwards movement.
@@ -168,7 +168,7 @@ Vertical Axis
 Add this component to a vehicle for configuring the camera when the vehicle is selected as Target
 in the camera controller [VPCameraController](#vpcameracontroller).
 
-< pic: VPCameraTargetConfig inspector >
+![VP Camera Target Config Inspector](/img/components/vpp-camera-target-config-inspector.png){: .img-medium .clickview }
 
 Look At Point
 :	Transform the camera will point at when this vehicle is selected as Target. Use the Center Of
