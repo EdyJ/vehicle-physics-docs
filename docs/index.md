@@ -61,6 +61,8 @@ Realistic and coherent
 	forces, torques and frictions. This model is easier to understand and simpler to calculate than
 	the commonly used models, yet providing physically accurate and realistic results.
 
+	[More features and details](about/features)
+
 #### Development roadmap
 
 &fa-check; Base: Tire friction, solver, modular torque model
@@ -131,7 +133,12 @@ Additional components
 	- Documentation: things you would want to learn, know about, or are not fully understood.
 	- Documentation: typo and grammar fixes.
 
-	Feel free to write me to [edy@vehiclephysics.com](mailto:edy@vehiclephysics.com).
+	Feel free to write me to [edy@vehiclephysics.com](mailto:edy@vehiclephysics.com) or via Twitter
+	[@VehiclePhysics](https://twitter.com/VehiclePhysics).
+
+<a class="twitter-timeline" href="https://twitter.com/VehiclePhysics" data-widget-id="687956324773179396">Tweets por el @VehiclePhysics.</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+{: .centered }
 
 <!--
 #### About me

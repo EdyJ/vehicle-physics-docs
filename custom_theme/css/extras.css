@@ -53,6 +53,8 @@ img
 
 iframe
 	{
+	/* Centered iframe */
+
 	display: block;
 	margin: 20px auto;
 	}
@@ -78,7 +80,7 @@ h1.title
     font-weight: 300;
 	}
 
-p.title
+p.centered
 	{
     text-align: center;
 	}
