@@ -28,15 +28,15 @@ latest news and announcements.
 	<img class="clickview" src="img/gallery/vpp-huracan.jpg" alt="Sports Supercar">
 	<img class="clickview" src="img/gallery/vpp-jpickup.jpg" alt="Japanese Pickup Truck">
 
-	<img class="clickview" src="img/gallery/vpp-ferrari-burnout.jpg">
-	<img class="clickview" src="img/gallery/vpp-ferrari-spa.jpg">
-	<img class="clickview" src="img/gallery/vpp-truck-trailer-setup.jpg">
-	<img class="clickview" src="img/gallery/vpp-truck-trailer-offroad.jpg">
+	<img class="clickview" src="img/gallery/vpp-ferrari-burnout.jpg" alt="Ferrari 458 doing some donuts and burnouts">
+	<img class="clickview" src="img/gallery/vpp-ferrari-spa.jpg" alt="Ferrari 458 at 195 kph / 120 mph before riding Eau Rouge at Spa-Francorchamps">
+	<img class="clickview" src="img/gallery/vpp-truck-trailer-setup.jpg" alt="Setting up a Mercedes-Benz Actros to attach to its trailer">
+	<img class="clickview" src="img/gallery/vpp-truck-trailer-offroad.jpg" alt="Extreme offroad test for the Mercedes-Benz Actros + trailer">
 
-	<img class="clickview" src="img/gallery/vpp-loop.jpg">
-	<img class="clickview" src="img/gallery/vpp-monza.jpg">
-	<img class="clickview" src="img/gallery/vpp-alpha-sandbox.jpg">
-	<img class="clickview" src="img/gallery/vpp-apc-setup.jpg">
+	<img class="clickview" src="img/gallery/vpp-loop.jpg" alt="Riding a loop with the Ferrari 458">
+	<img class="clickview" src="img/gallery/vpp-ferrari-monza.jpg" alt="Ferrari 458 taking the Variante del Rettifilo at Monza">
+	<img class="clickview" src="img/gallery/vpp-alpha-sandbox.jpg" alt="Early sandbox test with Vehicle Physics Pro">
+	<img class="clickview" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials">
 </div>
 
 Advanced AAA+ vehicle physics simulation
