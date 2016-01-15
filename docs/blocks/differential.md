@@ -1,6 +1,6 @@
 # Differential block
 
-![VP Vehicle Controller differential](/img/blocks/vpp-differential-inspector.png){: .img-small .clickview }
+![VP Vehicle Controller differential](/img/blocks/vpp-differential-inspector.png){: .clickview }
 
 #### References
 
