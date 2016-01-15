@@ -12,7 +12,8 @@ accurate vehicle physics.
 
 	- Some components and scripts are yet to be written or completed.
 	- Some features are yet to be implemented. See the [Roadmap](#development-roadmap) below.
-	- Documentation is being actively written and updated. Several parts are yet to be completed.
+	- **This documentation is being actively written and updated.** Some pages are yet to be
+		completed.
 
 	**Early Access** to Vehicle Physics Pro is now available with the Professional and Enterprise
 	licenses. [Learn more](about/licensing)

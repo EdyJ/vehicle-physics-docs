@@ -1,5 +1,6 @@
 # Engine block
 
+![VP Vehicle Controller engine](/img/blocks/vpp-engine-inspector.png){: .img-small .clickview }
 
 #### Power curve
 
