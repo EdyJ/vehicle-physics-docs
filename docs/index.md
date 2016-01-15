@@ -1,37 +1,54 @@
 
 ## Vehicle Physics Pro
 
----
-
-Vehicle Physics Pro is an advanced vehicle simulation kit providing fully realistic and accurate
+Advanced vehicle simulation kit providing fully realistic and accurate
 vehicle physics in [Unity 3D](http://unity3d.com).
 
-Stay tunned! Follow **[@VehiclePhysics](https://twitter.com/VehiclePhysics)** on Twitter for the
+!!! warning "&fa-warning:lg; Project under development: **Beta stage**"
+
+	**Beta stage** means the project is mature and bug-free enough to be used in actual projects,
+	but some features are yet to be developed and issues/bugs might appear. Main code is not
+	expected to have significant changes. Still, everything is provided as is without any warranty.
+
+	- Some components and scripts are yet to be written or completed.
+	- Some features are yet to be implemented. See the [Roadmap](#development-roadmap) below.
+	- Documentation is being actively written and updated. Several parts are yet to be completed.
+
+	**Early Access** to Vehicle Physics Pro is now available with the Professional and Enterprise
+	licenses. [Learn more](about/licensing)
+
+&fa-thumbs-up:lg; Stay tunned! Follow me [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link} on Twitter for the
 latest news and announcements.
-{: .title }
+{: .alert .alert-success }
 
 <div class="imagegallery" sm="2" md="3" lg="4" style="display:none">
-	<img class="clickview" src="img/gallery/vpp-ferrari.jpg"  alt="Ferrari">
-	<img class="clickview" src="img/gallery/vpp-lancer.jpg">
-	<img class="clickview" src="img/gallery/vpp-huracan.jpg">
-	<img class="clickview" src="img/gallery/vpp-jpickup.jpg">
+	<img class="clickview" src="img/gallery/vpp-ferrari.jpg"  alt="Ferrari 458 Italia">
+	<img class="clickview" src="img/gallery/vpp-lancer.jpg" alt="Sports Sedan">
+	<img class="clickview" src="img/gallery/vpp-huracan.jpg" alt="Sports Supercar">
+	<img class="clickview" src="img/gallery/vpp-jpickup.jpg" alt="Japanese Pickup Truck">
+
 	<img class="clickview" src="img/gallery/vpp-ferrari-burnout.jpg">
+	<img class="clickview" src="img/gallery/vpp-ferrari-spa.jpg">
+	<img class="clickview" src="img/gallery/vpp-truck-trailer-setup.jpg">
+	<img class="clickview" src="img/gallery/vpp-truck-trailer-offroad.jpg">
 
-
+	<img class="clickview" src="img/gallery/vpp-loop.jpg">
+	<img class="clickview" src="img/gallery/vpp-monza.jpg">
+	<img class="clickview" src="img/gallery/vpp-alpha-sandbox.jpg">
+	<img class="clickview" src="img/gallery/vpp-apc-setup.jpg">
 </div>
-
 
 Advanced AAA+ vehicle physics simulation
 
-:	Built around a physics solver providing accurate results for all vehicle types and setups.
-	The precision of the numeric results depends on the integration steps only.
+:	Built around an accurate physics solver providing realistic results for all vehicle types and
+	setups. The precision of the numeric results depends on the integration steps only.
 
 Modular implementation
 
-:	Vehicle blocks are independent units with inputs and/or outputs that can be connected in
-	any combination. Any vehicle setup can be emulated by arranging and connecting blocks.
-	Package includes standard vehicle blocks such as engine, clutch, gearbox, differential,
-	torque splitter, and more.
+:	Vehicle dynamics is implemented as functional blocks with inputs and/or outputs that can be
+	connected in any number and combination. Any vehicle setup can be emulated by arranging and
+	connecting blocks. Package includes standard vehicle blocks such as engine, clutch, gearbox,
+	differential, torque splitter, and more.
 
 Advanced wheel and tire friction simulation
 
@@ -43,28 +60,6 @@ Realistic and coherent
 : 	The underlying concept is a custom vehicle simulation model based on essential physics facts:
 	forces, torques and frictions. This model is easier to understand and simpler to calculate than
 	the commonly used models, yet providing physically accurate and realistic results.
-
-!!! warning "&fa-warning:lg; Project under development: **Beta stage**"
-
-	**Beta stage** means the project is mature and bug-free enough to be used in actual projects,
-	but some features are yet to be developed and issues/bugs might appear. Main code is not
-	expected to have significant changes. Still, everything is provided as is without any warranty.
-
-	- Some components and scripts are yet to be written or completed.
-	- Some features are yet to be implemented (see the Roadmap below).
-	- Documentation is being actively written and updated. Several parts are yet to be completed
-		or need a review.
-
-!!! info "&fa-thumbs-o-up; Feedback is welcome!"
-
-	- General usage, workflow, integration in current projects.
-	- Simulation: components, settings, behavior.
-	- Documentation: things you would want to learn, know about, or are not fully understood.
-	- Documentation: typo and grammar fixes.
-
-	Feel free to write me to [edytado@gmail.com](mailto:edytado@gmail.com).
-
-![Vehicle Physics Pro Alpha Sandbox scene](img/vehicle-physics-pro-alpha-sandbox-02.jpg){: .img-medium .clickview }
 
 #### Development roadmap
 
@@ -128,11 +123,31 @@ Generic wheel controller support
 Additional components
 {: .roadmap .todo }
 
----
 
-#### Early Access
+!!! info "&fa-thumbs-o-up; Feedback is welcome!"
 
-Early Access to Vehicle Physics Pro is now available with the [Professional License](about/licensing)
-add-on.<br>The Professional license is offered at discounted price during the development stage (<del> \$480 </del> &nbsp; **\$320**).
+	- General usage, workflow, integration in current projects.
+	- Simulation: components, settings, behavior.
+	- Documentation: things you would want to learn, know about, or are not fully understood.
+	- Documentation: typo and grammar fixes.
 
-[Contact me](mailto:edytado@gmail.com) for more information.
+	Feel free to write me to [edy@vehiclephysics.com](mailto:edy@vehiclephysics.com).
+
+<!--
+#### About me
+
+Vehicle Physics Pro has been conceived, designed and implemented by [Angel Garcia Voces "Edy"](http://www.edy.es)
+at Oviedo, Spain.
+
+> I started creating this kit because I wanted to simulate vehicles since I was a kid playing with my
+> Commodore 64. When I discovered Unity 3D that's what I wanted to do since the first day. But I
+> didn't find any existing component, kit or document for simulating a vehicle correctly. There were
+> all buggy components, too simple approaches, or too complex algorithms/methods/papers mixing
+> simulation and automotive industry. I had the feeling (name it intuition) that a _simple_ way of
+> simulating vehicles _correctly_ had to exist. And I spend several years researching and
+> experimenting with a lot of ideas until I finally nailed it. This Vehicle Physics Pro today: the
+> simplest and most efficient approach for simulating a vehicle while actually accounting for all
+> major reactions and side effects in a physically correct, coherent and accurate way.
+>
+> I hope you have as much fun using VPP or playing VPP-based games as I'm having developing it.
+-->
