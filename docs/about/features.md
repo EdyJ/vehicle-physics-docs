@@ -37,16 +37,18 @@ behaviors and side effects.
 
 Even exotic side effects like these happen in VPP:
 
-- [Driveline windup](https://en.wikipedia.org/wiki/Driveline_windup) (also _axle binding_ or
+- **[Driveline windup](https://en.wikipedia.org/wiki/Driveline_windup)** (also _axle binding_ or
 	_driveline binding_) arises if the vehicle setup uses rigid shafts for connecting the wheels.
 	The binding can be clearly observed at the telemetry as accumulated torques and counter-torques
 	at the wheels, even with the vehicle stopped.
-- Engine stall & inertial restart: release the clutch abruptly and the engine may stall. Leave
+
+- **Engine stall & inertial restart:** release the clutch abruptly and the engine may stall. Leave
 	a stalled vehicle go downwards a slope, press clutch, engage 2nd gear, and release the clutch
 	when the vehicle has gained some velocity. The engine restarts.
-- Differential coupling: when the engine is off and a gear or Park is engaged, rotating one wheel
-	causes a counter-rotation of the opposite wheel, the same exact amount but in the reverse
-	direction.
+
+- **Accurate differential coupling:** when the engine is off and a gear or Park are engaged,
+	rotating one wheel causes a counter-rotation of the opposite wheel, the same exact amount but
+	in the opposite direction.
 
 Nothing of the above has been explicitly implemented: all those effects are natural consequences of
 the actual design of the core simulation model, proving its accuracy.

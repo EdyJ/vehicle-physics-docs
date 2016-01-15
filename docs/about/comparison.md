@@ -1,7 +1,7 @@
 ## Comparing VPP with other vehicle kits
 
-Taking the correct decisions in advance can save you huge amounts of time and money. Compare these
-topics when considering adopting any vehicle physics kits in your own project:
+Taking the correct decisions in advance can save you huge amounts of time and money. Consider these
+topics before adopting any vehicle physics kit in your own project:
 
 [TOC]
 
@@ -30,14 +30,15 @@ and components. It's easy to intuitively understand the role of each script and 
 	the suspension settings and draws the wheel gizmo.
 
 - A set of add-on components can be **optionally** added to the vehicle for providing extra
-	features: [input](../components/vehicle-input),
-	[debug](../components/vehicle-debug),
-	[ground materials](../components/ground-materials),
-	[audio, visual effects, etc](../components/vehicle-addons).
+	features: [input](/components/vehicle-input),
+	[debug](/components/vehicle-debug),
+	[ground materials](/components/ground-materials),
+	[cameras](/components/camera-controller),
+	[audio, visual effects, etc](/components/vehicle-addons).
 
 VPP is nicely structured and the parameters are centralized at several levels: scene-wide,
-vehicle-wide, etc. Whenever you need to modify something you will have to modify it only once at a
-single place.
+vehicle-wide, etc. Whenever you need to modify anything you will have to modify it only once at the
+location you expect to find it at.
 
 #### Extension possibilities
 
