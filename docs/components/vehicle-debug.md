@@ -7,32 +7,32 @@ intended to be used during the development and configuration stages.
 
 Shows detailed numeric data on the internal state of the vehicle and each wheel in real-time.
 
-< pic: VPTelemetry GUI >
+![VP Telemetry Data](/img/components/vpp-telemetry.png){: .clickview }
 
-##### Wheel telemetry
+Wheel telemetry
 
-- Name of the wheel GameObject.
-- Spin rpm (angular velocity).
-- Steer: degrees of rotation as per steering.
-- Susp: suspension compression percent (%) or suspension distance (m), depending on the option
-	_Contact Depth As Suspension_.
-- Load: wheel load in Newtons (N) or kilograms (Kg), depending on the option _Show Load In Kg_.
-- Torque: torques acting on the wheel in Newtons-meter (Nm): Drive torque $T_d$, brake torque $T_b$,
-	reaction torque $T_r$.
-- Force: tire forces in Newtons (N): lateral force $F_x$, longitudinal force $F_y$.
-- Slip: tire slip velocities in m/s: lateral slip $S_x$, longitudinal slip $S_y$, combined slip $S_c$.
+:	- Name of the wheel GameObject.
+	- Spin rpm (angular velocity).
+	- Steer: degrees of rotation as per steering.
+	- Susp: suspension compression percent (%) or suspension distance (m), depending on the option
+		_Contact Depth As Suspension_.
+	- Load: wheel load in Newtons (N) or kilograms (Kg), depending on the option _Show Load In Kg_.
+	- Torque: torques acting on the wheel in Newtons-meter (Nm): Drive torque $T_d$, brake torque $T_b$,
+		reaction torque $T_r$.
+	- Force: tire forces in Newtons (N): lateral force $F_x$, longitudinal force $F_y$.
+	- Slip: tire slip velocities in m/s: lateral slip $S_x$, longitudinal slip $S_y$, combined slip $S_c$.
 
-##### Vehicle telemetry
+Vehicle telemetry
 
-- Sum of all loads in the wheel, in both Newtons (N) and kilograms (Kg).
-- Speed: longitudinal, lateral, absolute in m/s. Speed also in Km/h and mph.
-- Acceleration: longitudinal, lateral in $m/s^2$. G-force measure.
-- Angular velocity Y: turning velocity around the vertical axis, in rads/s.
-- Engine: load in percent (%), produced torque in Nm. State of the engine: Off, Stalled, Ok.
-- Clutch: lock ratio in percent (%), pass-thru torque in Nm.
-- Engine RPM, engaged gear, automatic gear position.
+:	- Sum of all loads in the wheel, in both Newtons (N) and kilograms (Kg).
+	- Speed: longitudinal, lateral, absolute in m/s. Speed also in Km/h and mph.
+	- Acceleration: longitudinal, lateral in $m/s^2$. G-force measure.
+	- Angular velocity Y: turning velocity around the vertical axis, in rads/s.
+	- Engine: load in percent (%), produced torque in Nm. State of the engine: Off, Stalled, Ok.
+	- Clutch: lock ratio in percent (%), pass-thru torque in Nm.
+	- Engine RPM, engaged gear, automatic gear position.
 
-< pic: VPTelemetry Inspector >
+![VP Telemetry Inspector](/img/components/vpp-telemetry-inspector.png){: .img-small .clickview }
 
 Show data
 :	Shows or hides the actual GUI window with the data.
@@ -55,7 +55,7 @@ Font
 Show different _gizmos_ in runtime representing the state of the wheels. Gizmos are visible in the
 Scene view and in the Game view with the Gizmos toggle enabled.
 
-< Pic: Ferrari Game view with wheel gizmos and Gizmos enabled >
+![VP Telemetry Gizmos](/img/components/vpp-telemetry-gizmos.jpg){: .img-medium .clickview }
 
 Show Gizmos
 :	Shows / hides all gizmos
@@ -90,9 +90,10 @@ Gizmos At Physic Position
 Draws 3D cones starting at the wheel's contact points representing the forces applied by the wheels
 to the vehicle.
 
-< pic: JPickup with the cones >
-
-< pic: VPForcecones inspector >
+<div class="imagegallery" sm="2" md="2" lg="2" style="display:none">
+	<img class="clickview" src="/img/components/vpp-force-cones-inspector.png" alt="VP Force Cones Inspector">
+	<img class="clickview" src="/img/gallery/vpp-alpha-sandbox.jpg" alt="VP Force Cones">
+</div>
 
 Base Length
 :	A reference length for configuring the dimensions of the cones.
