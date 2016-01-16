@@ -7,8 +7,8 @@ accurate vehicle physics.
 !!! warning "&fa-warning:lg; Project under development: **Beta stage**"
 
 	**Beta stage** means the project is mature and bug-free enough to be used in actual projects,
-	but some features are yet to be developed and issues/bugs might appear. Main code is not
-	expected to have significant changes. Still, everything is provided as is without any warranty.
+	but some features are yet to be developed and issues might appear. Main code is not expected to
+	have significant changes. Still, everything is provided as is without any warranty.
 
 	- Some components and scripts are yet to be written or completed.
 	- Some features are yet to be implemented. See the [Roadmap](#development-roadmap) below.
@@ -18,8 +18,8 @@ accurate vehicle physics.
 	**Early Access** to Vehicle Physics Pro is now available with the Professional and Enterprise
 	licenses. [Learn more](about/licensing)
 
-&fa-thumbs-up:lg; Stay tunned! Follow me [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link} on Twitter for the
-latest news and announcements.
+&fa-thumbs-up:lg; &nbsp; Stay tunned! &nbsp; Follow me [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link}
+on Twitter for the latest news and announcements.
 {: .alert .alert-success }
 
 <div class="imagegallery" sm="2" md="3" lg="4" style="display:none">
@@ -36,7 +36,7 @@ latest news and announcements.
 	<img class="clickview" src="img/gallery/vpp-loop.jpg" alt="Riding a loop with the Ferrari 458">
 	<img class="clickview" src="img/gallery/vpp-ferrari-monza.jpg" alt="Ferrari 458 taking the Variante del Rettifilo at Monza">
 	<img class="clickview" src="img/gallery/vpp-alpha-sandbox.jpg" alt="Early sandbox test with Vehicle Physics Pro">
-	<img class="clickview" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials">
+	<img class="clickview" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials, three differential setups">
 </div>
 
 Advanced AAA+ vehicle physics simulation
@@ -44,11 +44,11 @@ Advanced AAA+ vehicle physics simulation
 :	Built around an accurate physics solver providing realistic results for all vehicle types and
 	setups. The precision of the numeric results depends on the integration steps only.
 
-Modular implementation
+Modular powertrain design
 
-:	Vehicle dynamics is implemented as functional blocks with inputs and/or outputs that can be
-	connected in any number and combination. Any vehicle setup can be emulated by arranging and
-	connecting blocks. Package includes standard vehicle blocks such as engine, clutch, gearbox,
+:	Vehicle dynamics core is implemented with functional blocks with inputs and/or outputs that can
+	be connected in any number and combination. Any vehicle setup can be emulated by arranging and
+	connecting blocks. VPP includes standard vehicle blocks such as engine, clutch, gearbox,
 	differential, torque splitter, and more.
 
 Advanced wheel and tire friction simulation
@@ -102,13 +102,13 @@ Realistic and coherent
 &fa-check; **Enter the Beta stage!**
 {: .roadmap }
 
-&fa-gear:spin; Documentation
+&fa-gear:spin; Replay system
 {: .roadmap .wip }
 
-Replay system
+Advanced graphic telemetry
 {: .roadmap .todo }
 
-Advanced graphic telemetry
+Complete the documentation
 {: .roadmap .todo }
 
 **First release!**
