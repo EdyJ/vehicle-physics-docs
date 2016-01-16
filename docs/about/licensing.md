@@ -40,7 +40,8 @@ Expert Assistance
 
 :	Let me take a close look at your project and I'll propose solutions to your specific issues
 	with vehicles. I can also configure your vehicles to match your project's specifications.
-	[Ask me](mailto:edy@vehiclephysics.com) me for a quote.
+	[Ask me](mailto:edy@vehiclephysics.com) me for a quote. Confidentiality is always a default
+	to me, but I'll sign an NDA upon request.
 
 ### Compare editions
 
@@ -61,21 +62,26 @@ Priority support and consultancy services				|	| 	| 	| &fa-check;	|
 Access to the project's tracking system (RedMine)		|	| 	| 	| &fa-check;	|
 License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
 May be licensed by companies with anual revenue / funds / budget in excess of US\$100,000	|	| 	|	| &fa-check;	|
-30 days of Expert Assistance							|	|	|	| &fa-check;	|
+10 days of Expert Assistance							|	|	|	| &fa-check;	|
 Flat license for all other present and future Vehicle Physics products<br>([Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics/))|	| 	| 	| &fa-check;	|
 **Price**												| Free | $160 | <del>\$480</del> **$320** | **$4800** |
 
 > Notes:
 >
-> - _Professional license is an add-on to the Standard license._
+> - Professional license is an add-on to the Standard license.
 >
-> - _Licenses may be upgraded anytime by paying the price difference._
+> - Licenses may be upgraded anytime by paying the price difference.
+>
+> - Expert Assistance days included with the Enterprise License do not expire and can be requested
+>	anytime. We would book specific days in advance, consecutive or non-consecutive, of your
+>	choice for me to work remotely with your team and your project, for the entire working day, at
+>	your schedule.
 
 ### Terms and conditions
 
-- _Free, Standard and Professional licenses may not be licensed by any commercial or non-commercial
+- Free, Standard and Professional licenses may not be licensed by any commercial or non-commercial
 	entity with annual gross revenues, funds (including crowfunding), or total annual budget in
-	excess of US\$100,000._
+	excess of US\$100,000.
 
 - No part of the source code may be disclosed to a third party.
 
@@ -84,4 +90,3 @@ Flat license for all other present and future Vehicle Physics products<br>([Edy'
 	use technologies from Vehicle Physics Pro.
 
 - GIT credentials (Professional and Enterprise licenses) must be kept safe and private.
-

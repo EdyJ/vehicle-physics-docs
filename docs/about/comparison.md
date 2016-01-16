@@ -23,10 +23,10 @@ scene for the change to be coherent.
 **Vehicle Physics Pro is designed with coherency in mind**. The code is well structured in scripts
 and components. It's easy to intuitively understand the role of each script and component:
 
-- A single [VPVehicleController](../components/vehicle-controller) script provides the entire
+- A single [VPVehicleController](/components/vehicle-controller) script provides the entire
 	vehicle physics and dynamics (axles, engine, gearbox, etc.)
 
-- The component [VPWheelCollider](../components/wheel-collider) implements the wheel entity,
+- The component [VPWheelCollider](/components/wheel-collider) implements the wheel entity,
 	the suspension settings and draws the wheel gizmo.
 
 - A set of add-on components can be **optionally** added to the vehicle for providing extra
@@ -50,17 +50,17 @@ becoming very difficult to understand, use, and extend.
 
 **Vehicle Physics Pro is designed to be easily extensible and adaptable at several levels:**
 
-- You can [write custom component add-ons](../advanced/custom-addons) as standard Unity
+- You can [write custom component add-ons](/advanced/custom-addons) as standard Unity
 	components for adding new features or integrating the vehicles with your project.
 
-- You can [design and implement custom vehicles](../advanced/custom-vehicles) if the provided
+- You can [design and implement custom vehicles](/advanced/custom-vehicles) if the provided
 	vehicle controller doesn't fit your needs.
 
-- You can [write custom functionality blocks](../advanced/custom-blocks) and combine them with
+- You can [write custom functionality blocks](/advanced/custom-blocks) and combine them with
 	the included blocks (engines, gears, other parts...) if you need simulating vehicle parts not
 	provided in the VPP kit.
 
-- You can [write your own ground material manager](../components/ground-materials) if you want
+- You can [write your own ground material manager](/components/ground-materials) if you want
 	to manage the ground materials in your own way (i.e. weather, changing track conditions...).
 
 #### Integration into existing projects
@@ -86,8 +86,8 @@ straightforward and harmless to include into existing projects:
 #### Physically realistic and accurate
 
 **Vehicle Physics Pro is consolidated on the base of a solid vehicle dynamics model**. There are no
-guesses, no arbitrary assumptions. The design is physically accurate, so it accounts for all the
-expected and unexpected behaviors of the vehicles.
+guesses, no arbitrary assumptions. The core design is physically accurate, so it accounts for all
+the expected and unexpected behaviors of the vehicles.
 
 Do you know what [driveline windup](https://en.wikipedia.org/wiki/Driveline_windup) means? I hadn't
 heard of that until I observed the effect myself in VPP while testing the simulation with heavy AWD
@@ -107,7 +107,7 @@ and unoptimized design.
 without noticeable adverse effects.** This means a negligible impact of the vehicle physics in the
 cpu usage!
 
-In addition, the [integration substeps](../advanced/misc-topics-explained/#solver-numeric-integration)
+In addition, the [integration substeps](/advanced/misc-topics-explained#solver-numeric-integration)
 at the VPP solver can be configured per-vehicle. This means that you could have the Unity physics
 engine working at the default 50Hz, but the main vehicle could perform its calculations at 400Hz
 (8 substeps).
@@ -123,7 +123,7 @@ and I'm open to additions, fixes, collaborations, etc. I update the documentatio
 developing VPP. The site uses responsive design so it can be read even with mobile devices.
 
 When someone ask me about a topic requiring a detailed reply, I typically add the reply later to the
-documentation for everyone wondering the same topic. Check out [Miscellaneous Topics Explained](../advanced/misc-topics-explained.md).
+documentation for everyone wondering the same topic. Check out [Miscellaneous Topics Explained](/advanced/misc-topics-explained).
 The VPP documentation can be edited quickly for any modification or addition.
 
 #### Source code, updates and platform support
@@ -136,7 +136,7 @@ native (!!) DLLs.
 **Vehicle Physics Pro is 100% standard C# Unity code compatible with ALL platforms, present and
 future, supported by Unity 3D**.
 
-In addition, [Professional and Enterprise licensees](licensing.md) obtain direct access to the full
+In addition, [Professional and Enterprise licensees](licensing) obtain direct access to the full
 source code via GIT repository, the same I use for developing Vehicle Physics Pro. You can use
 continuous integration systems for keeping your project up to date with the latest revision without
 having to wait for Asset Store updates.
@@ -144,10 +144,10 @@ having to wait for Asset Store updates.
 Enterprise licensees also receive credentials for the project's Redmine tracking system, so they
 can open tickets for bugs and requests directly.
 
-In the Free and Standard licenses a portion of the source code of VPP (inner vehicle physics and
-dynamics) is provided as cross-platform .NET DLL assembly, compatible with all platforms.
+The Free and Standard licenses provide a portion of the source code of VPP (inner vehicle physics
+and dynamics) as cross-platform .NET DLL assembly, still seamlessly compatible with all platforms.
 
-## Comparison with Edy's Vehicle Physics
+## Comparing with Edy's Vehicle Physics
 
 [Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics/) (**EVP**, available [at the Asset Store](https://www.assetstore.unity3d.com/#/content/403))
 and Vehicle Physics Pro (**VPP**) are two completely different products targeting different needs.
@@ -157,8 +157,8 @@ configured directly with a few parameters: how much can it steer, how much can i
 accelerates, brakes, etc. EVP is targeted to arcade vehicles requiring physically realistic
 behaviors, but the most important features being the gameplay and the handling of the vehicle.
 
-**VPP** implements a fully realistic and complete simulation of a real-world vehicle. In VPP all and
-every component of the vehicle is configured: engine, clutch, transmission, differential etc. The
+**VPP** implements a fully realistic and complete simulation model of a real-world vehicle. In VPP
+all components of the vehicle are configured: engine, clutch, transmission, differential etc. The
 behavior and handling of the vehicle depend on the configured parameters of all these components.
 Same setup and tunning techniques as in real vehicles are used in VPP.
 
@@ -170,9 +170,9 @@ specifications of a real vehicle and set them up in VPP for simulating that vehi
 They are different products targeting different needs. They cannot be compared in so simple
 terms. Each product may be better depending on the type of project they will be used at.
 
-For example, games like **Grand Theft Auto (GTA)** or **Just Cause** best fit with EVP, as vehicles are
-an accessory within the game. On the other hand, simulators in the style of **Gran Turismo** or
-**Project Cars** best fit with VPP, as they simulate real-world vehicles in the a realistic way.
+For example, games like **Grand Theft Auto (GTA)** or **Just Cause** best fit with EVP, as vehicles
+are an accessory within the game. On the other hand, racing simulators in the style of **Gran Turismo**
+or **Project Cars** best fit with VPP, as they simulate real-world vehicles in the a realistic way.
 
 #### I find the vehicle in EVP more stable
 
@@ -189,7 +189,7 @@ might get increased depending on the specific settings of each vehicle (integrat
 of blocks in the powertrain, etc). In EVP the performance depends on the total number of wheels in
 the scene.
 
-The controller example at [Creating Custom Vehicles](../advanced/custom-vehicles.md) may be used
+The controller example at [Creating Custom Vehicles](/advanced/custom-vehicles) may be used
 for ensuring the most performance out of the VPP simulation.
 
 

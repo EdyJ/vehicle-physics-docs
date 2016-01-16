@@ -26,8 +26,7 @@ pages:
 - About:
   - Features: about/features.md
   - Licensing: about/licensing.md
-  - Comparison with other kits: about/comparison.md
-  - Markdown test page: markdown-test.md
+  - Comparing with other kits: about/comparison.md
 - User Guide:
   - Getting started: user-guide/getting-started.md
   - Creating vehicles: user-guide/vehicle-creation.md
