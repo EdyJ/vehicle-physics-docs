@@ -9,7 +9,7 @@ brakes, tires, driveline, engine, clutch, gearbox and retarder. Other settings f
 (radius, mass) and suspension (spring, damper) are configured at each [VP Wheel Collider](wheel-collider)
 component independently.
 
-&fa-thumbs-o-up; You can [write your own custom vehicle controller](../advanced/custom-vehicles.md){: .alert-link }
+&fa-thumbs-o-up; You can [write your own custom vehicle controller](/advanced/custom-vehicles.md){: .alert-link }
 for special types of vehicles not directly covered by the stock Vehicle Controller component.
 {: .alert .alert-info }
 
@@ -37,14 +37,14 @@ vehicle. The vertical position affects the stability.
 
 ### Axles
 
-Each axle references the left-right wheels ([VPWheelCollider](../components/wheel-collider))
+Each axle references the left-right wheels ([VPWheelCollider](/components/wheel-collider)
 components) and configure its features.
 
 ![VP Vehicle Controller axles](/img/components/vpp-vehicle-controller-axles.png){: .img-small .clickview }
 
 ##### Left-right wheels
 
-The [VPWheelCollider](../components/wheel-collider) component for each wheel of the axle.
+The [VPWheelCollider](/components/wheel-collider) component for each wheel of the axle.
 Radius, mass, suspension distance, suspension spring, suspension damper and visual meshes are
 configured at the VPWheelCollider.
 
@@ -69,7 +69,7 @@ Steering parameters for the vehicle: angle, Ackerman, toe...
 
 ![VP Vehicle Controller steering](/img/blocks/vpp-steering-inspector.png){: .img-small .clickview }
 
-Details: [Steering helper](../blocks/steering.md)
+Details: [Steering helper](/blocks/steering.md)
 
 ### Brakes
 
@@ -77,7 +77,7 @@ Brake parameters for the vehicle, including brake power, brake balance and handb
 
 ![VP Vehicle Controller brakes](/img/blocks/vpp-brakes-inspector.png){: .img-small .clickview }
 
-Details: [Brakes helper](../blocks/brakes.md)
+Details: [Brakes helper](/blocks/brakes.md)
 
 ### Tires
 
@@ -85,7 +85,7 @@ Tire friction model and settings for the wheels of the vehicle.
 
 ![VP Vehicle Controller tires](/img/blocks/vpp-tires-inspector.png){: .img-small .clickview }
 
-Details: [Tire friction](../blocks/tires.md)
+Details: [Tire friction](/blocks/tires.md)
 
 ### Driveline
 
@@ -120,9 +120,9 @@ Torque Splitter
 
 Details:
 
-- [Driveline helper](../blocks/driveline.md)
-- [Differential block](../blocks/differential.md)
-- [Torque Splitter block](../blocks/torque-splitter.md)
+- [Driveline helper](/blocks/driveline.md)
+- [Differential block](/blocks/differential.md)
+- [Torque Splitter block](/blocks/torque-splitter.md)
 
 ### Engine
 
@@ -135,7 +135,7 @@ performance data in the graph and below it. If the combination of values is not 
 will be displayed.
 {: .alert .alert-info }
 
-Details: [Engine block](../blocks/engine.md)
+Details: [Engine block](/blocks/engine.md)
 
 ### Clutch
 
@@ -144,11 +144,11 @@ The clutch couples the engine with the transmission and driveline.
 ![VP Vehicle Controller clutch](/img/blocks/vpp-clutch-inspector.png){: .img-small .clickview }
 
 - Lock ratio: a kind of ideal coupling based on locking percent.
-- Disc friction: realistic clutch providing a limited torque coupling.
+- Disc friction: realistic clutch providing a limited torque transfer.
 - Torque converter: smooth coupling based on the angular velocity. This device is commonly used with
 	automatic transmissions.
 
-Details: [Clutch block](../blocks/clutch.md)
+Details: [Clutch block](/blocks/clutch.md)
 
 ### Gearbox
 
@@ -164,7 +164,7 @@ Transmission type, gear ratios and transmission settings.
 Automatic transmissions are different than manual with auto-shift. An automatic transmission
 provides smooth transitions without neutral gap among gears.
 
-Details: [Gearbox block](../blocks/gearbox.md)
+Details: [Gearbox block](/blocks/gearbox.md)
 
 ### Retarder
 
@@ -173,7 +173,7 @@ and heavy vehicles.
 
 ![VP Vehicle Controller retarder](/img/blocks/vpp-retarder-inspector.png){: .img-small .clickview }
 
-Details: [Retarder block](../blocks/retarder.md)
+Details: [Retarder block](/blocks/retarder.md)
 
 ### Advanced / Experimental settings
 
