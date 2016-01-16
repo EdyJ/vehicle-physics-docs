@@ -39,7 +39,7 @@ situation.
 	part of the chassis. It can be deducted from the angle the vehicle could drive on two side
 	wheels.
 
-### Engine and transmission
+### Engine, transmission and driveline
 
 - **Engine torque and power**. Ideally, a ["dyno" curve](https://www.google.es/search?q=engine+dyno+curve&tbm=isch)
 	if available. The curve shape helps also configuring the engine brake.
@@ -52,11 +52,11 @@ situation.
 - **Final drive ratio** (typically specified by the differential).
 - **Differential type** and ratio if available.
 
-Other elements may be present in the transmission, specially in AWD or dynamic-drive transmissions.
+Other elements may be present in the driveline, specially in AWD or dynamic-drive setups.
 Examples: center differential, torque splitter.
 
 ### Aerodynamics
 
-- The Aerodynamic drag can be estimated from the **top speed**.
+- The aerodynamic drag can be estimated from the **top speed**.
 - The aerodynamic downforce and tire sideways friction can be estimated from the **maximum speed at
 	a curve of known radius**, and also from the **maximum lateral G supported in curves**.

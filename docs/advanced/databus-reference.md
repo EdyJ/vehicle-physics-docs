@@ -14,49 +14,57 @@ Add-on components can use the data bus for reading/writing values. Values are ar
 into _channels_. Accessing a specific data requires the pair `ChannelId, ValueId`. The standard
 Channels and their available values are referenced below.
 
+Blocks don't have direct access to the data bus. The host Vehicle Controller is responsible of
+reading and populating their exposed values in the overrides for `VehicleBase.DoUpdateBlocks` and
+`VehicleBase.DoUpdateData`.
+
 For examples on how to use the Data Bus, check out the scripts `VPStandardInput.cs` (method
-`Update`) and `VPVehicleController.cs` (methods `DoUpdateComponents` and `DoUpdateData`).
+`Update`) and `VPVehicleController.cs` (methods `DoUpdateBlocks` and `DoUpdateData`).
 
 #### Accessing the data bus
 
-The bus is accessed via property **data** defined in VPVehicleBase. Use code like this in a script
+The bus is accessed via property **data** defined in VehicleBase. Use code like this in a script
 attached to a GameObject containing a VPVehicleController component or any other
-VPVehicleBase-derived component:
+VehicleBase-derived component:
 
 ```
-// Get a reference to the vehicle controller component
+using VehiclePhysics;
 
-VPVehicleBase m_vehicle = GetComponent<VPVehicleBase>();
+...
+
+// Get a reference to the vehicle controller
+
+VehicleBase m_vehicle = GetComponent<VehicleBase>();
 
 // Set the input for the steering wheel
 
-m_vehicle.data.Set(VPDChannel.StdInput, VPDStdInput.Steer, Input.GetAxis("Horizontal") * 10000);
+m_vehicle.data.Set(Channel.Input, InputData.Steer, Input.GetAxis("Horizontal") * 10000);
 
-// Read the engine rpms value
+// Read the engine rpm value
 
-float engineRpm = m_vehicle.data.Get(VPDChannel.Vehicle, VPDVehicle.EngineRpm) / 1000.0f;
+float engineRpm = m_vehicle.data.Get(Channel.Vehicle, VehicleData.EngineRpm) / 1000.0f;
 ```
 
 The bus can also be accessed via [] operators: `data[channel][value]`
 
 ```
-m_vehicle.data[VPDChannel.StdInput][VPDStdInput.Steer] = Input.GetAxis("Horizontal") * 10000;
+m_vehicle.data[Channel.Input][InputData.Steer] = Input.GetAxis("Horizontal") * 10000;
 
-float engineRpm = m_vehicle.data[VPDChannel.Vehicle][VPDVehicle.EngineRpm];
+float engineRpm = m_vehicle.data[Channel.Vehicle][VehicleData.EngineRpm];
 ```
 
 ### Data Channels
 
-| ChannelId | Type | Description |
+| Channel | Type | Description |
 | --------- | ---- | ----------- |
-| StdInput	| Write&nbsp;only	| States of the vehicle input elements.<br>Intended for writing, but the states can be read for representing the actual positions of the elements in the vehicle 3D model (i.e. steering wheel, gear stick...) |
-| Vehicle	| Read&nbsp;only		| State values of the internal components of the vehicle |
+| Input		| Write&nbsp;only	| States of the vehicle input elements.<br>Intended for writing, but the states can be read for representing the actual positions of the elements in the vehicle 3D model (i.e. steering wheel, gear stick...) |
+| Vehicle	| Read&nbsp;only	| State values of the internal parts of the vehicle |
 | Settings	| Read/Write		| Common configuration settings. Values here might not be implemented in all vehicles |
 
-### StdInput channel
+### Input channel
 
-| ValueId | Description | Units | Resolution | Example |
-| ------- | ----------- |:------:|:----------:| ------- |
+| InputData | Description | Units | Resolution | Example |
+| --------- | ----------- |:-----:|:----------:| ------- |
 |Steer			| Steering wheel position	| %		|10000	|-10000 = full left, 0 = center, +10000 = full right
 |Throttle		| Throttle pedal position	| %		|10000	|10000 = 1.0 = 100%
 |Brake			| Brake pedal position		| %		|10000	|5000 = 0.5 = 50%
@@ -65,8 +73,8 @@ float engineRpm = m_vehicle.data[VPDChannel.Vehicle][VPDVehicle.EngineRpm];
 |ManualGear		| Manual gear lever position | gear number | | -1 (reverse), 0 (neutral), 1, 2, 3, ...
 |AutomaticGear	| Automatic transmission mode <sup>1</sup> | gear mode | | 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_ <sup>1</sup>
 |GearShift		| Incremental gear shifting value <sup>2</sup> | gear increment | | Add +1 for gear up or -1 for gear down <sup>2</sup>
+|Retarder		| Retarder brake stick position | retarder level | | 0 (off), 1, 2, 3, ...
 |Key			| Ignition key position | key position | | -1 = off, 0 = drive, 1 = ignite
-
 
 <sup>1</sup> Automatic transmission modes:
 :	- M (0): Manual: do not automatically engage gears. Use manual gear shifting.
@@ -81,8 +89,8 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 
 ### Vehicle channel
 
-| ValueId | Description | Units  | Resolution | Example |
-| ------- | ----------- |:------:|:----------:| ------- |
+| VehicleData | Description | Units  | Resolution | Example |
+| ----------- | ----------- |:------:|:----------:| ------- |
 |Speed			| Vehicle absolute velocity					| m/s	| 1000	| 14500 = 14.5 m/s
 |EngineRpm		| Engine RPMs								| rpm	| 1000	| 1200000 = 1200 rpm
 |EngineStalled	| Is the engine stalled? 		 			| 		|       | 0 = normal operation, 1 = engine stalled
@@ -95,12 +103,12 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 
 ### Settings channel
 
-| ValueId | Description | Units  | Resolution | Example |
-| ------- | ----------- |:------:|:----------:| ------- |
+| SettingsData | Description | Units  | Resolution | Example |
+| ------------ | ----------- |:------:|:----------:| ------- |
 |DifferentialLock	| Override lock setting at the differential<sup>1</sup>	|	|	| 0 = no override, 1 = force locked differential, 2 = force open differential
-|TransmissionLock	| Override lock setting at the transmission<sup>2</sup>	|	|	| 0 = no override, 1 = force locked transmission, 2 = force unlocked / open transmission
+|DrivelineLock		| Override lock setting at the driveline<sup>2</sup>	|	|	| 0 = no override, 1 = force locked driveline, 2 = force unlocked / open driveline
 
 **<sup>1</sup> DifferentialLock** affects the axle differentials only.
 
-**<sup>2</sup> TransmissionLock** affects the element connecting the front-rear parts of the
-transmission. This might be either a differential or a torque splitter.
+**<sup>2</sup> DrivelineLock** affects the element connecting the front-rear parts of the
+driveline. This might be either a differential or a torque splitter.

@@ -9,8 +9,8 @@ google_analytics: [ 'UA-58719504-1', 'auto' ]
 theme_dir: 'custom_theme'
 theme: cerulean
 
-extra_css: [ 'css/tables.css', 'css/admonitions.css', 'css/fixes.css', 'css/extras.css' ]
-extra_javascript: [ 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML', 'js/mathjaxhelper.js', 'js/fabric.custom.min.js', 'js/texturecanvas.js' ]
+extra_css: [ 'css/tables.css', 'css/admonitions.css', 'css/fixes.css', 'css/extras.css', 'css/clickview.css' ]
+extra_javascript: [ 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML', 'js/mathjaxhelper.js', 'js/fabric.custom.min.js', 'js/texturecanvas.js', 'js/imagegallery.js', 'js/clickview.js' ]
 
 markdown_extensions:
   - extra
@@ -19,38 +19,48 @@ markdown_extensions:
       base: "fa"
       prefix: "fa-"
   - mathjax
+  - codehilite
 
 pages:
 - "&#8201;": index.md
-- EARLY ACCESS: early-access.md
-- User Guide:
-  - Creating a vehicle: user-guide/vehicle-creation.md
-  - Vehicle setup guide: user-guide/vehicle-setup.md
-  - Requirements for 3D models: user-guide/3d-models.md
+- About:
+  - Features: about/features.md
+  - Licensing: about/licensing.md
+  - Comparison with other kits: about/comparison.md
   - Markdown test page: markdown-test.md
+- User Guide:
+  - Getting started: user-guide/getting-started.md
+  - Creating vehicles: user-guide/vehicle-creation.md
+  - Configuring vehicles: user-guide/vehicle-setup.md
+  - Requirements for 3D models: user-guide/3d-models.md
 - Components:
   - Vehicle Controller: components/vehicle-controller.md
   - Wheel Collider: components/wheel-collider.md
-  - Vehicle Input: components/vehicle-input.md
-  - Vehicle Audio: components/vehicle-audio.md
-  - Vehicle Telemetry: components/vehicle-telemetry.md
-  - Skidmarks and Smoke: components/skidmarks-and-smoke.md
-- Classes:
-  - VPVehicleBase: classes/vehicle-base.md
-  - VPComponent: classes/component.md
-  - VPCEngine: classes/engine.md
-  - VPCGearbox: classes/gearbox.md
-  - VPTransmission: classes/transmission.md
-  - VPCDifferential: classes/differential.md
-  - VPBrakes: classes/brakes.md
-  - VPSteering: classes/steering.md
-  - Other classes: classes/extra-classes.md
+  - Input: components/vehicle-input.md
+  - Add-ons: components/vehicle-addons.md
+  - Debug: components/vehicle-debug.md
+  - Ground Materials: components/ground-materials.md
+  - Camera Controller: components/camera-controller.md
+- Blocks:
+  - Steering: blocks/steering.md
+  - Brakes: blocks/brakes.md
+  - Tires: blocks/tires.md
+  - Driveline: blocks/driveline.md
+  - Differential: blocks/differential.md
+  - Torque Splitter: blocks/torque-splitter.md
+  - Engine: blocks/engine.md
+  - Clutch: blocks/clutch.md
+  - Gearbox: blocks/gearbox.md
+  - Retarder: blocks/retarder.md
+  - Other blocks: blocks/extra-blocks.md
 - Advanced:
-  - Creating custom components: advanced/custom-components.md
   - Creating custom vehicles: advanced/custom-vehicles.md
-  - Writting add-on features: advanced/developing-addons.md
+  - Creating custom blocks: advanced/custom-blocks.md
+  - Creating add-on components: advanced/custom-addons.md
+  - VehicleBase reference: advanced/vehiclebase-reference.md
   - Data Bus reference: advanced/databus-reference.md
   - Miscelaneous topics explained: advanced/misc-topics-explained.md
   - How suspensions work: advanced/how-suspensions-work.md
   - Configuring realistic vehicles: advanced/configuring-realistic-vehicles.md
+  - GIT Repository setup: advanced/git-repository-setup.md
 

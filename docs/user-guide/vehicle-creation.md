@@ -24,8 +24,8 @@
 
 	- Component > Vehicle Physics > Wheel Collider
 
-5.	Add the vehicle mesh as child of your Vehicle. Mesh should reside in its own-sub hierarchy
-	entirely:
+5.	Add the vehicle mesh as child of your Vehicle GameObject. The vehicle mesh should reside inside
+	its own sub-hierarchy entirely:
 
 		Vehicle
 		|- WheelColliders
@@ -75,15 +75,14 @@
 		the vehicle makes contact with other objects.
 
 	!!! warning "&fa-warning:lg; At least one convex collider is mandatory in the vehicle"
-		A vehicle without colliders require the inertia tensor to be explicitly set (Rigidbody.inertiaTensor),
-		or it will show a very weird and unnatural behavior as soon as the simulation starts. Also,
-		as described above, bad things will happen when contacting other objects.
+		A vehicle without colliders will exhibit a very weird and unnatural behavior as soon as the
+		simulation starts, unless the inertia tensor is explicitly set (Rigidbody.inertiaTensor).
+		Also, as described above, bad things will happen when contacting other objects.
 
 
 ### First test drive
 
-This first drive will let us know if everything is ok so far. Configure the vehicle's components
-as follows:
+Let's check out if everything's ok so far. Configure these components as follows:
 
 Rigidbody
 :	- mass = 1000
@@ -91,24 +90,19 @@ Rigidbody
 	- angular drag = 0
 	- Interpolate: Interpolate.
 
-VP Telemetry (optional)
+Telemetry (optional)
 :	Add this component to the vehicle (Component > Vehicle Physics > Telemetry). It will show us
-	what's happening under the hood.
+	what's happening under the hood:
 
 	- Show Data = enabled
-	- Style > Normal > Text Color = white
-	- Style > Font = VeraMono
-	- Big Style > Normal > Text Color = white
-	- Big Style > Font = VeraMono
-	- Big Style > Font Size = 20
 
+Click <kbd>Play</kbd>. The vehicle is now live in the scene and you can drive it around using the
+standard keys (arrows or WSAD). Wheels should move and steer properly.
 
-Click <kbd>Play</kbd>. The vehicle is now live in the scene and you can drive it
-around using the standard keys. Wheels should move and steer properly.
-
-You can now head to the [Vehicle Configuration Guide](vehicle-setup.md) for configuring the
-vehicle dynamics (engine, brakes, etc), or continue here for adding further components and features
-such as audio and visual effects.
+&fa-thumbs-up:lg; You can now head to the [Vehicle Setup Guide](vehicle-setup.md){: .alert-link }
+for configuring the vehicle dynamics (engine, brakes, etc), or continue here for adding further
+components and features such as audio and visual effects.
+{: .alert .alert-success }
 
 
 ### Cameras

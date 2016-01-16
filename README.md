@@ -28,5 +28,4 @@ The HTML documentation is built out of the md files using [MkDocs](http://www.mk
 5. Open a console at the repository folder, they type `mkdocs serve`
 6. Navigate to `http://127.0.0.1:8000` in your browser
 
-Now you should see the documentation live in your browser. Reload the pages whenever you modify the
-source files for viewing the changes.
+Now you should see the documentation in your browser.

@@ -172,7 +172,7 @@ only engages the 2nd gear if the vehicle's speed is above the **2nd gear min spe
 The Park mode is characteristic of the Automatic transmissions, but it can be simulated in Manual
 transmissions as well (**Allow Park mode**).
 
-### Transmission
+### Driveline
 
 #### Differential(s)
 
