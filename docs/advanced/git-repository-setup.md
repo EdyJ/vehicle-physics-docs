@@ -28,12 +28,12 @@ generating ssh keys](https://help.github.com/articles/generating-ssh-keys/).
 
 2.	_cd_ to a folder of your choice, then enter:
 
-		:::bat
+		:::text
 		git clone --depth=1 ssh://git@projects.edy.es/edy/vehicle-physics-pro.git
 
 3. 	Fetch and update the submodules:
 
-		:::bat
+		:::text
 		cd vehicle-physics-pro
 		git submodule update --init --recursive
 
@@ -43,7 +43,7 @@ generating ssh keys](https://help.github.com/articles/generating-ssh-keys/).
 
 This is also necessary after checking out any branch or revision in the main repository.
 
-	:::bat
+	:::text
 	git pull --recurse-submodules
 	git submodule update --init --recursive
 

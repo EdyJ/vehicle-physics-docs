@@ -72,9 +72,11 @@ Flat license for all other present and future Vehicle Physics products<br>([Edy'
 >
 > - Licenses may be upgraded anytime by paying the price difference.
 >
+> - Prices do not include PayPal fees nor taxes (if applicable).
+>
 > - Expert Assistance days included with the Enterprise License do not expire and can be requested
 >	anytime. We would book specific days in advance, consecutive or non-consecutive, of your
->	choice for me to work remotely with your team and your project, for the entire working day, at
+>	choice for me to work remotely with your team in your project, for the entire working day, at
 >	your schedule.
 
 ### Terms and conditions
