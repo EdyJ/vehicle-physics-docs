@@ -9,6 +9,9 @@ Notes:
 - **Clutch:** these vehicle setups use a Torque Converter, which doesn't require active clutch.
 	Still, the clutch control can be used to completely disengage the engine from the transmission.
 
+- Demos are compressed in [7z archives](http://7-zip.org). Download the demo, unpack to a folder of
+	your choice and launch the executable.
+
 #### Start your engines!
 
 The vehicles in these demos begin with the engine off. For starting the engine:
@@ -27,9 +30,9 @@ Choose the gearbox version of your choice (_manual gears_ or _auto-shift_) from 
 
 | Preview | Car / Scene | VR&#8209;Enabled |   DOWNLOAD       | Video         |
 |-----------------|---------------------|------------|--------------------------------------|------------|
-|![VPP Test Vehicle @ Playground scene](/img/gallery/vpp-test-vehicle-playground.jpg){: .img-thumb .clickview }	| VPP Test Vehicle / Gymkhana Playground	| No  | [Manual gears](#)						 | [Youtube](#) |
-|![Ferrari @ Playground 1K](/img/gallery/vpp-ferrari-playground-1k.jpg){: .img-thumb .clickview } 				| Ferrari / Playground 1K  		| No  | [Manual gears](#) &#124; [Auto&#8209;shift](#) | [Youtube](#) |
-|![JPickup @ Playground 1K](/img/gallery/vpp-jpickup-playground-1k.jpg){: .img-thumb .clickview } 				| JPickup / Playground 1K		| Yes | [Manual gears](#) &#124; [Auto&#8209;shift](#) |              |
+|![VPP Test Vehicle @ Playground scene](/img/gallery/vpp-test-vehicle-playground.jpg){: .img-thumb .clickview }	| VPP Test Vehicle / Gymkhana Playground | No  | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_Gymkhana.7z)                     | [Youtube](https://www.youtube.com/watch?v=eRBasBaKn1g) |
+|![Ferrari @ Playground 1K](/img/gallery/vpp-ferrari-playground-1k.jpg){: .img-thumb .clickview } 				| Ferrari / Playground 1K  		| No  | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_1K_Ferrari_manual_gears.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/Playground_1K_Ferrari.7z) | [Youtube](https://www.youtube.com/watch?v=FuqO4gKDzKE)	|
+|![JPickup @ Playground 1K](/img/gallery/vpp-jpickup-playground-1k.jpg){: .img-thumb .clickview } 				| JPickup / Playground 1K		| Yes | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup_manual_gears.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup.7z) |              											|
 
 ##### Keyboard assignments
 
@@ -45,27 +48,26 @@ Choose the gearbox version of your choice (_manual gears_ or _auto-shift_) from 
 <kbd>Caps Lock</kbd> 				| Gear Down     	   | <kbd>T</kbd> 						| Toggle slow motion
 <kbd>ctrl+space</kbd> 				| Toggle parking brake  | <kbd>Escape</kbd> 					| Reset scene
 
-
 ### Logitech G27
 
 !!! warning "&fa-warning:lg; Ensure that the G27 is connected and working!"
 	Otherwise the demo will crash on startup due to the faulty Logitech's wrapper for Unity.
 
-Choose the gearbox version of your choice (manual gears or auto-shift) from the Download column.
+Choose the gearbox version of your choice (_manual gears_ or _auto-shift_) from the Download column.
 
 | Car      			| Scene         	| VR&#8209;Enabled | Download	        | Video |
 |-------------------|-------------------|------------|--------------------------------------|-------|
-| Ferrari			| Monza				| Yes        | [Manual](#)					        |		|
-| Ferrari			| Spa-Francorchamps | Yes        | [Manual](#)					        | [Youtube](#) |
-| Ferrari			| Playground 1K		| Yes        | [Manual](#) &#124; [Auto-shift](#)	| [Youtube](#) |
-| JPickup			| Playground 1K 	| Yes        | [Manual](#) &#124; [Auto-shift](#)	|       |
-| JPickup			| The City			| Yes        | [Manual](#) &#124; [Auto-shift](#)	|       |
+| Ferrari			| Monza				| Yes        | [Manual gears](#)					        |		|
+| Ferrari			| Spa-Francorchamps | Yes        | [Manual gears](#)					        | [Youtube](#) |
+| Ferrari			| Playground 1K		| Yes        | [Manual gears](#) &#124; [Auto&#8209;shift](#)	| [Youtube](#) |
+| JPickup			| Playground 1K 	| Yes        | [Manual gears](#) &#124; [Auto&#8209;shift](#)	|       |
+| JPickup			| The City			| Yes        | [Manual gears](#) &#124; [Auto&#8209;shift](#)	|       |
 
 ##### Logitech G27 setup
 
 The G27 must be configured in the device's control panel:
 
--	Degrees of rotation: 460 (in order to match the rotation of the steering wheel in the 3D model)
+-	Degrees of rotation: **460** (for matching the rotation of the steering wheel in the 3D model)
 -	Uncheck _Allow Game To Adjust Settings_
 
 ##### Logitech G27 mapping
