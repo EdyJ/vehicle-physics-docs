@@ -22,18 +22,18 @@ generating ssh keys](https://help.github.com/articles/generating-ssh-keys/).
 
 2.	Add the ssh **public key** to [your account](http://projects.edy.es/users/my_profile#public_keys).
 
-3.	You can test your connection by following the [step 5 of the GitHub's guide](https://help.github.com/articles/generating-ssh-keys/#step-5-test-the-connection):
-	Open Git Bash, then enter:
+3.	Test your connection. Open Git Bash, then enter:
 
 		:::text
 		$ ssh -T git@projects.edy.es
 
-	After validating the server the first time (reply _Yes_ to the warning) you should see this if
-	your connection is correct:
+	The first time you will receive a warning. Reply _Yes_. You should then see this:
 
 		:::text
 		Welcome to Repository Hosting's Git Server. You have been successfully authenticated.
 		However you cannot connect directly with SSH, you must use the 'git' command.
+
+	Your connection via SSH is now correct. Proceed to the next step, cloning the VPP project.
 
 ### Cloning the VPP project
 

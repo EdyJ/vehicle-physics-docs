@@ -24,9 +24,9 @@ on Twitter for the latest news and announcements.
 
 <div class="imagegallery" sm="2" md="3" lg="4" style="display:none">
 	<img class="clickview" src="img/gallery/vpp-ferrari.jpg"  alt="Ferrari 458 Italia">
-	<img class="clickview" src="img/gallery/vpp-lancer.jpg" alt="Sports Sedan">
-	<img class="clickview" src="img/gallery/vpp-huracan.jpg" alt="Sports Supercar">
-	<img class="clickview" src="img/gallery/vpp-jpickup.jpg" alt="Japanese Pickup Truck">
+	<img class="clickview" src="img/gallery/vpp-lancer.jpg" alt="Sports Sedan - 3D model by Eric Adams">
+	<img class="clickview" src="img/gallery/vpp-huracan.jpg" alt="Sports Supercar - 3D model by Eric Adams">
+	<img class="clickview" src="img/gallery/vpp-jpickup.jpg" alt="Japanese Pickup Truck - 3D model by Trevor Ley">
 
 	<img class="clickview" src="img/gallery/vpp-ferrari-burnout.jpg" alt="Ferrari 458 doing some donuts and burnouts">
 	<img class="clickview" src="img/gallery/vpp-ferrari-spa.jpg" alt="Ferrari 458 at 195 kph / 120 mph before riding Eau Rouge at Spa-Francorchamps">
@@ -38,6 +38,10 @@ on Twitter for the latest news and announcements.
 	<img class="clickview" src="img/gallery/vpp-alpha-sandbox.jpg" alt="Early sandbox test with Vehicle Physics Pro">
 	<img class="clickview" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials, three differential setups">
 </div>
+
+_Some vehicle 3D Models were kindly donated by Trevor Ley and Eric Adams.<br>
+Spa-Francorchamps track gently offered by Jasper Stocker, from the Track BuildR asset._
+{: .centered }
 
 Advanced AAA+ vehicle physics simulation
 
