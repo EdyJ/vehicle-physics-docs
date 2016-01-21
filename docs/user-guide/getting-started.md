@@ -25,7 +25,7 @@ window)
 **Keyboard layout:**
 
 Key(s)                              | Function          | Notes
-:----------------------------------:|:-----------------:| ------------------------------------------
+------------------------------------|-------------------| ------------------------------------------
 <kbd>K</kbd> 						| Ignition&nbsp;key | Press to move from "Off" to "Drive". Press and Hold for "Start". <kbd>ctrl+K</kbd> moves the key back to "Off".
 <kbd>left</kbd><kbd>right</kbd>  	| Steering 			|
 <kbd>up</kbd> 						| Throttle 			|
@@ -59,8 +59,7 @@ play with:
 - **Brakes:** brake torques, balance, handbrake.
 - **Tires:** tire friction model and parameters.
 - **Driveline:** driveline type and component setup (differentials, torque splitter). Current setup
-	is AWD with main drive power applied at the rear axle and a torque splitter dynamically routing
-	part of the power to the front axle.
+	is RWD with a Torque Splitter dynamically routing part of the drive to the front axle.
 - **Engine:** torque and power curves, rpm limiter, stall settings.
 - **Clutch:** type of clutch and parameters. Using a torque converter is very handy when a real
 	clutch simulation (_Disc Friction_) is not required.
@@ -118,13 +117,17 @@ manages the ground materials present at the scene.
 
 ![VP Ground Materials](/img/user-guide/vpp-ground-materials.png){: .img-medium .clickview }
 
-Each [Ground Material](/components/ground-materials#groundmaterial)
-defines the material properties such as grip, drag, and the objects used for playing the tire
-effects (marks, smoke...) on that material.
+Each [Ground Material](/components/ground-materials#groundmaterial) defines the material properties
+such as grip, drag, and the objects used for playing the tire effects (marks, smoke...) on that
+material.
+
+The ground materials are identified by the Physics Materials assigned to the colliders in the scene.
+Colliders without Physic Material assigned can also have their Ground Material (Physic Material =
+_none_, as shown in the above pic).
 
 #### Camera Controller
 
-The component [VP Camera Controller](/components/camera-controller) controls the camera movement 
+The component [VP Camera Controller](/components/camera-controller) controls the camera movement
 based on the target vehicle and several camera modes available.
 
 ![VP Camera Controller](/img/components/vpp-camera-controller-inspector.png){: .img-medium .clickview }

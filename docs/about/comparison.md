@@ -42,10 +42,10 @@ location you expect to find it at.
 
 #### Extension possibilities
 
-_How easy is to add new features or extensions to the vehicles for adapting them to your project?_
+_How easy is to add new features or customize the vehicles for adapting them to your project?_
 
-Some kits are built on a monolithic script that are very hard to understand, modify or adapt.
-Others are so badly structured that the code is spread on a lot of arbitrary scripts and components,
+Some kits are built on a monolithic script that are very hard to understand, modify or customize.
+Others are so badly structured that the code is spread on dozens of arbitrary scripts and components,
 becoming very difficult to understand, use, and extend.
 
 **Vehicle Physics Pro is designed to be easily extensible and adaptable at several levels:**
@@ -80,7 +80,7 @@ straightforward and harmless to include into existing projects:
 
 - No external dependencies, no naming conflicts (namespaces are used).
 - Unity menu integration (Component > Vehicle Physics).
-- Editor inspectors following Unity's standards for usability and coherency.
+- Editor inspectors adhere to Unity's standards for usability and coherency.
 - Well structured and commented C# code.
 
 #### Physically realistic and accurate
@@ -89,7 +89,7 @@ straightforward and harmless to include into existing projects:
 guesses, no arbitrary assumptions. The core design is physically accurate, so it accounts for all
 the expected and unexpected behaviors of the vehicles.
 
-Do you know what [driveline windup](https://en.wikipedia.org/wiki/Driveline_windup) means? I hadn't
+Do you know what [driveline windup](https://en.wikipedia.org/wiki/Driveline_windup) is? I hadn't
 heard of that until I observed the effect myself in VPP while testing the simulation with heavy AWD
 vehicles.
 
@@ -104,27 +104,35 @@ doubles the cpu impact for _all_ the physics. But it's justified? I think that d
 and unoptimized design.
 
 **Vehicle Physics Pro has been tested with physic rates as low as 16 Hz (physics time step of 0.06)
-without noticeable adverse effects.** This means a negligible impact of the vehicle physics in the
-cpu usage!
+without noticeable adverse effects.** This means that you can reduce the performance impact of the
+entire Unity physics engine without affecting the vehicle's behavior.
 
 In addition, the [integration substeps](/advanced/misc-topics-explained#solver-numeric-integration)
 at the VPP solver can be configured per-vehicle. This means that you could have the Unity physics
 engine working at the default 50Hz, but the main vehicle could perform its calculations at 400Hz
 (8 substeps).
 
+Code and components are efficiently structured and managed as well:
+
+- No GC allocations.
+- No messages sent between scripts at runtime.
+- GetComponent, if required, is called only once on startup.
+
 #### Documentation
 
-A monolithic PDF? A facebook page? A forum thread? _Are you from the past?_ I believe that a
-professional product today deserves a truly professional documentation.
+Some kits provide a monolithic PDF, or a forum page, or even a Facebook page or video tutorials as
+entire documentation.
 
-**The Vehicle Physics Pro site expose all you want to know in a comprehensive and coherent
-structure**. Take a look around. It's even [hosted at GitHub](https://github.com/EdyJ/vehicle-physics-docs)
-and I'm open to additions, fixes, collaborations, etc. I update the documentation frequently while
-developing VPP. The site uses responsive design so it can be read even with mobile devices.
+**Vehicle Physics Pro dedicates this site for all the documentation in a comprehensive and coherent
+structure, which gets updates regularly.** The use of responsive design allows browsing the pages
+comfortably even on mobile devices.
 
-When someone ask me about a topic requiring a detailed reply, I typically add the reply later to the
+Take a look around. The site is even [hosted at GitHub](https://github.com/EdyJ/vehicle-physics-docs).
+I update and modify the docs frequently for keeping them up to date with the latest developments in
+VPP. Also, I'm open to additions, fixes and collaborations.
+
+When someone ask me about a topic requiring a detailed reply, I typically add the reply also to the
 documentation for everyone wondering the same topic. Check out [Miscellaneous Topics Explained](/advanced/misc-topics-explained).
-The VPP documentation can be edited quickly for any modification or addition.
 
 #### Source code, updates and platform support
 
@@ -144,8 +152,8 @@ having to wait for Asset Store updates.
 Enterprise licensees also receive credentials for the project's Redmine tracking system, so they
 can open tickets for bugs and requests directly.
 
-The Free and Standard licenses provide a portion of the source code of VPP (inner vehicle physics
-and dynamics) as cross-platform .NET DLL assembly, still seamlessly compatible with all platforms.
+The Free and Standard licenses provide a portion of the source code of VPP (the inner vehicle
+dynamics part) as cross-platform .NET DLL assembly, still seamlessly compatible with all platforms.
 
 ## Comparing with Edy's Vehicle Physics
 
@@ -184,13 +192,12 @@ model.
 
 #### Which product is better for performance on mobile low-mid end?
 
-Both products have roughly the same performance at their default settings. In VPP the requirements
-might get increased depending on the specific settings of each vehicle (integration substeps, number
-of blocks in the powertrain, etc). In EVP the performance depends on the total number of wheels in
-the scene.
+Both products have roughly the same performance at their default settings.
+
+- In VPP the requirements might get increased depending on the specific settings of each vehicle
+	(integration substeps, number of blocks in the powertrain, etc).
+- In EVP the performance depends on the total number of wheels in the scene and the optimization
+	settings per-vehicle.
 
 The controller example at [Creating Custom Vehicles](/advanced/custom-vehicles) may be used
-for ensuring the most performance out of the VPP simulation.
-
-
-
+for getting the most performance out of the VPP simulation.

@@ -381,20 +381,22 @@ developer of the [Assetto Corsa](http://www.assettocorsa.net) simulator, regardi
 Vehicle Physics Pro will implement these solutions:
 
 Automatic steering angle limit
+
 :	It will limit the maximum steering angle to the value that provides most lateral grip at the
 	actual vehicle speed.
 
 	In my opinion most of the understeer problem is a perception issue. Without steering wheel +
 	force feedback there's no clear idea on when the tires are performing their maximum grip. By
 	limiting the angle with speed you give the driver a clear perception on how much the vehicle
-	can steer at the actual speed (with the actual tires). Thus, they learn to brake on sharp
-	turns in order to allow more steering angle. Choosing the correct balance among speed & steering
-	angle on each turn gives the vehicle the best racing line.
+	can steer at the actual speed with the actual tires. Thus, they learn to brake on sharp
+	turns in order to allow wider steering angle. Choosing the correct balance among speed &
+	steering angle on each turn gives the vehicle the best racing line.
 
-	This solution had been implemented in the former Edy's Vehicle Physics package under the driver
+	This solution had been implemented in the package Edy's Vehicle Physics under the driver
 	aid "ESP".
 
 Aerodynamics
+
 :	Aerodynamic components provide extra downforce with the speed. This downforce increases the grip
 	at the tires. Balancing the amount of aerodynamic downforce among front and rear axles can
 	configure the understeer / oversteer behavior at high speeds.
@@ -403,18 +405,10 @@ Aerodynamics
 	downforce will compress the suspension as well. It's better the suspension not to reach 100%
 	compression (1.0). Stiffer springs might be required for avoiding that.
 
-Simplified aerodynamics
-:	A simplified aerodynamics mode can be used for increasing the downforce (and thus grip) without
-	adding extra drag with speed. Greatly increasing this force can make the vehicle behave very
-	arcade style. Same considerations on the suspension as realistic aerodynamics are applied.
-
 Force feedback
+
 :	Allowing the use of steering wheel controllers for feeling the actual grip of the tire while
 	cornering.
-
-Arcade mode
-:	A component that will enforce the vehicle to steer no matter the actual tire settings. Should
-	be used when this kind of gameplay is required by the project.
 
 #### Drift settings
 
@@ -561,7 +555,11 @@ several settings with these results:
 - **1.0 - 1.6:** potentially unstable and unrealistically behaving on many situations.
 - **&gt; 1.6:** mostly unstable, bounces, shakes, etc.
 
-I'd recommend you to use damper values so the damper ratio stays at **0.3 - 0.4** at most.
+I'd recommend you to use damper values so the damper ratio doesn't go beyond **0.3 - 0.4** at most
+for hard suspensions. Values around 0.1 - 0.2 provide nice under-damped (slightly bouncy) suspension
+effect.
+
+[Learn more: How Suspension Works](how-suspensions-work)
 
 ---
 

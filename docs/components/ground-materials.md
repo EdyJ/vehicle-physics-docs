@@ -25,9 +25,10 @@ match the colliders without physic material assigned.
 	not references to the original. Thus, a GroundMaterialManager existing in the scene wouldn't
 	recognize those materials.
 
-	Possible Solutions:
-	- Include the GroundMaterialManager in the bundle, so references to the physic materials are
-		preserved.
+	Possible solutions:
+
+	- Include the VPGroundMaterialManager object in the bundle, so references to the physic
+		materials are preserved.
 	- Explicitly fix the references to the physic materials in the colliders after loading the
 		bundle. You can compare by name and assign a correct reference so the physic materials
 		can be found in the GroundMaterialManager list.
@@ -48,12 +49,12 @@ Physic Material
 Grip
 :	Grip multiplier of the surface. Some reference examples are:
 
-|  Surface   | Grip |
-| ---------- | ---- |
-| Dry tarmac | 1    |
-| Wet tarmac | 0.82 |
-| Snow       | 0.3  |
-| Ice        | 0.1  |
+	| Surface    |<center>Grip</center>|
+	| ---------- |:----:|
+	| Dry tarmac | 1    |
+	| Wet tarmac | 0.82 |
+	| Snow       | 0.3  |
+	| Ice        | 0.1  |
 
 Drag
 :	Drag force based on the speed and load of the wheel on the surface. The formula for computing
