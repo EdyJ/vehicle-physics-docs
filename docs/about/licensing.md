@@ -20,10 +20,10 @@ Standard license (To Be Announced)
 :	Will be available at the Unity Asset Store. Includes the Vehicle Physics components,
 	development API and several pre-configured vehicles. _This product requires a license per seat._
 
-Professional license add-on
+Professional license
 
-:	A power-up to the Standard license providing access to the latest updates via GIT repository,
-	fully commented C# source code, premium vehicles, and direct support via Skype and Telegram.
+:	The Standard license plus access to the latest updates via GIT repository, fully commented C#
+	source code, premium vehicles, and direct support via Skype and Telegram.
 
 Enterprise license
 
@@ -68,8 +68,6 @@ Flat license for all other present and future Vehicle Physics products<br>([Edy'
 
 > Notes:
 >
-> - Professional license is an add-on to the Standard license.
->
 > - Licenses may be upgraded anytime by paying the price difference.
 >
 > - Prices do not include PayPal fees nor taxes (if applicable).
@@ -85,10 +83,12 @@ Flat license for all other present and future Vehicle Physics products<br>([Edy'
 	entity with annual gross revenues, funds (including crowfunding), or total annual budget in
 	excess of US\$100,000.
 
-- No part of the source code may be disclosed to a third party.
-
 - Vehicle Physics Pro may be used as part of end-user, closed source products **only**. No
 	development libraries, development tools, open-source or middleware of any kind is permitted to
 	use technologies from Vehicle Physics Pro.
 
-- GIT credentials (Professional and Enterprise licenses) must be kept safe and private.
+- No part of the source code may be disclosed to a third party.
+
+- Standard and Professional licenses require one license per seat.
+
+- Connections to the GIT repository are logged per-account.
