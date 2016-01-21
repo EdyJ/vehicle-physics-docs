@@ -23,11 +23,13 @@ ignition key.
 
 ### Keyboard-controlled
 
-| Car      			| Scene         	| VR-Enabled |   Download	 					    | Video         |
-|-------------------|-------------------|------------|--------------------------------------|------------|
-| VPP Test Vehicle	| Playground		| No         | [Manual](#)							| [Youtube](#) |
-| Ferrari			| Playground 1K		| No         | [Manual](#) &#124; [Auto-shift](#)	| [Youtube](#) |
-| JPickup			| Playground 1K 	| Yes        | [Manual](#) &#124; [Auto-shift](#)	|            |
+Choose the gearbox version of your choice (_manual gears_ or _auto-shift_) from the Download column.
+
+| Preview | Car / Scene | VR&#8209;Enabled |   DOWNLOAD       | Video         |
+|-----------------|---------------------|------------|--------------------------------------|------------|
+|![VPP Test Vehicle @ Playground scene](/img/gallery/vpp-test-vehicle-playground.jpg){: .img-thumb .clickview }	| VPP Test Vehicle / Gymkhana Playground	| No  | [Manual gears](#)						 | [Youtube](#) |
+|![Ferrari @ Playground 1K](/img/gallery/vpp-ferrari-playground-1k.jpg){: .img-thumb .clickview } 				| Ferrari / Playground 1K  		| No  | [Manual gears](#) &#124; [Auto&#8209;shift](#) | [Youtube](#) |
+|![JPickup @ Playground 1K](/img/gallery/vpp-jpickup-playground-1k.jpg){: .img-thumb .clickview } 				| JPickup / Playground 1K		| Yes | [Manual gears](#) &#124; [Auto&#8209;shift](#) |              |
 
 ##### Keyboard assignments
 
@@ -35,8 +37,8 @@ ignition key.
 -----------------------------------:|-----------------|-----------------------------------:|-----------------
 <kbd>K</kbd> <kbd>ctrl+K</kbd>		| Ignition key       | <kbd>R</kbd> 						| Reverse gear
 <kbd>left</kbd><kbd>right</kbd>  	| Steering              | <kbd>N</kbd> 						| Neutral gear
-<kbd>up</kbd> 						| Throttle              | <kbd>1</kbd> - <kbd>5</kbd> 			| Engage gear no.
-<kbd>down</kbd> 					| Brake                 | <kbd>Page up</kbd><kbd>Page down</kbd> | Gear&nbsp;mode (automatic transmission)
+<kbd>up</kbd> 						| Throttle              | <kbd>1</kbd> - <kbd>5</kbd> 			| Engage manual gears
+<kbd>down</kbd> 					| Brake                 | |
 <kbd>shift</kbd> 					| Clutch                | <kbd>B</kbd> 						| Toggle telemetry data
 <kbd>space</kbd> 					| Handbrake             | <kbd>C</kbd> 						| Change camera
 <kbd>Tab</kbd> 						| Gear Up          	    | <kbd>F1-F4</kbd>					| Select&nbsp;different&nbsp;camera&nbsp;modes
@@ -49,13 +51,15 @@ ignition key.
 !!! warning "&fa-warning:lg; Ensure that the G27 is connected and working!"
 	Otherwise the demo will crash on startup due to the faulty Logitech's wrapper for Unity.
 
-| Car      			| Scene         	| VR-Enabled | Download	 					| Video |
-|-------------------|-------------------|------------|------------------------------|-------|
-| Ferrari			| Monza				| Yes        | [Manual](#)					|			|
-| Ferrari			| Spa-Francorchamps | Yes        | [Manual](#)					|  [Youtube](#) |
-| Ferrari			| Playground 1K		| Yes        | [Manual](#) &#124; [Auto-shift](#)	| |
-| JPickup			| Playground 1K 	| Yes        | [Manual](#) &#124; [Auto-shift](#)	| |
-| JPickup			| The City			| Yes        | [Manual](#) &#124; [Auto-shift](#)	| |
+Choose the gearbox version of your choice (manual gears or auto-shift) from the Download column.
+
+| Car      			| Scene         	| VR&#8209;Enabled | Download	        | Video |
+|-------------------|-------------------|------------|--------------------------------------|-------|
+| Ferrari			| Monza				| Yes        | [Manual](#)					        |		|
+| Ferrari			| Spa-Francorchamps | Yes        | [Manual](#)					        | [Youtube](#) |
+| Ferrari			| Playground 1K		| Yes        | [Manual](#) &#124; [Auto-shift](#)	| [Youtube](#) |
+| JPickup			| Playground 1K 	| Yes        | [Manual](#) &#124; [Auto-shift](#)	|       |
+| JPickup			| The City			| Yes        | [Manual](#) &#124; [Auto-shift](#)	|       |
 
 ##### Logitech G27 setup
 
