@@ -1,6 +1,6 @@
-# Compiled demos
+# Vehicle Physics Pro demos
 
-Try Vehicle Physics Pro yourself. Here you have some demos for PC/Windows.
+Try Vehicle Physics Pro yourself with these demos compiled for PC/Windows.
 
 Notes:
 
@@ -75,5 +75,6 @@ Choose the gearbox version of your choice (_manual gears_ or _auto-shift_) from 
 |![JPickup @ Playground 1K](/img/gallery/vpp-jpickup-playground-1k.jpg){: .img-thumb .clickview } | JPickup / Playground 1K | Yes | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup_G27_manual_gears_VR.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup_G27_auto_shift_VR.7z)
 |![JPickup @ The City](/img/gallery/vpp-jpickup-the-city.jpg){: .img-thumb .clickview } | JPickup / The City | Yes | [Manual gears](http://edy.es/unity/vpp-demos/alpha/The_City_JPickup_G27_manual_gears_VR.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/The_City_JPickup_G27_auto_shift_VR.7z)
 
-##### Logitech G27 mapping
+![Logitech G27 shifter mappings for the VPP demos](/img/gallery/vpp-logitech-g27-shifter-mappings.jpg){: .img-medium  .clickview }
+
 
