@@ -28,11 +28,11 @@ ignition key.
 
 Choose the gearbox version of your choice (_manual gears_ or _auto-shift_) from the Download column.
 
-| Preview | Car / Scene | VR&#8209;Enabled | DOWNLOAD | Video |
-|---------|-------------|------------------|----------|-------|
-|![VPP Test Vehicle @ Playground scene](/img/gallery/vpp-test-vehicle-playground.jpg){: .img-thumb .clickview }	| VPP Test Vehicle / Gymkhana Playground | No  | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_Gymkhana.7z)                     | [Youtube](https://www.youtube.com/watch?v=eRBasBaKn1g)
-|![Ferrari @ Playground 1K](/img/gallery/vpp-ferrari-playground-1k.jpg){: .img-thumb .clickview } 				| Ferrari / Playground 1K  		| No  | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_1K_Ferrari_manual_gears.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/Playground_1K_Ferrari_auto_shift.7z) | [Youtube](https://www.youtube.com/watch?v=FuqO4gKDzKE)
-|![JPickup @ Playground 1K](/img/gallery/vpp-jpickup-playground-1k.jpg){: .img-thumb .clickview } 				| JPickup / Playground 1K		| Yes | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup_manual_gears_VR.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup_auto_shift_VR.7z)
+| Preview | Car / Scene | VR&#8209;Enabled | Video | Download demo |
+|---------|-------------|------------------|-------|---------------|
+|![VPP Test Vehicle @ Playground scene](/img/gallery/vpp-test-vehicle-playground.jpg){: .img-thumb .clickview }	| VPP Test Vehicle / Gymkhana Playground | No | [Youtube](https://www.youtube.com/watch?v=eRBasBaKn1g) | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_Gymkhana.7z)
+|![Ferrari @ Playground 1K](/img/gallery/vpp-ferrari-playground-1k.jpg){: .img-thumb .clickview } 				| Ferrari / Playground 1K  		| No  | [Youtube](https://www.youtube.com/watch?v=FuqO4gKDzKE) | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_1K_Ferrari_manual_gears.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/Playground_1K_Ferrari_auto_shift.7z)
+|![JPickup @ Playground 1K](/img/gallery/vpp-jpickup-playground-1k.jpg){: .img-thumb .clickview } 				| JPickup / Playground 1K		| Yes | | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup_manual_gears_VR.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup_auto_shift_VR.7z)
 
 ##### Keyboard assignments
 
@@ -67,13 +67,13 @@ The G27 must be configured in the device's control panel:
 
 Choose the gearbox version of your choice (_manual gears_ or _auto-shift_) from the Download column.
 
-| Preview | Car / Scene | VR&#8209;Enabled | Download | Video |
-|---------|-------------|------------------|----------|-------|
-|![Ferrari @ Monza](/img/gallery/vpp-ferrari-monza-2.jpg){: .img-thumb .clickview } | Ferrari / Monza | Yes | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Monza_Ferrari_G27_manual_gears_VR.7z)
-|![Ferrari @ Spa-Francorchamps](/img/gallery/vpp-ferrari-spa.jpg){: .img-thumb .clickview } | Ferrari / Spa-Francorchamps | Yes | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Spa_Ferrari_G27_manual_gears_VR.7z) | [Youtube](https://www.youtube.com/watch?v=SdeJcpWNHsw)
-|![Ferrari @ Playground 1K](/img/gallery/vpp-ferrari-playground-1k.jpg){: .img-thumb .clickview } | Ferrari / Playground 1K | Yes | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_1K_Ferrari_G27_manual_gears_VR.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/Playground_1K_Ferrari_G27_auto_shift_VR.7z) | [Youtube](https://www.youtube.com/watch?v=FuqO4gKDzKE)
-|![JPickup @ Playground 1K](/img/gallery/vpp-jpickup-playground-1k.jpg){: .img-thumb .clickview } | JPickup / Playground 1K | Yes | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup_G27_manual_gears_VR.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup_G27_auto_shift_VR.7z)
-|![JPickup @ The City](/img/gallery/vpp-jpickup-the-city.jpg){: .img-thumb .clickview } | JPickup / The City | Yes | [Manual gears](http://edy.es/unity/vpp-demos/alpha/The_City_JPickup_G27_manual_gears_VR.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/The_City_JPickup_G27_auto_shift_VR.7z)
+| Preview | Car / Scene | VR&#8209;Enabled | Video | Download demo |
+|---------|-------------|------------------|-------|---------------|
+|![Ferrari @ Monza](/img/gallery/vpp-ferrari-monza-2.jpg){: .img-thumb .clickview } | Ferrari / Monza | Yes | | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Monza_Ferrari_G27_manual_gears_VR.7z)
+|![Ferrari @ Spa-Francorchamps](/img/gallery/vpp-ferrari-spa.jpg){: .img-thumb .clickview } | Ferrari / Spa-Francorchamps | Yes | [Youtube](https://www.youtube.com/watch?v=SdeJcpWNHsw) | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Spa_Ferrari_G27_manual_gears_VR.7z)
+|![Ferrari @ Playground 1K](/img/gallery/vpp-ferrari-playground-1k.jpg){: .img-thumb .clickview } | Ferrari / Playground 1K | Yes | [Youtube](https://www.youtube.com/watch?v=FuqO4gKDzKE) | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_1K_Ferrari_G27_manual_gears_VR.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/Playground_1K_Ferrari_G27_auto_shift_VR.7z)
+|![JPickup @ Playground 1K](/img/gallery/vpp-jpickup-playground-1k.jpg){: .img-thumb .clickview } | JPickup / Playground 1K | Yes | | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup_G27_manual_gears_VR.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup_G27_auto_shift_VR.7z)
+|![JPickup @ The City](/img/gallery/vpp-jpickup-the-city.jpg){: .img-thumb .clickview } | JPickup / The City | Yes | | [Manual gears](http://edy.es/unity/vpp-demos/alpha/The_City_JPickup_G27_manual_gears_VR.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/The_City_JPickup_G27_auto_shift_VR.7z)
 
 ![Logitech G27 shifter mappings for the VPP demos](/img/gallery/vpp-logitech-g27-shifter-mappings.jpg){: .img-medium  .clickview }
 
