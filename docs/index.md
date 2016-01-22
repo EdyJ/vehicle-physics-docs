@@ -4,6 +4,9 @@
 Advanced vehicle simulation kit for [Unity 3D](http://unity3d.com) providing fully realistic and
 accurate vehicle physics.
 
+Quick links: [Feature details](/about/features), [demo downloads](/about/demos), [product walkthrough](/user-guide/getting-started),
+[comparing with other vehicle simulation kits](/about/comparison).
+
 !!! warning "&fa-warning:lg; Project under development: **Beta stage**"
 
 	**Beta stage** means the project is mature and bug-free enough to be used in actual projects,

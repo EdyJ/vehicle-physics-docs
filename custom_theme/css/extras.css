@@ -67,6 +67,18 @@ img.img-small
 	max-width: 320px;
 	}
 
+img.img-thumb
+	{
+	max-width: 120px;
+	}
+
+/* thumbs inside table cells redefine the vertical margin */
+
+td img.img-thumb
+	{
+	margin: 2px auto;
+	}
+
 
 /* Nicely formatted centered title and subtitle */
 
