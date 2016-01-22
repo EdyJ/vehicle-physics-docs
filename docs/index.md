@@ -39,6 +39,10 @@ on Twitter for the latest news and announcements.
 	<img class="clickview" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials, three differential setups">
 </div>
 
+_Some vehicle 3D Models were kindly donated by Trevor Ley and Eric Adams.<br>
+Spa-Francorchamps track gently offered by Jasper Stocker, from the Track BuildR asset._
+{: .centered }
+
 Advanced AAA+ vehicle physics simulation
 
 :	Built around an accurate physics solver providing realistic results for all vehicle types and
