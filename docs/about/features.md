@@ -57,14 +57,15 @@ the actual design of the core simulation model, proving its accuracy.
 
 ### High performance
 
-The dynamics concept in the core of VPP is so simple that provides an outstanding performance while
-keeping the accuracy of the simulation. This makes the kit perfectly suitable for mobile and low-end
-systems. On high-end desktop and gaming platforms the dynamics solver can be set up for taking the
-most precision out of these powerful systems.
+The dynamics design in the core of VPP provides an outstanding performance while keeping the
+accuracy of the simulation. This makes the kit perfectly suitable for mobile and low-end systems.
+On high-end desktop and gaming platforms the dynamics solver can be set up for taking the most
+precision out of these powerful systems.
 
 !!! info ""
 	VPP vehicles have been tested at update rates as low as 16 Hz (physics time step of 0.06)
-	without noticeable adverse effects. This means a negligible impact on the CPU usage.
+	without noticeable adverse effects. This means that the performance impact of the entire Unity
+	physics engine can be reduced without affecting the vehicle simulation.
 
 The dynamics calculations are performed by a flexible integration solver. The substeps used by the
 solver on each integration [can be configured](../advanced/misc-topics-explained/#solver-numeric-integration)
@@ -100,9 +101,9 @@ easy in Vehicle Physics Pro!
 
 ### And much more!
 
-- Seamlessly integration into existing projects
+- VR enabled. [Try the demos](demos)
 - Highly detailed documentation
-- GIT repository access (Professional and Enterprise licensees)
+- [GIT repository access](/advanced/git-repository-setup) (Professional and Enterprise licensees)
 - Redmine tracking system access (Enterprise licensees)
 
 
