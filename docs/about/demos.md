@@ -48,10 +48,14 @@ Choose the gearbox version of your choice (_manual gears_ or _auto-shift_) from 
 <kbd>Caps Lock</kbd> 				| Gear Down     	    | <kbd>T</kbd> 						| Toggle slow motion
 <kbd>ctrl+space</kbd> 				| Toggle parking brake  | <kbd>Escape</kbd> 				| Reset scene
 
+---
+
 ### Logitech G27
 
 Vehicle Physics Pro supports all controls and features of the G27, including clutch, shifter and
-force feedback.
+force feedback. The demos below require the G27 steering wheel controller.
+
+![Logitech G27, shifter and pedals](/img/gallery/logitech-g27-full-set.jpg){: .img-thumb .clickview }
 
 The G27 must be configured in the device's control panel:
 
