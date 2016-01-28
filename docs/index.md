@@ -144,6 +144,18 @@ Additional components
 	Feel free to write me to [edy@vehiclephysics.com](mailto:edy@vehiclephysics.com) or via Twitter
 	[@VehiclePhysics](https://twitter.com/VehiclePhysics).
 
+
+#### Contributors
+
+My most sincere gratitude to these great artists who contributed or are contributing in some way
+with Vehicle Physics Pro:
+
+- Trevor Ley (JPickup)
+- [HereVR](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:8060) (APC)
+- [Dog Machine](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:2914) (Multi-purpose Exploration Vehicle)
+- Eric Adams (Super car, Tuner car)
+
+
 <a class="twitter-timeline" href="https://twitter.com/VehiclePhysics" data-widget-id="687956324773179396">Tweets por el @VehiclePhysics.</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 {: .centered }

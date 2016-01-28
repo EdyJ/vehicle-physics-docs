@@ -6,8 +6,9 @@ Notes:
 
 - **No driving aids!** Only an auto-shift version is available for some demos.
 
-- **Clutch:** these vehicle setups use a Torque Converter, which doesn't require active clutch.
-	Still, the clutch control can be used to completely disengage the engine from the transmission.
+- **Clutch:** these vehicle setups use a Torque Converter, which provides progressive coupling
+	without requiring an active clutch. Still, the clutch control can be used to completely
+	disengage the engine from the transmission.
 
 - Demos are compressed in [7z archives](http://7-zip.org). Download the demo, unpack to a folder of
 	your choice and launch the executable.
