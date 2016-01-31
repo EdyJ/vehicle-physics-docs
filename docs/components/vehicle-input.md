@@ -104,11 +104,11 @@ from scripting without having to deactivate the VPStandardInput component.
 
 ### VPLogitechInput
 
-Supports the Logitech G27 controller with force feedback.
+Supports the Logitech steering wheel controllers, including force feedback where available.
 
-&fa-warning; Unity crashes if this component gets enabled while the G27 is **not** connected! Blame
-the buggy LogitechSteeringWheelEnginesWrapper.dll. Proper steering wheel support will be available
-soon for VPP.
+&fa-warning; Unity crashes if this component gets enabled while the steering wheel is **not**
+connected! Blame the buggy LogitechSteeringWheelEnginesWrapper.dll. Proper steering wheel support
+will be available soon for VPP.
 {: .alert .alert-warning }
 
 ![VP Logitech Input](/img/components/vpp-logitech-input-inspector.png){: .img-small .clickview }

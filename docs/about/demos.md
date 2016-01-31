@@ -22,8 +22,7 @@ The vehicles in these demos begin with the engine off. For starting the engine:
 
 	<kbd>ctrl-K</kbd> moves the ignition key back to the "Off" switching off the engine.
 
-The Logitech G27 maps <kbd>DPad-Right</kbd> and <kbd>DPad-Left</kbd> at the shifter device to the
-ignition key.
+Logitech steering wheels map <kbd>DPad-Right</kbd> and <kbd>DPad-Left</kbd> to the ignition key.
 
 ### Keyboard-controlled
 
@@ -51,19 +50,20 @@ Choose the gearbox version of your choice (_manual gears_ or _auto-shift_) from 
 
 ---
 
-### Logitech G27
+### Logitech steering wheels
 
-Vehicle Physics Pro supports all controls and features of the G27, including clutch, shifter and
-force feedback. The demos below require the G27 steering wheel controller.
+Vehicle Physics Pro supports the Logitech steering wheels: G25, G27, Driving Force... all controls
+and features are supported including clutch, shifter and force feedback. The demos below require a
+Logitech steering wheel controller.
 
 ![Logitech G27, shifter and pedals](/img/gallery/logitech-g27-full-set.jpg){: .img-thumb .clickview }
 
-The G27 must be configured in the device's control panel:
+The steering wheel must be configured in the device's control panel:
 
 -	Degrees of rotation: **460** (for matching the rotation of the steering wheel in the 3D model)
 -	Uncheck _Allow Game To Adjust Settings_.
 
-!!! warning "&fa-warning:lg; Ensure that the G27 is connected and working!"
+!!! warning "&fa-warning:lg; Ensure that your Logitech steering wheel is connected and working!"
 	Otherwise the demo will crash on startup due to the faulty Logitech's wrapper for Unity.
 
 Choose the gearbox version of your choice (_manual gears_ or _auto-shift_) from the Download column.
@@ -75,6 +75,8 @@ Choose the gearbox version of your choice (_manual gears_ or _auto-shift_) from 
 |![Ferrari @ Playground 1K](/img/gallery/vpp-ferrari-playground-1k.jpg){: .img-thumb .clickview } | Ferrari / Playground 1K | Yes | [Youtube](https://www.youtube.com/watch?v=FuqO4gKDzKE) | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_1K_Ferrari_G27_manual_gears_VR.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/Playground_1K_Ferrari_G27_auto_shift_VR.7z)
 |![JPickup @ Playground 1K](/img/gallery/vpp-jpickup-playground-1k.jpg){: .img-thumb .clickview } | JPickup / Playground 1K | Yes | | [Manual gears](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup_G27_manual_gears_VR.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/Playground_1K_JPickup_G27_auto_shift_VR.7z)
 |![JPickup @ The City](/img/gallery/vpp-jpickup-the-city.jpg){: .img-thumb .clickview } | JPickup / The City | Yes | | [Manual gears](http://edy.es/unity/vpp-demos/alpha/The_City_JPickup_G27_manual_gears_VR.7z) &#124; [Auto&#8209;shift](http://edy.es/unity/vpp-demos/alpha/The_City_JPickup_G27_auto_shift_VR.7z)
+
+Specific mappings may vary among the different Logitech models. D-Pad works the same in all of them.
 
 ![Logitech G27 shifter mappings for the VPP demos](/img/gallery/vpp-logitech-g27-shifter-mappings.jpg){: .img-medium  .clickview }
 
