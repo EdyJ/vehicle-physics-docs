@@ -100,6 +100,8 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 |ClutchLock		| Lock ratio of the clutch					| %		| 1000	| 800 = 0.8 = 80%
 |GearboxGear 	| Engaged gear								| gear number	|		| Negative = reverse, 0 = Neutral or Park, Positive = forward.
 |GearboxMode	| Actual transmission mode					| gear mode		|		| 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_
+|GearboxShifting| Is the gearbox in the middle of a gear shift operation?	|		|		| 0 = no, 1 = yes
+|RetarderTorque	| Brake torque injected in the driveline by the retarder	| Nm	| 1000	| 2000000 = 2000 Nm
 
 ### Settings channel
 
