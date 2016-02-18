@@ -22,9 +22,9 @@ with the wheels, are simulated via inputs and outputs.
 ### Block connections and torque flow
 
 The `Block.Connect` method connects an input of a block to an output of a different block. For this,
-the Connect method creates a `Block.Connection` object an ensures both block have access to it.
+the Connect method creates a `Block.Connection` object an ensures both blocks have access to it.
 This `Connection` object is the placeholder for the torque and momentum values that are transmitted
-upwards and downwards between the block.
+upwards and downwards among blocks.
 
 The actual torque and momentum flow occurs at the `Block` class, specifically at the methods
 `ComputeStateUpwards` and `EvaluateTorqueDownstream`. At ComputeStateUpwards the block takes the
@@ -45,8 +45,8 @@ torque at their inputs and do the final tasks:
 - compute a new momentum value (this defines the wheel's new angular velocity)
 - calculate a tire force and a reaction torque
 
-The tire force is applied to the rigidbody. The momentum and the reaction torque are sent upwards
-through the input, and the cycle repeats.
+The resulting tire force is then applied to the rigidbody. Momentum and reaction torque are sent
+upwards through the input, and the cycle repeats.
 
 ### Public interface
 
@@ -63,7 +63,7 @@ Inputs
 	(`Gearbox` block) or the position of the throttle pedal (`Engine` block). Inputs are
 	the values that are typically adjusted by the driver while driving.
 
-	In some cases the block can modify an input value for preventing it to go out of range.
+	In some cases the block can constrain an input value for preventing it to go out of range.
 	This happens at the manual gearbox, for instance. Gear lever is not allowed to have an invalid
 	value (non-existing gear).
 
@@ -74,8 +74,11 @@ States
 	correct to engage a gear or not.
 
 Sensors
-:	Sensors expose internal information from the block to the vehicle controller.
-	Examples: the rpm values of the engine, the actually engaged gear in the gearbox, etc.
+:	Sensors expose internal values from the block to the vehicle controller. These values might
+	be used to feed the _States_ of other blocks, take part of the vehicle's logic, or exposed at
+	the dashboard.
+	Examples: the rpm values of the engine, the actually engaged gear in the gearbox, the torque
+	transmitted by the clutch, etc.
 
 The Vehicle Controller host is responsible of feeding the blocks with the appropriate inputs and
 states, as well as exposing and using the sensors correctly. These values are typically to be
@@ -94,25 +97,27 @@ public class SimpleGear : Block
 	{
 	public float ratio = 1.0f;
 
-	// Block implementation
-
-	Connection m_input;
-	Connection m_output;
-
 	protected override void Initialize ()
 		{
+		// Declare this block to have a single input and a single output
+
 		SetInputs(1);
 		SetOutputs(1);
 		}
 
 	public override bool CheckConnections ()
 		{
-		// Both Input and output are required
+		// Both input and output are required to be connected to other blocks
+
 		return inputs[0] != null && outputs[0] != null;
 		}
 
 	public override void ComputeStateUpstream ()
 		{
+		// Take the state from the output connection, process it,
+		// and put the result at the input connection (upstream flow).
+		// L = angular momentum, I = inertia, Tr = reaction torque
+
 		inputs[0].L = output[0].L / ratio;
 		inputs[0].I = output[0].I / ratio / ratio;
 		inputs[0].Tr = output[0].Tr / ratio;
@@ -120,6 +125,9 @@ public class SimpleGear : Block
 
 	public override void EvaluateTorqueDownstream ()
 		{
+		// Take the torque from the input connection, process it,
+		// and put the result at the output connection (downstream flow).
+
 		outputs[0].outTd = inputs[0].outTd * ratio;
 		}
 	}

@@ -61,7 +61,7 @@ Direct support via Skype / Telegram						|	| 	| &fa-check;	| &fa-check;	|
 Priority support and consultancy services				|	| 	| 	| &fa-check;	|
 Access to the project's tracking system (RedMine)		|	| 	| 	| &fa-check;	|
 License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
-May be licensed by companies with anual revenue / funds / budget in excess of US\$100,000	|	| 	|	| &fa-check;	|
+May be licensed by companies with annual revenue / funds / budget in excess of US\$100,000	|	| 	|	| &fa-check;	|
 10 days of Expert Assistance							|	|	|	| &fa-check;	|
 Flat license for all other present and future Vehicle Physics products<br>([Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics/))|	| 	| 	| &fa-check;	|
 **Price**												| Free | $160 | <del>\$480</del> **$320** | **$4800** |
@@ -70,25 +70,27 @@ Flat license for all other present and future Vehicle Physics products<br>([Edy'
 >
 > - Licenses may be upgraded anytime by paying the price difference.
 >
-> - Prices do not include PayPal fees nor taxes (if applicable).
+> - Prices do not include PayPal fees or taxes (if applicable).
 >
 > - Expert Assistance days included with the Enterprise License do not expire and can be requested
 >	anytime. We would book specific days in advance, consecutive or non-consecutive, of your
 >	choice for me to work remotely with your team in your project, for the entire working day, at
 >	your schedule.
 
-### Terms and conditions
+### Licensing terms and conditions
 
 - Free, Standard and Professional licenses may not be licensed by any commercial or non-commercial
 	entity with annual gross revenues, funds (including crowfunding), or total annual budget in
 	excess of US\$100,000.
 
-- Vehicle Physics Pro may be used as part of end-user, closed source products **only**. No
-	development libraries, development tools, open-source or middleware of any kind is permitted to
-	use technologies from Vehicle Physics Pro.
+- Vehicle Physics Pro may be used as part of **end-user, closed source products only**. No
+	development libraries, development tools, open-source project or middleware of any kind are
+	permitted to use technologies of Vehicle Physics Pro.
 
 - No part of the source code may be disclosed to a third party.
 
-- Standard and Professional licenses require one license per seat.
+- Standard and Professional licenses require one license per developer seat.
 
-- Connections to the GIT repository are logged per-account.
+- Connections to the GIT repository are logged per-account. The account may get blocked if an
+	excess of connections for a given license is detected. Failure to keep the repository
+	connections under the licensing terms may result in a license termination.
