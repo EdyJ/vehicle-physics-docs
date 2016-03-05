@@ -112,8 +112,11 @@ Realistic and coherent
 &fa-gear:spin; Replay system
 {: .roadmap .wip }
 
-Advanced graphic telemetry
-{: .roadmap .todo }
+&fa-gear:spin; Advanced graphic telemetry
+{: .roadmap .wip }
+
+&fa-gear:spin; Generic wheel controller support
+{: .roadmap .wip }
 
 Complete the documentation
 {: .roadmap .todo }
@@ -125,9 +128,6 @@ Anisotropic tire friction
 {: .roadmap .todo }
 
 Driving aids
-{: .roadmap .todo }
-
-Generic wheel controller support
 {: .roadmap .todo }
 
 Additional components

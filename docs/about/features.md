@@ -9,19 +9,23 @@ scratch for providing accurate vehicle physics and dynamics on any condition.
 ### Applications
 
 Racing games and simulators
-:	Configure and fine-tune the vehicles applying the real-world techniques and tricks.
+:	Configure and fine-tune the vehicles applying real-world techniques and tricks.
 
 Training simulators
 :	Apply the specifications of real vehicles to Vehicle Physics Pro and build a simulator for
-	training drivers.
+	training drivers. [Example: Truck simulator](https://twitter.com/VehiclePhysics/status/705806025266434048)
 
-Prototyping
-:	Experiment with any crazy idea you may have: two engines, one per front-rear axle? Why not.
-	Observe the behavior and all the side effects!
+Studying / researching
+:	Design unbiased experiments by reproducing the same tests under different conditions and
+	configurations. [Example: ABS vs. no-ABS test](https://www.youtube.com/watch?v=t0NFt3d-jbg)
 
 Learning and Teaching
 :	Learn how real vehicles and internal parts work: basics, requirements, behaviors, side-effects,
 	configuration techniques, performance tips...
+
+Prototyping
+:	Experiment with any crazy idea you may have: two engines, one per front-rear axle? Why not.
+	Observe the behavior and all the side effects!
 
 ### Easy to use
 

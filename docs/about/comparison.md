@@ -160,12 +160,12 @@ dynamics part) as cross-platform .NET DLL assembly, still seamlessly compatible 
 [Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics/) (**EVP**, available [at the Asset Store](https://www.assetstore.unity3d.com/#/content/403))
 and Vehicle Physics Pro (**VPP**) are two completely different products targeting different needs.
 
-**EVP** provides a very simple vehicle controller where the actual _behavior_ or the vehicle is
+- **EVP** provides a very simple vehicle controller where the actual _behavior_ or the vehicle is
 configured directly with a few parameters: how much can it steer, how much can it drift, how much
 accelerates, brakes, etc. EVP is targeted to arcade vehicles requiring physically realistic
 behaviors, but the most important features being the gameplay and the handling of the vehicle.
 
-**VPP** implements a fully realistic and complete simulation model of a real-world vehicle. In VPP
+- **VPP** implements a fully realistic and complete simulation model of a real-world vehicle. In VPP
 all components of the vehicle are configured: engine, clutch, transmission, differential etc. The
 behavior and handling of the vehicle depend on the configured parameters of all these components.
 Same setup and tunning techniques as in real vehicles are used in VPP.
