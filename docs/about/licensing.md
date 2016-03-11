@@ -64,7 +64,7 @@ License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
 May be licensed by companies with annual revenue / funds / budget in excess of US\$100,000	|	| 	|	| &fa-check;	|
 10 days of Expert Assistance							|	|	|	| &fa-check;	|
 Flat license for all other present and future Vehicle Physics products<br>([Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics/))|	| 	| 	| &fa-check;	|
-**Price**												| Free | $160 | <del>\$480</del> **$320** | **$4800** |
+**Price in USD**<br>_(Price in Euros)_										| Free | $160<br>_(145€)_ | <del>\$480</del> **$320**<br>_(290€)_ | **$4800**<br>_(4300€)_ |
 
 > Notes:
 >
@@ -87,7 +87,8 @@ Flat license for all other present and future Vehicle Physics products<br>([Edy'
 	development libraries, development tools, open-source project or middleware of any kind are
 	permitted to use technologies of Vehicle Physics Pro.
 
-- No part of the source code may be disclosed to a third party.
+- No part of the source code may be disclosed to a third party, nor included as part of any
+	publicly accesible code repository.
 
 - Standard and Professional licenses require one license per developer seat.
 
