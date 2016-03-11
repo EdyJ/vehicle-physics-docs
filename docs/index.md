@@ -151,15 +151,15 @@ My most sincere gratitude to these great artists who contributed or are contribu
 with Vehicle Physics Pro:
 
 - Trevor Ley (JPickup)
+- [Jasper Stocker](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:412) (Spa-Francorchamps, Stunt Track)
 - [HereVR](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:8060) (APC)
 - [Dog Machine](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:2914) (Multi-purpose Exploration Vehicle)
 - [GameReady 3D](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:1634) (Sound files)
 - Eric Adams (Super car, Tuner car)
 
 
-<a class="twitter-timeline" href="https://twitter.com/VehiclePhysics" data-widget-id="687956324773179396">Tweets por el @VehiclePhysics.</a>
+<a class="twitter-timeline" href="https://twitter.com/VehiclePhysics" data-widget-id="687956324773179396">Tweets by @VehiclePhysics</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-{: .centered }
 
 <!--
 #### About me
