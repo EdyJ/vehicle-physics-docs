@@ -1,7 +1,15 @@
 # Configuring Realistic Vehicles
 
-These are the specifications you need out of a real vehicle for recreating it in Vehicle
-Physics Pro.
+This is a checklist of technical specifications you would need out of a real vehicle for mapping
+it to Vehicle Physics Pro.
+
+Some values are not widely available, but they may be estimated out of other specs and performance
+data.
+
+Useful resources:
+:	[The Blueprints](http://www.the-blueprints.com/cardata) (dimmensions, performance) <br>
+	[RRI Powertrain Performance Graphs](http://rototest-research.eu/index.php?DN=29&List=C-L)
+	(engine dyno curves, weights)
 
 ### Wheels and suspension
 
@@ -42,7 +50,7 @@ situation.
 ### Engine, transmission and driveline
 
 - **Engine torque and power**. Ideally, a ["dyno" curve](https://www.google.es/search?q=engine+dyno+curve&tbm=isch)
-	if available. The curve shape helps also configuring the engine brake.
+	if available. The curve shape also helps configuring the engine brake.
 - **Engine rev up/down time**. How fast the engine revs up when fully pressing throttle at neutral
 	gear, and how much time takes it to rev down to idle after releasing throttle. These data can
 	be used for estimating the engine inertia and the engine brake curve.
@@ -53,7 +61,7 @@ situation.
 - **Differential type** and ratio if available.
 
 Other elements may be present in the driveline, specially in AWD or dynamic-drive setups.
-Examples: center differential, torque splitter.
+Examples: center transfer case, asymmetric (epicyclic) differential, torque splitter (haldex).
 
 ### Aerodynamics
 
