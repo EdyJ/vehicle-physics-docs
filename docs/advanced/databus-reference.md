@@ -14,9 +14,9 @@ Add-on components can use the data bus for reading/writing values. Values are ar
 into _channels_. Accessing a specific data requires the pair `ChannelId, ValueId`. The standard
 Channels and their available values are referenced below.
 
-Blocks don't have direct access to the data bus. The host Vehicle Controller is responsible of
-reading and populating their exposed values in the overrides for `VehicleBase.DoUpdateBlocks` and
-`VehicleBase.DoUpdateData`.
+Blocks don't have direct access to the data bus. The [host Vehicle Controller](vehiclebase-reference)
+is responsible of reading and populating their exposed values in the overrides for
+`VehicleBase.DoUpdateBlocks` and `VehicleBase.DoUpdateData`.
 
 For examples on how to use the Data Bus, check out the scripts `VPStandardInput.cs` (method
 `Update`) and `VPVehicleController.cs` (methods `DoUpdateBlocks` and `DoUpdateData`).
@@ -73,7 +73,7 @@ float engineRpm = m_vehicle.data[Channel.Vehicle][VehicleData.EngineRpm];
 |ManualGear		| Manual gear lever position | gear number | | -1 (reverse), 0 (neutral), 1, 2, 3, ...
 |AutomaticGear	| Automatic transmission mode <sup>1</sup> | gear mode | | 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_ <sup>1</sup>
 |GearShift		| Incremental gear shifting value <sup>2</sup> | gear increment | | Add +1 for gear up or -1 for gear down <sup>2</sup>
-|Retarder		| Retarder brake stick position | retarder level | | 0 (off), 1, 2, 3, ...
+|Retarder		| Retarder brake stick position <sup>3</sup> | retarder level | | 0 (off), 1, 2, 3, ...
 |Key			| Ignition key position | key position | | -1 = off, 0 = drive, 1 = ignite
 
 <sup>1</sup> Automatic transmission modes:
@@ -86,6 +86,8 @@ float engineRpm = m_vehicle.data[Channel.Vehicle][VehicleData.EngineRpm];
 
 **<sup>2</sup> GearShift** value is reset to 0 when the vehicle has acknowledged and processed the
 input. Successive gear shift commands can be grouped by adding/subtracting +-1 to this bus value.
+
+**<sup>3</sup> Retarder** uniformly controls the continuous braking systems when available.
 
 ### Vehicle channel
 
@@ -102,6 +104,7 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 |GearboxMode	| Actual transmission mode					| gear mode		|		| 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_
 |GearboxShifting| Is the gearbox in the middle of a gear shift operation?	|		|		| 0 = no, 1 = yes
 |RetarderTorque	| Brake torque injected in the driveline by the retarder	| Nm	| 1000	| 2000000 = 2000 Nm
+|AbsEngaged		| Is the ABS being engaged in any wheel?	|		|		| 0 = no, non-zero = yes
 
 ### Settings channel
 
