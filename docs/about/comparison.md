@@ -3,11 +3,11 @@
 Taking the correct decisions in advance can save you huge amounts of time and money. Consider these
 topics before adopting any vehicle physics kit in your own project:
 
-[TOC]
-
-&fa-question-circle:lg; Any questions? Feel free to [contact me](mailto:edy@vehiclephysics.com) and I'll
+&fa-question-circle:lg; Got any questions? Feel free to [contact me](mailto:edy@vehiclephysics.com) and I'll
 be happy to help you.
 {: .alert .alert-success }
+
+[TOC]
 
 #### Usability and coherency
 
@@ -89,9 +89,9 @@ straightforward and harmless to include into existing projects:
 guesses, no arbitrary assumptions. The core design is physically accurate, so it accounts for all
 the expected and unexpected behaviors of the vehicles.
 
-Do you know what [driveline windup](https://en.wikipedia.org/wiki/Driveline_windup) is? I hadn't
-heard of that until I observed the effect myself in VPP while testing the simulation with heavy AWD
-vehicles.
+An example: do you know what [driveline windup](https://en.wikipedia.org/wiki/Driveline_windup) is?
+I hadn't heard of that until I observed the effect myself in VPP while testing the simulation with
+heavy AWD vehicles.
 
 #### Performance
 
