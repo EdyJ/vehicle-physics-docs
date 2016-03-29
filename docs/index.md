@@ -157,25 +157,46 @@ with Vehicle Physics Pro:
 - [GameReady 3D](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:1634) (Sound files)
 - Eric Adams (Super car, Tuner car)
 
+#### Testimonials
+
+Some quotes I've received by email from actual users:
+
+> "I tried some of the demos with a G27 wheel and it feels amazing! It is easily comparable to some of the best racing sims out there. Also I love that you have real telemetry data which is essential for us to use with the simulator."
+> Samo Železnik (to be confirmed)
+
+> "I've played lots of racing games alot and I just played the Ferrari 458 demo with G27 for days and I can say that was much more fun than playing other games."
+> Danoosh Peechgah (to be confirmed)
+
+[Demos are here](about/demos) if you want to try them too.
 
 <a class="twitter-timeline" href="https://twitter.com/VehiclePhysics" data-widget-id="687956324773179396">Tweets by @VehiclePhysics</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-<!--
-#### About me
 
-Vehicle Physics Pro has been conceived, designed and implemented by [Angel Garcia Voces "Edy"](http://www.edy.es)
-at Oviedo, Spain.
+
+<!--
+
+#### Customers
+
+Kerbal Space Program
+The Children's Hospital of Philadelphia (http://www.diagnosticdriving.com)
+Simumak
+
+
+#### About me
 
 > I started creating this kit because I wanted to simulate vehicles since I was a kid playing with my
 > Commodore 64. When I discovered Unity 3D that's what I wanted to do since the first day. But I
 > didn't find any existing component, kit or document for simulating a vehicle correctly. There were
-> all buggy components, too simple approaches, or too complex algorithms/methods/papers mixing
-> simulation and automotive industry. I had the feeling (name it intuition) that a _simple_ way of
-> simulating vehicles _correctly_ had to exist. And I spend several years researching and
-> experimenting with a lot of ideas until I finally nailed it. This Vehicle Physics Pro today: the
-> simplest and most efficient approach for simulating a vehicle while actually accounting for all
-> major reactions and side effects in a physically correct, coherent and accurate way.
+> all buggy components, too simple approaches, or too complex algorithms/methods/papers either
+> covering isolated cases, or mixing simulation and automotive industry. I had the feeling (name it
+> intuition) that a better way of simulating vehicles _correctly_ should exist. So I spent several
+> years researching and experimenting with a lot of ideas until I finally nailed it. This is Vehicle
+> Physics Pro today: the simplest and most coherent approach for simulating a vehicle while actually
+> accounting for all major behaviours and side effects in a physically correct and accurate way.
 >
-> I hope you have as much fun using VPP or playing VPP-based games as I'm having developing it.
+> I hope you have as much fun using VPP or playing VPP-based games as I'm having developing it :)
+>
+> [Angel Garcia Voces "Edy"](http://www.edy.es) (Oviedo, Spain)
+
 -->

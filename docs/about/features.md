@@ -2,9 +2,47 @@
 
 **Vehicle Physics Pro** is the most complete, accurate and realistic vehicle physics kit available
 for Unity 3D. It's based on a vehicle simulation model conceived, designed and implemented from
-scratch for providing accurate vehicle physics and dynamics on any condition.
+the ground-up for providing accurate vehicle physics and dynamics on any condition.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SdeJcpWNHsw" frameborder="0" allowfullscreen></iframe>
+
+- Multi-axle steering
+- Ackerman
+- Toe
+- Brake balance: front / rear / neutral
+- Torque converter
+- Manual transmission
+- Auto-shift
+- True automatic transmission (not _manual with auto-shift_)
+- Automatic transmission modes: M P R N D L
+- Any number of forward and reverse gears
+- Park mode (P)
+- Tire friction models: flat, smooth, parametric, Pacejka
+- Differential types: open, viscous, clutck pack (Salisbury), torque bias (Torsen)
+- Differential power / coast settings
+- Differential lock
+- Engine stall / inertial restart
+- Engine power, torque, brake
+- ABS (Anti-lock Braking System) [Video]
+- ABS calibration via trigger slip (m/s) and hydraulic pressure ratio (%)
+- Continuous braking systems (primary and secondary)
+- Retarder brake
+
+- VR ready
+- Force-feedback support: steering wheels, joysticks, etc
+- Detailed telemetry in realtime
+- Any vehicle weight: tested with vehicles ranging from 10 kg to 600 tons
+
+
+Under development:
+
+- ASR (Anti-Slip Regulation) using brakes
+- EVB (Exhaust Valve Brake) for continuous braking system
+- TCS (Traction Control System) reducing available engine torque
+- HA (Hold Assist)
+- Camber
+- Caster
+- Asymmetric differential (also _epicyclic differential_)
 
 ### Applications
 
