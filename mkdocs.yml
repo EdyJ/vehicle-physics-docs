@@ -32,7 +32,7 @@ pages:
   - Getting started: user-guide/getting-started.md
   - Creating vehicles: user-guide/vehicle-creation.md
   - Configuring vehicles: user-guide/vehicle-setup.md
-  - Requirements for 3D models: user-guide/3d-models.md
+  - 3D models and environment: user-guide/3d-models.md
 - Components:
   - Vehicle Controller: components/vehicle-controller.md
   - Wheel Collider: components/wheel-collider.md
