@@ -162,10 +162,11 @@ with Vehicle Physics Pro:
 Some quotes I've received by email from actual users:
 
 > "I tried some of the demos with a G27 wheel and it feels amazing! It is easily comparable to some of the best racing sims out there. Also I love that you have real telemetry data which is essential for us to use with the simulator."
-> Samo Železnik (to be confirmed)
+> Samo Železnik
 
 > "I've played lots of racing games alot and I just played the Ferrari 458 demo with G27 for days and I can say that was much more fun than playing other games."
-> Danoosh Peechgah (to be confirmed)
+> "[...] Overall those were great times when I played it and as I mentioned before, truly more interesting than many simulator games like BeamNG."
+> Danoosh Peechgah ([source](http://forum.unity3d.com/threads/vehicle-physics-pro-beta-feedback-welcome.381241/#post-2574368))
 
 [Demos are here](about/demos) if you want to try them too.
 

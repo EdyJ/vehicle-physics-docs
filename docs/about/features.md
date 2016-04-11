@@ -10,6 +10,7 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - Ackerman
 - Toe
 - Brake balance: front / rear / neutral
+- Clutch
 - Torque converter
 - Manual transmission
 - Auto-shift
@@ -23,18 +24,22 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - Differential lock
 - Engine stall / inertial restart
 - Engine power, torque, brake
+- Engine fuel consumption model
+- Brake Specific Fuel Consumption (BSFC)
 - ABS (Anti-lock Braking System) [Video]
 - ABS calibration via trigger slip (m/s) and hydraulic pressure ratio (%)
 - Continuous braking systems (primary and secondary)
 - Retarder brake
-
+- Articulated vehicles
 - VR ready
-- Force-feedback support: steering wheels, joysticks, etc
+- Force-feedback support for steering wheels, joysticks, etc
+- DirectInput interface with multi-device and ffb support
 - Detailed telemetry in realtime
-- Any vehicle weight: tested with vehicles ranging from 10 kg to 600 tons
+- Any vehicle weight. Tested with vehicles ranging from 10 kg to 600 tons
+- Vehicle update rates can be as low as 16 hz
+- Per-vehicle update rates
 
-
-Under development:
+Planned features:
 
 - ASR (Anti-Slip Regulation) using brakes
 - EVB (Exhaust Valve Brake) for continuous braking system
@@ -62,8 +67,8 @@ Learning and Teaching
 	configuration techniques, performance tips...
 
 Prototyping
-:	Experiment with any crazy idea you may have: two engines, one per front-rear axle? Why not.
-	Observe the behavior and all the side effects!
+:	Design and test ECU logics. Experiment with any crazy idea you may have: two engines, one per
+	front-rear axle? Why not. Observe the behavior and all the side effects!
 
 ### Easy to use
 
