@@ -40,7 +40,10 @@ Example:
 - Vehicle mass: 4000 Kg.
 - For 4 wheels, this is 1000 Kg each
 - Suspension springs should support up to 2000 Kg each.
-- Thus, if the weight is evenly distributed at rest each suspension would be at half of its travel.
+- If suspension distance is 20 cm = 0.2 m, then the spring stiffness supporting 2000 Kg is 2000 *
+gravity / suspension distance = 2000 * 9.81 / 0.2 = 98100 Nm.
+
+Thus, if the weight is evenly distributed at rest each suspension would be at half of its travel.
 
 Of course, you can always apply real values to the springs or any other values that fit better
 with your vehicle.

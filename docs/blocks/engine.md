@@ -36,3 +36,8 @@ settings helps adjusting the stall point. Check out the calculated values in the
 exact data.
 
 
+#### References
+
+[Brake Specific Fuel Consumption (BSFC)](https://en.wikipedia.org/wiki/Brake_specific_fuel_consumption)<br>
+[Fuel consumption analysis of motor vehicle](http://www.posterus.sk/?p=14506)<br>
+[Fuel densities](https://en.wikipedia.org/wiki/Diesel_fuel#Fuel_value_and_price)<br>
