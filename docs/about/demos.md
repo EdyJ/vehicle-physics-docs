@@ -60,7 +60,11 @@ Logitech steering wheel controller.
 
 The steering wheel must be configured in the device's control panel:
 
+-	Pedals > Combined: Disabled
 -	Degrees of rotation: **460** (for matching the rotation of the steering wheel in the 3D model)
+-	Overall Effects Strength: **50%**
+-	Spring & Damper Effects Strength: **100%**
+-	Centering Spring: Disabled
 -	Uncheck _Allow Game To Adjust Settings_.
 
 !!! warning "&fa-warning:lg; Ensure that your Logitech steering wheel is connected and working!"
