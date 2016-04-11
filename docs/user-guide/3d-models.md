@@ -10,12 +10,12 @@ A good vehicle 3D model mets these minimum standards:
 - Rotations are 0, 0, 0 excepting the parts that have a logical orientation (i.e. steering wheel)
 - Movable parts have their local origin placed at the rotation point (wheels, steering wheel...)
 - Movable parts should have zero logical rotation at their default/rest position (i.e. doors)
-- All parts in hierarchy are named in plain _English_, so everyone can understand it. Also,
-	language-specific characters often cause missing meshes.
+- All parts in hierarchy are named in plain _English_, so everyone can understand it (note that
+	language-specific characters often cause missing meshes)
 
-Importing the FBX alone should comply with these rules (no prefabs involved).
+Importing the FBX alone should comply with these rules without having to create a prefab first.
 
-A very good vehicle 3D model also mets these conditions:
+A high quality vehicle 3D model also mets these conditions:
 
 - Reasonable polygon density in all parts
 - Good use of materials and textures
