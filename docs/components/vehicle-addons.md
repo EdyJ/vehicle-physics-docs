@@ -78,7 +78,7 @@ Min Slip, Max Slip
 :	Slip range in m/s to be considered minimum and maximum for all the effects. For example, the
 	skid marks are most intense above Max Slip, and they vanish below Min Slip.
 
-	The effect use the _combined slip_ which can be seen in runtime in the [Telemetry](vehicle-debug.md):
+	The effect use the _combined slip_ which can be seen in runtime in the [Telemetry](vehicle-telemetry.md):
 
 	![VP Telemetry combined slip](/img/components/vpp-telemetry-combined-slip.png){: .img-medium .clickview }
 

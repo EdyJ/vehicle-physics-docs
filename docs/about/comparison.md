@@ -31,7 +31,7 @@ and components. It's easy to intuitively understand the role of each script and 
 
 - A set of add-on components can be **optionally** added to the vehicle for providing extra
 	features: [input](/components/vehicle-input),
-	[debug](/components/vehicle-debug),
+	[telemetry](/components/vehicle-telemetry),
 	[ground materials](/components/ground-materials),
 	[cameras](/components/camera-controller),
 	[audio, visual effects, etc](/components/vehicle-addons).

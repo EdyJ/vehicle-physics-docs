@@ -100,14 +100,14 @@ features:
 :	Plays various visual effects such as the steering wheel rotation, brake and reverse lights, and
 	dashboard gauges.
 
-[VP Telemetry](/components/vehicle-debug#vptelemetry)
+[VP Telemetry](/components/vehicle-telemetry#vptelemetry)
 
 :	Displays a overlay window with detailed numeric data on the wheels and the vehicle. Toggle with
 	the <kbd>B</kbd> key.
 
 [VP Camera Target Setup](/components/camera-controller#vpcameratargetsetup)
 
-:	Configures the parameters for this vehicle to be properly pointed at with the [Camera Controller](/components/camera-controller)
+:	Configures the parameters for this vehicle to be properly looked at with the [Camera Controller](/components/camera-controller)
 	component, such as minimum distance, view height, and more.
 
 #### Ground Materials

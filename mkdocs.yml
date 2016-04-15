@@ -38,7 +38,7 @@ pages:
   - Wheel Collider: components/wheel-collider.md
   - Input: components/vehicle-input.md
   - Add-ons: components/vehicle-addons.md
-  - Debug: components/vehicle-debug.md
+  - Telemetry: components/vehicle-telemetry.md
   - Ground Materials: components/ground-materials.md
   - Camera Controller: components/camera-controller.md
 - Blocks:

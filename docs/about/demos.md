@@ -17,7 +17,7 @@ Notes:
 
 The vehicles in these demos begin with the engine off. For starting the engine:
 
-1. Press and release <kbd>K</kbd> for moving the ignition key from "Off" to "Drive" (watch the [Telemetry](/components/vehicle-debug#vptelemetry))
+1. Press and release <kbd>K</kbd> for moving the ignition key from "Off" to "Drive" (watch the [Telemetry](/components/vehicle-telemetry#vptelemetry))
 2. Press and hold <kbd>K</kbd> for moving the ignition key to "Start" and actually start the engine.
 
 	<kbd>ctrl-K</kbd> moves the ignition key back to the "Off" switching off the engine.
