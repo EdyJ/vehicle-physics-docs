@@ -85,93 +85,23 @@ Gizmos At Physic Position
 	correction.
 
 
-### VPTelemetryCharts
+### VPPerformanceAnalysis
 
-Advanced live performance charts for a variety of data coming from the vehicle. The data updates in
-realtime while being recorded. The zoom and panning controls allow fully detailed inspection after
-recording.
+Advanced data logger and live performance charts for a variety of data coming from the vehicle.
+The zoom and panning controls allow fully detailed inspection.
 
-![VP Telemetry Charts live viewport](/img/components/vpp-telemetry-charts-viewport-annotated.jpg){: .clickview .img-medium }
-![VP Telemetry Charts](/img/components/vpp-telemetry-chart-essentials.jpg){: .clickview .img-large }
+<div class="imagegallery" sm="2" md="2" lg="2" style="display:none">
+	<img class="clickview" src="/img/components/vpp-performance-analysys-display-annotated.jpg" alt="VP Performance Analysis realtime display">
+	<img class="clickview" src="/img/components/vpp-performance-chart-essentials.jpg" alt="Essentials Chart">
+</div>
 
-##### Default controls (customizable in the inspector)
+![VP Performance Charts Inspector](/img/components/vpp-performance-charts-inspector.png){: .clickview .img-small }
 
-<center style="text-align:right">Key</center>| Function
------------------------------------:|-----------------------
-<kbd>Keypad 0</kbd>	| Toggle record mode. Restarting erases the previous data.
-<kbd>Keypad .</kbd> | Toogle viewport mode (small / large)
-<kbd>Keypad +</kbd> | Select next telemetry program. Previous data is lost.
-<kbd>Keypad 4, 6</kbd> | Horizontal panning
-<kbd>Keypad 2, 8</kbd> | Vertical panning
-<kbd>ctrl + Keypad 4, 6</kbd> | Horizontal zoom
-<kbd>ctrl + Keypad 2, 8</kbd> | Vertical zoom
-<kbd>Keypad 5</kbd> | Restore default view
-
-
-#### Telemetry programs
-
-##### Essentials
-
-Basic vehicle parameters: engine rpm, gear, speed, steering, throttle, brake, clutch.
-
-![Telemetry Essentials program](/img/components/vpp-telemetry-chart-essentials.jpg){: .clickview .img-large }
-
-##### Accelerations
-
-Longitudinal and lateral accelerations in G factor. Includes the speed trace and the input
-parameters (steering, throttle, brake, clutch) for reference.
-
-![Telemetry Accelerations program](/img/components/vpp-telemetry-chart-accelerations.jpg){: .clickview .img-large }
-
-##### Engine performance
-
-Parameters related to the engine: rpm, torque, power, specific fuel consumption and demanded load.
-Includes speed and gear for reference.
-
-![Telemetry Engine Performance program](/img/components/vpp-telemetry-chart-engine-performance.jpg){: .clickview .img-large }
-
-##### Wheelspin
-
-Wheel circumference velocity for each wheel. If the wheel is gripping without slipping, then this
-velocity is the road speed of the wheel. Wheelspin is shown as sharp upward spikes. Wheels locking
-due to braking are shown as a sharp downward spike.
-
-![Telemetry Wheelspin program](/img/components/vpp-telemetry-chart-wheelspin.jpg){: .clickview .img-large }
-
-##### Suspension travel
-
-Available remaining travel of the suspension for each wheel. If the trace reaches the bottom of the
-chart (0 mm) then the suspension is fully compressed and has reached the limit. Includes the speed
-trace for reference.
-
-![Telemetry Suspension Travel program](/img/components/vpp-telemetry-chart-suspension-travel.jpg){: .clickview .img-large }
-
-##### Custom
-
-You can write your own telemetry program by deriving from the `TelemetryProgram` abstract class.
-Set it at the `customProgram` property of the `VPTelemetryCharts` component.
-
-The `TelemetryProgram` class exposes several properties you can use for gather the data and configure
-the visualization:
-
-`VehicleBase vehicle`
-:	The actual vehicle being monitored
-
-`GraphicDataTool dataTool`
-:	Create and configure the data channels and set up the visualization options
-
-`ReferenceSpecs reference`
-:	Bounds or ranges for several parameters. Useful for configuring visualization scales.
-
-#### Component settings
-
-![VP Telemetry Charts inspector](/img/components/vpp-telemetry-charts-inspector.png){: .clickview .img-small }
-
-Program
-:	Currently selected telemetry program
+Chart
+:	Selected performance chart
 
 Data Recording Time
-:	Time in seconds for the recording circular buffer. Older data is discarded.
+:	Size of the buffer of the data logger
 
 Refresh Interval
 :	Time in seconds between each chart refresh
@@ -183,13 +113,20 @@ Zoom Rate
 :	How fast are the zoom operations
 
 View Mode
-:	Select the viewport mode among Small and Large
+:	Select the display size among Small and Large
 
-Small Viewport
-:	Position, size, background color and transparency for the small viewport mode
+Small Display
+:	Position, size, background color and transparency for the small display mode
 
-Large Viewport
-:	Position, size, background color and transparency for the large viewport mode
+Large Display
+:	Position, size, background color and transparency for the large display mode
+
+Reference specs
+:	Bounds or ranges for several parameters of the vehicle (max speed, max rpm...). This is used
+	for better fitting the charts in the display.
+
+Controls
+:	Keys assigned to each operation. Defaults:
 
 Text Color
 :	Main color for the labels. Channel colors are tinted with this.
@@ -197,12 +134,66 @@ Text Color
 Font
 :	Font to be used for the text labels. Default (recommended) is VeraMono.
 
-Controls
-:	Keys assigned to each operation
+#### Performance charts
 
-Reference specs
-:	Bounds or ranges for several parameters of the vehicle (max speed, max rpm...). This is used
-	for better fitting the charts in the viewport.
+##### Essentials
+
+Basic vehicle parameters: engine rpm, gear, speed, steering, throttle, brake, clutch.
+
+![Essentials chart](/img/components/vpp-performance-chart-essentials.jpg){: .clickview .img-large }
+
+##### Accelerations
+
+Longitudinal and lateral accelerations in G factor. Includes the speed trace and the input
+parameters (steering, throttle, brake, clutch) for reference.
+
+![Accelerations chart](/img/components/vpp-performance-chart-accelerations.jpg){: .clickview .img-large }
+
+##### Engine performance
+
+Parameters related to the engine: rpm, torque, power, specific fuel consumption and demanded load.
+Includes speed and gear for reference.
+
+![Performance chart](/img/components/vpp-performance-chart-engine-performance.jpg){: .clickview .img-large }
+
+##### Wheelspin
+
+Wheel circumference velocity for each wheel. If the wheel is gripping without slipping, then this
+velocity is the road speed of the wheel. Wheelspin is shown as sharp upward spikes. Wheels locking
+due to braking are shown as a sharp downward spike.
+
+![Wheelspin chart](/img/components/vpp-performance-chart-wheelspin.jpg){: .clickview .img-large }
+
+##### Suspension travel
+
+Available remaining travel of the suspension for each wheel. If the trace reaches the bottom of the
+chart (0 mm) then the suspension is fully compressed and has reached the limit. Includes the speed
+trace for reference.
+
+![Suspension Travel chart](/img/components/vpp-performance-chart-suspension-travel.jpg){: .clickview .img-large }
+
+##### Wheel load
+
+Load supported by each wheel. Includes the speed trace for reference.
+
+![Suspension Travel chart](/img/components/vpp-performance-chart-wheel-load.jpg){: .clickview .img-large }
+
+##### Custom
+
+You can write your own data logger by deriving from the `PerformanceChart` abstract class.
+Set it at the `customChart` property of the `VPPerformanceAnalysis` component.
+
+The `PerformanceChart` class exposes several properties you can use for gather the data and
+configure the visualization:
+
+`VehicleBase vehicle`
+:	The actual vehicle being monitored
+
+`DataLogger dataTool`
+:	Create and configure the data channels and set up the visualization options
+
+`ReferenceSpecs reference`
+:	Bounds or ranges for several parameters. Useful for configuring visualization scales.
 
 ### VPForceCones
 
