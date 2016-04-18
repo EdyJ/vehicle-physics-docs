@@ -94,10 +94,10 @@ Realistic and coherent
 &fa-check; Repository clean up and upgrade to Unity 5
 {: .roadmap }
 
-&fa-check; Skidmarks, smoke, tire trails
+&fa-check; [Skidmarks, smoke, tire trails](components/vehicle-addons#vptireeffects)
 {: .roadmap }
 
-&fa-check; Vehicle audio: engine, turbo, impacts, tire skid...
+&fa-check; [Vehicle audio: engine, turbo, impacts, tire skid...](components/vehicle-addons#vpaudio)
 {: .roadmap }
 
 &fa-check; Minor bug fixes and code polishing
@@ -109,19 +109,22 @@ Realistic and coherent
 &fa-check; **Enter the Beta stage!**
 {: .roadmap }
 
-&fa-gear:spin; Replay system
-{: .roadmap .wip }
+&fa-check; Generic steering wheels support (DirectInput)
+{: .roadmap }
 
-&fa-gear:spin; Advanced graphic telemetry
-{: .roadmap .wip }
+&fa-check; [Performance Analysis Charts](components/vehicle-telemetry#vpperformanceanalysis)
+{: .roadmap }
 
-&fa-gear:spin; Generic wheel controller support
+&fa-gear:spin; Unified demo scene
 {: .roadmap .wip }
 
 Complete the documentation
 {: .roadmap .todo }
 
 **First release!**
+{: .roadmap .todo }
+
+Replay system
 {: .roadmap .todo }
 
 Anisotropic tire friction
