@@ -93,6 +93,8 @@ Flat license for all other present and future Vehicle Physics products<br>([Edy'
 
 - Standard and Professional licenses require one license per developer seat.
 
+- All licenses are issued to a single person or company and are nontransferable.
+
 - Connections to the GIT repository are logged per-account. The account may get blocked if an
 	excess of connections for a given license is detected. Failure to keep the repository
 	connections under the licensing terms may result in a license termination.
