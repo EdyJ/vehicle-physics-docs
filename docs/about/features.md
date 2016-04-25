@@ -19,24 +19,25 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - Any number of forward and reverse gears
 - Park mode (P)
 - Tire friction models: flat, smooth, parametric, Pacejka
-- Differential types: open, viscous, clutck pack (Salisbury), torque bias (Torsen)
+- Differential types: open, viscous, clutch pack (Salisbury), torque bias (Torsen)
 - Differential power / coast settings
 - Differential lock
 - Engine stall / inertial restart
 - Engine power, torque, brake
 - Engine fuel consumption model
 - Brake Specific Fuel Consumption (BSFC)
+- Out-of-fuel situation
 - ABS (Anti-lock Braking System) [Video]
 - ABS calibration via trigger slip (m/s) and hydraulic pressure ratio (%)
 - Continuous braking systems (primary and secondary)
 - Retarder brake
-- Articulated vehicles
+- Articulated multi-part vehicles
 - VR ready
 - Force-feedback support for steering wheels, joysticks, etc
 - DirectInput interface with multi-device and ffb support
-- Detailed telemetry in realtime
+- Detailed performance analysis charts in realtime
 - Any vehicle weight. Tested with vehicles ranging from 10 kg to 600 tons
-- Vehicle update rates can be as low as 16 hz
+- Vehicle simulation rates can be as low as 16 hz and up to 2000 Hz and more
 - Per-vehicle update rates
 
 Planned features:
