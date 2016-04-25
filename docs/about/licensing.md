@@ -54,6 +54,7 @@ Standard pre-configured vehicles (APC, sport car...)	|	| &fa-check; | &fa-check;
 Support for custom vehicles and components 				|	| &fa-check; | &fa-check; | &fa-check;	|
 Mobile touch-based controller							|	| &fa-check; | &fa-check; | &fa-check;	|
 Email support											|	| &fa-check;	| &fa-check;	| &fa-check;	|
+DirectInput controller with force feedback (Windows only)|	|	| &fa-check; | &fa-check;	|
 Full source code										|	|	| &fa-check; | &fa-check;	|
 Access to the GIT repository							|	|	| &fa-check;	| &fa-check;	|
 Exclusive high-quality scenes and vehicles				|	|	| &fa-check; | &fa-check;	|
@@ -91,6 +92,8 @@ Flat license for all other present and future Vehicle Physics products<br>([Edy'
 	publicly accesible code repository.
 
 - Standard and Professional licenses require one license per developer seat.
+
+- All licenses are issued to a single person or company and are nontransferable.
 
 - Connections to the GIT repository are logged per-account. The account may get blocked if an
 	excess of connections for a given license is detected. Failure to keep the repository

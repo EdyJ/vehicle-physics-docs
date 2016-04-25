@@ -57,6 +57,11 @@ iframe
 	}
 
 
+img.img-large
+	{
+	max-width: 600px;
+	}
+
 img.img-medium
 	{
 	max-width: 520px;

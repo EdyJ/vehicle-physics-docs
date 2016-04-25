@@ -95,9 +95,13 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 | ----------- | ----------- |:------:|:----------:| ------- |
 |Speed			| Vehicle absolute velocity					| m/s	| 1000	| 14500 = 14.5 m/s
 |EngineRpm		| Engine RPMs								| rpm	| 1000	| 1200000 = 1200 rpm
-|EngineStalled	| Is the engine stalled? 		 			| 		|       | 0 = normal operation, 1 = engine stalled
-|EngineTorque	| Torque at the output of the engine		| Nm	| 1000	| 200000 = 200 Nm
+|EngineStalled	| Is the engine stalled? 		 			| 		|       | 0 = normal operation or switched off, 1 = engine stalled
+|EngineWorking	| Is the engine up and running?  			| 		|       | 0 = engine is off (stalled or switched off), 1 = engine up and running
+|EngineLimiter	| Is the rpm limiter cutting engine power?	| 		|       | 0 = no, 1 = yes
 |EngineLoad		| How much load is demanded 				| % 	| 1000	| 200 = 0.2 = 20%
+|EngineTorque	| Torque at the output of the engine		| Nm	| 1000	| 200000 = 200 Nm
+|EnginePower	| Power developed by the engine				| kW	| 1000	| 10000 = 10 kW
+|EngineFuelRate	| Instant fuel consumption					| g/s	| 1000	| 20230 = 20.23 g/s
 |ClutchTorque	| Torque at the output of the clutch in Nm	| Nm	| 1000	| 150000 = 150 Nm
 |ClutchLock		| Lock ratio of the clutch					| %		| 1000	| 800 = 0.8 = 80%
 |GearboxGear 	| Engaged gear								| gear number	|		| Negative = reverse, 0 = Neutral or Park, Positive = forward.

@@ -17,7 +17,7 @@ Notes:
 
 The vehicles in these demos begin with the engine off. For starting the engine:
 
-1. Press and release <kbd>K</kbd> for moving the ignition key from "Off" to "Drive" (watch the [Telemetry](/components/vehicle-debug#vptelemetry))
+1. Press and release <kbd>K</kbd> for moving the ignition key from "Off" to "Drive" (watch the [Telemetry](/components/vehicle-telemetry#vptelemetry))
 2. Press and hold <kbd>K</kbd> for moving the ignition key to "Start" and actually start the engine.
 
 	<kbd>ctrl-K</kbd> moves the ignition key back to the "Off" switching off the engine.
@@ -60,7 +60,11 @@ Logitech steering wheel controller.
 
 The steering wheel must be configured in the device's control panel:
 
+-	Pedals > Combined: Disabled
 -	Degrees of rotation: **460** (for matching the rotation of the steering wheel in the 3D model)
+-	Overall Effects Strength: **50%**
+-	Spring & Damper Effects Strength: **100%**
+-	Centering Spring: Disabled
 -	Uncheck _Allow Game To Adjust Settings_.
 
 !!! warning "&fa-warning:lg; Ensure that your Logitech steering wheel is connected and working!"
