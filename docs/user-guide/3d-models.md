@@ -10,6 +10,8 @@ A good vehicle 3D model mets these minimum standards:
 - Rotations are 0, 0, 0 excepting the parts that have a logical orientation (i.e. steering wheel)
 - Movable parts have their local origin placed at the rotation point (wheels, steering wheel...)
 - Movable parts should have zero logical rotation at their default/rest position (i.e. doors)
+- Wheels' origins should be at the geometric center of the wheel. Twin wheel groups (i.e. rear
+	wheels at trucks) should have their origin at the center of both wheels.
 - All parts in hierarchy are named in plain _English_, so everyone can understand it (note that
 	language-specific characters often cause missing meshes)
 
@@ -18,10 +20,11 @@ Importing the FBX alone should comply with these rules without having to create 
 A high quality vehicle 3D model also mets these conditions:
 
 - Reasonable polygon density in all parts
-- Good use of materials and textures
-- A good reference for main materials is: car paint, glass, plastics, metals
+- Good use of materials and textures.
+- A good reference for essential materials is: car paint, glass, plastics, metals.
 - Additional materials may be included as per specific details: mirrors, lights, chromed parts,
 dashboard...
+- Car paint has a properly unwrapped UV map so liveries can be painted at the texture.
 
 #### Driver's view
 
@@ -54,23 +57,15 @@ Example for adding movement in the Y axis simulating the floating seats in heavy
 
 #### Articulated vehicles
 
-Multi-part vehicles such as trucks with trailers can be attached together. Add a Configurable Joint
-to the rigidbody of the attached part:
+Multi-part vehicles such as trucks with trailers can be attached together. Add a VPVehicleJoint
+component at the transform representing the _male_ plug:
 
-- Connected Body: the rigidbody of the main vehicle
-- Anchor: local position of the attachment point in the attached part
-- Connected Anchor: local position in the main vehicle where the joint is connected at
+- Other anchor: transform in the other part representing the _female_ connector.
+- X, Y, Z motion: Locked
+- Angular X, Y, Z motion: Free
 
-	If both bodies are at the correct positions when the joint is created (at startup or when creating
-the joint in runtime) then _Auto Configure Connected Anchor_ can be left enabled. Otherwise, the
-Connected Anchor position must be configured explicitly.
-
-	If the joint is created at runtime then both bodies should be close enough to the connected position
-for preventing abrupt movements.
-
-- X,Y,Z Motion: Locked
-- Angular X,Y,Z Motion: Free
-- Enable Collision: Enabled
+Both bodies should be close enough to the connected position for preventing abrupt movements when
+the VPVehicleJoint gets enabled.
 
 ## Scenery
 
