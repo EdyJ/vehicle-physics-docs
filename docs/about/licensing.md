@@ -36,12 +36,20 @@ Enterprise license
 	non-commercial entities with a total annual budget in excess of US\$100,000 for the entire
 	non-commercial entity.
 
+### Additional services
+
 Expert Assistance
 
 :	Let me take a close look at your project and I'll propose solutions to your specific issues
 	with vehicles. I can also configure your vehicles to match your project's specifications.
 	[Ask me](mailto:edy@vehiclephysics.com) me for a quote. Confidentiality is always a default
 	to me, but I'll sign an NDA upon request.
+
+Vehicle Rig and Setup Service
+
+:	Send me your 3D model and the real specifications. I'll rig and configure it for you as closely
+	as possible to the real vehicle. [Ask me](mailto:edy@vehiclephysics.com) me for a quote.
+
 
 ### Compare editions
 
