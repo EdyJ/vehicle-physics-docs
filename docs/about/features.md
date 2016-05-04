@@ -10,6 +10,8 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - Ackerman
 - Toe
 - Brake balance: front / rear / neutral
+- Dynamic suspension
+- Anti-roll bars
 - Clutch
 - Torque converter
 - Manual transmission
@@ -34,7 +36,7 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - Articulated multi-part vehicles
 - VR ready
 - Force-feedback support for steering wheels, joysticks, etc
-- DirectInput interface with multi-device and ffb support
+- DirectInput interface with multi-device and force-feedback support
 - Detailed performance analysis charts in realtime
 - Any vehicle weight. Tested with vehicles ranging from 10 kg to 600 tons
 - Vehicle simulation rates can be as low as 16 hz and up to 2000 Hz and more
