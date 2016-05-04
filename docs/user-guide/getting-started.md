@@ -5,9 +5,9 @@ available for Unity 3D.
 
 Open the project in Unity 3D ([clone the GIT repository](../advanced/git-repository-setup) if
 necessary). Let's play some example scenes so you could get started quickly. Load and play the
-scene **Playground 1k - JPickup - Standard Input**:
+scene **Playground 1k - JPickup - Keyboard**:
 
-![Project > Scenes > Playground Scenes > Playground 1k - JPickup - Standard Input](/img/user-guide/vpp-sample-scenes.png){: .img-small .clickview }
+![Project > Scenes > Playground Scenes > Playground 1k - JPickup - Keyboard](/img/user-guide/vpp-sample-scenes.png){: .img-small .clickview }
 
 <!--
 &fa-thumbs-up:lg; If you haven't setup the Unity project yet, you can still [download and play the demos](){: .alert-link }
@@ -21,6 +21,10 @@ window)
 2. Press and hold <kbd>K</kbd> for moving the ignition key to "Start" and actually start the engine.
 
 	<kbd>ctrl-K</kbd> moves the ignition key back to the "Off" switching off the engine.
+
+The scenes containing _Steering Wheel_ in the name require a steering wheel controller. The POV
+left-right directions act as ignition key. Move to the right once, then move and hold for start the
+engine.
 
 **Keyboard layout:**
 
