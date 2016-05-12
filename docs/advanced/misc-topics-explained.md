@@ -358,6 +358,45 @@ transitions between any state.
 
 ## Vehicle behavior
 
+#### Understeer, oversteer, high speed vs. low speed
+
+Tweaking vehicles in VPP is much like tweaking real vehicles. Same rules apply.
+
+Low speed
+
+:	The behavior at low speed is mostly ruled by suspension (springs, dampers) and weight distribution
+	(center of mass).
+
+High speed
+
+:	Behavior at high speed can be adjusted with aerodynamics.
+
+	- Configure a couple of [VPAeroSurface components](/components/vehicle-addons#vpaerosurface)
+		in your vehicle. One should be positioned at the front axle, and the other at rear axle.
+	- Configure _Downforce Coefficient_ at both components. This will define how much weight
+		(= downforce) will be added to each axle as the speed increases. If the front axle receives
+		more aerodynamic downforce than the rear axle, then the vehicle will get oversteered at high
+		speeds. If the opposite applies, the vehicle will get understeered at hight speeds.
+
+	You can use the [Performance Analysis component](/components/vehicle-telemetry#vpperformanceanalysis)
+	in the _Wheel Load_ mode so you could see the effects of the aerodynamic components graphically:
+
+	![Suspension Travel chart](/img/components/vpp-performance-chart-wheel-load.jpg){: .clickview .img-medium }
+
+	The above is an example of the F458. You can see how as the speed increases (upper line) the wheel
+	load also gets increased for all wheels. If you analyze the chart carefully, you'll realize that
+	the rear axle receives more downforce with speed that the front axle. The downforce coefficients in
+	this case are 0.4 front and 0.8 rear.
+
+Braking
+
+:	Behavior on braking at any speed can be easily adjusted with the brake balance.
+
+	A correctly configured brake balance typically routes more braking power to the front wheels than
+	to the rear wheels. This accounts for the weight shifting while braking. Moving the balance
+	further to the front results in more understeer behavior, while moving it to the rear results
+	in more oversteer.
+
 #### Too much understeer!
 
 That will probably be the correct behavior for realistic settings. Most vehicles tend to understeer
