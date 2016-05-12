@@ -12,7 +12,7 @@ released.
 
 Free edition (To Be Announced)
 
-:	Free edition contains the [Vehicle Controller](../components/vehicle-controller.md) component
+:	Free edition contains the [Vehicle Controller](/components/vehicle-controller.md) component
 	supporting a single vehicle per scene. Will be available at the Asset Store for free.
 
 Standard license (To Be Announced)
@@ -55,11 +55,11 @@ Vehicle Rig and Setup Service
 
 | Features | <center>Free</center> | <center>Standard</center> | <center>Professional</center> | <center>Enterprise</center> |
 |----------|:----:|:--------:|:------------:|:----:|
-Full-featured [Vehicle Controller](../components/vehicle-controller.md) component	| &fa-check;	| &fa-check;	| &fa-check; | &fa-check;	|
+Full-featured [Vehicle Controller](/components/vehicle-controller.md) component	| &fa-check;	| &fa-check;	| &fa-check; | &fa-check;	|
 Example scenes and vehicles		 						| &fa-check; | &fa-check; | &fa-check; | &fa-check; |
 Unlimited simultaneous vehicles on each scene			|	| &fa-check; | &fa-check; | &fa-check;	|
 Standard pre-configured vehicles (APC, sport car...)	|	| &fa-check; | &fa-check; | &fa-check;	|
-Support for custom vehicles and components 				|	| &fa-check; | &fa-check; | &fa-check;	|
+Support for [custom vehicles](/advanced/custom-vehicles/) and [components](/advanced/custom-blocks/) 				|	| &fa-check; | &fa-check; | &fa-check;	|
 Mobile touch-based controller							|	| &fa-check; | &fa-check; | &fa-check;	|
 Email support											|	| &fa-check;	| &fa-check;	| &fa-check;	|
 DirectInput controller with force feedback (Windows only)|	|	| &fa-check; | &fa-check;	|
