@@ -162,21 +162,27 @@ with Vehicle Physics Pro:
 
 #### Testimonials
 
-Some quotes I've received by email from actual users:
+Some quotes I've received from actual users:
 
-> "I tried some of the demos with a G27 wheel and it feels amazing! It is easily comparable to some of the best racing sims out there. Also I love that you have real telemetry data which is essential for us to use with the simulator."
+> "As a result of spending few days with VPP, I'm really amazed about how much efforts inverted in
+> it. It's just not enough to be a good programmer to provide such a project, I can see a life time
+> experience that is modeled into code."<br>
+> Fadi AlSamman
+
+
+> "I tried some of the demos with a G27 wheel and it feels amazing! It is easily comparable to some
+> of the best racing sims out there. Also I love that you have real telemetry data which is essential
+> for us to use with the simulator."<br>
 > Samo Železnik
 
 > "I've played lots of racing games alot and I just played the Ferrari 458 demo with G27 for days and I can say that was much more fun than playing other games."
-> "[...] Overall those were great times when I played it and as I mentioned before, truly more interesting than many simulator games like BeamNG."
+> "[...] Overall those were great times when I played it and as I mentioned before, truly more interesting than many simulator games like BeamNG."<br>
 > Danoosh Peechgah ([source](http://forum.unity3d.com/threads/vehicle-physics-pro-beta-feedback-welcome.381241/#post-2574368))
 
 [Demos are here](about/demos) if you want to try them too.
 
 <a class="twitter-timeline" href="https://twitter.com/VehiclePhysics" data-widget-id="687956324773179396">Tweets by @VehiclePhysics</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-
 
 <!--
 
