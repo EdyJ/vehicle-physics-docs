@@ -356,7 +356,7 @@ transitions between any state.
 
 ---
 
-## Vehicle behavior
+## Vehicle setup
 
 #### Understeer, oversteer, high speed vs. low speed
 
@@ -448,6 +448,61 @@ Force feedback
 
 :	Allowing the use of steering wheel controllers for feeling the actual grip of the tire while
 	cornering.
+
+#### F1-style suspension setup
+
+This experiment is based on the Ferrari F458 prefab. Open any scene with the F458 and modify these
+settings:
+
+- Rigidbody: Mass = 580
+- Vehicle Controller: Tire Impulse Ratio = 0.3
+- Aero pack > Front > Downforce Coefficient = 1.1
+- Aero pack > Rear > Downforce Coefficient = 1.3
+- WheelColliders > [all wheels] > Suspension Distance = 0.08
+- WheelColliders > [all wheels] > Spring Rate = 122000
+- WheelColliders > [all wheels] > Spring Damper = 2000
+
+Now the F458 weights the same as a Formula-1 car, has a F1-style suspension and a highly efficient
+aerodynamic pack.
+
+As the speed increases the suspension gets compressed by the downforce and the vehicle can perform
+sharper turns. In this extreme case it can reach even 6 - 7G. The springs get compressed until
+supporting up to 5x the original weight of the vehicle.
+
+The springs should either have room enough or be strong enough for supporting all the extra
+downforce at high speeds. The [Performance Analysis component](http://vehiclephysics.com/components/vehicle-telemetry/#vpperformanceanalysis)
+in _Suspension Travel_ mode is perfect for checking this out. Here you can see how the suspension
+height decreases (suspension gets compressed) as the speed increases. When the suspension charts
+cross the bottom line the suspension has reached its limit:
+
+![Suspension Travel annotated](/img/advanced/vehicle-physics-pro-suspension-travel-annotated.png){: .clickview .img-medium }
+
+There's enough suspension travel available when the vehicle is driving straight (green arrow), but
+the outer wheels easily hit the suspension limits at sharp turns (red arrow). This effect can also
+be mitigated with stiffer anti-roll bars.
+
+Extreme suspension setups might cause "jittery" behavior at some situations. There are two critical
+factors about this:
+
+Suspension damper (VPWheelCollider)
+:	If dampers values are too large for the current vehicle mass, then the vehicle will exhibit
+	jittery behavior. As rule of thumb, a correct base value for the damper is rigidbody.mass*2.
+	Smaller values result in bouncy suspensions, while larger values (be careful) result in damped
+	suspensions.
+
+Tire Impulse Ratio (VPVehicleController)
+:	This is the impulse force that keeps the tires adherent to the surface. Under some
+	circumstances this impulse might be too large so it "overshoots" the adherent state. A new
+	impulse is then applied in the opposite direction, causing a noticeable shaking. This may
+	happen, for example, as result of the extra downforce caused by aerodynamics. These cases can be
+	identified easily as the lateral tire forces quickly oscillating among large positive and
+	negative values:
+
+	![Telemetry - lateral forces](/img/advanced/vehicle-physics-pro-telemetry-lateral-forces.png){: .clickview .img-medium }
+
+	Reducing the tire impulse ratio solves this problem. It should be as large as possible without
+	causing issues. If Tire Impulse Ratio is too small the tires would feel "sluggish" when reaching
+	the adherent state.
 
 #### Drift settings
 
