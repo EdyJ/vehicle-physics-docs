@@ -169,6 +169,9 @@ Some quotes I've received from actual users:
 > experience that is modeled into code."<br>
 > Fadi AlSamman
 
+> "I am impressed with the standard of detail you have gone into already and feel this could be an
+> "excellent alternative Simulation platform to what is out in the market already!"<br>
+> James "Monty" Montgomery, Vizuality Studio
 
 > "I tried some of the demos with a G27 wheel and it feels amazing! It is easily comparable to some
 > of the best racing sims out there. Also I love that you have real telemetry data which is essential
