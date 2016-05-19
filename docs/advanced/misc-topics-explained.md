@@ -491,9 +491,9 @@ Suspension damper (VPWheelCollider)
 	suspensions.
 
 Tire Impulse Ratio (VPVehicleController)
-:	This is the impulse force that keeps the tires adherent to the surface. Under some
-	circumstances this impulse might be too large so it "overshoots" the adherent state. A new
-	impulse is then applied in the opposite direction, causing a noticeable shaking. This may
+:	This is the impulse force that keeps the tires adherent to the surface when they're not sliding.
+	Under some circumstances this impulse might be too large so it "overshoots" the adherent state.
+	A new impulse is then applied in the opposite direction, causing a noticeable shaking. This may
 	happen, for example, as result of the extra downforce caused by aerodynamics. These cases can be
 	identified easily as the lateral tire forces quickly oscillating among large positive and
 	negative values:
