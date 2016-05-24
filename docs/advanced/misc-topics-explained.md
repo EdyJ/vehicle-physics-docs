@@ -506,6 +506,37 @@ Tire Impulse Ratio (VPVehicleController)
 
 #### Drift settings
 
+##### Drifting in practice
+
+Load the Gymkhana scene (search for _Gymkhana_ at the Project). This is the scene used for recording
+[this video](https://www.youtube.com/watch?v=eRBasBaKn1g).
+
+The vehicle is configured to be controlled by the keyboard. The main settings adjusted for the
+drifting behavior are:
+
+Transmission
+:	All-wheel-drive with Torque Splitter. The drive power goes to the rear axle. If the rear wheels
+	slip, then part of the drive is routed to the front axle.
+
+Differential gear ratio
+:	A higher ratio reduces the top speed and transmit more torque to the wheels. This allows
+	configuring a good drifting power in the 2nd gear.
+
+Torque splitter
+: 	Configures the ratio of drive power that gets routed to the front axle when rear wheels slip.
+	This allows configuring the handling while drifting. If ratio is too small the vehicle will
+	mostly do poorly controlled donuts. If ratio is too large the vehicle won't drift. A correct
+	balance results in the proper behavior.
+
+![Vehicle Controller drift settings for keyboard](/img/advanced/vpp-drift-with-keyboard-settings.png){: .clickview }
+
+You might also configure the differential type and lock ratio. Typically, a locked differential is
+known to be the best setup for drifting. However, in this particular case this would affect both
+front and rear differentials. Having a locked differential at the front axle causes a very bad
+handling. I've tested a regular viscous differential to do a good job overall.
+
+##### Drifting in theory
+
 Use the same settings as real drift cars. Hints:
 
 Center of Mass and weight balance
@@ -532,7 +563,7 @@ Driveline
 	- 0 = disengaged. No connection between front and rear axles.
 	- 1 = locked. Both axles are connected with a rigid axle (same as Locked differential).
 
-	Any value in between (default is 0.5) configures the behavior of the vehicle when rear wheels
+	Any value in between (default is 0.25) configures the behavior of the vehicle when rear wheels
 	are skidding. A good value gives the driver a nice control on the drifting direction.
 
 This is quoted from [WhateverMan at gamedev.net](http://www.gamedev.net/topic/664785-car-physics-turbochargers-and-friends/#entry5205193):
