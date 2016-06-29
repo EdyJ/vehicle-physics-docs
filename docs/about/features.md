@@ -11,6 +11,7 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - Toe
 - Brake balance: front / rear / neutral
 - Dynamic suspension
+- Dynamic mass and center of mass
 - Anti-roll bars
 - Clutch
 - Torque converter
@@ -19,14 +20,16 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - True automatic transmission (not _manual with auto-shift_)
 - Automatic transmission modes: M P R N D L
 - Any number of forward and reverse gears
+- Smart gear selection in automatic modes
 - Park mode (P)
 - Tire friction models: flat, smooth, parametric, Pacejka
-- Differential types: open, viscous, clutch pack (Salisbury), torque bias (Torsen)
+- Rolling friction
+- Differential types: open, viscous, clutch pack (Salisbury / Limited Slip), torque bias (Torsen)
 - Differential power / coast settings
 - Differential lock
 - Engine stall / inertial restart
 - Engine power, torque, brake
-- Engine fuel consumption model
+- Fuel consumption model
 - Brake Specific Fuel Consumption (BSFC)
 - Out-of-fuel situation
 - ABS (Anti-lock Braking System) [Video]
@@ -37,10 +40,13 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - VR ready
 - Force-feedback support for steering wheels, joysticks, etc
 - DirectInput interface with multi-device and force-feedback support
-- Detailed performance analysis charts in realtime
+- Performance analysis charts in realtime
 - Any vehicle weight. Tested with vehicles ranging from 10 kg to 600 tons
 - Vehicle simulation rates can be as low as 16 hz and up to 2000 Hz and more
-- Per-vehicle update rates
+- Per-vehicle solver update rate
+- Aerodynamic surfaces
+- Cruise control
+- Ground materials with grip and drag factors
 
 Planned features:
 
@@ -48,6 +54,7 @@ Planned features:
 - EVB (Exhaust Valve Brake) for continuous braking system
 - TCS (Traction Control System) reducing available engine torque
 - HA (Hold Assist)
+- Steering Assist
 - Camber
 - Caster
 - Asymmetric differential (also _epicyclic differential_)
@@ -59,7 +66,7 @@ Racing games and simulators
 
 Training simulators
 :	Apply the specifications of real vehicles to Vehicle Physics Pro and build a simulator for
-	training drivers. [Example: Truck simulator](https://twitter.com/VehiclePhysics/status/705806025266434048)
+	training drivers. [Example: Truck driver trainer](https://twitter.com/VehiclePhysics/status/705806025266434048)
 
 Studying / researching
 :	Design unbiased experiments by reproducing the same tests under different conditions and
@@ -69,19 +76,20 @@ Learning and Teaching
 :	Learn how real vehicles and internal parts work: basics, requirements, behaviors, side-effects,
 	configuration techniques, performance tips...
 
-Prototyping
-:	Design and test ECU logics. Experiment with any crazy idea you may have: two engines, one per
-	front-rear axle? Why not. Observe the behavior and all the side effects!
+Fast Prototyping
+:	Experiment with conventional and unconventional vehicle setups. Design and test ECU logics. You
+	may try any crazy idea: two engines, one per front-rear axle? Why not. Observe the behavior, the
+	side effects, and quickly figure out the requirements and challenges.
 
 ### Easy to use
 
 Vehicle Physics Pro comes with a set of ready-to-use components and vehicle prefabs to get you
-started in minutes. The [VPVehicleController](../components/vehicle-controller) component
-includes all the necessary features for simulating most types of vehicles.
+started in minutes. The [VPVehicleController](/components/vehicle-controller) component includes all
+the necessary features for simulating most types of vehicles.
 
 ### Highly accurate simulation model
 
-VPP is consolidated on a solid vehicle dynamics model. There are no guesses nor arbitrary
+VPP is consolidated on top of a solid vehicle dynamics model. There are no guesses nor arbitrary
 assumptions. The design is physically accurate, so it accounts for all the expected and unexpected
 behaviors and side effects.
 
@@ -96,9 +104,9 @@ Even exotic side effects like these happen in VPP:
 	a stalled vehicle go downwards a slope, press clutch, engage 2nd gear, and release the clutch
 	when the vehicle has gained some velocity. The engine restarts.
 
-- **Accurate differential coupling:** when the engine is off and a gear or Park are engaged,
-	rotating one wheel causes a counter-rotation of the opposite wheel, the same exact amount but
-	in the opposite direction.
+- **Differential coupling:** when the engine is off and a gear or Park are engaged, rotating one
+	wheel causes a counter-rotation of the opposite wheel, the same exact amount but in the opposite
+	direction.
 
 Nothing of the above has been explicitly implemented: all those effects are natural consequences of
 the actual design of the core simulation model, proving its accuracy.
@@ -118,8 +126,8 @@ precision out of these powerful systems.
 	physics engine can be reduced without affecting the vehicle simulation.
 
 The dynamics calculations are performed by a flexible integration solver. The substeps used by the
-solver on each integration [can be configured](../advanced/misc-topics-explained/#solver-numeric-integration)
-per-vehicle even in runtime, allowing the CPU usage to be carefully configured.
+solver on each integration [can be configured](/advanced/misc-topics-explained/#solver-numeric-integration)
+per-vehicle even in runtime, allowing the CPU usage to be carefully planned.
 Example: you might configure the Unity physics to 50 Hz, the player's vehicle to 500 Hz (10
 substeps) and the non-player vehicles to 100 Hz (2 substeps).
 
@@ -127,7 +135,7 @@ substeps) and the non-player vehicles to 100 Hz (2 substeps).
 
 VPP easily integrates into existing projects.
 
-- Quality C# code
+- Quality C# code with comments
 - Namespace `VehiclePhysics`
 - Menu integration (Component > Vehicle Physics)
 - Intuitive inspectors
