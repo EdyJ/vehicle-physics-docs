@@ -72,14 +72,13 @@ Access to the project's tracking system (RedMine)		|	| 	| 	| &fa-check;	|
 License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
 May be licensed by companies with annual revenue / funds / budget in excess of US\$100,000	|	| 	|	| &fa-check;	|
 10 days of Expert Assistance							|	|	|	| &fa-check;	|
-Flat license for all other present and future Vehicle Physics products<br>([Edy's Vehicle Physics](http://www.edy.es/dev/vehicle-physics/))|	| 	| 	| &fa-check;	|
-**Price in USD**<br>_(Price in Euros)_										| Free | $160<br>_(145€)_ | <del>\$480</del> **$320**<br>_(290€)_ | **$4800**<br>_(4300€)_ |
+**Price in USD**<br>_(Price in Euros)_										| Free | $190<br>_(170€)_ | **$480**<br>_(430€)_ | **$4800**<br>_(4300€)_ |
 
 > Notes:
 >
 > - Licenses may be upgraded anytime by paying the price difference.
 >
-> - Prices do not include PayPal fees or taxes (if applicable).
+> - Prices do not include PayPal fees nor taxes (if applicable).
 >
 > - Expert Assistance days included with the Enterprise License do not expire and can be requested
 >	anytime. We would book specific days in advance, consecutive or non-consecutive, of your
@@ -93,11 +92,11 @@ Flat license for all other present and future Vehicle Physics products<br>([Edy'
 	excess of US\$100,000.
 
 - Vehicle Physics Pro may be used as part of **end-user, closed source products only**. No
-	development libraries, development tools, open-source project or middleware of any kind are
+	development libraries, development tools, open-source projects or middleware of any kind are
 	permitted to use technologies of Vehicle Physics Pro.
 
 - No part of the source code may be disclosed to a third party, nor included as part of any
-	publicly accesible code repository.
+	publicly accessible code repository.
 
 - Standard and Professional licenses require one license per developer seat.
 
