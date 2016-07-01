@@ -52,6 +52,11 @@ generating ssh keys](https://help.github.com/articles/generating-ssh-keys/).
 
 3.	Now you can open the project at the folder **vehicle-physics-pro** with Unity 5.
 
+!!! Info "Importing the Blender 3D models"
+	Some 3D objects in the repository are in Blender format (.blend). These models require Blender
+	installed to be imported properly. I recommend [Blender 2.76b](http://download.blender.org/release/Blender2.76/),
+	as some recent versions seem to fail on importing .blend files in Unity.
+
 ### Upgrading to the latest revision
 
 This is also necessary after checking out any branch or revision in the main repository.
