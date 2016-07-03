@@ -47,6 +47,8 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - Aerodynamic surfaces
 - Cruise control
 - Ground materials with grip and drag factors
+- Unlimited replay with forwards / backwards jumps
+- Rewind & continue
 
 Planned features:
 
