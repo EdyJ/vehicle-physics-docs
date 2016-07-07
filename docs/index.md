@@ -115,6 +115,9 @@ Realistic and coherent
 &fa-check; [Performance Analysis Charts](components/vehicle-telemetry#vpperformanceanalysis)
 {: .roadmap }
 
+&fa-gear:spin; Replay system with rewind & continue
+{: .roadmap .wip }
+
 &fa-gear:spin; Unified demo scene
 {: .roadmap .wip }
 
@@ -122,9 +125,6 @@ Complete the documentation
 {: .roadmap .todo }
 
 **First release!**
-{: .roadmap .todo }
-
-Replay system
 {: .roadmap .todo }
 
 Anisotropic tire friction
