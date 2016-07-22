@@ -118,19 +118,19 @@ Realistic and coherent
 &fa-gear:spin; Replay system with rewind & continue
 {: .roadmap .wip }
 
+&fa-gear:spin; Driving aids
+{: .roadmap .wip }
+
 &fa-gear:spin; Unified demo scene
 {: .roadmap .wip }
 
 Complete the documentation
 {: .roadmap .todo }
 
-**First release!**
+**First public release!**
 {: .roadmap .todo }
 
 Anisotropic tire friction
-{: .roadmap .todo }
-
-Driving aids
 {: .roadmap .todo }
 
 Additional components
