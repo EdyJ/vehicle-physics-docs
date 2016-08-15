@@ -115,8 +115,8 @@ Realistic and coherent
 &fa-check; [Performance Analysis Charts](components/vehicle-telemetry#vpperformanceanalysis)
 {: .roadmap }
 
-&fa-gear:spin; Replay system with rewind & continue
-{: .roadmap .wip }
+&fa-check; Replay system with rewind & continue
+{: .roadmap }
 
 &fa-gear:spin; Driving aids
 {: .roadmap .wip }
@@ -124,10 +124,10 @@ Realistic and coherent
 &fa-gear:spin; Unified demo scene
 {: .roadmap .wip }
 
-Complete the documentation
+**First public release!**
 {: .roadmap .todo }
 
-**First public release!**
+Complete the documentation
 {: .roadmap .todo }
 
 Anisotropic tire friction
@@ -173,9 +173,9 @@ at Oviedo, Spain.
 > I started creating this kit because I wanted to simulate vehicles since I was a kid playing with my
 > Commodore 64. When I discovered Unity 3D that's what I wanted to do since the first day. But I
 > didn't find any existing component, kit or document for simulating a vehicle correctly. There were
-> all buggy components, too simple approaches, or too complex algorithms/methods/papers mixing
-> simulation and automotive industry. I had the feeling (name it intuition) that a _simple_ way of
-> simulating vehicles _correctly_ had to exist. And I spend several years researching and
+> all buggy components, too simple approaches, or too complex and ineffective algorithms/methods/papers
+> mixing simulation and automotive industry. I had the feeling (name it intuition) that a _simple_ way of
+> simulating vehicles _correctly_ should exist. Then I spend several years researching and
 > experimenting with a lot of ideas until I finally nailed it. This Vehicle Physics Pro today: the
 > simplest and most efficient approach for simulating a vehicle while actually accounting for all
 > major reactions and side effects in a physically correct, coherent and accurate way.
