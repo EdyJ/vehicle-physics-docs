@@ -26,39 +26,13 @@ A high quality vehicle 3D model also mets these conditions:
 dashboard...
 - Car paint has a properly unwrapped UV map so liveries can be painted at the texture.
 
-#### Driver's view
-
-Configuring the head movement in the first person view provides a nice feeling of the inertia in
-the driver's view.
-
-Create a child GameObject at the position of the driver's head. Add a Rigidbody and a Configurable
-Joint.
-
-Rigidbody:
-
-- Mass: 0.5
-- Interpolation: none
-
-Configurable Joint:
-
-- Connected Body: vehicle rigidbody
-- Anchor.Y: Tilt origin, typically around -0.5
-- X,Y,Z Motion: Locked
-- Angular Y Motion: Locked
-- Angular X,Z Montion: Free
-- Angular X Drive: Spring 25, Damper 5
-- Angular YZ Drive: Spring 30, Damper 10
-
-Lineal inertial movement may be configured instead or additionally to the angular movement.
-Example for adding movement in the Y axis simulating the floating seats in heavy trucks and buses.
-
-- Y Motion: Free
-- Y Drive: Spring 50, Damper 5
-
 #### Articulated vehicles
 
-Multi-part vehicles such as trucks with trailers can be attached together. Add a VPVehicleJoint
-component at the transform representing the _male_ plug:
+Multi-part vehicles such as trucks with trailers can be attached together. Each part is a 3D model
+that can be setup as an independent vehicle with its own Vehicle Controller (i.e. trailers) or as a
+a separated rigidbody with all wheels configured in the main Vehicle Controller (i.e. articulated bus).
+
+Add a VPVehicleJoint component at the transform representing the _male_ plug:
 
 - Other anchor: transform in the other part representing the _female_ connector.
 - X, Y, Z motion: Locked
@@ -66,6 +40,16 @@ component at the transform representing the _male_ plug:
 
 Both bodies should be close enough to the connected position for preventing abrupt movements when
 the VPVehicleJoint gets enabled.
+
+#### Driver's view
+
+Configuring the head movement in the first person view provides a nice feeling of the inertia in
+the driver's view. Add a VPHeadMotion component to a child gameobject of the vehicle:
+
+- Longitudinal and Lateral movement can be either _tilt_ or _slide_.
+- Vertical movement can be _tilt_ only.
+- Spring Rate affects the maximum displacement (more spring -> less displacement).
+- Damper Rate affects the bounciness of the movement (more damper -> less bounciness).
 
 ## Scenery
 
