@@ -48,12 +48,12 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - Cruise control
 - Ground materials with grip and drag factors
 - Unlimited replay with forwards / backwards playback and rewind & continue
-- TCS (Traction Control System) reducing available engine torque
+- TCS (Traction Control System) using engine torque reduction
 - Inertial head motion for the driver's view
 
 Planned features:
 
-- ASR (Anti-Slip Regulation) using brakes
+- ASR (Anti-Slip Regulation) using brake intervention
 - EVB (Exhaust Valve Brake) for continuous braking system
 - HA (Hold Assist)
 - Steering Assist
