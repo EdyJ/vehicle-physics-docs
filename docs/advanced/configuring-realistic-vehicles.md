@@ -11,8 +11,36 @@ Useful resources:
 	[RRI Powertrain Performance Graphs](http://rototest-research.eu/index.php?DN=29&List=C-L)
 	(engine dyno curves, weights)
 
+### Mass and center of mass (CoM)
+
+- **Total vehicle weight**.
+- **Weight distribution**, as tested, front/rear (weight per axle).
+- **Height of the center of mass**. Not typically available, but can be guessed to be around the top
+	part of the chassis. It can also be deducted from the angle the vehicle could drive on two side
+	wheels.
+
+### Engine, transmission and driveline
+
+- **Engine torque and power**. Ideally, a ["dyno" curve](https://www.google.es/search?q=engine+dyno+curve&tbm=isch)
+	if available. The curve shape also helps configuring the engine brake.
+- **Engine rev up/down time**. How fast the engine revs up when fully pressing throttle at neutral
+	gear, and how much time takes it to rev down to idle after releasing throttle. These data can
+	be used for estimating the engine inertia and the engine brake curve.
+- **Drive information**: front (FWD), rear (RWD), all (AWD), combined (details?)...
+- **Transmission type**: manual, automatic, manual with auto shift, automatic with manual shift.
+- **Number of gears and their ratios**.
+- **Final drive ratio** (typically specified by the differential).
+- **Differential type** and ratio if available.
+
+Other elements may be present in the driveline, specially in AWD or dynamic-drive setups.
+Examples: center transfer case, asymmetric (epicyclic) differential, torque splitter (haldex)...
+
 ### Wheels and suspension
 
+Detailed suspension specifications aren't typically available. They may be deducted/adapted by
+watching videos where the vehicle is tested under stress conditions.
+
+- **Wheel radius**.
 - **Front to rear axle distance** (_wheelbase_).
 - **Left to right distances** (_track front_, _track rear_).
 - **Vertical position of the wheel** either when suspension is fully compressed, or given a known
@@ -20,12 +48,11 @@ Useful resources:
 - **Suspension distance**.
 - **Suspension spring rates**.
 - **Suspension damper rates**.
-- **Wheel radius**.
 
 #### Tire friction
 
-Use the default values as starting point. You can fine tune it later using information from the real
-vehicle, if available:
+Use the default values as starting point. You can fine tune them later using information from the
+real vehicle, if available:
 
 - **Maximum acceleration** and/or **brake distance without wheel lock** can be used for
 	calculating the peak tire friction.
@@ -39,29 +66,6 @@ and fitting the tire friction parameters in the simulation for matching them.
 Ideally, the best tire friction data is the one extracted from real tires ([example](http://white-smoke.wikifoundry.com/page/Traction+ellipse+and+tyre+force)).
 The resulting forces divided by the normal load result in the coefficient of friction under each
 situation.
-
-### Center of Mass (CoM)
-
-- **Weight distribution**, as tested, front/rear (%).
-- **Height of the center of mass**. Not typically available, but can be guessed to be around the top
-	part of the chassis. It can be deducted from the angle the vehicle could drive on two side
-	wheels.
-
-### Engine, transmission and driveline
-
-- **Engine torque and power**. Ideally, a ["dyno" curve](https://www.google.es/search?q=engine+dyno+curve&tbm=isch)
-	if available. The curve shape also helps configuring the engine brake.
-- **Engine rev up/down time**. How fast the engine revs up when fully pressing throttle at neutral
-	gear, and how much time takes it to rev down to idle after releasing throttle. These data can
-	be used for estimating the engine inertia and the engine brake curve.
-- **Drive information**: front, rear, combined (details?)...
-- **Transmission type**: manual, automatic, manual with auto shift, automatic with manual shift.
-- **Number of gears and their ratios**.
-- **Final drive ratio** (typically specified by the differential).
-- **Differential type** and ratio if available.
-
-Other elements may be present in the driveline, specially in AWD or dynamic-drive setups.
-Examples: center transfer case, asymmetric (epicyclic) differential, torque splitter (haldex).
 
 ### Aerodynamics
 
