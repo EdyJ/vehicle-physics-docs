@@ -12,6 +12,8 @@ A good vehicle 3D model mets these minimum standards:
 - Movable parts should have zero logical rotation at their default/rest position (i.e. doors)
 - Wheels' origins should be at the geometric center of the wheel. Twin wheel groups (i.e. rear
 	wheels at trucks) should have their origin at the center of both wheels.
+- Wheel complements (brake calipers, suspension) should have the same origin as their corresponding
+	wheels.
 - All parts in hierarchy are named in plain _English_, so everyone can understand it (note that
 	language-specific characters often cause missing meshes)
 
