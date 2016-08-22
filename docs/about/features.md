@@ -43,6 +43,7 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - Performance analysis charts in realtime
 - Any vehicle weight. Tested with vehicles ranging from 10 kg to 600 tons
 - Vehicle simulation rates can be as low as 16 hz and up to 2000 Hz and more
+- Any gravity direction and magnitude
 - Per-vehicle solver update rate
 - Aerodynamic surfaces
 - Cruise control
