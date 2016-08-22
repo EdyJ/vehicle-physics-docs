@@ -28,6 +28,18 @@ A high quality vehicle 3D model also mets these conditions:
 dashboard...
 - Car paint has a properly unwrapped UV map so liveries can be painted at the texture.
 
+#### Interior
+
+Dashboard gauges and steering wheel must meet these requirements:
+
+- The local origin is the center of rotation
+- They rotate around the Z axis
+- Default Z rotation is zero
+
+&fa-lightbulb-o:lg; The center of rotation of the steering wheel is always the center of the
+external circumference. Using the center of the central part or logo is a common mistake.
+{: .alert .alert-success }
+
 #### Articulated vehicles
 
 Multi-part vehicles such as trucks with trailers can be attached together. Each part is a 3D model
