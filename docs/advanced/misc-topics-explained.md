@@ -547,11 +547,11 @@ Steering Limit
 	- The _Custom Slip_ mode allows configuring the amount of slip the tires are allowed to slide
 		at on steering.
 
-	!!! Info ""
-
+	!!! Info "&fa-thumbs-o-up; Pro-Tip"
 		The _Street_ and _Sport_ modes calculate the angle based on the ideal friction value (i.e.
-		Ackerman and TOE are not accounted for). Achieving the best performance involves performing
-		test on the vehicle for finding the best slip value for the Custom Slip mode.
+		Ackerman and TOE are not accounted for). Achieving the maximum lateral acceleration involves
+		performing skidpad-like tests on the vehicle for finding the best slip value for the
+		_Custom Slip_ mode.
 
 	The _Proportionality_ setting defines whether the steer input is just clamped against the limit
 	angles (0), or it's used as proportional ratio within the available range (1). This value has
