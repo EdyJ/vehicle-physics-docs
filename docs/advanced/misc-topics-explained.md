@@ -354,6 +354,44 @@ produce incoherent results using the slip ratio and slip angle concepts. The tir
 Physics Pro provides perfectly coherent behaviors at any speed, with perfectly defined continuous
 transitions between any state.
 
+#### Understanding steering, friction, and lateral slip / forces
+
+**Telemetry explained**
+
+![Vehicle Physics Pro Telemetry](/img/advanced/vehicle-physics-pro-steering-telemetry-annotated.png)
+
+- Steering angle is 29 - 22 degrees for the front wheels (1)
+- Speed is 106.3 km/h or 66 mph (5)
+- Given the above steering angle and speed, the wheels are experiencing a lateral slip of 12 - 10
+	m/s (4)
+- The slip applied to the tire friction curve results in a coefficient of friction of ~0.82
+	(not shown at the telemetry; more info below).
+- Normal load on the wheels is 1952 - 4955 N (2)
+- Given the above coefficient of friction and normal load, the wheels produce a lateral force of
+	1611 - 4178 N (3)
+- The lateral forces applied to the vehicle produce an angular rotation rate of 0.30 rad/s or 17.2
+	deg/s (6). This means that at this speed the vehicle could complete a 90º turn in ~5.2 seconds.
+
+**Tire Friction Curve**
+
+![Vehicle Physics Pro Tire Friction Curve](/img/advanced/vehicle-physics-pro-tire-friction-curve.png)
+
+Horizontal scale is slip in m/s. Vertical scale is coefficient of friction. The picture shows up to
+8 m/s. In this curve the peak friction is developed at 1.5 m/s. As front wheels are experiencing
+10-12 m/s, this means they are developing the minimum friction (a coefficient of friction of ~0.82).
+
+!!! Info "&fa-thumbs-o-up; Maximizing the lateral forces"
+
+	- Limit the steering angle with the speed for keeping the sideways slip close to the value where
+		the maximum friction is developed. This will be implemented as a driving aid. For example,
+		setting Max Steer Angle to 3 degrees in the scene above increases the cornering rate to 0.50
+		rad/s (= 28.6 deg/s, or just 3.15 seconds for completing a 90º turn).
+	- Adjust the tire friction curve so the maximum friction is developed at a value more closer to
+		the typical sideways slip experienced by wheels. Combine this solution with the previous
+		one.
+	- Configure the aerodynamic components to apply more downforce at the front wheels than at the
+		rear wheels at high speeds. This may cause oversteer behaviors as well.
+
 ---
 
 ## Vehicle setup
@@ -598,44 +636,6 @@ throttle). On the other hand, setting up the center differential as Locked means
 will effectively affect both axles equally, thus acting like a regular brake. A Torque Splitter with
 _stiffness_ and/or _preload_ > 0 will also transmit part of the effect of the handbrake to the front
 axle.
-
-#### Understanding steering, friction, and lateral slip / forces
-
-**Telemetry explained**
-
-![Vehicle Physics Pro Telemetry](/img/advanced/vehicle-physics-pro-steering-telemetry-annotated.png)
-
-- Steering angle is 29 - 22 degrees for the front wheels (1)
-- Speed is 106.3 km/h or 66 mph (5)
-- Given the above steering angle and speed, the wheels are experiencing a lateral slip of 12 - 10
-	m/s (4)
-- The slip applied to the tire friction curve results in a coefficient of friction of ~0.82
-	(not shown at the telemetry; more info below).
-- Normal load on the wheels is 1952 - 4955 N (2)
-- Given the above coefficient of friction and normal load, the wheels produce a lateral force of
-	1611 - 4178 N (3)
-- The lateral forces applied to the vehicle produce an angular rotation rate of 0.30 rad/s or 17.2
-	deg/s (6). This means that at this speed the vehicle could complete a 90º turn in ~5.2 seconds.
-
-**Tire Friction Curve**
-
-![Vehicle Physics Pro Tire Friction Curve](/img/advanced/vehicle-physics-pro-tire-friction-curve.png)
-
-Horizontal scale is slip in m/s. Vertical scale is coefficient of friction. The picture shows up to
-8 m/s. In this curve the peak friction is developed at 1.5 m/s. As front wheels are experiencing
-10-12 m/s, this means they are developing the minimum friction (a coefficient of friction of ~0.82).
-
-!!! Info "&fa-thumbs-o-up; Maximizing the lateral forces"
-
-	- Limit the steering angle with the speed for keeping the sideways slip close to the value where
-		the maximum friction is developed. This will be implemented as a driving aid. For example,
-		setting Max Steer Angle to 3 degrees in the scene above increases the cornering rate to 0.50
-		rad/s (= 28.6 deg/s, or just 3.15 seconds for completing a 90º turn).
-	- Adjust the tire friction curve so the maximum friction is developed at a value more closer to
-		the typical sideways slip experienced by wheels. Combine this solution with the previous
-		one.
-	- Configure the aerodynamic components to apply more downforce at the front wheels than at the
-		rear wheels at high speeds. This may cause oversteer behaviors as well.
 
 #### Car bouncing or shaking over the ground
 
