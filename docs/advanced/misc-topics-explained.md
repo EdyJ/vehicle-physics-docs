@@ -487,6 +487,86 @@ Force feedback
 :	Allowing the use of steering wheel controllers for feeling the actual grip of the tire while
 	cornering.
 
+
+#### Driving Aids explained
+
+A proper setup of the driving aids based on the vehicle and the control methods allows to make the
+vehicle as much easy / difficult to control as desired. They are almost mandatory when the vehicle
+is controlled with keyboard or touch input. In analog setups (steering wheel devices) the driving
+aids overcome the limitations of the simulator giving the feedback the driver gets in real vehicles.
+At the same time, the simulation remains physically realistic.
+
+##### Traction control
+
+Limits the engine throttle so the drive wheels produce a limited amount of slip. Traction Control
+has three working modes:
+
+- The _Street_ mode prevents any slipping, keeping the tire at the adherent state.
+- The _Sport_ mode aims to keep the tires at their peak slip (maximum traction).
+- In the _Custom Slip_ mode you can configure exactly the amount of slip the drive wheels are
+	allowed to slide at.
+
+The _Ratio_ setting allows fine-tunning the traction control from 0 (disabled) to 1 (fully engaged).
+
+##### Steering Aids
+
+Steering Help
+
+:	Automatically moves the steering wheel for the direction that keeps the vehicle controlled under
+	lateral sliding. Steering Help has two working modes:
+
+	- _Assisted Steer Angle_: Automatically moves the steering wheel for compensating any lateral
+		sliding of the vehicle. The user's steer input is applied later as offset to the assisted
+		steering angle. This is great for keyboard and touch controls, as all the user must do is
+		tap left-right for applying minor corrections for controlling the vehicle's direction. Using
+		a _Help Ratio_ of 1 makes really hard to loose the control of the vehicle. I recommend
+		reducing the ratio to around 0.7-0.8 in order to give the user a bit further control.
+
+	- _Hinted Steer Angle_ creates a kind of "gravity zone" around the ideal steer angle. When the
+		driver turns the steering wheel in the approximately correct direction, the wheels will
+		be further steered towards it. When this help mode is enabled it's enough for the driver to
+		roughly point the steering wheel in the correct direction for keeping the vehicle under
+		control. This mode is best with analog controls (steering wheel device).
+
+Steering Limit
+
+:	Automatically reduces the available steering range based on the speed of the vehicle. This
+	enforces a steering angle according to the current speed. Vehicle's lateral sliding is accounted
+	for correctly: in this case the limit is relaxed in the counter-steer direction, so the vehicle
+	can recover from losing the rear end even at high speeds regardless of this setting.
+	Read [Understanding steering, friction, and lateral slip / forces](#understanding-steering-friction-and-lateral-slip-forces)
+	above for understanding the effect of this aid.
+
+	Steering Limit has three working modes:
+
+	- The _Street_ mode leaves a very narrow steering angle that prevents the front wheels to slide
+		laterally (tire's _adherent_ slip). This forces the driver to reduce the speed hugely in
+		order to do sharp turns.
+	- The _Sport_ mode leaves the steering angle that produces the most sideways grip. This is
+		perfect for racing as the tires are pushed to their maximum performance.
+	- The _Custom Slip_ mode allows configuring the amount of slip the tires are allowed to slide
+		at on steering.
+
+	!!! Info ""
+
+		The _Street_ and _Sport_ modes calculate the angle based on the ideal friction value (i.e.
+		Ackerman and TOE are not accounted for). Achieving the best performance involves performing
+		test on the vehicle for finding the best slip value for the Custom Slip mode.
+
+	The _Proportionality_ setting defines whether the steer input is just clamped against the limit
+	angles (0), or it's used as proportional ratio within the available range (1). This value has
+	no effect if the Steering Help is also enabled and Priority is _Help First_.
+
+Priority
+
+:	Specifies the order the steering aids are applied when both are enabled simultaneously.
+
+	- _Help First_ provides more user control. The result of the user input + steering help is
+		constrained against the steering limit.
+	- _Limit First_ reduces the user control, but seems to make the vehicle somewhat more
+		predictable. In this mode the user input is first constrained against the steering limit,
+		then applied as input to the steering help.
+
 #### F1-style suspension setup
 
 This experiment is based on the Ferrari F458 prefab. Open any scene with the F458 and modify these
