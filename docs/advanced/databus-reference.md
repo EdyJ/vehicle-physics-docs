@@ -6,13 +6,13 @@ inspired in the [ODB-II standard](http://en.wikipedia.org/wiki/OBD-II_PIDs):
 - Immediate access O(1)
 - Direct, non-blocking read/write access from all clients
 - Data transport only: no error control, no range checking
-- Stores integer values only. Float values are represented as fixed-resolution decimals (ie: 1.0 = 10000)
+- Stores _integer_ values only. Float values may represented as fixed-resolution decimals (ie: 1.0 = 10000)
 - NaN is gracefully supported as integer: <code>(int)NaN = -2147483647</code>
 - Full forwards-backwards compatibility along versions.
 
-Add-on components can use the data bus for reading/writing values. Values are arranged
-into _channels_. Accessing a specific data requires the pair `ChannelId, ValueId`. The standard
-Channels and their available values are referenced below.
+Add-on components can use the data bus for reading/writing values. _Values_ are arranged into
+_channels_. Accessing a specific value requires the pair `ChannelId, ValueId`. The standard Channels
+and their available values are referenced below.
 
 Blocks don't have direct access to the data bus. The [host Vehicle Controller](vehiclebase-reference)
 is responsible of reading and populating their exposed values in the overrides for
@@ -57,9 +57,9 @@ float engineRpm = m_vehicle.data[Channel.Vehicle][VehicleData.EngineRpm];
 
 | Channel | Type | Description |
 | --------- | ---- | ----------- |
-| Input		| Write&nbsp;only	| States of the vehicle input elements.<br>Intended for writing, but the states can be read for representing the actual positions of the elements in the vehicle 3D model (i.e. steering wheel, gear stick...) |
+| Input		| Write&nbsp;only	| States of the vehicle input elements.<br>Intended for writing, but the states may be read for representing the actual positions of the elements in the vehicle 3D model (i.e. steering wheel, gear stick...) |
 | Vehicle	| Read&nbsp;only	| State values of the internal parts of the vehicle |
-| Settings	| Read/Write		| Common configuration settings. Values here might not be implemented in all vehicles |
+| Settings	| Read/Write		| Common configuration settings |
 
 ### Input channel
 
@@ -109,6 +109,7 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 |GearboxShifting| Is the gearbox in the middle of a gear shift operation?	|		|		| 0 = no, 1 = yes
 |RetarderTorque	| Brake torque injected in the driveline by the retarder	| Nm	| 1000	| 2000000 = 2000 Nm
 |AbsEngaged		| Is the ABS being engaged in any wheel?	|		|		| 0 = no, non-zero = yes
+|TcsEngaged		| Is the TCS limiting the engine throttle?	| 		|		| 0 = no, non-zero = yes
 
 ### Settings channel
 
