@@ -512,11 +512,11 @@ The _Ratio_ setting allows fine-tunning the traction control from 0 (disabled) t
 
 Steering Help
 
-:	Automatically moves the steering wheel for the direction that keeps the vehicle controlled under
+:	Automatically moves the steering wheel to the direction that keeps the vehicle controlled under
 	lateral sliding. Steering Help has two working modes:
 
 	- _Assisted Steer Angle_: Automatically moves the steering wheel for compensating any lateral
-		sliding of the vehicle. The user's steer input is applied later as offset to the assisted
+		sliding of the vehicle. The user's steer input is applied as offset to the assisted
 		steering angle. This is great for keyboard and touch controls, as all the user must do is
 		tap left-right for applying minor corrections for controlling the vehicle's direction. Using
 		a _Help Ratio_ of 1 makes really hard to loose the control of the vehicle. I recommend
@@ -531,11 +531,8 @@ Steering Help
 Steering Limit
 
 :	Automatically reduces the available steering range based on the speed of the vehicle. This
-	enforces a steering angle according to the current speed. Vehicle's lateral sliding is accounted
-	for correctly: in this case the limit is relaxed in the counter-steer direction, so the vehicle
-	can recover from losing the rear end even at high speeds regardless of this setting.
-	Read [Understanding steering, friction, and lateral slip / forces](#understanding-steering-friction-and-lateral-slip-forces)
-	above for understanding the effect of this aid.
+	enforces a steering angle according to the current speed. Read [Understanding steering, friction, and lateral slip / forces](#understanding-steering-friction-and-lateral-slip-forces)
+	for understanding the effect of this aid.
 
 	Steering Limit has three working modes:
 
@@ -553,19 +550,42 @@ Steering Limit
 		performing skidpad-like tests on the vehicle for finding the best slip value for the
 		_Custom Slip_ mode.
 
+	Vehicle's lateral sliding is accounted for correctly: when this happens the limit is relaxed in
+	the counter-steer direction, so the vehicle can recover from losing the rear end even at high
+	speeds regardless of this setting.
+
 	The _Proportionality_ setting defines whether the steer input is just clamped against the limit
 	angles (0), or it's used as proportional ratio within the available range (1). This value has
 	no effect if the Steering Help is also enabled and Priority is _Help First_.
 
 Priority
 
-:	Specifies the order the steering aids are applied when both are enabled simultaneously.
+:	Specifies the order the steering aids are applied when both are enabled simultaneously. The
+	result of the first specified aid is fed as input for the other aid.
 
-	- _Help First_ provides more user control. The result of the user input + steering help is
-		constrained against the steering limit.
-	- _Limit First_ reduces the user control, but seems to make the vehicle somewhat more
-		predictable. In this mode the user input is first constrained against the steering limit,
-		then applied as input to the steering help.
+	- _Help First_ provides more user control on the steering. The user moves the steering and the
+		vehicle turns in result.
+	- _Limit First_ provides more user control on the vehicle's heading. The user specifies the
+		turn direction and the vehicle tries to turn in that direction while the steering is
+		automatically controlled for keeping the control.
+
+!!! Info "&fa-thumbs-o-up; Pro-Tip"
+
+	Steering Help + Steering Limit + Limit Proportionality can be configured so the vehicle
+	converges itself to a stable drifting situation without applying any steering input, just
+	throttle:
+
+	<div class="imagegallery" sm="1" md="3" lg="3" style="display:none">
+		<img class="clickview" src="/img/advanced/vpp-stable-drifting-settings.png" alt="Vehicle Physics Pro stable drifting settings">
+		<img class="clickview" src="/img/advanced/vpp-stable-drifting-with-driving-aids.jpg" alt="Vehicle Physics Pro stable drifting">
+		<img class="clickview" src="/img/advanced/vpp-proportionality-effect-in-drifting.jpg" alt="Effects in drifting of increasing the Limit Proportionality in the driving aids">
+	</div>
+
+	The driving aids with the _Limit Proportionality_ setting (left picture) allows the vehicle to
+	converge to a perfect drifting circle (middle picture). Increasing the proportionality reduces
+	the drifting radius (right picture, proportionality = 1). This feature requires the steering
+	range to be wide enough for the system to compensate the lateral sliding properly.
+
 
 #### F1-style suspension setup
 
