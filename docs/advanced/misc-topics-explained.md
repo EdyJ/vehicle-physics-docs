@@ -490,7 +490,7 @@ Force feedback
 
 #### Driving Aids explained
 
-A proper setup of the driving aids based on the vehicle and the control methods allows to make the
+A proper setup of the driving aids based on the vehicle and the control methods makes the
 vehicle as much easy / difficult to control as desired. They are almost mandatory when the vehicle
 is controlled with keyboard or touch input. In analog setups (steering wheel devices) the driving
 aids overcome the limitations of the simulator giving the feedback the driver gets in real vehicles.
@@ -513,20 +513,14 @@ The _Ratio_ setting allows fine-tunning the traction control from 0 (disabled) t
 Steering Help
 
 :	Automatically moves the steering wheel to the direction that keeps the vehicle controlled under
-	lateral sliding. Steering Help has two working modes:
+	lateral sliding. The user's steer input is applied as offset to this assisted steering angle.
 
-	- _Assisted Steer Angle_: Automatically moves the steering wheel for compensating any lateral
-		sliding of the vehicle. The user's steer input is applied as offset to the assisted
-		steering angle. This is great for keyboard and touch controls, as all the user must do is
-		tap left-right for applying minor corrections for controlling the vehicle's direction. Using
-		a _Help Ratio_ of 1 makes really hard to loose the control of the vehicle. I recommend
-		reducing the ratio to around 0.7-0.8 in order to give the user a bit further control.
+	- Keyboard, touch controls: use a large _Help Ratio_ of around 0.8 - 0.9. All the user has to do
+		is tapping left-right for applying minor corrections for controlling the vehicle's
+		direction. Using a _Help Ratio_ of 1 makes really hard to loose the control of the vehicle.
 
-	- _Hinted Steer Angle_ creates a kind of "gravity zone" around the ideal steer angle. When the
-		driver turns the steering wheel in the approximately correct direction, the wheels will
-		be further steered towards it. When this help mode is enabled it's enough for the driver to
-		roughly point the steering wheel in the correct direction for keeping the vehicle under
-		control. This mode is best with analog controls (steering wheel device).
+	- Steering wheel and analog devices: reduce the _Help Ratio_ to 0.4 - 0.6. This way the user
+		has most of the control, while the Steering Help provides a further hint.
 
 Steering Limit
 
@@ -551,8 +545,8 @@ Steering Limit
 		_Custom Slip_ mode.
 
 	Vehicle's lateral sliding is accounted for correctly: when this happens the limit is relaxed in
-	the counter-steer direction, so the vehicle can recover from losing the rear end even at high
-	speeds regardless of this setting.
+	the counter-steer direction, so the vehicle can be recovered from losing the rear end even at
+	high speeds regardless of this setting.
 
 	The _Proportionality_ setting defines whether the steer input is just clamped against the limit
 	angles (0), or it's used as proportional ratio within the available range (1). This value has
@@ -561,13 +555,14 @@ Steering Limit
 Priority
 
 :	Specifies the order the steering aids are applied when both are enabled simultaneously. The
-	result of the first specified aid is fed as input for the other aid.
+	result of the first specified aid is fed as input for the other aid. The priority setting
+	provides two different behaviors:
 
-	- _Help First_ provides more user control on the steering. The user moves the steering and the
-		vehicle turns in result.
-	- _Limit First_ provides more user control on the vehicle's heading. The user specifies the
-		turn direction and the vehicle tries to turn in that direction while the steering is
-		automatically controlled for keeping the control.
+	- _Help First_ provides more user control on the steering. The vehicle tends to conserve the
+		lateral sliding, with the user applying minor corrections to the direction.
+	- _Limit First_ tends to keep the vehicle straight. It steers and/or drift when the user is
+		applying steering in the desired direction, otherwise the vehicle goes back to straight
+		driving.
 
 !!! Info "&fa-thumbs-o-up; Pro-Tip"
 
