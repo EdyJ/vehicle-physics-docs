@@ -118,8 +118,8 @@ Realistic and coherent
 &fa-check; Replay system with rewind & continue
 {: .roadmap }
 
-&fa-gear:spin; Driving aids
-{: .roadmap .wip }
+&fa-check; Driving aids
+{: .roadmap }
 
 &fa-gear:spin; Unified demo scene
 {: .roadmap .wip }
