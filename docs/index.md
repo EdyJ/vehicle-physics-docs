@@ -121,7 +121,7 @@ Realistic and coherent
 &fa-check; Driving aids
 {: .roadmap }
 
-&fa-gear:spin; Unified demo scene
+&fa-gear:spin; Demo scenes and examples
 {: .roadmap .wip }
 
 **First public release!**
