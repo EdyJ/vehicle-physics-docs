@@ -48,17 +48,20 @@
             <div class="col-md-9" role="main">{% include "content.html" %}</div>
         </div>
 
+		<!-- EDY: Used by the picture view overlay -->
 		<div id="clickview_modal">
 			<span id="clickview_close">×</span>
 			<img id="clickview_content">
 			<div id="clickview_caption"></div>
 		</div>
+		<!-- -->
 
         <footer class="col-md-12">
             <hr>
             {% if copyright %}
                 <center>{{ copyright }}</center>
             {% endif %}
+			<!-- EDY: Removed "Made with MkDocs" footer -->
         </footer>
 
         <script src="{{ base_url }}/js/jquery-1.10.2.min.js"></script>
