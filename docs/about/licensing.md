@@ -5,9 +5,8 @@ and Enterprise Licenses. [Compare licenses and pricing](#compare-editions) below
 [edy@vehiclephysics.com](mailto:edy@vehiclephysics.com){: .alert-link } for more information.
 {: .alert .alert-info }
 
-&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive. They are subject
-to changes during the Beta stage. Price discounts will be removed when the first VPP version is
-released.
+&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
+to changes during the Beta stage.
 {: .alert .alert-warning }
 
 Free edition (To Be Announced)
@@ -105,3 +104,19 @@ May be licensed by companies with annual revenue / funds / budget in excess of U
 - Connections to the GIT repository are logged per-account. The account may get blocked if an
 	excess of connections for a given license is detected. Failure to keep the repository
 	connections under the licensing terms may result in a license termination.
+
+- All Intellectual Property Rights related to Vehicle Physics Pro, the code, binaries, and resources
+	provided with the package or repositories are exclusive property of the author, Angel Garcia
+	Voces.
+
+- Warranty: Any defects in the operation or functionality of VPP that are not part of the product
+	design nor attributable to third-party products (including Unity 3D) will try to be corrected by
+	the author as soon as possible after the author has been notified of such defects.
+
+- DISCLAIMER: TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE AUTHOR FURTHER EXPRESSLY
+	DISCLAIMS ALL WARRANTIES TERMS OR CONDITIONS OF ANY KIND, OTHERWISE STATED ABOVE, WHETHER
+	EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO ANY IMPLIED WARRANTIES TERMS AND CONDITIONS
+	OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT,
+	WITH RESPECT TO VPP. THE USE OF VPP IS AT THE LICENSEE'S OWN DISCRETION AND RISK AND THE
+	LICENSEE IS SOLELY RESPONSIBLE FOR ANY DAMAGE TO LICENSEE'S COMPUTER SYSTEM, OR OTHER DEVICE,
+	OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
