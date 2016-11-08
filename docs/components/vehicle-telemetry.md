@@ -85,13 +85,13 @@ Gizmos At Physic Position
 	correction.
 
 
-### VPPerformanceAnalysis
+### VPPerformanceDisplay
 
 Advanced data logger and live performance charts for a variety of data coming from the vehicle.
 The zoom and panning controls allow fully detailed inspection.
 
 <div class="imagegallery" sm="2" md="2" lg="2" style="display:none">
-	<img class="clickview" src="/img/components/vpp-performance-analysys-display-annotated.jpg" alt="VP Performance Analysis realtime display">
+	<img class="clickview" src="/img/components/vpp-performance-display-annotated.jpg" alt="VP Performance display">
 	<img class="clickview" src="/img/components/vpp-performance-chart-essentials.jpg" alt="Essentials Chart">
 </div>
 
@@ -104,7 +104,10 @@ Data Recording Time
 :	Size of the buffer of the data logger
 
 Refresh Interval
-:	Time in seconds between each chart refresh
+:	Time in seconds between each display refresh. This doesn't affect the rate the data is recorded.
+
+Start Recording
+:	Begin data recording as soon as the vehicle is enabled.
 
 Pan Rate
 :	How fast are the panning operations
@@ -181,7 +184,7 @@ Load supported by each wheel. Includes the speed trace for reference.
 ##### Custom
 
 You can write your own data logger by deriving from the `PerformanceChart` abstract class.
-Set it at the `customChart` property of the `VPPerformanceAnalysis` component.
+Set it at the `customChart` property of the `VPPerformanceDisplay` component.
 
 The `PerformanceChart` class exposes several properties you can use for gather the data and
 configure the visualization:

@@ -121,10 +121,10 @@ public class SimpleVehicleController : VehicleBase
 		// Set the brakes at the Wheel blocks
 
 		float brakeTorque = brakeInput * maxBrakeTorque;
-		wheels[0].Tbrake = brakeTorque;
-		wheels[1].Tbrake = brakeTorque;
-		wheels[2].Tbrake = brakeTorque;
-		wheels[3].Tbrake = brakeTorque;
+		wheels[0].AddBrakeTorque(brakeTorque);
+		wheels[1].AddBrakeTorque(brakeTorque);
+		wheels[2].AddBrakeTorque(brakeTorque);
+		wheels[3].AddBrakeTorque(brakeTorque);
 		}
 	}
 ```

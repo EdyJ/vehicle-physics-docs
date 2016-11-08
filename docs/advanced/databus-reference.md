@@ -19,7 +19,7 @@ is responsible of reading and populating their exposed values in the overrides f
 `VehicleBase.DoUpdateBlocks` and `VehicleBase.DoUpdateData`.
 
 For examples on how to use the Data Bus, check out the scripts `VPStandardInput.cs` (method
-`Update`) and `VPVehicleController.cs` (methods `DoUpdateBlocks` and `DoUpdateData`).
+`UpdateVehicle`) and `VPVehicleController.cs` (methods `DoUpdateBlocks` and `DoUpdateData`).
 
 #### Accessing the data bus
 
@@ -108,8 +108,11 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 |GearboxMode	| Actual transmission mode					| gear mode		|		| 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_
 |GearboxShifting| Is the gearbox in the middle of a gear shift operation?	|		|		| 0 = no, 1 = yes
 |RetarderTorque	| Brake torque injected in the driveline by the retarder	| Nm	| 1000	| 2000000 = 2000 Nm
-|AbsEngaged		| Is the ABS being engaged in any wheel?	|		|		| 0 = no, non-zero = yes
-|TcsEngaged		| Is the TCS limiting the engine throttle?	| 		|		| 0 = no, non-zero = yes
+|AbsEngaged		| Is the ABS being engaged in any wheel?				|		|		| 0 = no, non-zero = yes
+|TcsEngaged		| Is the TCS limiting the engine throttle?				| 		|		| 0 = no, non-zero = yes
+|EscEngaged		| Is the ESC applying brakes for keeping stability?		|		|		| 0 = no, non-zero = yes
+|AsrEngaged		| Is the ASR applying brakes for reducing wheel slip?	|		|		| 0 = no, non-zero = yes
+|AidedSteer		| Steering wheel position after steering aids | %	| 10000	| -10000 = full left, 0 = center, +10000 = full right
 
 ### Settings channel
 
