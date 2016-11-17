@@ -50,14 +50,15 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - Ground materials with grip and drag factors
 - Unlimited replay with forwards / backwards playback and rewind & continue
 - TCS (Traction Control System) using engine torque reduction
+- ECS (Electronic Stability Control) actively applying brakes on oversteer / understeer
+- ASR (Anti-Slip Regulation) for improving traction on open differentials
 - Inertial head motion for the driver's view
+- Steering Aids providing outstanding control even with keyboard / touch devices
 
 Planned features:
 
-- ASR (Anti-Slip Regulation) using brake intervention
 - EVB (Exhaust Valve Brake) for continuous braking system
 - HA (Hold Assist)
-- Steering Assist
 - Camber
 - Caster
 - Asymmetric differential (also _epicyclic differential_)
