@@ -96,8 +96,8 @@ The _**suspension force**_ is calculated as:
 $$suspensionForce = {stiffness}\cdot{contactDepth} + {damper}\cdot{contactSpeed}$$
 
 When the suspension is not moving the _contact speed_ is 0. This happens when the vehicle is either
-resting, cruising at constant speed or under constant acceleration. The suspension position for a
-specific wheel can then be calculated as:
+resting, cruising at constant speed or under constant non-vertical acceleration. The suspension
+position for a specific wheel can then be calculated as:
 
 $$suspensionPosition = \frac{weight \cdot{gravity}}{stiffness}$$
 
@@ -109,24 +109,13 @@ The suspension properties can be studied from the point of view of the oscillati
 ([Harmonic oscillator](http://en.wikipedia.org/wiki/Harmonic_oscillator)). The associated concepts
 are used to study the reactions of the suspension in different situations.
 
-If the vehicle is under constant acceleration (accelerating / braking / cornering) the _weight_ is
-redistributed among the wheels. Wheels will be supporting more or less load than in rest position.
-This effectively modifies the oscillating properties of the suspensions at those specific
-situations, thus having different reactions. For instance, imagine a racing car heavily braking at
-the end of a long straight before entering a slow curve. If that part of the track is a bumpy
-surface then the suspension must be set up properly for ensuring correct handling while braking
-over the bumps. Another example is the downforce caused by aerodynamic surfaces. Suspension will
-have different behavior on high speeds due to the extra sustained load. Studying the oscillating
-behavior of the suspension in this detail is critical for setting up racing cars that react properly
-on every situation.
-
 Given the force produced by the suspension at a specific steady state (_contact speed_ = 0) the
 equivalent _**sprung mass**_ value for studying that situation can be calculated as:
 
 $$sprungMass = \frac{suspensionForce}{gravity}$$
 
-When the vehicle is at rest, cruising at constant speed or under constant acceleration the sum of
-the sprung masses of all the wheels matches the mass of the vehicle exactly.
+When the vehicle is at rest, cruising at constant speed or under constant non-vertical acceleration
+the sum of the sprung masses of all the wheels matches the mass of the vehicle exactly.
 
 Using the _sprung mass_ you can calculate the _**natural frequency**_ for the spring under that
 load. The _natural frequency_ is the speed at which the spring can respond to changes in load:
@@ -166,3 +155,57 @@ Applying the [Nyquist theorem](http://en.wikipedia.org/wiki/Nyquist–Shannon_sa
 can deduct that a physically correct simulation should have _alpha_ >= 2. Smaller values won't
 likely cause noticeable artifacts, only the produced forces won't be physically precise.
 
+### Application to real vehicles
+
+Suspensions in real vehicles don't have constant frequency and damping ratio at all times. You may
+calculate and study the oscillating behavior in specific situations separately: at rest,
+accelerating, braking... Weight transfer on some of these situations actually affects the behavior
+of the suspension. That's the challenge of configuring suspensions in real vehicles: you have to
+find a good balance for most situations.
+
+If the vehicle is under constant non-vertical acceleration (accelerating / braking / cornering) the
+_weight_ is redistributed among the wheels. Wheels will be supporting more or less load than in rest
+position. This effectively modifies the oscillating properties of the suspensions at those specific
+situations, thus having different reactions. For instance, imagine a racing car heavily braking at
+the end of a long straight before entering a slow curve. If that part of the track is a bumpy
+surface then the suspension must be set up properly for ensuring correct handling while braking
+over the bumps. Another example is the downforce caused by aerodynamic surfaces. Suspension will
+have different behavior on high speeds due to the extra sustained load. Studying the oscillating
+behavior of the suspension in this detail is critical for setting up racing cars that react properly
+on every situation.
+
+The most important facts in a vehicle suspension are:
+
+- **Springs** sustain the weight of the vehicle.
+- **Dampers** dissipate the energy in the springs when the suspension moves (_weight transfers_).
+
+When the suspension is not moving the dampers have no effect. This happens when the vehicle is at
+rest, cruising at constant speed, or under constant non-vertical acceleration. Otherwise, weight
+transfers occur among the suspensions. The springs should be strong enough for sustaining the weight
+of the vehicle preventing the suspension to reach its limits on all situations, including weight
+transfers.
+
+When the formulas for the Harmonic Oscillator (above) are applied to vehicles where suspension is
+not moving they yield a surprising result:
+
+$${\begin{cases}
+naturalFrequency = \sqrt{\frac{stiffness}{sprungMass}}\\
+sprungMass = \frac{suspensionForce}{gravity}\\
+suspensionForce = stiffness \cdot{sprungMass}
+\end{cases}}
+$$
+
+$$\Longrightarrow naturalFrequency = \sqrt{\frac{gravity}{contactDepth}}$$
+
+So the most important factor for the frequency of the suspension is the **contact depth**! Not the
+spring rate, not even the sprung mass! The frequency of the suspension will vary on the different
+situations (accelerating, braking, cornering...) according to the contacth depth.
+
+This is where dynamic suspension systems kick in. Some high-end modern cars have electronically
+controlled suspensions which dynamically modify the suspension properties in order to...
+(guess what?) keeping the _contact depth_ (also _ride height_) constant at all situations. This
+preserves the original properties of the suspension when accelerating, braking, cornering, or
+carrying variable cargo or passengers.
+
+Vehicle Physics Pro includes the component **VPDynamicSuspension** (currently experimental) that
+modifies the suspension properties in order to preserve a given _contact depth_.
