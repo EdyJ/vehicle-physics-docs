@@ -191,7 +191,7 @@ not moving they yield a surprising result:
 $${\begin{cases}
 naturalFrequency = \sqrt{\frac{stiffness}{sprungMass}}\\
 sprungMass = \frac{suspensionForce}{gravity}\\
-suspensionForce = stiffness \cdot{sprungMass}
+suspensionForce = stiffness \cdot{contactDepth}
 \end{cases}}
 $$
 
