@@ -199,7 +199,8 @@ $$\Longrightarrow naturalFrequency = \sqrt{\frac{gravity}{contactDepth}}$$
 
 So the most important factor for the frequency of the suspension is the **contact depth**! Not the
 spring rate, not even the sprung mass! The frequency of the suspension will vary on the different
-situations (accelerating, braking, cornering...) according to the contacth depth.
+situations (accelerating, braking, cornering...) according to the contacth depth. Note that this
+_contact depth_ includes any pre-compression of the spring inside the suspension strut.
 
 This is where dynamic suspension systems kick in. Some high-end modern cars have electronically
 controlled suspensions which dynamically modify the suspension properties in order to...
