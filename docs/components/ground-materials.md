@@ -115,7 +115,7 @@ Max Marks
 	progressively according to the _Fade Out Range_ parameter.
 
 	&fa-warning; The number of marks has direct influence on the performance. The entire mesh with
-	the marks is discarded and re-created each time new segments are added.
+	the marks needs to be processed each time new segments are added.
 	{: .alert .alert-warning }
 
 Min Distance
