@@ -103,11 +103,11 @@ May be licensed by companies with annual revenue / funds / budget in excess of U
 
 - Connections to the GIT repository are logged per-account. The account may get blocked if an
 	excess of connections for a given license is detected. Failure to keep the repository
-	connections under the licensing terms may result in a license termination.
+	connections under reasonable limits may result in a license termination.
 
-- All Intellectual Property Rights related to Vehicle Physics Pro, the code, binaries, and resources
-	provided with the package or repositories are exclusive property of the author, Angel Garcia
-	Voces.
+- All Intellectual Property Rights related to Vehicle Physics Pro, the code, binaries, technologies,
+	algorythms and resources provided with the package or repositories are exclusive property of the
+	author, Angel Garcia Voces.
 
 - Warranty: Any defects in the operation or functionality of VPP that are not part of the product
 	design nor attributable to third-party products (including Unity 3D) will try to be corrected by
