@@ -71,7 +71,7 @@ Access to the project's tracking system (RedMine)		|	| 	| 	| &fa-check;	|
 License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
 May be licensed by companies with annual revenue / funds / budget in excess of US\$100,000	|	| 	|	| &fa-check;	|
 10 days of Expert Assistance							|	|	|	| &fa-check;	|
-**Price in USD**<br>_(Price in Euros)_										| Free | $190<br>_(170€)_ | **$480**<br>_(430€)_ | **$4800**<br>_(4300€)_ |
+**Price in USD**<br>_(Price in Euros)_										| Free | $190<br>_(175€)_ | **$480**<br>_(440€)_ | **$4800**<br>_(4400€)_ |
 
 > Notes:
 >
