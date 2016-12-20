@@ -67,6 +67,12 @@ img.img-medium
 	max-width: 520px;
 	}
 
+img.img-medium-height
+	{
+	max-width: 520px;
+	max-height: 450px;
+	}
+
 img.img-small
 	{
 	max-width: 320px;

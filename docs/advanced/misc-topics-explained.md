@@ -248,6 +248,66 @@ forwards but at less speed than the road when releasing the throttle. As extreme
 try setting the Unity physics time step to 0.01 and 10 integration steps in the Vehicle
 Physics solver. Note that this will increase the overall impact of physics in the CPU usage.
 
+#### Understanding engine curves
+
+The engine torque curve (green) is the sum of the raw combustion torque (dotted yellow) and the
+engine friction (red).
+
+![Vehicle Physics Pro Engine Curves](/img/advanced/vpp-engine-curves.png)
+
+[Dyno curves](http://www.rototest.com/performance-graphs/introduction.php?DN=23) show only the final
+torque (green) and power (blue) curves. They won't show the engine friction. The shape of the torque
+curve and is relationship with the power curve gives us clues on how the engine friction should be
+configured. When done correctly, the resulting engine will fit the behavior of the real engine very
+closely in both acceleration and deceleration. Engine braking is a commonly ignored specification,
+yet a critical parameter that defines the shape of the torque curve and the engine behavior.
+
+The Engine parameters in Vehicle Physics Pro the define specific points (circles in the graph) that
+will be crossed by the final engine torque curve (green). But it doesn't mean these points will make
+a maximum torque, nor a point where the torque will be suddenly cut. The rpm range in the real dyno
+charts is typically cropped. Real tests won't likely push the engine until the torque actually
+results zero, as the rev limiter will be cutting down the injection first. So you must figure out
+how that curve torque would result if the engine would be pushed beyond the rev limiter. Max Rpm is
+the rpms where the raw torque has decreased so it gets compensated by the engine friction and the
+final torque results zero. Only friction torque can be produced beyond Max Rpms. This settings is
+deduced based on the shape of the real spec chart.
+
+The peak point (white circle in the graph) represent the point where the raw combustion provides the
+maximum torque. Raw combustion torque is the dotted yellow line in the chart. The raw combustion
+torque always increases before the peak rpm, and decreases after it. Once the engine friction is
+subtracted from the raw torque you get the actual engine torque. The point of maximum engine torque
+is the small vertical white line crossing the green torque curve.
+
+The difficulty on setting up the engine curves is that you need to figure out both the raw torque
+and the friction torque so they result in the final torque curve that fits the real specifications.
+It's not trivial and requires a bit of practice. But most engines can be configured with good
+precision, including them holding torque for some range.
+
+Example:
+
+![Vehicle Physics Pro Engine Parameters Example](/img/advanced/vpp-engine-parameters-example.png){: .clickview .img-medium-height }
+
+Note how the torque is mostly hold at some level. This happens because the the increment of the raw
+combustion (dotted yellow) being compensated with the engine friction (red). This makes the
+specifications to fit perfectly the max power and max torque specifications. Note how the maximum
+torque is reached at 4475 rpms while the "Peak Rpm" setting is 6515. This Peak Rpm is the point of
+maximum raw combustion torque (see the dotted yellow curve). Additionally, the rev limiter won't
+let the engine go beyond 6000 rpms. The original specifications are cropped at that point.
+
+Another example: engine curve vs. real specs
+
+![Vehicle Physics Pro Engine Parameters Versus Real Chart Example](/img/advanced/vpp-engine-parameters-versus-real-chart-example.png){: .clickview .img-medium-height }
+
+This is a very good curve fit. Max Torque matches the specifications exactly (540 Nm @ 6000 rpms),
+and the Max Power is very close as well (423.5 vs. 425 kW). The flat end in the power curve surely
+represents an electronically imposed power correction, as it doesn't fit with the other curve data.
+
+A radically different example is a truck engine. This one already matches closely the specifications
+of a real model:
+
+![Vehicle Physics Pro Truck Engine Parameters](/img/advanced/vpp-truck-engine-parameters.png){: .clickview .img-medium-height }
+
+
 ---
 
 ## Tire friction
