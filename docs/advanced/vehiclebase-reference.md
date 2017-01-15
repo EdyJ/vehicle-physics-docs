@@ -27,10 +27,11 @@ Important: you must configure each WheelState with the corresponding the WheelCo
 WheelState.wheelCol. Also, ensure to flag the steering wheels as steerable (this is used by the
 force feedback calculations).
 
-#### DoSteer
+#### OnPreDynamicsStep
 
-Set up WheelState.steerAngle (degrees) in the wheels, either directly or via Steering helper class.
-This is done in its own method for allowing the wheels to steer smoothly even in slow motion.
+Optional: For advanced / highly specialized use.
+
+Invoked before computing each dynamics step. Common vehicle controllers don't need to override this.
 
 #### DoExternalSuspensionForce
 
@@ -41,18 +42,27 @@ Used for implementing advanced suspension parts such as anti-roll bars.
 #### DoUpdateBlocks
 
 Update the inputs and states for your blocks: engine, brakes, gear, etc.
-Called before each integration step.
+Called before each integration step (FixedUpdate rate).
 
 #### DoUpdateData
 
 Populate the data bus with the actual values of the vehicle.
-Called after each integration step.
+Called after each integration step (FixedUpdate rate).
 
 #### OnUpdate
 
-The Update() equivalent. Adjust visual and per-frame stuff here. Do Update-related things.
+Called at the start of Update. Adjust visual and per-frame stuff here (Update rate). Frames may be
+skipped here.
 
-Do NOT override the standard Update, FixedUpdate, or LateUpdate in the derived classes.
+**Do NOT override the standard Update, FixedUpdate, or LateUpdate in the derived classes.**
+
+#### GetInternalObject
+
+Optional: Allow the vehicle to expose references to internal classes / blocks on demand.
+Each VehicleBase implementation chooses which items to expose.
+
+This is intended for debugging / monitoring / telemetry the internal values that don't make sense
+to expose otherwise.
 
 ## Advanced / Experimental settings
 
@@ -103,16 +113,10 @@ two substeps per driven axle.
 
 Detailed information: [Solver substeps explained](../advanced/misc-topics-explained.md#solver-numeric-integration)
 
-#### Runtime CoM changes
+#### Engine reaction factor
 
-How the changes to the Center Of Mass are handled:
+Advanced: ratio of the reaction torque used at the engine torque calculations.
 
-- Disabled: Center of Mass is configured when enabling the vehicle only. Changing CoM in runtime
-	requires disabling/enabling the `VPVehicleController` component for the new CoM to have effect.
-
-- Editor only: Runtime modifications to the CoM have effect immediately when playing the project
-	within the Unity Editor only. This is useful for configuring the CoM at runtime.
-
-- Editor and Builds (_NOT RECOMMENDED_): Any modification to the CoM has effect immediately in
-	the vehicle. This is not recommended as modifying the CoM triggers a bunch of expensive
-	calculations in the Unity physics engine.
+Reducing this ratio solves the low-frequency numerical resonances among wheels and engine that may
+occur at high-torque situations (i.e. heavy vehicles in slow gears). It should always be 1.0
+unless this effect i
