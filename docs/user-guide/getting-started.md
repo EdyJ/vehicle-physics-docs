@@ -138,7 +138,7 @@ based on the target vehicle and several camera modes available.
 
 ## Source code and internal details
 
-These are the actual folders for the Vehicle Physics Pro Beta project:
+These are the actual folders for the Vehicle Physics Pro project:
 
 ![Vehicle Physics Pro project folders](/img/user-guide/vpp-project-folders.png)
 

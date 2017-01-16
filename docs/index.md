@@ -7,15 +7,14 @@ accurate vehicle physics.
 Quick links: [Feature details](/about/features), [demo downloads](/about/demos), [product walkthrough](/user-guide/getting-started),
 [comparing with other vehicle simulation kits](/about/comparison).
 
-!!! warning "&fa-warning:lg; Project under development: **Beta stage**"
+!!! warning "&fa-warning:lg; Project under development: **Pre-Release stage**"
 
-	**Beta stage** means the project is mature and bug-free enough to be used in actual projects,
-	but some features are yet to be developed and issues might appear. Main code is not expected to
-	have significant changes. Still, everything is provided as is without any warranty.
+	**Pre-release stage** means the project base code is completed and it's safe to use it in
+	production projects. At this stage I'm working on the demo scenes, vehicle examples, 3D and
+	other art, etc. VPP may receive bug fixes and minor feature improvements before the first
+	release.
 
-	- Some components and scripts are yet to be written or completed.
-	- Some features are yet to be implemented. See the [Roadmap](#development-roadmap) below.
-	- **This documentation is being actively written and updated.** Some pages are yet to be
+	**This documentation is being actively written and updated.** Some pages are yet to be
 		completed.
 
 	**Early Access** to Vehicle Physics Pro is now available with the Professional and Enterprise

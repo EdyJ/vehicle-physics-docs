@@ -6,7 +6,7 @@ and Enterprise Licenses. [Compare licenses and pricing](#compare-editions) below
 {: .alert .alert-info }
 
 &fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
-to changes during the Beta stage.
+to changes before the first release.
 {: .alert .alert-warning }
 
 Free edition (To Be Announced)
