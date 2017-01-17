@@ -69,3 +69,23 @@ This is also necessary after checking out any branch or revision in the main rep
 
 If you're using a CI system such as TeamCity, ensure to set the refresh interval to a reasonable
 rate. 1-2 times per day is enough for VPP repositories (12 hours = 720 minutes = 43200 seconds).
+
+### Downloading as ZIP files
+
+Alternatively to you may download the source code as zipped archives. [Log in](http://projects.edy.es/login)
+at your account and open the repository's GitWeb URL:
+
+![VPP Repository Links](/img/advanced/vpp-download-zip-source-repo-links.png){: .clickview .img-small }
+
+Then click the first **zip** link for downloading the source code from the latest snapshot:
+
+![VPP Download ZIP Source](/img/advanced/vpp-download-zip-source.png){: .clickview .img-small }
+
+Do the above procedure for every required repository:
+
+- **Vehicle Physics Pro**: main Unity project.
+- **Common Tools core**: put the files inside the folder "Assets/Core/Common Tools core"
+- **Vehicle Physics core**: put the files inside the folder "Assets/Core/Vehicle Physics core"
+- **Vehicle Physics core assets**: put the files inside the folder "Assets/Core/Vehicle Physics core assets"
+
+Now you can open the project in Unity.
