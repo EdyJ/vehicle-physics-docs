@@ -66,7 +66,7 @@ Vehicle Rig and Setup Service
 ### Licensing terms and conditions
 
 - Free, Standard and Professional licenses may not be licensed by any commercial or non-commercial
-	entity with annual gross revenues, funds (including crowfunding), or total annual budget in
+	entity with annual gross revenues, funds (including crowdfunding), or total annual budget in
 	excess of US\$100,000.
 
 - Enterprise license is suitable for commercial entities with annual gross revenues (based on prior
@@ -92,7 +92,7 @@ Vehicle Rig and Setup Service
 	connections under reasonable limits may result in a license termination.
 
 - All Intellectual Property Rights related to Vehicle Physics Pro, the code, binaries, technologies,
-	algorythms and resources provided with the package or repositories are exclusive property of the
+	algorithms and resources provided with the package or repositories are exclusive property of the
 	author, Angel Garcia Voces.
 
 - Warranty: Any defects in the operation or functionality of VPP that are not part of the product
@@ -102,7 +102,7 @@ Vehicle Rig and Setup Service
 - DISCLAIMER: TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE AUTHOR FURTHER EXPRESSLY
 	DISCLAIMS ALL WARRANTIES TERMS OR CONDITIONS OF ANY KIND, OTHERWISE STATED ABOVE, WHETHER
 	EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO ANY IMPLIED WARRANTIES TERMS AND CONDITIONS
-	OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT,
+	OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT,
 	WITH RESPECT TO VPP. THE USE OF VPP IS AT THE LICENSEE'S OWN DISCRETION AND RISK AND THE
 	LICENSEE IS SOLELY RESPONSIBLE FOR ANY DAMAGE TO LICENSEE'S COMPUTER SYSTEM, OR OTHER DEVICE,
 	OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
