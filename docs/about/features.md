@@ -37,6 +37,7 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - Continuous braking systems (primary and secondary)
 - Retarder brake
 - Articulated multi-part vehicles
+- Liquid cargo simulation with sloshing and viscosity (fuel tanks, tanker trucks)
 - VR ready
 - Force-feedback support for steering wheels, joysticks, etc
 - DirectInput interface with multi-device and force-feedback support
@@ -53,7 +54,7 @@ the ground-up for providing accurate vehicle physics and dynamics on any conditi
 - ECS (Electronic Stability Control) actively applying brakes on oversteer / understeer
 - ASR (Anti-Slip Regulation) for improving traction on open differentials
 - Inertial head motion for the driver's view
-- Steering Aids providing outstanding control even with keyboard / touch devices
+- Steering Aids providing outstanding control with keyboard / touch devices
 
 Planned features:
 
