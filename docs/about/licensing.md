@@ -17,14 +17,16 @@ to changes before the first release.
 Full-featured [Vehicle Controller](/components/vehicle-controller) component	| &fa-check;	| &fa-check;	| &fa-check; | &fa-check;	|
 Example scenes and vehicles		 						| &fa-check; | &fa-check; | &fa-check; | &fa-check; |
 Unlimited simultaneous vehicles on each scene			|	| &fa-check; | &fa-check; | &fa-check;	|
-Standard pre-configured vehicles (APC, sport car...)	|	| &fa-check; | &fa-check; | &fa-check;	|
+Standard vehicles (SUV, sport car...)					|	| &fa-check; | &fa-check; | &fa-check;	|
 Support for [custom vehicles](/advanced/custom-vehicles/) and [components](/advanced/custom-blocks/) 				|	| &fa-check; | &fa-check; | &fa-check;	|
 Mobile touch-based controller							|	| &fa-check; | &fa-check; | &fa-check;	|
 Email support <sup>1</sup>								|	| &fa-check;	| &fa-check;	| &fa-check;	|
-DirectInput controller with force feedback (Windows only)|	|	| &fa-check; | &fa-check;	|
 Full source code										|	|	| &fa-check; | &fa-check;	|
-Access to the GIT repository							|	|	| &fa-check;	| &fa-check;	|
 Exclusive high-quality scenes and vehicles				|	|	| &fa-check; | &fa-check;	|
+DirectInput controller with force feedback (Windows only)|	|	| &fa-check; | &fa-check;	|
+XBox controller support (360 and One) (Windows only)	|	|	| &fa-check; | &fa-check;	|
+Advanced simulation features: multi-body vehicles, dynamic suspension, liquid cargo	|	|	| &fa-check; | &fa-check;	|
+Access to the GIT repository							|	|	| &fa-check;	| &fa-check;	|
 Direct support via Skype <sup>2<sup>					|	| 	| &fa-check;	| &fa-check;	|
 Priority support										|	| 	| 	| &fa-check;	|
 Team support including group chats and videoconferences	|	| 	| 	| &fa-check;	|
@@ -58,7 +60,7 @@ Expert Assistance
 	[Ask me](mailto:edy@vehiclephysics.com) me for a quote. Confidentiality is always a default
 	to me, but I'll sign an NDA upon request.
 
-Vehicle Rig and Setup Service
+Vehicle Rig and Setup
 
 :	Send me your 3D model and the real specifications. I'll rig and configure it for you as closely
 	as possible to the real vehicle. [Ask me](mailto:edy@vehiclephysics.com) me for a quote.
