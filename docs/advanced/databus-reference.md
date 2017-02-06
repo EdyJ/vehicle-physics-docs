@@ -120,6 +120,8 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 | ------------ | ----------- |:------:|:----------:| ------- |
 |DifferentialLock	| Override lock setting at the differential<sup>1</sup>	|	|	| 0 = no override, 1 = force locked differential, 2 = force open differential
 |DrivelineLock		| Override lock setting at the driveline<sup>2</sup>	|	|	| 0 = no override, 1 = force locked driveline, 2 = force unlocked / open driveline
+|AutoShiftOverride	| Auto-shift override setting							|	|	| 0 = no override, 1 = force auto shift, 2 = force manual shift
+|AbsOverride		| ABS override setting									|	|	| 0 = no override, 1 = force ABS enabled, 2 = force ABS disabled
 
 **<sup>1</sup> DifferentialLock** affects the axle differentials only.
 
