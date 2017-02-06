@@ -84,8 +84,9 @@ Vehicle Rig and Setup
 - No part of the source code may be disclosed to a third party, nor included as part of any
 	publicly accessible code repository.
 
-- Standard and Professional licenses require one license per developer seat. **Support by email or
-	Skype will be provided to the individual licensee(s) only.**
+- Standard and Professional licenses require one license per developer seat. All communications and
+	documents (emails, invoices...) shall be directed to the licensee(s) only. **Support by email or
+	Skype shall be provided to the individual licensee(s) only.**
 
 - All licenses are issued to an individual person or company and are nontransferable.
 
