@@ -160,6 +160,12 @@ with Vehicle Physics Pro:
 - [GameReady 3D](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:1634) (Sound files)
 - Eric Adams (Super car, Tuner car)
 
+#### Actual customers
+
+- Huawei
+- Toyota
+- Simumak
+
 #### Testimonials
 
 Some quotes I've received from actual users:
