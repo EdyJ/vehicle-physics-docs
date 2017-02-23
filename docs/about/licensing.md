@@ -29,6 +29,7 @@ Advanced simulation features: multi-body vehicles, dynamic suspension, liquid ca
 Access to the GIT repository							|	|	| &fa-check;	| &fa-check;	|
 Direct support via Skype <sup>2<sup>					|	| 	| &fa-check;	| &fa-check;	|
 Priority support										|	| 	| 	| &fa-check;	|
+Define VPP development priorities							|	| 	| 	| &fa-check;	|
 Team support including group chats and videoconferences	|	| 	| 	| &fa-check;	|
 Access to the project's tracking system (RedMine)		|	| 	| 	| &fa-check;	|
 License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
