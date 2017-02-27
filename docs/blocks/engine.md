@@ -31,9 +31,9 @@ The idle state can be enforced in two ways:
 	keeping the idle rpms.
 
 With **Can Stall** enabled the engine stalls if the rpms fall below the calculated stall rpms. This
-is the point in the graph near the origin where the torque curve is negative. The **Stall Bias**
-settings helps adjusting the stall point. Check out the calculated values in the inspector for the
-exact data.
+is the point in the graph near the origin where the torque curve is negative. The **Stall
+Sensitivity** settings helps adjusting the stall point. Check out the calculated values in the
+inspector for the exact data.
 
 
 #### References

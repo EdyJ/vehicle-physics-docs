@@ -148,8 +148,8 @@ In most cases you shouldn't need to modify the solver's default values.
 
 #### It's difficult to stall
 
-Increasing the **Stall bias** setting makes the engine more sensitive to rpms below idle. Check out
-the calculated stall rpm value at the inspector, below the engine graph.
+Increasing the **Stall Sensitivity** setting makes the engine more sensitive to rpms below idle.
+Check out the calculated stall rpm value at the inspector, below the engine graph.
 
 The **Idle Control** setting defines how the idle rpms are enforced:
 
@@ -168,8 +168,8 @@ Disabling **Can Stall** ensures the engine never stalls.
 
 Assuming Can Stall is enabled, you can:
 
-- Reduce the **Stall Bias** value. Check out the calculated stall rpm value at the inspector, below
-the engine graph.
+- Reduce the **Stall Sensitivity** value. Check out the calculated stall rpm value at the inspector,
+below the engine graph.
 - Set **Idle Control** to **Active**.
 - Change the **Clutch Type** to **Torque Converter** in Clutch Settings. This clutch type doesn't
 require to be actively engaged. Vehicle may stall at rare situations, like going backwards after
