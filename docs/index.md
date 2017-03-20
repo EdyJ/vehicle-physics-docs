@@ -182,6 +182,8 @@ Some quotes I've received from actual users:
 > "I tried some of the demos with a G27 wheel and it feels amazing! It is easily comparable to some
 > of the best racing sims out there. Also I love that you have real telemetry data which is essential
 > for us to use with the simulator."<br>
+> "I'm really enjoying your product. Developing on top of it is a lot of fun. The code is very
+" readable and things just work."<br>
 > Samo Železnik
 
 > "I've played lots of racing games alot and I just played the Ferrari 458 demo with G27 for days and I can say that was much more fun than playing other games."
