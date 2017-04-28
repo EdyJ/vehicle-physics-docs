@@ -40,7 +40,7 @@ produced proportionally to the _contact depth_:
 			originY: 4,
 			});
 
-		canvas.Grid({ stroke: "#BBF", strokeWidth: 0.4 });
+		canvas.Grid({ stroke: "#DDF", strokeWidth: 0.4 });
 
 		canvas.Line([ 9, -0.5, 9, 8 ], { stroke: "slateblue", strokeWidth: 1, strokeDashArray: [5, 5] });
 		canvas.Line([ -0.5, 8, 9, 8 ], { stroke: "slateblue", strokeWidth: 1, strokeDashArray: [5, 5] });
@@ -185,8 +185,8 @@ transfers occur among the suspensions. The springs should be strong enough for s
 of the vehicle preventing the suspension to reach its limits on all situations, including weight
 transfers.
 
-When the formulas for the Harmonic Oscillator (above) are applied to vehicles where suspension is
-not moving they yield a surprising result:
+When the formulas for the Harmonic Oscillator (above) are applied to vehicles in those situations
+they yield a surprising result:
 
 $${\begin{cases}
 naturalFrequency = \sqrt{\frac{stiffness}{sprungMass}}\\
@@ -208,5 +208,5 @@ controlled suspensions which dynamically modify the suspension properties in ord
 preserves the original properties of the suspension when accelerating, braking, cornering, or
 carrying variable cargo or passengers.
 
-Vehicle Physics Pro includes the component **VPDynamicSuspension** (currently experimental) that
-modifies the suspension properties in order to preserve a given _contact depth_.
+Vehicle Physics Pro includes the component **VPDynamicSuspension** that modifies the suspension
+properties in order to preserve a given _contact depth_.
