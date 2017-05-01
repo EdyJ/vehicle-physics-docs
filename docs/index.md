@@ -162,13 +162,15 @@ with Vehicle Physics Pro:
 
 #### Actual customers
 
-- Huawei
 - Toyota
-- Simumak
+- Simumak / Everis
+- Spinifex
+
+- Huawei
+- Volkswagen
+- UPS
 
 #### Testimonials
-
-Some quotes I've received from actual users:
 
 > "As a result of spending few days with VPP, I'm really amazed about how much efforts inverted in
 > it. It's just not enough to be a good programmer to provide such a project, I can see a life time
@@ -187,7 +189,7 @@ Some quotes I've received from actual users:
 > Samo Železnik
 
 > "I've played lots of racing games alot and I just played the Ferrari 458 demo with G27 for days and I can say that was much more fun than playing other games."
-> "[...] Overall those were great times when I played it and as I mentioned before, truly more interesting than many simulator games like BeamNG."<br>
+> "[...] truly more interesting than many simulator games like BeamNG."<br>
 > Danoosh Peechgah ([source](http://forum.unity3d.com/threads/vehicle-physics-pro-beta-feedback-welcome.381241/#post-2574368))
 
 [Demos are here](about/demos) if you want to try them too.
