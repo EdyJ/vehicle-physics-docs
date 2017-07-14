@@ -4,11 +4,7 @@
 However **Early Access** to Vehicle Physics Pro is now available with the Professional
 and Enterprise Licenses. Please contact me directly at [edy@vehiclephysics.com](mailto:edy@vehiclephysics.com){: .alert-link }
 for more information.
-{: .alert .alert-info }
-
-&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
-to changes before the first release.
-{: .alert .alert-warning }
+{: .alert .alert-success }
 
 ### Compare editions
 
@@ -35,7 +31,7 @@ Access to the project's tracking system (RedMine)		|	| 	| 	| &fa-check;	|
 License covers unlimited developers (single studio)		|	| 	|	| &fa-check;	|
 May be licensed by companies with annual revenue / funds / budget in excess of US\$100,000	|	| 	|	| &fa-check;	|
 10 days of Expert Assistance <sup>3</sup>				|	|	|	| &fa-check;	|
-License Price <sup>4</sup>								| Free | $190 | $480 | $4800 |
+License Price <sup>4</sup>								| _to be announced_ | _to be announced_ | $480 | $4800 |
 
 > Notes:
 >
@@ -51,6 +47,10 @@ License Price <sup>4</sup>								| Free | $190 | $480 | $4800 |
 >	at your schedule.
 >
 > <sup>4</sup> Prices do not include PayPal fees or taxes (if applicable).
+
+&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
+to changes during the development stage.
+{: .alert .alert-warning }
 
 ### Additional services
 
@@ -85,9 +85,9 @@ Vehicle Rig and Setup
 - No part of the source code may be disclosed to a third party, nor included as part of any
 	publicly accessible code repository.
 
-- Standard and Professional licenses require one license per developer seat. All communications and
-	documents (emails, invoices...) shall be directed to the licensee(s) only. **Support by email or
-	Skype shall be provided to the individual licensee(s) only.**
+- The Professional license is bound to an individual developer (the licensee). All documents and
+	communications (emails, invoices...) shall be directed to the licensee only. **Support by email
+	or Skype shall be provided to the individual licensee only.**
 
 - All licenses are issued to an individual person or company and are nontransferable.
 
@@ -110,3 +110,7 @@ Vehicle Rig and Setup
 	WITH RESPECT TO VPP. THE USE OF VPP IS AT THE LICENSEE'S OWN DISCRETION AND RISK AND THE
 	LICENSEE IS SOLELY RESPONSIBLE FOR ANY DAMAGE TO LICENSEE'S COMPUTER SYSTEM, OR OTHER DEVICE,
 	OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
+
+&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
+to changes during the development stage.
+{: .alert .alert-warning }
