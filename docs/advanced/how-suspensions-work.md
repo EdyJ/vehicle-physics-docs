@@ -208,5 +208,13 @@ controlled suspensions which dynamically modify the suspension properties in ord
 preserves the original properties of the suspension when accelerating, braking, cornering, or
 carrying variable cargo or passengers.
 
-Vehicle Physics Pro includes the component **VPDynamicSuspension** that modifies the suspension
-properties in order to preserve a given _contact depth_.
+Vehicle Physics Pro includes a variety of suspension components allowing different ways of
+configuring the suspension:
+
+- **VPDynamicSuspension:** modifies the suspension properties in order to preserve a given
+	_contact depth_.
+- **VPAntiRollBar:** links the suspension of the wheels in the same axle in order to control the
+	lateral roll in curves.
+- **VPSuspensionModifer:** Modifies the suspension properties along the suspension travel. This
+	allows simulating [leaf spring suspensions](https://en.wikipedia.org/wiki/Leaf_spring), for
+	example.

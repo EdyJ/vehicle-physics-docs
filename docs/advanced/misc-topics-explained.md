@@ -255,7 +255,7 @@ engine friction (red).
 
 ![Vehicle Physics Pro Engine Curves](/img/advanced/vpp-engine-curves.png)
 
-[Dyno curves](http://www.rototest.com/performance-graphs/introduction.php?DN=23) show only the final
+[Dyno curves](http://rototest-research.eu/index.php?DN=29) show only the final
 torque (green) and power (blue) curves. They won't show the engine friction. The shape of the torque
 curve and is relationship with the power curve gives us clues on how the engine friction should be
 configured. When done correctly, the resulting engine will fit the behavior of the real engine very

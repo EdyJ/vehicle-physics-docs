@@ -38,6 +38,7 @@ inspector for the exact data.
 
 #### References
 
+[Dyno curves](http://rototest-research.eu/index.php?DN=29)<br>
 [Brake Specific Fuel Consumption (BSFC)](https://en.wikipedia.org/wiki/Brake_specific_fuel_consumption)<br>
 [Fuel consumption analysis of motor vehicle](http://www.posterus.sk/?p=14506)<br>
 [Fuel densities](https://en.wikipedia.org/wiki/Diesel_fuel#Fuel_value_and_price)<br>
