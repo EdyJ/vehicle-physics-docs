@@ -182,14 +182,6 @@ For example, games like **Grand Theft Auto (GTA)** or **Just Cause** best fit wi
 are an accessory within the game. On the other hand, racing simulators in the style of **Gran Turismo**
 or **Project Cars** best fit with VPP, as they simulate real-world vehicles in the a realistic way.
 
-#### I find the vehicle in EVP more stable
-
-EVP already implements driving aids (TC, ABS, ESP) while these are not available in VPP yet.
-
-Also, EVP uses a flat friction model which is very forgiving. A similar model is also available
-in VPP (the "Constant" friction curve). You might find the vehicle in VPP more stable using this
-model.
-
 #### Which product is better for performance on mobile low-mid end?
 
 Both products have roughly the same performance at their default settings.

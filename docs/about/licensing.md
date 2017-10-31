@@ -8,6 +8,10 @@ for more information.
 
 ### Compare editions
 
+&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
+to changes during the development stage.
+{: .alert .alert-warning }
+
 | Features | <center>Free</center> | <center>Standard</center> | <center>Professional</center> | <center>Enterprise</center> |
 |----------|:----:|:--------:|:------------:|:----:|
 Full-featured [Vehicle Controller](/components/vehicle-controller) component	| &fa-check;	| &fa-check;	| &fa-check; | &fa-check;	|
@@ -24,6 +28,7 @@ XBox controller support (360 and One) (Windows only)	|	|	| &fa-check; | &fa-chec
 Advanced simulation features: multi-body vehicles, dynamic suspension, liquid cargo	|	|	| &fa-check; | &fa-check;	|
 Direct support via Skype <sup>2<sup>					|	| 	| &fa-check;	| &fa-check;	|
 Source code updates (via GIT repository)				|	|	| 1 year | 2 years |
+Specialized vehicle support: caterpillar, mining, hydraulic actuators	|	|	|	| &fa-check;	|
 Priority support										|	| 	| 	| &fa-check;	|
 Define VPP development priorities							|	| 	| 	| &fa-check;	|
 Team support including group chats and videoconferences	|	| 	| 	| &fa-check;	|

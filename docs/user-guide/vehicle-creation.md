@@ -6,7 +6,7 @@
 	these components (from the Component menu):
 
 	- Component > Vehicle Physics > Vehicle Controller _(a RigidBody is added automatically)_
-	- Component > Vehicle Physics > Vehicle Input
+	- Component > Vehicle Physics > Standard Input
 
 2.	Create a child GameObject (<kbd>ctrl-alt-N</kbd>). Name it **WheelColliders**.
 

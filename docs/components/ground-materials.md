@@ -18,9 +18,9 @@ physic material. If no match is found then the **Fallback** material is returned
 Note that _**None**_ is also valid as physic material for identifying a ground material. This would
 match the colliders without physic material assigned.
 
-!!! warning "&fa-warning; Loading scenes and objects from bundles"
+!!! warning "&fa-warning; Loading scenes and objects from asset bundles"
 
-	[Unity bundles](http://docs.unity3d.com/Manual/AssetBundlesIntro.html) store copies of the
+	[Unity asset bundles](http://docs.unity3d.com/Manual/AssetBundlesIntro.html) store copies of the
 	physic materials. When the bundle loaded, the physic materials are loaded as new _instances_,
 	not references to the original. Thus, a GroundMaterialManager existing in the scene wouldn't
 	recognize those materials.
@@ -30,8 +30,10 @@ match the colliders without physic material assigned.
 	- Include the VPGroundMaterialManager object in the bundle, so references to the physic
 		materials are preserved.
 	- Explicitly fix the references to the physic materials in the colliders after loading the
-		bundle. You can compare by name and assign a correct reference so the physic materials
+		bundle. You may compare by name and assign a correct reference so the physic materials
 		can be found in the GroundMaterialManager list.
+	- Write your own ground material manager derived from GroundMaterialManagerBase. Assign
+		the ground materials based on the physic material's name instead of the reference.
 
 ### GroundMaterial
 
