@@ -68,6 +68,11 @@ Clutch Axis
 :	Axis for the handbrake. It can be a regular button defined at Input settings (sensitivity
 	and gravity will apply).
 
+	&fa-warning:lg; Default value for clutch axis is **Fire1**. This assignment should be
+	changed or removed on mobile/touch devices. Otherwise, the clutch will be engaged whenever the
+	screen is touched.
+	{: .alert .alert-warning }
+
 Gear Shift Button
 :	Button for gear shifting. It must have positive and negative bindings defined at the Input
 	settings (_Edit > Project Settings > Input_, see pic below).
@@ -102,16 +107,19 @@ reverse throttle, brake, handbrake, steer, clutch, ignition.
 Useful for debug or fine-testing purposes in the Editor. Can also be used for modifying the input
 from scripting without having to deactivate the VPStandardInput component.
 
-### VPLogitechInput
+### VPDeviceInput
 
-Supports the Logitech steering wheel controllers, including force feedback where available.
+Supports joysticks and steering wheel controllers via DirectInput, including force feedback where available.
 
-&fa-warning; Unity crashes if this component gets enabled while the steering wheel is **not**
-connected! Blame the buggy LogitechSteeringWheelEnginesWrapper.dll. Proper steering wheel support
-will be available soon for VPP.
-{: .alert .alert-warning }
+![VP Device Input](/img/components/vpp-device-input-inspector.png){: .img-small .clickview }
 
-![VP Logitech Input](/img/components/vpp-logitech-input-inspector.png){: .img-small .clickview }
+##### Device
+
+Selected Device
+:	Ordinal number of the device. 0 is the first device, 1 is the second device, etc.
+
+Device Model
+:	Applies internal mappings for the selected device model.
 
 ##### Input
 
@@ -119,47 +127,70 @@ Digital Handbrake Rate
 :	How fast the handbrake gets applied when pressing the handbrake button.
 
 Steering Non Linear Bias
-:	Applies non-linearity to the steering. 0.5 is linear, above is faster response, below is slower
-	response.
+:	Applies non-linearity to the steering. 0.5 is linear, above is faster response,
+	below is slower response.
 
-Gear Shift Up / Down
-:	Controls for gear shifting
+Axis Count For Clutch
+:	The device is considered to have a Clutch pedal when the number of reported axis is this value
+	or greater.
 
-Automatic Gear Next / Prev
-:	Controls for moving the gear lever in Automatic transmission mode
+Fallback To Standard Input
+:	If no device is detected the VPStandardInput component (if present) will be enabled instead.
 
-Ignition Key On / Off
-:	Press and hold the ON control for starting the engine
+##### Effective Pedal Ranges
 
-Handbrake
-:	Applies the handbrake at the specified _Digital Handbrake Rate_
+Limit the ranges for Throttle, Brake and Clutch. For example, setting Brake to 0.00 - 0.50 means
+that the full brake pressure will be applied when reaching half of the pedal travel.
 
-Brake Lock Toggle
-:	Lock / unlock all brakes.
+##### Startup
+
+Ignition Key Position
+:	Where to set the ignition key on start.
+
+Automatic Gear Position
+:	The position of the automatic gear lever on start.
+
+Manual Gear Position
+:	The position of the manual gear lever on start.
+
+Handbrake Locked
+:	Starts in _handbrake lock_ mode, which means that both handbrake and service brake are
+	applied. Releasing handbrake will release the service brakes as well.
 
 ##### Force Feedback
 
 Logical Tire Width
 :	Tire width used for the force feedback calculations. More width causes more intense reactions.
 
-Weight Intensity
-:	How much the weight affects the self-alignment torque.
-
 Force Intensity
 :	Overall multiplier for the force feedback.
+
+Weight Intensity
+:	How much the weight affects the self-alignment torque.
 
 Damper Coefficient
 :	Applies resistance to the movement of the steering wheel.
 
-Debug Log
-:	Show debug messages at the console.
+Non Linear Bias
+:	Applies non-linearity to the force feedback. 0.5 is linear, above is stronger response,
+	below is weaker response.
+
+##### G27 Specific
+
+Mappings of the different actions to controls in the Logitech G27 wheel.
+
+##### Test & Debug
+
+Force Feedback GUI
+:	Show a GUI for adjusting the force feedback settings in runtime. Note: changes here are not
+	saved, but may be used for configuring the force feedback later.
+
+: Enable Test Effects
+	Play the scene and move the Test Effect controls for experimenting with the different force
+	feedback effects. The vehicle doesn't apply force feedback.
 
 Debug Gizmos
 :	Show the gizmos used for the force feedback at the Scene view in runtime.
 
-##### Test Force Feedback Effects
-
-Play the scene, check _Enable Test Effects_ and move these controls for experimenting with the
-different force feedback effects. When test effects are enabled the vehicle doesn't apply force
-feedback directly.
-
+Debug Info
+:	Show device information in runtime.
