@@ -22,8 +22,9 @@ The HTML documentation is built out of the md files using [MkDocs](http://www.mk
 
 1. Ensure Python and pip are installed
 2. Install MkDocs: `pip install mkdocs`
-3. Install the extensions [markdown-icons](https://github.com/MadLittleMods/markdown-icons) and
-	[mathjax](https://github.com/mayoff/python-markdown-mathjax) in the markdown extensions folder
+3. Install the Bootswatch themes: `pip install mkdocs-bootswatch`
+3. Install the Markdown extensions [markdown-icons](https://github.com/MadLittleMods/markdown-icons)
+	and [mathjax](https://github.com/mayoff/python-markdown-mathjax).
 4. Clone the repository from GitHub
 5. Open a console at the repository folder, they type `mkdocs serve`
 6. Navigate to `http://127.0.0.1:8000` in your browser
