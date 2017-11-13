@@ -17,8 +17,7 @@ across different vehicle physics projects.
 The submodules are accessed via ssh, so it's highly recommend to set up the ssh public keys in your
 account. Otherwise, you would need to modify the file .submodules for http access.
 
-1.	Generate the ssh keys. Follow the steps 1 to 3 at the [GitHub's step-by-step guide for
-generating ssh keys](https://help.github.com/articles/generating-ssh-keys/).
+1.	Generate the ssh keys. Follow the steps 1 to 3 at GitHub's guide ["Generating a new SSH key"](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 
 2.	Add the ssh **public key** to [your account](http://projects.edy.es/users/my_profile#public_keys).
 

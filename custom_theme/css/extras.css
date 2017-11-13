@@ -136,3 +136,23 @@ p.indent
 	{
 	margin-left: 26px;
 	}
+
+
+/* Formatted descriptions */
+
+dd
+	{
+	margin-left: 40px;
+	margin-bottom: 10px;
+	}
+
+dt
+	{
+	margin-left: 20px;
+	}
+
+
+h1, h2, h3
+	{
+	margin-bottom: 15px;
+	}
