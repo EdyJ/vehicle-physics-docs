@@ -52,8 +52,8 @@ Spring rate ($N/m$)
 :	Springs sustain the weight of the vehicle. The inspector shows the maximum force and weight the
 	spring can support right before hitting the limit.
 
-	&fa-thumbs-o-up; As rule of thumb, configure the **spring rate** so each suspension can support up to
-	twice of the evenly distributed weight.
+	&fa-thumbs-o-up; As rule of thumb, configure the **spring rate** so each suspension can support
+	up to twice the vehicle's evenly distributed weight.
 	{: .alert .alert-info }
 
 Damper rate ($N/ms^{-1}$)
