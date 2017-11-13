@@ -6,11 +6,12 @@ repo_url: https://github.com/EdyJ/vehicle-physics-docs
 strict: true
 google_analytics: [ 'UA-58719504-1', 'auto' ]
 
-theme_dir: 'custom_theme'
-theme: cerulean
+theme:
+    name: cerulean
+    custom_dir: 'custom_theme'
 
 extra_css: [ 'css/tables.css', 'css/admonitions.css', 'css/fixes.css', 'css/extras.css', 'css/clickview.css' ]
-extra_javascript: [ 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML', 'js/mathjaxhelper.js', 'js/fabric.custom.min.js', 'js/texturecanvas.js', 'js/imagegallery.js', 'js/clickview.js' ]
+extra_javascript: [ 'js/mathjaxhelper.js', 'js/fabric.custom.min.js', 'js/texturecanvas.js', 'js/imagegallery.js', 'js/clickview.js' ]
 
 markdown_extensions:
   - extra
