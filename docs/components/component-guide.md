@@ -1,6 +1,8 @@
 # Component Guide
 
-### Namespace VehiclePhysics
+### VehiclePhysics
+
+Main namespace for Vehicle Physics Pro components and scripts.
 
 #### Essential
 
@@ -126,43 +128,76 @@ VPDamage
 VPHeadMotion
 :	Implements inertial movement for the first-person view.
 
-VPSpeedGauge
+VPSpeedGauge -> VPNonLinearSpeedGauge
+:	A speed gauge with different speed scales.
+
 VPTireEffects
+:	Triggers the tire marks and particle effects based on the actual ground material and the state of the tire.
+
 VPVisualEffects
+:	Provides steering wheel rotation, lights and other visual effects.
 
 #### Advanced / Experimental
 
 VPSelfDrive
+:	Building brick for AI systems.
+
 VPSettingsSwitcher
+:	Helper for storing and applying different configuration sets.
+
 VPTwoWheelController
+:	Controller for two-wheeled vehicles such as bikes and motorcycles.
 
-
-### Namespace VehiclePhysics.Examples
+### VehiclePhysics.Examples
 
 SimpleVehicleController
-SimpleVehicleControllerInput
-SimpleTrackController
-SimpleTrackControllerInput
+:	A really simple custom vehicle built with VPP blocks.
 
-### Namespace VehiclePhysics.Timing
+SimpleVehicleControllerInput
+:	Control script for SimpleVehicleController.
+
+SimpleTrackController
+:	A simple track/caterpillar based vehicle controller.
+
+SimpleTrackControllerInput
+:	Control script for SimpleTrackController.
+
+### VehiclePhysics.Timing
 
 LapTimer
-LapSectorMark
-LapInvalidator
-Transponder
+:	Measures lap and sector times.
 
-### Namespace VehiclePhysics.Utility
+LapSectorMark
+:	Mark for sectors and start/finish line.
+
+LapInvalidator
+:	Detects shortcuts and speed cheating.
+
+Transponder
+:	Detection point in the vehicle.
+
+### VehiclePhysics.Utility
 
 AutoBrakeZone
+:	Applies brakes in the vehicle so it leaves the zone at a given speed.
+
 BlowShadow
+:	Controls a Projector component for drawing a vehicle's shadow.
+
 ConfigureCenterOfMass
+:	Set the center of mass in generic rigidbodies (not vehicles). Examples: cargo, attachments,
+	scene objects...
+
 MovableObject
+:	Applies a simple cyclic movement to an object. Useful for dynamics tests.
+
 SpeedLimitZone
+:	Limits throttle so the vehicle doesn't surpass the given speed.
 
 FollowHeading -> Advanced / Experimental
 VariableCargo -> Dynamics
 
-### Namespace VehiclePhysics.UI
+### VehiclePhysics.UI
 
 BasicDashboard
 DrivingAidsPanel
@@ -172,7 +207,7 @@ SetableSlider
 TimerDisplay
 UIHandler
 
-### Namespace VehiclePhysics.Specialized
+### VehiclePhysics.Specialized
 
 DumperControl
 DumperControlInput
@@ -183,7 +218,9 @@ TrackVehicleControllerInput
 WheelLoaderControl
 WheelLoaderControlInput
 
-### Namespace EdyCommonTools
+### EdyCommonTools
+
+Generic tools and utilities for Unity
 
 #### Application
 
