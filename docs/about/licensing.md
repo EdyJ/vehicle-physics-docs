@@ -29,16 +29,17 @@ Advanced simulation features: multi-body vehicles, dynamic suspension, liquid ca
 Specialized vehicle support: caterpillar, mining, hydraulic actuators									|	|	| &fa-check; |
 Direct support via Skype including group chats and videoconferences										|	|	| &fa-check; |
 License covers unlimited developers (single studio)														| 	|	| &fa-check; |
-May be licensed by companies with annual revenue / funds / budget in excess of US\$200,000				|	| 	| &fa-check; |
-**License Price** <sup>2</sup>															| _to be announced_ | $390 | $4800 |
-Product updates included																			|	|	1 year | 1 year |
-Renewal for 1 year of updates																		|	|		$90	| $960 |
+May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
+**License Price** <sup>2</sup>															| _to be announced_ | €390 | €4950 |
+Product updates included																			| -	|	1 year | 1 year |
+Renewal for 1 additional year of updates															| -	|		€90	| €990 |
 
-> Notes:
->
-> <sup>1</sup> Email support in the Professional license is limited to an individual person per license.
->
-> <sup>2</sup> Prices do not include PayPal fees or taxes (if applicable).
+#### Notes
+
+- <sup>1</sup> Email support in the Professional license is limited to an individual person per license.
+- <sup>2</sup> Prices do not include PayPal fees or taxes (if applicable).
+- Customers in European Union should supply VAT number. Without valid VAT number, EU customers will be charged VAT.
+- All products delivered electronically. No physical items shipped.
 
 &fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
 to changes during the development stage.
@@ -62,12 +63,12 @@ Vehicle Rig and Setup
 
 - Free, Standard and Professional licenses may not be licensed by any commercial or non-commercial
 	entity with annual gross revenues, funds (including crowdfunding), or total annual budget in
-	excess of US\$200,000.
+	excess of €200,000.
 
 - Enterprise license is suitable for commercial entities with annual gross revenues (based on prior
-	fiscal year) of US\$200,000 or more, or that have raised funds (including but not limited to
-	crowdfunding) in excess of US\$200,000 during the most recently completed fiscal year, or
-	non-commercial entities with a total annual budget in excess of US\$200,000 for the entire
+	fiscal year) of €200,000 or more, or that have raised funds (including but not limited to
+	crowdfunding) in excess of €200,000 during the most recently completed fiscal year, or
+	non-commercial entities with a total annual budget in excess of €200,000 for the entire
 	non-commercial entity.
 
 - Vehicle Physics Pro may be used as part of **end-user, closed source products only**. No
