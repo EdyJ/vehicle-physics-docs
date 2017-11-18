@@ -8,19 +8,3 @@ the various templates. The custom theme should only need to define a main.html
 which `{% extends "base.html" %}` and defines various blocks which will replace
 the blocks defined in base.html and its included child templates.
 #}
-
-      {%- block scripts %}
-        <script>var base_url = '{{ base_url }}';</script>
-        <script data-main="{{ base_url }}/mkdocs/js/search.js" src="{{ base_url }}/mkdocs/js/require.js"></script>
-        <script src="{{ base_url }}/js/base.js"></script>
-
-		<!-- EDY: Explicit MathJax here because a bug in MkDocs
-			https://github.com/mkdocs/mkdocs/issues/1346
-			-->
-
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
-
-        {%- for path in extra_javascript %}
-        <script src="{{ path }}"></script>
-        {%- endfor %}
-      {%- endblock %}
