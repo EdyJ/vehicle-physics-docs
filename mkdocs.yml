@@ -35,6 +35,7 @@ pages:
   - Configuring vehicles: user-guide/vehicle-setup.md
   - 3D models and environment: user-guide/3d-models.md
 - Components:
+  - Component Guide: components/component-guide.md
   - Vehicle Controller: components/vehicle-controller.md
   - Wheel Collider: components/wheel-collider.md
   - Input: components/vehicle-input.md
