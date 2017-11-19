@@ -1,7 +1,7 @@
 # Licensing Vehicle Physics Pro
 
 &fa-info-circle:lg; Vehicle Physics Pro is at the final stage of development and it has not been released yet.
-However **Early Access** to Vehicle Physics Pro is now available with the Professional
+However **Early Access** to Vehicle Physics Pro is available now with the Professional
 and Enterprise Licenses. Please contact me directly at [edy@vehiclephysics.com](mailto:edy@vehiclephysics.com){: .alert-link }
 for more information.
 {: .alert .alert-success }
@@ -16,30 +16,34 @@ to changes during the development stage.
 |----------|:----:|:--------:|:------------:|
 Full-featured [Vehicle Controller](/components/vehicle-controller) component			| &fa-check; | &fa-check; | &fa-check; |
 Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-check; |
-Unlimited simultaneous vehicles on each scene													|	| &fa-check; | &fa-check; |
+Simultaneous vehicles on each scene														|		1	| unlimited | unlimited |
 High-quality locations and vehicles (SUV, sport car...)											|	| &fa-check; | &fa-check; |
 Support [custom vehicles](/advanced/custom-vehicles/) and [components](/advanced/custom-blocks/) |	| &fa-check; | &fa-check; |
 Mobile touch-based controller																	|	| &fa-check; | &fa-check; |
 DirectInput controller with force feedback (Windows only)										|	| &fa-check; | &fa-check; |
 XBox controller support (360 and One) (Windows only)											|	| &fa-check; | &fa-check; |
-Email support <sup>1</sup>																		|	| &fa-check; | &fa-check; |
+Email support																					|	| &fa-check; | &fa-check; |
 Full source code included																				|	|	| &fa-check; |
-Source code updates via GIT repository																	|	|	| &fa-check; |
 Advanced simulation features: multi-body vehicles, dynamic suspension, liquid cargo						|	|	| &fa-check; |
 Specialized vehicle support: caterpillar, mining, hydraulic actuators									|	|	| &fa-check; |
-Direct support via Skype including group chats and videoconferences										|	|	| &fa-check; |
+Skype support including group chat and videoconference													|	|	| &fa-check; |
 License covers unlimited developers (single studio)														| 	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
-**License Price** <sup>2</sup>															| _to be announced_ | €390 | €4950 |
-Product updates included																			| -	|	1 year | 1 year |
-Renewal for 1 additional year of updates															| -	|		€90	| €990 |
+**License Price**																	| _to be released_ | **€390** | **€4950** |
+Support & updates via GIT repository																	| -	| 1 year | 1 year |
+Renewal for 1 additional year of support & updates														| -	|	€90 | €990 |
 
 #### Notes
 
-- <sup>1</sup> Email support in the Professional license is limited to an individual person per license.
-- <sup>2</sup> Prices do not include PayPal fees or taxes (if applicable).
+- Email support in the Professional license is limited to an individual person per license.
 - Customers in European Union should supply VAT number. Without valid VAT number, EU customers will be charged VAT.
 - All products delivered electronically. No physical items shipped.
+
+##### Subscription
+
+- Professional and Enterprise licenses include a yearly subscription for support and updates.
+- Customers may opt-out any time and keep the most recent version at that time.
+- After opting-out, there's a grace period of 4 months to rejoin paying the subscription fee only.
 
 &fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
 to changes during the development stage.
