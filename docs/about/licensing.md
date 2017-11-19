@@ -18,14 +18,14 @@ Full-featured [Vehicle Controller](/components/vehicle-controller) component			|
 Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-check; |
 Simultaneous vehicles on each scene														|		1	| unlimited | unlimited |
 High-quality locations and vehicles (SUV, sport car...)											|	| &fa-check; | &fa-check; |
-Support [custom vehicles](/advanced/custom-vehicles/) and [components](/advanced/custom-blocks/) |	| &fa-check; | &fa-check; |
+Supports [Custom vehicles](/advanced/custom-vehicles/) and [components](/advanced/custom-blocks/) |	| &fa-check; | &fa-check; |
 Mobile touch-based controller																	|	| &fa-check; | &fa-check; |
 DirectInput controller with force feedback (Windows only)										|	| &fa-check; | &fa-check; |
 XBox controller support (360 and One) (Windows only)											|	| &fa-check; | &fa-check; |
 Email support																					|	| &fa-check; | &fa-check; |
 Full source code included																				|	|	| &fa-check; |
 Advanced simulation features: multi-body vehicles, dynamic suspension, liquid cargo						|	|	| &fa-check; |
-Specialized vehicle support: caterpillar, mining, hydraulic actuators									|	|	| &fa-check; |
+Specialized vehicle support: caterpillar, mining, excavators, hydraulic actuators						|	|	| &fa-check; |
 Skype support including group chat and videoconference													|	|	| &fa-check; |
 License covers unlimited developers (single studio)														| 	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
@@ -35,15 +35,15 @@ Renewal for 1 additional year of support & updates														| -	|	€90 | �
 
 #### Notes
 
-- Email support in the Professional license is limited to an individual person per license.
 - Customers in European Union should supply VAT number. Without valid VAT number, EU customers will be charged VAT.
 - All products delivered electronically. No physical items shipped.
 
 ##### Subscription
 
 - Professional and Enterprise licenses include a yearly subscription for support and updates.
+- First year of support and updates is included in the license price.
 - Customers may opt-out any time and keep the most recent version at that time.
-- After opting-out, there's a grace period of 4 months to rejoin paying the subscription fee only.
+- After opting-out, there's a grace period of 90 days to rejoin paying the subscription fee only.
 
 &fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
 to changes during the development stage.
@@ -65,9 +65,8 @@ Vehicle Rig and Setup
 
 ### Licensing terms and conditions
 
-- Free, Standard and Professional licenses may not be licensed by any commercial or non-commercial
-	entity with annual gross revenues, funds (including crowdfunding), or total annual budget in
-	excess of €200,000.
+- Professional license may not be licensed by any commercial or non-commercial entity with annual
+	gross revenues, funds (including crowdfunding), or total annual budget in excess of €200,000.
 
 - Enterprise license is suitable for commercial entities with annual gross revenues (based on prior
 	fiscal year) of €200,000 or more, or that have raised funds (including but not limited to
@@ -82,13 +81,10 @@ Vehicle Rig and Setup
 - No part of the source code or binaries may be disclosed to a third party, nor included as part
 	of any publicly accessible code repository.
 
-- The Professional license is bound to an individual developer (the licensee). All documents and
-	communications (emails, invoices...) shall be directed to the licensee only. **Support by email
-	shall be provided to the individual licensee only.**
+- All licenses are issued to an individual person or company and are nontransferable in any way,
+	including but not limited to renting, subcontracting, leasing, and lending.
 
-- All licenses are issued to an individual person or company and are nontransferable.
-
-- Connections to the GIT repository are logged per-account. The account may get blocked if an
+- Connections to the GIT repositories are logged per-account. The account may get blocked if an
 	excess of connections for a given license is detected. Failure to keep the repository
 	connections under reasonable limits may result in a license termination.
 
