@@ -1,6 +1,10 @@
 # Component Guide
 
+[TOC]
+
 ### VehiclePhysics
+
+`namespace VehiclePhysics`
 
 Main namespace for Vehicle Physics Pro components and scripts.
 
@@ -150,6 +154,8 @@ VPTwoWheelController
 
 ### VehiclePhysics.Examples
 
+`namespace VehiclePhysics.Examples`
+
 SimpleVehicleController
 :	A really simple custom vehicle built with VPP blocks.
 
@@ -164,6 +170,8 @@ SimpleTrackControllerInput
 
 ### VehiclePhysics.Timing
 
+`namespace VehiclePhysics.Timing`
+
 LapTimer
 :	Measures lap and sector times.
 
@@ -177,6 +185,8 @@ Transponder
 :	Detection point in the vehicle.
 
 ### VehiclePhysics.Utility
+
+`namespace VehiclePhysics.Utility`
 
 AutoBrakeZone
 :	Applies brakes in the vehicle so it leaves the zone at a given speed.
@@ -194,58 +204,64 @@ MovableObject
 SpeedLimitZone
 :	Limits throttle so the vehicle doesn't surpass the given speed.
 
-FollowHeading -> Advanced / Experimental
-VariableCargo -> Dynamics
+- FollowHeading -> Advanced / Experimental
+- VariableCargo -> Dynamics
 
 ### VehiclePhysics.UI
 
-BasicDashboard
-DrivingAidsPanel
-ManettinoDial
-ReplayPanel
-SetableSlider
-TimerDisplay
-UIHandler
+`namespace VehiclePhysics.UI`
+
+- BasicDashboard
+- DrivingAidsPanel
+- ManettinoDial
+- ReplayPanel
+- SetableSlider
+- TimerDisplay
+- UIHandler
 
 ### VehiclePhysics.Specialized
 
-DumperControl
-DumperControlInput
-ExcavatorControl
-ExcavatorControlInput
-TrackVehicleController
-TrackVehicleControllerInput
-WheelLoaderControl
-WheelLoaderControlInput
+`namespace VehiclePhysics.Specialized`
+
+- DumperControl
+- DumperControlInput
+- ExcavatorControl
+- ExcavatorControlInput
+- TrackVehicleController
+- TrackVehicleControllerInput
+- WheelLoaderControl
+- WheelLoaderControlInput
 
 ### EdyCommonTools
+
+`namespace EdyCommontools`
 
 Generic tools and utilities for Unity
 
 #### Application
 
-ApplicationCursor
-ApplicationQuit
+- ApplicationCursor
+- ApplicationQuit
 
 #### Camera
 
-CameraFovController
-CameraFovInput
-CameraShift
+- CameraFovController
+- CameraFovInput
+- CameraShift
 
 #### Scene
 
-SceneReload
-ScreenBug
-ScreenNotes
-TimeScale
+- SceneReload
+- ScreenBug
+- ScreenNotes
+- TimeScale
 
 #### Transform
 
-AttachToTarget
-BindLocalRotation
-PositionController
-PositionInput
-RotationController
-RotationInput
-ScaleController
+- AttachToTarget
+- BindLocalRotation
+- PositionController
+- PositionInput
+- RotationController
+- RotationInput
+- ScaleController
