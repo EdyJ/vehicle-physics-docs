@@ -132,7 +132,7 @@ VPDamage
 VPHeadMotion
 :	Implements inertial movement for the first-person view.
 
-VPSpeedGauge -> VPNonLinearSpeedGauge
+VPSegmentedSpeedGauge
 :	A speed gauge with different speed scales.
 
 VPTireEffects
@@ -198,14 +198,17 @@ ConfigureCenterOfMass
 :	Set the center of mass in generic rigidbodies (not vehicles). Examples: cargo, attachments,
 	scene objects...
 
+FollowHeading
+:	Controls the steering via VPStandardInput component keeping vehicle following a direction.
+
 MovableObject
 :	Applies a simple cyclic movement to an object. Useful for dynamics tests.
 
 SpeedLimitZone
 :	Limits throttle so the vehicle doesn't surpass the given speed.
 
-- FollowHeading -> Advanced / Experimental
-- VariableCargo -> Dynamics
+VariableCargo
+:	Configures mass and center of mass among two values and positions.
 
 ### VehiclePhysics.UI
 

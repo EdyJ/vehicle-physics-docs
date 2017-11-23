@@ -1,21 +1,41 @@
 # GIT Repository Setup
 
-The Professional and Enterprise licenses include access to the GIT repository.
+Professional and Enterprise licenses include updates via GIT repositories. You may use your
+credentials for browsing the repositories here:
 
-As Professional or Enterprise licensee you should have received credentials for accessing the
-repositories. You can log-in at [projects.edy.es/login](http://projects.edy.es/login).
+[http://projects.edy.es/login](http://projects.edy.es/login)
 
-- **Vehicle Physics Pro** is the main project.
-- **Common Tools core** is a submodule with common tools and scripts.
-- **Vehicle Physics core** is the submodule that actually contains the latest vehicle physics
-scripts only.
-- **Vehicle Physics core assets** is a submodule with common objects, materials and textures used
-across different vehicle physics projects.
+##### Professional Edition
 
-### Configuring the SSH public keys
+- **Vehicle Physics Pro - Professional**: complete Unity project with the SDK and examples. Includes
+	a set of simple assets for basic prototyping and tests (locations, test vehicle, prefabs, audio
+	files, materials, effects, etc).
+- **Vehicle Physics Pro SDK**: submodule containing the SDK files only. You may include this
+	repository in your own projects for keeping them updated with the latest VPP SDK.
 
-The submodules are accessed via ssh, so it's highly recommend to set up the ssh public keys in your
-account. Otherwise, you would need to modify the file .submodules for http access.
+##### Enterprise Edition
+
+- **Vehicle Physics Pro**: complete Unity project with source code, examples, assets, development
+	resources, etc.
+- **Common Tools Core**: submodule with common tools and utility scripts.
+- **Vehicle Physics Core**: submodule with the vehicle physics simulation scripts and components.
+- **Vehicle Physics Sample Assets**: a set of simple assets for basic prototyping and tests:
+	locations, test vehicle, prefabs, audio files, materials, effects, etc.
+- **Vehicle Physics Specialized Assets**: scripts and assets for implementing specialized vehicles
+	such as excavators, loaders, caterpillars, etc.
+
+You may include the repositories **Common Tools Core**, **Vehicle Physics Core** and optionally
+**Vehicle Physics Sample Assets** and **Vehicle Physics Specialized Assets** in your Unity projects
+for keeping them updated with the latest VPP files.
+
+!!! Info "Importing the Blender 3D models"
+	Some 3D objects in the repositories are in Blender format (.blend). These models require Blender
+	installed to be imported properly in Unity. [Blender site](http://blender.org)
+
+### 1. Configure the SSH public key
+
+The submodules are accessed via ssh, so it's highly recommend to set up the ssh public key in your
+account. Otherwise, you would need to modify the .submodules file for http access.
 
 1.	Generate the ssh keys. Follow the steps 1 to 3 at GitHub's guide ["Generating a new SSH key"](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 
@@ -34,29 +54,38 @@ account. Otherwise, you would need to modify the file .submodules for http acces
 
 	Your connection via SSH is now correct. Proceed to the next step, cloning the VPP project.
 
-### Cloning the VPP project
+### 2. Clone the VPP project
+
+The URLs for the main Unity projects are:
+
+- **Professional Edition**:<br>
+	`ssh://git@projects.edy.es/edy/vehicle-physics-pro-professional.git`
+
+- **Enterprise Edition**:<br>
+	`ssh://git@projects.edy.es/edy/vehicle-physics-pro.git`
+
+You can find all the URLs for the repositories and submodules at the [projects site](http://projects.edy.es).
 
 1.	Open Git Bash.
 
 2.	_cd_ to a folder of your choice, then enter:
 
 		:::text
-		$ git clone --depth=1 ssh://git@projects.edy.es/edy/vehicle-physics-pro.git
+		$ git clone --depth=1 <url-to-repository>
+
+	The repository will be created in a with the name of the repository.
 
 3. 	Fetch and update the submodules:
 
 		:::text
-		$ cd vehicle-physics-pro
+		$ cd <just-created-repository-path>
 		$ git submodule update --init --recursive
 
-3.	Now you can open the project at the folder **vehicle-physics-pro** with Unity 5.
+3.	Now you can open the project with Unity.
 
-!!! Info "Importing the Blender 3D models"
-	Some 3D objects in the repository are in Blender format (.blend). These models require Blender
-	installed to be imported properly. I recommend [Blender 2.76b](http://download.blender.org/release/Blender2.76/),
-	as some recent versions seem to fail on importing .blend files in Unity.
+### 3. Maintenance & updates
 
-### Upgrading to the latest revision
+##### Updating to the latest revision
 
 This is also necessary after checking out any branch or revision in the main repository.
 
@@ -64,14 +93,14 @@ This is also necessary after checking out any branch or revision in the main rep
 	$ git pull --recurse-submodules
 	$ git submodule update --init --recursive
 
-### Continuous Integration systems
+##### Continuous Integration systems
 
 If you're using a CI system such as TeamCity, ensure to set the refresh interval to a reasonable
 rate. 1-2 times per day is enough for VPP repositories (12 hours = 720 minutes = 43200 seconds).
 
-### Downloading as ZIP files
+##### Downloading as ZIP files
 
-Alternatively to you may download the source code as zipped archives. [Log in](http://projects.edy.es/login)
+Alternatively to you may download the repositories as zipped archives. [Log in](http://projects.edy.es/login)
 at your account and open the repository's GitWeb URL:
 
 ![VPP Repository Links](/img/advanced/vpp-download-zip-source-repo-links.png){: .clickview .img-small }
@@ -80,11 +109,4 @@ Then click the first **zip** link for downloading the source code from the lates
 
 ![VPP Download ZIP Source](/img/advanced/vpp-download-zip-source.png){: .clickview .img-small }
 
-Do the above procedure for every required repository:
-
-- **Vehicle Physics Pro**: main Unity project.
-- **Common Tools core**: put the files inside the folder "Assets/Core/Common Tools core"
-- **Vehicle Physics core**: put the files inside the folder "Assets/Core/Vehicle Physics core"
-- **Vehicle Physics core assets**: put the files inside the folder "Assets/Core/Vehicle Physics core assets"
-
-Now you can open the project in Unity.
+Repeat for every required repository.
