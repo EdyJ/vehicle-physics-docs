@@ -29,7 +29,7 @@ Specialized vehicle support: caterpillar, mining, excavators, hydraulic actuator
 Skype support including group chat and videoconference													|	|	| &fa-check; |
 License covers unlimited developers (single studio)														| 	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
-**License Price**																	| _to be released_ | **€390** | **€4950** |
+**License Price**																	| _to be released_ | **€390** | **€4900** |
 Support & updates via GIT repository																	| -	| 1 year | 1 year |
 Renewal for 1 additional year of support & updates														| -	|	€90 | €990 |
 
