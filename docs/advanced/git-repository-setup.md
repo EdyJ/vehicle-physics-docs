@@ -7,26 +7,18 @@ credentials for browsing the repositories here:
 
 ##### Professional Edition
 
-- **Vehicle Physics Pro - Professional**: complete Unity project with the SDK and examples. Includes
-	a set of simple assets for basic prototyping and tests (locations, test vehicle, prefabs, audio
-	files, materials, effects, etc).
-- **Vehicle Physics Pro SDK**: submodule containing the SDK files only. You may include this
-	repository in your own projects for keeping them updated with the latest VPP SDK.
+- **Vehicle Physics Pro - Professional**: complete Unity project with the SDK and examples.
+- **Vehicle Physics Pro SDK**: submodule containing the SDK files only.
+- **Vehicle Physics Sample Assets**: set of assets and resources for prototyping and tests.
 
 ##### Enterprise Edition
 
-- **Vehicle Physics Pro**: complete Unity project with source code, examples, assets, development
-	resources, etc.
+- **Vehicle Physics Pro - Enterprise**: complete Unity project with source code, examples,
+	development	resources, etc.
 - **Common Tools Core**: submodule with common tools and utility scripts.
 - **Vehicle Physics Core**: submodule with the vehicle physics simulation scripts and components.
-- **Vehicle Physics Sample Assets**: a set of simple assets for basic prototyping and tests:
-	locations, test vehicle, prefabs, audio files, materials, effects, etc.
-- **Vehicle Physics Specialized Assets**: scripts and assets for implementing specialized vehicles
-	such as excavators, loaders, caterpillars, etc.
-
-You may include the repositories **Common Tools Core**, **Vehicle Physics Core** and optionally
-**Vehicle Physics Sample Assets** and **Vehicle Physics Specialized Assets** in your Unity projects
-for keeping them updated with the latest VPP files.
+- **Vehicle Physics Sample Assets**: set of assets and resources for prototyping and tests.
+- **Vehicle Physics Specialized Assets**: specialized vehicle support (excavators, loaders, caterpillars, etc).
 
 !!! Info "Importing the Blender 3D models"
 	Some 3D objects in the repositories are in Blender format (.blend). These models require Blender
@@ -58,10 +50,10 @@ account. Otherwise, you would need to modify the .submodules file for http acces
 
 The URLs for the main Unity projects are:
 
-- **Professional Edition**:<br>
+- **Professional Edition**<br>
 	`ssh://git@projects.edy.es/edy/vehicle-physics-pro-professional.git`
 
-- **Enterprise Edition**:<br>
+- **Enterprise Edition**<br>
 	`ssh://git@projects.edy.es/edy/vehicle-physics-pro.git`
 
 You can find all the URLs for the repositories and submodules at the [projects site](http://projects.edy.es).

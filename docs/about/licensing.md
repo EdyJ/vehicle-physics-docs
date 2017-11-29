@@ -1,15 +1,14 @@
 # Licensing Vehicle Physics Pro
 
-&fa-info-circle:lg; Vehicle Physics Pro is at the final stage of development and it has not been released yet.
-However **Early Access** to Vehicle Physics Pro is available now with the Professional
-and Enterprise Licenses. Please contact me directly at [edy@vehiclephysics.com](mailto:edy@vehiclephysics.com){: .alert-link }
-for more information.
+&fa-info-circle:lg; Vehicle Physics Pro is at the final stage of development. **Early Access** is available now with the Professional
+and Enterprise Licenses. Feel free to contact me at [edy@vehiclephysics.com](mailto:edy@vehiclephysics.com){: .alert-link }
+if you have any questions.
 {: .alert .alert-success }
 
 ### Compare editions
 
 &fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
-to changes during the development stage.
+to changes during the Early Access stage.
 {: .alert .alert-warning }
 
 | Features | <center>Free</center> | <center>Professional</center> | <center>Enterprise</center> |
@@ -29,14 +28,17 @@ Specialized vehicle support: caterpillar, mining, excavators, hydraulic actuator
 Skype support including group chat and videoconference													|	|	| &fa-check; |
 License covers unlimited developers (single studio)														| 	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
-**License Price**																	| _to be released_ | **€390** | **€4900** |
+**License Price**																			| **Free** | **€390** | **€4900** |
 Support & updates via GIT repository																	| -	| 1 year | 1 year |
 Renewal for 1 additional year of support & updates														| -	|	€90 | €990 |
+**Purchase license (Early Access)**		| _to be released_ | [**Buy now**](https://order.shareit.com/cart/new?vendorid=200274786&PRODUCT[300799895]=1&languageid=1&nolselection=1&pc=gfnhu&currency=EUR&currencies=all) | [**Buy now**](https://order.shareit.com/cart/new?vendorid=200274786&PRODUCT[300799900]=1&languageid=1&nolselection=1&pc=80znr&currency=EUR&currencies=all) |
 
 #### Notes
 
 - Customers in European Union should supply VAT number. Without valid VAT number, EU customers will be charged VAT.
 - All products delivered electronically. No physical items shipped.
+- **Early Access:** the simulation kit is completed and ready to be used in production titles.
+	Example scenes, tutorials, and additional resources are being worked on.
 
 ##### Subscription
 
@@ -45,8 +47,11 @@ Renewal for 1 additional year of support & updates														| -	|	€90 | �
 - Customers may opt-out any time and keep the most recent version at that time.
 - After opting-out, there's a grace period of 90 days to rejoin paying the subscription fee only.
 
+The subscription model allows continuous development, feature updates, and product support in the
+long term.
+
 &fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
-to changes during the development stage.
+to changes during the Early Access stage.
 {: .alert .alert-warning }
 
 ### Consulting services
@@ -106,5 +111,5 @@ Vehicle Rig and Setup
 	OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
 
 &fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
-to changes during the development stage.
+to changes during the Early Access stage.
 {: .alert .alert-warning }
