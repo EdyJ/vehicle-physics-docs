@@ -98,16 +98,6 @@ public class SimpleVehicleController : VehicleBase
 		wheel.mass = wheelCol.mass;
 		}
 
-	// Steering is done separately for allowing smooth movement of the wheels
-	// even in slow motion.
-
-	protected override void DoSteer ()
-		{
-		float angle = steerInput * maxSteerAngle;
-		wheelState[0].steerAngle = angle;
-		wheelState[1].steerAngle = angle;
-		}
-
 	// Set up the state values at the blocks, tires, etc.
 
 	protected override void DoUpdateBlocks ()
@@ -117,6 +107,12 @@ public class SimpleVehicleController : VehicleBase
 		m_directDrive.motorInput = driveInput;
 		m_directDrive.maxMotorTorque = maxDriveTorque;
 		m_directDrive.maxRpm = maxDriveRpm;
+
+		// Apply steering
+
+		float angle = steerInput * maxSteerAngle;
+		wheelState[0].steerAngle = angle;
+		wheelState[1].steerAngle = angle;
 
 		// Set the brakes at the Wheel blocks
 
@@ -132,18 +128,24 @@ public class SimpleVehicleController : VehicleBase
 **SimpleVehicleControllerInput.cs**
 ```
 using UnityEngine;
+using VehiclePhysics;
 
-[RequireComponent(typeof(SimpleVehicleController))]
-public class SimpleVehicleControllerInput : MonoBehaviour
+public class SimpleVehicleControllerInput : VehicleBehaviour
 	{
 	SimpleVehicleController m_vehicle;
 
-	void OnEnable ()
+	public override void OnEnableVehicle ()
 		{
-		m_vehicle = GetComponent<SimpleVehicleController>();
+		// This component requires a SimpleVehicleController explicitly
+		m_vehicle = vehicle.GetComponent<SimpleVehicleController>();
+		if (m_vehicle == null)
+			{
+			DebugLogWarning("A vehicle based on SimpleVehicleController is required. Component disabled.");
+			enabled = false;
+			}
 		}
 
-	void Update ()
+	public override void UpdateVehicle ()
 		{
 		float steerInput = Mathf.Clamp(Input.GetAxis("Horizontal"), -1.0f, 1.0f);
 
@@ -162,5 +164,4 @@ public class SimpleVehicleControllerInput : MonoBehaviour
 		m_vehicle.brakeInput = brakeInput;
 		}
 	}
-
 ```
