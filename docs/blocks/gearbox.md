@@ -50,12 +50,6 @@ vehicle because the value might be overwritten by other components. See below.
 
 ### Auto-shift / manual-shift selection
 
-The behavior of the automated gear shifting is different between Automatic and Manual transmissions:
-
-- Automatic Transmission: auto-shift is enabled in Drive [D] mode. Gears must be shifted
-	manually in the Manual [M] mode.
-- Manual Transmission: auto-shift is enabled with the _Auto Shift_ flag in the Gearbox settings.
-
 !!! info "&fa-info-circle; Determining the transmission type"
 
 	If you want to configure the shift mode externally to the vehicle (i.e. via UI or hotkey) then
@@ -63,6 +57,11 @@ The behavior of the automated gear shifting is different between Automatic and M
 	transmission is intended to allow users to select among Drive [D] (automatic) or Manual [M]
 	themselves.
 
+The behavior of the automated gear shifting is different between Automatic and Manual transmissions:
+
+- Automatic Transmission: auto-shift is enabled in Drive [D] mode. Gears must be shifted
+	manually in the Manual [M] mode.
+- Manual Transmission: auto-shift is enabled with the _Auto Shift_ flag in the Gearbox settings.
 
 Example: Add-on component that modifies the Gearbox settings in runtime in any transmission type.
 
