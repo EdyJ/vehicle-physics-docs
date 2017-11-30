@@ -55,7 +55,7 @@ vehicle because the value might be overwritten by other components. See below.
 	If you want to configure the shift mode externally to the vehicle (i.e. via UI or hotkey) then
 	you should probably use a **Manual transmission** and modify the auto-shift flag. The Automatic
 	transmission is intended to allow users to select among Drive [D] (automatic) or Manual [M]
-	themselves.
+	themselves using the vehicle input.
 
 The behavior of the automated gear shifting is different between Automatic and Manual transmissions:
 
