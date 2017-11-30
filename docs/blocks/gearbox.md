@@ -46,7 +46,7 @@ for preventing gear shifting during replays, as the replay data already includes
 engaged gear.
 
 AutoShiftOverride is not a reliable way of implementing an auto-shift / manual-shift selector in the
-vehicle because the value might be overwritten by other components. See below
+vehicle because the value might be overwritten by other components. See below.
 
 ### Auto-shift / manual-shift selection
 
@@ -59,9 +59,9 @@ The behavior of the automated gear shifting is different between Automatic and M
 !!! info "&fa-info-circle; Determining the transmission type"
 
 	If you want to configure the shift mode externally to the vehicle (i.e. via UI or hotkey) then
-	you should probably use a **Manual transmission** and modify the auto-shift flag. Otherwise, in
-	an Automatic transmission users would select the automatic / manual mode themselves by selecting
-	Drive [D] or Manual [M].
+	you should probably use a **Manual transmission** and modify the auto-shift flag. The Automatic
+	transmission is intended to allow users to select among Drive [D] (automatic) or Manual [M]
+	themselves.
 
 
 Example: Add-on component that modifies the Gearbox settings in runtime in any transmission type.
