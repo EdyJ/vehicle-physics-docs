@@ -35,8 +35,10 @@ Renewal for 1 additional year of support & updates														| -	|	â‚¬90 | â‚
 
 #### Notes
 
-- Customers in European Union should supply VAT number. Without valid VAT number, EU customers will be charged VAT.
-- All products delivered electronically. No physical items shipped.
+- Once the payment is completed you'll receive the credentials and instructions for accessing the
+	VPP repositories by email.
+- Customers in European Union should supply VAT number. Without valid VAT number, EU customers will
+	be charged VAT.
 - **Early Access:** the simulation kit is completed and ready to be used in production titles.
 	Example scenes, tutorials, and additional resources are being worked on.
 
