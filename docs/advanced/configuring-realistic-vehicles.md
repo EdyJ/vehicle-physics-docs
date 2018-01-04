@@ -7,9 +7,9 @@ Some values are not widely available, but they may be estimated out of other spe
 data.
 
 Useful resources:
-:	[The Blueprints](http://www.the-blueprints.com/cardata) (dimmensions, performance) <br>
+:	[Cars-Data](http://www.cars-data.com) (weights, sizes, transmission...) <br>
 	[RRI Powertrain Performance Graphs](http://rototest-research.eu/index.php?DN=29&List=C-L)
-	(engine dyno curves, weights)
+	(engine dyno curves)
 
 ### Mass and center of mass (CoM)
 
