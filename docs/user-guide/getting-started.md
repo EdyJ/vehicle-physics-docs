@@ -7,7 +7,7 @@ Open the project in Unity 3D ([clone the GIT repository](../advanced/git-reposit
 necessary). Let's play some example scenes so you could get started quickly. Load and play the
 scene **Playground 1k - JPickup - Keyboard**:
 
-![Project > Scenes > Playground Scenes > Playground 1k - JPickup - Keyboard](/img/user-guide/vpp-sample-scenes.png){: .img-small .clickview }
+![Assets > Development > Playground 1k - JPickup - Keyboard](/img/user-guide/vpp-sample-scenes.png){: .img-small .clickview }
 
 <!--
 &fa-thumbs-up:lg; If you haven't setup the Unity project yet, you can still [download and play the demos](){: .alert-link }
