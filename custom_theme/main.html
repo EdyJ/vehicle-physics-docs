@@ -8,3 +8,18 @@ the various templates. The custom theme should only need to define a main.html
 which `{% extends "base.html" %}` and defines various blocks which will replace
 the blocks defined in base.html and its included child templates.
 #}
+
+{#
+EDY:
+Extend the content block for including the component used by ClickView.js
+for making pictures clickable
+#}
+
+{%- block content %}
+	{{ super() }}
+	<div id="clickview_modal">
+		<span id="clickview_close">×</span>
+		<img id="clickview_content">
+		<div id="clickview_caption"></div>
+	</div>
+{%- endblock %}
