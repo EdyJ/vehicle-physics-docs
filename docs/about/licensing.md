@@ -21,16 +21,15 @@ Supports [Custom vehicles](/advanced/custom-vehicles/) and [components](/advance
 Mobile touch-based controller																	|	| &fa-check; | &fa-check; |
 DirectInput controller with force feedback (Windows only)										|	| &fa-check; | &fa-check; |
 XBox controller support (360 and One) (Windows only)											|	| &fa-check; | &fa-check; |
-Email support																					|	| &fa-check; | &fa-check; |
+Email support																					|	| individual | team |
 Full source code included																				|	|	| &fa-check; |
 Advanced simulation features: multi-body vehicles, dynamic suspension, liquid cargo						|	|	| &fa-check; |
 Specialized vehicle support: caterpillar, mining, excavators, hydraulic actuators						|	|	| &fa-check; |
-Skype support including group chat and videoconference													|	|	| &fa-check; |
+Skype support 																							|	|	| &fa-check; |
 License covers unlimited developers (single studio)														| 	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
-**License Price**																			| **Free** | **€390** | **€4900** |
-Support & updates via GIT repository																	| -	| 1 year | 1 year |
-Renewal for 1 additional year of support & updates														| -	|	€90 | €990 |
+**License Price**																				| **Free** | **€390** | **€4900** |
+Support & updates via GIT repository<br>_First year included in the license price_				| -	| €90<br>/year | €990<br>/year |
 **Purchase license (Early Access)**		| _to be released_ | [**Buy now**](https://order.shareit.com/cart/new?vendorid=200274786&PRODUCT[300799895]=1&languageid=1&nolselection=1&pc=gfnhu&currency=EUR&currencies=all) | [**Buy now**](https://order.shareit.com/cart/new?vendorid=200274786&PRODUCT[300799900]=1&languageid=1&nolselection=1&pc=80znr&currency=EUR&currencies=all) |
 
 #### Notes
