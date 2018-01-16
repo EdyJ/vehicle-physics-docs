@@ -10,14 +10,16 @@ credentials for browsing the repositories here:
 
 ##### Professional Edition
 
-- **Vehicle Physics Pro - Professional**: complete Unity project with the SDK and examples.
+- **Vehicle Physics Pro - Professional**: Unity project with the SDK and examples. Requires the
+	submodules below to be located in the corresponding folders under `Assets/Vehicle Physics Pro`.
 - **Vehicle Physics Pro SDK**: submodule with the VPP SDK files only.
 - **Vehicle Physics Sample Assets**: submodule with a set of assets and resources for prototyping and tests.
 
 ##### Enterprise Edition
 
-- **Vehicle Physics Pro - Enterprise**: complete Unity project with source code, examples,
-	development	resources, etc.
+- **Vehicle Physics Pro - Enterprise**: Unity project with source code, examples, development
+	resources, etc. Requires the submodules below to be located in the corresponding folders under
+	`Assets/Core`.
 - **Common Tools Core**: submodule with common tools and utility scripts.
 - **Vehicle Physics Core**: submodule with the vehicle physics simulation scripts and components.
 - **Vehicle Physics Sample Assets**: submodule with a set of assets and resources for prototyping and tests.
@@ -102,7 +104,8 @@ Then click the first **zip** link for downloading the source code from the lates
 
 ![VPP Download ZIP Source](/img/advanced/vpp-download-zip-source.png){: .clickview .img-small }
 
-Repeat for every required repository.
+The VPP Unity projects require the submodules to be downloaded and placed in the corresponding
+folders under `Assets/Vehicle Physics Pro` (Professional) or `Assets/Core` (Enterprise).
 
 # Migrating projects between source code and SDK
 
