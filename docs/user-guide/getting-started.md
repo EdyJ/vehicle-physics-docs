@@ -1,11 +1,8 @@
 # Getting started
 
-**Welcome to Vehicle Physics Pro!** The most complete, accurate and realistic vehicle physics kit
-available for Unity 3D.
-
-Open the project in Unity 3D ([clone the GIT repository](../advanced/git-repository-setup) if
-necessary). Let's play some example scenes so you could get started quickly. Load and play the
-scene **Playground 1k - JPickup - Keyboard**:
+Open the example project in Unity 3D (you should have [set it up](setting-up-vpp.md) already). Let's
+play and walk through some example scenes so you could get started quickly. Load and play the scene
+**Playground 1k - JPickup - Keyboard**:
 
 ![Assets > Development > Playground 1k - JPickup - Keyboard](/img/user-guide/vpp-sample-scenes.png){: .img-small .clickview }
 
