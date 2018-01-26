@@ -25,20 +25,20 @@ that installs GIT, tools and a handy UI.
 
 This is strongly recommended. Once configured, access to VPP repositories is pretty straightforward.
 
-1.	Open Git Bash. If you've installed Git Extensions, just right-click a folder of your choice and
-	select "Git Bash".
+1.	Open Git Bash. If you've installed [Git Extensions](https://gitextensions.github.io), just
+	right-click any folder and select "Git Bash".
 
-1.	Generate the ssh keys. Paste the text below, substituting in your email address:
+2.	Generate the ssh keys. Paste the text below, substituting in your email address:
 
 		:::text
 		$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
-2.	When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the
+3.	When you're prompted to "Enter a file in which to save the key", press Enter. This accepts the
 	default file location.
 
-3.	Upload the ssh **public key** (`id_rsa.pub`) to [your account](http://projects.edy.es/users/my_profile#public_keys).
+4.	Upload the ssh **public key** (`id_rsa.pub`) to [your account in projects.edy.es](http://projects.edy.es/users/my_profile#public_keys).
 
-4.	Test your connection. Enter:
+5.	Test your connection. Enter:
 
 		:::text
 		$ ssh -T git@projects.edy.es
@@ -53,8 +53,9 @@ This is strongly recommended. Once configured, access to VPP repositories is pre
 
 #### 2. Clone the VPP example project
 
-1.	Open Git Bash. If you've installed Git Extensions, just right-click a folder of your choice and
-	select "Git Bash".
+1.	Open Git Bash and _cd_ to a folder where you want the project to be cloned into. If you've
+	installed [Git Extensions](https://gitextensions.github.io), just right-click the folder of
+	your choice and select "Git Bash".
 
 2.	Clone the repository and submodules. Type or paste each line in Git Bash pressing Enter after
 	each one:
@@ -75,16 +76,17 @@ This is strongly recommended. Once configured, access to VPP repositories is pre
 
 	The repository will be created in a folder with the name of the repository.
 
-3.	Now you can open the project with Unity 3D. Proceed to [Getting Started](getting-started.md) for
+3.	Now you can open the project in Unity 3D. Proceed to [Getting Started](getting-started.md) for
 	a quick walkthrough.
 
 ## Downloading as ZIP files
 
-1.	Download and unzip the Unity 3D project. Click the link below, then click the top ZIP link:
+1.	Download and unzip the Unity 3D project. Click the link below, then click the top *ZIP* link:
 
 	**[Professional Edition](http://projects.edy.es/git/edy/vehicle-physics-pro-professional.git/shortlog/refs/heads/master?js=1)**<br>**[Enterprise Edition](http://projects.edy.es/git/edy/vehicle-physics-pro.git/shortlog/refs/heads/master?js=1)**
 
-2.	Repeat for each submodule. Unzip each submodule to the specified location in the project:
+2.	Repeat the process for each submodule below. Unzip each one to the specified location in the
+	project:
 
 	Professional Edition submodules | Folder
 	--------------------------------|---------
@@ -98,7 +100,8 @@ This is strongly recommended. Once configured, access to VPP repositories is pre
 	[Vehicle Physics Sample Assets](http://projects.edy.es/git/edy/vehicle-physics-sample-assets.git/shortlog/refs/heads/master?js=1) (`master` branch) | `Assets/Core/Vehicle Physics Sample Assets`
 	[Vehicle&nbsp;Physics&nbsp;Specialized&nbsp;Assets](http://projects.edy.es/git/edy/vehicle-physics-specialized-assets.git/shortlog/refs/heads/master?js=1) | `Assets/Core/Vehicle Physics Specialized Assets`
 
-3.	Now you can open the project with Unity 3D. Proceed to [Getting Started](getting-started.md) for a quick walkthrough.
+3.	Now you can open the project in Unity 3D. Proceed to [Getting Started](getting-started.md) for
+	a quick walkthrough.
 
 ## Using VPP in existing projects
 
@@ -137,6 +140,3 @@ Repository      |  URLs  | Description
 [Vehicle Physics Core](http://projects.edy.es/trac/edy_vehicle-physics-core) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-core.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/vehicle-physics-core.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-core.git/shortlog/refs/heads/master?js=1) | Submodule with the vehicle physics simulation scripts and components.<br>This repo together with Common Tools Core is everything needed to run VPP in existing projects.
 [Vehicle Physics Sample Assets](http://projects.edy.es/trac/edy_vehicle-physics-sample-assets) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-sample-assets.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/vehicle-physics-sample-assets.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-sample-assets.git/shortlog/refs/heads/master?js=1) | Submodule with a set of assets and resources for prototyping and tests.
 [Vehicle&nbsp;Physics&nbsp;Specialized&nbsp;Assets](http://projects.edy.es/trac/edy_vehicle-physics-specialized-assets) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-specialized-assets.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/vehicle-physics-specialized-assets.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-specialized-assets.git/shortlog/refs/heads/master?js=1) | Submodule with specialized vehicle support (excavators, loaders, caterpillars, etc).
-
-
-
