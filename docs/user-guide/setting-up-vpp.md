@@ -1,12 +1,13 @@
 
 # Setting Up Vehicle Physics Pro
 
-Welcome to Vehicle Physics Pro (VPP), the most complete, accurate and realistic vehicle physics kit
+Welcome to Vehicle Physics Pro (VPP)! The most complete, accurate and realistic vehicle physics kit
 available for Unity 3D.
 
 VPP is delivered as an example Unity 3D project which uses a set of submodules. The example Unity 3D
 project may be used as sandbox for testing and learning VPP, or even as a startup template. The
-submodules may also be included in existing projects directly.
+submodules may also be included in existing projects directly. See [Repository Reference](#repository-reference)
+below for details and dependencies.
 
 All projects and submodules are hosted at [projects.edy.es](http://projects.edy.es) as **GIT
 repositories**. The credentials for accessing the repositories are sent to you after purchasing the
@@ -53,7 +54,7 @@ This is strongly recommended. Once configured, access to VPP repositories is pre
 
 #### 2. Clone the VPP example project
 
-1.	Open Git Bash and _cd_ to a folder where you want the project to be cloned into. If you've
+1.	Open Git Bash, then _cd_ to a folder where you want the project to be cloned into. If you've
 	installed [Git Extensions](https://gitextensions.github.io), just right-click the folder of
 	your choice and select "Git Bash".
 
@@ -81,9 +82,10 @@ This is strongly recommended. Once configured, access to VPP repositories is pre
 
 ## Downloading as ZIP files
 
-1.	Download and unzip the Unity 3D project. Click the link below, then click the top *ZIP* link:
+1.	Download and unzip the Unity 3D project for your VPP edition. Open the project log below, then
+	click the topmost **zip** link for the latest zip snapshot:
 
-	**[Professional Edition](http://projects.edy.es/git/edy/vehicle-physics-pro-professional.git/shortlog/refs/heads/master?js=1)**<br>**[Enterprise Edition](http://projects.edy.es/git/edy/vehicle-physics-pro.git/shortlog/refs/heads/master?js=1)**
+	**[Professional Edition](http://projects.edy.es/git/edy/vehicle-physics-pro-professional.git/shortlog/refs/heads/master?js=1)** &nbsp; | &nbsp; **[Enterprise Edition](http://projects.edy.es/git/edy/vehicle-physics-pro.git/shortlog/refs/heads/master?js=1)**
 
 2.	Repeat the process for each submodule below. Unzip each one to the specified location in the
 	project:
@@ -108,7 +110,8 @@ This is strongly recommended. Once configured, access to VPP repositories is pre
 #### Professional Edition
 
 The repository **Vehicle Physics Pro SDK** contains everything needed to run VPP vehicles.
-Additionally, you may include _Vehicle Physics Sample Assets_ for quick prototyping.
+Additionally, you may include _Vehicle Physics Sample Assets_ (`master-sdk` branch) for quick
+prototyping.
 
 #### Enterprise Edition
 
