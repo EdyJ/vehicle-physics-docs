@@ -268,9 +268,9 @@ a maximum torque, nor a point where the torque will be suddenly cut. The rpm ran
 charts is typically cropped. Real tests won't likely push the engine until the torque actually
 results zero, as the rev limiter will be cutting down the injection first. So you must figure out
 how that curve torque would result if the engine would be pushed beyond the rev limiter. Max Rpm is
-the rpms where the raw torque has decreased so it gets compensated by the engine friction and the
-final torque results zero. Only friction torque can be produced beyond Max Rpms. This settings is
-deduced based on the shape of the real spec chart.
+the rpms where the raw torque has decreased so much that is entirely canceled by the engine friction
+and the final torque results zero. Only friction torque can be produced beyond Max Rpms. This
+settings is deduced based on the shape of the real spec chart.
 
 The peak point (white circle in the graph) represent the point where the raw combustion provides the
 maximum torque. Raw combustion torque is the dotted yellow line in the chart. The raw combustion

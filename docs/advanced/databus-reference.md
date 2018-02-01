@@ -108,6 +108,7 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 |GearboxMode	| Actual transmission mode					| gear mode		|		| 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_
 |GearboxShifting| Is the gearbox in the middle of a gear shift operation?	|		|		| 0 = no, 1 = yes
 |RetarderTorque	| Brake torque injected in the driveline by the retarder	| Nm	| 1000	| 2000000 = 2000 Nm
+|TransmissionRpm| Rpms at the output of the gearbox			| rpm	| 1000	| 100000 = 100 rpm
 |AbsEngaged		| Is the ABS being engaged in any wheel?				|		|		| 0 = no, non-zero = yes
 |TcsEngaged		| Is the TCS limiting the engine throttle?				| 		|		| 0 = no, non-zero = yes
 |EscEngaged		| Is the ESC applying brakes for keeping stability?		|		|		| 0 = no, non-zero = yes
