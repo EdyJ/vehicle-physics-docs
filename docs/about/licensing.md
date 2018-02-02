@@ -34,10 +34,10 @@ Support & updates via GIT repository<br>_First year included in the license pric
 
 #### Notes
 
-- Once the payment is completed you'll receive the credentials and instructions for accessing the
-	VPP repositories by email.
 - Customers in European Union should supply VAT number. Without valid VAT number, EU customers will
 	be charged VAT.
+- Once the payment is completed you'll receive the credentials and instructions for accessing the
+	VPP repositories by email. Please allow 24/48 hours for your order to be processed.
 - **Early Access:** the simulation kit is completed and ready to be used in production titles.
 	Example scenes, tutorials, and additional resources are being worked on.
 
