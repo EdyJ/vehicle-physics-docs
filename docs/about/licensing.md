@@ -55,21 +55,29 @@ long term.
 to changes during the Early Access stage.
 {: .alert .alert-warning }
 
-### Consulting services
+### Custom development services
 
 Expert Assistance
 
 :	Let me take a close look at your project and I'll propose solutions to your specific issues
 	with vehicles. I can also configure your vehicles to match your project's specifications.
-	[Ask me](mailto:edy@vehiclephysics.com) me for a quote. Confidentiality is always a default
-	to me, but I'll sign an NDA upon request.
+	I'll sign an NDA upon request.
 
 Vehicle Rig and Setup
 
 :	Send me your 3D model and the real specifications. I'll rig and configure it for you as closely
-	as possible to the real vehicle. [Ask me](mailto:edy@vehiclephysics.com) me for a quote.
+	as possible to the real vehicle.
 
-### Licensing terms and conditions
+##### Rates
+
+- 100 €/hour, with a limit of 8 hours per week per customer.
+- Traveling to the customer's location: 900 €/day + expenses.
+
+Need more information? [Get in touch](mailto:edy@vehiclephysics.com)!
+
+### Terms & Conditions
+
+#### Licensing
 
 - Professional license may not be licensed by any commercial or non-commercial entity with annual
 	gross revenues, funds (including crowdfunding), or total annual budget in excess of €200,000.
@@ -114,3 +122,24 @@ Vehicle Rig and Setup
 &fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
 to changes during the Early Access stage.
 {: .alert .alert-warning }
+
+#### Custom Development Services
+
+- All Intellectual Property Rights related to Vehicle Physics Pro shall remain exclusive property
+	of the author, Angel Garcia Voces.
+
+- All Intellectual Property Rights related to the resources provided by the customer shall remain
+	exclusive property of the customer.
+
+- Any modifications and/or additions to Vehicle Physics Pro (including, but not limited to code,
+	resources and documentation) as result of the custom development services shall remain exclusive
+	property of Angel Garcia Voces and will be incorporated to the VPP package.
+
+- Any custom settings, scripts or resources developed by Angel Garcia Voces as result of the custom
+	development services that are specific to the customer's project shall be property of the
+	customer. Angel Garcia Voces reserves the right of including the same or similar technologies
+	in VPP in the future.
+
+- Unless explicitly stated otherwise by the customer (NDA), images and/or videos of the custom work
+	may be added to VPP website gallery, twitter, youtube, blog, and/or other public channels used
+	by VPP.
