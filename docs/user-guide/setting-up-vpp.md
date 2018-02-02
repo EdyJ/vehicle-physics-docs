@@ -80,6 +80,21 @@ This is strongly recommended. Once configured, access to VPP repositories is pre
 3.	Now you can open the project in Unity 3D. Proceed to [Getting Started](getting-started.md) for
 	a quick walkthrough.
 
+#### 3. Update to the most recent version
+
+Fetch the most recent updates to the example project.
+
+1.	Open Git Bash, then _cd_ to the folder where the Untiy project is located. If you've installed
+	[Git Extensions](https://gitextensions.github.io), just right-click the folder and select "Git
+	Bash".
+
+2.	Fetch and update the repositories. Type or paste each line in Git Bash pressing Enter after
+	each one:
+
+		:::text
+		$ git pull --recurse-submodules
+		$ git submodule update --init --recursive
+
 ## Downloading as ZIP files
 
 1.	Download and unzip the Unity 3D project for your VPP edition. Open the project log below, then
