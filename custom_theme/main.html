@@ -9,10 +9,15 @@ which `{% extends "base.html" %}` and defines various blocks which will replace
 the blocks defined in base.html and its included child templates.
 #}
 
+
 {#
 EDY:
 Extend the content block for including the component used by ClickView.js
-for making pictures clickable
+for making pictures clickable.
+
+Source code for themes are located at:
+<Python Dir>\Lib\site-packages\mkdocs\themes
+<Python Dir>\Lib\site-packages\mkdocs_bootswatch
 #}
 
 {%- block content %}
@@ -22,4 +27,17 @@ for making pictures clickable
 		<img id="clickview_content">
 		<div id="clickview_caption"></div>
 	</div>
+{%- endblock %}
+
+
+{#
+EDY:
+Removed the "Built with MkDocs" notice.
+#}
+
+{%- block footer %}
+<hr>
+{%- if config.copyright %}
+	<p>{{ config.copyright }}</p>
+{%- endif %}
 {%- endblock %}
