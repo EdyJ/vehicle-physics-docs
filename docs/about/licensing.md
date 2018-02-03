@@ -73,6 +73,7 @@ Vehicle Rig and Setup
 - 100 €/hour, with a limit of 8 hours per week per customer.
 - Traveling to the customer's location: 900 €/day + expenses.
 
+Check out the [terms & conditions for the custom development services below](#custom-development-services_1).
 Need more information? [Get in touch](mailto:edy@vehiclephysics.com)!
 
 ### Terms & Conditions
@@ -97,6 +98,9 @@ Need more information? [Get in touch](mailto:edy@vehiclephysics.com)!
 
 - All licenses are issued to an individual person or company and are nontransferable in any way,
 	including but not limited to renting, subcontracting, leasing, and lending.
+
+- Email and Skype support in the Professional license shall be provided to the licensee individual
+	only.
 
 - Connections to the GIT repositories are logged per-account. The account may get blocked if an
 	excess of connections for a given license is detected. Failure to keep the repository
@@ -137,9 +141,20 @@ to changes during the Early Access stage.
 
 - Any custom settings, scripts or resources developed by Angel Garcia Voces as result of the custom
 	development services that are specific to the customer's project shall be property of the
-	customer. Angel Garcia Voces reserves the right of including the same or similar technologies
-	in VPP in the future.
+	customer.
 
 - Unless explicitly stated otherwise by the customer (NDA), images and/or videos of the custom work
-	may be added to VPP website gallery, twitter, youtube, blog, and/or other public channels used
+	may be added to the VPP website, twitter, youtube, blog, and/or any other public channels used
 	by VPP.
+
+- Payments shall be processed in a weekly basis at the end of each week. The author reserves the
+	right of putting the work on hold until any pending payments have been completed.
+
+- DISCLAIMER: WHILE THE BEST EFFORT, KNOWLEDGE AND EXPERIENCE WILL BE PUT IN DEVELOPING A HIGH
+	QUALITY WORK, THE AUTHOR EXPRESSLY DISCLAIMS ANY WARRANTY OF MERCHANTABILITY, SATISFACTORY
+	QUALITY OR FITNESS FOR A PARTICULAR PURPOSE WITH RESPECT TO THE WORK PERFORMED AS CUSTOM
+	DEVELOPMENT SERVICE, REGARDLESS THE AMOUNT OF TIME DEDICATED TO SUCH WORK.
+
+&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
+to changes during the Early Access stage.
+{: .alert .alert-warning }
