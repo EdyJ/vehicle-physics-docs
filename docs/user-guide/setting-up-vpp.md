@@ -58,8 +58,8 @@ This is strongly recommended. Once configured, access to VPP repositories is pre
 	installed [Git Extensions](https://gitextensions.github.io), just right-click the folder of
 	your choice and select "Git Bash".
 
-2.	Clone the repository and submodules. Type or paste each line in Git Bash pressing Enter after
-	each one:
+2.	Clone the repository and submodules. Type or paste each line (without the _$_) in Git Bash
+	pressing Enter after each one:
 
 	**_Professional Edition:_**
 
@@ -88,8 +88,8 @@ Fetch the most recent updates to the example project.
 	[Git Extensions](https://gitextensions.github.io), just right-click the folder and select "Git
 	Bash".
 
-2.	Fetch and update the repositories. Type or paste each line in Git Bash pressing Enter after
-	each one:
+2.	Fetch and update the repositories. Type or paste each line (without the _$_) in Git Bash
+	pressing Enter after each one:
 
 		:::text
 		$ git pull --recurse-submodules

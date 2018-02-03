@@ -1,15 +1,13 @@
 # Source Code vs. SDK editions
 
-Vehicle Physics Pro is deployed in two fashions:
+Vehicle Physics Pro is available in two fashions:
 
-Source Code
-:	Complete C# source code. Enterprise license tier.
+- **Source Code:** Complete C# source code. Enterprise license tier.
+- **SDK edition:** Multi-platform managed DLL assembly. Professional and lower license tiers.
 
-SDK edition
-:	Multi-platform managed DLL assembly. Professional and lower license tiers.
-
-The references to the VPP components and script differ between editions. Switching between source
-code and SDK requires the Unity projects to be configured to use the proper component references.
+The references to the VPP components and scripts differ between editions. Switching a project between
+source code and SDK requires modifying certain files in the Unity project (.unity, .prefab and
+.asset) to use the proper component references.
 
 !!! Warning "&fa-warning:lg; Migrating projects between source code and SDK"
 
