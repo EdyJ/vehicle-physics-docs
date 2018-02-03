@@ -83,6 +83,12 @@ img.img-thumb
 	max-width: 120px;
 	}
 
+img.img-carousel
+	{
+	max-width: 900px;
+	max-height: 450px;
+	}
+
 /* thumbs inside table cells redefine the vertical margin */
 
 td img.img-thumb

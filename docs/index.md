@@ -24,6 +24,55 @@ Quick links: [Feature details](/about/features), [demo downloads](/about/demos),
 on Twitter for the latest news and announcements.
 {: .alert .alert-success }
 
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="5"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="6"></li>
+	</ol>
+
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-ferrari.jpg" alt="Ferrari 458 Italia">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-jpickup.jpg" alt="Japanese Pickup Truck - 3D model by Trevor Ley">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-ferrari-burnout.jpg" alt="Ferrari 458 doing some donuts and burnouts">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-ferrari-spa.jpg" alt="Ferrari 458 at 195 kph / 120 mph before riding Eau Rouge at Spa-Francorchamps">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-loop.jpg" alt="Riding a loop with the Ferrari 458">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-alpha-sandbox.jpg" alt="Early sandbox test with Vehicle Physics Pro">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials, three differential setups">
+		</div>
+	</div>
+
+	<!-- Controls -->
+	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>
+
+
 <div class="imagegallery" sm="2" md="3" lg="4" style="display:none">
 	<img class="clickview" src="img/gallery/vpp-ferrari.jpg"  alt="Ferrari 458 Italia">
 	<img class="clickview" src="img/gallery/vpp-lancer.jpg" alt="Sports Sedan - 3D model by Eric Adams">
