@@ -1,106 +1,94 @@
 
-    .slider {
-        width: 100%;
-        margin: 20px auto;
-    }
-
-	.slick-dotted.slick-slider
+.slider
 	{
-    margin-bottom: 60px;
+	width: 100%;
+	margin: 20px auto;
 	}
 
-    .slick-slide {
-    margin: 0px 5px;
+.slick-dotted.slick-slider
+	{
+	margin-bottom: 60px;
+	}
 
-	/*
-	From: https://stackoverflow.com/a/18869078
-	Requires setting a specific height, which voids the responsiveness.
+.slick-slide
+	{
+	margin: 0px 5px;
+	}
 
-    height: 800px;
-    position: relative;*/
-    }
+.slick-slide img
+	{
+	width: 100%;
+	margin: 10px auto;
+	}
 
-    .slick-slide img {
-      width: 100%;
-	  margin: 10px auto;
-/*
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-	*/
-    }
+.slick-prev:before,
+.slick-next:before
+	{
+	color: black;
+	opacity: 0.5;
+	}
 
-    .slick-prev:before,
-    .slick-next:before {
-        color: black;
-		opacity: 0.5;
-    }
-
-	.slick-slider
+.slick-slider
 	{
 	background-color: black;
 	}
 
 
-	/* Reescritura de slick-dots para que aparezcan los numeros de imagen en los botones inferiores de seleccion */
+/* Reescritura de slick-dots para que aparezcan los numeros de imagen en los botones inferiores de seleccion */
 
-	.gusi-dots
+.gusi-dots
 	{
-		position: absolute;
-		bottom: -50px;
+	position: absolute;
+	bottom: -50px;
 
-		display: block;
+	display: block;
 
-		width: 100%;
-		padding: 0;
-		margin: 15px 0;
+	width: 100%;
+	padding: 0;
+	margin: 15px 0;
 
-		list-style: none;
+	list-style: none;
 
-		text-align: left;
+	text-align: left;
 	}
-	.gusi-dots li
+
+.gusi-dots li
 	{
-		position: relative;
+	position: relative;
 
-		display: inline-block;
+	display: inline-block;
 
-		width: 20px;
-		height: 20px;
-		margin: 0 5px;
-		padding: 0;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+	padding: 0;
 
-		cursor: pointer;
+	cursor: pointer;
 	}
-	.gusi-dots li button
+
+.gusi-dots li button
 	{
-		text-align: center;
+	text-align: center;
 
-		display: block;
+	display: block;
 
-		width: 24px;
-		height: 24px;
-		padding: 3px;
+	width: 24px;
+	height: 24px;
+	padding: 3px;
 
-		cursor: pointer;
+	cursor: pointer;
 
-		color: white;
-		border: 0;
-		outline: none;
-		background: black;
-		opacity: 0.5;
+	color: white;
+	border: 0;
+	outline: none;
+	background: black;
+	opacity: 0.5;
 	}
-	.gusi-dots li button:hover,
-	.gusi-dots li button:focus,
-	.gusi-dots li.slick-active button
+
+.gusi-dots li button:hover,
+.gusi-dots li button:focus,
+.gusi-dots li.slick-active button
 	{
-		outline: none;
-		opacity: 1;
+	outline: none;
+	opacity: 1;
 	}
