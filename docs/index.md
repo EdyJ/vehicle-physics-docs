@@ -26,7 +26,13 @@ on Twitter for the latest news and announcements.
 <div>
 <section class="test-slider slider">
 <div>
-	<img class="clickview" src="img/gallery/vpp-ferrari.jpg" alt="Ferrari 458 Italia">
+![Ferrari 458 Italia](/img/gallery/vpp-ferrari.jpg){: .clickview }
+
+1 - Create the GameObject
+{: .header}
+
+Include the components tal and cual. This is great as the text gets embedded perfectly into the
+slides. Next step: increase the horizontal margins here and move the next / prev buttons to this area.
 </div>
 <div>
 	<img class="clickview" src="img/gallery/vpp-jpickup.jpg" alt="Japanese Pickup Truck - 3D model by Trevor Ley">
@@ -51,16 +57,17 @@ on Twitter for the latest news and announcements.
 <script src="./js/slick.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 $(document).on('ready', function() {
-  $(".test-slider").slick({
+  $(".slider").slick({
 	dots: true,
 	arrows: true,
-	infinite: true,
+	infinite: false,
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	dotsClass: 'gusi-dots'
   });
 });
 </script>
+
 
 As shown in the previous carousel, there's still several things to do and configure. For example,
 numbers are not highlighted to reflect the current slide.
@@ -213,13 +220,19 @@ Realistic and coherent
 &fa-gear:spin; Demo scenes and examples
 {: .roadmap .wip }
 
-**First public release!**
+&fa-gear:spin; Documentation
+{: .roadmap .wip }
+
+**First release!**
 {: .roadmap .todo }
 
-Complete the documentation
+Package for the Unity Asset Store
 {: .roadmap .todo }
 
 Anisotropic tire friction
+{: .roadmap .todo }
+
+3D wheel
 {: .roadmap .todo }
 
 Additional components
@@ -247,7 +260,6 @@ with Vehicle Physics Pro:
 - [HereVR](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:8060) (APC)
 - [Dog Machine](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:2914) (Multi-purpose Exploration Vehicle)
 - [GameReady 3D](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:1634) (Sound files)
-- Eric Adams (Super car, Tuner car)
 
 
 <a class="twitter-timeline" href="https://twitter.com/VehiclePhysics" data-widget-id="687956324773179396">Tweets by @VehiclePhysics</a>

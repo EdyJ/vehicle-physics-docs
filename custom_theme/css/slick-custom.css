@@ -18,7 +18,24 @@
 .slick-slide img
 	{
 	width: 100%;
-	margin: 10px auto;
+	margin: 5px auto 10px;
+	}
+
+.slick-slide .header
+	{
+	font-size: 18px;
+	margin: 0 10px 5px;
+
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #49C;
+	}
+
+.slick-slide p
+	{
+	color: #CCC;
+	margin: 0 10px 15px;
 	}
 
 .slick-prev:before,
