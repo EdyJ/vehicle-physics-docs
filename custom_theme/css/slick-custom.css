@@ -1,11 +1,11 @@
 
     .slider {
-        width: 50%;
-        margin: 100px auto;
+        width: 100%;
+        margin: 20px auto;
     }
 
     .slick-slide {
-      margin: 0px 20px;
+      margin: 0px 5px;
     }
 
     .slick-slide img {
@@ -29,11 +29,11 @@
 
 		width: 100%;
 		padding: 0;
-		margin: 0;
+		margin: 15px 0;
 
 		list-style: none;
 
-		text-align: center;
+		text-align: left;
 	}
 	.gusi-dots li
 	{
@@ -54,9 +54,9 @@
 
 		display: block;
 
-		width: 22px;
-		height: 22px;
-		padding: 5px;
+		width: 24px;
+		height: 24px;
+		padding: 3px;
 
 		cursor: pointer;
 
@@ -67,7 +67,7 @@
 		opacity: 0.75;
 	}
 	.gusi-dots li button:hover,
-	.gusi-dots li button:focus
+	.gusi-dots li button:focus,
 	{
 		outline: none;
 		opacity: 1;

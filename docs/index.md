@@ -53,7 +53,7 @@ on Twitter for the latest news and announcements.
 $(document).on('ready', function() {
   $(".test-slider").slick({
 	dots: true,
-	arrows: false,
+	arrows: true,
 	infinite: true,
 	slidesToShow: 1,
 	slidesToScroll: 1,
@@ -62,6 +62,8 @@ $(document).on('ready', function() {
 });
 </script>
 
+As shown in the previous carousel, there's still several things to do and configure. For example,
+numbers are not highlighted to reflect the current slide.
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	<!-- Indicators -->
