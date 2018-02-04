@@ -1,0 +1,74 @@
+
+    .slider {
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
+    }
+
+
+	/* Reescritura de slick-dots para que aparezcan los numeros de imagen en los botones inferiores de seleccion */
+
+	.gusi-dots
+	{
+		position: absolute;
+		bottom: -25px;
+
+		display: block;
+
+		width: 100%;
+		padding: 0;
+		margin: 0;
+
+		list-style: none;
+
+		text-align: center;
+	}
+	.gusi-dots li
+	{
+		position: relative;
+
+		display: inline-block;
+
+		width: 20px;
+		height: 20px;
+		margin: 0 5px;
+		padding: 0;
+
+		cursor: pointer;
+	}
+	.gusi-dots li button
+	{
+		text-align: center;
+
+		display: block;
+
+		width: 22px;
+		height: 22px;
+		padding: 5px;
+
+		cursor: pointer;
+
+		color: white;
+		border: 0;
+		outline: none;
+		background: black;
+		opacity: 0.75;
+	}
+	.gusi-dots li button:hover,
+	.gusi-dots li button:focus
+	{
+		outline: none;
+		opacity: 1;
+	}

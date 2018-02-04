@@ -23,6 +23,45 @@ Quick links: [Feature details](/about/features), [demo downloads](/about/demos),
 &fa-thumbs-up:lg; &nbsp; Stay tunned! &nbsp; Follow me [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link}
 on Twitter for the latest news and announcements.
 {: .alert .alert-success }
+<div>
+<section class="test-slider slider">
+<div>
+	<img class="clickview" src="img/gallery/vpp-ferrari.jpg" alt="Ferrari 458 Italia">
+</div>
+<div>
+	<img class="clickview" src="img/gallery/vpp-jpickup.jpg" alt="Japanese Pickup Truck - 3D model by Trevor Ley">
+</div>
+<div>
+	<img class="clickview" src="img/gallery/vpp-ferrari-burnout.jpg" alt="Ferrari 458 doing some donuts and burnouts">
+</div>
+<div>
+	<img class="clickview" src="img/gallery/vpp-ferrari-spa.jpg" alt="Ferrari 458 at 195 kph / 120 mph before riding Eau Rouge at Spa-Francorchamps">
+</div>
+<div>
+	<img class="clickview" src="img/gallery/vpp-loop.jpg" alt="Riding a loop with the Ferrari 458">
+</div>
+<div>
+	<img class="clickview" src="img/gallery/vpp-alpha-sandbox.jpg" alt="Early sandbox test with Vehicle Physics Pro">
+</div>
+<div>
+	<img class="clickview" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials, three differential setups">
+</div>
+</section>
+</div>
+<script src="./js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).on('ready', function() {
+  $(".test-slider").slick({
+	dots: true,
+	arrows: false,
+	infinite: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dotsClass: 'gusi-dots'
+  });
+});
+</script>
+
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	<!-- Indicators -->
