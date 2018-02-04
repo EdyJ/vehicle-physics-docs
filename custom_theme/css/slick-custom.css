@@ -4,18 +4,49 @@
         margin: 20px auto;
     }
 
+	.slick-dotted.slick-slider
+	{
+    margin-bottom: 60px;
+	}
+
     .slick-slide {
-      margin: 0px 5px;
+    margin: 0px 5px;
+
+	/*
+	From: https://stackoverflow.com/a/18869078
+	Requires setting a specific height, which voids the responsiveness.
+
+    height: 800px;
+    position: relative;*/
     }
 
     .slick-slide img {
       width: 100%;
+	  margin: 10px auto;
+/*
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+	*/
     }
 
     .slick-prev:before,
     .slick-next:before {
         color: black;
+		opacity: 0.5;
     }
+
+	.slick-slider
+	{
+	background-color: black;
+	}
 
 
 	/* Reescritura de slick-dots para que aparezcan los numeros de imagen en los botones inferiores de seleccion */
@@ -23,7 +54,7 @@
 	.gusi-dots
 	{
 		position: absolute;
-		bottom: -25px;
+		bottom: -50px;
 
 		display: block;
 
@@ -64,10 +95,11 @@
 		border: 0;
 		outline: none;
 		background: black;
-		opacity: 0.75;
+		opacity: 0.5;
 	}
 	.gusi-dots li button:hover,
 	.gusi-dots li button:focus,
+	.gusi-dots li.slick-active button
 	{
 		outline: none;
 		opacity: 1;
