@@ -232,10 +232,10 @@ Package for the Unity Asset Store
 Anisotropic tire friction
 {: .roadmap .todo }
 
-3D wheel
+Hybrid 3D wheel solution
 {: .roadmap .todo }
 
-Additional components
+More vehicle types
 {: .roadmap .todo }
 
 
