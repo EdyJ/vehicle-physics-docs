@@ -23,6 +23,9 @@ Quick links: [Feature details](/about/features), [demo downloads](/about/demos),
 &fa-thumbs-up:lg; &nbsp; Stay tunned! &nbsp; Follow me [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link}
 on Twitter for the latest news and announcements.
 {: .alert .alert-success }
+
+Check this out: there must be a plain text right before the main div. Otherwise, the content of the
+slides is taken as-is without being translated by Markdown.
 <div>
 <section class="test-slider slider">
 <div>
@@ -67,7 +70,6 @@ $(document).on('ready', function() {
   });
 });
 </script>
-
 
 As shown in the previous carousel, there's still several things to do and configure. For example,
 numbers are not highlighted to reflect the current slide.
