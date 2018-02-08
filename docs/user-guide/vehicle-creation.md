@@ -6,11 +6,10 @@ Instructions for creating and rigging a new vehicle from scratch.
 
 Create the vehicle's main GameObject, add the basic components and prepare the hierarchy for the
 rest of the components.
-<div style="max-width: 80%; margin: 0 auto">
+<div class="slick-carousel">
 <section class="test-slider slider">
 <div>
 ![](http://via.placeholder.com/650x400?text=1){: .clickview }
-
 Create an empty GameObject in the scene (<kbd>ctrl-shift-N</kbd>). Name it **Vehicle**.
 
 Add these components from the Component menu:
@@ -37,6 +36,8 @@ Select the four WheelXX GameObjects, then add a **VPWheelCollider** component to
 </div>
 <div>
 ![](http://via.placeholder.com/650x400?text=4)
+
+Add the vehicle mesh as child of your Vehicle GameObject. The vehicle mesh should reside within its own sub-hierarchy entirely.
 </div>
 <div>
 ![](http://via.placeholder.com/650x400?text=5)
@@ -57,6 +58,7 @@ $(document).on('ready', function() {
 	arrows: true,
 	infinite: false,
 	draggable: false,
+	accessibility: false,
 	speed: 0,
 	pauseOnDotsHover: true,
 	fade: true,

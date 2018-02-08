@@ -26,7 +26,7 @@ on Twitter for the latest news and announcements.
 
 Check this out: there must be a plain text right before the main div. Otherwise, the content of the
 slides is taken as-is without being translated by Markdown.
-<div>
+<div class="slick-carousel">
 <section class="test-slider slider">
 <div>
 ![Ferrari 458 Italia](/img/gallery/vpp-ferrari.jpg){: .clickview }

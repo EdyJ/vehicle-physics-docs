@@ -1,4 +1,10 @@
 
+.slick-carousel
+	{
+	max-width: 80%;
+	margin: 0 auto;
+	}
+
 .slider
 	{
 	width: 100%;
@@ -39,16 +45,72 @@
 	}
 
 .slick-prev:before,
-.slick-next:before
+.slick-next:before,
+.slick-prev:focus:before,
+.slick-next:focus:before
 	{
 	color: black;
 	opacity: 0.5;
+	font-size: 30px;
+	}
+
+.slick-prev:hover:before,
+.slick-next:hover:before
+	{
+	opacity: 1;
+	}
+
+.slick-prev,
+.slick-next
+	{
+	width: 30px;
+	height: 30px;
+	}
+
+.slick-prev
+	{
+	left: -35px;
+	}
+
+.slick-next
+	{
+	right: -35px;
 	}
 
 .slick-slider
 	{
 	background-color: black;
 	}
+
+
+/* Allow text selection. NOTE: draggable should be false in Slick initialization. */
+
+.slick-slider
+	{
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+
+    -webkit-touch-callout: auto;
+    -khtml-user-select: auto;
+	}
+
+
+.slick-prev,
+.slick-next,
+.gusi-dots,
+.slick-slide img
+	{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+	}
+
 
 
 /* Reescritura de slick-dots para que aparezcan los numeros de imagen en los botones inferiores de seleccion */
