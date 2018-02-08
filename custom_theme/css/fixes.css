@@ -1,10 +1,11 @@
 
 /*	Removes the "Home" button in the MkDocs theme, leaving a small margin instead.
-	Uses the class selector to prevent "nav navbar-nav navbar-right" to be affected.
+	Uses the attribute selector to prevent "nav navbar-nav navbar-right" to be affected.
+	The inmediate child selector (>) ensures no nested menus are affected.
 	The mkdocs.yml file should have the thin space code for fallback: - "&#8201;": index.md
 */
 
-[class='nav navbar-nav'] li:first-child
+[class='nav navbar-nav'] > li:first-child
 	{
 	display: none;
 	}
