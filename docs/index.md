@@ -57,7 +57,7 @@ slides. Next step: increase the horizontal margins here and move the next / prev
 </div>
 </section>
 </div>
-<script src="./js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 $(document).on('ready', function() {
   $(".slider").slick({

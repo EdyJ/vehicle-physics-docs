@@ -4,7 +4,7 @@ Open the example project in Unity 3D (you should have [set it up](setting-up-vpp
 play and walk through some example scenes so you could get started quickly. Load and play the scene
 **Playground 1k - JPickup - Keyboard**:
 
-![Assets > Development > Playground 1k - JPickup - Keyboard](/img/user-guide/vpp-sample-scenes.png){: .img-small .clickview }
+![Assets > Development > Playground 1k - JPickup - Keyboard](/img/user-guide/vpp-sample-scenes.png){: .clickview }
 
 <!--
 &fa-thumbs-up:lg; If you haven't setup the Unity project yet, you can still [download and play the demos](){: .alert-link }

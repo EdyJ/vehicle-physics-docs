@@ -1,6 +1,72 @@
 # Creating a vehicle
 
+Instructions for creating and rigging a new vehicle from scratch.
+
 ### Base hierarchy and components
+
+Create the vehicle's main GameObject, add the basic components and prepare the hierarchy for the
+rest of the components.
+<div style="max-width: 80%; margin: 0 auto">
+<section class="test-slider slider">
+<div>
+![](http://via.placeholder.com/650x400?text=1){: .clickview }
+
+Create an empty GameObject in the scene (<kbd>ctrl-shift-N</kbd>). Name it **Vehicle**.
+
+Add these components from the Component menu:
+
+- Component > Physics > Rigidbody
+- Component > Vehicle Physics > Vehicle Controller
+- Component > Vehicle Physics > Input > Standard Input
+
+</div>
+<div>
+![](http://via.placeholder.com/650x400?text=2)
+
+Create a child GameObject (<kbd>ctrl-alt-N</kbd>). Name it **WheelColliders**.
+
+Create four children GameObjects under WheelColliders. Name them **WheelFL, WheelFR, WheelRL, WheelRR**
+</div>
+<div>
+![](http://via.placeholder.com/650x400?text=3)
+
+Select the four WheelXX GameObjects, then add a **VPWheelCollider** component to them:
+
+- Component > Vehicle Physics > Wheel Collider
+
+</div>
+<div>
+![](http://via.placeholder.com/650x400?text=4)
+</div>
+<div>
+![](http://via.placeholder.com/650x400?text=5)
+</div>
+<div>
+![](http://via.placeholder.com/650x400?text=6)
+</div>
+<div>
+![](http://via.placeholder.com/650x400?text=7)
+</div>
+</section>
+</div>
+<script src="/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).on('ready', function() {
+  $(".slider").slick({
+	dots: true,
+	arrows: true,
+	infinite: false,
+	draggable: false,
+	speed: 0,
+	pauseOnDotsHover: true,
+	fade: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dotsClass: 'gusi-dots'
+  });
+});
+</script>
+
 
 1.	Create an empty GameObject in the scene (<kbd>ctrl-shift-N</kbd>). Name it **Vehicle**. Add
 	these components (from the Component menu):
