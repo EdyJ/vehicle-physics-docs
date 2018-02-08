@@ -19,6 +19,13 @@
 .slick-slide
 	{
 	margin: 0px 5px;
+    color: #BBB;
+	}
+
+
+.slick-slide p
+	{
+	margin: 0 10px 15px;
 	}
 
 .slick-slide img
@@ -30,7 +37,7 @@
 .slick-slide .header
 	{
 	font-size: 18px;
-	margin: 0 10px 5px;
+	margin: 0 10px 10px;
 
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 500;
@@ -38,18 +45,13 @@
     color: #49C;
 	}
 
-.slick-slide p
-	{
-	color: #CCC;
-	margin: 0 10px 15px;
-	}
 
 .slick-prev:before,
 .slick-next:before,
 .slick-prev:focus:before,
 .slick-next:focus:before
 	{
-	color: black;
+	color: #181818;
 	opacity: 0.5;
 	font-size: 30px;
 	}
@@ -79,7 +81,7 @@
 
 .slick-slider
 	{
-	background-color: black;
+	background-color: #181818;
 	}
 
 
@@ -160,7 +162,7 @@
 	color: white;
 	border: 0;
 	outline: none;
-	background: black;
+	background: #181818;
 	opacity: 0.5;
 	}
 
