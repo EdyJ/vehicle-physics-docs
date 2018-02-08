@@ -1,12 +1,17 @@
 
-
-/* Prevent blockquotes to be giant-sized. Also makes them italic.
+/*	Removes the "Home" button in the MkDocs theme, leaving a small margin instead.
+	Uses the class selector to prevent "nav navbar-nav navbar-right" to be affected.
+	The mkdocs.yml file should have the thin space code for fallback: - "&#8201;": index.md
 */
 
-blockquote p
+[class='nav navbar-nav'] li:first-child
 	{
-	font-size: inherit;
-	font-style: italic;
+	display: none;
+	}
+
+[class='nav navbar-nav']
+	{
+	margin-left: 15px;
 	}
 
 
@@ -35,6 +40,42 @@ blockquote p
 		{
 		display: none;
 		}
+	}
+
+
+/*	Top-Down mobile menu:
+	- Hides the GitHub link.
+	- Moves the Search, Next, Prev links to the right.
+	- Fixes the max height of the nav menu for preventing scrollbar when everything is folded.
+*/
+
+@media (max-width: 767px)
+	{
+	.nav.navbar-nav.navbar-right li:last-child
+		{
+		display: none;
+		}
+
+	.nav.navbar-nav.navbar-right
+		{
+		text-align: right;
+		margin-right: 15px;
+		}
+
+	.navbar-collapse
+		{
+		max-height: 345px;
+		}
+	}
+
+
+/* Prevent blockquotes to be giant-sized. Also makes them italic.
+*/
+
+blockquote p
+	{
+	font-size: inherit;
+	font-style: italic;
 	}
 
 
@@ -77,13 +118,3 @@ div.col-md-9
 	padding-bottom: 40px;
 	}
 
-
-/*	Remove the "Home" button in the MkDocs theme
-	Uses the class selector to prevent "nav navbar-nav navbar-right" to be affected.
-	The mkdocs.yml file should have the thin space code for fallback: - "&#8201;": index.md
-*/
-
-[class='nav navbar-nav'] li:first-child
-	{
-	display: none;
-	}
