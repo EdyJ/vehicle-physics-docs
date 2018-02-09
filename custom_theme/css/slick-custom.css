@@ -22,8 +22,7 @@
     color: #BBB;
 	}
 
-
-.slick-slide p
+.slick-slide > p
 	{
 	margin: 0 10px 15px;
 	}

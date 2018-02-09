@@ -15,37 +15,41 @@ rest of the components.
 1- Prepare the environment
 {: .header}
 
-Create a new scene in Unity 3D and load a location
+- Open an Unity 3D project with Vehicle Physics Pro
+- Load the scene **VP Playground 1k - Sandbox**
+(_Vehicle Physics Sample Assets > Scenes_).
+
+This scene contains everything you need: test scenario, camera, light, ground materials.
 
 </div>
 <div>
-![](http://via.placeholder.com/650x400?text=1){: .clickview }
+![](http://via.placeholder.com/650x400?text=2){: .clickview }
 
-1- Create the main GameObject
+2- Create the main GameObject
 {: .header}
 
-Create an empty GameObject in the scene. Name it **Vehicle**. Add these
-components from the Component menu:
+- Create an empty GameObject in the scene, name it **Vehicle**.
+- Add these components from the Component menu:
 
-- Component > Physics > Rigidbody
-- Component > Vehicle Physics > Vehicle Controller
-- Component > Vehicle Physics > Input > Standard Input
+	- Component > Physics > Rigidbody
+	- Component > Vehicle Physics > Vehicle Controller
+	- Component > Vehicle Physics > Input > Standard Input
 
 </div>
 <div>
-![](http://via.placeholder.com/650x400?text=2)
+![](http://via.placeholder.com/650x400?text=3){: .clickview }
 
-2- Create the GameObjects for the wheels
+3- Create the GameObjects for the wheels
 {: .header }
 
-- Create a child GameObject. Name it **WheelColliders**.
-- Create four children GameObjects under it WheelColliders. Name them **WheelFL, WheelFR, WheelRL, WheelRR**.
+- Create a child GameObject in the vehicle. Name it **WheelColliders**.
+- Add four children GameObjects to it. Name them **WheelFL, WheelFR, WheelRL, WheelRR**.
 
 </div>
 <div>
-![](http://via.placeholder.com/650x400?text=3)
+![](http://via.placeholder.com/650x400?text=4){: .clickview }
 
-3- Add the wheel components
+4- Add the wheel components
 {: .header }
 
 Select the four WheelXX GameObjects, then add a **VPWheelCollider** component to them:
@@ -54,9 +58,9 @@ Select the four WheelXX GameObjects, then add a **VPWheelCollider** component to
 
 </div>
 <div>
-![](http://via.placeholder.com/650x400?text=4)
+![](http://via.placeholder.com/650x400?text=5){: .clickview }
 
-4- Add the visual vehicle
+5- Add the visual vehicle
 {: .header }
 
 Drag the vehicle's mesh from the Project to your Vehicle GameObject in the Hierachy, so it becomes
@@ -67,9 +71,9 @@ for more information on the 3D files.
 
 </div>
 <div>
-![](http://via.placeholder.com/650x400?text=5)
+![](http://via.placeholder.com/650x400?text=6){: .clickview }
 
-5- Assign the visual wheels to their physic counterparts
+6- Assign the visual wheels to their physic counterparts
 {: .header }
 
 For each VPWheelCollider component (WheelXX) configure the property **Visual objects > Wheel** to
@@ -80,22 +84,33 @@ front left wheel.
 
 </div>
 <div>
-![](http://via.placeholder.com/650x400?text=6)
+![](http://via.placeholder.com/650x400?text=7){: .clickview }
 
-6- Adjust the physic wheels to match the visual wheels
+7- Adjust the physic wheels to match the visual wheels
 {: .header }
 
 - Select the four WheelXX components.
 - Click the context menu for the VPWheelCollider component and choose **Adjust position and radius
 	to the Wheel mesh**.
 
-VPWheelColliders are automagically adjusted to fit the wheel meshes.
-
-See the notes below if you want / need to configure the VPWheelColliders manually.
+See _"Configuring the VPWheelColliders manually"_ below if you want / need to configure the
+VPWheelColliders manually.
 
 </div>
 <div>
-![](http://via.placeholder.com/650x400?text=7)
+![](http://via.placeholder.com/650x400?text=8){: .clickview }
+
+8- Add the vehicle collider
+{: .header }
+
+The collider is typically a simplified version of the mesh. It may come divided in several parts.
+
+- Add the mesh collider as child of the vehicle.
+- Add a **MeshCollider** component to it and enable the **Convex** flag.
+- Remove the MeshRenderer and MeshFilter components.
+
+&fa-hand-o-right:lg;&nbsp; Keep reading below for important considerations on vehicle colliders.
+
 </div>
 </section>
 </div>
@@ -118,26 +133,26 @@ $(document).on('ready', function() {
 });
 </script>
 
-#### Notes:
+!!! info "&fa-info-circle; Configuring the VPWheelColliders manually"
 
-##### Configuring the VPWheelColliders manually
+	If the VPWheelCollider option **Adjust position and radius to the Wheel mesh** doesn't work in
+	your case (step 7 above) you may do it manually:
 
-If the VPWheelCollider option **Adjust position and radius to the Wheel mesh** doesn't fit in
-your case (step 6 above) you may do it manually:
+	1. The position of the VPWheelCollider component must match the Transform's position of its
+		assigned visual wheel.
+	2. Use the VPWheelCollider's **center** property for moving the wheel gizmo to the outer bound
+		of the visual wheel.
+	3. Adjust the VPWheelCollider's **radius** for matching the radius of the visual wheel.
 
-- The position of the VPWheelCollider component must be the same as the Transform for the
-	corresponding visual wheel.
-- Use the VPWheelCollider's **center** property for moving the wheel shape to the outer bound
-	of the visual wheel.
-- Adjust the VPWheelCollider's **radius** property for matching the radius of the visual wheel.
-
-##### The vehicle collider
+### The vehicle collider
 
 !!! warning "&fa-warning:lg; VPWheelCollider components must be located _**inside**_ the vehicle's colliders"
 	Ensure that the **top half** of each VPWheelCollider component is **enclosed within regular
 	convex colliders** belonging to the vehicle's main rigidbody. No joint-attached colliders are
 	valid here. Otherwise, strange behaviors and side effects may happen when the vehicle enters in
 	contact with other objects.
+
+		(good vs. bad picture)
 
 !!! warning "&fa-warning:lg; At least one convex collider is mandatory in the vehicle"
 	A vehicle without colliders will exhibit a very weird and unnatural behavior as soon as the
