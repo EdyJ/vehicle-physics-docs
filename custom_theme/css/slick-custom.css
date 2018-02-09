@@ -52,7 +52,7 @@
 	{
 	color: #181818;
 	opacity: 0.5;
-	font-size: 30px;
+	font-size: 35px;
 	}
 
 .slick-prev:hover:before,
@@ -61,21 +61,27 @@
 	opacity: 1;
 	}
 
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+	{
+    opacity: .1;
+	}
+
 .slick-prev,
 .slick-next
 	{
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
 	}
 
 .slick-prev
 	{
-	left: -35px;
+	left: -40px;
 	}
 
 .slick-next
 	{
-	right: -35px;
+	right: -40px;
 	}
 
 .slick-slider
