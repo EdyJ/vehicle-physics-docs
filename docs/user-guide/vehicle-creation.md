@@ -1,7 +1,7 @@
 # Creating a vehicle
 
-This is a tutorial for creating and rigging a new vehicle from scratch. You need a Unity 3D project
-with the Vehicle Physics Pro core and sample assets (see [Setting Up Vehicle Physics Pro](/user-guide/setting-up-vpp)).
+This step-by-step tutorial shows how to create and rig a new vehicle from scratch in Vehicle Physics
+Pro. You need a Unity 3D project with the VPP core and sample assets (see [Setting Up Vehicle Physics Pro](/user-guide/setting-up-vpp)).
 
 ### Base hierarchy and components
 
@@ -103,7 +103,7 @@ VPWheelColliders manually.
 8- Add the vehicle collider
 {: .header }
 
-The collider is typically a simplified version of the mesh. It may come divided in several parts.
+The collider is typically a simplified version of the vehicle mesh.
 
 - Add the mesh collider as child of the vehicle.
 - Add a **MeshCollider** component to it and enable the **Convex** flag.
@@ -146,99 +146,37 @@ $(document).on('ready', function() {
 
 ### The vehicle collider
 
-!!! warning "&fa-warning:lg; VPWheelCollider components must be located _**inside**_ the vehicle's colliders"
-	Ensure that the **top half** of each VPWheelCollider component is **enclosed within regular
-	convex colliders** belonging to the vehicle's main rigidbody. No joint-attached colliders are
-	valid here. Otherwise, strange behaviors and side effects may happen when the vehicle enters in
-	contact with other objects.
+Game-ready 3D vehicles usually come with a simplified shape of the vehicle (collision mesh). The
+vehicle collider must be a **convex** collider (MeshCollider > Convex), or a set of convex
+colliders. The step 8 above describes how to add it as  collider to the vehicle.
 
-		(good vs. bad picture)
+The collision mesh is used for collision detection and inertia calculations. The vehicle dynamics
+are actually affected by the shape of the collider. Thus, a collider resembling the shape of its
+vehicle will provide a better simulation.
 
 !!! warning "&fa-warning:lg; At least one convex collider is mandatory in the vehicle"
 	A vehicle without colliders will exhibit a very weird and unnatural behavior as soon as the
 	simulation starts, unless the inertia tensor is explicitly set (Rigidbody.inertiaTensor).
 	Also, as described above, bad things will happen when contacting other objects.
 
+![Convex vehicle collider](/img/user-guide/vpp-vehicle-collider.png){: .clickview .img-medium }
 
-#### Racata
-1.	Create an empty GameObject in the scene (<kbd>ctrl-shift-N</kbd>). Name it **Vehicle**. Add
-	these components (from the Component menu):
+The collider of the vehicle can be:
 
-	- Component > Physics > Rigidbody
-	- Component > Vehicle Physics > Vehicle Controller
-	- Component > Vehicle Physics > Input > Standard Input
+- A collision mesh that comes with the 3D vehicle (best case).
+- A box collider roughly resembling the vehicle's shape (not recommended, use for early prototyping
+	only).
+- A MeshCollider directly added to the 3D vehicle mesh. This may or	may not work depending on the
+	actual complexity of the vehicle mesh. Most likely, exterior parts of the vehicle such as
+	mirrors and antennas will have an adverse effect in the collisions.
 
-2.	Create a child GameObject (<kbd>ctrl-alt-N</kbd>). Name it **WheelColliders**.
+!!! warning "&fa-warning:lg; VPWheelCollider components must be located _**inside**_ the vehicle's colliders"
+	Ensure that the **top half** of each VPWheelCollider component is **enclosed within regular
+	convex colliders** belonging to the vehicle's main rigidbody. No joint-attached colliders are
+	valid here. Otherwise, strange behaviors and side effects may happen when the vehicle enters in
+	contact with other objects.
 
-3.	Create four children GameObjects under WheelColliders. Name them **WheelFL, WheelFR, WheelRL,
-	WheelRR**. Your vehicle GameObject should be like this:
-
-		Vehicle
-		|- WheelColliders
-			|- WheelFL
-			|- WheelFR
-			|- WheelRL
-			|- WheelRR
-
-4.	Select the four WheelXX GameObjects, then add a **VPWheelCollider** component to them:
-
-	- Component > Vehicle Physics > Wheel Collider
-
-5.	Add the vehicle mesh as child of your Vehicle GameObject. The vehicle mesh should reside inside
-	its own sub-hierarchy entirely:
-
-		Vehicle
-		|- WheelColliders
-		|	|- WheelFL
-		|	|- WheelFR
-		|	|- WheelRL
-		|	|- WheelRR
-        |- My3DVehicle
-			|  (hierarchy here is specific to each 3D vehicle)
-			|- MeshBody
-			|- MeshFrontLeft
-			|- MeshFrontRight
-			|- MeshRearLeft
-			|- MeshRearRight
-			|-   ...
-
-6.	For each VPWheelCollider component (WheelXX) configure the property **Visual objects > Wheel**
-	to their corresponding counterpart in the mesh. E.g. _WheelFL > Visual objects > Wheel_ to
-	_MeshFrontLeft_.
-
-7.	Select the four WheelXX components. Then click the context menu for the VPWheelCollider
-	component and choose **Adjust position and radius to the Wheel mesh**. VPWheelColliders are
-	automagically adjusted to fit the wheel meshes.
-
-	> If you want / need to do it manually:
-	>
-	> - The position of the VPWheelCollider component must be the same as the Transform for the
-	>   corresponding visual wheel.
-	> - Use the VPWheelCollider's **center** property for moving the wheel shape to the outer bound
-	>   of the visual wheel.
-	> - Adjust the **radius** property for matching the radius of the visual wheel.
-
-8.	Configure the **axles** property in VPVehicleController. Each axle must receive the references
-	to their respective left-right VPWhelCollider components.
-
-9.	Add or configure the **vehicle collider**. The 3D vehicles usually come with a simplified shape
-	of the vehicle (collider). This is used for collision detection. Add a **MeshCollider**
-	component to the collider object and mark is as **Convex**.
-
-	If the vehicle comes without collider you can add a Cube as child of the Vehicle object, then
-	scale it to roughly match the shape of the vehicle.
-
-	!!! warning "&fa-warning:lg; VPWheelCollider components must be located _**inside**_ the vehicle's colliders"
-		Ensure that the top half of each VPWheelCollider component is positioned **inside** regular
-		convex colliders belonging to the vehicle's main rigidbody. No joint-attached bodies and
-		colliders are valid here. Otherwise, strange behaviors and side effects may happen when
-		the vehicle makes contact with other objects.
-
-	!!! warning "&fa-warning:lg; At least one convex collider is mandatory in the vehicle"
-		A vehicle without colliders will exhibit a very weird and unnatural behavior as soon as the
-		simulation starts, unless the inertia tensor is explicitly set (Rigidbody.inertiaTensor).
-		Also, as described above, bad things will happen when contacting other objects.
-
+	![Good (left) and bad (right) positions for the VPWheelCollider with respect to the vehicle collider](/img/user-guide/vpp-colliders-and-wheels.png){: .clickview .img-small }
 
 ### First test drive
 
