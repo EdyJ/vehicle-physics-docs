@@ -35,7 +35,8 @@ This scene contains everything you need: test scenario, camera, light, ground ma
 - Create an empty GameObject in the scene, name it **L200**.
 - Add these components from the Component menu or Add Component button:
 
-	- Component > Physics > **Rigidbody**
+	- Component > Physics > **Rigidbody**.<br>
+		_Mass_ = 1000, _Angular Drag_ = 0, _Interpolation_ = _Interpolate_
 	- Component > Vehicle Physics > **Vehicle Controller**
 	- Component > Vehicle Physics > Input > **Standard Input**
 
@@ -103,7 +104,18 @@ _"Configuring the VPWheelColliders manually"_ below if you need to do it manuall
 <div>
 ![](/img/user-guide/vpp-rig-tutorial-08.png){: .clickview }
 
-8- Add the vehicle collision mesh
+8- Configure the vehicle Axles
+{: .header }
+
+- Select the L200 GameObject.
+- Locate the **VPVehicleController** component and expand the **Axles** section.
+- Drag each wheel under WheelColliders to their corresponding slot as front/rear, left/right wheel.
+
+</div>
+<div>
+![](/img/user-guide/vpp-rig-tutorial-09.png){: .clickview }
+
+9- Add the vehicle collision mesh
 {: .header }
 
 The collision mesh is a simplified version of the vehicle mesh.
@@ -117,9 +129,9 @@ for important information and requirements on the collision mesh for your vehicl
 
 </div>
 <div>
-![](/img/user-guide/vpp-rig-tutorial-09.png){: .clickview }
+![](/img/user-guide/vpp-rig-tutorial-10.png){: .clickview }
 
-9- Configure the collision mesh as Collider
+10- Configure the collision mesh as Collider
 {: .header }
 
 - Select all the meshes that compose the collision mesh (_Base_ and _Top_ in this case).
@@ -127,7 +139,7 @@ for important information and requirements on the collision mesh for your vehicl
 - Configure the physic **Material** as _Vehicle Body_.
 - Remove the MeshRenderer and MeshFilter components.
 
-**&fa-check-square-o:lg;&nbsp; Done! The vehicle is ready for the first test.**
+**&fa-check-square-o:lg;&nbsp; Done! The vehicle is ready for the first test drive.**
 
 </div>
 </section>
@@ -161,6 +173,129 @@ $(document).on('ready', function() {
 	2. Use the VPWheelCollider's **center** property for moving the wheel gizmo to the outer bound
 		of the visual wheel.
 	3. Adjust the VPWheelCollider's **radius** for matching the radius of the visual wheel.
+
+### First test drive
+
+Let's check out if everything is ok so far in the vehicle. Review the steps above carefully if
+something doesn't work or you get some error.
+
+Note that vehicle dynamics are not configured at all - the car is using the default values for all
+components. This allows some fun driving, but the handling and behavior will be poor. The next
+chapter [Configuring Vehicles](https://vehiclephysics.com/user-guide/vehicle-setup/) describes
+everything you need to know to configure the car properly.
+<div class="slick-carousel">
+<section class="test-slider slider">
+<div>
+![](/img/user-guide/vpp-test-tutorial-01.png){: .clickview }
+
+1- Configure the camera to follow the car
+{: .header}
+
+- Select the **Camera Controller** GameObject.
+- Drag the **L200** GameObject from the Hierarchy to the **Target** property in the camera controller.
+
+</div>
+<div>
+![](/img/user-guide/vpp-test-tutorial-02.png){: .clickview }
+
+2- Click Play &fa-play:lg; in the editor!
+{: .header}
+
+- Throttle, brake, steering: **arrow keys** or **WSAD**
+- Handbrake: **space**
+- Clutch: **ctrl** (i.e. for hot starts)
+- Switch camera: **C**, **F1**-**F4**
+- Reset car: **Enter** (i.e. after rolling over)
+- Slow time mode: **T**
+
+</div>
+</section>
+</div>
+<script type="text/javascript">
+$(document).on('ready', function() {
+  $(".slider").slick({
+	dots: true,
+	arrows: true,
+	infinite: false,
+	draggable: false,
+	accessibility: false,
+	speed: 0,
+	pauseOnDotsHover: true,
+	fade: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dotsClass: 'gusi-dots'
+  });
+});
+</script>
+
+### Adding and configuring effects
+
+Now let's add the basic audio and visual effects. You may Play &fa-play; the scene after each step for testing
+how it works.
+<div class="slick-carousel">
+<section class="test-slider slider">
+<div>
+![](/img/user-guide/vpp-effects-tutorial-01.png){: .clickview }
+
+1- Audio effects
+{: .header}
+
+
+</div>
+<div>
+![](/img/user-guide/vpp-effects-tutorial-02.png){: .clickview }
+
+2- Tire effects
+{: .header}
+
+
+</div>
+<div>
+![](/img/user-guide/vpp-effects-tutorial-03.png){: .clickview }
+
+3- Visual effects
+{: .header}
+
+The L200 test car is not prepared for visual effects. In your vehicles you can add a [VPVisualEffects](https://vehiclephysics.com/components/vehicle-addons/#vpvisualeffects)
+component for these visual effects:
+
+- Steering wheel rotation
+- Lights: head, brakes, reverse
+- Dashboard speed and rpm gauges
+- Dashboard lights
+
+</div>
+<div>
+![](/img/user-guide/vpp-effects-tutorial-04.png){: .clickview }
+
+4- Ground effects
+{: .header}
+
+
+</div>
+</section>
+</div>
+<script type="text/javascript">
+$(document).on('ready', function() {
+  $(".slider").slick({
+	dots: true,
+	arrows: true,
+	infinite: false,
+	draggable: false,
+	accessibility: false,
+	speed: 0,
+	pauseOnDotsHover: true,
+	fade: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dotsClass: 'gusi-dots'
+  });
+});
+</script>
+
+
+
 
 ### The vehicle collider
 
@@ -218,13 +353,4 @@ standard keys (arrows or WSAD). Wheels should move and steer properly.
 for configuring the vehicle dynamics (engine, brakes, etc), or continue here for adding further
 components and features such as audio and visual effects.
 {: .alert .alert-success }
-
-
-### Cameras
-
-### Sounds
-
-### Ground materials and tire effects
-
-### Visual effects
 
