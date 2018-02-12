@@ -73,8 +73,11 @@ Vehicle Rig and Setup
 - 100 €/hour, with a limit of 8 hours per week per customer.
 - Traveling to the customer's location: 900 €/day + expenses.
 
-Check out the [terms & conditions for the custom development services below](#custom-development-services_1).
-Need more information? [Get in touch](mailto:edy@vehiclephysics.com)!
+Customers in European Union should supply VAT number. Without valid VAT number, EU customers will
+	be charged VAT.
+
+Check out the [terms & conditions for the custom development
+services below](#custom-development-services_1). Need more information? [Get in touch](mailto:edy@vehiclephysics.com)!
 
 ### Terms & Conditions
 
