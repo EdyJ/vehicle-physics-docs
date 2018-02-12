@@ -7,10 +7,10 @@ any vehicle following the same steps.
 Requirements
 :	An Unity 3D project with the VPP core and sample assets (see [Setting Up Vehicle Physics Pro](/user-guide/setting-up-vpp)).
 
-### Base hierarchy and components
+### Basic working vehicle
 
-Prepare a test scene, create the vehicle GameObject, add the basic VPP components and
-configure the vehicle.
+Prepare a test scene, create the vehicle GameObject, add the basic VPP components, configure and
+test the vehicle.
 <div class="slick-carousel">
 <section class="test-slider slider">
 <div>
@@ -36,7 +36,7 @@ This scene contains everything you need: test scenario, camera, light, ground ma
 - Add these components from the Component menu or Add Component button:
 
 	- Component > Physics > **Rigidbody**.<br>
-		_Mass_ = 1000, _Angular Drag_ = 0, _Interpolation_ = _Interpolate_
+		_Mass_ = 1200, _Angular Drag_ = 0, _Interpolation_ = _Interpolate_
 	- Component > Vehicle Physics > **Vehicle Controller**
 	- Component > Vehicle Physics > Input > **Standard Input**
 
@@ -139,8 +139,31 @@ for important information and requirements on the collision mesh for your vehicl
 - Configure the physic **Material** as _Vehicle Body_.
 - Remove the MeshRenderer and MeshFilter components.
 
-**&fa-check-square-o:lg;&nbsp; Done! The vehicle is ready for the first test drive.**
+The vehicle is now ready for the first test drive.
 
+</div>
+<div>
+![](/img/user-guide/vpp-test-tutorial-01.png){: .clickview }
+
+11- Configure the camera to follow the car
+{: .header}
+
+- Select the **Camera Controller** GameObject.
+- Drag the **L200** GameObject from the Hierarchy to the **Target** property in the camera controller.
+
+</div>
+<div>
+![](/img/user-guide/vpp-test-tutorial-02.png){: .clickview }
+
+12- First test drive: Click Play &fa-play:lg; in the editor!
+{: .header}
+
+- Throttle, brake, steering: **arrow keys** or **WSAD**
+- Handbrake: **space**
+- Clutch: **ctrl** (i.e. for hot starts)
+- Switch camera: **C**, **F1**-**F4**
+- Reset car: **Enter** (i.e. after rolling over)
+- Slow time mode: **T**
 </div>
 </section>
 </div>
@@ -163,6 +186,14 @@ $(document).on('ready', function() {
 });
 </script>
 
+You should now be driving the L200 in the test scene. Review the steps above carefully if something
+doesn't work or you get some error.
+
+Note that vehicle dynamics are not configured at all - the car is using the default values for all
+components. This allows some fun driving, but the handling and behavior will be poor. The next
+chapter [Configuring Vehicles](https://vehiclephysics.com/user-guide/vehicle-setup/) describes
+everything you need to know to configure the car properly.
+
 !!! info "&fa-info-circle:lg; Configuring the VPWheelColliders manually"
 
 	If the VPWheelCollider option **Adjust position and radius to the Wheel mesh** doesn't work in
@@ -174,65 +205,11 @@ $(document).on('ready', function() {
 		of the visual wheel.
 	3. Adjust the VPWheelCollider's **radius** for matching the radius of the visual wheel.
 
-### First test drive
-
-Let's check out if everything is ok so far in the vehicle. Review the steps above carefully if
-something doesn't work or you get some error.
-
-Note that vehicle dynamics are not configured at all - the car is using the default values for all
-components. This allows some fun driving, but the handling and behavior will be poor. The next
-chapter [Configuring Vehicles](https://vehiclephysics.com/user-guide/vehicle-setup/) describes
-everything you need to know to configure the car properly.
-<div class="slick-carousel">
-<section class="test-slider slider">
-<div>
-![](/img/user-guide/vpp-test-tutorial-01.png){: .clickview }
-
-1- Configure the camera to follow the car
-{: .header}
-
-- Select the **Camera Controller** GameObject.
-- Drag the **L200** GameObject from the Hierarchy to the **Target** property in the camera controller.
-
-</div>
-<div>
-![](/img/user-guide/vpp-test-tutorial-02.png){: .clickview }
-
-2- Click Play &fa-play:lg; in the editor!
-{: .header}
-
-- Throttle, brake, steering: **arrow keys** or **WSAD**
-- Handbrake: **space**
-- Clutch: **ctrl** (i.e. for hot starts)
-- Switch camera: **C**, **F1**-**F4**
-- Reset car: **Enter** (i.e. after rolling over)
-- Slow time mode: **T**
-
-</div>
-</section>
-</div>
-<script type="text/javascript">
-$(document).on('ready', function() {
-  $(".slider").slick({
-	dots: true,
-	arrows: true,
-	infinite: false,
-	draggable: false,
-	accessibility: false,
-	speed: 0,
-	pauseOnDotsHover: true,
-	fade: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	dotsClass: 'gusi-dots'
-  });
-});
-</script>
 
 ### Adding and configuring effects
 
-Now let's add the basic audio and visual effects. You may Play &fa-play; the scene after each step for testing
-how it works.
+Now let's configure the basic audio and visual effects. You may Play &fa-play; the scene after each
+step for testing how it works.
 <div class="slick-carousel">
 <section class="test-slider slider">
 <div>
@@ -254,7 +231,15 @@ how it works.
 <div>
 ![](/img/user-guide/vpp-effects-tutorial-03.png){: .clickview }
 
-3- Visual effects
+3- Configure the driver's view
+{: .header}
+
+
+</div>
+<div>
+![](/img/user-guide/vpp-effects-tutorial-04.png){: .clickview }
+
+4- Visual effects
 {: .header}
 
 The L200 test car is not prepared for visual effects. In your vehicles you can add a [VPVisualEffects](https://vehiclephysics.com/components/vehicle-addons/#vpvisualeffects)
@@ -265,13 +250,8 @@ component for these visual effects:
 - Dashboard speed and rpm gauges
 - Dashboard lights
 
-</div>
-<div>
-![](/img/user-guide/vpp-effects-tutorial-04.png){: .clickview }
-
-4- Ground effects
-{: .header}
-
+Check out the _VPP JPickup_ vehicle in the scene _Vehicle Physics Pro - Getting Started_ for
+learning how this component works.
 
 </div>
 </section>
