@@ -166,23 +166,7 @@ The vehicle is now ready for the first test drive.
 </section>
 </div>
 <script src="/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-$(document).on('ready', function() {
-  $(".slider").slick({
-	dots: true,
-	arrows: true,
-	infinite: false,
-	draggable: false,
-	accessibility: false,
-	speed: 0,
-	pauseOnDotsHover: true,
-	fade: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	dotsClass: 'gusi-dots'
-  });
-});
-</script>
+<script src="/js/slick-launcher.js" type="text/javascript" charset="utf-8"></script>
 
 You should now be driving the L200 in the test scene. Review the steps above carefully if something
 doesn't work or you get some error.
@@ -248,23 +232,6 @@ result, the vehicle will be more prone to rolling over.
 </div>
 </section>
 </div>
-<script type="text/javascript">
-$(document).on('ready', function() {
-  $(".slider").slick({
-	dots: true,
-	arrows: true,
-	infinite: false,
-	draggable: false,
-	accessibility: false,
-	speed: 0,
-	pauseOnDotsHover: true,
-	fade: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	dotsClass: 'gusi-dots'
-  });
-});
-</script>
 
 ### Adding and configuring effects
 
@@ -353,23 +320,6 @@ Vehicle Physics > Camera > Camera Target).
 </div>
 </section>
 </div>
-<script type="text/javascript">
-$(document).on('ready', function() {
-  $(".slider").slick({
-	dots: true,
-	arrows: true,
-	infinite: false,
-	draggable: false,
-	accessibility: false,
-	speed: 0,
-	pauseOnDotsHover: true,
-	fade: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	dotsClass: 'gusi-dots'
-  });
-});
-</script>
 
 #### Other visual effects
 
