@@ -274,9 +274,9 @@ Telemetry, Audio, Tires, and Driver's View.
 !!! info "&fa-info-circle:lg; Add-on components in Vehicle Physics Pro"
 
 	VPP add-on components don't need to be necessarily at the vehicle's root GameObject. These
-	components may be added to child GameObjects as well. You may arrange several add-on components
-	in different GameObjects of the vehicle, enable disable them at your will, and even create and
-	dispose them in runtime.
+	components may be added to children GameObjects as well. You may arrange several add-on
+	components in different GameObjects of the vehicle, enable disable them at your will, and even
+	create and dispose them in runtime.
 
 You may Play &fa-play; the scene after each step for testing how it works.
 <div class="slick-carousel">
@@ -306,8 +306,8 @@ recommended.
 - Locate the **Car Audio** prefab (_Sample Assets > Prefabs_).
 - Drag it to the L200 GameObject in the Hierarchy so it becomes a child of L200.
 
-_Car Audio_ includes the [VPAudio](/components/vehicle-addons/#vpaudio) component configured with a
-set of AudioSources of standard vehicle effects.
+_Car Audio_ includes the [VPAudio](/components/vehicle-addons/#vpaudio) component pre-configured
+with a set of AudioSources of standard audio effects.
 
 </div>
 <div>
@@ -316,14 +316,38 @@ set of AudioSources of standard vehicle effects.
 3- Tire effects
 {: .header}
 
+- Components > Vehicle Physics > Effects > **Tire Effects**.
+
+[VPTireEffects](/components/vehicle-addons/#vptireeffects) includes tire marks and smoke. Different
+[ground materials](components/ground-materials/) may show different marks, smoke, or particle
+effects (i.e. dust).
 
 </div>
 <div>
 ![](/img/user-guide/vpp-effects-tutorial-04.png){: .clickview }
 
-4- Configure the driver's view
+4- Configure the driver's view (1/2)
 {: .header}
 
+- Create a child GameObject in L200. Name it **Drivers View**.
+- Change its local position to **0, 1.33, 1.09**.
+- Add a Head Motion component: Components > Vehicle Physics > Effects > **Head Motion**.
+- Configure Longitudinal and Lateral motions as **Tilt**.
+
+</div>
+<div>
+![](/img/user-guide/vpp-effects-tutorial-05.png){: .clickview }
+
+4- Configure the driver's view (2/2)
+{: .header}
+
+- Select the **Camera Controller** GameObject.
+- Drag the **Drivers View** GameObject from the Hierarchy to **Attach To > Attach Target** in the
+camera controller.
+
+Alternatively, you may configure the driver's view and other view parameters with the
+[VPCameraTarget](/components/camera-controller/#vpcameratargetsetup) component (Components >
+Vehicle Physics > Camera > Camera Target).
 
 </div>
 </section>
@@ -348,7 +372,7 @@ $(document).on('ready', function() {
 
 #### Other visual effects
 
-The L200 test car is not prepared for visual effects. In your vehicles you can add a [VPVisualEffects](/components/vehicle-addons/#vpvisualeffects)
+The L200 3D model is not prepared for further visual effects. In your vehicles you can add a [VPVisualEffects](/components/vehicle-addons/#vpvisualeffects)
 component for having these:
 
 - Steering wheel rotation
