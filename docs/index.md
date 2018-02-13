@@ -24,6 +24,63 @@ Quick links: [Feature details](/about/features), [demo downloads](/about/demos),
 on Twitter for the latest news and announcements.
 {: .alert .alert-success }
 
+<!-- Not good: keeps adjusting the height to the current slide. Breaks reading afterwards.
+
+div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+	<ol class="carousel-indicators">
+		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="5"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="6"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="7"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="8"></li>
+	</ol>
+
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-ferrari.jpg" alt="Ferrari 458 Italia">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-jpickup.jpg" alt="Japanese Pickup Truck - 3D model by Trevor Ley">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-ferrari-burnout.jpg" alt="Ferrari 458 doing some donuts and burnouts">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-ferrari-spa.jpg" alt="Ferrari 458 at 195 kph / 120 mph before riding Eau Rouge at Spa-Francorchamps">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-loop.jpg" alt="Riding a loop with the Ferrari 458">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-alpha-sandbox.jpg" alt="Early sandbox test with Vehicle Physics Pro">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-truck-trailer-setup.jpg" alt="Setting up a Mercedes-Benz Actros to attach to its trailer">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-truck-trailer-offroad.jpg" alt="Extreme offroad test for the Mercedes-Benz Actros + trailer">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials, three differential setups">
+		</div>
+	</div>
+
+	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div -->
+
+
 <div class="imagegallery" sm="2" md="3" lg="4" style="display:none">
 	<img class="clickview" src="img/gallery/vpp-ferrari.jpg"  alt="Ferrari 458 Italia">
 	<img class="clickview" src="img/gallery/vpp-lancer.jpg" alt="Sports Sedan - 3D model by Eric Adams">
@@ -40,10 +97,6 @@ on Twitter for the latest news and announcements.
 	<img class="clickview" src="img/gallery/vpp-alpha-sandbox.jpg" alt="Early sandbox test with Vehicle Physics Pro">
 	<img class="clickview" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials, three differential setups">
 </div>
-
-_Some vehicle 3D Models were kindly donated by Trevor Ley and Eric Adams.<br>
-Spa-Francorchamps track gently offered by Jasper Stocker, from the Track BuildR asset._
-{: .centered }
 
 Advanced AAA+ vehicle physics simulation
 
@@ -123,16 +176,22 @@ Realistic and coherent
 &fa-gear:spin; Demo scenes and examples
 {: .roadmap .wip }
 
-**First public release!**
+&fa-gear:spin; Documentation
+{: .roadmap .wip }
+
+**First release!**
 {: .roadmap .todo }
 
-Complete the documentation
+Package for the Unity Asset Store
 {: .roadmap .todo }
 
 Anisotropic tire friction
 {: .roadmap .todo }
 
-Additional components
+Hybrid 3D wheel solution
+{: .roadmap .todo }
+
+More vehicle types
 {: .roadmap .todo }
 
 
@@ -150,14 +209,13 @@ Additional components
 #### Contributors
 
 My most sincere gratitude to these great artists who contributed or are contributing in some way
-with Vehicle Physics Pro:
+to Vehicle Physics Pro:
 
 - Trevor Ley (JPickup)
 - [Jasper Stocker](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:412) (Spa-Francorchamps, Stunt Track)
 - [HereVR](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:8060) (APC)
 - [Dog Machine](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:2914) (Multi-purpose Exploration Vehicle)
 - [GameReady 3D](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:1634) (Sound files)
-- Eric Adams (Super car, Tuner car)
 
 
 <a class="twitter-timeline" href="https://twitter.com/VehiclePhysics" data-widget-id="687956324773179396">Tweets by @VehiclePhysics</a>

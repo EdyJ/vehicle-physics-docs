@@ -1,12 +1,12 @@
 # Vehicle Setup Guide
 
 This guide assumes you have your vehicle rigged according to the [Creating a Vehicle](vehicle-creation.md)
-section. Your vehicle should have already passed the first test drive.
+section.
 
-- It's recommended to configure at least the engine audio in the component VPAudio.
-- If you're modifying the values in runtime in the Editor, **remember to backup your values before
-	exiting Play mode**. Either note them down to paper, or use the Copy Component / Paste Component
-	Values functionality from the component's context menu.
+&fa-thumbs-o-up:lg; If you're modifying the values in runtime in the Editor, **remember to backup your
+values before exiting Play mode**. Either note them down to paper, or use the _Copy Component_ /
+_Paste Component Values_ options in the component's context menu.
+{: .alert .alert-info }
 
 ---
 
@@ -17,6 +17,35 @@ section. Your vehicle should have already passed the first test drive.
 ### Mass
 
 Set the vehicle's mass at the rigidbody.
+
+### Center of Mass
+
+Add a gameobject to the vehicle and name it **CoM**. Set its reference at VPVehicleController >
+**Center Of Mass**.
+
+Longitudinal position of the CoM (Z):
+
+- Start at the mid-point between the vehicle's axles.
+- Move it slightly towards the position of the engine.
+- If the specifications include the weights on each axle, then move the Z position of the CoM while
+	watching the telemetry until the weights match the specifications. The VPTelemetry component
+	can be configured to show the load in Kg (option **Show load in	Kg**).
+
+Vertical position of the CoM (Y):
+
+- A rough estimation is slightly above the chassis.
+- You might find this value as Center of Gravity Height in the vehicle specifications.
+- It can also be estimated by watching a similar vehicle in equilibrium on two side wheels ([as in this video](https://www.youtube.com/watch?v=viXprD1CkXg)).
+- Some related articles:
+	- [Finding the Center of Gravity Height](http://www.longacreracing.com/technical-articles.aspx?item=42586)
+	- [Measured Vehicle Center-of-Gravity Locations - Including NHTSA's Data Through 2008 NCAP](http://papers.sae.org/2010-01-0086/)
+
+The sideways position of the CoM (X) should be 0 (middle of the vehicle).
+
+After configuring the CoM you will probably need to make adjustments to the suspension for
+accommodating the new weight distribution. Typically, the spring rates should be adjusted so all
+suspensions reach the same compression ratio at rest. The damper rates should also be fine tunned
+accordingly as well.
 
 ### Suspension
 
@@ -58,36 +87,6 @@ The **damper rate (N/ms<sup>-1</sup>)** should be configured so the
 oscillating behavior resembles the real vehicle. You can drop the vehicle from some height
 (<kbd>Enter</kbd> key by default) and observe the result. A rough starting point for the damper
 rate is around 1/10 of the spring rate.
-
-### Center of Mass
-
-Add a gameobject to the vehicle and name it **CoM**. Set its reference at VPVehicleController >
-**Center Of Mass**. You might want to set **Runtime Com Changes** as "Editor Only", so you could
-modify the position of the CoM and see the results in runtime.
-
-Longitudinal position of the CoM (Z):
-
-- Start at the mid-point between the vehicle's axles.
-- Move it slightly towards the position of the engine.
-- If the specifications include the weights on each axle, then move the Z position of the CoM while
-	watching the telemetry until the weights match the specifications. The VPTelemetry component
-	can be configured to show the load in Kg (option **Show load in	Kg**).
-
-Vertical position of the CoM (Y):
-
-- A rough estimation is slightly above the chassis.
-- You might find this value as Center of Gravity Height in the vehicle specifications.
-- It can also be estimated by watching a similar vehicle in equilibrium on two side wheels ([as in this video](https://www.youtube.com/watch?v=viXprD1CkXg)).
-- Some related articles:
-	- [Finding the Center of Gravity Height](http://www.longacreracing.com/technical-articles.aspx?item=42586)
-	- [Measured Vehicle Center-of-Gravity Locations - Including NHTSA's Data Through 2008 NCAP](http://papers.sae.org/2010-01-0086/)
-
-The sideways position of the CoM (X) should be 0 (middle of the vehicle).
-
-After configuring the CoM you will probably need to make adjustments to the suspension for
-accommodating the new weight distribution. Typically, the spring rates should be adjusted so all
-suspensions reach the same compression ratio at rest. The damper rates should also be fine tunned
-accordingly as well.
 
 ### Engine
 

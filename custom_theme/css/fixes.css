@@ -1,29 +1,41 @@
 
-/* Prevent blockquotes to be giant-sized. Also makes them italic. */
-
-blockquote p
-	{
-	font-size: inherit;
-	font-style: italic;
-	}
-
-/* Solves the problem of jumping to section and being hidden by fixed nav-bar */
-/* https://github.com/twbs/bootstrap/issues/1768 */
-
-
-/* Conflicto con MathJax!  Lo deja oculto
-
-*[id]:before {
-  display: block;
-  content: " ";
-  margin-top: -70px;
-  height: 70px;
-  visibility: hidden;
-}
+/*	Removes the "Home" button in the MkDocs theme, leaving a small margin instead.
+	Uses the attribute selector to prevent "nav navbar-nav navbar-right" to be affected.
+	The inmediate child selector (>) ensures no nested menus are affected.
+	The mkdocs.yml file should have the thin space code for fallback: - "&#8201;": index.md
 */
 
-/* Hides the prev, next and github links when browser width is between 768 and 1200px */
-@media (min-width: 768px) and (max-width: 1199px)
+[class='nav navbar-nav'] > li:first-child
+	{
+	display: none;
+	}
+
+[class='nav navbar-nav']
+	{
+	margin-left: 15px;
+	}
+
+
+/*	Hides the prev, next and github links when browser width is between 992 and 1200px.
+	Leaves Search visible only.
+*/
+
+@media (min-width: 992px) and (max-width: 1199px)
+	{
+	.nav.navbar-nav.navbar-right li:last-child,
+	.nav.navbar-nav.navbar-right li:nth-last-child(2),
+	.nav.navbar-nav.navbar-right li:nth-last-child(3)
+		{
+		display: none;
+		}
+	}
+
+
+/*	Hides the entire right navbar, including the search button, below 992px.
+	Will reappear in the menu below 768px.
+*/
+
+@media (min-width: 768px) and (max-width: 991px)
 	{
 	.nav.navbar-nav.navbar-right
 		{
@@ -32,8 +44,44 @@ blockquote p
 	}
 
 
-/* Add a margin after an UL inside an OL (Bootstrap leaves no margin)
-Example: http://vehiclephysics.com/user-guide/vehicle-creation/
+/*	Top-Down mobile menu:
+	- Hides the GitHub link.
+	- Moves the Search, Next, Prev links to the right.
+	- Fixes the max height of the nav menu for preventing scrollbar when everything is folded.
+*/
+
+@media (max-width: 767px)
+	{
+	.nav.navbar-nav.navbar-right li:last-child
+		{
+		display: none;
+		}
+
+	.nav.navbar-nav.navbar-right
+		{
+		text-align: right;
+		margin-right: 15px;
+		}
+
+	.navbar-collapse
+		{
+		max-height: 345px;
+		}
+	}
+
+
+/* Prevent blockquotes to be giant-sized. Also makes them italic.
+*/
+
+blockquote p
+	{
+	font-size: inherit;
+	font-style: italic;
+	}
+
+
+/*	Add a margin after an UL inside an OL (Bootstrap leaves no margin)
+	Example: http://vehiclephysics.com/user-guide/vehicle-creation/
 */
 
 ol ul
@@ -42,8 +90,8 @@ ol ul
 	}
 
 
-/* Reduce the giant size of the upper and lower margins of the nav in compressed mode
-(when it's not displayed as sidebar)
+/*	Reduce the giant size of the upper and lower margins of the nav in compressed mode
+	(when it's not displayed as sidebar)
 */
 
 .bs-sidenav
@@ -53,8 +101,8 @@ ol ul
 	}
 
 
-/* H5 in bold
-(it's barely perceptible as header now)
+/*	H5 in bold
+	(it's barely perceptible as header now)
 */
 
 h5, .h5
@@ -63,10 +111,11 @@ h5, .h5
 	}
 
 
-/* Fix exagerated padding at the bottom of the content column (was 100px)
+/* 	Fix exagerated padding at the bottom of the content column (was 100px)
 */
 
 div.col-md-9
 	{
 	padding-bottom: 40px;
 	}
+

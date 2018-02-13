@@ -1,5 +1,8 @@
 body {
     padding-top: 70px;
+
+	/* EDY: Overriding Bootstrap color (#555) */
+	color: #222;
 }
 
 /*
