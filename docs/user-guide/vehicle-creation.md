@@ -68,8 +68,7 @@ Select the four Wheel GameObjects, then add a **VPWheelCollider** component to t
 5- Add the visual mesh
 {: .header }
 
-- Locate the L200-Pickup mesh (_Sample Assets > Art > Models > Test Vehicle >
-Meshes_).
+- Locate the L200-Pickup mesh (_Sample Assets > Art > Models > Test Vehicle > Meshes_).
 - Drag it to the L200 GameObject in the Hierarchy so it becomes a child of L200.
 
 &fa-hand-o-right:lg;&nbsp; Check out [3D models and environments](/user-guide/3d-models) for more
@@ -120,8 +119,7 @@ _"Configuring the VPWheelColliders manually"_ below if you need to do it manuall
 
 The collision mesh is a simplified version of the vehicle mesh.
 
-- Locate the L200-Collider mesh (_Sample Assets > Art > Models > Test Vehicle >
-Meshes_).
+- Locate the L200-Collider mesh (_Sample Assets > Art > Models > Test Vehicle > Meshes_).
 - Drag it to the L200 GameObject in the Hierarchy so it becomes a child of L200.
 
 &fa-warning:lg;&nbsp; **A collider is mandatory in the vehicle.** Check out [3D models and environments](/user-guide/3d-models)
@@ -270,8 +268,17 @@ $(document).on('ready', function() {
 
 ### Adding and configuring effects
 
-Now let's configure the basic audio and visual effects. You may Play &fa-play; the scene after each
-step for testing how it works.
+Now let's configure the basic audio and visual effects by adding add-on components to the vehicle:
+Telemetry, Audio, Tires, and Driver's View.
+
+!!! info "&fa-info-circle:lg; Add-on components in Vehicle Physics Pro"
+
+	VPP add-on components don't need to be necessarily at the vehicle's root GameObject. These
+	components may be added to child GameObjects as well. You may arrange several add-on components
+	in different GameObjects of the vehicle, enable disable them at your will, and even create and
+	dispose them in runtime.
+
+You may Play &fa-play; the scene after each step for testing how it works.
 <div class="slick-carousel">
 <section class="test-slider slider">
 <div>
@@ -280,9 +287,14 @@ step for testing how it works.
 1- Telemetry
 {: .header}
 
-Not an effect, but an invaluable tool for watching the vehicle's values and configuring
-the parameters of the effects properly. **Having the Telemetry window visible while testing the
-vehicle is highly recommended**.
+- Components > Vehicle Physics > Telemetry > **Telemetry Window**.
+- Enable **Show Data**.
+
+[VPTelemetry](/components/vehicle-telemetry/#vptelemetry) is an invaluable tool for diagnosing
+issues and configuring the effects properly.
+
+&fa-hand-o-right:lg;&nbsp; Having the Telemetry window visible while testing the vehicle is highly
+recommended.
 
 </div>
 <div>
@@ -291,6 +303,11 @@ vehicle is highly recommended**.
 2- Audio effects
 {: .header}
 
+- Locate the **Car Audio** prefab (_Sample Assets > Prefabs_).
+- Drag it to the L200 GameObject in the Hierarchy so it becomes a child of L200.
+
+_Car Audio_ includes the [VPAudio](/components/vehicle-addons/#vpaudio) component configured with a
+set of AudioSources of standard vehicle effects.
 
 </div>
 <div>
@@ -307,24 +324,6 @@ vehicle is highly recommended**.
 4- Configure the driver's view
 {: .header}
 
-
-</div>
-<div>
-![](/img/user-guide/vpp-effects-tutorial-05.png){: .clickview }
-
-5- Visual effects
-{: .header}
-
-The L200 test car is not prepared for visual effects. In your vehicles you can add a [VPVisualEffects](https://vehiclephysics.com/components/vehicle-addons/#vpvisualeffects)
-component for these visual effects:
-
-- Steering wheel rotation
-- Lights: head, brakes, reverse
-- Dashboard speed and rpm gauges
-- Dashboard lights
-
-Check out the _VPP JPickup_ vehicle in the scene _Vehicle Physics Pro - Getting Started_ for
-learning how this component works.
 
 </div>
 </section>
@@ -346,6 +345,19 @@ $(document).on('ready', function() {
   });
 });
 </script>
+
+#### Other visual effects
+
+The L200 test car is not prepared for visual effects. In your vehicles you can add a [VPVisualEffects](/components/vehicle-addons/#vpvisualeffects)
+component for having these:
+
+- Steering wheel rotation
+- Lights: head, brakes, reverse
+- Dashboard speed and rpm gauges
+- Dashboard lights
+
+Check out the _VPP JPickup_ vehicle in the scene _Getting Started - JPickup_ for learning how this
+component works.
 
 &fa-thumbs-up:lg; You can now head to the [Vehicle Setup Guide](vehicle-setup.md){: .alert-link }
 for configuring the vehicle dynamics (center of mass, engine, brakes, etc).
