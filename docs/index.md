@@ -24,58 +24,10 @@ Quick links: [Feature details](/about/features), [demo downloads](/about/demos),
 on Twitter for the latest news and announcements.
 {: .alert .alert-success }
 
-Check this out: there must be a plain text right before the main div. Otherwise, the content of the
-slides is taken as-is without being translated by Markdown.
-<div class="slick-carousel">
-<section class="test-slider slider">
-<div>
-![Ferrari 458 Italia](/img/gallery/vpp-ferrari.jpg){: .clickview }
+<!-- Not good: keeps adjusting the height to the current slide. Breaks reading afterwards.
 
-1 - Create the GameObject
-{: .header}
+div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-Include the components tal and cual. This is great as the text gets embedded perfectly into the
-slides. Next step: increase the horizontal margins here and move the next / prev buttons to this area.
-</div>
-<div>
-	<img class="clickview" src="img/gallery/vpp-jpickup.jpg" alt="Japanese Pickup Truck - 3D model by Trevor Ley">
-</div>
-<div>
-	<img class="clickview" src="img/gallery/vpp-ferrari-burnout.jpg" alt="Ferrari 458 doing some donuts and burnouts">
-</div>
-<div>
-	<img class="clickview" src="img/gallery/vpp-ferrari-spa.jpg" alt="Ferrari 458 at 195 kph / 120 mph before riding Eau Rouge at Spa-Francorchamps">
-</div>
-<div>
-	<img class="clickview" src="img/gallery/vpp-loop.jpg" alt="Riding a loop with the Ferrari 458">
-</div>
-<div>
-	<img class="clickview" src="img/gallery/vpp-alpha-sandbox.jpg" alt="Early sandbox test with Vehicle Physics Pro">
-</div>
-<div>
-	<img class="clickview" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials, three differential setups">
-</div>
-</section>
-</div>
-<script src="/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-$(document).on('ready', function() {
-  $(".slider").slick({
-	dots: true,
-	arrows: true,
-	infinite: false,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	dotsClass: 'gusi-dots'
-  });
-});
-</script>
-
-As shown in the previous carousel, there's still several things to do and configure. For example,
-numbers are not highlighted to reflect the current slide.
-
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-	<!-- Indicators -->
 	<ol class="carousel-indicators">
 		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -84,9 +36,10 @@ numbers are not highlighted to reflect the current slide.
 		<li data-target="#carousel-example-generic" data-slide-to="4"></li>
 		<li data-target="#carousel-example-generic" data-slide-to="5"></li>
 		<li data-target="#carousel-example-generic" data-slide-to="6"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="7"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="8"></li>
 	</ol>
 
-	<!-- Wrapper for slides -->
 	<div class="carousel-inner" role="listbox">
 		<div class="item active">
 			<img class="clickview, img-carousel" src="img/gallery/vpp-ferrari.jpg" alt="Ferrari 458 Italia">
@@ -107,11 +60,16 @@ numbers are not highlighted to reflect the current slide.
 			<img class="clickview, img-carousel" src="img/gallery/vpp-alpha-sandbox.jpg" alt="Early sandbox test with Vehicle Physics Pro">
 		</div>
 		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-truck-trailer-setup.jpg" alt="Setting up a Mercedes-Benz Actros to attach to its trailer">
+		</div>
+		<div class="item">
+			<img class="clickview, img-carousel" src="img/gallery/vpp-truck-trailer-offroad.jpg" alt="Extreme offroad test for the Mercedes-Benz Actros + trailer">
+		</div>
+		<div class="item">
 			<img class="clickview, img-carousel" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials, three differential setups">
 		</div>
 	</div>
 
-	<!-- Controls -->
 	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 		<span class="sr-only">Previous</span>
@@ -120,7 +78,7 @@ numbers are not highlighted to reflect the current slide.
 		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 		<span class="sr-only">Next</span>
 	</a>
-</div>
+</div -->
 
 
 <div class="imagegallery" sm="2" md="3" lg="4" style="display:none">
@@ -139,10 +97,6 @@ numbers are not highlighted to reflect the current slide.
 	<img class="clickview" src="img/gallery/vpp-alpha-sandbox.jpg" alt="Early sandbox test with Vehicle Physics Pro">
 	<img class="clickview" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials, three differential setups">
 </div>
-
-_Some vehicle 3D Models were kindly donated by Trevor Ley and Eric Adams.<br>
-Spa-Francorchamps track gently offered by Jasper Stocker, from the Track BuildR asset._
-{: .centered }
 
 Advanced AAA+ vehicle physics simulation
 
@@ -255,7 +209,7 @@ More vehicle types
 #### Contributors
 
 My most sincere gratitude to these great artists who contributed or are contributing in some way
-with Vehicle Physics Pro:
+to Vehicle Physics Pro:
 
 - Trevor Ley (JPickup)
 - [Jasper Stocker](https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=popularity/query=publisher:412) (Spa-Francorchamps, Stunt Track)

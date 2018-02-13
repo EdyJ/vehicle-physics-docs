@@ -380,8 +380,8 @@ component for having these:
 - Dashboard speed and rpm gauges
 - Dashboard lights
 
-Check out the _VPP JPickup_ vehicle in the scene _Getting Started - JPickup_ for learning how this
-component works.
+Check out the _VPP JPickup_ vehicle in the scene _Playground 1k - JPickup - Keyboard_ for learning
+how this component works.
 
 &fa-thumbs-up:lg; You can now head to the [Vehicle Setup Guide](vehicle-setup.md){: .alert-link }
 for configuring the vehicle dynamics (center of mass, engine, brakes, etc).
