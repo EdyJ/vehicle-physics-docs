@@ -277,15 +277,18 @@ step for testing how it works.
 <div>
 ![](/img/user-guide/vpp-effects-tutorial-01.png){: .clickview }
 
-1- Audio effects
+1- Telemetry
 {: .header}
 
+Not an effect, but an invaluable tool for watching the vehicle's values and configuring
+the parameters of the effects properly. **Having the Telemetry window visible while testing the
+vehicle is highly recommended**.
 
 </div>
 <div>
 ![](/img/user-guide/vpp-effects-tutorial-02.png){: .clickview }
 
-2- Tire effects
+2- Audio effects
 {: .header}
 
 
@@ -293,7 +296,7 @@ step for testing how it works.
 <div>
 ![](/img/user-guide/vpp-effects-tutorial-03.png){: .clickview }
 
-3- Configure the driver's view
+3- Tire effects
 {: .header}
 
 
@@ -301,7 +304,15 @@ step for testing how it works.
 <div>
 ![](/img/user-guide/vpp-effects-tutorial-04.png){: .clickview }
 
-4- Visual effects
+4- Configure the driver's view
+{: .header}
+
+
+</div>
+<div>
+![](/img/user-guide/vpp-effects-tutorial-05.png){: .clickview }
+
+5- Visual effects
 {: .header}
 
 The L200 test car is not prepared for visual effects. In your vehicles you can add a [VPVisualEffects](https://vehiclephysics.com/components/vehicle-addons/#vpvisualeffects)
