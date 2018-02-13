@@ -20,7 +20,7 @@ test the vehicle.
 {: .header}
 
 - Open an Unity 3D project with Vehicle Physics Pro
-- Load the scene **VP Playground 1k - Sandbox**
+- Load the scene **Playground 1k - Sandbox**
 (_Sample Assets > Scenes_).
 
 This scene contains everything you need: test scenario, camera, light, ground materials.
@@ -211,7 +211,7 @@ caused by the wheel colliders being outside the vehicle's collider.
 The option **Adjust position and radius to the Wheel mesh** (step 7 above) places the wheel collider
 at the outer bound of the wheel. This position provides the best stability (larger wheelbase).
 However, it's important that the top half of the WheelColliders remain _inside_ the vehicle's
-collider for avoiding the described effects.
+collider for avoiding the described effects. [More information on vehicle colliders](/user-guide/3d-models/#vehicle-collider).
 
 Check out the description of the issue and possible solutions below. Choose one of the solutions and
 apply it.
@@ -229,8 +229,8 @@ Good (left) and bad (right) positions for the wheel collider with respect to the
 Solution 1 (recommended)
 {: .header}
 
-Modify **scale.x** in L200-collider to **1.1**. This is enough for the vehicle collider to enclose
-the top half of the wheel colliders.
+Modify **scale.x** in L200-collider to **1.1**. In this case this is enough for the vehicle collider
+to enclose the top half of the wheel colliders.
 
 Ideally, the collider should have been designed for including the top half of the wheel meshes.
 
