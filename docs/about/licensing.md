@@ -65,8 +65,8 @@ Expert Assistance
 
 Vehicle Rig and Setup
 
-:	Send me your 3D model and the real specifications. I'll rig and configure it for you as closely
-	as possible to the real vehicle.
+:	Send me your [3D model](/user-guide/3d-models) and the [vehicle specifications](/advanced/configuring-realistic-vehicles/).
+	I'll rig and configure it for you as closely as possible to the real vehicle.
 
 ##### Rates
 
