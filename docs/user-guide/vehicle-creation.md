@@ -1,4 +1,4 @@
-# Creating a vehicle
+# Creating vehicles
 
 This step-by-step tutorial shows how to create and configure a new vehicle from scratch in Vehicle
 Physics Pro. You will be configuring and rigging the L200-Pickup Test Vehicle, but you may configure
@@ -342,8 +342,9 @@ effects (i.e. dust).
 {: .header}
 
 - Select the **Camera Controller** GameObject.
-- Drag the **Drivers View** GameObject from the Hierarchy to **Attach To > Attach Target** in the
-camera controller.
+- Drag the **Drivers View** GameObject to **Attach To > Attach Target** in the camera controller.
+- Press <kbd>C</kbd> several times (or <kbd>F1</kbd> once) while playing the scene for enabling the
+driver's view.
 
 Alternatively, you may configure the driver's view and other view parameters with the
 [VPCameraTarget](/components/camera-controller/#vpcameratargetsetup) component (Components >
@@ -386,4 +387,3 @@ how this component works.
 &fa-thumbs-up:lg; You can now head to the [Vehicle Setup Guide](vehicle-setup.md){: .alert-link }
 for configuring the vehicle dynamics (center of mass, engine, brakes, etc).
 {: .alert .alert-success }
-
