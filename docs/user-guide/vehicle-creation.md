@@ -57,7 +57,7 @@ This scene contains everything you need: test scenario, camera, light, ground ma
 4- Add the wheel components
 {: .header }
 
-Select the four WheelXX GameObjects, then add a **VPWheelCollider** component to them:
+Select the four Wheel GameObjects, then add a **VPWheelCollider** component to them:
 
 - Component > Vehicle Physics > **Wheel Collider**
 
@@ -124,7 +124,7 @@ The collision mesh is a simplified version of the vehicle mesh.
 Meshes_).
 - Drag it to the L200 GameObject in the Hierarchy so it becomes a child of L200.
 
-&fa-hand-o-right:lg;&nbsp; A collider is mandatory in the vehicle. Check out [3D models and environments](/user-guide/3d-models)
+&fa-warning:lg;&nbsp; **A collider is mandatory in the vehicle.** Check out [3D models and environments](/user-guide/3d-models)
 for important information and requirements on the collision mesh for your vehicles.
 
 </div>
@@ -143,7 +143,7 @@ The vehicle is now ready for the first test drive.
 
 </div>
 <div>
-![](/img/user-guide/vpp-test-tutorial-01.png){: .clickview }
+![](/img/user-guide/vpp-rig-tutorial-11.png){: .clickview }
 
 11- Configure the camera to follow the car
 {: .header}
@@ -153,7 +153,7 @@ The vehicle is now ready for the first test drive.
 
 </div>
 <div>
-![](/img/user-guide/vpp-test-tutorial-02.png){: .clickview }
+![](/img/user-guide/vpp-rig-tutorial-12.png){: .clickview }
 
 12- First test drive: Click Play &fa-play:lg; in the editor!
 {: .header}
@@ -205,6 +205,68 @@ everything you need to know to configure the car properly.
 		of the visual wheel.
 	3. Adjust the VPWheelCollider's **radius** for matching the radius of the visual wheel.
 
+### Wheel collider positions
+
+You may notice that the car experiences sudden bounces when touching other objects sideways. This is
+caused by the wheel colliders being outside the vehicle's collider.
+
+The option **Adjust position and radius to the Wheel mesh** (step 7 above) places the wheel collider
+at the outer bound of the wheel. This position provides the best stability (larger wheelbase).
+However, it's important that the top half of the WheelColliders remain _inside_ the vehicle's
+collider for avoiding the described effects.
+
+Check out the description of the issue and possible solutions below. Choose one of the solutions and
+apply it.
+<div class="slick-carousel">
+<section class="test-slider slider">
+<div>
+![Good (left) and bad (right) positions for the wheel collider with respect to the vehicle collider](/img/user-guide/vpp-colliders-and-wheels.png){: .clickview .img-medium }
+
+Good (left) and bad (right) positions for the wheel collider with respect to the vehicle collider.
+
+</div>
+<div>
+![](/img/user-guide/vpp-colliders-and-wheels-01.png){: .clickview }
+
+Solution 1 (recommended)
+{: .header}
+
+Modify **scale.x** in L200-collider to **1.1**. This is enough for the vehicle collider to enclose
+the top half of the wheel colliders.
+
+Ideally, the collider should have been designed for including the top half of the wheel meshes.
+
+</div>
+<div>
+![](/img/user-guide/vpp-colliders-and-wheels-02.png){: .clickview }
+
+Solution 2
+{: .header}
+
+Modify **center.x** in the four wheel colliders to **-0.03** (left wheels) or **0.03** (right
+wheels). This moves the wheel to the interior of the collider, but also reduces the wheelbase. As
+result, the vehicle will be more prone to rolling over.
+
+</div>
+</section>
+</div>
+<script type="text/javascript">
+$(document).on('ready', function() {
+  $(".slider").slick({
+	dots: true,
+	arrows: true,
+	infinite: false,
+	draggable: false,
+	accessibility: false,
+	speed: 0,
+	pauseOnDotsHover: true,
+	fade: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dotsClass: 'gusi-dots'
+  });
+});
+</script>
 
 ### Adding and configuring effects
 
@@ -274,63 +336,7 @@ $(document).on('ready', function() {
 });
 </script>
 
-
-
-
-### The vehicle collider
-
-Game-ready 3D vehicles usually come with a simplified shape of the vehicle (collision mesh). The
-vehicle collider must be a **convex** collider (MeshCollider > Convex), or a set of convex
-colliders.
-
-!!! warning "&fa-warning:lg; At least one convex collider is mandatory in the vehicle"
-	A vehicle without colliders will exhibit a very weird and unnatural behavior as soon as the
-	simulation starts, unless the inertia tensor is explicitly configured (Rigidbody.inertiaTensor).
-
-The collision mesh is used for collision detection and inertia calculations. The vehicle dynamics
-are actually affected by the shape of the collider. Thus, a collider resembling the shape of its
-vehicle will provide a better simulation.
-
-![Convex vehicle collider](/img/user-guide/vpp-vehicle-collider.png){: .clickview .img-medium }
-
-The collider of the vehicle can be:
-
-- A collision mesh that comes with the 3D vehicle (best case).
-- A box collider roughly resembling the vehicle's shape (not recommended, use for early prototyping
-	only).
-- A MeshCollider directly added to the 3D vehicle mesh. This may or	may not work depending on the
-	actual complexity of the vehicle mesh. Most likely, exterior parts of the vehicle such as
-	mirrors and antennas will have an adverse effect in the collisions.
-
-!!! warning "&fa-warning:lg; VPWheelCollider components must be located _**inside**_ the vehicle's colliders"
-	Ensure that the **top half** of each VPWheelCollider component is **enclosed within regular
-	convex colliders** belonging to the vehicle's main rigidbody. No joint-attached colliders are
-	valid here. Otherwise, strange behaviors and side effects may happen when the vehicle enters in
-	contact with other objects.
-
-	![Good (left) and bad (right) positions for the VPWheelCollider with respect to the vehicle collider](/img/user-guide/vpp-colliders-and-wheels.png){: .clickview .img-small }
-
-### First test drive
-
-Let's check out if everything's ok so far. Configure these components as follows:
-
-Rigidbody
-:	- mass = 1000
-	- drag = 0
-	- angular drag = 0
-	- Interpolate: Interpolate.
-
-Telemetry (optional)
-:	Add this component to the vehicle (Component > Vehicle Physics > Telemetry). It will show us
-	what's happening under the hood:
-
-	- Show Data = enabled
-
-Click <kbd>Play</kbd>. The vehicle is now live in the scene and you can drive it around using the
-standard keys (arrows or WSAD). Wheels should move and steer properly.
-
 &fa-thumbs-up:lg; You can now head to the [Vehicle Setup Guide](vehicle-setup.md){: .alert-link }
-for configuring the vehicle dynamics (engine, brakes, etc), or continue here for adding further
-components and features such as audio and visual effects.
+for configuring the vehicle dynamics (center of mass, engine, brakes, etc).
 {: .alert .alert-success }
 

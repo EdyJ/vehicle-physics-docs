@@ -1,5 +1,7 @@
 # 3D models and environment
 
+[TOC]
+
 ## Vehicles
 
 A good vehicle 3D model mets these minimum standards:
@@ -34,15 +36,47 @@ Dashboard gauges and steering wheel must meet these requirements:
 
 - The local origin is the center of rotation
 - They rotate around the Z axis
-- Default Z rotation is zero
+- Default Z rotation is zero. Other axis may have some rotation applied
 
-&fa-lightbulb-o:lg; The center of rotation of the steering wheel is always the center of the
-external circumference. Using the center of the central part or logo is a common mistake.
+&fa-lightbulb-o:lg; Typically, the center of rotation of the steering wheel is the center of the
+external circumference. Using the central part or logo as center is a common mistake.
 {: .alert .alert-success }
+
+#### Vehicle collider
+
+Game-ready 3D vehicles usually come with a simplified shape of the vehicle (collision mesh). The
+vehicle collider must be a **convex** collider (MeshCollider > Convex), or a set of convex
+colliders.
+
+!!! warning "&fa-warning:lg; At least one convex collider is mandatory in the vehicle"
+	A vehicle without colliders will exhibit a very weird and unnatural behavior as soon as the
+	simulation starts, unless the inertia tensor is explicitly configured (Rigidbody.inertiaTensor).
+
+The collision mesh is used for collision detection and inertia calculations. The vehicle dynamics
+are actually affected by the shape of the collider. Thus, a collider resembling the shape of its
+vehicle will provide a better simulation.
+
+![Convex vehicle collider](/img/user-guide/vpp-vehicle-collider.png){: .clickview .img-medium }
+
+The collider of the vehicle can be:
+
+- A collision mesh that comes with the 3D vehicle (best case).
+- A box collider roughly resembling the vehicle's shape (not recommended, use for early prototyping
+	only).
+- A MeshCollider directly added to the 3D vehicle mesh. This may or	may not work depending on the
+	actual complexity of the vehicle mesh. Most likely, exterior parts of the vehicle such as
+	mirrors and antennas will have an adverse effect in the collisions.
+
+!!! warning "&fa-warning:lg; VPWheelCollider components must be located _**inside**_ the vehicle's colliders"
+	Ensure that the **top half** of each VPWheelCollider component is **enclosed within regular
+	convex colliders** belonging to the vehicle's main rigidbody. Otherwise, strange behaviors and
+	side effects may happen when the vehicle enters in contact with other objects.
+
+	![Good (left) and bad (right) positions for the VPWheelCollider with respect to the vehicle collider](/img/user-guide/vpp-colliders-and-wheels.png){: .clickview .img-small }
 
 #### Articulated vehicles
 
-Multi-part vehicles such as trucks with trailers can be attached together. Each part is a 3D model
+Multi-body vehicles such as trucks with trailers can be attached together. Each part is a 3D model
 that can be setup as an independent vehicle with its own Vehicle Controller (i.e. trailers) or as a
 a separated rigidbody with all wheels configured in the main Vehicle Controller (i.e. articulated bus).
 
@@ -54,6 +88,8 @@ Add a VPVehicleJoint component at the transform representing the _male_ plug:
 
 Both bodies should be close enough to the connected position for preventing abrupt movements when
 the VPVehicleJoint gets enabled.
+
+Each body must have its collider according to the collider specifications above.
 
 #### Driver's view
 
@@ -70,6 +106,8 @@ the driver's view. Add a VPHeadMotion component to a child gameobject of the veh
 TO-DO:
 
 Colliders, continuity, player safety.
+
+Roads & tracks do & dont's
 
 ## Physic Materials
 
