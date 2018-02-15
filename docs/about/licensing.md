@@ -94,7 +94,7 @@ services below](#custom-development-services_1). Need more information? [Get in 
 
 - Vehicle Physics Pro may be used as part of **end-user, closed source applications only**. No
 	development libraries, development tools, open-source projects or middleware of any kind are
-	permitted to use code, resources, technologies or algorithms of Vehicle Physics Pro.
+	permitted to use code, resources, technologies or algorithms included in Vehicle Physics Pro.
 
 - No part of the source code, binaries or resources (including but not limited to art, 3D files,
 	textures and audio) included in Vehicle Physics Pro may be disclosed to a third party, nor
