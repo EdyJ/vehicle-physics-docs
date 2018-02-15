@@ -92,12 +92,13 @@ services below](#custom-development-services_1). Need more information? [Get in 
 	non-commercial entities with a total annual budget in excess of €200,000 for the entire
 	non-commercial entity.
 
-- Vehicle Physics Pro may be used as part of **end-user, closed source products only**. No
+- Vehicle Physics Pro may be used as part of **end-user, closed source applications only**. No
 	development libraries, development tools, open-source projects or middleware of any kind are
-	permitted to use code, technologies or algorithms of Vehicle Physics Pro.
+	permitted to use code, resources, technologies or algorithms of Vehicle Physics Pro.
 
-- No part of the source code or binaries may be disclosed to a third party, nor included as part
-	of any publicly accessible code repository.
+- No part of the source code, binaries or resources (including but not limited to art, 3D files,
+	textures and audio) included in Vehicle Physics Pro may be disclosed to a third party, nor
+	included as part of any publicly accessible repository.
 
 - All licenses are issued to an individual person or company and are nontransferable in any way,
 	including but not limited to renting, subcontracting, leasing, and lending.
