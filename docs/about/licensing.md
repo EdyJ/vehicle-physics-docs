@@ -55,29 +55,34 @@ long term.
 to changes during the Early Access stage.
 {: .alert .alert-warning }
 
-### Custom development services
-
-Expert Assistance
-
-:	Let me take a close look at your project and I'll propose solutions to your specific issues
-	with vehicles. I can also configure your vehicles to match your project's specifications.
-	I'll sign an NDA upon request.
+### Additional Services
 
 Vehicle Rig and Setup
 
 :	Send me your [3D model](/user-guide/3d-models) and the [vehicle specifications](/advanced/configuring-realistic-vehicles/).
 	I'll rig and configure it for you as closely as possible to the real vehicle.
 
+Custom Development
+
+:	Let me take a close look at your project and I'll propose solutions to your specific issues
+	with vehicles. I can also configure your vehicles to match your project's specifications.
+
+Training and Learning
+
+:	I can teach you or your team to work with Vehicle Physics Pro in any level. From basic rigging
+	and setup to advanced vehicle fine-tunning.
+
 ##### Rates
 
 - 100 €/hour, with a limit of 8 hours per week per customer.
 - Traveling to the customer's location: 900 €/day + expenses.
 
-Customers in European Union should supply VAT number. Without valid VAT number, EU customers will
-	be charged VAT.
+##### Notes
 
-Check out the [terms & conditions for the custom development
-services below](#custom-development-services_1). Need more information? [Get in touch](mailto:edy@vehiclephysics.com)!
+- Check out the [terms & conditions for the Additional Services](#additional-services_1) below.
+- Customers in European Union should supply VAT number. Without valid VAT number, EU customers will
+	be charged VAT.
+- I'll sign an NDA upon request.
 
 ### Terms & Conditions
 
@@ -131,7 +136,7 @@ services below](#custom-development-services_1). Need more information? [Get in 
 to changes during the Early Access stage.
 {: .alert .alert-warning }
 
-#### Custom Development Services
+#### Additional Services
 
 - All Intellectual Property Rights related to Vehicle Physics Pro shall remain exclusive property
 	of the author, Angel Garcia Voces.
@@ -140,25 +145,27 @@ to changes during the Early Access stage.
 	exclusive property of the customer.
 
 - Any modifications and/or additions to Vehicle Physics Pro (including, but not limited to code,
-	resources and documentation) as result of the custom development services shall remain exclusive
-	property of Angel Garcia Voces and will be incorporated to the VPP package.
+	resources and documentation) as result of providing the Additional Services shall remain
+	exclusive property of Angel Garcia Voces and will be incorporated to the VPP package.
 
-- Any custom settings, scripts or resources developed by Angel Garcia Voces as result of the custom
-	development services that are specific to the customer's project shall be property of the
+- Any custom settings, scripts or resources developed by Angel Garcia Voces as result of providing
+	the Additional Services that are specific to the customer's project shall be property of the
 	customer.
 
-- Unless explicitly stated otherwise by the customer (NDA), images and/or videos of the custom work
-	may be added to the VPP website, twitter, youtube, blog, and/or any other public channels used
-	by VPP.
+- Unless explicitly stated otherwise (NDA) the customer expressly grants a permission to the author
+	for publishing images and/or videos of the work made while providing the Additional Services
+	in the VPP website, twitter, youtube, blog, and/or any other public channels, for promotional
+	purposes only. No part of the work made specifically for the customer's project (as defined
+	above) will be made public in any case.
 
 - Payments shall be processed in a weekly basis at the end of each week. The author reserves the
-	right of putting the work on hold until any pending payments have been completed.
+	right of putting the services on hold until any pending payments have been completed.
 
-- DISCLAIMER: WHILE THE BEST EFFORT, KNOWLEDGE AND EXPERTISE WILL BE PUT IN DEVELOPING A HIGH
+- DISCLAIMER: WHILE THE BEST EFFORT, KNOWLEDGE AND EXPERTISE WILL BE PUT IN DEVELOPING THE HIGHEST
 	QUALITY WORK, THE AUTHOR EXPRESSLY DISCLAIMS ANY WARRANTY OF MERCHANTABILITY, SATISFACTORY
 	QUALITY, FITNESS FOR A PARTICULAR PURPOSE, DELIVERY TIME OR AVAILABILITY WITH RESPECT TO THE
-	CUSTOM DEVELOPMENT SERVICE AND THE RESULTING WORK, REGARDLESS THE AMOUNT OF TIME DEDICATED TO
-	SUCH WORK.
+	ADDITIONAL SERVICES AND THE RESULTING WORK, REGARDLESS THE AMOUNT OF TIME DEDICATED TO SUCH
+	WORK.
 
 &fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
 to changes during the Early Access stage.
