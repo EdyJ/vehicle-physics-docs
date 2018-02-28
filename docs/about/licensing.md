@@ -145,8 +145,8 @@ to changes during the Early Access stage.
 	exclusive property of the customer.
 
 - Any modifications and/or additions to Vehicle Physics Pro (including, but not limited to code,
-	resources and documentation) as result of providing the Additional Services shall remain
-	exclusive property of Angel Garcia Voces and will be incorporated to the VPP package.
+	features, resources and documentation) as result of providing the Additional Services shall
+	remain exclusive property of Angel Garcia Voces and will be incorporated to the VPP package.
 
 - Any custom settings, scripts or resources developed by Angel Garcia Voces as result of providing
 	the Additional Services that are specific to the customer's project shall be property of the
@@ -157,6 +157,10 @@ to changes during the Early Access stage.
 	in the VPP website, twitter, youtube, blog, and/or any other public channels, for promotional
 	purposes only. No part of the work made specifically for the customer's project (as defined
 	above) will be made public in any case.
+
+- Time includes any task related to the Services including, but not limited to, setting up projects,
+	downloading resources, reviewing documentation or videos, meetings, writing documentation, and
+	any other task or procedure necessary for performing the Services.
 
 - Payments shall be processed in a weekly basis at the end of each week. The author reserves the
 	right of putting the services on hold until any pending payments have been completed.

@@ -24,8 +24,9 @@ Useful resources:
 - **Engine torque and power**. Ideally, a ["dyno" curve](https://www.google.es/search?q=engine+dyno+curve&tbm=isch)
 	if available. The curve shape also helps configuring the engine brake.
 - **Engine rev up/down time**. How fast the engine revs up when fully pressing throttle at neutral
-	gear, and how much time takes it to rev down to idle after releasing throttle. These data can
-	be used for estimating the engine inertia and the engine brake curve.
+	gear, and how much time takes it to rev down to idle after releasing throttle. For example, a
+	video showing the dashboard while pressing/releasing throttle as described will do. This
+	information can be used for estimating the engine inertia and the engine brake curve.
 - **Drive information**: front (FWD), rear (RWD), all (AWD), combined (details?)...
 - **Transmission type**: manual, automatic, manual with auto shift, automatic with manual shift.
 - **Number of gears and their ratios**.
