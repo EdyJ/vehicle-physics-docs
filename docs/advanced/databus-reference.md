@@ -97,6 +97,7 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 |EngineRpm		| Engine RPMs								| rpm	| 1000	| 1200000 = 1200 rpm
 |EngineStalled	| Is the engine stalled? 		 			| 		|       | 0 = normal operation or switched off, 1 = engine stalled
 |EngineWorking	| Is the engine up and running?  			| 		|       | 0 = engine is off (stalled or switched off), 1 = engine up and running
+|EngineStarting	| Is the engine starting as per the ignition input?	|	|	| 0 = no, 1 = yes
 |EngineLimiter	| Is the rpm limiter cutting engine power?	| 		|       | 0 = no, 1 = yes
 |EngineLoad		| How much load is demanded 				| % 	| 1000	| 200 = 0.2 = 20%
 |EngineTorque	| Torque at the output of the engine		| Nm	| 1000	| 200000 = 200 Nm
