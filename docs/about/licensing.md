@@ -25,6 +25,8 @@ Email support																					|	| individual | team |
 Full source code included																				|	|	| &fa-check; |
 Advanced simulation features: multi-body vehicles, dynamic suspension, liquid cargo						|	|	| &fa-check; |
 Specialized vehicle support: caterpillar, mining, excavators, hydraulic actuators						|	|	| &fa-check; |
+Automation component suite: automated tests, self-drive, telemetry export to CSV						|	|	| &fa-check; |
+[D-Box Motion Cueing](http://www.d-box.com/training-and-simulation/) integration						|	|	| &fa-check; |
 Skype support 																							|	|	| &fa-check; |
 License covers unlimited developers (single studio)														| 	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
