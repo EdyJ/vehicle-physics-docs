@@ -168,6 +168,7 @@ with Vehicle Physics Pro:
 
 - Huawei
 - Volkswagen
+- BMW
 - UPS
 
 #### Testimonials
