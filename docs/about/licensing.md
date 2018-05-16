@@ -30,9 +30,9 @@ Automation component suite: automated tests, self-drive, telemetry export to CSV
 Skype support 																							|	|	| &fa-check; |
 License covers unlimited developers (single studio)														| 	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
-**License Price**																				| **Free** | **€390** | **€4900** |
-Support & updates via GIT repository<br>_First year included in the license price_				| -	| €90<br>/year | €990<br>/year |
-**Purchase license (Early Access)**		| _to be released_ | [**Buy now**](https://order.shareit.com/cart/new?vendorid=200274786&PRODUCT[300799895]=1&languageid=1&nolselection=1&pc=gfnhu&currency=EUR&currencies=all) | [**Buy now**](https://order.shareit.com/cart/new?vendorid=200274786&PRODUCT[300799900]=1&languageid=1&nolselection=1&pc=80znr&currency=EUR&currencies=all) |
+**License Price**<br>_One-time payment, permanent license_											| **Free** | **€390** | **€4900** |
+**Support & updates via GIT repository**<br>_First year included in the license price_				| -	| €90<br>/year | €990<br>/year |
+**PURCHASE LICENSE**		| _to be released_ | [**BUY NOW**](https://goo.gl/EoAe5v) | [**BUY NOW**](https://goo.gl/QzPdcu) |
 
 #### Notes
 
@@ -47,7 +47,7 @@ Support & updates via GIT repository<br>_First year included in the license pric
 
 - Professional and Enterprise licenses include a yearly subscription for support and updates.
 - First year of support and updates is included in the license price.
-- Customers may opt-out any time and keep the most recent version at that time.
+- Customers may opt-out any time and keep the most recent VPP version at that time.
 - After opting-out, there's a grace period of 90 days to rejoin paying the subscription fee only.
 
 The subscription model allows continuous development, feature updates, and product support in the
