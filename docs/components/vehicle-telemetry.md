@@ -27,9 +27,14 @@ Vehicle telemetry
 	- Speed: longitudinal, lateral, absolute in m/s. Speed also in Km/h and mph.
 	- Acceleration: longitudinal, lateral in $m/s^2$. G-force measure.
 	- Angular velocity Y: turning velocity around the vertical axis, in rads/s.
-	- Engine: load in percent (%), produced torque in Nm. State of the engine: Off, Stalled, Ok.
+	- Angles: pitch and roll (degrees), road grade (%).
+	- Engine: load in percent (%), produced torque in Nm, produced power in kW. State of the engine: Off, Stalled, Ok.
 	- Clutch: lock ratio in percent (%), pass-thru torque in Nm.
-	- Engine RPM, engaged gear, automatic gear position.
+	- Transmission: rpms at the output of the gearbox.
+	- Fuel consumption: instant (gr/sec) and liters per 100 km.
+	- Stability control (ESC): values detected by the sensors engaging the ESC.
+	- Anti-spin (ASR): values detected by the sensors engaging the ASR.
+	- Engine RPM, engaged gear, automatic gear position, driving aids currently engaged in the vehicle.
 
 ![VP Telemetry Inspector](/img/components/vpp-telemetry-inspector.png){: .img-small .clickview }
 
