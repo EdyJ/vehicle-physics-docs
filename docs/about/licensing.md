@@ -24,7 +24,7 @@ XBox controller support (360 and One) (Windows only)											|	| &fa-check; | 
 Email support																					|	| individual | team |
 Full source code included																				|	|	| &fa-check; |
 Advanced simulation features: multi-body vehicles, dynamic suspension, liquid cargo						|	|	| &fa-check; |
-Specialized vehicle support: caterpillar, mining, excavators, hydraulic actuators						|	|	| &fa-check; |
+Specialized vehicle support: motorbike, caterpillar, mining, excavators, hydraulic actuators			|	|	| &fa-check; |
 Automation component suite: automated tests, self-drive, telemetry export to CSV						|	|	| &fa-check; |
 [D-Box Motion Cueing](http://www.d-box.com/training-and-simulation/) integration						|	|	| &fa-check; |
 Skype support 																							|	|	| &fa-check; |
