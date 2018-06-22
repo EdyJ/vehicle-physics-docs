@@ -30,7 +30,7 @@ Automation component suite: automated tests, self-drive, telemetry export to CSV
 Skype support 																							|	|	| &fa-check; |
 License covers unlimited developers (single studio)														| 	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
-**License Price**<br>_One-time payment, permanent license_											| **Free** | **€390** | **€4900** |
+**License Price**<br>_One-time payment, perpetual license_											| **Free** | **€390** | **€4900** |
 **Support & updates via GIT repository**<br>_First year included in the license price_				| -	| €90<br>/year | €990<br>/year |
 **PURCHASE LICENSE**		| _to be released_ | [**BUY NOW**](https://goo.gl/EoAe5v) | [**BUY NOW**](https://goo.gl/QzPdcu) |
 

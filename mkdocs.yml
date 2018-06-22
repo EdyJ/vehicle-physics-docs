@@ -29,6 +29,7 @@ pages:
   - Demos: about/demos.md
   - Licensing: about/licensing.md
   - Comparing with other kits: about/comparison.md
+  - Changelog: about/changelog.md
 - User Guide:
   - Setting up VPP: user-guide/setting-up-vpp.md
   - Getting started: user-guide/getting-started.md
