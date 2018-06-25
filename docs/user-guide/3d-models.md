@@ -44,6 +44,8 @@ external circumference. Using the central part or logo as center is a common mis
 
 #### Vehicle collider
 
+![Convex vehicle collider](/img/user-guide/vpp-vehicle-collider.png){: .clickview .img-medium }
+
 Game-ready 3D vehicles usually come with a simplified shape of the vehicle (collision mesh). The
 vehicle collider must be a **convex** collider (MeshCollider > Convex), or a set of convex
 colliders.
@@ -51,21 +53,6 @@ colliders.
 !!! warning "&fa-warning:lg; At least one convex collider is mandatory in the vehicle"
 	A vehicle without colliders will exhibit a very weird and unnatural behavior as soon as the
 	simulation starts, unless the inertia tensor is explicitly configured (Rigidbody.inertiaTensor).
-
-The collision mesh is used for collision detection and inertia calculations. The vehicle dynamics
-are actually affected by the shape of the collider. Thus, a collider resembling the shape of its
-vehicle will provide a better simulation.
-
-![Convex vehicle collider](/img/user-guide/vpp-vehicle-collider.png){: .clickview .img-medium }
-
-The collider of the vehicle can be:
-
-- A collision mesh that comes with the 3D vehicle (best case).
-- A box collider roughly resembling the vehicle's shape (not recommended, use for early prototyping
-	only).
-- A MeshCollider directly added to the 3D vehicle mesh. This may or	may not work depending on the
-	actual complexity of the vehicle mesh. Most likely, exterior parts of the vehicle such as
-	mirrors and antennas will have an adverse effect in the collisions.
 
 !!! warning "&fa-warning:lg; VPWheelCollider components must be located _**inside**_ the vehicle's colliders"
 	Ensure that the **top half** of each VPWheelCollider component is **enclosed within regular
