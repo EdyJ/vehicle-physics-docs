@@ -6,7 +6,21 @@ A block derives from `VehiclePhysics.Block`.
 Blocks are hosted by a vehicle controller (_host_), such as `VPVehicleController` on any other
 component derived from `VehiclePhysics.VehicleBase`.
 
-< Schematic graph showing vehicle controller and blocks >
+<div class="mermaid img-responsive">
+graph RL
+subgraph Vehicle Controller
+subgraph Wheels
+W0>Left Drive Wheel + Brake]
+W1>Right Drive Wheel + Brake]
+W2>Left Steering Wheel + Brake]
+W3>Right Steering Wheel + Brake]
+end
+Engine(Engine + Clutch) --> Gearbox
+Gearbox --> Diff{Differential}
+Diff --> W0
+Diff --> W1
+end
+</div>
 
 ## Block protocol
 
@@ -50,13 +64,15 @@ upwards through the input, and the cycle repeats.
 
 ### Public interface
 
-A block exposes several types of public members by convention:
+A block exposes several types of public members following this convention:
 
 Settings
 :	A serializable class with the configuration settings of the block. This class may be exposed
-	and serialized at the inspector by the host controller.
-	A public member `settings` should be declared in the block as well. The values are likely
-	to change during fine-tunning the vehicle in the Editor, but rarely in the final application.
+	and serialized at the inspector by the host controller. A public member `settings` should be
+	declared in the block as well.
+
+	For example, the Engine settings that are exposed in the vehicle controller is an instance of
+	the `Engine.Settings` class and is assigned to the `settings` member of the `Engine` block.
 
 Inputs
 :	Values that come from the driver's controls. Examples: the position of the gear lever

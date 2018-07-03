@@ -37,6 +37,16 @@ canvas
 	}
 
 
+/* Responsive Mermaid graphics */
+
+svg
+	{
+	display: block;			/* For centered */
+	margin: 20px auto;		/* For centered */
+	max-width: 100%;		/* For responsive */
+	}
+
+
 /* Responsive images */
 
 img
