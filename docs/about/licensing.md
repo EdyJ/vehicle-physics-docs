@@ -25,7 +25,7 @@ Email support																					|	| individual | team |
 Full source code included																				|	|	| &fa-check; |
 Advanced simulation features: multi-body vehicles, dynamic suspension, liquid cargo						|	|	| &fa-check; |
 Specialized vehicle support: motorbike, caterpillar, mining, excavators, hydraulic actuators			|	|	| &fa-check; |
-Automation component suite: automated tests, self-drive, telemetry export to CSV						|	|	| &fa-check; |
+Autonomous vehicles framework: self-drive, automated tests, telemetry export to CSV						|	|	| &fa-check; |
 [D-Box Motion Cueing](http://www.d-box.com/training-and-simulation/) integration						|	|	| &fa-check; |
 Skype support 																							|	|	| &fa-check; |
 License covers unlimited developers (single studio)														| 	|	| &fa-check; |

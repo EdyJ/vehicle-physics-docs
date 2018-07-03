@@ -107,8 +107,8 @@ easy in Vehicle Physics Pro!
 
 - VR enabled. [Try the demos](demos)
 - Highly detailed documentation
-- [GIT repository access](/advanced/git-repository-setup) (Professional and Enterprise licensees)
-- Redmine tracking system access (Enterprise licensees)
+- [GIT repository access](/advanced/git-repository-setup) (Enterprise license)
+- Redmine tracking system access (Enterprise license)
 
 
 
