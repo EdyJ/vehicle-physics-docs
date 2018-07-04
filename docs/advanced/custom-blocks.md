@@ -99,10 +99,10 @@ classDef NoBox fill:#FFF,stroke:#FFF
 class DOTS NoBox
 </div>
 
-Each block collects momentum and reaction torque from the `Connection` objects at each output.
-Blocks downstream have already left the values there. The block computes a resulting momentum
-and a reaction torque and puts them at the `Connection` object at the input. The block upstream
-in the chain will collect them for processing, and so on.
+Each block collects **angular momentum (L)** and **reaction torque (Tr)** from the `Connection`
+objects at each output. Blocks downstream have already left the values there. The block computes a
+resulting momentum and a reaction torque and puts them at the `Connection` object at the input. The
+block upstream in the chain will collect them for processing, and so on.
 
 The ending point is the Engine, which takes momentum and reaction torque from its output,
 processes them, then generates a drive torque that is put back at the output.
@@ -128,8 +128,8 @@ classDef NoBox fill:#FFF,stroke:#FFF
 class DOTS NoBox
 </div>
 
-Each block reads the amount of drive torque left by the block upstream at the `Connection` object
-at its input. After processing it, puts the resulting torque values at the outputs for the
+Each block reads the amount of **drive torque (Td)** left by the block upstream at the `Connection`
+object at its input. After processing it, puts the resulting torque values at the outputs for the
 blocks downstream to get them.
 
 The ending points are the wheels, which receive the final drive torque at their inputs and do
