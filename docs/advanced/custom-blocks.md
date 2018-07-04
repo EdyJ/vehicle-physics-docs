@@ -1,12 +1,13 @@
 # Creating custom blocks
 
-The _Blocks_ implement the internal mechanical parts of the vehicle such as engine, gearbox, etc.
-A block derives from `VehiclePhysics.Block`.
+The modular driverain desing in Vehicle Physics Pro uses functional _Blocks_ to implement the
+internal mechanical parts of the vehicle such as engine, gearbox, etc. A block inherits from the
+base class `VehiclePhysics.Block`.
 
 Blocks are hosted by a vehicle controller (_host_), such as `VPVehicleController` on any other
 component derived from `VehiclePhysics.VehicleBase`.
 
-<div class="mermaid img-responsive">
+<div class="mermaid">
 graph RL
 subgraph Vehicle Controller
 subgraph Wheels
@@ -24,37 +25,31 @@ end
 
 ## Block protocol
 
-<div class="mermaid img-responsive">
+<div class="mermaid">
 graph RL
 subgraph Block
 T("- Settings<br>- User Inputs<br>- States (In)<br>- Sensors (Out)")
 BL["#nbsp;<br>Block Logic<br>#nbsp;"]
 end
 
-%% Trick for proper formatting
-B(" ")-->T
-T-->A(" ")
-
 I0(Input 0)-->BL
 BL-->O0>Output 0]
 BL-->O1>Output 1]
+BL-->|...|ON>Output n]
+
+O0-->BO0(Downstream Block)
+O1-->BO1(Downstream Block)
+ON-->BON(Downstream Block)
+BI0(Upstream Block)-->I0
 
 classDef InOut fill:#FFF,stroke:#FFF
-class I0,O0,O1,T InOut
+class I0,O0,O1,ON InOut
 
-%% Classes don't work in 7.1.0
+classDef Text fill:#FFD,stroke:#BB4
+class T Text
 
-style I0 fill:#FFF,stroke:#FFF
-style O0 fill:#FFF,stroke:#FFF
-style O1 fill:#FFF,stroke:#FFF
-style A fill:#FFF,stroke:#FFF
-style B fill:#FFF,stroke:#FFF
-style T fill:#FFD,stroke:#BB4
-
-%% Trick for proper formatting
-class A,B InOut
-linkStyle 0 stroke:#FFF,stroke-width:0;
-linkStyle 1 stroke:#FFF,stroke-width:0;
+classDef NoFill fill:#FFF
+class BO0,BO1,BON,BI0 NoFill
 </div>
 
 ### Input and Output connections
@@ -69,29 +64,74 @@ with the wheels, are simulated via inputs and outputs.
 The `Block.Connect` method connects an input of a block to an output of a different block. For this,
 the Connect method creates a `Block.Connection` object an ensures both blocks have access to it.
 This `Connection` object is the placeholder for the torque and momentum values that are transmitted
-upwards and downwards among blocks.
+upstream and downstream between the connected blocks.
 
-The actual torque and momentum flow occurs at the `Block` class, specifically at the methods
-`ComputeStateUpwards` and `EvaluateTorqueDownstream`. At ComputeStateUpwards the block takes the
-momentum and reaction torque values from the `Connection` objects at each output. These
-values have already been placed there by the block downstream. The block processes
-them, then places the result at the `Connection` object at the input. The block upstream in
-the chain will take them for processing, and so on. The ending point is the Engine, which takes the
-momentum and reaction torque values at its output, processes them, and generates a drive torque that
-is placed at the output as well.
+The actual torque and momentum flow happens in two stages at the `Block` class, specifically at the
+methods `ComputeStateUpstream` and `EvaluateTorqueDownstream`.
 
-Then an opposite flow happens at `EvaluateTorqueDownstream`. The block reads the amount of drive
-torque block upstream has placed at the `Connection` object at its input. It processes that
-torque value, then places the resulting values at its outputs for the blocks downstream to
-receive and process them as well. The ending points are the wheels, which receive the final drive
-torque at their inputs and do the final tasks:
+#### 1. ComputeStateUpstream
+
+<div class="mermaid">
+graph LR
+E(Engine)
+B0[Block 0]
+B1[Block 1]
+BN[Block n]
+DOTS["..."]
+W>Wheel]
+
+W-."Momentum (L)<br>Reaction Torque (Tr)".->BN
+BN-."L<br>Tr".->DOTS
+DOTS-."L<br>Tr".->B1
+B1-."L<br>Tr".->B0
+B0-."L<br>Tr".->E
+
+classDef NoBox fill:#FFF,stroke:#FFF
+class DOTS NoBox
+</div>
+
+Each block collects momentum and reaction torque from the `Connection` objects at each output.
+Blocks downstream have already left the values there. The block computes a resulting momentum
+and a reaction torque and puts them at the `Connection` object at the input. The block upstream
+in the chain will collect them for processing, and so on.
+
+The ending point is the Engine, which takes momentum and reaction torque from its output,
+processes them, then generates a drive torque that is put back at the output.
+
+#### 2. EvaluateTorqueDownstream
+
+<div class="mermaid">
+graph RL
+E(Engine)
+B0[Block 0]
+B1[Block 1]
+BN[Block n]
+DOTS["..."]
+W>Wheel]
+
+E-."Drive Torque (Td)".->B0
+B0-."Td".->B1
+B1-."Td".->DOTS
+DOTS-."Td".->BN
+BN-."Td".->W
+
+classDef NoBox fill:#FFF,stroke:#FFF
+class DOTS NoBox
+</div>
+
+Each block reads the amount of drive torque left by the block upstream at the `Connection` object
+at its input. After processing it, puts the resulting torque values at the outputs for the
+blocks downstream to get them.
+
+The ending points are the wheels, which receive the final drive torque at their inputs and do
+the final tasks:
 
 - combine the drive torque with the brake torque and tire friction
 - compute a new momentum value (this defines the wheel's new angular velocity)
 - calculate a tire force and a reaction torque
 
-The resulting tire force is then applied to the rigidbody. Momentum and reaction torque are sent
-upwards through the input, and the cycle repeats.
+The resulting tire force is applied to the vehicle's rigidbody. Momentum and reaction
+torque are then sent upstream through the input, and the loop repeats.
 
 ### Public interface
 
