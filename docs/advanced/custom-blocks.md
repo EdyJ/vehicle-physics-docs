@@ -24,7 +24,38 @@ end
 
 ## Block protocol
 
-< Schematic graph of a component showing inputs, outputs, settings, inputs, states, sensors >
+<div class="mermaid img-responsive">
+graph RL
+subgraph Block
+T("- Settings<br>- User Inputs<br>- States (In)<br>- Sensors (Out)")
+BL["#nbsp;<br>Block Logic<br>#nbsp;"]
+end
+
+%% Trick for proper formatting
+B(" ")-->T
+T-->A(" ")
+
+I0(Input 0)-->BL
+BL-->O0>Output 0]
+BL-->O1>Output 1]
+
+classDef InOut fill:#FFF,stroke:#FFF
+class I0,O0,O1,T InOut
+
+%% Classes don't work in 7.1.0
+
+style I0 fill:#FFF,stroke:#FFF
+style O0 fill:#FFF,stroke:#FFF
+style O1 fill:#FFF,stroke:#FFF
+style A fill:#FFF,stroke:#FFF
+style B fill:#FFF,stroke:#FFF
+style T fill:#FFD,stroke:#BB4
+
+%% Trick for proper formatting
+class A,B InOut
+linkStyle 0 stroke:#FFF,stroke-width:0;
+linkStyle 1 stroke:#FFF,stroke-width:0;
+</div>
 
 ### Input and Output connections
 
