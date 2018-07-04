@@ -11,19 +11,35 @@ component derived from `VehiclePhysics.VehicleBase`.
 graph RL
 subgraph Vehicle Controller
 subgraph Wheels
-W0>Left Drive Wheel + Brake]
-W1>Right Drive Wheel + Brake]
-W2>Left Steering Wheel + Brake]
-W3>Right Steering Wheel + Brake]
+WFL>Wheel Front Left]
+WFR>Wheel Front Right]
+WRL>Wheel Rear Left]
+WRR>Wheel Rear Right]
 end
-Engine(Engine + Clutch) --> Gearbox
-Gearbox --> Diff{Differential}
-Diff --> W0
-Diff --> W1
+
+%% Re-define these here so they appear first
+WFL>Wheel Front Left]
+WFR>Wheel Front Right]
+
+Eng(Engine + Clutch)
+Gear[Gearbox]
+Diff{Differential}
+Eng-->Gear
+Gear-->Diff
+Diff-->WRL
+Diff-->WRR
 end
 </div>
+Wheel blocks include steering and brakes.
 
 ## Block protocol
+
+### Input and Output connections
+
+Block have inputs and outputs that connect them. Each connection is a object `Block.Connection`
+simulating the physical shaft that connects two blocks in a vehicle's powertrain. For example,
+the shaft connecting the gearbox with the differential, or the halfshafts connecting the
+differential with the wheels, are simulated via inputs and outputs.
 
 <div class="mermaid">
 graph RL
@@ -51,13 +67,6 @@ class T Text
 classDef NoFill fill:#FFF
 class BO0,BO1,BON,BI0 NoFill
 </div>
-
-### Input and Output connections
-
-Block have inputs and outputs that connect them. Each connection is a object `Block.Connection`
-simulating the physical shaft that connects two blocks in a vehicle's powertrain. For example,
-the shaft connecting the gearbox with the differential, or the halfshafts connecting the differential
-with the wheels, are simulated via inputs and outputs.
 
 ### Block connections and torque flow
 

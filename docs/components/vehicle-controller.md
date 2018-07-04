@@ -13,6 +13,41 @@ component independently.
 for special types of vehicles not directly covered by the stock Vehicle Controller component.
 {: .alert .alert-info }
 
+This is the block layout in VPVehicleController for an AWD vehicle:
+
+<div class="mermaid">
+graph RL
+subgraph VP Vehicle Controller
+subgraph Front Axle
+WFL>Wheel Front Left]
+WFR>Wheel Front Right]
+end
+subgraph Rear Axle
+WRL>Wheel Rear Left]
+WRR>Wheel Rear Right]
+end
+
+Eng(Engine<br>+<br>Clutch)
+Gear[Gearbox]
+Ret[Retarder<br>Brake]
+Diff0[Center Differential<br>or<br>Torque Splitter]
+Diff1{Axle<br>Differential}
+Diff2{Axle<br>Differential}
+
+Eng-->Gear
+Gear-->Ret
+Ret-->Diff0
+Diff0-->Diff1
+Diff0-->Diff2
+Diff1-->WFL
+Diff1-->WFR
+Diff2-->WRL
+Diff2-->WRR
+end
+</div>
+
+Brakes and steering are included in the Wheel blocks.
+
 ### Center of mass
 
 Transform to be used as Center of Mass (CoM). If not specified, CoM will be calculated
