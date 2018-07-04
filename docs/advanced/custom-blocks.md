@@ -30,7 +30,8 @@ Diff-->WRL
 Diff-->WRR
 end
 </div>
-Wheel blocks include steering and brakes.
+
+Wheel blocks include Steering, Brakes and Tires.
 
 ## Block protocol
 
@@ -99,13 +100,13 @@ classDef NoBox fill:#FFF,stroke:#FFF
 class DOTS NoBox
 </div>
 
-Each block collects **angular momentum (L)** and **reaction torque (Tr)** from the `Connection`
-objects at each output. Blocks downstream have already left the values there. The block computes a
-resulting momentum and a reaction torque and puts them at the `Connection` object at the input. The
-block upstream in the chain will collect them for processing, and so on.
+From left to right, each block collects **angular momentum (L)** and **reaction torque (Tr)** from
+the `Connection` objects at each output. Blocks downstream have already left the values there. The
+block computes a resulting momentum and a reaction torque and puts them at the `Connection` object
+at the input. The block upstream in the chain will collect them for processing, and so on.
 
-The ending point is the Engine, which takes momentum and reaction torque from its output,
-processes them, then generates a drive torque that is put back at the output.
+The ending point is the **Engine**, which has no inputs. It takes momentum and reaction torque from
+its output, processes them, then generates a **drive torque** that is put back at the output.
 
 #### 2. EvaluateTorqueDownstream
 
@@ -128,19 +129,19 @@ classDef NoBox fill:#FFF,stroke:#FFF
 class DOTS NoBox
 </div>
 
-Each block reads the amount of **drive torque (Td)** left by the block upstream at the `Connection`
-object at its input. After processing it, puts the resulting torque values at the outputs for the
-blocks downstream to get them.
+From right to left, each block reads the amount of **drive torque (Td)** left by the block upstream
+at the `Connection` object at its input. After processing it, puts the resulting torque values at
+the outputs for the blocks downstream to get them.
 
-The ending points are the wheels, which receive the final drive torque at their inputs and do
-the final tasks:
+The ending points are the **Wheels**, which have no outputs. They receive the final drive torque
+at their inputs and do the final tasks:
 
 - combine the drive torque with the brake torque and tire friction
-- compute a new momentum value (this defines the wheel's new angular velocity)
-- calculate a tire force and a reaction torque
+- compute a **new momentum value** (this defines the wheel's new angular velocity)
+- compute the **tire force** and the **reaction torque**
 
-The resulting tire force is applied to the vehicle's rigidbody. Momentum and reaction
-torque are then sent upstream through the input, and the loop repeats.
+The tire force is applied to the vehicle's rigidbody. The momentum and the reaction torque are then
+sent upstream through the input, and the loop repeats.
 
 ### Public interface
 

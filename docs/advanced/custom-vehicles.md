@@ -17,24 +17,30 @@ rear-powered wheels.
 
 <div class="mermaid">
 graph RL
-Eng(Direct Drive Motor)
-Diff{Differential}
-Eng-->Diff
-Diff-->WRL
-Diff-->WRR
-
+subgraph SimpleVehicleController
 subgraph Wheels
 WFL>Wheel Front Left]
 WFR>Wheel Front Right]
 WRL>Wheel Rear Left]
 WRR>Wheel Rear Right]
 end
+
+%% Trick for making them appear first
+WFL
+WFR
+
+Eng(Direct Drive Motor)
+Diff{Differential}
+Eng-->Diff
+Diff-->WRL
+Diff-->WRR
+end
 </div>
 
 The drive power is provided by a direct drive motor (think on an ideal electric engine) that
 provides up to a maximum torque (maxDriveTorque) and can reach a maximum RPMs (maxDriveRpm). Rear
 wheels are connected to the direct drive with a differential in the default configuration (Open).
-Brakes and steering are included in the Wheel blocks.
+Steering, Brakes and Tires are parts of the Wheel blocks.
 
 This example doesn't make use of the [data bus](databus-reference.md). Instead, it exposes the
 properties driveInput, brakeInput and steerInput. The SimpleVehicleControllerInput.cs script reads

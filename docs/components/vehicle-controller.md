@@ -9,11 +9,7 @@ brakes, tires, driveline, engine, clutch, gearbox and retarder. Other settings f
 (radius, mass) and suspension (spring, damper) are configured at each [VP Wheel Collider](wheel-collider)
 component independently.
 
-&fa-thumbs-o-up; You can [write your own custom vehicle controller](/advanced/custom-vehicles){: .alert-link }
-for special types of vehicles not directly covered by the stock Vehicle Controller component.
-{: .alert .alert-info }
-
-This is the block layout in VPVehicleController for an AWD vehicle:
+This is the block layout of an AWD vehicle in VPVehicleController:
 
 <div class="mermaid">
 graph RL
@@ -30,9 +26,11 @@ end
 Eng(Engine<br>+<br>Clutch)
 Gear[Gearbox]
 Ret[Retarder<br>Brake]
+subgraph Driveline
 Diff0[Center Differential<br>or<br>Torque Splitter]
 Diff1{Axle<br>Differential}
 Diff2{Axle<br>Differential}
+end
 
 Eng-->Gear
 Gear-->Ret
@@ -46,7 +44,15 @@ Diff2-->WRR
 end
 </div>
 
-Brakes and steering are included in the Wheel blocks.
+Notes:
+
+- Steering, Brakes and Tires are included in the Wheel blocks.
+- The Retarder Brake is typically used in heavy transport vehicles (trucks, buses). It stays
+disabled on regular cars, SUVs, vans, etc.
+
+&fa-thumbs-o-up; You can [write your own custom vehicle controller](/advanced/custom-vehicles){: .alert-link }
+for special types of vehicles not directly covered by the stock Vehicle Controller component.
+{: .alert .alert-info }
 
 ### Center of mass
 
@@ -201,7 +207,7 @@ provides smooth transitions without neutral gap among gears.
 
 Details: [Gearbox block](/blocks/gearbox)
 
-### Retarder
+### Retarder Brake
 
 Retarder brake based on angular velocity. The retarder brake is commonly used in trucks, buses
 and heavy vehicles.
