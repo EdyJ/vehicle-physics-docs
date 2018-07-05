@@ -5,10 +5,10 @@ full-featured vehicle controller ready for simulating most types of vehicles. If
 vehicle not supported by VPVehicleController then you can write your own vehicle controller easily.
 
 A vehicle controller derives from `VehiclePhysics.VehicleBase`. It implements the logic of the
-vehicle by overriding the virtual methods and instancing and connecting the blocks representing the
-internal parts of the vehicle.
+vehicle by overriding the virtual methods and instancing and connecting the _Blocks_ representing
+the internal parts of the vehicle.
 
-The virtual methods and their roles are detailed at [VehicleBase reference](vehiclebase-reference.md).
+The virtual methods in VehicleBase and their roles are detailed at [VehicleBase reference](vehiclebase-reference.md).
 
 ## Example source code
 
@@ -46,7 +46,6 @@ This example doesn't make use of the [data bus](databus-reference.md). Instead, 
 properties driveInput, brakeInput and steerInput. The SimpleVehicleControllerInput.cs script reads
 the standard Unity Input and modifies these properties for controlling the vehicle.
 
-
 **SimpleVehicleController.cs**
 ```
 using UnityEngine;
@@ -73,7 +72,7 @@ public class SimpleVehicleController : VehicleBase
 	[Range(-1,1)]
 	public float steerInput = 0.0f;
 
-	// Internal vehicle blocks (powertrain)
+	// Internal vehicle blocks for the powertrain
 
 	DirectDrive m_directDrive;
 	Differential m_differential;
@@ -99,7 +98,7 @@ public class SimpleVehicleController : VehicleBase
 		ConfigureWheelData(wheelState[2], wheels[2], wheelRL);
 		ConfigureWheelData(wheelState[3], wheels[3], wheelRR);
 
-		// Initialize DirectDrive and connect it to the rear wheels via differential
+		// Initialize and connect the blocks: DriveLine -> Differential -> Rear wheels
 
 		m_directDrive = new DirectDrive();
 		m_differential = new Differential();
@@ -160,6 +159,7 @@ public class SimpleVehicleControllerInput : VehicleBehaviour
 	public override void OnEnableVehicle ()
 		{
 		// This component requires a SimpleVehicleController explicitly
+
 		m_vehicle = vehicle.GetComponent<SimpleVehicleController>();
 		if (m_vehicle == null)
 			{
@@ -170,17 +170,23 @@ public class SimpleVehicleControllerInput : VehicleBehaviour
 
 	public override void UpdateVehicle ()
 		{
+		// Read the input from the standard Unity Input
+
 		float steerInput = Mathf.Clamp(Input.GetAxis("Horizontal"), -1.0f, 1.0f);
 
 		float throttleAndBrakeAxisValue = Input.GetAxis("Vertical");
 		float throttleInput = Mathf.Clamp01(throttleAndBrakeAxisValue);
 		float brakeInput = Mathf.Clamp01(-throttleAndBrakeAxisValue);
 
+		// Hold Ctrl and Brake for reverse
+
 		if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
 			{
 			throttleInput = -brakeInput;
 			brakeInput = 0.0f;
 			}
+
+		// Feed the vehicle input parameters with the result
 
 		m_vehicle.steerInput = steerInput;
 		m_vehicle.driveInput = throttleInput;

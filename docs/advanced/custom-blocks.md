@@ -1,11 +1,10 @@
 # Creating custom blocks
 
-The modular driverain desing in Vehicle Physics Pro uses functional _Blocks_ to implement the
-internal mechanical parts of the vehicle such as engine, gearbox, etc. A block inherits from the
-base class `VehiclePhysics.Block`.
+The modular drivetrain design in Vehicle Physics Pro uses functional _Blocks_ to implement the
+internal mechanical parts of the vehicle such as engine, gearbox, etc. Blocks may be connected in
+any number and combination.
 
-Blocks are hosted by a vehicle controller (_host_), such as `VPVehicleController` on any other
-component derived from `VehiclePhysics.VehicleBase`.
+Example:
 
 <div class="mermaid">
 graph RL
@@ -35,9 +34,16 @@ Wheel blocks include Steering, Brakes and Tires.
 
 ## Block protocol
 
+A block inherits from the base class `VehiclePhysics.Block`. Blocks are hosted by a vehicle
+controller (_host_), such as `VPVehicleController` on any other component derived from
+`VehiclePhysics.VehicleBase`.
+
+See [Creating Custom Vehicles](custom-vehicles.md) for an example source code on a vehicle
+controller creating and connecting Blocks.
+
 ### Input and Output connections
 
-Block have inputs and outputs that connect them. Each connection is a object `Block.Connection`
+Block have inputs and outputs that connect them. Each connection is a `Block.Connection` object
 simulating the physical shaft that connects two blocks in a vehicle's powertrain. For example,
 the shaft connecting the gearbox with the differential, or the halfshafts connecting the
 differential with the wheels, are simulated via inputs and outputs.
@@ -69,6 +75,10 @@ classDef NoFill fill:#FFF
 class BO0,BO1,BON,BI0 NoFill
 </div>
 
+While it's possible to have multiple inputs in a Block, the specific math and physics considerations
+for this haven't been developed yet. There are no examples of a physically correct block using
+more than one input in VPP.
+
 ### Block connections and torque flow
 
 The `Block.Connect` method connects an input of a block to an output of a different block. For this,
@@ -76,7 +86,7 @@ the Connect method creates a `Block.Connection` object an ensures both blocks ha
 This `Connection` object is the placeholder for the torque and momentum values that are transmitted
 upstream and downstream between the connected blocks.
 
-The actual torque and momentum flow happens in two stages at the `Block` class, specifically at the
+The actual torque and momentum flow is a two-stage process in the `Block` class, specifically at the
 methods `ComputeStateUpstream` and `EvaluateTorqueDownstream`.
 
 #### 1. ComputeStateUpstream
@@ -90,23 +100,25 @@ BN[Block n]
 DOTS["..."]
 W>Wheel]
 
-W-."Momentum (L)<br>Reaction Torque (Tr)".->BN
-BN-."L<br>Tr".->DOTS
-DOTS-."L<br>Tr".->B1
-B1-."L<br>Tr".->B0
-B0-."L<br>Tr".->E
+W-."Momentum (L)<br>Inertia (I)<br>Reaction Torque (Tr)".->BN
+BN-."L<br>I<br>Tr".->DOTS
+DOTS-."L<br>I<br>Tr".->B1
+B1-."L<br>I<br>Tr".->B0
+B0-."L<br>I<br>Tr".->E
 
 classDef NoBox fill:#FFF,stroke:#FFF
 class DOTS NoBox
 </div>
 
-From left to right, each block collects **angular momentum (L)** and **reaction torque (Tr)** from
-the `Connection` objects at each output. Blocks downstream have already left the values there. The
-block computes a resulting momentum and a reaction torque and puts them at the `Connection` object
-at the input. The block upstream in the chain will collect them for processing, and so on.
+From left to right, each block collects **angular momentum (L)**, **inertia (I)** and **reaction
+torque (Tr)** from the `Connection` objects at each output. Blocks downstream have already left the
+values there. The block computes the resulting momentum, inertia and reaction torque and puts them
+at the `Connection` object at the input. The block upstream in the chain will collect them for
+processing, and so on.
 
-The ending point is the **Engine**, which has no inputs. It takes momentum and reaction torque from
-its output, processes them, then generates a **drive torque** that is put back at the output.
+The ending point is the **Engine**, which has no inputs. It takes momentum, inertia and reaction
+torque from its output, processes them, then generates a **drive torque** and puts it back at the
+output.
 
 #### 2. EvaluateTorqueDownstream
 
