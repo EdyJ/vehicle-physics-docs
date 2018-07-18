@@ -26,6 +26,7 @@ pages:
 - "&#8201;": index.md
 - About:
   - Features: about/features.md
+  - Showcase: about/showcase.md
   - Demos: about/demos.md
   - Licensing: about/licensing.md
   - Comparing with other kits: about/comparison.md
