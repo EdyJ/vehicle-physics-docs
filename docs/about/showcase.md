@@ -150,7 +150,7 @@ _JCB 3CX, JCB 409b_
 </div>
 
 - Vehicle Controller: rear-wheel drive or all-wheel drive with front-rear axles linked, engine, torque converter, automatic transmission.
-- Dynamics add-ons: rolling friction, tire-provided suspension, aerodynamics
+- Dynamics add-ons: rolling friction, tire bouncing, aerodynamics
 - Hydraulic Joints: wheel loader control (2 joints), excavator control (5 joints), stabilizers control (2 joints), hydraulic steering (1 joint)
 - FX add-ons: audio, tire effects
 
@@ -168,14 +168,14 @@ _Komatsu Wa900, Komatsu Hd985, Komatsu PC3000, Cat D11_
 Komatsu Wa900 front loader:
 
 - Vehicle Controller: all-wheel drive with front-rear axles linked, engine, torque converter, automatic transmission (3 gears forward, 3 reverse)
-- Dynamics add-ons: rolling friction, tire-provided suspension
+- Dynamics add-ons: rolling friction, tire bouncing
 - Hydraulic Joints: wheel loader control (2 joints), hydraulic steering (1 joint)
 - FX add-ons: audio, tire effects
 
 Komatsu Hd985 mining dumper truck:
 
 - Vehicle Controller: multi-axle rear-wheel drive (4 rear wheels), engine, torque converter, automatic transmission, retarder brake, ABS
-- Dynamics add-ons: twin-tire friction, adaptive suspension (air spring), tire-provided suspension, anti-roll bar
+- Dynamics add-ons: twin-tire friction, adaptive suspension (air spring), tire bouncing, anti-roll bar
 - Hydraulic Joints: dumper control (1 joint)
 - FX add-ons: audio, tire effects
 
@@ -202,4 +202,4 @@ Argo J8 amphibious robotic vehicle (wheeled and tracked variants)
 </div>
 
 - Tracked vehicle controller: dual-motor triple-differential steering with neutral rotation, track friction, drive / brake torques, auto-brake, track animation
-- Dynamics add-ons: track suspension, tire-provided suspension
+- Dynamics add-ons: track suspension, tire bouncing

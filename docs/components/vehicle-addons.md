@@ -184,28 +184,3 @@ Handbrake Lights On
 
 Handbrake Lights Off
 :	Object representing the dashboard indicator for the handbrake turned off (not glowing).
-
-### VPAeroSurface
-
-Stand-alone component (it doesn't require a VehicleBase-derived component) providing drag and
-downforce based on the velocity of the vehicle. The forces are applied to the vehicle at the
-position of the GameObject containing this component.
-
-The recommended setup is having a VPAeroSurface GameObject at the middle of each axle, at least
-at front and rear. These components can configure the behavior of the vehicle at high speeds.
-
-![VP Aero Surface](/img/components/vpp-aero-surface.png){: .img-medium .clickview }
-
-Drag Coefficient
-:	Coefficient for the drag force with the speed. The force is applied counteracting the vehicle's
-	velocity.
-
-Downforce Coefficient
-:	Coefficient for the downforce with the speed. The force is applied that the transform's position
-	and the transform.down direction.
-
-The force magnitudes are calculated with a simple quadratic formula:
-
-$$ F = \rho \times v^2 $$
-
-where $F$ is the force in Newtons, $\rho$ is the coefficient and $v$ is the vehicle's speed in m/s.
