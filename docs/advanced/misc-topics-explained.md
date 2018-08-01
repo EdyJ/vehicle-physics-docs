@@ -460,16 +460,23 @@ Horizontal scale is slip in m/s. Vertical scale is coefficient of friction. The 
 
 Tweaking vehicles in VPP is much like tweaking real vehicles. Same rules apply.
 
+Inertia
+:	The inertia represents the distribution of mass within the vehicle and defines its natural
+	behavior. It plays a critical role in the handling and the understeer/oversteer effects. For
+	example, vehicles with the engine in the rear part will behave in a different way than vehicles
+	with the engine in the front, even with all other properties (mass, center of mass) being the
+	same. VPP provides a component (VPPChassisInertia) for configuring the inertia properly.
+
 Low speed
 
-:	The behavior at low speed is mostly ruled by suspension (springs, dampers) and weight distribution
-	(center of mass).
+:	The behavior at low speed may be configured with the suspension (springs, dampers, anti-roll
+	bars) and weight distribution (center of mass).
 
 High speed
 
-:	Behavior at high speed can be adjusted with aerodynamics.
+:	Behavior at high speed may be adjusted with aerodynamics.
 
-	- Configure a couple of [VPAeroSurface components](/components/vehicle-addons#vpaerosurface)
+	- Configure a couple of [VPAeroSurface components](/components/vehicle-dynamics#vpaerosurface)
 		in your vehicle. One should be positioned at the front axle, and the other at rear axle.
 	- Configure _Downforce Coefficient_ at both components. This will define how much weight
 		(= downforce) will be added to each axle as the speed increases. If the front axle receives
@@ -497,8 +504,36 @@ Braking
 
 #### Too much understeer!
 
-That will probably be the correct behavior for realistic settings. Most vehicles tend to understeer
-as natural behavior.
+Configure the vehicle inertia
+
+:	The inertia represents the distribution of mass within the vehicle and defines its natural
+	behavior. An understeering vehicle may be turned into oversteering by moving the distribution
+	of mass to the front part. Use VPPChassisInertia for configuring the inertia of the vehicle.
+
+Automatic steering angle limit
+
+:	This setting in [VPVehicleController](/components/vehicle-controller.md) limits the maximum
+	steering angle to the value that provides the most lateral grip at the actual vehicle speed.
+	This ensures the wheels are performing to their maximum grip, thus allowing to experience and
+	configure the vehicle's handling properly.
+
+Aerodynamics
+
+:	Aerodynamic components provide extra downforce with the speed. This downforce increases the grip
+	at the tires. Balancing the amount of aerodynamic downforce among front and rear axles can
+	configure the understeer / oversteer behavior at high speeds.
+
+	Aerodynamics requires keeping an eye on the suspension (you can use the Telemetry). The extra
+	downforce will compress the suspension as well. The suspension must not reach the 100%
+	compression (1.0) or unwanted effects will occur. Stiffer springs or progressive suspensions
+	might be required for avoiding that.
+
+Force feedback
+
+:	Allows the use of steering wheel controllers for feeling the actual grip of the tire while
+	cornering.
+
+Still, note that most real vehicles tend to understeer as natural behavior.
 
 I'd like to quote [this forum post from Stefano Cassillo](http://www.gamedev.net/topic/631886-car-physics-sharing-work-ideas-formulas-and-car-parameters/page-2#entry4986662),
 developer of the [Assetto Corsa](http://www.assettocorsa.net) simulator, regarding lateral friction:
@@ -514,39 +549,6 @@ developer of the [Assetto Corsa](http://www.assettocorsa.net) simulator, regardi
 > 2. The result of 1 is that no driving skills are developed... typical sign, Joe-I-Go-Fast goes too fast into a corner, the car will understeer and he turns more into the corner, making understeer worse and going even more wide into the wall.
 >
 > 3. They are used to other games either arcade a-la PGR or F1 games where cars have huge amount of grip.
-
-Vehicle Physics Pro will implement these solutions:
-
-Automatic steering angle limit
-
-:	It will limit the maximum steering angle to the value that provides most lateral grip at the
-	actual vehicle speed.
-
-	In my opinion most of the understeer problem is a perception issue. Without steering wheel +
-	force feedback there's no clear idea on when the tires are performing their maximum grip. By
-	limiting the angle with speed you give the driver a clear perception on how much the vehicle
-	can steer at the actual speed with the actual tires. Thus, they learn to brake on sharp
-	turns in order to allow wider steering angle. Choosing the correct balance among speed &
-	steering angle on each turn gives the vehicle the best racing line.
-
-	This solution had been implemented in the package Edy's Vehicle Physics under the driver
-	aid "ESP".
-
-Aerodynamics
-
-:	Aerodynamic components provide extra downforce with the speed. This downforce increases the grip
-	at the tires. Balancing the amount of aerodynamic downforce among front and rear axles can
-	configure the understeer / oversteer behavior at high speeds.
-
-	Aerodynamics requires keeping an eye on the suspension (you can use the Telemetry). The extra
-	downforce will compress the suspension as well. It's better the suspension not to reach 100%
-	compression (1.0). Stiffer springs might be required for avoiding that.
-
-Force feedback
-
-:	Allowing the use of steering wheel controllers for feeling the actual grip of the tire while
-	cornering.
-
 
 #### Driving Aids explained
 
@@ -859,7 +861,7 @@ designed so any functionality could be added via custom scripts.
 
 Use of scale has these conditions:
 
-- Scale must be 1 in the vehicle's root GameObject, which holds the Rigidbody and the [VPVehicleController](../components/vehicle-controller.md)
+- Scale must be 1 in the vehicle's root GameObject, which holds the Rigidbody and the [VPVehicleController](/components/vehicle-controller.md)
 components.
 - Scale must be 1 in all VPWhelColliders components and along their ancestor lines up to vehicle's
 root.
@@ -878,7 +880,7 @@ Check out the property `wheelState` in any controller that inherits from `Vehicl
 It lets you access the array of state variables for all wheels. You can use foreach () and count how
 many wheels have the flag `wheelState.grounded` enabled.
 
-[VPVehicleController](../components/vehicle-controller.md) (derived from `VehiclePhysics.VehicleBase`)
+[VPVehicleController](/components/vehicle-controller.md) (derived from `VehiclePhysics.VehicleBase`)
 adds the wheels to the `wheelState` array in the same order as they're specified in the `Axles`
 property. Typically, the order is front to rear, left and right. But this order not strictly
 enforced, it might vary if the user specifies axes in a different order. Also, custom vehicle

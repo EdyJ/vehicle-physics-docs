@@ -7,8 +7,11 @@ components don't fit your needs or you need other features.
 
 ### VPAntirollBar
 
-Provides roll stabilization. The vehicle's roll is limited by "linking" the left-right suspensions
-in the same axle.
+[Anti-roll bars](https://en.wikipedia.org/wiki/Anti-roll_bar) (also "stabilizer bars" or "sway bars")
+_connect_ the two wheels of the same axle allowing a limited degree of freedom between their
+suspensions. When one of the wheels is pushed upwards, the stabilizer bar transfers a portion of
+that compression force to the other wheel, so its suspension compress as well. This reduces the
+body lean in turns at that axle.
 
 ![VP Anti Roll Bar](/img/components/vpp-anti-roll-bar.png){: .img-medium .clickview }
 
@@ -66,3 +69,10 @@ The force magnitudes are calculated with a simple quadratic formula:
 $$ F = \rho \times v^2 $$
 
 where $F$ is the force in Newtons, $\rho$ is the coefficient and $v$ is the vehicle's speed in m/s.
+
+!!! warning "&fa-warning; Important:"
+
+	Aerodynamic forces require keeping an eye on the suspension (you can use the Telemetry). The
+	extra downforce will compress the suspension as well. The suspension must not reach the 100%
+	compression (1.0) or unwanted effects will occur. Stiffer springs or progressive suspensions
+	might be required for avoiding that.
