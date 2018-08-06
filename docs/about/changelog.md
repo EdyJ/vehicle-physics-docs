@@ -3,7 +3,7 @@
 This list is a brief summary of the most significant additions to Vehicle Physics Pro along time.
 It doesn't include minor changes nor fixes.
 
-Licensees may access the full development details via GIT revision logs:
+Licensees may access the full development details via GIT revision logs (VPP subscription required):
 
 - [Vehicle Physics Core (Source Code version)](http://projects.edy.es/trac/edy_vehicle-physics-core/log/)
 - [Vehicle Physics Core (SDK version)](http://projects.edy.es/trac/edy_vehicle-physics-pro-sdk/log/)
