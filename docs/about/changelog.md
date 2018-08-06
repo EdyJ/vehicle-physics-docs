@@ -12,6 +12,13 @@ Licensees may access the full development details via GIT revision logs:
 
 <hr>
 
+#### July 2018
+
+- New **VPSolidCargo** component for easily configuring the cargo in the vehicle (volume, mass and position).
+- New **VPWeightData** telemetry component that displays the weight per axle or group of axles.
+- New **bump stops** feature preventing the suspension to reach its limits.
+- New **Truck Audio** prefab with complete audio settings for trucks.
+
 #### June 2018
 
 - New **VPChassisInertia** component that configures a specific set of colliders to represent the inertia of the vehicle chassis. The inertia defines the understeer / oversteer behaviour.
@@ -57,6 +64,7 @@ Licensees may access the full development details via GIT revision logs:
 - New **damper calculation** replacing PhysX's (faulty by design)
 - New high-level component for managing the vehicle settings in a comprehensive way (i.e. safe, sport, race...)
 - New experimental **bike controller** (two-wheeled vehicle)
+- New **leaf spring** suspension simulation.
 
 #### March 2017
 
@@ -119,7 +127,7 @@ Licensees may access the full development details via GIT revision logs:
 #### February 2016
 
 - **Anti-lock braking system (ABS)** [[video]](https://www.youtube.com/watch?v=t0NFt3d-jbg). Releases the brake pressure in each wheel to prevent wheel slip.
-- New **vPDamage** component for modifying meshes and wheels with impacts.
+- New **VPDamage** component for modifying meshes and wheels with impacts.
 
 #### January 2016
 
