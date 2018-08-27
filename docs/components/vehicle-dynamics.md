@@ -28,7 +28,9 @@ Mode
 		suspensions.
 
 Stiffness
-:	0 removes the anti-roll effect (fully elastic bar). 1 means a rigid, totally inelastic bar.
+:	0 removes the anti-roll effect (fully elastic bar). 1 means a rigid, totally inelastic bar. The
+	effect is achieved by shifting the given ratio of suspension properties (spring, rate) among
+	the wheels depending on their relative contact depths.
 
 Spring Rate
 :	Spring rate transferred from the less compressed to the most compressed suspension. For example,
