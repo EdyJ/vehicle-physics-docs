@@ -7,8 +7,7 @@ if you have any questions.
 
 ### Compare editions
 
-&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
-to changes during the Early Access stage.
+&fa-warning:lg; License versions, terms, content and pricing are subject to changes during the Early Access stage.
 {: .alert .alert-warning }
 
 | Features | <center>Free</center> | <center>Professional</center> | <center>Enterprise</center> |
@@ -42,20 +41,26 @@ May be licensed by companies with annual revenue / funds / budget in excess of �
 	VPP repositories by email. Please allow 24/48 hours for your order to be processed.
 - **Early Access:** the simulation kit is completed and ready to be used in production titles.
 	Example scenes, tutorials, and additional resources are being worked on.
+- Professional license may not be licensed by any commercial or non-commercial entity with annual
+	gross revenues, funds (including crowdfunding), or total annual budget in excess of €200,000.
+- Enterprise license is suitable for commercial entities with annual gross revenues (based on prior
+	fiscal year) of €200,000 or more, or that have raised funds (including but not limited to
+	crowdfunding) in excess of €200,000 during the most recently completed fiscal year, or
+	non-commercial entities with a total annual budget in excess of €200,000 for the entire
+	non-commercial entity.
+- Email support in the Professional license shall be provided to the licensee individual only.
+- Connections to the GIT repositories are logged per-account. Failure to keep the repository
+	connections under reasonable limits may result in the interruption of the service.
 
 ##### Subscription
 
 - Professional and Enterprise licenses include a yearly subscription for support and updates.
 - First year of support and updates is included in the license price.
 - Customers may opt-out any time and keep the most recent VPP version at that time.
-- After opting-out, there's a grace period of 90 days to rejoin paying the subscription fee only.
+- After opting-out, a grace period of 120 days is granted to rejoin paying the subscription fee only.
 
 The subscription model allows continuous development, feature updates, and product support in the
 long term.
-
-&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
-to changes during the Early Access stage.
-{: .alert .alert-warning }
 
 ### Additional Services
 
@@ -77,102 +82,17 @@ Training and Learning
 ##### Rates
 
 - 100 €/hour, with a limit of 8 hours per week per customer.
-- Traveling to the customer's location: 900 €/day + expenses.
+- Traveling to the customer's location: 1000 €/day + expenses, with a limit of 5 work days per month.
 
 ##### Notes
 
-- Check out the [terms & conditions for the Additional Services](#additional-services_1) below.
-- Customers in European Union should supply VAT number. Without valid VAT number, EU customers will
-	be charged VAT.
 - I'll sign an NDA upon request.
+- Time includes any task related to the Services including, but not limited to, setting up projects,
+	downloading resources, reviewing documentation or videos, meetings, writing documentation, and
+	any other task or procedure necessary to provide the Services.
+- Payments shall be processed in a weekly basis at the end of each week. The author reserves the
+	right of putting the Services on hold until any pending payments have been fulfilled.
 
 ### Terms & Conditions
 
-#### Licensing
-
-- Professional license may not be licensed by any commercial or non-commercial entity with annual
-	gross revenues, funds (including crowdfunding), or total annual budget in excess of €200,000.
-
-- Enterprise license is suitable for commercial entities with annual gross revenues (based on prior
-	fiscal year) of €200,000 or more, or that have raised funds (including but not limited to
-	crowdfunding) in excess of €200,000 during the most recently completed fiscal year, or
-	non-commercial entities with a total annual budget in excess of €200,000 for the entire
-	non-commercial entity.
-
-- Vehicle Physics Pro may be used as part of **end-user, closed source applications only**. No
-	development libraries, development tools, open-source projects or middleware of any kind are
-	permitted to use code, resources, technologies or algorithms included in Vehicle Physics Pro.
-
-- No part of the source code, binaries or resources (including but not limited to art, 3D files,
-	textures and audio) included in Vehicle Physics Pro may be disclosed to a third party, nor
-	included as part of any publicly accessible repository.
-
-- All licenses are issued to an individual person or company and are nontransferable in any way,
-	including but not limited to renting, subcontracting, leasing, and lending.
-
-- Email and Skype support in the Professional license shall be provided to the licensee individual
-	only.
-
-- Connections to the GIT repositories are logged per-account. The account may get blocked if an
-	excess of connections for a given license is detected. Failure to keep the repository
-	connections under reasonable limits may result in a license termination.
-
-- All Intellectual Property Rights related to Vehicle Physics Pro, the code, binaries, technologies,
-	algorithms and resources provided with the package or repositories are exclusive property of the
-	author, Angel Garcia Voces.
-
-- Warranty: Any defects in the operation or functionality of VPP that are not part of the product
-	design nor attributable to third-party products (including, but not limited to Unity 3D) will
-	try to be corrected by the author as soon as possible after the author has been notified of such
-	defects.
-
-- DISCLAIMER: TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE AUTHOR FURTHER EXPRESSLY
-	DISCLAIMS ALL WARRANTIES TERMS OR CONDITIONS OF ANY KIND, OTHERWISE STATED ABOVE, WHETHER
-	EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO ANY IMPLIED WARRANTIES TERMS AND CONDITIONS
-	OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT,
-	WITH RESPECT TO VPP. THE USE OF VPP IS AT THE LICENSEE'S OWN DISCRETION AND RISK AND THE
-	LICENSEE IS SOLELY RESPONSIBLE FOR ANY DAMAGE TO LICENSEE'S COMPUTER SYSTEM, OR OTHER DEVICE,
-	OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
-
-&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
-to changes during the Early Access stage.
-{: .alert .alert-warning }
-
-#### Additional Services
-
-- All Intellectual Property Rights related to Vehicle Physics Pro shall remain exclusive property
-	of the author, Angel Garcia Voces.
-
-- All Intellectual Property Rights related to the resources provided by the customer shall remain
-	exclusive property of the customer.
-
-- Any modifications and/or additions to Vehicle Physics Pro (including, but not limited to code,
-	features, resources and documentation) as result of providing the Additional Services shall
-	remain exclusive property of Angel Garcia Voces and will be incorporated to the VPP package.
-
-- Any custom settings, scripts or resources developed by Angel Garcia Voces as result of providing
-	the Additional Services that are specific to the customer's project shall be property of the
-	customer.
-
-- Unless explicitly stated otherwise (NDA) the customer expressly grants a permission to the author
-	for publishing images and/or videos of the work made while providing the Additional Services
-	in the VPP website, twitter, youtube, blog, and/or any other public channels, for promotional
-	purposes only. No part of the work made specifically for the customer's project (as defined
-	above) will be made public in any case.
-
-- Time includes any task related to the Services including, but not limited to, setting up projects,
-	downloading resources, reviewing documentation or videos, meetings, writing documentation, and
-	any other task or procedure necessary for performing the Services.
-
-- Payments shall be processed in a weekly basis at the end of each week. The author reserves the
-	right of putting the services on hold until any pending payments have been completed.
-
-- DISCLAIMER: WHILE THE BEST EFFORT, KNOWLEDGE AND EXPERTISE WILL BE PUT IN DEVELOPING THE HIGHEST
-	QUALITY WORK, THE AUTHOR EXPRESSLY DISCLAIMS ANY WARRANTY OF MERCHANTABILITY, SATISFACTORY
-	QUALITY, FITNESS FOR A PARTICULAR PURPOSE, DELIVERY TIME OR AVAILABILITY WITH RESPECT TO THE
-	ADDITIONAL SERVICES AND THE RESULTING WORK, REGARDLESS THE AMOUNT OF TIME DEDICATED TO SUCH
-	WORK.
-
-&fa-warning:lg; License versions, terms, content and pricing are _not_ definitive and are subject
-to changes during the Early Access stage.
-{: .alert .alert-warning }
+[Vehicle Physics Pro SDK License Agreement (PDF)](/Vehicle%20Physics%20Pro%20SDK%20License%20Agreement.pdf)
