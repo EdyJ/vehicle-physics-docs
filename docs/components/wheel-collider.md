@@ -1,6 +1,6 @@
 # VPWheelCollider
 
-This component implements the wheel colling entity in Unity 3D:
+This component implements the wheel colling entity in Vehicle Physics Pro:
 
 - Suspension, steering, physical contact
 - Suspension analysis at the Inspector
@@ -23,7 +23,8 @@ The mass should be roughly the mass of the wheel.
 The radius should match the actual radius of the wheel mesh.
 
 The **inertia** is calculated as $ 1/2 m r^2 $. Note that if the inertia is too small it may have
-adverse effects in the numeric stability. Ensure to use a mass large enough for the wheel.
+adverse effects in the numeric stability. Ensure to use a mass large enough for the wheel. Mass is
+used for the dynamics calculations only and doesn't have impact on the vehicle's mass.
 
 ### Center
 
@@ -106,3 +107,112 @@ Wheel
 
 Suspension, Caliper and Wheel transform can be parented together in any way. They will be moved
 and rotated correctly.
+
+# Scripting Reference
+
+```
+public class VPWheelCollider : VehicleBehaviour
+```
+
+### Properties
+
+```
+	public float mass = 20.0f;
+	public float radius = 0.3f;
+
+	public Vector3 center;
+
+	[Range(0.01f, 2.0f)]
+	public float suspensionDistance = 0.25f;
+
+	// suspensionAnchor:
+	// The relative point in the suspension travel where the wheel is located at design time.
+
+	[Range(0,1)]
+	public float suspensionAnchor = 0.5f;
+	public float springRate = 30000.0f;
+	public float damperRate = 1500.0f;
+
+	public Transform suspensionTransform;
+	public Transform caliperTransform;
+	public Transform wheelTransform;
+
+	[Range(0.0f, 0.2f)]
+	public float groundPenetration = 0.02f;
+	public bool disableSuspensionMovement = false;
+
+	// Steer angle fix override. May be disabled when the forward directions of all wheels are
+	// pointing in the same direction as the Rigidbody.
+
+	public static bool disableSteerAngleFix = false;
+
+	// Wheel frame fix override.
+	// Fixes wrong calculation for WheelHit.forwardDir and WheelHit.sidewaysDir.
+
+	public static bool disableWheelReferenceFrameFix = false;
+
+	// Minimum allowed suspension distance
+
+	public static float minSuspensionDistance = 0.01f;
+
+	// Access to cachedTransform is allowed before OnEnable is invoked
+
+	public Transform cachedTransform { get; }
+
+	// Visual contact point.
+	// Updated at Update rate while the vehicle and the wheel are enabled.
+
+	public bool visualGrounded { get; }
+	public RaycastHit visualHit { get; }
+
+    // Steer angle relative to the wheel's forward direction
+
+	public float steerAngle { get; set; }
+
+	// Angular velocity and position of the visual wheel
+
+	public float angularVelocity { get; set; }
+	public float angularPosition { get; set; }
+
+	// Is this wheel allowed to sleep?
+
+	public bool canSleep { get; set; }
+
+	// Current spring rate being applied at the WheelCollider.
+	// Use for physics related calculations (i.e. force = contact depth * spring rate).
+
+	public float effectiveSpringRate { get; }
+
+	// Use for modifying suspension values in runtime
+	//
+	// These values gets reset to the component's default before each physics step.
+	// It may be overwritten or amended by other blocks or scripts at any criteria.
+	//
+	// Custom VehicleBehaviour components should modify these values at UpdateVehicleSuspension.
+	//
+	// NOTE: It's NOT safe reading these properties from OnEnableVehicle / OnEnableComponent
+	// in other component, especially when relying on the suspension values on startup.
+	// (i.e. as VPDynamicSuspension does). Use the regular public fields in these cases.
+
+	public float runtimeSpringRate { get; set; }
+	public float runtimeDamperRate { get; set; }
+	public float runtimeSuspensionTravel { get; set; }
+
+	// Latest suspension values that made it into the physics WheelCollider.
+	// Used for debug / performance charts.
+
+	public float lastRuntimeSpringRate { get; }
+	public float lastRuntimeDamperRate { get; }
+	public float lastRuntimeSuspensionTravel { get; }
+
+    // Extra downforce to be considered when computing the tire force. No other effect.
+	// Read from VehicleBase. Restored to 0 before each physics step.
+
+	public float runtimeExtraDownforce { get; set; }
+```
+
+### See also
+
+TireFriction<br>
+VehicleBase<br>
+VehicleBehaviour<br>
