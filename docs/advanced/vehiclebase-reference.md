@@ -5,6 +5,13 @@ the engine's internal parts by instancing and connecting Block classes (engine, 
 
 ## VehicleBase overrides
 
+!!! danger "&fa-exclamation-circle; Never override Update, FixedUpdate, or LateUpdate in the derived classes"
+
+	Always use the overrides below for writing your code:
+
+	- Update or FixedUpdate --> OnUpdate
+	- FixedUpdate --> DoUpdateBlocks or DoUpdateData
+
 #### OnInitialize
 
 Configure the number of wheels by calling SetNumberOfWheels(n). Then create, configure and
@@ -27,34 +34,24 @@ Important: you must configure each WheelState with the corresponding the WheelCo
 WheelState.wheelCol. Also, ensure to flag the steering wheels as steerable (this is used by the
 force feedback calculations).
 
-#### OnPreDynamicsStep
+#### OnFinalize
 
-Optional: For advanced / highly specialized use.
-
-Invoked before computing each dynamics step. Common vehicle controllers don't need to override this.
-
-#### DoExternalSuspensionForce
-
-Optional: Set up WheelState.externalUpForce (Newtons) and externalUpForceFactor.
-
-Used for implementing advanced suspension parts such as anti-roll bars.
+Called after the vehicle has been finalized, so the controller could finalize any custom
+initialization (i.e. de-subscribe to events).
 
 #### DoUpdateBlocks
 
 Update the inputs and states for your blocks: engine, brakes, gear, etc.
-Called before each integration step (FixedUpdate rate).
+Called before each integration step at the physics rate (FixedUpdate rate).
 
 #### DoUpdateData
 
 Populate the data bus with the actual values of the vehicle.
-Called after each integration step (FixedUpdate rate).
+Called after each integration step at the physics rate (FixedUpdate rate).
 
 #### OnUpdate
 
-Called at the start of Update. Adjust visual and per-frame stuff here (Update rate). Frames may be
-skipped here.
-
-**Do NOT override the standard Update, FixedUpdate, or LateUpdate in the derived classes.**
+Adjust visual and per-frame stuff here at the visual refresh rate (Update rate). Frames may be skipped.
 
 #### GetInternalObject
 
@@ -77,7 +74,7 @@ Spring rate for the tire side to deflect and bend when sliding laterally. It can
 simulate tires targeted to different speeds. Tires with low rates (8-20) may become difficult to
 drive at high speeds.
 
-This setting will be moved to Tire Friction at some point
+This setting will be moved to Tire Friction at some point.
 
 #### Tire impulse ratio
 
@@ -102,7 +99,7 @@ instabilities at rest.
 Wheels moving slower than this speed are allowed to sleep when no other forces / torques that can
 move them are present.
 
-#### Integration steps and method
+#### Integration method and steps
 
 **Substeps** are subdivisions of the Unity physics time steps that are used for calculating the
 internal torques, forces and momentums at every block in the vehicle. The more substeps, the more
@@ -113,10 +110,3 @@ two substeps per driven axle.
 
 Detailed information: [Solver substeps explained](../advanced/misc-topics-explained.md#solver-numeric-integration)
 
-#### Engine reaction factor
-
-Advanced: ratio of the reaction torque used at the engine torque calculations.
-
-Reducing this ratio solves the low-frequency numerical resonances among wheels and engine that may
-occur at high-torque situations (i.e. heavy vehicles in slow gears). It should always be 1.0
-unless this effect i
