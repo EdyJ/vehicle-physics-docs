@@ -3,9 +3,11 @@
 This component implements the wheel colling entity in Vehicle Physics Pro:
 
 - Suspension, steering, physical contact
-- Suspension analysis at the Inspector
-- Comprehensive wheel gizmo at the Scene view
+- Suspension analysis in the Inspector
+- Comprehensive wheel gizmo in the Scene view
 - Visual meshes for wheel, brake caliper and suspension geometry
+
+Tire friction is configured in [VPVehicleController](/components/vehicle-controller).
 
 ![VP WheelCollider](/img/components/vpp-wheelcollider.png){: .clickview }
 
