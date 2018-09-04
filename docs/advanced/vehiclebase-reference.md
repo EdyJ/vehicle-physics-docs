@@ -1,9 +1,14 @@
 # VehicleBase reference
 
-`VehiclePhysics.VehicleBase` is the base class for all the vehicles. Derived classes implement
-the engine's internal parts by instancing and connecting Block classes (engine, gearbox, etc).
+`VehiclePhysics.VehicleBase` is the base class for every vehicle in Vehicle Physics Pro. Vehiclebase
+inherits from Unity's MonoBehaviour so vehicle controllers are standard components in Unity. Derived
+classes implement the vehicle's internal parts by instancing, connecting and managing Block classes
+(engine, gearbox, etc) in VehicleBase's overridden methods.
 
 ## VehicleBase overrides
+
+These methods are overridden in derived classes to create the vehicle controllers. [VPVehicleController](/components/vehicle-controller)
+already inherits from VehicleBase. Here's an example of [custom vehicle controller with source code](/advanced/custom-vehicles).
 
 !!! danger "&fa-exclamation-circle; Never override Update, FixedUpdate, or LateUpdate in the derived classes"
 
@@ -253,8 +258,8 @@ public abstract class VehicleBase : MonoBehaviour
 ### Events
 
 ```
-	// Public events occurring at several stages of the vehicle simulation. Advanced use only.
-	// These events may have any number of internal or external subscribers (VehicleBehaviour).
+	// Exposed events occurring at several stages of the vehicle simulation. Advanced use only.
+	// These events may have any number of subscribers (i.e. from VehicleBehaviour-based add-ons).
 
 	public Action onPreDynamicsStep;			// Invoked before computing each dynamics step
 	public Action onBeforeUpdateBlocks;			// Invoked before calling DoUpdateBlocks
