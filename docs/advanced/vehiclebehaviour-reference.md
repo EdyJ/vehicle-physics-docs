@@ -27,14 +27,8 @@ VehicleBehaviours support these runtime situations:
 - Disabled inside notifications (enabled=false): Supported but discouraged. No errors, but other
 	components might be skipped for that notification that frame.
 
-Most components included in VPP are already VehicleBehaviours, for example:
-
-- [VPVisualEffects](../components/vehicle-addons#vpvisualeffects): reads the actual steering value
-	from the data bus and rotates the steering wheel mesh accordingly.
-- [VPTireEffects](../components/vehicle-addons#vptireeffects): monitors the state of each wheel and
-	generates the different tire effects: trails, skid marks, smoke.
-- [VPStandardInput](../components/vehicle-input#vpstandardinput): reads the Unity Input values and
-	write them to the data bus.
+Check out [Creating add-on components](/advanced/custom-addons) for an example add-on with source
+code. Most components included in VPP are already VehicleBehaviours.
 
 ## VehicleBehaviour events
 

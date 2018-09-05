@@ -5,39 +5,49 @@ inherits from Unity's MonoBehaviour so vehicle controllers are standard componen
 classes implement the vehicle's internal parts by instancing, connecting and managing Block classes
 (engine, gearbox, etc) in VehicleBase's overridden methods.
 
+The standard vehicle controller in VPP, [VPVehicleController](/components/vehicle-controller),
+already inherits from VehicleBase. Here's an example of a [custom vehicle controller with source code](/advanced/custom-vehicles).
+
 ## VehicleBase events
 
-These events are implemented in derived classes to create the vehicle controllers. [VPVehicleController](/components/vehicle-controller)
-already inherits from VehicleBase. Here's an example of [custom vehicle controller with source code](/advanced/custom-vehicles).
+VehicleBehaviour events are implemented in derived classes to create the vehicle controllers.
 
-!!! danger "&fa-exclamation-circle; Never override Update, FixedUpdate, or LateUpdate in the derived classes"
+&fa-exclamation-circle:lg; Never override OnEnable, OnDisable, Update, FixedUpdate, or LateUpdate
+in the derived classes!
+{ .alert .alert-danger }
 
-	Always use the overrides below for writing your code:
+Use the events provided by VehicleBehaviour instead of the MonoBehaviour's:
 
-	- Update or FixedUpdate --> OnUpdate
-	- FixedUpdate --> DoUpdateBlocks or DoUpdateData
+- OnEnable --> OnInitialize
+- OnDisable --> OnFinalize
+- Update or LateUpdate --> OnUpdate
+- FixedUpdate --> DoUpdateBlocks or DoUpdateData
 
 #### OnInitialize
 
-Configure the number of wheels by calling SetNumberOfWheels(n). Then create, configure and
-connect all your blocks. Use the Block.Connect method.
+Configure the number of wheels by calling `VehicleBase.SetNumberOfWheels(n)`. Then create, configure
+and connect all your blocks. Use the Block.Connect method.
 
-Wheels can be accessed via wheels[n] and wheelsState[n] after calling SetNumberOfWheels:
+Wheels can be accessed via `VehicleBase.wheels[n]` and `VehicleBase.wheelsState[n]` after calling
+SetNumberOfWheels:
 
-"wheels" are the actual Wheel blocks. Required settings:
+`wheels` are the actual Wheel blocks. Required settings:
 
-- radius
-- mass
-- tireFriction
+- `Wheel.radius`
+- `Wheel.mass`
+- `Wheel.tireFriction`
 
-"wheelsState" are the meaningful values of the wheels. Required settings:
+`wheelsState` are the meaningful values of the wheels. Required settings:
 
-- wheelCol
-- steerable
+- `WheelState.wheelCol`
+- `WheelState.steerable`
 
-Important: you must configure each WheelState with the corresponding the WheelCollider
-WheelState.wheelCol. Also, ensure to flag the steering wheels as steerable (this is used by the
+Important: you must configure each WheelState with the corresponding WheelCollider in
+`WheelState.wheelCol`. Also, ensure to flag the steering wheels as steerable (this is used by the
 force feedback calculations).
+
+Check out the [source code example here](/advanced/custom-vehicles) for a comprehensive example on
+initializing a custom vehicle controller.
 
 #### OnFinalize
 

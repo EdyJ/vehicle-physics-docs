@@ -14,7 +14,8 @@ OnEnableComponent and OnDisableComponent instead if you need to trace the initia
 component in Unity.
 {: .alert .alert-danger }
 
-Check out [VehicleBehaviour reference](/advanced/vehiclebehaviour-reference) for full details.
+Other events are available. Check out [VehicleBehaviour reference](/advanced/vehiclebehaviour-reference)
+for full details.
 
 ## Example source code
 
@@ -27,7 +28,6 @@ using VehiclePhysics;
 public class SimpleVehicleAddon : VehicleBehaviour
 	{
 	public Text uiText;
-
 
 	public override void OnEnableVehicle ()
 		{
@@ -44,14 +44,12 @@ public class SimpleVehicleAddon : VehicleBehaviour
 		Debug.Log("Vehicle enabled. " + vehicle.wheelCount + " wheels");
 		}
 
-
 	public override void OnDisableVehicle ()
 		{
 		uiText.text = "";
 
 		Debug.Log("Vehicle disabled");
 		}
-
 
 	public override void UpdateVehicle ()
 		{
