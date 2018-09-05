@@ -64,6 +64,7 @@ pages:
   - Creating custom blocks: advanced/custom-blocks.md
   - Creating add-on components: advanced/custom-addons.md
   - VehicleBase reference: advanced/vehiclebase-reference.md
+  - VehicleBehaviour reference: advanced/vehiclebehaviour-reference.md
   - Data Bus reference: advanced/databus-reference.md
   - Miscelaneous topics explained: advanced/misc-topics-explained.md
   - Vehicle inertia: advanced/vehicle-inertia.md

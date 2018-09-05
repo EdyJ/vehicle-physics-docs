@@ -1,6 +1,6 @@
 # VehicleBase reference
 
-`VehiclePhysics.VehicleBase` is the base class for every vehicle in Vehicle Physics Pro. Vehiclebase
+`VehiclePhysics.VehicleBase` is the base class for every vehicle in Vehicle Physics Pro. VehicleBase
 inherits from Unity's MonoBehaviour so vehicle controllers are standard components in Unity. Derived
 classes implement the vehicle's internal parts by instancing, connecting and managing Block classes
 (engine, gearbox, etc) in VehicleBase's overridden methods.
