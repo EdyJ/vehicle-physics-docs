@@ -5,9 +5,9 @@ inherits from Unity's MonoBehaviour so vehicle controllers are standard componen
 classes implement the vehicle's internal parts by instancing, connecting and managing Block classes
 (engine, gearbox, etc) in VehicleBase's overridden methods.
 
-## VehicleBase overrides
+## VehicleBase events
 
-These methods are overridden in derived classes to create the vehicle controllers. [VPVehicleController](/components/vehicle-controller)
+These events are implemented in derived classes to create the vehicle controllers. [VPVehicleController](/components/vehicle-controller)
 already inherits from VehicleBase. Here's an example of [custom vehicle controller with source code](/advanced/custom-vehicles).
 
 !!! danger "&fa-exclamation-circle; Never override Update, FixedUpdate, or LateUpdate in the derived classes"
@@ -470,7 +470,7 @@ public abstract class VehicleBase : MonoBehaviour
 	public void DebugLogError (string message)
 ```
 
-### Methods to override
+### Virtual methods
 
 ```
 	// Configure the number of wheels (SetNumberOfWheels, wheels[], wheelsState[]).
