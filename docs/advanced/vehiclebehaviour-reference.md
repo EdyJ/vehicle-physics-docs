@@ -152,7 +152,10 @@ for a full list.
 # Scripting reference
 
 ```
-public abstract class VehicleBehaviour : MonoBehaviour
+namespace VehiclePhysics
+{
+	public abstract class VehicleBehaviour : MonoBehaviour
+}
 ```
 
 ### Properties

@@ -113,7 +113,10 @@ and rotated correctly.
 # Scripting Reference
 
 ```
-public class VPWheelCollider : VehicleBehaviour
+namespace VehiclePhysics
+{
+	public class VPWheelCollider : VehicleBehaviour
+}
 ```
 
 ### Properties

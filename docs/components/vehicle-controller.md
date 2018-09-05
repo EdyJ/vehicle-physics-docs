@@ -46,7 +46,7 @@ end
 
 Notes:
 
-- Steering, Brakes and Tires are included in the Wheel blocks.
+- Steering, Brakes and Tire Friction are included in the Wheel blocks.
 - The Retarder Brake is typically used in heavy transport vehicles (trucks, buses). It stays
 disabled on regular cars, SUVs, vans, etc.
 
@@ -231,7 +231,10 @@ unless this effect is clearly noticed.
 # Scripting Reference
 
 ```
-public class VPVehicleController : VehicleBase
+namespace VehiclePhysics
+{
+	public class VPVehicleController : VehicleBase
+}
 ```
 
 ### Classes
