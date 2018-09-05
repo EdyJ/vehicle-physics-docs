@@ -102,10 +102,10 @@ this precise component gets enabled or disabled in Unity.
 - OnEnableComponent will always be called before OnEnableVehicle.
 - OnDisableComponent will always be called after OnDisableVehicle.
 
-&fa-exclamation-circle:lg; **Do NOT override OnEnable or OnDisable!** Always use OnEnableComponent and
+&fa-exclamation-triangle:lg; **Do NOT override OnEnable or OnDisable!** Always use OnEnableComponent and
 OnDisableComponent instead if you need to trace the initialization of this precise component in
 Unity.
-{: .alert .alert-danger }
+{: .alert .alert-warning }
 
 #### OnReposition
 

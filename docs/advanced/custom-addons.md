@@ -9,10 +9,10 @@ instead of MonoBehaviour.
 - Implement UpdateVehicle for stuff that must be updated each visual frame.
 - Implement FixedUpdateVehicle for stuff that depends on or modifies the vehicle's physics values.
 
-&fa-exclamation-circle:lg; **Never override OnEnable or OnDisable in a VehicleBehaviour!** Use
+&fa-exclamation-triangle:lg; **Never override OnEnable or OnDisable in a VehicleBehaviour!** Use
 OnEnableComponent and OnDisableComponent instead if you need to trace the initialization of the
 component in Unity.
-{: .alert .alert-danger }
+{: .alert .alert-warning }
 
 Other events are available. Check out [VehicleBehaviour reference](/advanced/vehiclebehaviour-reference)
 for full details.

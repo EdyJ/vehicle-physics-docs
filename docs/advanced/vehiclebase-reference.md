@@ -12,16 +12,14 @@ already inherits from VehicleBase. Here's an example of a [custom vehicle contro
 
 VehicleBehaviour events are implemented in derived classes to create the vehicle controllers.
 
-&fa-exclamation-circle:lg; Never override OnEnable, OnDisable, Update, FixedUpdate, or LateUpdate
-in the derived classes!
-{ .alert .alert-danger }
+!!! warning "&fa-exclamation-triangle; Do NOT override OnEnable, OnDisable, Update, FixedUpdate, or LateUpdate"
 
-Use the events provided by VehicleBehaviour instead of the MonoBehaviour's:
+	Always override the events provided by VehicleBehaviour instead of the MonoBehaviour's:
 
-- OnEnable --> OnInitialize
-- OnDisable --> OnFinalize
-- Update or LateUpdate --> OnUpdate
-- FixedUpdate --> DoUpdateBlocks or DoUpdateData
+	- OnEnable --> OnInitialize
+	- OnDisable --> OnFinalize
+	- Update or LateUpdate --> OnUpdate
+	- FixedUpdate --> DoUpdateBlocks or DoUpdateData
 
 #### OnInitialize
 
