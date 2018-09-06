@@ -1,43 +1,116 @@
-# Brakes helper
+# Brakes
 
 ![VP Vehicle Controller brakes](/img/blocks/vpp-brakes-inspector.png){: .clickview }
 
+Max Brake Torque
+:	Maximum amount of brake torque to be split among front and rear wheels based on the Brake Bias
+	parameter. Each wheel will receive the computed torque regardless the number of wheels.
 
+	Neutral wheels always receive Max Brake Torque / 2.
 
+	The Front / Neutral / Rear setting is configured per axle in the [VPVehicleController.Axles](/components/vehicle-controller/#axles)
+	list.
+
+Brake Bias
+:	Front / Rear distribution of the brake torque. Front is &gt; 0.5, Rear is &lt; 0.5.
+
+Handbrake Torque
+:	Torque applied to the wheels when the handbrake is enabled. This torque is accumulated to any
+	other regular torque.
+
+Handbrake Axle
+:	Axle or axles affected by the hand brake. 0 = rear, 0.5 = all, 1 = front.
+
+	A value of 0.5 is useful to simulate the parking brake in heavy vehicles, where all wheels are
+	braked.
+
+### Anti-lock braking (ABS)
+
+![Anti-lock braking (ABS) inspector](/img/blocks/vpp-brakes-abs-inspector.png){: .clickview }
+
+Enabled
+:	Should the ABS have effect or not.
+
+Mode
+:	ABS operation mode: Simple, Multi-position, Continuous. See below for details on each mode.
+
+Trigger
+:	How to define the wheel slip velocity at which the ABS is triggered.
+
+	- Peak Slip Offset: the slip is an offset to the point of maximum grip as defined in the Tire
+		Friction.
+	- Custom Slip: the slip is specified directly.
+
+	Slip and offset values are m/s: speed of the tire surface relative to the ground.
+
+Min Pressure Ratio
+:	The brake torque applied to the wheel will be multiplied by this value when the ABS is in full
+	effect.
+
+##### Mode: Simple
+
+The brake torque applied to the wheel is multiplied by Min Presure Ratio when the wheel slip
+surpasses the trigger slip value.
+
+##### Mode: Multi-position
+
+![VP Vehicle Controller brakes](/img/blocks/vpp-brakes-abs-mode-multiposition.png){: .clickview }
+
+A range of slip is defined:
+
+- ABS is not applied below the minimum defined slip.
+- ABS is fully applied (torque multiplied by Min Pressure Ratio) beyond the maximum slip.
+- Within the range the slip is divided in a number of discrete positions (Valve Positions) which
+release more or less brake torque depending on the slip.
+
+This mode is the closest approach to real ABS systems.
+
+##### Mode: Continuous
+
+![VP Vehicle Controller brakes](/img/blocks/vpp-brakes-abs-mode-continuous.png){: .clickview }
+
+A range of slip is defined:
+
+- ABS is not applied below the minimum defined slip.
+- ABS is fully applied (torque multiplied by Min Pressure Ratio) beyond the maximum slip.
+- Within the range the brake torque is multiplied by the proportional value based on the slip.
 
 ### ABS calibration
 
-The ABS system can be configured to provide the best performance on each vehicle setup.
+ABS may be calibrated on each specific vehicle setup for providing the best performance.
 
-**ABS Pressure Ratio** is the proportion of braking torque that is allowed to pass-thru when the
+**Min Pressure Ratio** is the proportion of braking torque that is allowed to pass-thru when the
 ABS reduces the pressure on the brakes.
 
 - 0 means no braking at all, which might affect the braking efficiency (there are time slices where
-	the brakes haven't any effect).
-- A value too large means that the wheel may still get locked even when the ABS has released the
-	full brake pressure. This is best noticeable when braking and steering at the same time. If the
-	wheel still gets locked in this situation then the ABS pressure ratio is too large.
+	brakes have no effect at all).
+- A value too large means the wheel may continue locked even when the ABS has released all possible
+	brake pressure. This is best noticeable when braking and steering at the same time. If the
+	wheel still gets locked in this situation then Min Pressure Ratio is too large.
 
 The best value for the pressure ratio is the higher value that doesn't lock the wheel while heavily
 braking and steering at the same time.
 
-**ABS Trigger Offset** is a slip amount (m/s) that is applied to the slip point of maximum grip in
-the tire friction curve. If the tire's forward slip surpasses this point (slip of maximum grip +
-offset) then the ABS is triggered and the brake torque gets multiplied by the pressure ratio.
+In Peak Slip Offset mode, **Trigger** and **Slip Offset** define slip amount (m/s) that is applied
+to the slip point of maximum grip in the tire friction curve. If the tire's forward slip surpasses
+this point (slip of maximum grip + offset) then the ABS is triggered and the brake torque gets
+multiplied by Min Pressure Ratio.
 
-- 0 means the ABS gets triggered at the slip point of maximum grip exactly.
-- A value too large means that the tire would have to suffer a lot of forward slip before the ABS
-	gets actually triggered. This would greatly affect both the braking efficiency (as a typical
-	tire has less grip with more slip) and the manoeuvrability while braking.
+- Slip Offset = 0 means the ABS gets triggered at the slip point of maximum grip exactly.
+- A value too large means that the tire would have to experience some amount of forward slip before
+	the ABS gets actually triggered. This would greatly affect both the braking efficiency (as a
+	typical tire has less grip with more slip) and the maneuverability while braking.
 
-A good value for offset is the tire slip point right before the grip suffers a significant drop.
-This allows the tire to in a slip range with good grip the most time while braking with ABS.
+A good value for the offset is the tire slip point right before the grip suffers a significant drop.
+This allows the tire to stay in a slip range with good grip the most time while braking with ABS.
 
-**Example:** given the values shown at the inspector pic above (_ABS Trigger Offset_ = 0.75) then the
-ABS would be trigger when the forward tire slip goes beyond ~2 m/s:
+**Example:** if Offset is 0.75 and the tire's peak friction slip is 1.25 then the ABS would be
+triggered when the forward tire slip goes beyond ~2 m/s:
 
 ![VPP ABS calibration](/img/blocks/vpp-brakes-abs-calibration.png){: .clickview }
 
-Once the ABS gets triggered the brake pressure would be reduced the 30% of the nominal pressure
-(from 1400 Nm to 420 Nm in the front brakes). When the slip goes below the trigger point, the brakes
-would be back to full pressure.
+Once the ABS gets triggered the brake pressure would be reduced to the 25% of the nominal pressure
+(as Min Pressure Ratio = 0.25). Given the Brakes setup at the top of this page, this means the brake
+torque would be reduced from from 1400 Nm to 420 Nm in the front axle. When the slip goes below the
+trigger point, the brakes would be back to full torque.
+
