@@ -15,6 +15,9 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		originY: canvasHeight,
 		});
 
+	var originX = 0;
+	var originY = 0;
+
 
 	// Initialization
 
@@ -23,10 +26,8 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 
 	// Chart helper methods
 
-	self.Wheel = function (position)
+	self.Wheel = function (x, y)
 		{
-		var x = position[0];
-		var y = position[1];
 		var sizeX = 1;
 		var sizeY = 2;
 
@@ -34,28 +35,20 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		}
 
 
-	self.ConnectX = function (position, length)
+	self.ConnectX = function (x, y, length)
 		{
-		var x = position[0];
-		var y = position[1];
-
 		canvas.Line([ x, y, x+length, y ], { stroke: "black", strokeWidth: 3 });
 		}
 
 
-	self.ConnectY = function (position, length)
+	self.ConnectY = function (x, y, length)
 		{
-		var x = position[0];
-		var y = position[1];
-
 		canvas.Line([ x, y, x, y+length ], { stroke: "black", strokeWidth: 3 });
 		}
 
 
-	self.Differential = function (position)
+	self.Differential = function (x, y)
 		{
-		var x = position[0];
-		var y = position[1];
 		var options = { stroke: "black", strokeWidth: 3 };
 
 		canvas.Line([ x, y-1, x+1, y ], options);
@@ -65,10 +58,8 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		}
 
 
-	self.TorqueInputTop = function (position)
+	self.TorqueInputTop = function (x, y)
 		{
-		var x = position[0];
-		var y = position[1];
 		var options = { stroke: "black", strokeWidth: 3 };
 
 		canvas.Line([ x, y+1, x, y ], options);
@@ -76,15 +67,22 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		}
 
 
-	self.Axle = function (position)
+	self.TorqueInputRightTop = function (x, y)
 		{
-		var x = position[0];
-		var y = position[1];
+		var options = { stroke: "black", strokeWidth: 3 };
 
-		self.Wheel ([ x, y ]);
-		self.ConnectX ([ x+1, y-1 ], 2);
-		self.Differential ([ x+3, y ]);
-		self.ConnectX ([ x+5, y-1 ], 2);
-		self.Wheel ([ x+7, y ]);
+		canvas.Line([ x, y, x+1, y ], options);
+		canvas.Line([ x+1, y, x+1, y+1 ], options);
+		canvas.Line([ x+0.5, y+1, x+1.5, y+1 ], options);
+		}
+
+
+	self.Axle = function (x, y)
+		{
+		self.Wheel ( x, y );
+		self.ConnectX ( x+1, y-1 , 2);
+		self.Differential ( x+3, y );
+		self.ConnectX ( x+5, y-1 , 2);
+		self.Wheel ( x+7, y );
 		}
 	}

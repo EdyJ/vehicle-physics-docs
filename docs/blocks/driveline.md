@@ -48,8 +48,8 @@ Axle Differential
 		{
 		var canvas = new drivelinechartcanvas("fig1", 14, 6);
 
-		canvas.Axle ([ 3, -2 ]);
-		canvas.TorqueInputTop ([ 7, -2 ]);
+		canvas.Axle ( 3, -2 );
+		canvas.TorqueInputTop ( 7, -2 );
 		}
 
 	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
@@ -80,15 +80,16 @@ H-Drive
 		{
 		var canvas = new drivelinechartcanvas("fig2", 36, 16);
 
-		canvas.Axle ([ 3, -2 ]);
-		canvas.Axle ([ 3, -12 ]);
-		canvas.Differential ([ 6, -7 ]);
-		canvas.ConnectY ([ 7, -4], -3);
-		canvas.ConnectY ([ 7, -9], -3);
-		canvas.Axle ([ 14, -2 ]);
-		canvas.Axle ([ 14, -12 ]);
+		canvas.Axle ( 3, -2 );
+		canvas.Axle ( 3, -12 );
+		canvas.Differential ( 6, -7 );
+		canvas.ConnectY ( 7, -4, -3 );
+		canvas.ConnectY ( 7, -9, -3 );
+		canvas.Axle ( 14, -2 );
+		canvas.Axle ( 14, -12 );
+		canvas.TorqueInputRightTop ( 8, -8 );
 
-		// canvas.TorqueInputTop ([ 7, -2 ]);
+		// canvas.TorqueInputTop ( 7, -2 );
 		}
 
 	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
@@ -145,14 +146,14 @@ Full H-Drive
 		{
 		var canvas = new drivelinechartcanvas("figN", 25, 25);
 
-		canvas.Wheel ([ 0,0 ]);
-		canvas.ConnectX ([ 1, -1 ], 2);
-		canvas.Differential ([ 3, 0 ]);
-		canvas.ConnectX ([ 5, -1 ], 2);
-		canvas.Wheel ([ 7, 0 ]);
+		canvas.Wheel ( 0,0 );
+		canvas.ConnectX ( 1, -1 , 2);
+		canvas.Differential ( 3, 0 );
+		canvas.ConnectX ( 5, -1 , 2);
+		canvas.Wheel ( 7, 0 );
 
-		canvas.Axle ([ 0, -5 ]);
-		canvas.TorqueInputTop ([ 4, -5 ]);
+		canvas.Axle ( 0, -5 );
+		canvas.TorqueInputTop ( 4, -5 );
 		}
 
 	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
