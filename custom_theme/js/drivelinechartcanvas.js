@@ -52,6 +52,9 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		}
 
 
+	// Wheels with a shaft
+
+
 	self.WheelLeft = function (x, y, shaftLength)
 		{
 		self.Wheel ( x, y );
@@ -80,6 +83,11 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		}
 
 
+	// Only the differential, no shafts.
+	//
+	// Desired shafts must be applied separately. Shafts take the same
+	// coordinates as the differential they belong to.
+
 	self.Differential = function (x, y)
 		{
 		SetOrigin();
@@ -89,6 +97,8 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		self.canvas.Line([ x+1, y-1.75, x+1.75, y-1 ], self.strokeOptions);
 		}
 
+
+	// Shafts take the same coordinates as the 2x2 object they belong to.
 
 	self.ShaftLeft = function (x, y)
 		{
