@@ -34,6 +34,13 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 
 	// Chart helper methods
 
+	self.Text = function (x, y, text)
+		{
+		SetOrigin();
+		self.canvas.Text([ x, y, 0.75 ], text, { fill: "black", originY: "bottom" });
+		}
+
+
 	self.Wheel = function (x, y)
 		{
 		var sizeX = 1;
@@ -83,6 +90,19 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		}
 
 
+	self.TorqueSplitterDown = function (x, y)
+		{
+		var options = { stroke: "black", strokeWidth: 3 };
+
+		SetOrigin();
+		self.canvas.Line([ x, y-2, x+2, y-2 ], options);
+		self.canvas.Line([ x, y-1, x, y-2 ], options);
+		self.canvas.Line([ x+2, y-1, x+2, y-2 ], options);
+		self.canvas.Line([ x, y-1, x+1, y ], options);
+		self.canvas.Line([ x+2, y-1, x+1, y ], options);
+		}
+
+
 	self.TorqueInputTop = function (x, y)
 		{
 		var options = { stroke: "black", strokeWidth: 3 };
@@ -114,9 +134,21 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		}
 
 
-	self.Text = function (x, y, text)
+	self.HDriveGroup = function (x, y)
 		{
-		SetOrigin();
-		self.canvas.Text([ x, y, 0.75 ], text, { fill: "black", originY: "bottom" });
+		self.Wheel ( x, y );
+		self.Wheel ( x, y-4 );
+		self.Wheel ( x+7, y );
+		self.Wheel ( x+7, y-4 );
+
+		self.ConnectX ( x+1, y-1, 1 );
+		self.ConnectX ( x+1, y-5, 1 );
+		self.ConnectX ( x+6, y-1, 1 );
+		self.ConnectX ( x+6, y-5, 1 );
+		self.ConnectX ( x+2, y-3, 1 );
+		self.ConnectX ( x+5, y-3, 1 );
+		self.ConnectY ( x+2, y-1, -4 );
+		self.ConnectY ( x+6, y-1, -4 );
+		self.Differential ( x+3, y-2 );
 		}
 	}

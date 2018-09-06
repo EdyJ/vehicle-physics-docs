@@ -124,8 +124,6 @@ H-Drive
 		chart.ConnectX ( 5, -6, 1 );
 		chart.ConnectY ( 2, -1, -10 );
 		chart.ConnectY ( 6, -1, -10 );
-
-
 		}
 
 	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
@@ -145,6 +143,56 @@ H-Drive and torque splitter at linked axles
 H-Drive and torque splitter at independent axle
 :	Second and third axles are side-linked to a single differential. Drive power goes to the first
 	axle. A torque splitter routes part of the power to the second-third linked axles.
+
+<canvas id="fig3" class="img-responsive" width="608px" height="357px">
+<!-- width and height here must be the same as the canvas will have, being:
+	16 pixels per square in X
+	17 pixels per square in Y
+-->
+</canvas>
+<script type="text/javascript">
+	var drawCanvas = function()
+		{
+		var chart = new drivelinechartcanvas("fig3", 38, 21);
+
+		chart.originX = 3;
+		chart.originY = -2;
+		chart.Text ( 4, -17, "H-Drive and\nCenter Differential" );
+
+		chart.Axle ( 0, 0 );
+		chart.HDriveGroup ( 0, -8 );
+		chart.Differential ( 3, -5 );
+		chart.ConnectY ( 4, -2, -3 );
+		chart.ConnectY ( 4, -7, -3 );
+		chart.TorqueInputRightTop ( 5, -6 );
+
+		chart.originX = 15;
+		chart.originY = -2;
+		chart.Text ( 4, -18, "H-Drive and\nTorque Splitter\nat H-Drive" );
+
+		chart.Axle ( 0, 0 );
+		chart.HDriveGroup ( 0, -8 );
+		chart.TorqueSplitterDown ( 3, -7 );
+		chart.ConnectY ( 4, -2, -5 );
+		chart.ConnectY ( 4, -9, -1 );
+		chart.TorqueInputRightTop ( 5, -8 );
+
+		chart.originX = 27;
+		chart.originY = -2;
+		chart.Text ( 4, -18, "H-Drive and\nTorque Splitter at\nindependent axle" );
+
+		chart.Axle ( 0, 0 );
+		chart.HDriveGroup ( 0, -8 );
+		chart.TorqueSplitter ( 3, -3 );
+		chart.ConnectY ( 4, -2, -1 );
+		chart.ConnectY ( 4, -5, -5 );
+		chart.TorqueInputRightTop ( 5, -4 );
+		}
+
+	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
+	else if (window.attachEvent) window.attachEvent('onload', drawCanvas);
+</script>
+
 
 #### Four driven axles
 
