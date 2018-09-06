@@ -120,6 +120,7 @@ H-Drive
 		chart.Differential ( 3, -5 );
 		chart.ShaftLeft ( 3, -5 );
 		chart.ShaftRight ( 3, -5 );
+		chart.ShaftTop ( 3, -5 );
 		chart.TorqueInputTop ( 4, -5 );
 		chart.ConnectX ( 1, -1, 1 );
 		chart.ConnectX ( 1, -11, 1 );
@@ -201,7 +202,6 @@ H-Drive and torque splitter at independent axle
 	else if (window.attachEvent) window.attachEvent('onload', drawCanvas);
 </script>
 
-
 #### Four driven axles
 
 Dual inter-axle differentials and center differential
@@ -227,7 +227,7 @@ Full H-Drive
 :	Wheels on each side of all axles are linked together. A single center differential connects both
 	sides.
 
-<canvas id="fig4" class="img-responsive" width="416px" height="357px">
+<canvas id="fig4" class="img-responsive" width="416px" height="374px">
 <!-- width and height here must be the same as the canvas will have, being:
 	16 pixels per square in X
 	17 pixels per square in Y
@@ -236,31 +236,43 @@ Full H-Drive
 <script type="text/javascript">
 	var drawCanvas = function()
 		{
-		var chart = new drivelinechartcanvas("fig4", 26, 21);
+		var chart = new drivelinechartcanvas("fig4", 26, 22);
 
 		chart.originX = 3;
 		chart.originY = -2;
-		chart.Text ( 4, -17, "Dual inter-axle differentials and\ncenter differential" );
+		chart.Text ( 4, -19, "Dual inter-axle differentials\nand center differential" );
 
 		chart.InterAxleGroup ( 0, 0 );
-		chart.InterAxleGroup ( 0, -8 );
-		chart.ConnectX ( 5, -3, 1 );
-		chart.ConnectX ( 5, -11, 1 );
-		chart.ConnectY ( 6, -3, -3 );
-		chart.ConnectY ( 6, -11, 3 );
-		chart.Differential ( 5, -6 );
-		chart.ShaftTop ( 5, -6 );
-		chart.ShaftBottom ( 5, -6 );
-		chart.ShaftLeft ( 5, -6 );
+		chart.InterAxleGroup ( 0, -10 );
+		chart.ConnectX ( 2, -3, 1 );
+		chart.ConnectX ( 2, -13, 1 );
+		chart.ConnectY ( 2, -3, -4 );
+		chart.ConnectY ( 2, -13, 4 );
+		chart.Differential ( 1, -7 );
+		chart.ShaftTop ( 1, -7 );
+		chart.ShaftBottom ( 1, -7 );
+		chart.ShaftRight ( 1, -7 );
+		chart.TorqueInputRightTop ( 3, -8 );
+
+		chart.originX = 15;
+		chart.originY = -2;
+		chart.Text ( 4, -19, "Dual inter-axle differentials\nand torque splitter" );
+
+		chart.InterAxleGroup ( 0, 0 );
+		chart.InterAxleGroup ( 0, -10 );
+		chart.ConnectX ( 2, -3, 1 );
+		chart.ConnectX ( 2, -13, 1 );
+		chart.ConnectY ( 2, -3, -4 );
+		chart.ConnectY ( 2, -13, 4 );
+		chart.TorqueSplitter ( 1, -7 );
+		chart.ShaftTop ( 1, -7 );
+		chart.ShaftBottom ( 1, -7 );
+		chart.ShaftRight ( 1, -7 );
+		chart.TorqueInputRightTop ( 3, -8 );
+
 
 		/*
 
-		chart.Axle ( 0, 0 );
-		chart.HDriveGroup ( 0, -8 );
-		chart.Differential ( 3, -5 );
-		chart.ConnectY ( 4, -2, -3 );
-		chart.ConnectY ( 4, -7, -3 );
-		chart.TorqueInputRightTop ( 5, -6 );
 
 		chart.originX = 15;
 		chart.originY = -2;

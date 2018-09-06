@@ -202,6 +202,6 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		self.Differential ( x+3, y-2 );
 		self.ShaftTop ( x+3, y-2 );
 		self.ShaftBottom ( x+3, y-2 );
-		self.ShaftRight ( x+3, y-2 );
+		self.ShaftLeft ( x+3, y-2 );
 		}
 	}
