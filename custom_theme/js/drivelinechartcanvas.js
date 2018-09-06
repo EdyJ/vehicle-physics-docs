@@ -43,6 +43,15 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		}
 
 
+	self.ConnectY = function (position, length)
+		{
+		var x = position[0];
+		var y = position[1];
+
+		canvas.Line([ x, y, x, y+length ], { stroke: "black", strokeWidth: 3 });
+		}
+
+
 	self.Differential = function (position)
 		{
 		var x = position[0];
@@ -72,10 +81,10 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		var x = position[0];
 		var y = position[1];
 
-		Wheel (canvas, [ x, y ]);
-		ConnectX (canvas, [ x+1, y-1 ], 2);
-		Differential (canvas, [ x+3, y ]);
-		ConnectX (canvas, [ x+5, y-1 ], 2);
-		Wheel (canvas, [ x+7, y ]);
+		self.Wheel ([ x, y ]);
+		self.ConnectX ([ x+1, y-1 ], 2);
+		self.Differential ([ x+3, y ]);
+		self.ConnectX ([ x+5, y-1 ], 2);
+		self.Wheel ([ x+7, y ]);
 		}
 	}
