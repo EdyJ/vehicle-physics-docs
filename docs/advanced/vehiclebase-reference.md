@@ -10,7 +10,7 @@ already inherits from VehicleBase. Here's an example of a [custom vehicle contro
 
 ## VehicleBase events
 
-VehicleBehaviour events are implemented in derived classes to create the vehicle controllers.
+VehicleBase events are implemented in derived classes to create the vehicle controllers.
 
 !!! warning "&fa-exclamation-triangle; Do NOT override OnEnable, OnDisable, Update, FixedUpdate, or LateUpdate"
 
