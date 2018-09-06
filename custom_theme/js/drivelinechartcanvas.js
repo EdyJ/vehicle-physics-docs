@@ -47,11 +47,22 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 
 	self.Wheel = function (x, y)
 		{
-		var sizeX = 1;
-		var sizeY = 2;
-
 		SetOrigin();
-		self.canvas.Rect([ x, y, sizeX, sizeY ], { fill: "transparent", stroke: "black", strokeWidth: 3, rx: 6, ry: 6 });
+		self.canvas.Rect([ x, y, 1, 2 ], { fill: "transparent", stroke: "black", strokeWidth: 3, rx: 6, ry: 6 });
+		}
+
+
+	self.WheelLeft = function (x, y, shaftLength)
+		{
+		self.Wheel ( x, y );
+		self.ConnectX ( x+1, y-1, shaftLength );
+		}
+
+
+	self.WheelRight = function (x, y, shaftLength)
+		{
+		self.Wheel ( x, y );
+		self.ConnectX ( x, y-1, -shaftLength );
 		}
 
 
@@ -111,22 +122,34 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 	self.TorqueSplitter = function (x, y)
 		{
 		SetOrigin();
-		self.canvas.Line([ x, y, x+2, y ], self.strokeOptions);
-		self.canvas.Line([ x, y, x, y-1 ], self.strokeOptions);
-		self.canvas.Line([ x+2, y, x+2, y-1 ], self.strokeOptions);
-		self.canvas.Line([ x, y-1, x+1, y-2 ], self.strokeOptions);
-		self.canvas.Line([ x+2, y-1, x+1, y-2 ], self.strokeOptions);
+		self.canvas.Line([ x+0.25, y-0.25, x+1.75, y-0.25 ], self.strokeOptions);
+		self.canvas.Line([ x+0.25, y-0.25, x+0.25, y-1 ], self.strokeOptions);
+		self.canvas.Line([ x+1.75, y-0.25, x+1.75, y-1 ], self.strokeOptions);
+		self.canvas.Line([ x+0.25, y-1, x+1, y-1.75 ], self.strokeOptions);
+		self.canvas.Line([ x+1.75, y-1, x+1, y-1.75 ], self.strokeOptions);
+
+		// self.canvas.Line([ x, y, x+2, y ], self.strokeOptions);
+		// self.canvas.Line([ x, y, x, y-1 ], self.strokeOptions);
+		// self.canvas.Line([ x+2, y, x+2, y-1 ], self.strokeOptions);
+		// self.canvas.Line([ x, y-1, x+1, y-2 ], self.strokeOptions);
+		// self.canvas.Line([ x+2, y-1, x+1, y-2 ], self.strokeOptions);
 		}
 
 
 	self.TorqueSplitterDown = function (x, y)
 		{
 		SetOrigin();
-		self.canvas.Line([ x, y-2, x+2, y-2 ], self.strokeOptions);
-		self.canvas.Line([ x, y-1, x, y-2 ], self.strokeOptions);
-		self.canvas.Line([ x+2, y-1, x+2, y-2 ], self.strokeOptions);
-		self.canvas.Line([ x, y-1, x+1, y ], self.strokeOptions);
-		self.canvas.Line([ x+2, y-1, x+1, y ], self.strokeOptions);
+		self.canvas.Line([ x+0.25, y-1.75, x+1.75, y-1.75 ], self.strokeOptions);
+		self.canvas.Line([ x+0.25, y-1, x+0.25, y-1.75 ], self.strokeOptions);
+		self.canvas.Line([ x+1.75, y-1, x+1.75, y-1.75 ], self.strokeOptions);
+		self.canvas.Line([ x+0.25, y-1, x+1, y-0.25 ], self.strokeOptions);
+		self.canvas.Line([ x+1.75, y-1, x+1, y-0.25 ], self.strokeOptions);
+
+		// self.canvas.Line([ x, y-2, x+2, y-2 ], self.strokeOptions);
+		// self.canvas.Line([ x, y-1, x, y-2 ], self.strokeOptions);
+		// self.canvas.Line([ x+2, y-1, x+2, y-2 ], self.strokeOptions);
+		// self.canvas.Line([ x, y-1, x+1, y ], self.strokeOptions);
+		// self.canvas.Line([ x+2, y-1, x+1, y ], self.strokeOptions);
 		}
 
 
@@ -191,7 +214,20 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		self.Differential ( x+3, y-2 );
 		self.ShaftLeft ( x+3, y-2 );
 		self.ShaftRight ( x+3, y-2 );
+		}
+
+
+	self.HDriveGroupTop = function (x, y)
+		{
+		self.HDriveGroup ( x, y );
 		self.ShaftTop ( x+3, y-2 );
+		}
+
+
+	self.HDriveGroupBottom = function (x, y)
+		{
+		self.HDriveGroup ( x, y );
+		self.ShaftBottom ( x+3, y-2 );
 		}
 
 

@@ -30,9 +30,7 @@ Torque splitter
 	these wheels slip, the rear wheels receive a portion of the torque. This is similar to the
 	Haldex coupling in the Audi Quattro.
 
-### Driveline configurations
-
-#### Single driven axle
+### Single driven axle
 
 Axle Differential
 :	A single driven axle with a differential connecting both wheels.
@@ -60,7 +58,7 @@ Axle Differential
 	else if (window.attachEvent) window.attachEvent('onload', drawCanvas);
 </script>
 
-#### Two driven axles
+### Two driven axles
 
 Center differential
 :	A center differential connecting the two axle differentials.
@@ -105,6 +103,9 @@ H-Drive
 		chart.AxleBottom ( 0, 0 );
 		chart.AxleTop ( 0, -10 );
 		chart.TorqueSplitter ( 3, -3 );
+		chart.ShaftTop ( 3, -3 );
+		chart.ShaftBottom ( 3, -3 );
+		chart.ShaftRight ( 3, -3 );
 		chart.ConnectY ( 4, -2, -1 );
 		chart.ConnectY ( 4, -5, -5 );
 		chart.TorqueInputRightTop ( 5, -4 );
@@ -136,7 +137,7 @@ H-Drive
 	else if (window.attachEvent) window.attachEvent('onload', drawCanvas);
 </script>
 
-#### Three driven axles
+### Three driven axles
 
 H-Drive and center differential
 :	Second and third axles are side-linked to a single differential. Drive power goes to a center
@@ -166,7 +167,7 @@ H-Drive and torque splitter at independent axle
 		chart.Text ( 4, -17, "H-Drive and\nCenter Differential" );
 
 		chart.AxleBottom ( 0, 0 );
-		chart.HDriveGroup ( 0, -8 );
+		chart.HDriveGroupTop ( 0, -8 );
 		chart.Differential ( 3, -5 );
 		chart.ShaftTop ( 3, -5 );
 		chart.ShaftBottom ( 3, -5 );
@@ -180,8 +181,11 @@ H-Drive and torque splitter at independent axle
 		chart.Text ( 4, -18, "H-Drive and\nTorque Splitter\nat H-Drive" );
 
 		chart.AxleBottom ( 0, 0 );
-		chart.HDriveGroup ( 0, -8 );
+		chart.HDriveGroupTop ( 0, -8 );
 		chart.TorqueSplitterDown ( 3, -7 );
+		chart.ShaftTop ( 3, -7 );
+		chart.ShaftBottom ( 3, -7 );
+		chart.ShaftRight ( 3, -7 );
 		chart.ConnectY ( 4, -2, -5 );
 		chart.ConnectY ( 4, -9, -1 );
 		chart.TorqueInputRightTop ( 5, -8 );
@@ -191,8 +195,11 @@ H-Drive and torque splitter at independent axle
 		chart.Text ( 4, -18, "H-Drive and\nTorque Splitter at\nindependent axle" );
 
 		chart.AxleBottom ( 0, 0 );
-		chart.HDriveGroup ( 0, -8 );
+		chart.HDriveGroupTop ( 0, -8 );
 		chart.TorqueSplitter ( 3, -3 );
+		chart.ShaftTop ( 3, -3 );
+		chart.ShaftBottom ( 3, -3 );
+		chart.ShaftRight ( 3, -3 );
 		chart.ConnectY ( 4, -2, -1 );
 		chart.ConnectY ( 4, -5, -5 );
 		chart.TorqueInputRightTop ( 5, -4 );
@@ -202,7 +209,7 @@ H-Drive and torque splitter at independent axle
 	else if (window.attachEvent) window.attachEvent('onload', drawCanvas);
 </script>
 
-#### Four driven axles
+### Four driven axles
 
 Dual inter-axle differentials and center differential
 :	First and second axles are connected with a inter-axle differential. Third and fourth axles are
@@ -227,7 +234,7 @@ Full H-Drive
 :	Wheels on each side of all axles are linked together. A single center differential connects both
 	sides.
 
-<canvas id="fig4" class="img-responsive" width="416px" height="374px">
+<canvas id="fig4" class="img-responsive" width="432px" height="374px">
 <!-- width and height here must be the same as the canvas will have, being:
 	16 pixels per square in X
 	17 pixels per square in Y
@@ -236,7 +243,7 @@ Full H-Drive
 <script type="text/javascript">
 	var drawCanvas = function()
 		{
-		var chart = new drivelinechartcanvas("fig4", 26, 22);
+		var chart = new drivelinechartcanvas("fig4", 27, 22);
 
 		chart.originX = 3;
 		chart.originY = -2;
@@ -254,7 +261,7 @@ Full H-Drive
 		chart.ShaftRight ( 1, -7 );
 		chart.TorqueInputRightTop ( 3, -8 );
 
-		chart.originX = 15;
+		chart.originX = 16;
 		chart.originY = -2;
 		chart.Text ( 4, -19, "Dual inter-axle differentials\nand torque splitter" );
 
@@ -269,34 +276,73 @@ Full H-Drive
 		chart.ShaftBottom ( 1, -7 );
 		chart.ShaftRight ( 1, -7 );
 		chart.TorqueInputRightTop ( 3, -8 );
+		}
 
+	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
+	else if (window.attachEvent) window.attachEvent('onload', drawCanvas);
+</script>
 
-		/*
+<canvas id="fig5" class="img-responsive" width="640px" height="374px">
+<!-- width and height here must be the same as the canvas will have, being:
+	16 pixels per square in X
+	17 pixels per square in Y
+-->
+</canvas>
+<script type="text/javascript">
+	var drawCanvas = function()
+		{
+		var chart = new drivelinechartcanvas("fig5", 40, 22);
 
-
-		chart.originX = 15;
+		chart.originX = 3;
 		chart.originY = -2;
-		chart.Text ( 4, -18, "H-Drive and\nTorque Splitter\nat H-Drive" );
+		chart.Text ( 4, -19, "Dual H-Drive\nand center differential" );
 
-		chart.Axle ( 0, 0 );
-		chart.HDriveGroup ( 0, -8 );
-		chart.TorqueSplitterDown ( 3, -7 );
-		chart.ConnectY ( 4, -2, -5 );
-		chart.ConnectY ( 4, -9, -1 );
+		chart.HDriveGroupBottom ( 0, 0 );
+		chart.HDriveGroupTop ( 0, -10 );
+		chart.ConnectY ( 4, -4, -3 );
+		chart.ConnectY ( 4, -12, 3 );
+		chart.Differential ( 3, -7 );
+		chart.ShaftTop ( 3, -7 );
+		chart.ShaftBottom ( 3, -7 );
+		chart.ShaftRight ( 3, -7 );
 		chart.TorqueInputRightTop ( 5, -8 );
 
-		chart.originX = 27;
+		chart.originX = 16;
 		chart.originY = -2;
-		chart.Text ( 4, -18, "H-Drive and\nTorque Splitter at\nindependent axle" );
+		chart.Text ( 4, -19, "Dual H-Drive\nand torque splitter" );
 
-		chart.Axle ( 0, 0 );
-		chart.HDriveGroup ( 0, -8 );
-		chart.TorqueSplitter ( 3, -3 );
-		chart.ConnectY ( 4, -2, -1 );
-		chart.ConnectY ( 4, -5, -5 );
-		chart.TorqueInputRightTop ( 5, -4 );
+		chart.HDriveGroupBottom ( 0, 0 );
+		chart.HDriveGroupTop ( 0, -10 );
+		chart.ConnectY ( 4, -4, -2 );
+		chart.ConnectY ( 4, -12, 4 );
+		chart.TorqueSplitter ( 3, -6 );
+		chart.ShaftTop ( 3, -6 );
+		chart.ShaftBottom ( 3, -6 );
+		chart.ShaftRight ( 3, -6 );
+		chart.TorqueInputRightTop ( 5, -7 );
 
-		*/
+		chart.originX = 29;
+		chart.originY = -2;
+		chart.Text ( 4, -18, "Full H-Drive" );
+
+		chart.WheelLeft ( 0, 0, 1 );
+		chart.WheelLeft ( 0, -4, 1 );
+		chart.WheelLeft ( 0, -10, 1 );
+		chart.WheelLeft ( 0, -14, 1 );
+		chart.WheelRight ( 7, 0, 1 );
+		chart.WheelRight ( 7, -4, 1 );
+		chart.WheelRight ( 7, -10, 1 );
+		chart.WheelRight ( 7, -14, 1 );
+
+		chart.ConnectY ( 2, -1, -14 );
+		chart.ConnectY ( 6, -1, -14 );
+		chart.Differential ( 3, -7 );
+		chart.ShaftTop ( 3, -7 );
+		chart.ShaftRight ( 3, -7 );
+		chart.ShaftLeft ( 3, -7 );
+		chart.ConnectX ( 2, -8, 1 );
+		chart.ConnectX ( 5, -8, 1 );
+		chart.TorqueInputTop ( 4, -7 );
 		}
 
 	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
