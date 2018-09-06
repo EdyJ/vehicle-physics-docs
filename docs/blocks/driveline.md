@@ -52,6 +52,8 @@ Axle Differential
 		chart.originY = -2;
 		chart.Axle ( 0, 0 );
 		chart.TorqueInputTop ( 4, 0 );
+		chart.Text ( 4, -4, "Axle Differential" );
+
 		}
 
 	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
@@ -71,7 +73,7 @@ H-Drive
 :	Wheels on each side of both axles are linked together. A single center differential connects
 	both sides.
 
-<canvas id="fig2" class="img-responsive" width="576px" height="272px">
+<canvas id="fig2" class="img-responsive" width="576px" height="289px">
 <!-- width and height here must be the same as the canvas will have, being:
 	16 pixels per square in X
 	17 pixels per square in Y
@@ -80,10 +82,12 @@ H-Drive
 <script type="text/javascript">
 	var drawCanvas = function()
 		{
-		var chart = new drivelinechartcanvas("fig2", 36, 16);
+		var chart = new drivelinechartcanvas("fig2", 36, 17);
 
 		chart.originX = 3;
 		chart.originY = -2;
+		chart.Text ( 4, -14, "Center Differential" );
+
 		chart.Axle ( 0, 0 );
 		chart.Axle ( 0, -10 );
 		chart.Differential ( 3, -5 );
@@ -93,9 +97,35 @@ H-Drive
 
 		chart.originX = 14;
 		chart.originY = -2;
+		chart.Text ( 4, -14, "Torque Splitter" );
 
 		chart.Axle ( 0, 0 );
 		chart.Axle ( 0, -10 );
+		chart.TorqueSplitter ( 3, -3 );
+		chart.ConnectY ( 4, -2, -1 );
+		chart.ConnectY ( 4, -5, -5 );
+		chart.TorqueInputRightTop ( 5, -4 );
+
+		chart.originX = 25;
+		chart.originY = -2;
+		chart.Text ( 4, -14, "H-Drive" );
+
+		chart.Wheel ( 0, 0 );
+		chart.Wheel ( 7, 0 );
+		chart.Wheel ( 0, -10 );
+		chart.Wheel ( 7, -10 );
+		chart.Differential ( 3, -5 );
+		chart.TorqueInputTop ( 4, -5 );
+		chart.ConnectX ( 1, -1, 1 );
+		chart.ConnectX ( 1, -11, 1 );
+		chart.ConnectX ( 6, -1, 1 );
+		chart.ConnectX ( 6, -11, 1 );
+		chart.ConnectX ( 2, -6, 1 );
+		chart.ConnectX ( 5, -6, 1 );
+		chart.ConnectY ( 2, -1, -10 );
+		chart.ConnectY ( 6, -1, -10 );
+
+
 		}
 
 	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);

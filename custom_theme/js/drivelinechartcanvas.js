@@ -70,6 +70,19 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		}
 
 
+	self.TorqueSplitter = function (x, y)
+		{
+		var options = { stroke: "black", strokeWidth: 3 };
+
+		SetOrigin();
+		self.canvas.Line([ x, y, x+2, y ], options);
+		self.canvas.Line([ x, y, x, y-1 ], options);
+		self.canvas.Line([ x+2, y, x+2, y-1 ], options);
+		self.canvas.Line([ x, y-1, x+1, y-2 ], options);
+		self.canvas.Line([ x+2, y-1, x+1, y-2 ], options);
+		}
+
+
 	self.TorqueInputTop = function (x, y)
 		{
 		var options = { stroke: "black", strokeWidth: 3 };
@@ -98,5 +111,12 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 		self.Differential ( x+3, y );
 		self.ConnectX ( x+5, y-1 , 2);
 		self.Wheel ( x+7, y );
+		}
+
+
+	self.Text = function (x, y, text)
+		{
+		SetOrigin();
+		self.canvas.Text([ x, y, 0.75 ], text, { fill: "black", originY: "bottom" });
 		}
 	}
