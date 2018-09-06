@@ -114,3 +114,92 @@ Once the ABS gets triggered the brake pressure would be reduced to the 25% of th
 torque would be reduced from from 1400 Nm to 420 Nm in the front axle. When the slip goes below the
 trigger point, the brakes would be back to full torque.
 
+# Scripting reference
+
+### Brakes.Settings
+
+```
+namespace VehiclePhysics
+{
+public class Brakes
+	{
+	[Serializable]
+	public class Settings
+		{
+		// Maximum brake torque in Nm each individual brake is capable of.
+		// Balanced settings (bias = 0.5) delivers maxBrakeTorque/2 to each axle.
+
+		public float maxBrakeTorque = 2000.0f;
+
+		// Wheel bias. 1.0f = front, 0.0 = rear, 0.5 = 50:50%
+
+		[Range(0, 1)]
+		public float brakeBias = 0.7f;
+
+		// Handbrake torque
+
+		public float handbrakeTorque = 1500.0f;
+
+		// Handbrake axle. 1.0f = front, 0.0 = rear, 0.5 = both.
+		// 0.5 means that both ends apply handbrakeTorque.
+		// Default: 0.0f (handbrake affects the rear axle only)
+
+		[Range(0, 1)]
+		public float handbrakeAxle = 0.0f;
+		}
+	}
+}
+```
+
+### Brakes.AbsSettings
+
+```
+	[Serializable]
+	public class AbsSettings
+		{
+		public bool enabled = false;
+
+		// ABS relief valve operation modes:
+		//
+		//	Simple: brake pressure multiplied by minPressureRatio when slip > minSlip
+		//	MultiPosition: brake pressure multiplied by discrete ratios from minSlip to maxSlip,
+		//		applying minPressureRatio beyond maxSlip. ValvePositions is the number of ratios.
+		//	Continuous: brake pressure multiplied progressively from 1.0 @ minSlip to
+		//		minPressureRatio @ maxSlip.
+
+		public AbsMode mode = AbsMode.Simple;
+
+		// Trigger: how to calculate the slip to be used as trigger to the ABS
+		//
+		// Trigger modes:
+		//
+		// 	PeakSlipOffset: Use offset values (m) wrt the tire's peak friction
+		//	CustomSlip: Specify direct slip values (m)
+
+		public AbsTrigger trigger = AbsTrigger.PeakSlipOffset;
+
+		// Operating slip range. ABS gets triggered beyond minSlip.
+		// Maximum brake relief happens beyond maxSlip.
+		//
+		// The Simple operation mode uses the "min" values only (minSlipOffset or minSlip).
+
+		public float minSlipOffset = 0.3f;
+		public float maxSlipOffset = 1.5f;
+
+		public float minSlip = 0.5f;
+		public float maxSlip = 5.0f;
+
+		// Minimum % of pressure allowed in the brakes when ABS is engaged
+
+		[Range(0, 1)]
+		public float minPressureRatio = 0.25f;
+
+		// MultiPosition mode only:
+		// Number of discrete positions of the ABS relief valve (not counting the closed position)
+
+		[Range(2, 8)]
+		public int valvePositions = 2;
+		}
+	}
+}
+```
