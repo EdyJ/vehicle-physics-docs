@@ -10,8 +10,6 @@ Each differential or torque splitter in the driveline can be configured independ
 - [Differential](/blocks/differential)
 - [Torque Splitter](/blocks/torque-splitter)
 
-### Definitions
-
 Axle Differential or _Differential_ alone.
 :	The standard differential that connects the two wheels in the same axle.
 
@@ -32,8 +30,7 @@ Torque splitter
 
 ### Single driven axle
 
-Axle Differential
-:	A single driven axle with a differential connecting both wheels.
+A single driven axle with a differential connecting both wheels.
 
 <canvas id="fig1" class="img-responsive" width="224px" height="102px">
 <!-- width and height here must be the same as the canvas will have, being:
@@ -51,7 +48,6 @@ Axle Differential
 		chart.AxleTop ( 0, 0 );
 		chart.TorqueInputTop ( 4, 0 );
 		chart.Text ( 4, -4, "Axle Differential" );
-
 		}
 
 	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
@@ -114,23 +110,19 @@ H-Drive
 		chart.originY = -2;
 		chart.Text ( 4, -14, "H-Drive" );
 
-		chart.Wheel ( 0, 0 );
-		chart.Wheel ( 7, 0 );
-		chart.Wheel ( 0, -10 );
-		chart.Wheel ( 7, -10 );
+		chart.WheelLeft ( 0, 0, 1 );
+		chart.WheelLeft ( 0, -10, 1 );
+		chart.WheelRight ( 7, 0, 1 );
+		chart.WheelRight ( 7, -10, 1 );
 		chart.Differential ( 3, -5 );
 		chart.ShaftLeft ( 3, -5 );
 		chart.ShaftRight ( 3, -5 );
 		chart.ShaftTop ( 3, -5 );
 		chart.TorqueInputTop ( 4, -5 );
-		chart.ConnectX ( 1, -1, 1 );
-		chart.ConnectX ( 1, -11, 1 );
-		chart.ConnectX ( 6, -1, 1 );
-		chart.ConnectX ( 6, -11, 1 );
-		chart.ConnectX ( 2, -6, 1 );
-		chart.ConnectX ( 5, -6, 1 );
 		chart.ConnectY ( 2, -1, -10 );
 		chart.ConnectY ( 6, -1, -10 );
+		chart.ConnectX ( 2, -6, 1 );
+		chart.ConnectX ( 5, -6, 1 );
 		}
 
 	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
