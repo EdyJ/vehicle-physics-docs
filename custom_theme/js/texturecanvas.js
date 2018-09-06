@@ -85,14 +85,6 @@ function texturecanvas (canvasSettings)
 		options.width = self.TransformWidth(points[2]);
 		options.height = self.TransformHeight(points[3]);
 
-		// options.top -= options.height;
-
-		if (options.strokeWidth)
-			{
-			// options.height -= options.strokeWidth;
-			// options.width -= options.strokeWidth;
-			}
-
 		self.canvas.add(new fabric.Rect(options));
 		}
 
