@@ -238,12 +238,20 @@ Full H-Drive
 		{
 		var chart = new drivelinechartcanvas("fig4", 26, 21);
 
-
 		chart.originX = 3;
 		chart.originY = -2;
-		chart.Text ( 4, -17, "H-Drive and\nCenter Differential" );
+		chart.Text ( 4, -17, "Dual inter-axle differentials and\ncenter differential" );
 
 		chart.InterAxleGroup ( 0, 0 );
+		chart.InterAxleGroup ( 0, -8 );
+		chart.ConnectX ( 5, -3, 1 );
+		chart.ConnectX ( 5, -11, 1 );
+		chart.ConnectY ( 6, -3, -3 );
+		chart.ConnectY ( 6, -11, 3 );
+		chart.Differential ( 5, -6 );
+		chart.ShaftTop ( 5, -6 );
+		chart.ShaftBottom ( 5, -6 );
+		chart.ShaftLeft ( 5, -6 );
 
 		/*
 
