@@ -7,7 +7,8 @@ Manages the different ground materials in the scene associating each one with an
 ![VP Ground Material Manager Inspector](/img/components/vpp-ground-material-manager-inspector.png){: .img-medium .clickview }
 
 A GameObject with a VPGroundMaterialManager component should be available at the scene for the
-vehicles to use the properties of the ground materials.
+vehicles to use the properties of the ground materials. Vehicles may also receive a ground material
+manager later by setting their `VehicleBase.groundMaterialManager` property.
 
 When a wheel of a vehicle touches any non-trigger collider it queries the VPGroundMaterialManager
 instance passing the PhysicMaterial of the touched collider (it may be null if the collider has no
@@ -184,3 +185,150 @@ Color 1
 RandomColor, Color 2
 :	If RandomColor is checked, a random color in the range Color1 - Color2 will be applied to each
 	new particle.
+
+# Scripting Reference
+
+### GroundMaterial.cs
+
+```
+using UnityEngine;
+using System;
+
+namespace VehiclePhysics
+{
+
+[Serializable]
+public class GroundMaterial
+	{
+	// Unity PhysicMaterial this ground material is bound to
+
+	public PhysicMaterial physicMaterial;
+
+	// Grip multiplies the tire friction on this material.
+	// Drag applies a force that opposes the movement. It's based on the downforce in kN:
+	//
+	//		dragForce = downforce * 0.001 * drag * velocity^2
+
+	public float grip = 1.0f;
+	public float drag = 0.0f;
+
+	// Wheel trails and particle emitters triggered on this ground material.
+
+	public VPGroundMarksRenderer marksRenderer;
+	public VPGroundParticleEmitter particleEmitter;
+
+	// Surface type affects the audio clips and other effects that are invoked
+	// depending on the surface. See the VPAudio component.
+	//
+	// Hard: tire skid audio, hard impacts, hard body drag, body scratches
+	// Soft: offroad rumble, soft impacts, soft body drag
+
+	public enum SurfaceType { Hard, Soft };
+	public SurfaceType surfaceType = SurfaceType.Hard;
+
+	// Custom pointer to be used from scripting when you need to reference additional
+	// data per ground material in your own custom ground material manager.
+	// Thus, you would be able to access this data from your own scripts.
+	// This field won't appear in the inspector.
+
+	public object customData = null;
+	}
+
+public struct GroundMaterialHit
+	{
+	// Physic material to find a GroundMaterial for. May be null.
+
+	public PhysicMaterial physicMaterial;
+
+	// The Collider that was hit.
+
+	public Collider collider;
+
+	// World position of the contact point.
+
+	public Vector3 hitPoint;
+	}
+
+// Base class for the components that host and manage the materials for the scene.
+//
+// When a vehicle is initialized it will search for the first instance of a
+// GroundMaterialManagerBase-derived class. A ground material manager may also be assigned
+// explicitly to a vehicle via VehicleBase.groundMaterialManager property.
+
+public abstract class GroundMaterialManagerBase : MonoBehaviour
+	{
+	// GetGroundMaterial must return a GroundMaterial object for the given GroundMaterialHit
+	// and vehicle.
+	//
+	// 	vehicle		VehicleBase object which is querying the material.
+	//	groundHit	Contact information
+	//
+	//	returns		A non-null GroundMaterial reference
+
+	public abstract GroundMaterial GetGroundMaterial (VehicleBase vehicle, GroundMaterialHit groundHit);
+
+	// Update a GroundMaterial reference by invoking GetGroundMaterial only if the cached physic
+	// material has changed. Vehicles call this method for retrieving the ground material per wheel
+	// on each physics frame.
+	//
+	//	vehicle				VehicleBase object which is querying the material.
+	//	groundHit			Contact information.
+	//	cachedGroundHit		Reference to the cached contact information. Will be updated when necessary.
+	//	groundMaterial		Reference to the ground material. Will be updated only when the physic
+	//						material changes.
+
+	public virtual void GetGroundMaterialCached (VehicleBase vehicle, GroundMaterialHit groundHit,
+		ref GroundMaterialHit cachedGroundHit, ref GroundMaterial groundMaterial)
+		{
+		// Query the ground material (typically slow, table look-up) only when the physic material changes.
+		// Otherwise do not change actual ground material reference.
+		//
+		// NOTE: This default implementation verifies the physic material only. collider and hitPoint
+		// are ignored. This method must be overridden with a proper implementation if the
+		// GetGroundMaterial implementation uses collider and/or hitPoint.
+
+		if (groundHit.physicMaterial != cachedGroundHit.physicMaterial)
+			{
+			cachedGroundHit = groundHit;
+			groundMaterial = GetGroundMaterial(vehicle, groundHit);
+			}
+		}
+	}
+}
+```
+
+### VPGroundMaterialManager.cs
+
+```
+using UnityEngine;
+
+namespace VehiclePhysics
+{
+[AddComponentMenu("Vehicle Physics/Ground Materials/Ground Material Manager")]
+public class VPGroundMaterialManager : GroundMaterialManagerBase
+	{
+	public GroundMaterial[] groundMaterials = new GroundMaterial[0];
+	public GroundMaterial fallback = new GroundMaterial();
+
+	// Returns a GroundMaterial from the list based on the given PhysicMaterial.
+	// null is also valid as physic material (colliders with no physic material assigned).
+
+	// 	vehicle		VehicleBase object which is querying the material
+	// 	groundHit	Contact information (physic material, collider, position)
+	//
+	//	returns		A GroundMaterial from the list, or the fallback material if no matching
+	//				PhysicMaterial is found
+
+	public override GroundMaterial GetGroundMaterial (VehicleBase vehicle, GroundMaterialHit groundHit)
+		{
+		for (int i=0, c=groundMaterials.Length; i<c; i++)
+			{
+			if (groundMaterials[i].physicMaterial == groundHit.physicMaterial)
+				return groundMaterials[i];
+			}
+
+		return fallback;
+		}
+	}
+}
+```

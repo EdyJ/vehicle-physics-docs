@@ -11,7 +11,7 @@ theme:
     custom_dir: 'custom_theme'
 
 extra_css: [ 'css/tables.css', 'css/admonitions.css', 'css/fixes.css', 'css/extras.css', 'css/clickview.css', 'css/slick.css', 'css/slick-theme.css', 'css/slick-custom.css' ]
-extra_javascript: [ 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML', 'js/mathjaxhelper.js', 'js/fabric.custom.min.js', 'js/texturecanvas.js', 'js/imagegallery.js', 'js/clickview.js', 'https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js' ]
+extra_javascript: [ 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML', 'js/mathjaxhelper.js', 'js/fabric.custom.min.js', 'js/texturecanvas.js', 'js/imagegallery.js', 'js/clickview.js', 'https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js', 'js/drivelinechartcanvas.js' ]
 
 markdown_extensions:
   - extra
@@ -60,15 +60,18 @@ pages:
   - Retarder: blocks/retarder.md
   - Other blocks: blocks/extra-blocks.md
 - Advanced:
+  - Creating add-on components: advanced/custom-addons.md
   - Creating custom vehicles: advanced/custom-vehicles.md
   - Creating custom blocks: advanced/custom-blocks.md
-  - Creating add-on components: advanced/custom-addons.md
+  - VehicleBehaviour reference: advanced/vehiclebehaviour-reference.md
   - VehicleBase reference: advanced/vehiclebase-reference.md
+  - Block reference: advanced/block-reference.md
   - Data Bus reference: advanced/databus-reference.md
   - Miscelaneous topics explained: advanced/misc-topics-explained.md
   - Vehicle inertia: advanced/vehicle-inertia.md
   - How suspensions work: advanced/how-suspensions-work.md
   - Configuring realistic vehicles: advanced/configuring-realistic-vehicles.md
+  - Vehicle rigging notes: advanced/vehicle-rigging.md
   - GIT Repository setup: advanced/git-repository-setup.md
   - Source Code vs. SDK: advanced/source-code-vs-sdk.md
 

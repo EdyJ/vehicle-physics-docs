@@ -46,7 +46,7 @@ end
 
 Notes:
 
-- Steering, Brakes and Tires are included in the Wheel blocks.
+- Steering, Brakes and Tire Friction are included in the Wheel blocks.
 - The Retarder Brake is typically used in heavy transport vehicles (trucks, buses). It stays
 disabled on regular cars, SUVs, vans, etc.
 
@@ -218,4 +218,119 @@ Details: [Retarder block](/blocks/retarder)
 
 ### Advanced / Experimental settings
 
-These are detailed at the [VehicleBase reference](/advanced/vehiclebase-reference#advanced-experimental-settings).
+More settings are detailed at the [VehicleBase reference](/advanced/vehiclebase-reference#advanced-experimental-settings).
+
+#### Engine reaction factor
+
+Ratio of the reaction torque used at the engine torque calculations.
+
+Reducing this ratio solves the low-frequency numerical resonances among wheels and engine that may
+occur at high-torque situations (i.e. heavy vehicles in slow gears). It should always be 1.0
+unless this effect is clearly noticed.
+
+# Scripting Reference
+
+```
+namespace VehiclePhysics
+{
+	public class VPVehicleController : VehicleBase
+}
+```
+
+### Classes
+
+```
+public class VPAxle
+	{
+	public VPWheelCollider leftWheel;
+	public VPWheelCollider rightWheel;
+
+	public Brakes.BrakeCircuit brakeCircuit = Brakes.BrakeCircuit.Neutral;
+	public Steering.SteeringMode steeringMode = Steering.SteeringMode.Disabled;
+	public float steeringRatio = 1.0f;
+	};
+
+```
+
+### Properties
+
+```
+	// Axles and driveline setup
+
+	public VPAxle[] axles;
+	public Driveline.Settings driveline = new Driveline.Settings();
+
+	public Differential.Settings differential = new Differential.Settings();
+	public Differential.Settings centerDifferential = new Differential.Settings();
+	public Differential.Settings interAxleDifferential = new Differential.Settings();
+	public TorqueSplitter.Settings torqueSplitter = new TorqueSplitter.Settings();
+
+	// Steering, brakes, tire friction
+
+	public Steering.Settings steering = new Steering.Settings();
+	public Brakes.Settings brakes = new Brakes.Settings();
+	public TireFriction tireFriction = new TireFriction();
+
+	// Powertrain
+
+	public Engine.Settings engine = new Engine.Settings();
+	public Engine.ClutchSettings clutch = new Engine.ClutchSettings();
+	public Gearbox.Settings gearbox = new Gearbox.Settings();
+	public Retarder.Settings retarder = new Retarder.Settings();
+
+	// Driving aids
+
+	public SteeringAids.Settings steeringAids = new SteeringAids.Settings();
+	public SpeedControl.Settings speedControl = new SpeedControl.Settings();
+
+	// Safety aids
+
+	public Brakes.AbsSettings antiLock = new Brakes.AbsSettings();
+	public TractionControl.Settings tractionControl = new TractionControl.Settings();
+	public StabilityControl.Settings stabilityControl = new StabilityControl.Settings();
+	public AntiSpin.Settings antiSpin = new AntiSpin.Settings();
+
+	// Advanced: proportion of the reaction torque used at specific calculations:
+	//	- engine torque
+	//	- park mode torque
+	// Mitigates or removes numerical resonances at high-torque situations (i.e. heavy vehicles
+	// in slow gears or Park mode).
+
+	[Range (0, 1)]
+	public float engineReactionFactor = 1.0f;
+	[Range (0, 1)]
+	public float parkModeReactionFactor = 0.95f;
+```
+
+### Methods
+
+```
+	// Get the driveline and gearbox ratios along the transmission for a given wheel.
+	//
+	// Returns NAN if there's no direct connection between the wheel and the powertrain,
+	// for example:
+	//	- No drive wheel
+	//	- Neutral gear
+
+	public float GetWheelFinalRatio (int wheelIndex, int gear = 0)
+
+```
+
+### See also
+
+AntiSpin<br>
+[Brakes](/blocks/brakes)<br>
+[Driveline](/blocks/driveline)<br>
+[Differential](/blocks/differential)<br>
+[Engine](/blocks/engine)<br>
+[Gearbox](/blocks/gearbox)<br>
+[Retarder](/blocks/retarder)<br>
+SpeedControl<br>
+StabilityControl<br>
+[Steering](/blocks/steering)<br>
+SteeringAids<br>
+[TireFriction](/blocks/tires)<br>
+[TorqueSplitter](/blocks/torque-splitter)<br>
+TractionControl<br>
+[VehicleBase](/advanced/vehiclebase-reference)<br>
+[VPWheelCollider](/components/wheel-collider)<br>

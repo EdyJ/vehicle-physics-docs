@@ -1,26 +1,70 @@
 # Creating add-on components
 
-You can write Unity components requiring a [VehiclePhysics.VehicleBase](vehiclebase-reference.md)
-component for adding or modifying the vehicle's behavior. Requiring `VehicleBase` makes the add-on
-component compatible with any vehicle controller, including [custom vehicle controllers](custom-vehicles.md).
+You may write an add-component for your vehicles easily by deriving from [VehicleBehaviour](/advanced/vehiclebehaviour-reference)
+instead of MonoBehaviour.
 
-You can interact with the vehicle with these properties exposed at VehicleBase:
+- Access the vehicle the component belongs to via `VehicleBehaviour.vehicle` property.
+- Implement the OnEnableVehicle and OnDisableVehicle events for component initialization and
+	finalization.
+- Implement UpdateVehicle for stuff that must be updated each visual frame.
+- Implement FixedUpdateVehicle for stuff that depends on or modifies the vehicle's physics values.
 
-VehicleBase.data
-:	Access to the internal [Data Bus](databus-reference.md), which provides a lot of internal
-	information that can be read and modified.
+&fa-exclamation-triangle:lg; **Never override OnEnable or OnDisable in a VehicleBehaviour!** Use
+OnEnableComponent and OnDisableComponent instead if you need to trace the initialization of the
+component in Unity.
+{: .alert .alert-warning }
 
-	Some add-ons included in VPP as example:
+Other events are available. Check out [VehicleBehaviour reference](/advanced/vehiclebehaviour-reference)
+for full details.
 
-	- The [VPVisualEffects](../components/vehicle-addons.md#vpvisualeffects) component reads the
-		actual steering value from the data bus and rotates the steering wheel mesh accordingly.
-	- The [VPStandardInput](../components/vehicle-input.md#vpstandardinput) component reads the
-		Unity Input values and write them to the data bus.
+## Example source code
 
-VehicleBase.wheelState
-:	Access to the individual states of each wheel. There's a lot of information per wheel available
-	here. For example, the [VPAudio](../components/vehicle-addons.md#vpaudio) component reads the sliding state of each wheel here and
-	produces the tire skid sound.
+**SimpleVehicleAddon.cs**
+```
+using UnityEngine;
+using UnityEngine.UI;
+using VehiclePhysics;
 
-Additionally, you can read `VehicleBase.cachedTransform` and `VehicleBase.cachedRigidbody` for
-optimized access to these components of the vehicle.
+public class SimpleVehicleAddon : VehicleBehaviour
+	{
+	public Text uiText;
+
+	public override void OnEnableVehicle ()
+		{
+		// Check for the component initialization conditions.
+		// If they're not met the component can gracefully terminate here.
+
+		if (uiText == null)
+			{
+			DebugLogError("This component requires an UI Text label. Component disabled.");
+			enabled = false;
+			return;
+			}
+
+		Debug.Log("Vehicle enabled. " + vehicle.wheelCount + " wheels");
+		}
+
+	public override void OnDisableVehicle ()
+		{
+		uiText.text = "";
+
+		Debug.Log("Vehicle disabled");
+		}
+
+	public override void UpdateVehicle ()
+		{
+		// Read the RPMs of all the wheels and display them in the UI label.
+
+		string text = "";
+
+		for (int i = 0; i < vehicle.wheelState.Length; i++)
+			{
+			VehicleBase.WheelState ws = vehicle.wheelState[i];
+
+			text += string.Format("{0}:  {1:0.}\n", ws.wheelCol.name, ws.angularVelocity * Block.WToRpm);
+			}
+
+		uiText.text = text;
+		}
+	}
+```

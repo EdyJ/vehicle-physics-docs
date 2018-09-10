@@ -1,4 +1,4 @@
-# Custom Vehicle Controllers
+# Creating custom vehicles
 
 Vehicle Physics Pro includes [VPVehicleController](../components/vehicle-controller.md), a
 full-featured vehicle controller ready for simulating most types of vehicles. If you need a kind of
@@ -8,7 +8,7 @@ A vehicle controller derives from `VehiclePhysics.VehicleBase`. It implements th
 vehicle by overriding the virtual methods and instancing and connecting the _Blocks_ representing
 the internal parts of the vehicle.
 
-The virtual methods in VehicleBase and their roles are detailed at [VehicleBase reference](vehiclebase-reference.md).
+The virtual methods in `VehiclePhysics.VehicleBase` and their roles are detailed in [VehicleBase reference](vehiclebase-reference.md).
 
 ## Example source code
 
