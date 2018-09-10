@@ -218,6 +218,6 @@ namespace VehiclePhysics
 
 ### See also
 
-TireFriction<br>
-VehicleBase<br>
-VehicleBehaviour<br>
+[TireFriction](/blocks/tires)<br>
+[VehicleBase](/advanced/vehiclebase-reference)<br>
+[VehicleBehaviour](/advanced/vehiclebehaviour-reference)<br>
