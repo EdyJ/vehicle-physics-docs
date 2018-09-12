@@ -39,6 +39,30 @@ A more realistic friction shape can be achieved using the Pacejka friction model
 
 In this case Stiffness value to configures the slip where the curve reaches the peak friction at.
 
+### Converting an existing Pacejka set to VPP
+
+Standard Pacejka sets are based on _slip ratio_ and _slip angle_ while friction curves in VPP are
+based in _slip velocity_. Thus, standard Pacejka coefficients are not directly compatible with VPP.
+Still, existing Pacejka sets may be adapted to VPP following this procedure:
+
+1. Define a velocity $V$ for the vehicle. Ideally, it should be the same velocity that was used for
+	extracting the original Pacejka coefficients out of the real tire. If this is not available,
+	I'd use some representative velocity from the speed range the tire is designed to.
+
+2. Use the Pacejka coefficients to draw the normalized tire friction curve, but based on $\omega R_e - V$
+	(_longitudinal slip velocity_) or $V_x$ (_lateral slip velocity_) as horizontal axis, instead of
+	_slip ratio_ ($\sigma$) and _slip angle_ ($\alpha$) respectively. The equivalences are:
+
+	$$\begin{align}
+	\sigma &= \frac{\omega R_e - V}{\vert{V}\vert} \\
+	\alpha &= \tan^{-1} (\frac{V_x}{V_y})
+	\end{align}
+	$$
+
+3. Configure the tire friction in VPP to match the resulting curve as closely as possible. You may
+	use either a Pacejka model or any of the other modes (i.e. Parametric), which are typically
+	easier to fit to an existing curve.
+
 ### See Also
 
 [Advanced topics on tire friction: <br> - Grip, torque and acceleration <br> - Slip Ratio and Slip Angle <br> - Understanding steering, friction, and lateral slip / forces](/advanced/misc-topics-explained/#tire-friction)
