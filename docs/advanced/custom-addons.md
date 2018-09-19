@@ -1,21 +1,22 @@
 # Creating add-on components
 
 You may write an add-component for your vehicles easily by deriving from [VehicleBehaviour](/advanced/vehiclebehaviour-reference)
-instead of MonoBehaviour.
+instead of MonoBehaviour. VehicleBehaviours are similar to standard MonoBehaviour components, but
+they expose virtual methods that are invoked in sync with the vehicle's state. VehicleBehaviours may
+be added anywhere in the hierarchy of the vehicle.
 
-- Access the vehicle the component belongs to via `VehicleBehaviour.vehicle` property.
-- Implement the OnEnableVehicle and OnDisableVehicle events for component initialization and
-	finalization.
+- Implement the OnEnableVehicle and OnDisableVehicle events for initialization and finalization.
+- Access the vehicle the component is attached to via `VehicleBehaviour.vehicle` property.
+- Implement FixedUpdateVehicle for stuff that depends on or modifies the vehicle's simulation values.
 - Implement UpdateVehicle for stuff that must be updated each visual frame.
-- Implement FixedUpdateVehicle for stuff that depends on or modifies the vehicle's physics values.
+
+Other events are available. Check out [VehicleBehaviour reference](/advanced/vehiclebehaviour-reference)
+for full details.
 
 &fa-exclamation-triangle:lg; **Never override OnEnable or OnDisable in a VehicleBehaviour!** Use
 OnEnableComponent and OnDisableComponent instead if you need to trace the initialization of the
 component in Unity.
 {: .alert .alert-warning }
-
-Other events are available. Check out [VehicleBehaviour reference](/advanced/vehiclebehaviour-reference)
-for full details.
 
 ## Example source code
 
@@ -32,7 +33,7 @@ public class SimpleVehicleAddon : VehicleBehaviour
 	public override void OnEnableVehicle ()
 		{
 		// Check for the component initialization conditions.
-		// If they're not met the component can gracefully terminate here.
+		// If they're not met the component gracefully terminates here.
 
 		if (uiText == null)
 			{

@@ -6,51 +6,40 @@ inspired in the [ODB-II standard](http://en.wikipedia.org/wiki/OBD-II_PIDs):
 - Immediate access O(1)
 - Direct, non-blocking read/write access from all clients
 - Data transport only: no error control, no range checking
-- Stores _integer_ values only. Float values may represented as fixed-resolution decimals (ie: 1.0 = 10000)
+- Stores _integer_ values only. Float values may be represented as fixed-resolution decimals (ie: 1.0 = 10000)
 - NaN is gracefully supported as integer: <code>(int)NaN = -2147483647</code>
 - Full forwards-backwards compatibility along versions.
 
-Add-on components can use the data bus for reading/writing values. _Values_ are arranged into
-_channels_. Accessing a specific value requires the pair `ChannelId, ValueId`. The standard Channels
-and their available values are referenced below.
+[Add-on components (VehicleBehaviour)](/advanced/custom-addons) may use the data bus for
+reading/writing values. _Values_ are arranged into _channels_. Accessing a specific value requires
+the pair `ChannelId, ValueId`. The standard Channels and their available values are referenced below.
 
-Blocks don't have direct access to the data bus. The [host Vehicle Controller](vehiclebase-reference)
-is responsible of reading and populating their exposed values in the overrides for
-`VehicleBase.DoUpdateBlocks` and `VehicleBase.DoUpdateData`.
-
-For examples on how to use the Data Bus, check out the scripts `VPStandardInput.cs` (method
-`UpdateVehicle`) and `VPVehicleController.cs` (methods `DoUpdateBlocks` and `DoUpdateData`).
+[Vehicle controllers](/advanced/vehiclebase-reference) are responsible of reading the data bus,
+feeding the internal components ([Blocks](/advanced/block-reference)), collecting the result, and
+populating back the relevant values in the bus.
 
 #### Accessing the data bus
 
-The bus is accessed via property **data** defined in VehicleBase. Use code like this in a script
-attached to a GameObject containing a VPVehicleController component or any other
-VehicleBase-derived component:
+The bus is accessed via public property `data` exposed in [VehicleBase](/advanced/vehiclebase-reference#properties).
+Use code like this within a [VehicleBehaviour-derived component](/advanced/custom-addons) (or any
+other component with a reference to the vehicle controller):
 
 ```
-using VehiclePhysics;
+// Set the input for the steering wheel.
 
-...
-
-// Get a reference to the vehicle controller
-
-VehicleBase m_vehicle = GetComponent<VehicleBase>();
-
-// Set the input for the steering wheel
-
-m_vehicle.data.Set(Channel.Input, InputData.Steer, Input.GetAxis("Horizontal") * 10000);
+vehicle.data.Set(Channel.Input, InputData.Steer, Input.GetAxis("Horizontal") * 10000);
 
 // Read the engine rpm value
 
-float engineRpm = m_vehicle.data.Get(Channel.Vehicle, VehicleData.EngineRpm) / 1000.0f;
+float engineRpm = vehicle.data.Get(Channel.Vehicle, VehicleData.EngineRpm) / 1000.0f;
 ```
 
-The bus can also be accessed via [] operators: `data[channel][value]`
+The bus may also be accessed via [] operators: `data[channel][value]`
 
 ```
-m_vehicle.data[Channel.Input][InputData.Steer] = Input.GetAxis("Horizontal") * 10000;
+vehicle.data[Channel.Input][InputData.Steer] = Input.GetAxis("Horizontal") * 10000;
 
-float engineRpm = m_vehicle.data[Channel.Vehicle][VehicleData.EngineRpm];
+float engineRpm = vehicle.data[Channel.Vehicle][VehicleData.EngineRpm];
 ```
 
 ### Data Channels
@@ -125,7 +114,7 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 |AutoShiftOverride	| Auto-shift override setting							|	|	| 0 = no override, 1 = force auto shift, 2 = force manual shift
 |AbsOverride		| ABS override setting									|	|	| 0 = no override, 1 = force ABS enabled, 2 = force ABS disabled
 
-**<sup>1</sup> DifferentialLock** affects the axle differentials only.
+**<sup>1</sup> DifferentialLock** affects the [axle differentials](/blocks/driveline) only.
 
-**<sup>2</sup> DrivelineLock** affects the element connecting the front-rear parts of the
-driveline. This might be either a differential or a torque splitter.
+**<sup>2</sup> DrivelineLock** affects the element connecting the front-rear regions of the
+[driveline](/blocks/driveline). This element might be either a differential or a torque splitter.
