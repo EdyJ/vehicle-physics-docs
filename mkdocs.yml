@@ -17,10 +17,9 @@ extra_javascript: [ 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJa
 #
 # iconfonts
 #
-#	- Download as zip here: https://github.com/MadLittleMods/markdown-icons
+#	- Download as zip here: https://github.com/MadLittleMods/markdown-icons (or take it from the extensions folder in this repo)
 #	- Unzip to a folder (any, just temporary)
 #   - From that folder, run: python setup.py install
-
 
 markdown_extensions:
   - extra
