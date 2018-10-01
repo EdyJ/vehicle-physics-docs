@@ -13,6 +13,15 @@ theme:
 extra_css: [ 'css/tables.css', 'css/admonitions.css', 'css/fixes.css', 'css/extras.css', 'css/clickview.css', 'css/slick.css', 'css/slick-theme.css', 'css/slick-custom.css' ]
 extra_javascript: [ 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML', 'js/mathjaxhelper.js', 'js/fabric.custom.min.js', 'js/texturecanvas.js', 'js/imagegallery.js', 'js/clickview.js', 'https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js', 'js/drivelinechartcanvas.js' ]
 
+# Extension instructions:
+#
+# iconfonts
+#
+#	- Download as zip here: https://github.com/MadLittleMods/markdown-icons
+#	- Unzip to a folder (any, just temporary)
+#   - From that folder, run: python setup.py install
+
+
 markdown_extensions:
   - extra
   - admonition
