@@ -30,7 +30,7 @@ markdown_extensions:
       prefix: "fa-"
   - codehilite
 
-pages:
+nav:
 - "&#8201;": index.md
 - About:
   - Features: about/features.md
