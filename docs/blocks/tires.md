@@ -54,7 +54,7 @@ Still, existing Pacejka sets may be adapted to VPP following this procedure:
 	_slip ratio_ ($\sigma$) and _slip angle_ ($\alpha$) respectively. The equivalences are:
 
 	$$\begin{align}
-	\sigma &= \frac{\omega R_e - V}{\vert{V}\vert} \\
+	\sigma &= \frac{\omega R_e - V}{\vert{V}\vert} \\\
 	\alpha &= \tan^{-1} (\frac{V_x}{V_y})
 	\end{align}
 	$$
