@@ -188,12 +188,11 @@ transfers.
 When the formulas for the Harmonic Oscillator (above) are applied to vehicles in those situations
 they yield a surprising result:
 
-$${\begin{cases}
-naturalFrequency &= \sqrt{\frac{stiffness}{sprungMass}} \\\
-sprungMass &= \frac{suspensionForce}{gravity} \\\
+\begin{cases}
+naturalFrequency &= \sqrt{\frac{stiffness}{sprungMass}} \\
+sprungMass &= \frac{suspensionForce}{gravity} \\
 suspensionForce &= stiffness \cdot{contactDepth}
-\end{cases}}
-$$
+\end{cases}
 
 $$\Longrightarrow naturalFrequency = \sqrt{\frac{gravity}{contactDepth}}$$
 
