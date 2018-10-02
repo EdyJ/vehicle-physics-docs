@@ -53,11 +53,10 @@ Still, existing Pacejka sets may be adapted to VPP following this procedure:
 	(_longitudinal slip velocity_) or $V_x$ (_lateral slip velocity_) as horizontal axis, instead of
 	_slip ratio_ ($\sigma$) and _slip angle_ ($\alpha$) respectively. The equivalences are:
 
-	$$\begin{align}
+	\begin{align}
 	\sigma &= \frac{\omega R_e - V}{\vert{V}\vert} \\
 	\alpha &= \tan^{-1} (\frac{V_x}{V_y})
 	\end{align}
-	$$
 
 3. Configure the tire friction in VPP to match the resulting curve as closely as possible. You may
 	use either a Pacejka model or any of the other modes (i.e. Parametric), which are typically

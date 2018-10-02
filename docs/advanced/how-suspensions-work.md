@@ -188,12 +188,11 @@ transfers.
 When the formulas for the Harmonic Oscillator (above) are applied to vehicles in those situations
 they yield a surprising result:
 
-$${\begin{cases}
-naturalFrequency = \sqrt{\frac{stiffness}{sprungMass}}\\
-sprungMass = \frac{suspensionForce}{gravity}\\
-suspensionForce = stiffness \cdot{contactDepth}
-\end{cases}}
-$$
+\begin{cases}
+naturalFrequency &= \sqrt{\frac{stiffness}{sprungMass}} \\
+sprungMass &= \frac{suspensionForce}{gravity} \\
+suspensionForce &= stiffness \cdot{contactDepth}
+\end{cases}
 
 $$\Longrightarrow naturalFrequency = \sqrt{\frac{gravity}{contactDepth}}$$
 
@@ -215,6 +214,6 @@ configuring the suspension:
 	_contact depth_.
 - **VPAntiRollBar:** links the suspension of the wheels in the same axle in order to control the
 	lateral roll in curves.
-- **VPSuspensionModifer:** Modifies the suspension properties along the suspension travel. This
-	allows simulating [leaf spring suspensions](https://en.wikipedia.org/wiki/Leaf_spring), for
-	example.
+- **VPSuspensionModifer:** Modifies the suspension properties along the suspension travel. For
+	example, this allows simulating [leaf spring suspensions](https://en.wikipedia.org/wiki/Leaf_spring)
+	or bump stops.
