@@ -49,6 +49,9 @@ Physic Material
 	Material when wheel hits a collider with that physic material assigned. _None_ is also valid
 	for identifying colliders without physic material assigned.
 
+	**Note:** The values of the Physic Material itself (Static Friction, Dynamic Friction, etc) do
+	NOT have any effect in the tire friction. Only Grip and Drag below modify the tire response.
+
 Grip
 :	Grip multiplier of the surface. Some reference examples are:
 
