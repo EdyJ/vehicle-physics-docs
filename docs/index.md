@@ -166,6 +166,9 @@ with Vehicle Physics Pro:
 - Simumak / Everis
 - Spinifex
 
+- Metamoto
+- CVedia
+
 - Huawei
 - Volkswagen
 - BMW
