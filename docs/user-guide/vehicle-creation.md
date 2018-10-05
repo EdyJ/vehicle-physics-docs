@@ -165,8 +165,6 @@ The vehicle is now ready for the first test drive.
 </div>
 </section>
 </div>
-<script src="/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/slick-launcher.js" type="text/javascript" charset="utf-8"></script>
 
 You should now be driving the L200 in the test scene. Review the steps above carefully if something
 doesn't work or you get some error.
