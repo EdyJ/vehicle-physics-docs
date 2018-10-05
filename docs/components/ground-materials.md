@@ -49,8 +49,10 @@ Physic Material
 	Material when wheel hits a collider with that physic material assigned. _None_ is also valid
 	for identifying colliders without physic material assigned.
 
-	**Note:** The values of the Physic Material itself (Static Friction, Dynamic Friction, etc) do
-	NOT have any effect in the tire friction. Only Grip and Drag below modify the tire response.
+	&fa-info-circle:lg; The values of the Physic Material itself (_Static Friction_, _Dynamic
+	Friction_, etc) do NOT have any effect in the tire friction. Only _Grip_ and _Drag_ below affect
+	the tire forces.
+	{: .alert .alert-info }
 
 Grip
 :	Grip multiplier of the surface. Some reference examples are:
@@ -63,8 +65,8 @@ Grip
 	| Ice        | 0.1  |
 
 Drag
-:	Drag force based on the speed and load of the wheel on the surface. The formula for computing
-	the force magnitude is:
+:	Drag coefficient. Produces a drag force based on the speed and load of the wheel on the surface.
+	The formula used for computing the drag force is:
 
 	$$ F_d = \rho \times F_z \times v^2 $$
 
@@ -86,8 +88,8 @@ Particle Emitter
 	[VPTireEffects](vehicle-addons.md#vptireeffects) if available in the vehicle.
 
 Surface Type
-:	A _hint_ on the type of surface. It's mostly used by the vehicle add-on components such as
-	[VPAudio](vehicle-addons.md#vpaudio) for playing different effects.
+:	A _hint_ on the type of surface. Mostly used by vehicle add-on components such as [VPAudio](vehicle-addons.md#vpaudio)
+	for playing different effects.
 
 	- Hard surfaces: asphalt, tarmac, concrete, metal...
 	- Soft surfaces: offroad, mud, grass, sand, gravel...
@@ -120,7 +122,7 @@ Max Marks
 :	Maximum number of mark segments the renderer will handle. Old marks will be faded out
 	progressively according to the _Fade Out Range_ parameter.
 
-	&fa-warning; The number of marks has direct influence on the performance. The entire mesh with
+	&fa-warning:lg; The number of marks has direct influence on the performance. The entire mesh with
 	the marks needs to be processed each time new segments are added.
 	{: .alert .alert-warning }
 
