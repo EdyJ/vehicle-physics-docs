@@ -178,16 +178,17 @@ spin.
 !!! Info "&fa-thumbs-o-up; Pro-Tip"
 	Having a Torque Converter with a manual transmission is not a common setup but can greatly
 	improve the gameplay. The user doesn't have to worry about clutch and still can apply throttle
-	gently for maneuvering at low speeds.
+	gently in low speed maneuvers.
 
 #### How to ignite the engine at the beginning of the scene?
 
-Two ways:
+Two methods:
 
 - Disable **Can Stall**. Engine will be always on, without possibility of stall.
 
-- Keep sending the value "1" to `StdInput.Key` via the [Data Bus](databus-reference.md)
-until the value `Vehicle.EngineStalled` returns "0". Then send a "0" to `StdInput.Key`.
+- Keep sending the value "1" to `InputData.Key` (Input channel) via the [Data Bus](databus-reference.md)
+	until the value `VehicleData.EngineStalled` (Vehicle channel) returns "0". Then send a "0" to
+	`InputData.Key`.
 
 	This procedure actually moves the ignition key to the ignite position. Once ignited (vehicle
 	is no longer stalled) the key is moved back to normal operation.
