@@ -21,8 +21,8 @@ Inter-axle differential
 :	A differential connecting two axles in the same front or rear region.
 
 Torque splitter
-:	A viscous coupling between two differentials. The torque is applied to the first differential,
-	but if the wheels in that axle slip then part of the torque is routed to the second differential.
+:	A viscous coupling between two axles. The torque is applied to the first axle, but if the wheels
+	in that axle slip then part of the torque is routed to the second axle.
 
 	A typical AWD car with a torque splitter would work as this: front wheels are powered, but if
 	these wheels slip, the rear wheels receive a portion of the torque. This is similar to the
