@@ -162,8 +162,8 @@ with Vehicle Physics Pro:
 
 #### Actual customers
 
+- Take 2 Interactive
 - Toyota
-- Simumak / Everis
 - Spinifex
 
 - Metamoto
@@ -173,6 +173,8 @@ with Vehicle Physics Pro:
 - Volkswagen
 - BMW
 - UPS
+
+- Simumak / Everis
 
 #### Testimonials
 
