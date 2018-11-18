@@ -210,10 +210,12 @@ carrying variable cargo or passengers.
 Vehicle Physics Pro includes a variety of suspension components allowing different ways of
 configuring the suspension:
 
-- **VPDynamicSuspension:** modifies the suspension properties in order to preserve a given
-	_contact depth_.
 - **VPAntiRollBar:** links the suspension of the wheels in the same axle in order to control the
 	lateral roll in curves.
-- **VPSuspensionModifer:** Modifies the suspension properties along the suspension travel. For
+- **VPAdvancedDamper:** configures dampers with bump / rebound parameters: slow bump, fast bump,
+	slow rebound, fast rebound.
+- **VPDynamicSuspension:** modifies the suspension spring in runtime order to preserve a given
+	_contact depth_ (or _ride height_).
+- **VPProgressiveSuspension:** Modifies the suspension properties along the suspension travel. For
 	example, this allows simulating [leaf spring suspensions](https://en.wikipedia.org/wiki/Leaf_spring)
 	or bump stops.

@@ -1,7 +1,7 @@
 # Changelog
 
 This list is a brief summary of the most significant additions to Vehicle Physics Pro along time.
-It doesn't include minor changes nor fixes.
+It doesn't include minor changes or fixes.
 
 Licensees may access the full development details via GIT revision logs (VPP subscription required):
 
@@ -11,6 +11,26 @@ Licensees may access the full development details via GIT revision logs (VPP sub
 - [Sample Assets](http://projects.edy.es/trac/edy_vehicle-physics-sample-assets/log/)
 
 <hr>
+
+#### November 2018
+
+- New **VPAdvancedDamper** component for detailed bump / rebound damper settings.
+- Updated vehicle **JPickup v2**: The JPickup 3D model has been completely reworked (hierarchy, materials, spare parts...)
+
+#### October 2018
+
+- New **Vehicle Inertia** settings included as essential part of the vehicle controller.
+- Updated vehicle **L200 Pickup Truck**: 3D model reworked (hierarchy, materials).
+
+#### September 2018
+
+- New **throttle mapping curve** feature in the Engine block providing a smooth engine control along all the throttle range.
+- Improved **fuel consumption model** based on a much more precise **engine load** calculation.
+
+#### August 2018
+
+- New **MatchInertia** utility to help rigging complex multi-body vehicles (i.e. excavators).
+- Improvements in a variety of components: VPWheelCollider, VPVehicleJoint, VPSolidCargo.
 
 #### July 2018
 
@@ -27,7 +47,7 @@ Licensees may access the full development details via GIT revision logs (VPP sub
 #### May 2018
 
 - New individual **Clutch block** that may be inserted in any point of the driveline (note that this block is not a replacement for the standard clutch, which is part of the Engine block).
-- New **advanced debugger** component that shows the state values of each block in the driveline.
+- New **block debugger** component that shows the state values of each block in the driveline.
 
 #### April 2018
 
@@ -36,7 +56,6 @@ Licensees may access the full development details via GIT revision logs (VPP sub
 - Support for **D-BOX motion platforms** [[D-BOX site]](http://tech.d-box.com/training-and-simulation/automotive/). The new add-on component VPDboxOutput sends all the vehicle telemetry and state to the D-BOX API.
 - New **dual-drive steering** vehicle setup for caterpillars (TrackVehicleController). Supports smooth speed transitions and neutral rotation.
 - New **Bulldozer controller** (VPBulldozerController) for simulating this very special type of vehicle: engine, torque converter, locked differential, two clutches and two caterpillars.
-
 
 #### March 2018
 
