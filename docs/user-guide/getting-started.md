@@ -54,8 +54,9 @@ play with:
 
 ![VP Vehicle Controller](/img/components/vpp-vehicle-controller.png){: .img-medium .clickview }
 
-- **Center Of Mass:** references the position of the center of mass of the vehicle.
-- **Axes:** references to the wheels and assign steering and brakes to them.
+- **Center Of Mass:** references the position of the center of mass in the vehicle.
+- **Inertia:** configures the distribution of mass in the vehicle. Affects understeering / oversteering behavior.
+- **Axes:** references to the wheels and assigns steering and brakes to them.
 - **Steering:** steering angle, ackerman, toe.
 - **Brakes:** brake torques, balance, handbrake.
 - **Tires:** tire friction model and parameters.
@@ -124,7 +125,8 @@ material.
 
 The ground materials are identified by the Physics Materials assigned to the colliders in the scene.
 Colliders without Physic Material assigned can also have their Ground Material (Physic Material =
-_none_, as shown in the above pic).
+_none_, as shown in the above pic). Note that the friction properties in the Physic Materials don't
+affect the tire friction.
 
 #### Camera Controller
 

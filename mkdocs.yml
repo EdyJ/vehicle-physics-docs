@@ -58,6 +58,7 @@ nav:
   - Ground Materials: components/ground-materials.md
   - Camera Controller: components/camera-controller.md
 - Blocks:
+  - Inertia: blocks/inertia.md
   - Steering: blocks/steering.md
   - Brakes: blocks/brakes.md
   - Tires: blocks/tires.md

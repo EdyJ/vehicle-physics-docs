@@ -1,8 +1,8 @@
 # Creating vehicles
 
 This step-by-step tutorial shows how to create and configure a new vehicle from scratch in Vehicle
-Physics Pro. You will be configuring and rigging the L200-Pickup Test Vehicle, but you may configure
-any vehicle following the same steps.
+Physics Pro. You will be configuring and rigging the L200 Pickup Truck, but you may configure any
+vehicle following the same steps.
 
 Requirements
 :	An Unity 3D project with the VPP core and sample assets (see [Setting Up Vehicle Physics Pro](/user-guide/setting-up-vpp)).
@@ -68,7 +68,7 @@ Select the four Wheel GameObjects, then add a **VPWheelCollider** component to t
 5- Add the visual mesh
 {: .header }
 
-- Locate the L200-Pickup mesh (_Sample Assets > Art > Models > Test Vehicle > Meshes_).
+- Locate the L200-Pickup mesh (_Sample Assets > Art > Models > L200 Pickup Truck > Meshes_).
 - Drag it to the L200 GameObject in the Hierarchy so it becomes a child of L200.
 
 &fa-hand-o-right:lg;&nbsp; Check out [3D models and environments](/user-guide/3d-models) for more
@@ -119,7 +119,7 @@ _"Configuring the VPWheelColliders manually"_ below if you need to do it manuall
 
 The collision mesh is a simplified version of the vehicle mesh.
 
-- Locate the L200-Collider mesh (_Sample Assets > Art > Models > Test Vehicle > Meshes_).
+- Locate the L200-Collider mesh (_Sample Assets > Art > Models > L200 Pickup Truck > Meshes_).
 - Drag it to the L200 GameObject in the Hierarchy so it becomes a child of L200.
 
 &fa-warning:lg;&nbsp; **A collider is mandatory in the vehicle.** Check out [3D models and environments](/user-guide/3d-models)

@@ -4,10 +4,10 @@ The vehicle-equivalent of Unity's character controller. Simulates most types of 
 
 ![VP Vehicle Controller](/img/components/vpp-vehicle-controller.png){: .clickview }
 
-The vehicle controller exposes the settings for the center of mass, axles and powertrain: steering,
-brakes, tires, driveline, engine, clutch, gearbox and retarder. Other settings for the wheels
-(radius, mass) and suspension (spring, damper) are configured at each [VP Wheel Collider](wheel-collider)
-component independently.
+The vehicle controller exposes the settings for the center of mass, inertia, axles, steering, brakes,
+tires, powertrain (engine, clutch, gearbox, retarder, driveline), driving aids and safety aids.
+Other settings for the wheels (radius, mass) and suspension (spring, damper) are configured at each
+[VP Wheel Collider](wheel-collider) component independently.
 
 This is the block layout of an AWD vehicle in VPVehicleController:
 
@@ -46,7 +46,7 @@ end
 
 Notes:
 
-- Steering, Brakes and Tire Friction are included in the Wheel blocks.
+- Steering, Brakes and Tire Friction are included in the Wheel blocks in the figure.
 - The Retarder Brake is typically used in heavy transport vehicles (trucks, buses). It stays
 disabled on regular cars, SUVs, vans, etc.
 
@@ -68,13 +68,32 @@ vehicle. The vertical position affects the stability.
 		name it `CoM`.
 	2. Set it as Center of Mass in the vehicle controller.
 	3. Move the CoM gameobject to the middle of your vehicle as seen from the top.
-	4. Imagine the chassis of the vehicle. Change the vertical position (Y) of the CoM until
+	4. Figure out the chassis of the vehicle. Change the vertical position (Y) of the CoM until
 		it "touches" the imaginary chassis from upside.
 	5. Move the CoM longitudinally (Z) slightly towards the position of the engine. It should be
 		placed around 2/3 of the length of the vehicle.
 
-	When playing around with your vehicle you can adjust its handling behavior by modifying the Z
-	position of the CoM. For modifying the stability move the Y position of the CoM.
+	You may modify the position of the CoM in runtime for finding a better value.
+
+### Inertia
+
+The inertia defines the distribution of mas along the vehicle. Inertia plays a critical role in the
+handling (understeer / oversteer).
+
+!!! info "&fa-info-circle; How to configure the Inertia"
+
+	Recommended method:
+
+	1. In the Inertia settings choose the "Parametric" mode.
+	2. Configure the chassis dimensions to roughly match the bottom part of the vehicle.
+	3. Configure Inertia Bias to 1 if the vehicle has the engine in the front, or to -1 if the
+		engine in the rear.
+	4. Refine the Inertia Bias value based on the vehicle's behavior. Positive values cause more
+		oversteer, while negative values cause more understeer.
+
+	Feel free to play with the vehicle and modify Inertia Bias in runtime for adjusting the handling.
+
+Details: [Inertia helper](/blocks/inertia)
 
 ### Axles
 
@@ -324,6 +343,7 @@ AntiSpin<br>
 [Differential](/blocks/differential)<br>
 [Engine](/blocks/engine)<br>
 [Gearbox](/blocks/gearbox)<br>
+[Inertia](/blocks/inertia)<br>
 [Retarder](/blocks/retarder)<br>
 SpeedControl<br>
 StabilityControl<br>
