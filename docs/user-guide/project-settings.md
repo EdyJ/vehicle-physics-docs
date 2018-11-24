@@ -35,3 +35,5 @@ Enable Enhanced Determinism
 Since 2018.3 physics is already more deterministic. This option is for special cases (see blog for
 details) and has a performance costs. It should not be necessary.
 
+Physics.reuseCollisionCallbacks
+
