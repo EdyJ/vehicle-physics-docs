@@ -60,8 +60,8 @@ Center differential
 :	A center differential connecting the two axle differentials.
 
 Torque splitter
-:	Drive power goes to the first axle. A torque splitter routes part of the power to the second
-	axle.
+:	Drive power goes to the primary axle. A torque splitter routes part of the power to the
+	secondary axle.
 
 H-Drive
 :	Wheels on each side of both axles are linked together. A single center differential connects

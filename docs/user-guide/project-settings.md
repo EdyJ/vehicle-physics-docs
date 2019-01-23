@@ -37,3 +37,8 @@ details) and has a performance costs. It should not be necessary.
 
 Physics.reuseCollisionCallbacks
 
+## Rendering
+
+Example scenes and lighting are configured for Linear color space. A component LightGammaCorrection
+is provided that may be added to the Light component for adjusting the intensity in Gamma color
+space.

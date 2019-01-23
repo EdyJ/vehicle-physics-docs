@@ -116,10 +116,10 @@ Fetch the most recent updates to the example project.
 
 	Enterprise Edition submodules   | Folder
 	--------------------------------|---------
-	[Common Tools Core](http://projects.edy.es/git/edy/common-tools-core.git/shortlog/refs/heads/master?js=1) | `Assets/Core/Common Tools Core`
-	[Vehicle Physics Core](http://projects.edy.es/git/edy/vehicle-physics-core.git/shortlog/refs/heads/master?js=1) | `Assets/Core/Vehicle Physics Core`
-	[Vehicle Physics Sample Assets](http://projects.edy.es/git/edy/vehicle-physics-sample-assets.git/shortlog/refs/heads/master?js=1) (`master` branch) | `Assets/Core/Vehicle Physics Sample Assets`
-	[Vehicle&nbsp;Physics&nbsp;Specialized&nbsp;Assets](http://projects.edy.es/git/edy/vehicle-physics-specialized-assets.git/shortlog/refs/heads/master?js=1) | `Assets/Core/Vehicle Physics Specialized Assets`
+	[Common Tools Core](http://projects.edy.es/git/edy/common-tools-core.git/shortlog/refs/heads/master?js=1) | `Assets/Vehicle Physics Pro/Core/Common Tools Core`
+	[Vehicle Physics Core](http://projects.edy.es/git/edy/vehicle-physics-core.git/shortlog/refs/heads/master?js=1) | `Assets/Vehicle Physics Pro/Core/Vehicle Physics Core`
+	[Vehicle Physics Sample Assets](http://projects.edy.es/git/edy/vehicle-physics-sample-assets.git/shortlog/refs/heads/master?js=1) (`master` branch) | `Assets/Vehicle Physics Pro/Core/Vehicle Physics Sample Assets`
+	[Vehicle&nbsp;Physics&nbsp;Specialized&nbsp;Assets](http://projects.edy.es/git/edy/vehicle-physics-specialized-assets.git/shortlog/refs/heads/master?js=1) | `Assets/Vehicle Physics Pro/Core/Vehicle Physics Specialized Assets`
 
 3.	Now you can open the project in Unity 3D. Proceed to [Getting Started](getting-started.md) for
 	a quick walkthrough.
