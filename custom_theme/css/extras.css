@@ -167,3 +167,11 @@ h1, h2, h3
 	{
 	margin-bottom: 15px;
 	}
+
+
+/* Header links */
+
+a.headerlink, a.headerlink:hover
+	{
+	color: #bde5fd;
+	}

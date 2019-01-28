@@ -27,12 +27,13 @@ extra_javascript: [ 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJa
 markdown_extensions:
   - extra
   - admonition
-  - codehilite
   - iconfonts:
       base: "fa"
       prefix: "fa-"
   - mdx_math:
       enable_dollar_delimiter: True
+  - toc:
+      permalink: " #"
 
 nav:
 - "&#8201;": index.md
