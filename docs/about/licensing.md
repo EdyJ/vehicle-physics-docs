@@ -15,7 +15,8 @@ if you have any questions.
 Full-featured [Vehicle Controller](/components/vehicle-controller) component			| &fa-check; | &fa-check; | &fa-check; |
 Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-check; |
 Simultaneous vehicles on each scene														|		1	| unlimited | unlimited |
-High-quality locations and vehicles (SUV, sport car...)											|	| &fa-check; | &fa-check; |
+High-quality locations and vehicles																|	| &fa-check; | &fa-check; |
+Multiple ground materials with tire effects (marks, smoke....)									|	| &fa-check; | &fa-check; |
 Supports [Custom vehicles](/advanced/custom-vehicles/) and [components](/advanced/custom-blocks/) |	| &fa-check; | &fa-check; |
 Mobile touch-based controller																	|	| &fa-check; | &fa-check; |
 DirectInput controller with force feedback (Windows only)										|	| &fa-check; | &fa-check; |
