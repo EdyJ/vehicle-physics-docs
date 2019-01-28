@@ -7,8 +7,10 @@ strict: true
 google_analytics: [ 'UA-58719504-1', 'auto' ]
 
 theme:
-    name: mkdocs
-    custom_dir: 'custom_theme'
+  name: mkdocs
+  custom_dir: 'custom_theme'
+  highlightjs: True
+
 
 extra_css: [ 'css/tables.css', 'css/admonitions.css', 'css/fixes.css', 'css/extras.css', 'css/clickview.css', 'css/slick.css', 'css/slick-theme.css', 'css/slick-custom.css' ]
 extra_javascript: [ 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML', 'js/fabric.custom.min.js', 'js/texturecanvas.js', 'js/imagegallery.js', 'js/clickview.js', 'https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js', 'js/drivelinechartcanvas.js', 'js/slick.min.js', 'js/slick-launcher.js' ]
