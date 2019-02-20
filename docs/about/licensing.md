@@ -30,8 +30,8 @@ Autonomous vehicles framework: self-drive, automated tests, telemetry export to 
 Skype support 																							|	|	| &fa-check; |
 License covers unlimited developers (single studio)														| 	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
-**License Price**<br>_One-time payment, perpetual license_											| **Free** | **€390** | **€4900** |
-**Support & updates via GIT repository**<br>_First year included in the license price_				| -	| €90<br>/year | €990<br>/year |
+**License Setup Fee**<br>_License is perpetual after this payment_									| **Free** | **€390** | **€4900** |
+**Support & updates via GIT repo1sitory**<br>_First year included in the license setup fee_				| _n/a_ | €90<br>/year | €990<br>/year |
 **PURCHASE LICENSE**		| _to be released_ | [**BUY NOW**](https://goo.gl/EoAe5v) | [**BUY NOW**](https://goo.gl/QzPdcu) |
 
 #### Notes
@@ -56,9 +56,10 @@ May be licensed by companies with annual revenue / funds / budget in excess of �
 ##### Subscription
 
 - Professional and Enterprise licenses include a yearly subscription for support and updates.
-- First year of support and updates is included in the license price.
+- First year of support and updates is included with license setup fee.
 - Customers may opt-out any time and keep the most recent VPP version at that time.
-- After opting-out, a grace period of 120 days is granted to rejoin paying the subscription fee only.
+- A grace period of 120 days is granted after opting-out to rejoin paying the subscription fee only.
+	Rejoining after the grace period requires paying the license setup fee in full.
 
 The subscription model allows continuous development, feature updates, and product support in the
 long term.
