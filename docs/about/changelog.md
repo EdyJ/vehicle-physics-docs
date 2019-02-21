@@ -12,6 +12,12 @@ Licensees may access the full development details via GIT revision logs (VPP sub
 
 <hr>
 
+#### January 2019
+
+- New **Engine Curve Fitting Tool** providing a procedure for configuring the Engine curves based on real curve data. Unity menu > Tools > Vehicle Physics > Engine Curve Fit Tool.
+- New **rpm limiter mode selector** in the engine. The new **Injection Limit** reduces the throttle to keep the rpms under or at the limit. Previously, only Injection Cut mode was available to cut throttle at small intervals.
+- **Compatibility Upgrade** that requires applying a patch (included) to the Unity project. [More information](https://www.edy.es/dev/2019/01/2019-01-25-compatibility-upgrade-for-vehicle-physics-pro/)
+
 #### November 2018
 
 - New **VPAdvancedDamper** component for detailed bump / rebound damper settings.
