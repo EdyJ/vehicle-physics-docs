@@ -113,6 +113,10 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 |DrivelineLock		| Override lock setting at the driveline<sup>2</sup>	|	|	| 0 = no override, 1 = force locked driveline, 2 = force unlocked / open driveline
 |AutoShiftOverride	| Auto-shift override setting							|	|	| 0 = no override, 1 = force auto shift, 2 = force manual shift
 |AbsOverride		| ABS override setting									|	|	| 0 = no override, 1 = force ABS enabled, 2 = force ABS disabled
+|EscOverride		| ESC override setting									|	|	| 0 = no override, 1 = force ESC enabled, 2 = force ESC disabled
+|TcsOverride		| TCS override setting									|	|	| 0 = no override, 1 = force TCS enabled, 2 = force TCS disabled
+|AsrOverride		| ASR override setting									|	|	| 0 = no override, 1 = force ASR enabled, 2 = force ASR disabled
+|SteeringAidsOverride|Steering Aids override setting						|	|	| 0 = no override. 2 = force all steering aids disabled.
 
 **<sup>1</sup> DifferentialLock** affects the [axle differentials](/blocks/driveline) only.
 
