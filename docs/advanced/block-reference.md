@@ -108,11 +108,11 @@ BN[Block n]
 DOTS["..."]
 W>Wheel]
 
-W-."Momentum (L)<br>Inertia (I)<br>Reaction Torque (Tr)".->BN
-BN-."L<br>I<br>Tr".->DOTS
-DOTS-."L<br>I<br>Tr".->B1
-B1-."L<br>I<br>Tr".->B0
-B0-."L<br>I<br>Tr".->E
+W-."Momentum (L)<br><br>Inertia (I)<br><br>Reaction Torque (Tr)".->BN
+BN-."L<br><br>I<br><br>Tr".->DOTS
+DOTS-."L<br><br>I<br><br>Tr".->B1
+B1-."L<br><br>I<br><br>Tr".->B0
+B0-."L<br><br>I<br><br>Tr".->E
 
 classDef NoBox fill:#FFF,stroke:#FFF
 class DOTS NoBox
