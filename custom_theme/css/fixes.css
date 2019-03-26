@@ -23,8 +23,11 @@
 @media (min-width: 992px) and (max-width: 1199px)
 	{
 	.nav.navbar-nav.navbar-right li:last-child,
-	.nav.navbar-nav.navbar-right li:nth-last-child(2),
-	.nav.navbar-nav.navbar-right li:nth-last-child(3)
+	.nav.navbar-nav.navbar-right li:nth-last-child(2)
+	/*
+	EDY: This must be removed for leaving Search visible when disabling GitHub repo in the yml.
+	,
+	.nav.navbar-nav.navbar-right li:nth-last-child(3) */
 		{
 		display: none;
 		}

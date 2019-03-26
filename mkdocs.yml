@@ -26,7 +26,7 @@ extra_javascript: [ 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJa
 markdown_extensions:
   - extra
   - admonition
-#  - codehilite
+#  - codehilite   Interprets the :::text tags in  text bloks (i.e. setting up vpp), but enabling it removes code highlight in the server (works local)
   - iconfonts:
       base: "fa"
       prefix: "fa-"
