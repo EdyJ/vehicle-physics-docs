@@ -125,7 +125,7 @@ Detailed information: [Solver substeps explained](../advanced/misc-topics-explai
 
 # Scripting Reference
 
-```
+```cs
 namespace VehiclePhysics
 {
 	public abstract class VehicleBase : MonoBehaviour

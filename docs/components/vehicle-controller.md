@@ -249,7 +249,7 @@ unless this effect is clearly noticed.
 
 # Scripting Reference
 
-```
+```cs
 namespace VehiclePhysics
 {
 	public class VPVehicleController : VehicleBase

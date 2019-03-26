@@ -112,7 +112,7 @@ and rotated correctly.
 
 # Scripting Reference
 
-```
+```cs
 namespace VehiclePhysics
 {
 	public class VPWheelCollider : VehicleBehaviour

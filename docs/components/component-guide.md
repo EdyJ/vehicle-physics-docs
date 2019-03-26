@@ -4,7 +4,9 @@
 
 ### VehiclePhysics
 
-`namespace VehiclePhysics`
+```
+namespace VehiclePhysics
+```
 
 Main namespace for Vehicle Physics Pro components and scripts.
 
@@ -154,7 +156,9 @@ VPTwoWheelController
 
 ### VehiclePhysics.Examples
 
-`namespace VehiclePhysics.Examples`
+```
+namespace VehiclePhysics.Examples
+```
 
 SimpleVehicleController
 :	A really simple custom vehicle built with VPP blocks.
@@ -170,7 +174,9 @@ SimpleTrackControllerInput
 
 ### VehiclePhysics.Timing
 
-`namespace VehiclePhysics.Timing`
+```
+namespace VehiclePhysics.Timing
+```
 
 LapTimer
 :	Measures lap and sector times.
@@ -186,7 +192,9 @@ Transponder
 
 ### VehiclePhysics.Utility
 
-`namespace VehiclePhysics.Utility`
+```
+namespace VehiclePhysics.Utility
+```
 
 AutoBrakeZone
 :	Applies brakes in the vehicle so it leaves the zone at a given speed.
@@ -212,7 +220,9 @@ VariableCargo
 
 ### VehiclePhysics.UI
 
-`namespace VehiclePhysics.UI`
+```
+namespace VehiclePhysics.UI
+```
 
 - BasicDashboard
 - DrivingAidsPanel
@@ -224,7 +234,9 @@ VariableCargo
 
 ### VehiclePhysics.Specialized
 
-`namespace VehiclePhysics.Specialized`
+```
+namespace VehiclePhysics.Specialized
+```
 
 - DumperControl
 - DumperControlInput
@@ -237,7 +249,9 @@ VariableCargo
 
 ### EdyCommonTools
 
-`namespace EdyCommontools`
+```
+namespace EdyCommontools
+```
 
 Generic tools and utilities for Unity
 

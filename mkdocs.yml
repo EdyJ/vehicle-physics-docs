@@ -9,10 +9,12 @@ google_analytics: [ 'UA-58719504-1', 'auto' ]
 theme:
   name: mkdocs
   custom_dir: 'custom_theme'
+  highlightjs: true
 
+# HighlightJS is being configured in (js/highlightjs-setup.js)
 
 extra_css: [ 'css/tables.css', 'css/admonitions.css', 'css/fixes.css', 'css/extras.css', 'css/clickview.css', 'css/slick.css', 'css/slick-theme.css', 'css/slick-custom.css' ]
-extra_javascript: [ 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML', 'js/fabric.custom.min.js', 'js/texturecanvas.js', 'js/imagegallery.js', 'js/clickview.js', 'https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js', 'js/drivelinechartcanvas.js', 'js/slick.min.js', 'js/slick-launcher.js' ]
+extra_javascript: [ 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML', 'js/fabric.custom.min.js', 'js/texturecanvas.js', 'js/imagegallery.js', 'js/clickview.js', 'https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js', 'js/drivelinechartcanvas.js', 'js/slick.min.js', 'js/slick-launcher.js', 'js/highlightjs-setup.js' ]
 
 # Extension instructions:
 # Install iconfonts and mdx_math from their master, or from the local files in the extensions folder.
@@ -26,7 +28,7 @@ extra_javascript: [ 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJa
 markdown_extensions:
   - extra
   - admonition
-#  - codehilite   Interprets the :::text tags in  text bloks (i.e. setting up vpp), but enabling it removes code highlight in the server (works local)
+#  - codehilite		Don't use. Removes code highlight in the server. We're configuring the built-in HighlightJS properly (see js/highlightjs-setup.js)
   - iconfonts:
       base: "fa"
       prefix: "fa-"

@@ -195,7 +195,7 @@ RandomColor, Color 2
 
 ### GroundMaterial.cs
 
-```csharp
+```
 using UnityEngine;
 using System;
 

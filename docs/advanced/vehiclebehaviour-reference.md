@@ -151,7 +151,7 @@ for a full list.
 
 # Scripting reference
 
-```
+```cs
 namespace VehiclePhysics
 {
 	public abstract class VehicleBehaviour : MonoBehaviour

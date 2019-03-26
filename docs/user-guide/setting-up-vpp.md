@@ -31,7 +31,6 @@ This is strongly recommended. Once configured, access to VPP repositories is pre
 
 2.	Generate the ssh keys. Paste the text below, substituting in your email address:
 
-		:::text
 		$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 3.	When you're prompted to "Enter a file in which to save the key", press Enter. This accepts the
@@ -41,14 +40,11 @@ This is strongly recommended. Once configured, access to VPP repositories is pre
 
 5.	Test your connection. Enter:
 
-		:::text
 		$ ssh -T git@projects.edy.es
 
 	The first time you will receive a warning. Reply _Yes_. You should then see this:
-
-		:::text
-		Welcome to Repository Hosting's Git Server. You have been successfully authenticated.
-		However you cannot connect directly with SSH, you must use the 'git' command.
+	<pre><code class="nohighlight">Welcome to Repository Hosting's Git Server. You have been successfully authenticated.
+	However you cannot connect directly with SSH, you must use the 'git' command.</code></pre>
 
 	Your connection via SSH is now correct. Proceed to the next step, cloning the VPP project.
 
@@ -63,14 +59,12 @@ This is strongly recommended. Once configured, access to VPP repositories is pre
 
 	**_Professional Edition:_**
 
-		:::text
 		$ git clone ssh://git@projects.edy.es/edy/vehicle-physics-pro-professional.git
 		$ cd vehicle-physics-pro-professional
 		$ git submodule update --init --recursive
 
 	**_Enterprise Edition:_**
 
-		:::text
 		$ git clone --depth=1 ssh://git@projects.edy.es/edy/vehicle-physics-pro.git
 		$ cd vehicle-physics-pro
 		$ git submodule update --init --recursive
@@ -91,7 +85,6 @@ Fetch the most recent updates to the example project.
 2.	Fetch and update the repositories. Type or paste each line (without the _$_) in Git Bash
 	pressing Enter after each one:
 
-		:::text
 		$ git pull --recurse-submodules
 		$ git submodule update --init --recursive
 
