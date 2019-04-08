@@ -92,8 +92,8 @@ Training and Learning
 - Time includes any task related to the Services including, but not limited to, setting up projects,
 	downloading resources, reviewing documentation or videos, meetings, writing documentation, and
 	any other task or procedure necessary to provide the Services.
-- Payments shall be processed in a weekly basis at the end of each week. The author reserves the
-	right of putting the Services on hold until any pending payments have been fulfilled.
+- A refundable retainer will be requested in advance for providing the services, with reimbursement
+	to the customer of any remaining amount following the completion of services.
 
 ### Terms & Conditions
 
