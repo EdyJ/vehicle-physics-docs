@@ -28,7 +28,7 @@ Specialized vehicle support: motorbike, caterpillar, mining, excavators, hydraul
 Autonomous vehicles framework: self-drive, automated tests, telemetry export to CSV						|	|	| &fa-check; |
 [D-Box Motion Cueing](http://www.d-box.com/training-and-simulation/) integration						|	|	| &fa-check; |
 Skype support 																							|	|	| &fa-check; |
-License covers unlimited developers (single studio)														| 	|	| &fa-check; |
+Number of developers 				 																	| 	| 1 | up to 10 |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
 **License Setup Fee**<br>_License is perpetual after this payment_									| **Free** | **€390** | **€4900** |
 **Support & updates via GIT repo1sitory**<br>_First year included in the license setup fee_				| _n/a_ | €90<br>/year | €990<br>/year |
@@ -40,6 +40,8 @@ May be licensed by companies with annual revenue / funds / budget in excess of �
 	be charged VAT.
 - Once the payment is completed you'll receive the credentials and instructions for accessing the
 	VPP repositories by email. Please allow 24/48 hours for your order to be processed.
+- **Custom licenses available** for teams and companies with more than 10 developers. Please write
+	to [info@vehiclephysics.com](mailto:info@vehiclephysics.com) for a quote.
 - **Early Access:** the simulation kit is completed and ready to be used in production titles.
 	Example scenes, tutorials, and additional resources are being worked on.
 - Professional license may not be licensed by any commercial or non-commercial entity with annual
