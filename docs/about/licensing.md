@@ -22,16 +22,16 @@ Mobile touch-based controller																	|	| &fa-check; | &fa-check; |
 DirectInput controller with force feedback (Windows only)										|	| &fa-check; | &fa-check; |
 XBox controller support (360 and One) (Windows only)											|	| &fa-check; | &fa-check; |
 Email support																					|	| individual | team |
+Number of developers 				 																	| 	| 1 | up to 10 |
 Full source code included																				|	|	| &fa-check; |
 Advanced simulation features: multi-body vehicles, dynamic suspension, liquid cargo						|	|	| &fa-check; |
 Specialized vehicle support: motorbike, caterpillar, mining, excavators, hydraulic actuators			|	|	| &fa-check; |
 Autonomous vehicles framework: self-drive, automated tests, telemetry export to CSV						|	|	| &fa-check; |
 [D-Box Motion Cueing](http://www.d-box.com/training-and-simulation/) integration						|	|	| &fa-check; |
 Skype support 																							|	|	| &fa-check; |
-Number of developers 				 																	| 	| 1 | up to 10 |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
 **License Setup Fee**<br>_License is perpetual after this payment_									| **Free** | **€390** | **€4900** |
-**Support & updates via GIT repo1sitory**<br>_First year included in the license setup fee_				| _n/a_ | €90<br>/year | €990<br>/year |
+**Support & updates via GIT repository**<br>_First year included in the license setup fee_				| _n/a_ | €90<br>/year | €990<br>/year |
 **PURCHASE LICENSE**		| _to be released_ | [**BUY NOW**](https://goo.gl/EoAe5v) | [**BUY NOW**](https://goo.gl/QzPdcu) |
 
 #### Notes
