@@ -46,7 +46,7 @@ The Setup dialog includes built-in help. Just move the mouse over an option to s
 	<img class="clickview" src="/img/demos/vpp-ascari-golf-2.png" alt="Vehicle Physics Pro - Ascari Demo">
 </div>
 
-<center>**[Download Vehicle Physics Pro Ascari Demo (73 Mb)](https://www.edy.es/vehiclephysics/demos/2019-04-17-VPP-Ascari-Demo.7z)**</center>
+<center>**[Download Vehicle Physics Pro Ascari Demo (65 Mb)](https://www.edy.es/vehiclephysics/demos/2019-04-20-VPP-Ascari-Demo.7z)**</center>
 
 This is the demo I use to learn and memorize the key aspects of this awesome track in both day and
 night conditions. The car is a stock Volkswagen Golf. Not a racing car, not even a particularly
