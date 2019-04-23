@@ -58,7 +58,7 @@ per minute, so an entire day takes 24 minutes of simulation time. Visibility is 
 at night, so you have to memorize the track as much as possible and drive by using the few
 references at all within your reach. Remember to turn the headlights on!
 
-Can you beat the 2:50 mark? My lap record at the time of writing this is 2:45.908.
+Can you beat the 2:50 mark? My lap record at the time of writing this is 2:45.881.
 
 **Credits:** The 3D model of the Ascari Resort Track is my own adaptation to Unity of a mod for
 Assetto Corsa developed by the AC forum member **_liquido_** a few years ago. [Full story here](https://assettocorsamods.net/threads/ascari-race-resort-ronda-spain.235/).
