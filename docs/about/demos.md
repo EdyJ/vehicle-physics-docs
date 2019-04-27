@@ -16,7 +16,8 @@ All demos include:
 	- Multiple camera modes (<kbd>C</kbd> key)
 	- Complete in-game help. Check it out!
 
-<pics of the common things>
+&fa-warning:lg; **Note:** Xbox gamepad and steering wheel controllers are supported in the PC/Windows versions only.
+{: .alert .alert-warning }
 
 ### JPickup Demo
 
