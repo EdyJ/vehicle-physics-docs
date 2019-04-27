@@ -1,6 +1,6 @@
 # Vehicle Physics Pro demos
 
-Try Vehicle Physics Pro yourself with these demos compiled for PC/Windows.
+Try Vehicle Physics Pro yourself with these demos for PC/Windows and Mac OS X.
 
 Instructions:
 :	- Download and unpack to a folder of your choice.
@@ -25,7 +25,8 @@ All demos include:
 	<img class="clickview" src="/img/demos/vpp-jpickup-city-2.png" alt="Vehicle Physics Pro - JPickup Demo">
 </div>
 
-<center>**[Download Vehicle Physics Pro JPickup Demo (22 Mb)](https://www.edy.es/vehiclephysics/demos/2019-04-17-VPP-JPickup-Demo.7z)**</center>
+<center>**Download Vehicle Physics Pro JPickup Demo<br>
+[PC/Windows&nbsp;(22&nbsp;Mb)](https://www.edy.es/vehiclephysics/demos/2019-04-17-VPP-JPickup-Demo-PC-Windows.7z) | [Mac&nbsp;OS&nbsp;X&nbsp;(33&nbsp;Mb)](https://www.edy.es/vehiclephysics/demos/2019-04-26-VPP-JPickup-Demo-Mac-OS-X.zip)**</center>
 
 The classic City scenery with the VPP-based JPickup truck. Includes a Setup dialog for configuring
 the most typical features in a standard car:
@@ -46,7 +47,8 @@ The Setup dialog includes built-in help. Just move the mouse over an option to s
 	<img class="clickview" src="/img/demos/vpp-ascari-golf-2.png" alt="Vehicle Physics Pro - Ascari Demo">
 </div>
 
-<center>**[Download Vehicle Physics Pro Ascari Demo (65 Mb)](https://www.edy.es/vehiclephysics/demos/2019-04-20-VPP-Ascari-Demo.7z)**</center>
+<center>**Download Vehicle Physics Pro Ascari Demo<br>
+[PC/Windows&nbsp;(65&nbsp;Mb)](https://www.edy.es/vehiclephysics/demos/2019-04-20-VPP-Ascari-Demo-PC-Windows.7z) | [Mac&nbsp;OS&nbsp;X&nbsp;(87&nbsp;Mb)](https://www.edy.es/vehiclephysics/demos/2019-04-27-VPP-Ascari-Demo-Mac-OS-X.zip)**</center>
 
 This is the demo I use to learn and memorize the key aspects of this awesome track in both day and
 night conditions. The car is a stock Volkswagen Golf. Not a racing car, not even a particularly
