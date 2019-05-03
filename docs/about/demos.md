@@ -4,7 +4,7 @@ Try Vehicle Physics Pro yourself with these demos for PC/Windows and Mac OS X.
 
 Instructions:
 :	- Download and unpack to a folder of your choice.
-	- Run the _Vehicle Physics Pro Demo_ executable.
+	- Run the _Vehicle Physics Pro Demo_ executable (Windows) or the _app_ file (Mac).
 	- Check out the in-game help (button <kbd>**?**</kbd>) for mappings and further instructions.
 
 All demos include:

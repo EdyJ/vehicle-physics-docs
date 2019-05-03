@@ -16,12 +16,12 @@ For example, an AI controller or a remote player.
 Press and _hold_ the control assigned to the ignition key (<kbd>K</kbd> by default) for starting the
 engine.
 
-The vehicle implements the ignition key with three positions: OFF, ON, and IGNITE
+The vehicle implements the ignition key with three positions: OFF, ACC-ON, and START
 
 - Pressing the corresponding Ignition Key control (<kbd>K</kbd> by default) once moves the key from
-	OFF to ON.
-- Pressing and holding keeps IGNITE applied until released or the engine gets started.
-- Pressing the key-off control (<kbd>Ctrl-K</kbd> by default) moves the key from ON to OFF.
+	OFF to ACC-ON.
+- Pressing and holding keeps START applied until released or the engine gets started.
+- Pressing the key-off control (<kbd>Ctrl-K</kbd> by default) moves the key from ACC-ON to OFF.
 
 ### VPStandardInput
 
@@ -51,8 +51,8 @@ Unlock Driveline On Handbrake
 	allowing an immediate effect on the hand-braked axle.
 
 Ignition key
-:	Single press moves key to On. Press and hold for ignite the engine. Press with <kbd>Ctrl</kbd>
-	for  moving the key to Off.
+:	Single press moves key to Acc-On. Press and hold for Start the engine. Press with <kbd>Ctrl</kbd>
+	for moving the key to Off.
 
 Steer axis
 :	Axis name for steering. Must be configured at Unity Input settings
@@ -102,7 +102,7 @@ Reset Vehicle Key
 ##### External inputs
 
 Explicitly impose the inputs, overriding the values received from the standard Input: Throttle,
-reverse throttle, brake, handbrake, steer, clutch, ignition.
+reverse throttle, brake, handbrake, steer, clutch, ignition key.
 
 Useful for debug or fine-testing purposes in the Editor. Can also be used for modifying the input
 from scripting without having to deactivate the VPStandardInput component.
@@ -145,7 +145,7 @@ that the full brake pressure will be applied when reaching half of the pedal tra
 ##### Startup
 
 Ignition Key Position
-:	Where to set the ignition key on start.
+:	Where to set the ignition key on startup.
 
 Automatic Gear Position
 :	The position of the automatic gear lever on start.

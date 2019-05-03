@@ -63,7 +63,7 @@ float engineRpm = vehicle.data[Channel.Vehicle][VehicleData.EngineRpm];
 |AutomaticGear	| Automatic transmission mode <sup>1</sup> | gear mode | | 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_ <sup>1</sup>
 |GearShift		| Incremental gear shifting value <sup>2</sup> | gear increment | | Add +1 for gear up or -1 for gear down <sup>2</sup>
 |Retarder		| Retarder brake stick position <sup>3</sup> | retarder level | | 0 (off), 1, 2, 3, ...
-|Key			| Ignition key position | key position | | -1 = off, 0 = drive, 1 = ignite
+|Key			| Ignition key position | key position | | -1 = off, 0 = acc-on, 1 = start
 
 <sup>1</sup> Automatic transmission modes:
 :	- M (0): Manual: do not automatically engage gears. Use manual gear shifting.

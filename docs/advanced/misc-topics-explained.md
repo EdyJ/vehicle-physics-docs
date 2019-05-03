@@ -190,8 +190,8 @@ Two methods:
 	until the value `VehicleData.EngineStalled` (Vehicle channel) returns "0". Then send a "0" to
 	`InputData.Key`.
 
-	This procedure actually moves the ignition key to the ignite position. Once ignited (vehicle
-	is no longer stalled) the key is moved back to normal operation.
+	This procedure actually moves the ignition key to the Start position. Once started (vehicle
+	is no longer stalled) the key is moved back to the Acc-On position.
 
 #### How to configure the horsepower (HP)?
 

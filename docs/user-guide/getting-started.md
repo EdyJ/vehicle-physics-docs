@@ -13,7 +13,7 @@ play and walk through some example scenes so you could get started quickly. Load
 
 The vehicles in all these scenes typically begin with the engine off. For starting the engine:
 
-1. Press <kbd>K</kbd> for moving the ignition key from "Off" to "Drive" (check out the telemetry
+1. Press <kbd>K</kbd> for moving the ignition key from "Off" to "Acc-On" (check out the telemetry
 window)
 2. Press and hold <kbd>K</kbd> for moving the ignition key to "Start" and actually start the engine.
 
@@ -27,7 +27,7 @@ engine.
 
 Key(s)                              | Function          | Notes
 ------------------------------------|-------------------| ------------------------------------------
-<kbd>K</kbd> 						| Ignition&nbsp;key | Press to move from "Off" to "Drive". Press and Hold for "Start". <kbd>ctrl+K</kbd> moves the key back to "Off".
+<kbd>K</kbd> 						| Ignition&nbsp;key | Press to move from "Off" to "Acc-On". Press and Hold for "Start". <kbd>ctrl+K</kbd> moves the key back to "Off".
 <kbd>left</kbd><kbd>right</kbd>  	| Steering 			|
 <kbd>up</kbd> 						| Throttle 			|
 <kbd>down</kbd> 					| Brakes 			|
