@@ -12,6 +12,33 @@ Licensees may access the full development details via GIT revision logs (VPP sub
 
 <hr>
 
+#### May 2019
+
+- Improved the **Xbox input component** now providing customizable smooth steering.
+- Improved the **Custom Cameras** feature, now allowing several cameras to share the same activation key.
+- UI: **Ignition Key UI** for switching the engine on/off with mouse or touch. Added to the [demos](/about/demos).
+
+#### April 2019
+
+- **[New VPP Demos Released!](/about/demos)** Available for PC/Windows and Mac OS X.
+- New **Optimal gear shift calculation** feature. Computes the exact point where shifting up (or down) provides more acceleration than current gear. Used in the [Ascari Demo](/about/demos/#ascari-demo).
+- UI: Timer display component provides **sector times**.
+- UI: **Quick Start** pop up.
+- UI: Toolbar for the Telemetry Chart.
+- UI: **Gear Mode Selector** for automatic transmissions.
+
+#### March 2019
+
+- New **auto-shift in reverse gears** option, in both manual and automatic transmissions.
+- UI: **Driver Assists panel** showing the available assists and allowing to selectively disable them.
+
+#### February 2019
+
+- New **EnergyProvider** component that simulates energy consumption from vehicle subsystems such as power steering, alternator, hydraulic systems, etc.
+- UI: Simple UI for displaying the inputs received by the vehicle (throttle, brake, clutch, steering).
+- UI: **Procedurally generated gauges** for speed and rpms adapting to the specific ranges of each vehicle.
+- UI: **Generic dashboard** showing speed, rpm, stall lights, handbrake, warning sign.
+
 #### January 2019
 
 - New **Engine Curve Fitting Tool** providing a procedure for configuring the Engine curves based on real curve data. Unity menu > Tools > Vehicle Physics > Engine Curve Fit Tool.
