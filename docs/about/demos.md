@@ -66,3 +66,59 @@ Can you beat the 2:50 mark? My lap record at the time of writing this is 2:45.88
 **Credits:** The 3D model of the Ascari Resort Track is my own adaptation to Unity of a mod for
 Assetto Corsa developed by the AC forum member **_liquido_** a few years ago. [Full story here](https://assettocorsamods.net/threads/ascari-race-resort-ronda-spain.235/).
 
+## Steering Wheel Support
+
+Currently the demos support these steering wheel models:
+
+- Logitech G27
+- Logitech G29
+- Trustmaster T500RS
+
+If you have any other model and want it supported, you can greatly help me to support it by
+following these instructions:
+
+1. Ensure all the steering wheel parts are connected and enabled (wheel, shifter, pedals...)
+2. Gas and brake pedals should be configured to use "independent axes" or similar (instead of
+	"combined axis").
+3. Download and open the VPP Demo (any).
+4. Open the Input Config (devices icon at the toolbar):
+
+	![VPP - Steering Wheel Device debug window](/img/about/vpp-live-steering-wheel-device-info.png){: .img-medium .clickview }
+
+5. Select "Wheel". Your wheel should be initialized. Note down the information here: wheel model,
+	buttons, axes, and force feedback (ffb) motors.
+6. Click on the information. A new debug window appears at the top-right of your screen. This window
+	lively shows the raw values read from your wheel.
+
+#### Get information on the axes and buttons
+
+1. Move the steering wheel full-left to full-right and center. Note down which axis changes
+	(A0, A1, etc) and the values for left, right and center.
+2. Press and release each pedal. Note down which axis changes (A0, A1, etc) and the values for
+	fully pressed and fully released.
+3. Move each d-pad, POV, joystick or lever in your wheel. If any of the POVs change (P0, P1, etc)
+	note it down.
+4. All other controls should be mapped to buttons (BT). No need to note down these, as I should be
+	able to get them from the documentation of your wheel model.
+
+#### Get information on the Force Feedback
+
+1. Ensure that Mappings is configured as "Logitech G27" in the Input Config > Wheel section.
+2. Open the car setup (wrench icon), then configure these options:
+
+	![VPP - Input Config for force-feedback tests](/img/about/vpp-input-config-force-feedback-test.png){: .img-medium .clickview }
+
+	- Transmission = Automatic
+	- Coupling = Clutch
+	- Engine Stall = Off
+
+	The engine starts and the car begins moving slowly.
+
+3. Move the steering wheel gently and feel the force feedback. Note down if the direction of the
+	force feedback is correct (tries to re-center the wheel) or opposite (tries to move the wheel
+	further in the current direction).
+
+---
+
+Send me all the information you've noted down to [edy@vehiclephysics.com](mailto:edy@vehiclephysics.com)
+and I'll add support to your wheel in the next version. Thanks!!
