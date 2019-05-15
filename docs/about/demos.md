@@ -70,9 +70,8 @@ Assetto Corsa developed by the AC forum member **_liquido_** a few years ago. [F
 
 Currently the demos support these steering wheel models:
 
-- Logitech G27
-- Logitech G29
-- Trustmaster T500RS
+- Logitech G27 / G29
+- Thrustmaster T300 / T500 / TX (maybe other models supported as well)
 
 If you have any other model and want it supported, you can greatly help me to support it by
 following these instructions:
@@ -80,7 +79,7 @@ following these instructions:
 1. Ensure all the steering wheel parts are connected and enabled (wheel, shifter, pedals...)
 2. Gas and brake pedals should be configured to use "independent axes" or similar (instead of
 	"combined axis").
-3. Download and open the VPP Demo (any).
+3. Download and open the **JPickup Demo**.
 4. Open the Input Config (devices icon at the toolbar):
 
 	![VPP - Steering Wheel Device debug window](/img/about/vpp-live-steering-wheel-device-info.png){: .img-medium .clickview }
@@ -103,7 +102,7 @@ following these instructions:
 
 #### Get information on the Force Feedback
 
-1. Ensure that Mappings is configured as "Logitech G27" in the Input Config > Wheel section.
+1. Ensure that Mapping is configured as "Logitech G27" in the Input Config > Wheel section.
 2. Open the car setup (wrench icon), then configure these options:
 
 	![VPP - Input Config for force-feedback tests](/img/about/vpp-input-config-force-feedback-test.png){: .img-medium .clickview }
