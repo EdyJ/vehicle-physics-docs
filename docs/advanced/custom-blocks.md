@@ -109,9 +109,17 @@ public class SimpleGear : Block
 
 ## Example: simple differential
 
-Note: This differential implementation assumes the same inertia `I` in both outputs. It won't
+**Note:** This differential implementation assumes the same inertia `I` in both outputs. It won't
 work if the outputs have different inertias. The [Differential](/blocks/differential/) block in VPP
 supports any inertias in its outputs.
+
+The design of the modular driveline in VPP allows a straightforward translation of the state and
+torque formulas of an open differential for outputs of identical inertia:
+
+$$L_{in} = L_{out1} + L_{out2} $$
+
+$$T_{out1} = \frac{1}{2} T_{in} $$
+$$T_{out2} = \frac{1}{2} T_{in} $$
 
 **SimpleOpenDifferential.cs**
 ```
