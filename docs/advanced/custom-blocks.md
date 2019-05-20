@@ -28,7 +28,7 @@ Inertial Block
 
 	The [Engine block]/blocks/engine) is an example of inertial block.
 
-## Example source code
+## Example: simple gear
 
 This code implements a simple gear block (SimpleGear) that constrains the input and output to
 corotate with the given ratio.
@@ -107,3 +107,51 @@ public class SimpleGear : Block
 	}
 ```
 
+## Example: simple differential
+
+Note: This differential implementation assumes the same inertia `I` in both outputs. It won't
+work if the outputs have different inertias. The [Differential](/blocks/differential/) block in VPP
+supports any inertias in its outputs.
+
+**SimpleOpenDifferential.cs**
+```
+using VehiclePhysics;
+
+public class SimpleOpenDifferential : Block
+	{
+	protected override void Initialize ()
+		{
+		// Declare this block to have a single input and a two outputs
+
+		SetInputs(1);
+		SetOutputs(2);
+		}
+
+	public override bool CheckConnections ()
+		{
+		// The input and both outputs are required to be connected to other blocks
+
+		return inputs[0] != null && outputs[0] != null && outputs[1] != null;
+		}
+
+	public override void ComputeStateUpstream ()
+		{
+		// The state of the input if the sum of the states of the outputs.
+		//
+		// NOTE: Inertias must be identical for this implementation to work. The calculation
+		// for different inertias is more complex (see the Differential block in VPP).
+
+		inputs[0].L = output[0].L + output[1].L;
+		inputs[0].I = output[0].I + output[1].I;
+		inputs[0].Tr = output[0].Tr + output[1].Tr;
+		}
+
+	public override void EvaluateTorqueDownstream ()
+		{
+		// An open differential splits the input torque 50-50 between both outputs
+
+		outputs[0].outTd = inputs[0].outTd * 0.5f;
+		outputs[1].outTd = inputs[0].outTd * 0.5f;
+		}
+	}
+```
