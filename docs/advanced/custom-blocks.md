@@ -144,7 +144,7 @@ public class SimpleOpenDifferential : Block
 
 	public override void ComputeStateUpstream ()
 		{
-		// The state of the input if the sum of the states of the outputs.
+		// The state of the input is the sum of the states of the outputs.
 		//
 		// NOTE: Inertias must be identical for this implementation to work. The calculation
 		// for different inertias is more complex (see the Differential block in VPP).
