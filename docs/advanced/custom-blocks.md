@@ -116,10 +116,10 @@ supports any inertias in its outputs.
 The design of the modular driveline in VPP allows a straightforward translation of the state and
 torque formulas of an open differential for outputs of identical inertia:
 
-$$L_{in} = L_{out1} + L_{out2} $$
+$$L_{in} = L_{out_1} + L_{out_2} $$
 
-$$T_{out1} = \frac{1}{2} T_{in} $$
-$$T_{out2} = \frac{1}{2} T_{in} $$
+$$T_{out_1} = \frac{1}{2} T_{in} $$
+$$T_{out_2} = \frac{1}{2} T_{in} $$
 
 **SimpleOpenDifferential.cs**
 ```
