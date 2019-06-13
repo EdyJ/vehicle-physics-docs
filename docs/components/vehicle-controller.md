@@ -147,10 +147,9 @@ Tire friction model and settings for the wheels of the vehicle.
 
 Details: [Tire friction](/blocks/tires)
 
-### Driveline
+### Driveline and differential(s)
 
-Configures the driven axles and the elements makes the connections among them and with the drive
-torque upstream.
+Configures the driven axles and the elements that connect them with the drive torque upstream.
 
 ![VP Vehicle Controller driveline](/img/blocks/vpp-driveline-inspector.png){: .img-small .clickview }
 
