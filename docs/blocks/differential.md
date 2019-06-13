@@ -30,7 +30,8 @@ A spool forcing both outputs to rotate at the same rate, with all the side effec
 
 ![VPP Open Differential](/img/blocks/vpp-differential-locked.png)
 
-Locked differentials are typically used in drifting.
+Locked differentials are typically used in drifting. In normal situations the car will typically
+refuse to steer.
 
 #### Viscous
 
@@ -114,16 +115,16 @@ For example, a 4:1 Torsen differential can be configured by setting 0 preload an
 
 The best way is using the _wheel spin_ chart of the [Performance Display](/components/vehicle-telemetry/#vpperformancedisplay)
 component. It shows the wheel circumference speed for each wheel. You can see the difference of
-speed between left and right drive wheels, and how the differential affects it in the different
-situations.
+speed between left and right drive wheels, and compare how the differential affects it in the
+different situations.
 
 Here's the chart for an **open differential** when heavily accelerating after a corner. The inner
 wheel losses traction and reduces the acceleration:
 
 ![VPP Open Differential Effect](/img/blocks/vpp-differential-effects-open.png)
 
-The same situation with a the default **clutch pack differential**. A minimum slip causes the
-differential to lock and allows both drive wheels to gain traction at the same time, providing
+The same situation with the default **clutch pack differential**. After a minimum slip the
+differential locks and allows both drive wheels to gain traction at the same time, providing
 better acceleration:
 
 ![VPP Open Differential Effect](/img/blocks/vpp-differential-effects-locking.png)
