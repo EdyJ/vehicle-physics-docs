@@ -1,5 +1,8 @@
 # Brakes
 
+The brakes section configures the brakes of the vehicle in terms of maximum brake torque and brake
+balance.
+
 ![VP Vehicle Controller brakes](/img/blocks/vpp-brakes-inspector.png){: .clickview }
 
 Max Brake Torque
@@ -25,6 +28,9 @@ Handbrake Axle
 	braked.
 
 ### Anti-lock braking (ABS)
+
+The Anti-lock Braking System (ABS) reduces the brake pressure to a given ratio preventing wheel
+lock. This typically reduces the braking distance and allows steering on emergency braking.
 
 ![Anti-lock braking (ABS) inspector](/img/blocks/vpp-brakes-abs-inspector.png){: .clickview }
 

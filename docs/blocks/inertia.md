@@ -1,10 +1,10 @@
 # Inertia helper
 
-![Inertia inspector and parametric gizmo](/img/blocks/vpp-inertia-inspector-parametric-gizmo.png){: .clickview }
-
 The inertia defines the distribution of mass in the vehicle. Inertia plays a critical role in the
 handling (understeer / oversteer) of the vehicle. The Inertia helper provides handy options for
 configuring the vehicle's inertia easily.
+
+![Inertia inspector and parametric gizmo](/img/blocks/vpp-inertia-inspector-parametric-gizmo.png){: .clickview }
 
 In runtime the inspector shows the Inertia Tensor values actually applied to the vehicle:
 
