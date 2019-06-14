@@ -12,6 +12,13 @@ Licensees may access the full development details via GIT revision logs (VPP sub
 
 <hr>
 
+#### June 2019
+
+- DirectInput and XBoxInput can now handle **multiple devices** at the same time.
+- New **diesel-electric** vehicle controller.
+- New **diesel-hydraulic** vehicle controller.
+- New **excavator loader** control script.
+
 #### May 2019
 
 - Improved the **Xbox input component** now providing customizable smooth steering.
