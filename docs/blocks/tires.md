@@ -118,6 +118,9 @@ slide sideways.
 
 ### Steering, friction, lateral slip and lateral forces
 
+Here's a step-by-step explanation of the different factors involved on lateral tire forces and
+cornering rate:
+
 ![Vehicle Physics Pro Telemetry](/img/blocks/vehicle-physics-pro-steering-telemetry-annotated.png)
 
 - Steering angle is 29 - 22 degrees for the front wheels **(1)**
@@ -154,14 +157,14 @@ means they are developing the minimum friction (a coefficient of friction of ~0.
 
 ### Slip ratio and slip angle
 
+There are lots of papers, docs, etc. about tires and slip ratio / slip angle. _"Don't reinvent the
+wheel"_ is a good lesson, but this time I strongly believe that the wheel needed to be reinvented
+for most racing games and vehicle simulations.
+
 **The fact** is that slip ratio and slip angle concepts are *not* required at all for simulating
 tires and vehicles. Vehicle Physics Pro uses a tire simulation model that doesn't use these concepts
 at all, yet providing fully accurate and realistic results. I've conceived a tire model where all
 frictions, forces and torques can be calculated in a much easier and consistent way.
-
-There are lots of papers, docs, etc. about tires and slip ratio / slip angle. _"Don't reinvent the
-wheel"_ is a good lesson, but this time I strongly believe that the wheel needed to be reinvented
-for most racing games and vehicle simulations.
 
 Here's a quote from my article [Facts and Myths of the Pacejka curves](http://www.edy.es/dev/2011/12/facts-and-myths-on-the-pacejka-curves/),
 which is indeed based on Brian Beckman's thoughts about the Magic Formula not accounting for any
