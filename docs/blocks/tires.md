@@ -1,12 +1,12 @@
 # Tire settings
 
-The Tires inspector defines the tire friction curve for the wheels in the vehicle.
+The Tires section defines the tire friction curve for the wheels in the vehicle.
 
 ![Vehicle Physics Pro tires inspector](/img/blocks/vpp-tires-inspector.png){: .clickview }
 
-The horizontal axis is slip in m/s (each vertical green line is 1 m/s). The slip velocity is the
-velocity the surface of the tire slides with respect to the ground. The vertical axis is the
-coefficient of friction for a given slip velocity.
+The horizontal axis is slip velocity in m/s (each vertical green line is 1 m/s), that is, the wheel
+speed difference at the contact patch. The vertical axis is the coefficient of friction for each
+slip velocity.
 
 The coefficient of friction is a function of the actual slip velocity. A small slip velocity
 increases the coefficient of friction up to the tire's peak friction. But if the slip gets
@@ -45,18 +45,29 @@ Standard Pacejka sets are based on _slip ratio_ and _slip angle_ while friction 
 based in _slip velocity_. Thus, standard Pacejka coefficients are not directly compatible with VPP.
 Still, existing Pacejka sets may be adapted to VPP following this procedure:
 
-1. Define a velocity $V$ for the vehicle. Ideally, it should be the same velocity that was used for
-	extracting the original Pacejka coefficients out of the real tire. If this is not available,
-	I'd use some representative velocity from the speed range the tire is designed to.
+1. Define a velocity $V$ for the vehicle and a vertical load $N$. Ideally, these should be the same
+	values used for extracting the original Pacejka coefficients out of the real tire. If they are
+	not available, use some representative velocity and load from the ranges the tire is designed to
+	operate at.
 
-2. Use the Pacejka coefficients to draw the normalized tire friction curve, but based on $\omega R_e - V$
-	(_longitudinal slip velocity_) or $V_x$ (_lateral slip velocity_) as horizontal axis, instead of
-	_slip ratio_ ($\sigma$) and _slip angle_ ($\alpha$) respectively. The equivalences are:
+2. Use some math software (Mathematica, Matlab) to draw the normalized tire friction curve $\mu(x, V, N) = \frac{P(s, N)}{N}$.
+
+	$P(s, N)$ is the force computed out of the Pacejka set being $N$ is the vertical load and
+	$s$ the _slip ratio_ ($\sigma$) for the longitudinal Pacejka version, or the _slip angle_ ($\alpha$)
+	for the lateral version:
 
 	\begin{align}
-	\sigma &= \frac{\omega R_e - V}{\vert{V}\vert} \\
-	\alpha &= \tan^{-1} (\frac{V_x}{V_y})
+	\sigma &= \frac{x - V}{\vert{V}\vert} \\
+	\alpha &= \tan^{-1} (\frac{x}{V})
 	\end{align}
+
+	where $x$ is horizontal value in the graph. So the longitudinal version would be:
+
+	$$\mu(x, V, N) = \frac{F(\frac{x - V}{\vert{V}\vert}, N)}{N}$$
+
+	And the lateral version:
+
+	$$\mu(x, V, N) = \frac{F(\tan^{-1} (\frac{x}{V}), N)}{N}$$
 
 3. Configure the tire friction in VPP to match the resulting curve as closely as possible. You may
 	use either a Pacejka model or any of the other modes (i.e. Parametric), which are typically
