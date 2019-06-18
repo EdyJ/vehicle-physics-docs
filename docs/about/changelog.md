@@ -18,6 +18,7 @@ Licensees may access the full development details via GIT revision logs (VPP sub
 - New **diesel-electric** vehicle controller.
 - New **diesel-hydraulic** vehicle controller.
 - New **excavator loader** control script.
+- New component **VPTireFrictionMultiplier** for applying a friction ratio to the tires.
 
 #### May 2019
 

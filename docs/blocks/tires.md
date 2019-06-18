@@ -178,7 +178,7 @@ variation of the force with speed (reference: [The Physics Of Racing, chapter 22
 Also, the widely used slip ratio formulas fail to describe tire grip at very different speeds. At
 10 m/s a slip ratio of 10% represents 1 m/s of speed difference at the contact patch. But at 40 m/s
 the same slip ratio represents 4 m/s of speed difference at the contact patch. Intuitively, this
-slip ratio of 10% cannot result in the same tire grip at both situations.
+slip ratio of 10% cannot result in the same tire grip in both situations.
 
 In my opinion the slip ratio and slip angle concepts belong to the automotive and tire industries.
 They are used to make studies, write standards, specifications, etc. but they are hard to fit into
