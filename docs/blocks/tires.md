@@ -194,9 +194,11 @@ provide the specifications and measures on that tire using these concepts and st
 Even so, these standards are not applicable to many common situations such as low speeds and steady
 states. These situations must still be "faked" and threated separately in the simulation. Racing
 games are mostly in the "high speed" mode, so they don't care. But many common non-racing situations
-produce incoherent results using the slip ratio and slip angle concepts. The tire model in Vehicle
-Physics Pro provides perfectly coherent behaviors at any speed, with perfectly defined continuous
-transitions between any state.
+produce incoherent results using the slip ratio and slip angle concepts.
+
+&fa-info-circle:lg; The tire model developed for Vehicle Physics Pro provides perfectly coherent behaviors at any speed,
+with perfectly defined continuous transitions between any state.
+{: .alert .alert-info }
 
 ### Converting an existing Pacejka set to VPP
 
@@ -209,10 +211,12 @@ Still, existing Pacejka sets may be adapted to VPP following this procedure:
 	not available, use some representative velocity and load from the ranges the tire is designed to
 	operate at.
 
-2. Use some math software (Mathematica, Matlab) to draw the normalized tire friction curve $\mu(x, V, N) = \frac{P(s, N)}{N}$.
+2. Use some math software (Mathematica, Matlab) to draw the normalized tire friction curve:
 
-	$P(s, N)$ is the force computed out of the Pacejka set being $N$ is the vertical load and
-	$s$ the _slip ratio_ ($\sigma$) for the longitudinal Pacejka version, or the _slip angle_ ($\alpha$)
+	$$\mu(x, V, N) = \frac{P(s, N)}{N}$$
+
+	$P(s, N)$ is the force computed out of the Pacejka set being $N$ the vertical load, and $s$ the
+	_slip ratio_ ($\sigma$) for the longitudinal Pacejka version, or the _slip angle_ ($\alpha$)
 	for the lateral version:
 
 	\begin{align}
