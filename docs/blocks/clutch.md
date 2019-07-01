@@ -66,10 +66,13 @@ when brake is released.
 You can check out the actual lock ratio of the transmission at the telemetry or at the Input Monitor
 UI:
 
-![VPP Clutch Lock Telemetry](/img/blocks/vpp-clutch-lock-telemetry.png){: .img-medium .clickview }
+![VPP Clutch Lock Telemetry](/img/blocks/vpp-clutch-lock-telemetry.png)
+
+The percent value is the **transmission lock ratio**, from 0% (disengaged) to 100% (fully locked).
+
 ![VPP Clutch Lock Monitor](/img/blocks/vpp-clutch-lock-monitor.png)
 
-The thin blue bar in the Input Monitor UI shows the **transmission slip** from 0% (no slip,
+The thin blue bar in the Input Monitor UI shows the **transmission slip ratio** from 0% (no slip,
 transmission coupled) to 100% (full slip, transmission de-coupled).
 
 The wide blue bar shows the position of the clutch pedal. The picture above shows a Torque Converter,
