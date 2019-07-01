@@ -69,12 +69,11 @@ UI:
 ![VPP Clutch Lock Telemetry](/img/blocks/vpp-clutch-lock-telemetry.png){: .img-medium .clickview }
 ![VPP Clutch Lock Monitor](/img/blocks/vpp-clutch-lock-monitor.png)
 
-The thin blue bar in the Input Monitor UI shows the transmission disengagement: the bar is smaller
-with more coupling, and disappears when the transmission is fully coupled with the engine (100% lock).
-At the top position the transmission is fully disengaged (%0 lock).
+The thin blue bar in the Input Monitor UI shows the **transmission slip** from 0% (no slip,
+transmission coupled) to 100% (full slip, transmission de-coupled).
 
-The wide blue bar shows the position of the clutch pedal. The picture above shows a Torque Coverter,
-so the transmission lock depends on the rpms instead of the clutch pedal.
+The wide blue bar shows the position of the clutch pedal. The picture above shows a Torque Converter,
+so the transmission slip depends on the rpm instead of the clutch pedal.
 
 # Scripting reference
 
