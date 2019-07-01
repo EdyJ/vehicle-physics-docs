@@ -68,7 +68,8 @@ UI:
 
 ![VPP Clutch Lock Telemetry](/img/blocks/vpp-clutch-lock-telemetry.png)
 
-The percent value is the **transmission lock ratio**, from 0% (disengaged) to 100% (fully locked).
+The percent value in the Telemetry is the **transmission lock ratio**, from 0% (disengaged) to 100%
+(fully locked).
 
 ![VPP Clutch Lock Monitor](/img/blocks/vpp-clutch-lock-monitor.png)
 
