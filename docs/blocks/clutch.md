@@ -27,9 +27,9 @@ between the clutch discs.
 
 The supported torque transfer value is reduced proportionally to the clutch pedal input:
 
-- When pedal input is 0 the clutch supports the configured _Max Torque Transfer_ (fully engaged)
+- When pedal input is 0.0 the clutch supports the configured _Max Torque Transfer_ (fully engaged)
 - When pedal input is 0.5 the clutch allows _Max Torque Transfer_ * 0.5 (half engaged)
-- when pedal input is 0 the clutch don't allow any torque transfer (fully disengaged)
+- When pedal input is 1.0 the clutch don't allow any torque transfer (fully disengaged)
 
 If engine or transmission demand more torque than the supported amount then the clutch slips and
 engine and transmission rpms won't match, even in "fully engaged" state.
