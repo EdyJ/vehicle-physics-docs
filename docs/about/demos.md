@@ -77,16 +77,17 @@ If you have any other model and want it supported, you can greatly help me to su
 following these instructions:
 
 1. Ensure all the steering wheel parts are connected and enabled (wheel, shifter, pedals...)
-2. Gas and brake pedals should be configured to use "independent axes" or similar (instead of
-	"combined axis").
-3. Download and open the **JPickup Demo**.
-4. Open the Input Config (devices icon at the toolbar):
+2. The configuration should be as standard and default as possible in the device's control panel.
+3. Disable any "combined pedals" option or similar in the devicel's control panel. Gas and brake
+	pedals should be configured to use an independent axis each.
+4. Download and open the **JPickup Demo**.
+5. Open the **Input Config** section (_devices_ icon at the toolbar):
 
 	![VPP - Steering Wheel Device debug window](/img/about/vpp-live-steering-wheel-device-info.png){: .img-medium .clickview }
 
-5. Select "Wheel". Your wheel should be initialized. Note down the information here: wheel model,
+6. Select **Wheel**. Your wheel should be initialized. Note down the information here: wheel model,
 	buttons, axes, and force feedback (ffb) motors.
-6. Click on the information. A new debug window appears at the top-right of your screen. This window
+7. Click on the information. A new debug window appears at the top-right of your screen. This window
 	lively shows the raw values read from your wheel.
 
 #### Get information on the axes and buttons
@@ -102,14 +103,15 @@ following these instructions:
 
 #### Get information on the Force Feedback
 
-1. Ensure that Mapping is configured as "Logitech G27" in the Input Config > Wheel section.
-2. Open the car setup (wrench icon), then configure these options:
-
-	![VPP - Input Config for force-feedback tests](/img/about/vpp-input-config-force-feedback-test.png){: .img-medium .clickview }
+1. Ensure that **Mappings** is configured as **Logitech G27** in the **Input Config > Wheel**
+	section.
+2. Open the **Car Setup** section (_wrench_ icon), then configure these options:
 
 	- Transmission = Automatic
 	- Coupling = Clutch
 	- Engine Stall = Off
+
+	![VPP - Input Config for force-feedback tests](/img/about/vpp-input-config-force-feedback-test.png){: .img-medium .clickview }
 
 	The engine starts and the car begins moving slowly.
 
