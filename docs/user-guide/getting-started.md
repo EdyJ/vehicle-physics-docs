@@ -141,22 +141,34 @@ These are the actual folders for the Vehicle Physics Pro project:
 
 ![Vehicle Physics Pro project folders](/img/user-guide/vpp-project-folders.png)
 
-The vehicle physics scripts are inside the **Vehicle Physics core** folder. The main script
-to look at is the Vehicle Controller component at Components\VPVehicleController.cs. This component
-inherits from `VehiclePhysics.VehicleBase` and overrides its virtual methods for implementing the
-vehicle's internals using the available blocks: ([engine](../blocks/engine.md), [gearbox](../blocks/gearbox.md),
-[differential](../blocks/differential.md)...). `VehicleBase` at Core\VehicleBase.cs manages the
-integration solver and the wheels, which computes the the final tire forces.
+The VPP scripts are inside the **Vehicle Physics Core** folder. The vehicle dynamics model is
+implemented in the "Base" folder:
 
-Vehicles are internally modeled as a graph of connected blocks that derive from `VehiclePhysics.Block`.
-Each block can receive input torques and produce output torques. Wheels are blocks that receive
-torques at their inputs. Motors are blocks that produce torques at their outputs. Other blocks have
-torque inputs and torque outputs. This allows to simulate any kind of internal configuration of the
-vehicle by connecting blocks in any combination.
+- [VehicleBase](/advanced/vehiclebase-reference) is a standard MonoBehaviour that orchestrates all
+	the elements involved in the vehicle dynamics. All vehicle controllers inherit from this
+	component. The standard vehicle controller is [VPVehicleController](/components/vehicle-controller)
+	in the Components folder.
+- The wheel and tire model are implemented in the [Wheel and TireFriction](/blocks/tires) classes.
+	The component [VPWheelCollider](/components/wheel-collider) (Components folder) is the interface
+	with Unity's WheelCollider and also handles the visual elements of the wheel.
+- [Block](/advanced/block-reference) implements a functional unit in the vehicle's powertrain, from
+	the engine to the wheels. Every internal vehicle part inherits is from Block (Wheel, [Engine](/blocks/engine),
+	[Differential](/blocks/differential), etc).
+- [Solver](/advanced/misc-topics-explained/#solver-numeric-integration) is the dynamics solver that
+	computes the states of all the blocks. Euler and substeps are implemented here.
+- [DataBus](/advanced/databus-reference) defines the protocol to exchange data from-to the vehicle
+	(inputs, engine data such as rpm, torque, etc).
+- [GroundMaterial](/components/ground-materials/) defines the ground materials and the properties of
+	the tire-ground contact. Includes [GroundMaterialManagerBase](/components/ground-materials/#groundmaterialcs),
+	a MonoBehavior that is the base class for all the ground material managers. A simple ground
+	material manager component is provided (VPGroundMaterialManager, Components/Ground Materials
+	folder). Custom ground material managers may be easily implemented.
+- Gravity is a wrapper for Physics.gravity. Ensures vehicles use gravity properly, including gravity
+	forces in any direction.
+- [VehicleBehaviour](/advanced/vehiclebehaviour-reference) is a MonoBehaviour used as base class for
+	vehicle add-ons. VehicleBehaviour is aware of the vehicle it belongs to (`vehicle` property) so
+	it  handles initialization, finalization and other states of the vehicle properly.
 
-Vehicle blocks are created, initialized and connected within the `VPVehicleController.cs`
-script, `OnInitialize` method. Check out the comments in the file `VehicleBase.cs` for indications
-on how the vehicles are implemented and simulated by overriding the virtual methods.
 
 !!! info "&fa-info-circle; Some useful pages"
 
