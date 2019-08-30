@@ -12,9 +12,10 @@ All demos include:
 	- Detailed live telemetry data.
 	- Performance chart with analysis tool.
 	- Support for keyboard, XBox gamepad and several steering wheel controllers with force feedback.
+	- Support for motion platforms (D-BOX and SimTools 2.0).
 	- Driver assists and steering assist.
 	- Multiple camera modes (<kbd>C</kbd> key)
-	- Complete in-game help. Check it out!
+	- Complete in-game help.
 
 &fa-warning:lg; **Note:** Xbox gamepad and steering wheel controllers are supported in the PC/Windows versions only.
 {: .alert .alert-warning }
@@ -27,9 +28,9 @@ All demos include:
 </div>
 
 <center>**Download Vehicle Physics Pro JPickup Demo<br>
-[PC/Windows&nbsp;(24&nbsp;MB)](https://www.edy.es/vehiclephysics/demos/2019-05-04-VPP-JPickup-Demo-PC-Windows.7z) | [Mac&nbsp;OS&nbsp;X&nbsp;(34&nbsp;MB)](https://www.edy.es/vehiclephysics/demos/2019-05-04-VPP-JPickup-Demo-Mac-OS-X.zip)**</center>
+[PC/Windows&nbsp;(29&nbsp;MB)](https://www.edy.es/vehiclephysics/demos/2019-08-29-VPP-JPickup-Demo-PC-Windows.7z) | [Mac&nbsp;OS&nbsp;X&nbsp;(34&nbsp;MB, old version)](https://www.edy.es/vehiclephysics/demos/2019-05-04-VPP-JPickup-Demo-Mac-OS-X.zip)**</center>
 
-The classic City scenery with the VPP-based JPickup truck. Includes a Setup dialog for configuring
+The reviewed City scenery with the VPP-based JPickup truck. Includes a Setup dialog for configuring
 the most typical features in a standard car:
 
 - All-Wheel-Drive (AWD) vs. Rear-Wheel-Drive (RWD)
@@ -49,7 +50,7 @@ The Setup dialog includes built-in help. Just move the mouse over an option to s
 </div>
 
 <center>**Download Vehicle Physics Pro Ascari Demo<br>
-[PC/Windows&nbsp;(67&nbsp;MB)](https://www.edy.es/vehiclephysics/demos/2019-05-04-VPP-Ascari-Demo-PC-Windows.7z) | [Mac&nbsp;OS&nbsp;X&nbsp;(87&nbsp;MB)](https://www.edy.es/vehiclephysics/demos/2019-05-04-VPP-Ascari-Demo-Mac-OS-X.zip)**</center>
+[PC/Windows&nbsp;(70&nbsp;MB)](https://www.edy.es/vehiclephysics/demos/2019-08-29-VPP-Ascari-Demo-PC-Windows.7z) | [Mac&nbsp;OS&nbsp;X&nbsp;(87&nbsp;MB, old version)](https://www.edy.es/vehiclephysics/demos/2019-05-04-VPP-Ascari-Demo-Mac-OS-X.zip)**</center>
 
 This is the demo I use to learn and memorize the key aspects of this awesome track in both day and
 night conditions. The car is a stock Volkswagen Golf. Not a racing car, not even a particularly
