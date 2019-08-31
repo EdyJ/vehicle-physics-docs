@@ -1,4 +1,4 @@
-# Vehicle Setup Guide
+# Vehicle Configuration Guide
 
 This guide assumes you have your vehicle working according to the [Creating a Vehicle](vehicle-creation.md)
 section.
@@ -16,9 +16,9 @@ _Paste Component Values_ options in the component's context menu.
 
 ### Mass
 
-Set the vehicle's mass in its Rigidbody component.
+Configure the vehicle's mass in its Rigidbody component.
 
-<picture>
+![Vehicle mass](/img/setup-guide/vpp-setup-rigidbody.png)
 
 This mass represents the total mass of the vehicle in driving conditions as if we put it on a scale,
 including driver, passengers, fuel, wheels, cargo, etc.
@@ -27,6 +27,8 @@ including driver, passengers, fuel, wheels, cargo, etc.
 
 Add a GameObject to the vehicle and name it **CoM**. Configure it in `VPVehicleController` >
 **Center Of Mass**.
+
+![Center Of Mass](/img/setup-guide/vpp-setup-com.png){: .clickview .img-medium }
 
 Longitudinal position of the CoM (Z):
 
@@ -57,7 +59,11 @@ new weight distribution. Typically:
 ### Inertia
 
 Inertia plays a critical role in the handling of the vehicle. Configure the inertia in the section
-**Inertia** of `VPVehicleController`. As initial configuration:
+**Inertia** of `VPVehicleController`.
+
+![Inertia](/img/setup-guide/vpp-setup-inertia.png){: .clickview .img-medium }
+
+ As initial configuration:
 
 - Choose _Parametric_.
 - Configure the **X** and **Z** dimensions to roughly match the vehicle's dimensions (no matter if
@@ -73,6 +79,8 @@ More details and information on configuring the Inertia: [Inertia Helper](/block
 ### Suspension
 
 The suspension is configured per-wheel at the `VPWheelCollider` components.
+
+![Suspension](/img/setup-guide/vpp-setup-suspension.png){: .clickview .img-medium }
 
 The **suspension distance (m)** should be configured for matching the vehicle's specifications. If
 these aren't available, try to figure out the complete travel distance of the suspension based on
@@ -126,7 +134,7 @@ the result looks realistic for that vehicle.
 
 ### Engine
 
-[TO-DO: _Engine graphic_]
+![Engine](/img/setup-guide/vpp-setup-engine.png){: .clickview .img-medium }
 
 The engine torque curve is the sum of two curves: _ideal_ torque curve (dotted orange) and
 _friction_ torque curve (red). The result of adding those curves together is the _final_
@@ -176,29 +184,63 @@ If the engine **Can Stall** the parameters can be configured as well:
 	As happens in reality, a stalled engine can also be restarted inertially. That is leaving the
 	vehicle running down a slope in neutral, then engaging a gear and releasing the clutch.
 
+### Clutch
+
+There are two main types of clutch in VPP:
+
+**Disc Friction**
+:	A disc plate clutch typically used in cars with Manual transmission, where the clutch is
+	operated via clutch pedal.
+
+	![Disc Friction Clutch](/img/setup-guide/vpp-setup-clutch-disc.png)
+
+	**Max Torque Transfer** defines the maximum amount of torque that can pass trough the clutch. A
+	good value is around 1.5 times the maximum torque the engine can produce (_Max Torque_ in the
+	Engine's specifications).
+
+**Torque Converter**
+:	A fluid coupling device typically used in cars with Automatic transmission.
+
+	![Torque Converter](/img/setup-guide/vpp-setup-torque-converter.png)
+
+	**Lock Rpm** is the engine rpm where the torque converter produces a full lock. A good value
+	produces a lock ratio at idle around 6-10% (_Lock ratio @ idle_ in the inspector).
+
+!!! Info "&fa-thumbs-o-up; Pro-Tip: Automatic clutch in Manual Transmissions"
+	The Torque Converter may also be used with the Manual Transmission. This effectively provides an
+	automatic clutch in cars with manual transmission, which is great for the gameplay when the car
+	is controlled via keyboard, gamepad, or devices without clutch pedal.
+
 ### Transmission
 
-The transmission is configured in the **Gearbox** section. The **Transmission type** can be either
-manual or automatic:
+The transmission is configured in the **Gearbox** section.
 
-- **Manual**: gears are engaged individually, with a minimum interval among each change (**Gear
-	change time (s)**).
+![Transmission](/img/setup-guide/vpp-setup-transmission.png){: .clickview .img-small }
+
+The **Transmission type** can be either manual or automatic:
+
+![Transmission Types](/img/setup-guide/vpp-setup-transmission-types.png)
+
+**Manual**
+:	Gears are engaged individually, with a minimum interval among each change (**Gear change time
+	(s)**).
+
 	- **Auto shift** is also available in Manual transmissions.
-- **Automatic**: gears are progressively engaged, with a smooth transition in both torque and rpm
-	among each gear.
-	- Each gear change takes **Gear transition time (s)** to shift from a gear to another.
-	- A minimum of **Shift interval (s)** time is enforced before a new gear shift.
+	- Both clutch types (clutch and torque converter) are well supported in Manual Transmissions.
 
-[TO-DO: Pics of manual vs. automatic transmissions]
+**Automatic**
+:	Gears are progressively engaged, with a smooth transition in both torque and rpm among each gear.
+
+	- Each gear change takes **Gear transition time (s)** to shift from a gear to another.
+	- A minimum of **Shift interval (s)** time is enforced between two consecutive gear shifts.
+	- Automatic transmissions should use a Torque Converter instead of a standard clutch.
 
 The **Gear Ratios** define the power ratio that is applied to the engine torque. If the first gear
 ratio is 3.84, this means that the torque at the output of the gearbox in first gear will be 3.84
 times the torque applied by the engine. The rotational velocity will be 3.84 times slower as well.
 
 Any number of gears and ratios can be configured for both forward and reverse gears. Standard cars
-have 4 - 6 gears. Trucks can have 12, 18 or even more.
-
-[TO-DO: Pics of car vs gear ratios]
+typically have 4 - 6 gears. Trucks can have 12, 18 or even more.
 
 Requirements for gear ratios are:
 
@@ -214,33 +256,12 @@ only engages the 2nd gear if the vehicle's speed is above the **2nd gear min spe
 The Park mode is characteristic of the Automatic transmissions, but it can be simulated in Manual
 transmissions as well (**Allow Park mode**).
 
-### Clutch
-
-There are two main types of clutch in VPP:
-
-**Disc Friction**
-:	A disc plate clutch typically used in cars with Manual transmission, where the clutch is
-	operated via clutch pedal.
-
-	**Max Torque Transfer** defines the maximum amount of torque that can pass trough the clutch. A
-	good value is around 1.5 times the maximum torque the engine can produce (_Max Torque_ in the
-	Engine's specifications).
-
-**Torque Converter**
-:	A fluid coupling device typically used in cars with Automatic transmission.
-
-	**Lock Rpm** is the engine rpm where the torque converter produces a full lock. A good value
-	produces a lock ratio at idle around 6-10% (_Lock ratio @ idle_ in the inspector).
-
-!!! Info "&fa-thumbs-o-up; Pro-Tip"
-	The Torque Converter may also be used with the Manual Transmission. This provides an "Automatic
-	Clutch" in cars with manual transmission, which is great for the gameplay when the car is
-	controlled via keyboard, gamepad, or with devices without clutch pedal.
-
 ### Driveline
 
 Configure which axle(s) from the **Axles** section are driven and the transmission devices between
 the gearbox and the drive wheels.
+
+![Driveline](/img/setup-guide/vpp-setup-driveline.png)
 
 - **Drive Axles**: Single axle, two, three or four driven axles.
 - **Primary**, **Secondary**, etc define the role of each driven axle, if applicable.
@@ -267,10 +288,12 @@ until reaching a minimum value.
 
 Examples:
 
-Standard car (JPickup)
-Sports car (Sport Coupe)
-Truck (single wheel)
-Truck (twin wheel)
+<div class="imagegallery" sm="2" md="2" lg="4" style="display:none">
+	<img class="clickview" src="/img/setup-guide/vpp-setup-tires-standard.png"  alt="Standard Car (JPickup)">
+	<img class="clickview" src="/img/setup-guide/vpp-setup-tires-sport.png" alt="Sport Car (Sport Coupe)">
+	<img class="clickview" src="/img/setup-guide/vpp-setup-tires-truck-single.png" alt="Truck (single wheel)">
+	<img class="clickview" src="/img/setup-guide/vpp-setup-tires-truck-twin.png" alt="Truck (twin wheels)">
+</div>
 
 More information: [Tire block](/blocks/tires)
 
@@ -279,6 +302,8 @@ More information: [Tire block](/blocks/tires)
 Configure the **Maximum Steer Angle** for the steering wheels.
 
 Enabling **Ackerman** requires a reference Transform in the vehicle:
+
+![Steering and Ackerman](/img/setup-guide/vpp-setup-steering.png){: .clickview .img-medium }
 
 - Create a new child GameObject in the vehicle. Name it _Ackerman_.
 - Configure it as **Ackerman Reference** in the Steering section.
@@ -292,6 +317,8 @@ position of the Ackerman reference:
 - Configure _less Ackerman_ by moving the reference towards the rear of the vehicle.
 
 ### Brakes
+
+![Brakes](/img/setup-guide/vpp-setup-brakes.png)
 
 Good values for **Max Brake Torque** and **Brake Bias** (or _Brake Balance_) may be configured like
 this:
@@ -322,9 +349,11 @@ More information on brakes and ABS: [Brakes Helper](/blocks/brakes)
 Enable **Steering Limit** in **Sport** mode. The movement of the steering wheel is then constrained
 to the range where the front tires can apply the maximum sideways grip.
 
+![Steering Aids](/img/setup-guide/vpp-setup-steering-aids.png)
+
 Rear drive (RWD) cars may experience a lot of oversteering at this point because rear wheels are
 heavily pushing and losing sideways grip. You may want to enable Traction Control (TCS) immediately
-afterwards.
+afterwards (see below).
 
 You may also enable **Steering Help** and configure **Priority** to either _Go Straight_ or
 _Drifting_ for simplified control and enhanced gameplay with keyboard / gamepad.
@@ -346,8 +375,12 @@ Default parameters are a good starting point in all these.
 **Anti-Lock Braking (ABS)** reduces brake pressure dynamically to prevent wheels to lock while
 braking.
 
+![Anti-lock Braking System (ABS)](/img/setup-guide/vpp-setup-safety-abs.png)
+
 **Traction Control (TCS)** in **Sport** mode limits throttle when drive wheels slip to ensure they
 provide the maximum traction.
+
+![Traction Control System (TCS)](/img/setup-guide/vpp-setup-safety-tcs.png)
 
 !!! Info "&fa-thumbs-o-up; Hints for minimizing the activation of the TCS"
 	- Use the TCS _Custom Slip_ mode with a value slightly beyond the tire's peak slip.
@@ -357,8 +390,10 @@ provide the maximum traction.
 	- In manual transmissions with _Disc Friction_ clutch: reduce the _Torque Transfer_ value, so
 		the clutch is allowed to slip slightly when switching gears.
 
-**Stability Control (ECS)** selectively applies individual brakes to specific wheels to compensate
+**Stability Control (ESC)** selectively applies individual brakes to specific wheels to compensate
 understeering / oversteering.
+
+![Electronic Stability Control (ESC)](/img/setup-guide/vpp-setup-safety-esc.png)
 
 !!! Info "&fa-thumbs-o-up; Hints for minimizing the activation of the ECS"
 	- Configure the ECS parameters to better fit the behavior of the vehicle. Use the _Stability Control
@@ -372,6 +407,8 @@ understeering / oversteering.
 **Anti-Spin Regulation (ASR)** works at low speeds by applying brakes to one drive wheel when it
 loses traction, allowing the other wheel to gain more traction and pushing the vehicle.
 
+![Anti-Spin Regulation (ASR)](/img/setup-guide/vpp-setup-safety-asr.png)
+
 # Add-on components
 
 If all the above is configured correctly then the car should be reasonably drivable at this point.
@@ -379,6 +416,8 @@ That was configuring the main mechanical aspects and specifications of the vehic
 
 Next part is configuring the vehicle dynamics and the handling. Most of it is made with add-on
 components.
+
+![Dynamics add-on components](/img/setup-guide/vpp-setup-dynamics.png){: .clickview .img-medium }
 
 - Create a new child GameObject in the vehicle, name it _Dynamics_.
 - Add the add-on components to it (except the `VPAeroSurface` component, which require its own
@@ -388,11 +427,15 @@ components.
 	- Handling at low-mid speeds is mainly affected by suspension and inertia.
 	- Handling at high speeds is mainly affected by aerodynamics.
 
+	**You may apply real world techniques directly for configuring the car handling.**
+
 ### Rolling Friction
 
 `VPRollingFriction` produces drag in the wheels based on the force they're supporting. The default
 value is a good starting point. Rolling friction together with aerodynamics define the vehicle's top
 speed.
+
+![Rolling Friction](/img/setup-guide/vpp-setup-rolling-friction.png)
 
 ### Anti-roll bars
 
@@ -411,15 +454,17 @@ both axles. The decision depends on how you feel the handling of the car. As rul
 
 Note that this is valid for the suspension stiffness as well (spring and dampers).
 
+![Anti-roll bars](/img/setup-guide/vpp-setup-anti-roll-bars.png)
+
 ### Aerodynamics
+
+![Aerodynamics](/img/setup-guide/vpp-setup-aerodynamics.png){: .clickview .img-medium }
 
 - Create a child GameObject in the vehicle, name it _Aero_. I'd make it child of the _Dynamics_
 	GameObject, for consistency.
 - Longitudinal position: around the middle of the front-rear axles..
 - Vertical position: around the middle of an imaginary bounding box enclosing the vehicle.
 - Add the component `VPAeroSurface`.
-
-<pic>
 
 **Drag Coefficient**
 :	Produces aerodynamic drag based on the speed squared. This value has the most influence in the
@@ -449,9 +494,14 @@ _Aero_ GameObject:
 Check out the _Susp_ column in the Telemetry window (`VPTelemetry` component) to check out how the
 downforce is compressing the suspension, and which part of the car is being pushed further.
 
+!!! Warning "&fa-warning:lg; Warning: watch the suspension compression"
+	Ensure compression values as shown in the Telemetry never reach 1.0 at high speeds. If the extra
+	downforce caused by aerodynamics compresses the suspension beyond the limit then you need to
+	increase the suspension spring rate at the affected wheels.
+
 !!! Info "&fa-thumbs-o-up; Advanced Tip: Front and Rear aerodynamics"
-	If the car heavily relies on the aerodynamics (i.e. a formula racing car) then you may want to
-	configure front and rear aerodynamics independently.
+	If the car heavily relies on the aerodynamics (i.e. a formula racing car) then you may configure
+	front and rear aerodynamics independently.
 
 	- Use two GameObjects with an `VPAeroSurface` each.
 	- Put them at the longitudinal positions of the front axle and the rear axle, respectively.

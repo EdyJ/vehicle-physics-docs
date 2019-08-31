@@ -116,7 +116,7 @@ Center Of Mass
 
 ## Safety aids
 
-ABS, ECS, ASR, TCS
+ABS, ESC, ASR, TCS
 
 ## Special vehicles
 
