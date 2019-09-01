@@ -1,38 +1,33 @@
 # Licensing Vehicle Physics Pro
 
-&fa-info-circle:lg; Vehicle Physics Pro is at the final stage of development. **Early Access** is available now with the Professional
-and Enterprise Licenses. Feel free to contact me at [edy@vehiclephysics.com](mailto:edy@vehiclephysics.com){: .alert-link }
-if you have any questions.
-{: .alert .alert-success }
-
 ### Compare editions
-
-&fa-warning:lg; License versions, terms, content and pricing are subject to changes during the Early Access stage.
-{: .alert .alert-warning }
 
 | Features | <center>Free</center> | <center>Professional</center> | <center>Enterprise</center> |
 |----------|:----:|:--------:|:------------:|
 Full-featured [Vehicle Controller](/components/vehicle-controller) component			| &fa-check; | &fa-check; | &fa-check; |
 Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-check; |
 Simultaneous vehicles on each scene														|		1	| unlimited | unlimited |
-High-quality locations and vehicles																|	| &fa-check; | &fa-check; |
+High-quality locations and vehicles _(WIP)_														|	| &fa-check; | &fa-check; |
 Multiple ground materials with tire effects (marks, smoke....)									|	| &fa-check; | &fa-check; |
-Supports [Custom vehicles](/advanced/custom-vehicles/) and [components](/advanced/custom-blocks/) |	| &fa-check; | &fa-check; |
-Mobile touch-based controller																	|	| &fa-check; | &fa-check; |
+[Custom vehicles](/advanced/custom-vehicles/) and [components](/advanced/custom-blocks/) |	| &fa-check; | &fa-check; |
+Mobile touch-based controller _(WIP)_																|	| &fa-check; | &fa-check; |
 DirectInput controller with force feedback (Windows only)										|	| &fa-check; | &fa-check; |
 XBox controller support (360 and One) (Windows only)											|	| &fa-check; | &fa-check; |
-Email support																					|	| individual | team |
+Support by email																					|	| individual | team |
 Number of developers 				 																	| 	| 1 | up to 10 |
 Full source code included																				|	|	| &fa-check; |
-Advanced simulation features: multi-body vehicles, dynamic suspension, liquid cargo						|	|	| &fa-check; |
-Specialized vehicle support: motorbike, caterpillar, mining, excavators, hydraulic actuators			|	|	| &fa-check; |
+Advanced simulation features: multi-body vehicles, dynamic suspension, solid and liquid cargo			|	|	| &fa-check; |
+Specialized vehicle support: motorbike, caterpillar, mining, excavators, hydraulic actuators [Showcase](https://vehiclephysics.com/about/showcase/)	|	|	| &fa-check; |
 Autonomous vehicles framework: self-drive, automated tests, telemetry export to CSV						|	|	| &fa-check; |
-[D-Box Motion Cueing](http://www.d-box.com/training-and-simulation/) integration						|	|	| &fa-check; |
-Skype support 																							|	|	| &fa-check; |
+Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/), [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/)	|	|	| &fa-check; |
+Support by Skype 																						|	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
 **License Setup Fee**<br>_License is perpetual after this payment_									| **Free** | **€390** | **€4900** |
 **Support & updates via GIT repository**<br>_First year included in the license setup fee_				| _n/a_ | €90<br>/year | €990<br>/year |
 **PURCHASE LICENSE**		| _to be released_ | [**BUY NOW**](https://goo.gl/EoAe5v) | [**BUY NOW**](https://goo.gl/QzPdcu) |
+
+&fa-warning:lg; License versions, terms, content and pricing are subject to change without prior notice.
+{: .alert .alert-warning }
 
 #### Notes
 
@@ -42,8 +37,6 @@ May be licensed by companies with annual revenue / funds / budget in excess of �
 	VPP repositories by email. Please allow 24/48 hours for your order to be processed.
 - **Custom licenses available** for teams and companies with more than 10 developers. Please write
 	to [info@vehiclephysics.com](mailto:info@vehiclephysics.com) for a quote.
-- **Early Access:** the simulation kit is completed and ready to be used in production titles.
-	Example scenes, tutorials, and additional resources are being worked on.
 - Professional license may not be licensed by any commercial or non-commercial entity with annual
 	gross revenues, funds (including crowdfunding), or total annual budget in excess of €200,000.
 - Enterprise license is suitable for commercial entities with annual gross revenues (based on prior
