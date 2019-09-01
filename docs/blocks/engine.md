@@ -17,6 +17,8 @@ Check out the calculated values below the graph for the engine performance data.
 
 #### Inertia
 
+&fa-warning:lg; Work In Progress
+{: .alert .alert-warning }
 
 #### Engine friction
 

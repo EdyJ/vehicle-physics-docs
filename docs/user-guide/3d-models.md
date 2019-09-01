@@ -90,6 +90,9 @@ the driver's view. Add a VPHeadMotion component to a child gameobject of the veh
 
 ## Scenery
 
+&fa-warning:lg; Work In Progress
+{: .alert .alert-warning }
+
 TO-DO:
 
 Colliders, continuity, player safety.
