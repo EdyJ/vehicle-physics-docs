@@ -5,15 +5,16 @@
 | Features | <center>Community</center> | <center>Professional</center> | <center>Enterprise</center> |
 |----------|:----:|:--------:|:------------:|
 Full-featured [Vehicle Controller](/components/vehicle-controller) component			| &fa-check; | &fa-check; | &fa-check; |
-Essential [Telemetry](https://vehiclephysics.com/components/vehicle-telemetry/) component| &fa-check; | &fa-check; | &fa-check; |
+Essential components: [Telemetry](https://vehiclephysics.com/components/vehicle-telemetry/), Audio, Anti-roll bar, keyboard input, visual effects, rolling friction, aerodynamics | &fa-check; | &fa-check; | &fa-check; |
 Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-check; |
 Simultaneous vehicles in each scene														|		1	| unlimited | unlimited |
 Wheels per vehicle																		|		4	| 1-20		| 1-unlimited |
 Multiple ground materials with tire effects (tire marks, smoke...)								|	| &fa-check; | &fa-check; |
-Custom features via [add-on components](/advanced/custom-addons/)								|	| &fa-check; | &fa-check; |
+Additional vehicle features via [add-on components](/advanced/custom-addons/)					|	| &fa-check; | &fa-check; |
 [Custom vehicles](/advanced/custom-vehicles/)													|	| &fa-check; | &fa-check; |
 [Custom driveline parts](/advanced/custom-blocks/)												|	| &fa-check; | &fa-check; |
-Vehicle damage with deformation and handling effects											|	| &fa-check; | &fa-check; |
+Frame-exact replay system with pause, forward/reverse playback, flashback...					|	| &fa-check; | &fa-check; |
+Vehicle damage with mesh deformation and handling effects										|	| &fa-check; | &fa-check; |
 Advanced telemetry: real-time [performance charts](/components/vehicle-telemetry/#vpperformancedisplay), weight distribution |	| &fa-check; | &fa-check; |
 High-quality locations and vehicles _(WIP)_														|	| &fa-check; | &fa-check; |
 Mobile touch-based controller _(WIP)_															|	| &fa-check; | &fa-check; |
