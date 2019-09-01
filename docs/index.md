@@ -13,7 +13,7 @@ Quick links:
 
 Advanced AAA+ vehicle physics simulation
 
-:	Built around an accurate vehicle dynamics solver providing realistic results for all vehicle
+:	Built on top of an accurate vehicle dynamics solver providing realistic results for all vehicle
 	types and setups.
 
 Modular powertrain design
