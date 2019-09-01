@@ -12,6 +12,20 @@ Licensees may access the full development details via GIT revision logs (VPP sub
 
 <hr>
 
+#### August 2019 - SDK V6
+
+- **The City scenery** reworked, including a 5km (3mi) long, 6-lanes highway for high speed tests. [Twitter announcement](https://twitter.com/VehiclePhysics/status/1167067113128960001)
+- New **Sport Coupe Demo** scene featuring the new **Sport Coupe** car in the improved The City scenery.
+- New **Simtools** motion platform support. [Info on Simtools](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/)
+- VPP Demos now include support for **D-BOX** and **Simtools** motion platforms.
+- New **Spline** component with integration with Unity's Timeline. Includes path-follow components to drive the vehicles. [Tweet 1](https://twitter.com/VehiclePhysics/status/1162356846830739456) [Tweet 2](https://twitter.com/VehiclePhysics/status/1163446654151921664) [Youtube video](https://www.youtube.com/watch?v=gu9c6M7keqk)
+- New clutch type: **Torque Converter Limited**
+
+#### July 2019
+
+- VPP Demos: new Configuration dialog with camera settings (FoV, head motion).
+- New graphic chart component for monitoring the **kinetic energy** (add-on to VPPerformanceChart).
+
 #### June 2019
 
 - DirectInput and XBoxInput can now handle **multiple devices** at the same time.
@@ -47,13 +61,13 @@ Licensees may access the full development details via GIT revision logs (VPP sub
 - UI: **Procedurally generated gauges** for speed and rpms adapting to the specific ranges of each vehicle.
 - UI: **Generic dashboard** showing speed, rpm, stall lights, handbrake, warning sign.
 
-#### January 2019
+#### January 2019 - SDK V5
 
 - New **Engine Curve Fitting Tool** providing a procedure for configuring the Engine curves based on real curve data. Unity menu > Tools > Vehicle Physics > Engine Curve Fit Tool.
 - New **rpm limiter mode selector** in the engine. The new **Injection Limit** reduces the throttle to keep the rpms under or at the limit. Previously, only Injection Cut mode was available to cut throttle at small intervals.
 - **Compatibility Upgrade** that requires applying a patch (included) to the Unity project. [More information](https://www.edy.es/dev/2019/01/2019-01-25-compatibility-upgrade-for-vehicle-physics-pro/)
 
-#### November 2018
+#### November 2018 - SDK V4
 
 - New **VPAdvancedDamper** component for detailed bump / rebound damper settings.
 - Updated vehicle **JPickup v2**: The JPickup 3D model has been completely reworked (hierarchy, materials, spare parts...)
@@ -90,7 +104,7 @@ Licensees may access the full development details via GIT revision logs (VPP sub
 - New individual **Clutch block** that may be inserted in any point of the driveline (note that this block is not a replacement for the standard clutch, which is part of the Engine block).
 - New **block debugger** component that shows the state values of each block in the driveline.
 
-#### April 2018
+#### April 2018 - SDK V3
 
 - New **snapshot save / restore** feature. Allows to save the full state of the vehicle and completely restore it later. Very useful on automated tests.
 - New engine type: **Synchronous Drive**. Simulates a synchronous electric motor that enforces a specific RPMs in the output applying up to a given amount of torque.
@@ -109,7 +123,7 @@ Licensees may access the full development details via GIT revision logs (VPP sub
 - New **minimal build mode** keeping the essential vehicle features only.
 - Unity menu integration (Component > Vehicle Physics).
 
-#### November 2017
+#### November 2017 - SDK V2
 
 - Major reorganization of files and folders
 - New **driveline helper** script for easily building common drivelines.
