@@ -2,23 +2,32 @@
 
 ### Compare editions
 
-| Features | <center>Free</center> | <center>Professional</center> | <center>Enterprise</center> |
+| Features | <center>Community</center> | <center>Professional</center> | <center>Enterprise</center> |
 |----------|:----:|:--------:|:------------:|
 Full-featured [Vehicle Controller](/components/vehicle-controller) component			| &fa-check; | &fa-check; | &fa-check; |
+Essential [Telemetry](https://vehiclephysics.com/components/vehicle-telemetry/) component| &fa-check; | &fa-check; | &fa-check; |
 Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-check; |
-Simultaneous vehicles on each scene														|		1	| unlimited | unlimited |
+Simultaneous vehicles in each scene														|		1	| unlimited | unlimited |
+Wheels per vehicle																		|		4	| 1-20		| 1-unlimited |
+Multiple ground materials with tire effects (tire marks, smoke...)								|	| &fa-check; | &fa-check; |
+Custom features via [add-on components](/advanced/custom-addons/)								|	| &fa-check; | &fa-check; |
+[Custom vehicles](/advanced/custom-vehicles/)													|	| &fa-check; | &fa-check; |
+[Custom driveline parts](/advanced/custom-blocks/)												|	| &fa-check; | &fa-check; |
+Vehicle damage with deformation and handling effects											|	| &fa-check; | &fa-check; |
+Advanced telemetry: real-time [performance charts](/components/vehicle-telemetry/#vpperformancedisplay), weight distribution |	| &fa-check; | &fa-check; |
 High-quality locations and vehicles _(WIP)_														|	| &fa-check; | &fa-check; |
-Multiple ground materials with tire effects (marks, smoke....)									|	| &fa-check; | &fa-check; |
-[Custom vehicles](/advanced/custom-vehicles/) and [components](/advanced/custom-blocks/) |	| &fa-check; | &fa-check; |
-Mobile touch-based controller _(WIP)_																|	| &fa-check; | &fa-check; |
-DirectInput controller with force feedback (Windows only)										|	| &fa-check; | &fa-check; |
-XBox controller support (360 and One) (Windows only)											|	| &fa-check; | &fa-check; |
+Mobile touch-based controller _(WIP)_															|	| &fa-check; | &fa-check; |
+DirectInput controller with force feedback _(Windows only)_										|	| &fa-check; | &fa-check; |
+XBox controller support (360 and One) _(Windows only)_											|	| &fa-check; | &fa-check; |
 Support by email																					|	| individual | team |
 Number of developers 				 																	| 	| 1 | up to 10 |
 Full source code included																				|	|	| &fa-check; |
-Advanced simulation features: multi-body vehicles, dynamic suspension, solid and liquid cargo			|	|	| &fa-check; |
-Specialized vehicle support: motorbike, caterpillar, mining, excavators, hydraulic actuators [Showcase](https://vehiclephysics.com/about/showcase/)	|	|	| &fa-check; |
-Autonomous vehicles framework: self-drive, automated tests, telemetry export to CSV						|	|	| &fa-check; |
+Advanced simulation features: multi-body vehicles, solid and liquid cargo components					|	|	| &fa-check; |
+Advanced suspension features: damper bump & rebound, dynamic suspension, bump stop					|	|	| &fa-check; |
+Specialized vehicle support: motorbike, caterpillar, mining, excavators, hydraulic actuators [Showcase](/about/showcase/#motorbikes)	|	|	| &fa-check; |
+Advanced vehicle controllers: two-wheeled, bulldozer, [diesel-electric](https://twitter.com/VehiclePhysics/status/1135951323629854721), tracked, hydraulic-tracked	|	|	| &fa-check; |
+Framework for autonomous vehicles: self-drive, automated tests, path follow, export data to CSV			|	|	| &fa-check; |
+Engine configuration tool to fit the engine settings to real data _(Experimental)_						|	|	| &fa-check; |
 Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/), [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/)	|	|	| &fa-check; |
 Support by Skype 																						|	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
