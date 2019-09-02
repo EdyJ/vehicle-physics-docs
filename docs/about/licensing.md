@@ -8,7 +8,8 @@ Full-featured [Vehicle Controller](/components/vehicle-controller) component			|
 Essential components: [Telemetry](https://vehiclephysics.com/components/vehicle-telemetry/), Audio, Anti-roll bar, keyboard input, visual effects, rolling friction, aerodynamics | &fa-check; | &fa-check; | &fa-check; |
 Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-check; |
 Simultaneous vehicles in each scene														|		1	| unlimited | unlimited |
-Wheels per vehicle																		|		4	| 1-20		| 1-unlimited |
+Wheels per vehicle																		|		4	| 1-20		| 1&#8209;unlimited |
+Supported platforms																		| Desktop	| Any		| Any	|
 Multiple ground materials with tire effects (tire marks, smoke...)								|	| &fa-check; | &fa-check; |
 Additional vehicle features via [add-on components](/advanced/custom-addons/)					|	| &fa-check; | &fa-check; |
 [Custom vehicles](/advanced/custom-vehicles/)													|	| &fa-check; | &fa-check; |
