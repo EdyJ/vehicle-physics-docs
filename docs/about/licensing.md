@@ -7,8 +7,8 @@
 Full-featured [Vehicle Controller](/components/vehicle-controller) component			| &fa-check; | &fa-check; | &fa-check; |
 Essential components: [Telemetry](https://vehiclephysics.com/components/vehicle-telemetry/), Audio, Anti-roll bar, keyboard input, visual effects, rolling friction, aerodynamics | &fa-check; | &fa-check; | &fa-check; |
 Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-check; |
-Simultaneous vehicles in each scene														|		1	| unlimited | unlimited |
 Wheels per vehicle																		|		4	| 1-20		| 1&#8209;unlimited |
+Simultaneous vehicles in each scene														|		1	| unlimited | unlimited |
 Supported platforms																		| Desktop	| Any		| Any	|
 Multiple ground materials with tire effects (tire marks, smoke...)								|	| &fa-check; | &fa-check; |
 Additional vehicle features via [add-on components](/advanced/custom-addons/)					|	| &fa-check; | &fa-check; |
@@ -26,7 +26,7 @@ Number of developers 				 																	| 	| 1 | up to 10 |
 Full source code included																				|	|	| &fa-check; |
 Advanced simulation features: multi-body vehicles, solid and liquid cargo components					|	|	| &fa-check; |
 Advanced suspension features: damper bump & rebound, dynamic suspension, bump stop					|	|	| &fa-check; |
-Specialized vehicle support: motorbike, caterpillar, mining, excavators, hydraulic actuators [Showcase](/about/showcase/#motorbikes)	|	|	| &fa-check; |
+Specialized vehicle support: motorbike, caterpillar, mining, excavators, hydraulic actuators. [Showcase](/about/showcase/#motorbikes)	|	|	| &fa-check; |
 Advanced vehicle controllers: two-wheeled, bulldozer, [diesel-electric](https://twitter.com/VehiclePhysics/status/1135951323629854721), tracked, hydraulic-tracked	|	|	| &fa-check; |
 Framework for autonomous vehicles: self-drive, automated tests, path follow, export data to CSV			|	|	| &fa-check; |
 Engine configuration tool to fit the engine settings to real data _(Experimental)_						|	|	| &fa-check; |
