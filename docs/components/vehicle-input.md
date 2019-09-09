@@ -3,11 +3,11 @@
 The input components read the input values from the user and passes them to the vehicle. This
 includes steering, throttle, brakes, gear lever, etc.
 
-The vehicle receives the input data at the [data bus](../advanced/databus-reference.md),
+The vehicle receives the input data in the [data bus](../advanced/databus-reference.md),
 Input channel (`VehiclePhysics.Channel.Input`).
 
 &fa-thumbs-o-up; You could write your own input component easily by [writing an add-on component](../advanced/custom-addons.md)
-that modifies the values of the [Input channel at the Data Bus](../advanced/databus-reference.md#input-channel).
+that modifies the values of the [Input channel in the Data Bus](../advanced/databus-reference.md#input-channel).
 For example, an AI controller or a remote player.
 {: .alert .alert-info }
 
@@ -55,10 +55,18 @@ Ignition key
 	for moving the key to Off.
 
 Steer axis
-:	Axis name for steering. Must be configured at Unity Input settings
+:	Axis name for steering. Must be configured at Unity Input settings (_Edit > Project Settings >
+	Input_). Recommended configuration:
+
+	![VPP Steer Axis Configuration](/img/components/vpp-standard-input-steer-axis.png){: .img-small .clickview }
 
 Throttle and Brake Axis
-:	Axis name for throttle and brake. The behavior will be affected by _Throttle And Brake Mode_.
+:	Axis name for throttle and brake. Must be configured at Unity Input settings (_Edit > Project Settings >
+	Input_). Recommended configuration:
+
+	![VPP Throttle and Brake Configuration](/img/components/vpp-standard-input-throttle-and-brake-axis.png){: .img-small .clickview }
+
+	The behavior will be affected by the option _Throttle And Brake Mode_.
 
 Handbrake axis
 :	Axis for the handbrake. It can be a regular button defined at Input settings (sensitivity
@@ -68,20 +76,22 @@ Clutch Axis
 :	Axis for the handbrake. It can be a regular button defined at Input settings (sensitivity
 	and gravity will apply).
 
-	&fa-warning:lg; Default value for clutch axis is **Fire1**. This assignment should be
-	changed or removed on mobile/touch devices. Otherwise, the clutch will be engaged whenever the
-	screen is touched.
+	&fa-warning:lg; Default value for clutch axis is **Fire1** (<kbd>Shift</kbd>). This assignment
+	should be changed or removed on mobile/touch devices. Otherwise, the clutch will be engaged
+	whenever the screen is touched.
 	{: .alert .alert-warning }
 
 Gear Shift Button
 :	Button for gear shifting. It must have positive and negative bindings defined at the Input
-	settings (_Edit > Project Settings > Input_, see pic below).
+	settings (_Edit > Project Settings > Input_):
 
-![VP Standard Input bidirectional bindings](/img/components/vpp-standard-input-bidirectional-bindings.png){: .img-small .clickview }
+	![VPP Gear Shift Configuration](/img/components/vpp-standard-input-gear-shift-axis.png){: .img-small .clickview }
 
 Gear Mode Select Button
 :	Button for selecting gear mode in automatic transmissions (R, N, D ...). It must have positive
-	and negative bindings defined at the Input settings (see pic above).
+	and negative bindings defined at the Input settings (_Edit > Project Settings > Input_):
+
+	![VPP Gear Select Configuration](/img/components/vpp-standard-input-gear-select-axis.png){: .img-small .clickview }
 
 Keyboard Number Select Gears
 :	The alphanumeric keyboard numbers engage the corresponding gears: 1, 2, 3, 4...
