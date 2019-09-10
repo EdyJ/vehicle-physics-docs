@@ -137,3 +137,85 @@ better acceleration:
 [http://www.intothered.dk/simracing/differential.html](http://www.intothered.dk/simracing/differential.html)<br>
 [http://www.zhome.com/ZCMnL/tech/Torsen/Torsen.htm](http://www.zhome.com/ZCMnL/tech/Torsen/Torsen.htm)
 
+#### Videos
+
+[Video: How a Differential works?](https://www.youtube.com/watch?v=SOgoejxzF8c)<br>
+[Video: Working of Limited Slip Differential (clutch pack, ramp angles, 1-way, 2-way, 1.5-way)](https://www.youtube.com/watch?v=PEdnH7_7_yc)<br>
+[Video: Understanding Limited SLip Differential (clutch pack, preload)](https://www.youtube.com/watch?v=WeLm7wHvdxQ)
+
+# Scripting reference
+
+### Differential.Settings
+
+```
+namespace VehiclePhysics
+{
+public class Differential : Block
+	{
+	public enum Type { Open, Locked, Viscous, ClutchPack, TorqueBias };
+
+	[Serializable]
+	public class Settings
+		{
+		// Type of differential
+
+		public Type type = Type.Viscous;
+
+		// Ratio of the differential gear
+
+		[Range(1,12)]
+		public float gearRatio = 3.7f;
+
+		// Viscous type settings:
+		//
+		// Preload: torque (Nm) required to rotate the gears in the differential
+		// Stiffness: lock ratio (%) among both outputs
+		//
+		//		0.0 = Open differential. No torque transfer among the outputs.
+		//		1.0 = Locked (spool, live axle). Outputs behave like linked with a rigid rod.
+
+		public float preload = 0.0f;
+		[Range(0,1)]
+		public float powerStiffness = 0.2f;
+		[Range(0,1)]
+		public float coastStiffness = 0.2f;
+
+		// Clutch-pack type settings:
+		//
+		// Preload: torque (Nm) required to rotate the gears in the differential
+		// clutchPackFriction: power to friction ratio of the clutch pack (depends on number and compound)
+		// powerAngle: ramp angle (º) for the power mode (~30-80º)
+		// coastAngle: ramp angle (º) for the coast mode (~30-80º)
+		//
+		// Note: clutch friction values above 0.5 and low ramp angles (<45) could lock the
+		// differential even with the wheel inertia only (one wheel lifted). Not very realistic.
+
+		public float clutchPreload = 50.0f;
+		[Range(0,1)]
+		public float clutchPackFriction = 0.4f;
+		[Range(10,90)]
+		public float powerAngle = 45.0f;
+		[Range(10,90)]
+		public float coastAngle = 80.0f;
+
+		// Torque bias settings:
+		//
+		// Preload: torque (Nm) required to rotate the gears in the differential
+		// Ratio: proportion of torque that can be transferred from one output to another.
+		//
+		//		1 = 1:1 Open differential. Both outputs receive the less resistance torque.
+		//		2 = 2:1 torque bias. Up to twice the torque of the least resistance output
+		//			can be transferred to the most resistance output. Torque split 66% - 33%.
+		//		5 = 5:1 torque bias. Torque split goes up to 20% - 80%
+		//			This is a Torsen differential (5:1).
+
+		public float torquePreload = 0.0f;
+		[Range(1,10)]
+		public float powerRatio = 5.0f;
+		[Range(1,10)]
+		public float coastRatio = 5.0f;
+		}
+	}
+}
+
+```
