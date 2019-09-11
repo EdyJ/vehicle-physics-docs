@@ -1,9 +1,9 @@
 # Getting started
 
-Search for of the "Getting Started -" scenes in your Project window and open any of them. You should
-have Vehicle Physics Pro set up already ([See Setting Up VPP](/user-guide/setting-up-vpp)).
+Type _Getting Started_ in your Project's search box and open any of the scenes in the results. You
+should have Vehicle Physics Pro set up already ([See Setting Up VPP](/user-guide/setting-up-vpp)).
 
-![Getting Started Scenes](/img/user-guide/vpp-getting-started-scenes.png){: .clickview }
+![Getting Started Scenes](/img/user-guide/vpp-getting-started-scenes.png)
 
 &fa-thumbs-up:lg; If you haven't setup the Unity project yet, you can still [download and play the demos](/about/demos){: .alert-link }
 {: .alert .alert-info }
