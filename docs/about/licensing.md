@@ -35,7 +35,7 @@ Support by Skype 																						|	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
 **License Setup Fee**<br>_License is perpetual after this payment_									| **Free** | **€390** | **€4900** |
 **Support & updates via GIT repository**<br>_First year included in the license setup fee_				| _n/a_ | €90<br>/year | €990<br>/year |
-**PURCHASE LICENSE**		| _to be released_ | [**BUY NOW**](https://goo.gl/EoAe5v) | [**BUY NOW**](https://goo.gl/QzPdcu) |
+**GET LICENSE**							| _to be announced_ | [**BUY NOW**](https://goo.gl/EoAe5v) | [**BUY NOW**](https://goo.gl/QzPdcu) |
 
 &fa-warning:lg; License versions, terms, content and pricing are subject to change without prior notice.
 {: .alert .alert-warning }

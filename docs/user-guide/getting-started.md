@@ -1,50 +1,43 @@
 # Getting started
 
-Open the example project in Unity 3D (you should have [set it up](setting-up-vpp.md) already). Let's
-play and walk through some example scenes so you could get started quickly. Load and play the scene
-**Playground 1k - JPickup - Keyboard**:
+Search for of the "Getting Started -" scenes in your Project window and open any of them. You should
+have Vehicle Physics Pro set up already ([See Setting Up VPP](/user-guide/setting-up-vpp)).
 
-![Assets > Development > Playground 1k - JPickup - Keyboard](/img/user-guide/vpp-sample-scenes.png){: .clickview }
+![Getting Started Scenes](/img/user-guide/vpp-getting-started-scenes.png){: .clickview }
 
-<!--
-&fa-thumbs-up:lg; If you haven't setup the Unity project yet, you can still [download and play the demos](){: .alert-link }
+&fa-thumbs-up:lg; If you haven't setup the Unity project yet, you can still [download and play the demos](/about/demos){: .alert-link }
 {: .alert .alert-info }
--->
 
-The vehicles in all these scenes typically begin with the engine off. For starting the engine:
+The vehicles in all these scenes typically start with the engine off. For starting the engine:
 
-1. Press <kbd>K</kbd> for moving the ignition key from "Off" to "Acc-On" (check out the telemetry
-window)
+1. Press <kbd>K</kbd> once for moving the ignition key from "Off" to "Acc-On".
 2. Press and hold <kbd>K</kbd> for moving the ignition key to "Start" and actually start the engine.
 
 	<kbd>ctrl-K</kbd> moves the ignition key back to the "Off" switching off the engine.
 
-The scenes containing _Steering Wheel_ in the name require a steering wheel controller. The POV
-left-right directions act as ignition key. Move to the right once, then move and hold for start the
-engine.
 
-**Keyboard layout:**
+**Car controls:**
 
 Key(s)                              | Function          | Notes
 ------------------------------------|-------------------| ------------------------------------------
-<kbd>K</kbd> 						| Ignition&nbsp;key | Press to move from "Off" to "Acc-On". Press and Hold for "Start". <kbd>ctrl+K</kbd> moves the key back to "Off".
-<kbd>left</kbd><kbd>right</kbd>  	| Steering 			|
-<kbd>up</kbd> 						| Throttle 			|
-<kbd>down</kbd> 					| Brakes 			|
-<kbd>shift</kbd> 					| Clutch 			| Actual vehicle setup uses a Torque Converter, which doesn't require active clutch. Still, the clutch can be used to completely disengage the engine from the transmission.
-<kbd>space</kbd> 					| Handbrake 		| Affects rear wheels. Clutch should be used if vehicle uses a standard clutch to prevent the engine to stall.
-<kbd>ctrl+space</kbd> 				| Toogle&nbsp;all&nbsp;brakes | Brakes are toggled in all wheels.
-<kbd>R</kbd> 						| Reverse&nbsp;gear | If auto-shift is enabled R requires the vehicle to be nearly stopped and brakes released.
+<kbd>K</kbd> 						| Ignition&nbsp;key | - Press once to move from "Off" to "Acc-On".<br>- Press and Hold for "Start".<br>- <kbd>ctrl+K</kbd> moves the key back to "Off".
+<kbd>Left</kbd><kbd>Right</kbd>  	| Steering 			|
+<kbd>Up</kbd> 						| Throttle 			|
+<kbd>Down</kbd> 					| Brakes 			|
+<kbd>Shift</kbd> 					| Clutch 			| These vehicles typically use a Torque Converter, which doesn't require active clutch. Still, the clutch key can be used to completely disengage the engine from the transmission.
+<kbd>Space</kbd> 					| Handbrake 		|
+<kbd>ctrl+Space</kbd> 				| Toogle&nbsp;all&nbsp;brakes | Handbrake and Brakes are toggled on/off. Useful to leave the completely stopped without pressing Brakes.
+<kbd>R</kbd> 						| Reverse&nbsp;gear | If auto-shift is enabled R requires the vehicle to stop.
 <kbd>N</kbd> 						| Neutral&nbsp;gear | Auto-shift will engage first gear when throttle is applied.
-<kbd>Tab</kbd> 						| Gear&nbsp;Up 		| Auto-shift might revert to the previous gear
-<kbd>Caps Lock</kbd> 				| Gear&nbsp;Down 	| Auto-shift might revert to the previous gear
-<kbd>1</kbd>-<kbd>5</kbd> 			| Engage&nbsp;gear 	| Auto-shift might discard the change and choose a more convenient gear
-<kbd>Page up</kbd><kbd>Page down</kbd> | Gear&nbsp;mode	| Select the different gear modes if the vehicle has Automatic transmission (M P R N D L). The actual modes may be engaged or not depending on specific conditions (i.e. Reverse requires the vehicle to be nearly stopped).
-<kbd>B</kbd> 						| Toggle&nbsp;telemetry&nbsp;data
-<kbd>C</kbd> 						| Change&nbsp;camera
-<kbd>F1-F4</kbd>					| Select&nbsp;different&nbsp;camera&nbsp;modes
-<kbd>Escape</kbd> 					| Reset&nbsp;scene
-<kbd>T</kbd> 						| Toggle&nbsp;slow&nbsp;motion&nbsp;mode
+<kbd>Tab</kbd> 						| Gear&nbsp;Up 		| Auto-shift might discard the change.
+<kbd>Caps Lock</kbd> 				| Gear&nbsp;Down 	| Auto-shift might discard the change.
+<kbd>1</kbd>-<kbd>5</kbd> 			| Engage&nbsp;gear 	| Auto-shift might discard the change and choose a more convenient gear.
+<kbd>Page&nbsp;up</kbd><kbd>Page&nbsp;down</kbd> | Gear&nbsp;mode	| Select the different gear modes if the vehicle has Automatic transmission (M P R N D L). The actual modes may be engaged or not depending on specific conditions (i.e. Reverse requires the vehicle to stop).
+<kbd>B</kbd> 						| Toggle&nbsp;telemetry&nbsp;data					|
+<kbd>C</kbd> 						| Change&nbsp;camera								|
+<kbd>F1-F4</kbd>					| Select&nbsp;different&nbsp;camera&nbsp;modes		|
+<kbd>Escape</kbd> 					| Reset&nbsp;scene									|
+<kbd>T</kbd> 						| Toggle&nbsp;slow&nbsp;motion&nbsp;mode			|
 
 #### Vehicle setup
 
@@ -67,7 +60,7 @@ play with:
 	clutch simulation (_Disc Friction_) is not required.
 - **Gearbox:** transmission type, gear ratios, auto-shift parameters.
 - **Retarder:** typically used by heavy vehicles, not used at the pickup (zero levels).
-- **Advanced / Experimental settings:** leave then untouched for now. [Learn more](../advanced/vehiclebase-reference.md#advanced-experimental-settings)
+- **Advanced / Experimental settings:** leave then untouched for now. [Learn more](/advanced/vehiclebase-reference#advanced-experimental-settings)
 
 The mass of the vehicle is configured at the Rigidbody component.
 
@@ -78,7 +71,7 @@ the [VP Wheel Collider](/components/wheel-collider) components:
 
 #### Other components
 
-The other components present at the Vehicle gameobject provide different add-on functionalities and
+The other components in the Vehicle GameObject provide different add-on functionalities and
 features:
 
 ![VP Vehicle add-on components](/img/user-guide/vpp-vehicle-components.png){: .img-medium .clickview }
