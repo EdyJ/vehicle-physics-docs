@@ -6,10 +6,9 @@ it to Vehicle Physics Pro.
 Some values are not widely available, but they may be estimated out of other specs and performance
 data.
 
-Useful resources:
-:	[Cars-Data](http://www.cars-data.com) (weights, sizes, transmission...) <br>
-	[RRI Powertrain Performance Graphs](http://rototest-research.eu/index.php?DN=29&List=C-L)
-	(engine dyno curves)
+Links:
+:	[Cars-Data](https://www.cars-data.com)<br>
+	[Automobile Catalog](https://www.automobile-catalog.com)
 
 ### Mass and center of mass (CoM)
 
