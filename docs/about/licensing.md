@@ -90,7 +90,9 @@ Training and Learning
 ##### Rates
 
 - 100 €/hour, with a limit of 8 hours per week per customer.
+- Extra hours, or support provided outside the available time slots: 250 €/hour
 - Traveling to the customer's location: 1000 €/day + expenses, with a limit of 5 work days per month.
+- Training (on site or online): 1000 €/day
 
 ##### Notes
 
