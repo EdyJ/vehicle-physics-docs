@@ -5,7 +5,7 @@
 | Features | <center>Community</center> | <center>Professional</center> | <center>Enterprise</center> |
 |----------|:----:|:--------:|:------------:|
 Full-featured [Vehicle Controller](/components/vehicle-controller) component			| &fa-check; | &fa-check; | &fa-check; |
-Essential components: [Telemetry](https://vehiclephysics.com/components/vehicle-telemetry/), Audio, Anti-roll bar, keyboard input, visual effects, rolling friction, aerodynamics | &fa-check; | &fa-check; | &fa-check; |
+Essential components:<br>[Telemetry](https://vehiclephysics.com/components/vehicle-telemetry/), [Audio](https://vehiclephysics.com/components/vehicle-addons/#vpaudio), [Anti-roll bar](https://vehiclephysics.com/components/vehicle-dynamics/#vpantirollbar), [keyboard input](https://vehiclephysics.com/components/vehicle-input/#vpstandardinput), [visual effects](https://vehiclephysics.com/components/vehicle-addons/#vpvisualeffects), rolling friction, [aerodynamics](https://vehiclephysics.com/components/vehicle-dynamics/#vpaerosurface) | &fa-check; | &fa-check; | &fa-check; |
 Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-check; |
 Wheels per vehicle																		|		4	| 1-20		| 1&#8209;unlimited |
 Simultaneous vehicles in each scene														|		1	| unlimited | unlimited |
@@ -33,9 +33,9 @@ Engine configuration tool to fit the engine settings to real data _(Experimental
 Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/), [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/)	|	|	| &fa-check; |
 Support by Skype 																						|	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
-**License Setup Fee**<br>_License is perpetual after this payment_									| **Free** | **€390** | **€4900** |
+**License Setup Fee**<br>_License is perpetual after this payment_									| **FREE** | **€390** | **€4900** |
 **Support & updates via GIT repository**<br>_First year included in the license setup fee_				| _n/a_ | €90<br>/year | €990<br>/year |
-**GET LICENSE**							| _to be announced_ | [**BUY NOW**](https://goo.gl/EoAe5v) | [**BUY NOW**](https://goo.gl/QzPdcu) |
+**GET LICENSE**							| [**Asset&nbsp;Store**](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556) | [**BUY&nbsp;NOW**](https://goo.gl/EoAe5v) | [**BUY&nbsp;NOW**](https://goo.gl/QzPdcu) |
 
 &fa-warning:lg; License versions, terms, content and pricing are subject to change without prior notice.
 {: .alert .alert-warning }

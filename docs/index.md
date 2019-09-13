@@ -170,11 +170,11 @@ div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 &fa-check; Package for the Unity Asset Store
 {: .roadmap }
 
+&fa-check; **First release!**
+{: .roadmap }
+
 &fa-gear:spin; Complete the documentation
 {: .roadmap .wip }
-
-&fa-gear:spin; **First release!**
-{: .roadmap .wip}
 
 Anisotropic tire friction
 {: .roadmap .todo }
