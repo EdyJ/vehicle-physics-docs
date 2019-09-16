@@ -97,7 +97,7 @@ $$suspensionForce = {stiffness}\cdot{contactDepth} + {damper}\cdot{contactSpeed}
 
 When the suspension is not moving the _contact speed_ is 0. This happens when the vehicle is either
 resting, cruising at constant speed or under constant acceleration. The suspension position for a
-specific wheel can then be calculated as:
+specific wheel may then be calculated as:
 
 $$suspensionPosition = \frac{weight \cdot{gravity}}{stiffness}$$
 
@@ -105,19 +105,30 @@ where $weight$ is the actual weight being supported by that wheel.
 
 ### Studying the oscillating behavior
 
-The suspension properties can be studied from the point of view of the oscillating behavior
+The suspension properties may be studied from the point of view of the oscillating behavior
 ([Harmonic oscillator](http://en.wikipedia.org/wiki/Harmonic_oscillator)). The associated concepts
 are used to study the reactions of the suspension in different situations.
 
+!!! danger "&fa-times-circle:lg; Beware: a vehicle suspension is NOT a harmonic oscillator"
+
+	A suspension **_behaves_** as harmonic oscillator under certain conditions, and may be studied
+	as a harmonic oscillator under those conditions only. Read [Application to real vehicles](#application-to-real-vehicles)
+	below.
+
+	While a suspension based on specifying the oscillating properties (frequency, damping) is
+	possible, implementing it as a generic harmonic oscillator is a common mistake. Even the
+	suspensions in NVidia's PhysX Vehicles are wrongly designed and implemented as generic harmonic
+	oscillators. This causes set up issues, unrealistic behavior and unexpected results.
+
 Given the force produced by the suspension at a specific steady state (_contact speed_ = 0) the
-equivalent _**sprung mass**_ value for studying that situation can be calculated as:
+equivalent _**sprung mass**_ value for studying that situation may be calculated as:
 
 $$sprungMass = \frac{suspensionForce}{gravity}$$
 
 When the vehicle is at rest, cruising at constant speed or under constant acceleration the sum of
 the sprung masses of all the wheels matches the mass of the vehicle exactly.
 
-Using the _sprung mass_ you can calculate the _**natural frequency**_ for the spring under that
+Using the _sprung mass_ you may calculate the _**natural frequency**_ for the spring under that
 load. The _natural frequency_ is the speed at which the spring can respond to changes in load:
 
 $$naturalFrequency = \sqrt{\frac{stiffness}{sprungMass}}$$
@@ -126,7 +137,7 @@ The _natural frequency_ defines the oscillating behavior of the suspension. A ty
 set up to exhibit a natural frequency somewhere between 5 and 10.
 
 The _sprung mass_ is also used for studying the [damping behavior](http://en.wikipedia.org/wiki/Damping),
-that is, the rate at which the suspension dissipates the energy stored at the spring. We can
+that is, the rate at which the suspension dissipates the energy stored at the spring. We may
 calculate the _**damping ratio**_ for learning whether the suspension will be under-damped,
 over-damped or critically-damped:
 
@@ -135,7 +146,7 @@ $$dampingRatio = \frac{damper}{2 \sqrt{stiffness \cdot{sprungMass}}}$$
 A _damping ratio_ greater than 1.0 means over-damping (sluggish suspension), a value of exactly 1.0
 is critically-damped, and a value less than 1.0 is under-damped (bouncy suspension). Values for
 realistic vehicles are in the range of 0.2 and 0.6. The _damper rate_ that targets a specific
-_damping ratio_ can be calculated by rearranging the equation above:
+_damping ratio_ may be calculated by rearranging the equation above:
 
 $$damper = dampingRatio \cdot{2} \sqrt{stiffness \cdot{sprungMass}}$$
 
@@ -152,8 +163,8 @@ during each spring oscillation. This number is given by the _**alpha**_ ratio:
 $$alpha = \frac{1}{timestep} \sqrt{\frac{sprungMass}{stiffness}}$$
 
 Applying the [Nyquist theorem](http://en.wikipedia.org/wiki/Nyquist–Shannon_sampling_theorem) we
-can deduct that a physically correct simulation should have _alpha_ >= 2. Smaller values won't
-likely cause noticeable artifacts, only the produced forces won't be physically precise.
+deduct that a physically correct simulation should have _alpha_ >= 2. Smaller values won't likely
+cause noticeable artifacts, only the produced forces won't be physically precise.
 
 ### Application to real vehicles
 
@@ -197,16 +208,15 @@ suspensionForce &= stiffness \cdot{contactDepth}
 
 $$\Longrightarrow naturalFrequency = \sqrt{\frac{gravity}{contactDepth}}$$
 
-So the most important factor for the frequency of the suspension is the **contact depth**! Not the
-spring rate, not even the sprung mass! The frequency of the suspension will vary on the different
-situations (accelerating, braking, cornering...) according to the contacth depth. Note that this
-_contact depth_ includes any pre-compression of the spring inside the suspension strut.
+So the most important factor that defines the frequency of the suspension is the **contact depth**.
+Not the spring rate, not even the sprung mass. The frequency of the suspension will vary on the
+different situations (accelerating, braking, cornering...) according to the contact depth. Note
+that this _contact depth_ includes any pre-load of the spring inside the suspension strut.
 
 This is where dynamic suspension systems kick in. Some high-end modern cars have electronically
-controlled suspensions which dynamically modify the suspension properties in order to...
-(guess what?) keeping the _contact depth_ (also _ride height_) constant at all situations. This
-preserves the original properties of the suspension when accelerating, braking, cornering, or
-carrying variable cargo or passengers.
+controlled suspensions which dynamically modify the suspension setup to keep the _contact depth_
+(also _ride height_) constant in every situation. This preserves the original properties of the
+suspension when accelerating, braking, cornering, or carrying variable cargo or passengers.
 
 Vehicle Physics Pro includes a variety of suspension components allowing different ways of
 configuring the suspension:
