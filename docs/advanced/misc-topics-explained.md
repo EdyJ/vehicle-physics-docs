@@ -231,7 +231,7 @@ required.
 	Releasing the throttle in a car driving forwards makes the engine friction to brake the vehicle.
 	Too much engine friction can force the wheels actually spin at less speed than the road
 	underneath, causing wheel lock. In racing cars this effect is typically observed when shifting
-	down, and is compensated using the [heel-toe technique](http://www.drivingfast.net/car-control/heel-toe-shifting.htm).
+	down, and is compensated using the [heel-toe technique](https://drivingfast.net/heel-toe-shifting/).
 
 A single wheel rotating backwards due to huge engine friction is likely caused by the
 **differential**. This is a correct behavior. It's most likely to happen in open or
