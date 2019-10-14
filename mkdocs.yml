@@ -52,6 +52,7 @@ nav:
   - Creating vehicles: user-guide/vehicle-creation.md
   - Configuring vehicles: user-guide/vehicle-setup.md
   - 3D models and environment: user-guide/3d-models.md
+  - Extending VPP: user-guide/extending-vpp.md
 - Components:
   - Component Guide: components/component-guide.md
   - Vehicle Controller: components/vehicle-controller.md

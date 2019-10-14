@@ -1,50 +1,57 @@
 
 # Extending Vehicle Physics Pro
 
-VPP may be extended in a variety of ways without needing to modify the source code.
-
-NOTE: Modifying the source code is discouraged not only because you will likely experience
-significant issues when upgrading, but also I can provide support for unmodified VPP codebases only.
-There's surely a better way of configuring VPP to your needs using the available API.
+VPP can be extended in several ways without modifying the source code.
 
 ### Add-on components
 
-You may write Unity components deriving from VehicleBehaviour instead of MonoBehaviour. The lifecycle
-in these components is bound to the vehicle they belong to. Also, you may arrange them anywhere in
-the hierarchy of the vehicle and enable/disable them anytime. Most of VPP components are already
-implemented this way.
+You can write Unity components deriving from ```VehicleBehaviour``` instead of MonoBehaviour. The
+life cycle in these components (initialization, release, update) is bound to the vehicle they belong
+to. Also, you can place them anywhere in the hierarchy of the vehicle and enable/disable them
+anytime. Most of VPP components are already implemented this way.
 
-[Learn more on writing add-on components]()
+- [Writing add-on components](/advanced/custom-addons/)
+- [VehicleBehaviour reference](/advanced/vehiclebehaviour-reference/)
+
+Add-ons use the protected property **vehicle** to reference the VehicleBase vehicle they belong to.
+Then they may use the API exposed by ```VehicleBase``` and/or the vehicle's **Data Bus**.
+
+- [VehicleBase API](/advanced/vehiclebase-reference/#scripting-reference)
+- [Data Bus reference](/advanced/databus-reference/)
 
 ### Custom vehicles
 
-The standard vehicle controller (VPVehicleController) implements the most common vehicle types.
-However, you may write a custom vehicle controller by writing a class that inherits from VehicleBase.
+The standard vehicle controller (```VPVehicleController```) implements the most common vehicle types.
+However, you can write a custom vehicle controller by writing a class that inherits from
+```VehicleBase```. This way you car implement non-standard or unconventional vehicles not supported
+by the standard vehicle controller component, such as electric multi-motor cars.
 
-Put it simple, VehicleBase implements the chassis and the wheels of the vehicle. You may then add
-functional components or _Blocks_ arranged in any number and combination, and connect the output
-to the wheels. Engine, gearbox, differential, clutch, steering, etc are all Blocks you may use
-(or not) in your custom vehicle. VPVehicleController is a VehicleBase with the standard components
-in standard vehicle layouts.
+Put it simple, VehicleBase implements the chassis and the wheels of the vehicle. You can then add
+functional components or **_Blocks_** arranged in any number and combination, then connect their
+outputs to the wheels. Engine, gearbox, differential, clutch, steering, etc are all Blocks you may
+use (or not) in your custom vehicle. ```VPVehicleController``` is already a ```VehicleBase```-derived
+class with the typical components arranged in standard vehicle layouts.
 
-This way you may implement non-standard or unconventional vehicles not supported by the standard
-vehicle controller component. For example, you may create a vehicle where each wheel is powered by
-an independent motor.
-
-[Learn more on writing custom vehicles]()
+- [Writing custom vehicles](/advanced/custom-vehicles/)
+- [VehicleBase reference and API](/advanced/vehiclebase-reference/)
 
 ### Custom blocks
 
-VPP includes a variety of powertrain functional parts or _Blocks_ to be used in vehicles.
-The standard vehicle controller already uses these blocks, and you may use them in your own custom
-vehicle controllers. But if you need to simulate functional parts not included in VPP then you may
-write your own custom blocks and use them in your custom vehicle controller.
+If you need to simulate functional parts not included in VPP then you may implement your own custom
+parts or **_Blocks_** and use them in your custom vehicle controller.
 
 For example, a continuously variable transmission (CVT) may be easily implemented as custom block.
 
-[Learn more on writing custom blocks]()
+- [Writing custom blocks](/advanced/custom-blocks/)
+- [Block reference](/advanced/block-reference/)
 
-### Advanced handlers
+### Advanced events
 
-VehicleBase and VPVehicleController exposes some advanced handlers intended for implementing
-advanced functionalities. For example, the replay component makes use of these handlers.
+```VehicleBase``` exposes some advanced event handlers launched at specific stages of the simulation
+cycle. These are intended for implementing very specific advanced functionalities within custom
+add-on components. They shouldn't be needed in most cases.
+
+For example, the ```VPReplay``` component makes use of these events for recording the vehicle state
+and tweak the simulation during the replay.
+
+- [VehicleBase Events](/advanced/vehiclebase-reference/#events)
