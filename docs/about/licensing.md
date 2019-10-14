@@ -33,8 +33,8 @@ Engine configuration tool to fit the engine settings to real data _(Experimental
 Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/), [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/)	|	|	| &fa-check; |
 Support by Skype 																						|	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
-**License Setup Fee**<br>_License is perpetual after this payment_									| **FREE** | **€390** | **€4900** |
-**Support & updates via GIT repository**<br>_First year included in the license setup fee_				| _n/a_ | €90<br>/year | €990<br>/year |
+**License Setup Fee**<br>_License is perpetual after this payment_									| **FREE** | **€590** | **€5900** |
+**Support & updates via GIT repository**<br>_First year included in the license setup fee_				| _n/a_ | €190<br>/year | €1900<br>/year |
 **GET LICENSE**							| [**Asset&nbsp;Store**](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556) | [**BUY&nbsp;NOW**](https://goo.gl/EoAe5v) | [**BUY&nbsp;NOW**](https://goo.gl/QzPdcu) |
 
 &fa-warning:lg; License versions, terms, content and pricing are subject to change without prior notice.
