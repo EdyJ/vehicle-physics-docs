@@ -6,6 +6,10 @@ configuring the vehicle's inertia easily.
 
 ![Inertia inspector and parametric gizmo](/img/blocks/vpp-inertia-inspector-parametric-gizmo.png){: .clickview }
 
+&fa-thumbs-up:lg; **Hint:** You may hide the inertia gizmo (the orange box in the picture) by
+collapsing the Inertia section in the Vehicle Controller inspector.
+{: .alert .alert-success }
+
 In runtime the inspector shows the Inertia Tensor values actually applied to the vehicle:
 
 ![Inertia inspector in runtime](/img/blocks/vpp-inertia-inspector-parametric-runtime.png)

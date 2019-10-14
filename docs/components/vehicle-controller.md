@@ -323,12 +323,34 @@ public class VPAxle
 ### Methods
 
 ```
+	// Lively compute the optimal gear shift point
+	//
+	// Returns:
+	//
+	// 		> 1.0		Should upshift
+	// 		< -1.0		Should downshift
+	//
+	// Values approach 1.0 or -1.0 from 0 when the optimal shift point is being reached.
+	// For example, a colored signal may change color at 0.90, 0.95 and 1.0.
+	//
+	// The value is the ratio between the acceleration with the next gear and the acceleration with
+	// the current gear:
+	//
+	// 		- Above 1 means more acceleration if switching one gear up.
+	//		  Value is the % of acceleration that would be gained (e.g. 1.05 = +5% on upshift)
+	// 		- Below -1 means more acceleration if switching one gear down.
+	//		  Value is minus the % of acceleration that would be gained (e.g. -1.05 = +5% on downshift)
+
+	public float GetOptimalGearShiftRatio ()
+
 	// Get the driveline and gearbox ratios along the transmission for a given wheel.
 	//
 	// Returns NAN if there's no direct connection between the wheel and the powertrain,
 	// for example:
 	//	- No drive wheel
 	//	- Neutral gear
+    //
+	// Use VehicleBase.GetWheelIndex for retrieving wheel indexes based on axle and position.
 
 	public float GetWheelFinalRatio (int wheelIndex, int gear = 0)
 
