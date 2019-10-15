@@ -11,9 +11,7 @@ Wheels per vehicle																		|		4	| 1-20		| 1&#8209;unlimited |
 Simultaneous vehicles in each scene														|		1	| unlimited | unlimited |
 Supported platforms																		| Desktop	| Any		| Any	|
 Multiple ground materials with tire effects (tire marks, smoke...)								|	| &fa-check; | &fa-check; |
-Additional vehicle features via [add-on components](/advanced/custom-addons/)					|	| &fa-check; | &fa-check; |
-[Custom vehicles](/advanced/custom-vehicles/)													|	| &fa-check; | &fa-check; |
-[Custom driveline parts](/advanced/custom-blocks/)												|	| &fa-check; | &fa-check; |
+Custom extensions: components, vehicles, parts. [Learn more](/user-guide/extending-vpp)		|	| &fa-check; | &fa-check; |
 Frame-exact replay system with pause, forward/reverse playback, flashback...					|	| &fa-check; | &fa-check; |
 Vehicle damage with mesh deformation and handling effects										|	| &fa-check; | &fa-check; |
 Advanced telemetry: real-time [performance charts](/components/vehicle-telemetry/#vpperformancedisplay), weight distribution |	| &fa-check; | &fa-check; |
