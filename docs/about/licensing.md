@@ -4,17 +4,17 @@
 
 | Features | <center>Community</center> | <center>Professional</center> | <center>Enterprise</center> |
 |----------|:----:|:--------:|:------------:|
-Full-featured [Vehicle Controller](/components/vehicle-controller) component			| &fa-check; | &fa-check; | &fa-check; |
+Full-featured [Vehicle Controller](/components/vehicle-controller) and [Wheel Collider](/components/wheel-collider/) components	| &fa-check; | &fa-check; | &fa-check; |
 Essential components:<br>[Telemetry](https://vehiclephysics.com/components/vehicle-telemetry/), [Audio](https://vehiclephysics.com/components/vehicle-addons/#vpaudio), [Anti-roll bar](https://vehiclephysics.com/components/vehicle-dynamics/#vpantirollbar), [keyboard input](https://vehiclephysics.com/components/vehicle-input/#vpstandardinput), [visual effects](https://vehiclephysics.com/components/vehicle-addons/#vpvisualeffects), rolling friction, [aerodynamics](https://vehiclephysics.com/components/vehicle-dynamics/#vpaerosurface) | &fa-check; | &fa-check; | &fa-check; |
 Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-check; |
 Wheels per vehicle																		|		4	| 1-20		| 1&#8209;unlimited |
 Simultaneous vehicles in each scene														|		1	| unlimited | unlimited |
 Supported platforms																		| Desktop	| Any		| Any	|
-Multiple ground materials with tire effects (tire marks, smoke...)								|	| &fa-check; | &fa-check; |
-Custom extensions support: components, vehicles, parts. [Learn more](/user-guide/extending-vpp)		|	| &fa-check; | &fa-check; |
+[Multiple ground materials](/components/ground-materials/) with tire effects (tire marks, smoke...)	|	| &fa-check; | &fa-check; |
+[Custom extensions support](/user-guide/extending-vpp/): custom add-ons, custom vehicles, custom parts	|	| &fa-check; | &fa-check; |
 Frame-exact replay system with pause, forward/reverse playback, flashback...					|	| &fa-check; | &fa-check; |
 Vehicle damage with mesh deformation and handling effects										|	| &fa-check; | &fa-check; |
-Advanced telemetry: real-time [performance charts](/components/vehicle-telemetry/#vpperformancedisplay), weight distribution |	| &fa-check; | &fa-check; |
+[Advanced telemetry tools](/components/vehicle-telemetry/#vpperformancedisplay): real-time performance charts, weight distribution	|	| &fa-check; | &fa-check; |
 High-quality locations and vehicles _(WIP)_														|	| &fa-check; | &fa-check; |
 Mobile touch-based controller _(WIP)_															|	| &fa-check; | &fa-check; |
 DirectInput controller with force feedback _(Windows only)_										|	| &fa-check; | &fa-check; |

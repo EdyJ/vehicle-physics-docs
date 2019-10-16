@@ -12,8 +12,8 @@ Tire friction is configured in [VPVehicleController](/components/vehicle-control
 ![VP WheelCollider](/img/components/vpp-wheelcollider.png){: .clickview }
 
 &fa-thumbs-o-up; The context menu option **"Adjust position and radius to the Wheel mesh"** at
-the VPWheelCollider component automatically calculates position, radius and center to match the
-visual **Wheel** mesh specified at Visual Objects.
+	the VPWheelCollider component automatically calculates position, radius and center to match the
+	visual **Wheel** mesh specified at Visual Objects.
 {: .alert .alert-info }
 
 ![VP WheelCollider context menu](/img/components/vpp-wheelcollider-context-menu.png){: .img-small .clickview }
@@ -55,8 +55,9 @@ Spring rate ($N/m$)
 :	Springs sustain the weight of the vehicle. The inspector shows the maximum force and weight the
 	spring can support right before hitting the limit.
 
-	&fa-thumbs-o-up; As rule of thumb, configure the **spring rate** so each suspension can support
-	up to twice the vehicle's evenly distributed weight.
+	&fa-thumbs-o-up:lg; Rule of thumb: a good initial value for the spring rate assumes that each
+		suspension can support up to twice the vehicle's evenly distributed weight:<br><br>
+		Spring Rate = vehicle mass / number of wheels * 2 * 9.81 / suspension distance
 	{: .alert .alert-info }
 
 Damper rate ($N/ms^{-1}$)
@@ -64,8 +65,11 @@ Damper rate ($N/ms^{-1}$)
 	the angular momentum of the vehicle on weight shifting situations (accelerating, braking,
 	cornering...).
 
-	&fa-warning; Dampers are very badly implemented in PhysX 3 / Unity 5. A damper value too high
-	will surely cause weird behaviors and unnatural reactions. [Learn more](../advanced/misc-topics-explained#car-bouncing-or-shaking-over-the-ground){: .alert-link }
+	&fa-thumbs-o-up:lg; Rule of thumb: a good initial value for **damper rate** is spring rate / 10
+	{: .alert .alert-info }
+
+	&fa-warning:lg; Dampers are very badly implemented in PhysX 3 / Unity 5. A damper value too high
+		will surely cause weird behaviors and unnatural reactions. [Learn more](/advanced/misc-topics-explained#car-bouncing-or-shaking-over-the-ground){: .alert-link }
 	{: .alert .alert-warning }
 
 ### Suspension analysis tool
@@ -82,7 +86,7 @@ calculates the suspension data based on the given compression ratio at rest.
 2. Watch the telemetry for the compression ratio for the wheel you want to analyze.
 3. Specify that compression ratio in the analysis tool. It computes and shows the resulting values.
 
-Read [how suspensions work](../advanced/how-suspensions-work.md) for interpreting and understanding
+Read [how suspensions work](/advanced/how-suspensions-work) for interpreting and understanding
 the values.
 
 ### Visual objects
@@ -90,10 +94,9 @@ the values.
 These are the transforms for the visual objects representing the actual wheel and suspension
 components. They will be positioned and/or rotated according to the state of the wheel.
 
-&fa-warning; Visual objects (Suspension, Caliper, Wheel) must reside in a different sub-hierarchy
-	than the VPWheelColliders inside the vehicle GameObject. Check out [how a vehicle is created from
-	scratch](../user-guide/vehicle-creation.md){: .alert-link } for details on how to build the
-	vehicle hierarchy correctly.
+&fa-warning:lg; Visual objects (Suspension, Caliper, Wheel) must reside in a different sub-hierarchy
+	than the VPWheelColliders inside the vehicle GameObject. Read [Creating Vehicles](/user-guide/vehicle-creation){: .alert-link }
+	for details on how to build the vehicle hierarchy correctly.
 {: .alert .alert-warning }
 
 Suspension
