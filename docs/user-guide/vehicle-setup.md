@@ -99,38 +99,38 @@ component) _Susp_ column.
 	The compression values as shown in the Telemetry should never reach 1.0 or adverse physics
 	effects may occur. This is by PhysX design/bugs and there's nothing we or Unity can do.
 
-##### Springs
+##### Springs and dampers
 
-Springs sustain the weight of the vehicle. A good starting point is configuring the **spring rate (N/m)**
-so each suspension can support up to twice of the distributed weight. Thus, if the weight is evenly
-distributed then each suspension would be at half of its travel at rest.
+The `VPWheelCollider` component includes an option to configure both spring and damper using the
+vehicle's mass, the number of wheels and the suspension distances:
 
-Example:
+![VP WheelCollider context menu](/img/components/vpp-wheelcollider-context-menu-suspension.png){: .clickview .img-small }
 
-- Vehicle mass: 4000 Kg.
-- For 4 wheels, this is 1000 Kg each
-- Suspension springs should support up to 2000 Kg each (twice the distributed weight)
-- If suspension distance is 20 cm = 0.2 m, then the spring stiffness supporting 2000 Kg is:
+**Springs** sustain the weight of the vehicle. A good starting point is configuring the **spring
+rate (N/m)** so each suspension can support up to twice of the distributed weight. Thus, if the
+weight is evenly distributed then each suspension would be at half of its travel at rest.
 
-	Spring Rate = max weight * gravity / suspension distance = 2000 * 9.81 / 0.2 = 98100 Nm
+The rule of thumb for the spring rate is:
 
-Of course, you can always apply real values to the springs or any other values that fit better
-with your vehicle.
+		Spring Rate = vehicle mass / number of wheels * 2 * 9.81 / suspension distance
 
-The maximum weight each wheel can support is displayed in the `VPWheelCollider` inspector.
+You can always use real spring rates or any other values that fit better with your vehicle.
 
-##### Dampers
-
-Dampers (or _shock absorbers_) limit the suspension movement and damp the spring oscillations.
+**Dampers** (or _shock absorbers_) limit the suspension movement and damp the spring oscillations.
 The damper setup affects the angular momentum of the vehicle on weight shifting situations
 (accelerating, braking, cornering...).
 
 The **damper rate (N/ms<sup>-1</sup>)** should be configured so the oscillating behavior resembles
-the real vehicle. A rough starting point for the damper rate is around 1/10 of the spring rate.
+the real vehicle.
 
-You may drop the vehicle from some height with a VPResetVehicle component and the
-<kbd>Enter</kbd> key, then observe how the suspension oscillates. Configure the damper rate until
-the result looks realistic for that vehicle.
+The rule of thumb is for the damper rate is:
+
+		Damper Rate = Spring Rate / 20
+
+&fa-thumbs-o-up; You may use a `VPResetVehicle` component to drop the vehicle from some height
+(<kbd>Enter</kbd> key), then observe how the suspension oscillates. Configure the damper rates until
+the result looks good enough for your vehicle.
+{: .alert .alert-info }
 
 ### Engine
 

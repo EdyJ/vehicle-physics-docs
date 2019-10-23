@@ -16,7 +16,7 @@ Tire friction is configured in [VPVehicleController](/components/vehicle-control
 	visual **Wheel** mesh specified at Visual Objects.
 {: .alert .alert-info }
 
-![VP WheelCollider context menu](/img/components/vpp-wheelcollider-context-menu.png){: .img-small .clickview }
+![VP WheelCollider context menu](/img/components/vpp-wheelcollider-context-menu.png)
 
 ### Mass, radius
 
@@ -65,12 +65,22 @@ Damper rate ($N/ms^{-1}$)
 	the angular momentum of the vehicle on weight shifting situations (accelerating, braking,
 	cornering...).
 
-	&fa-thumbs-o-up:lg; Rule of thumb: a good initial value for **damper rate** is spring rate / 10
+	&fa-thumbs-o-up:lg; Rule of thumb: a good initial value for **damper rate** is spring rate / 20
 	{: .alert .alert-info }
 
 	&fa-warning:lg; Dampers are very badly implemented in PhysX 3 / Unity 5. A damper value too high
 		will surely cause weird behaviors and unnatural reactions. [Learn more](/advanced/misc-topics-explained#car-bouncing-or-shaking-over-the-ground){: .alert-link }
 	{: .alert .alert-warning }
+
+### Springs and dampers defaults
+
+The `VPWheelCollider` component includes an option to configure both spring and damper using the
+vehicle's mass, the number of wheels and the suspension distances:
+
+![VP WheelCollider context menu](/img/components/vpp-wheelcollider-context-menu-suspension.png)
+
+This option computes spring and damper rates using the rules above. If the vehicle's mass is evenly
+distributed along all wheels, then the suspension will be 50% compressed at rest.
 
 ### Suspension analysis tool
 
