@@ -226,11 +226,11 @@ Still, existing Pacejka sets may be adapted to VPP following this procedure:
 
 	where $x$ is horizontal value in the graph. So the longitudinal version would be:
 
-	$$\mu(x, V, N) = \frac{F(\frac{x - V}{\vert{V}\vert}, N)}{N}$$
+	$$\mu(x, V, N) = \frac{P(\frac{x - V}{\vert{V}\vert}, N)}{N}$$
 
 	And the lateral version:
 
-	$$\mu(x, V, N) = \frac{F(\tan^{-1} (\frac{x}{V}), N)}{N}$$
+	$$\mu(x, V, N) = \frac{P(\tan^{-1} (\frac{x}{V}), N)}{N}$$
 
 3. Configure the tire friction in VPP to match the resulting curve as closely as possible. You may
 	use either a Pacejka model or any of the other modes (i.e. Parametric), which are typically
