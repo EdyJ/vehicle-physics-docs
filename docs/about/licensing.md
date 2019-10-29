@@ -28,7 +28,7 @@ Specialized vehicle support: motorbike, caterpillar, mining, excavators, hydraul
 Advanced vehicle controllers: two-wheeled, bulldozer, [diesel-electric](https://twitter.com/VehiclePhysics/status/1135951323629854721), tracked, hydraulic-tracked	|	|	| &fa-check; |
 Framework for autonomous vehicles: self-drive, automated tests, path follow, export data to CSV			|	|	| &fa-check; |
 Engine configuration tool to fit the engine settings to real data _(Experimental)_						|	|	| &fa-check; |
-Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/), [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/)	|	|	| &fa-check; |
+Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/), [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/), [CXC](https://www.cxcsimulations.com)	|	|	| &fa-check; |
 Support by Skype / Discord																				|	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
 **License Setup Fee**<br>_License is perpetual after this payment_									| **FREE** | **€590** | **€5900** |
