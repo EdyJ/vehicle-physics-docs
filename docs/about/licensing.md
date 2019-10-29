@@ -13,12 +13,12 @@ Supported platforms																		| Desktop	| Any		| Any	|
 [Multiple ground materials](/components/ground-materials/) with tire effects (tire marks, smoke...)	|	| &fa-check; | &fa-check; |
 [Custom extensions support](/user-guide/extending-vpp/): custom add-ons, custom vehicles, custom parts	|	| &fa-check; | &fa-check; |
 Frame-exact replay system with pause, forward/reverse playback, flashback...					|	| &fa-check; | &fa-check; |
-Vehicle damage with mesh deformation and handling effects										|	| &fa-check; | &fa-check; |
+Vehicle damage with mesh deformation and degradation of handling								|	| &fa-check; | &fa-check; |
 [Advanced telemetry tools](/components/vehicle-telemetry/#vpperformancedisplay): real-time performance charts, weight distribution	|	| &fa-check; | &fa-check; |
 High-quality locations and vehicles _(WIP)_														|	| &fa-check; | &fa-check; |
 Mobile touch-based controller _(WIP)_															|	| &fa-check; | &fa-check; |
 DirectInput controller with force feedback _(Windows only)_										|	| &fa-check; | &fa-check; |
-XBox controller support (360 and One) _(Windows only)_											|	| &fa-check; | &fa-check; |
+XBox gamepad support (360 and One) _(Windows only)_												|	| &fa-check; | &fa-check; |
 Support by email																					|	| individual | team |
 Number of developers 				 																	| 	| 1 | up to 10 |
 Full source code included																				|	|	| &fa-check; |
