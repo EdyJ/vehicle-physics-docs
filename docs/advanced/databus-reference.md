@@ -27,7 +27,7 @@ other component with a reference to the vehicle controller):
 ```
 // Set the input for the steering wheel.
 
-vehicle.data.Set(Channel.Input, InputData.Steer, Input.GetAxis("Horizontal") * 10000);
+vehicle.data.Set(Channel.Input, InputData.Steer, (int)(Input.GetAxis("Horizontal") * 10000));
 
 // Read the engine rpm value
 
@@ -37,9 +37,9 @@ float engineRpm = vehicle.data.Get(Channel.Vehicle, VehicleData.EngineRpm) / 100
 The bus may also be accessed via [] operators: `data[channel][value]`
 
 ```
-vehicle.data[Channel.Input][InputData.Steer] = Input.GetAxis("Horizontal") * 10000;
+vehicle.data[Channel.Input][InputData.Steer] = (int)(Input.GetAxis("Horizontal") * 10000);
 
-float engineRpm = vehicle.data[Channel.Vehicle][VehicleData.EngineRpm];
+float engineRpm = vehicle.data[Channel.Vehicle][VehicleData.EngineRpm] / 1000.0f;
 ```
 
 ### Data Channels
