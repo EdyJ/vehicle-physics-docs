@@ -188,11 +188,11 @@ If the engine **Can Stall** the parameters can be configured as well:
 
 There are two main types of clutch in VPP:
 
-**Disc Friction**
+**Friction Disc**
 :	A disc plate clutch typically used in cars with Manual transmission, where the clutch is
 	operated via clutch pedal.
 
-	![Disc Friction Clutch](/img/setup-guide/vpp-setup-clutch-disc.png)
+	![Friction Disc Clutch](/img/setup-guide/vpp-setup-clutch-disc.png)
 
 	**Max Torque Transfer** defines the maximum amount of torque that can pass trough the clutch. A
 	good value is around 1.5 times the maximum torque the engine can produce (_Max Torque_ in the

@@ -57,7 +57,7 @@ play with:
 	is RWD with a Torque Splitter dynamically routing part of the drive to the front axle.
 - **Engine:** torque and power curves, rpm limiter, stall settings.
 - **Clutch:** type of clutch and parameters. Using a torque converter is very handy when a real
-	clutch simulation (_Disc Friction_) is not required.
+	clutch simulation (_Friction Disc_) is not required.
 - **Gearbox:** transmission type, gear ratios, auto-shift parameters.
 - **Retarder:** typically used by heavy vehicles, not used at the pickup (zero levels).
 - **Advanced / Experimental settings:** leave then untouched for now. [Learn more](/advanced/vehiclebase-reference#advanced-experimental-settings)

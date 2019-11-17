@@ -202,10 +202,12 @@ The clutch couples the engine with the transmission and driveline.
 
 ![VP Vehicle Controller clutch](/img/blocks/vpp-clutch-inspector.png){: .img-small .clickview }
 
-- Lock ratio: a kind of ideal coupling based on locking percent.
-- Disc friction: realistic clutch providing a limited torque transfer.
-- Torque converter: smooth coupling based on the angular velocity. This device is commonly used with
+- Lock Ratio: a kind of ideal coupling based on locking percent.
+- Friction Disc: realistic clutch providing a limited torque transfer.
+- Torque Converter: smooth coupling based on the angular velocity. This device is commonly used with
 	automatic transmissions.
+- Torque Converter Limited: same as Torque Converter but with a limit in the torque than can pass
+	through the clutch.
 
 Details: [Clutch block](/blocks/clutch)
 

@@ -17,13 +17,13 @@ and transmission:
 - When pedal input is 0 the lock ratio is 100% (transmission fully engaged).
 - When pedal input is 1 the lock ratio is 0% (transmission fully disengaged).
 
-#### Disc Friction clutch
+#### Friction Disc clutch
 
 This is the realistic clutch used with manual transmissions. When fully engaged allows a maximum
 amount of torque to be transferred between the engine and the transmission as result of the friction
 between the clutch discs.
 
-![VPP Disc Friction Clutch](/img/blocks/vpp-clutch-disc-friction.png)
+![VPP Friction Disc Clutch](/img/blocks/vpp-clutch-disc-friction.png)
 
 The supported torque transfer value is reduced proportionally to the clutch pedal input:
 
@@ -61,6 +61,11 @@ marked in the graph (yellow marker). Typical values for lock ratio at idle shoul
 This "default locking" is the reason for cars with automatic transmission to start moving gently
 when brake is released.
 
+#### Torque Converter Limited
+
+Same as Torque Converter but with a limit in the torque that can pass through the clutch. This
+allows some clutch slip in certain conditions, such as when switching gears in manual transmissions.
+
 ## Monitoring the clutch
 
 You can check out the actual lock ratio of the transmission at the telemetry or at the Input Monitor
@@ -92,7 +97,7 @@ public class ClutchSettings
 	// Lock Ratio clutch:
 	//		Fully locked or fully open depending on the clutch input. No settings necessary.
 
-	// Disc Friction clutch:
+	// Friction Disc clutch:
 	//		Realistic clutch. Allows a maximum torque transfer when locked. Clutch can slip if
 	// 		engine produces more torque than this value (check torque engine curves).
 	//		Can be used for simulating clutch wear.
