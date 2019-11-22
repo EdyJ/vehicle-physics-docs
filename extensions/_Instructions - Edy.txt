@@ -1,0 +1,8 @@
+Get the path to MkDocs and Python:
+
+mkdocs --version
+
+Copy these files to <Python>\Lib\site-packages
+
+mdx_math.py
+iconfonts.py
