@@ -119,22 +119,39 @@ Fetch the most recent updates to the example project.
 
 ## Using VPP in existing projects
 
-Simply include the VPP repositories as folders or GIT submodules under the Assets folder in your
-Unity project. See the [Repository Reference](#repository-reference) below for GIT URLs and
-requirements.
+The simplest method is to copy or export the folder **Vehicle Physics Pro** from the VPP project to
+the existing project.
 
-#### Professional Edition
+Alternatively you may copy the minimum required folders to run VPP vehicles and use the resources in
+the existing project only. See the [Repository Reference](#repository-reference) below for the VPP
+folder list and their dependencies.
 
-The repository **Vehicle Physics Pro SDK** contains everything needed to run VPP vehicles.
-Additionally, you may include _Vehicle Physics Sample Assets_ (`master-sdk` branch) for quick
-prototyping.
+!!! Info "Project Settings"
+	Note that some settings such as physics, input and layers won't be copied (this would override
+	the settings in the existing project). While VPP itself doesn't depend on any specific settings,
+	the vehicles and demo scenes provided with it may not work correctly within the new project.
 
-#### Enterprise Edition
+	For example, the keyboard input [requires specific Input settings](/components/vehicle-input/)
+	for some features to work correctly.
 
-Enterprise Edition requires **Common Tools Core** and **Vehicle Physics Core** to run VPP vehicles.
-Additionally, you may include _Vehicle Physics Sample Assets_ for quick prototyping. The repository
-_Vehicle Physics Specialized Assets_ includes utility scripts to run specialized vehicles such as
-excavators, caterpillars, dumpers, etc.
+#### Cloning VPP repositories into existing projects
+
+This is a convenient way to keep VPP updated within existing projects. The VPP repositories may be
+cloned as independent folders within the project, or as GIT submodules. See the [Repository Reference](#repository-reference)
+below for GIT URLs and dependencies.
+
+Professional Edition
+:	The repository **Vehicle Physics Pro SDK** contains everything needed to run VPP vehicles.
+
+	Additionally, you may include _Vehicle Physics Sample Assets_ (`master-sdk` branch) for quick
+	prototyping.
+
+Enterprise Edition
+:	Enterprise Edition requires **Common Tools Core** and **Vehicle Physics Core** to run VPP vehicles.
+
+	Additionally, you may include _Vehicle Physics Sample Assets_ for quick prototyping. The repository
+	_Vehicle Physics Specialized Assets_ includes utility scripts to run specialized vehicles such as
+	electric cars, excavators, dumpers, etc.
 
 ## Repository reference
 
@@ -142,20 +159,20 @@ excavators, caterpillars, dumpers, etc.
 
 ![VPP Professional Edition repositories](/img/user-guide/vpp-repository-professional.png)
 
-Repository      |  URLs  | Description
-----------------|--------|----------------
-**[Vehicle&nbsp;Physics&nbsp;Pro&nbsp;-&nbsp;Professional](http://projects.edy.es/trac/edy_vehicle-physics-pro-professional)** | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-pro-professional.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-pro-professional.git/shortlog/refs/heads/master?js=1) | Example project for Unity 3D with development assets and example scenes.<br><br>**_Note:_** The ZIP snapshot doesn't include the submodules. Downloading as ZIP requires the submodules below to be downloaded separately and placed in the corresponding folders under `Assets/Vehicle Physics Pro`.
-[Vehicle Physics Pro SDK](http://projects.edy.es/trac/edy_vehicle-physics-pro-sdk) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-pro-sdk.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/vehicle-physics-pro-sdk.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-pro-sdk.git/shortlog/refs/heads/master?js=1) | Submodule with the Vehicle Physics Pro SDK files.<br>This repo contains everything needed to run VPP in existing projects. |
-[Vehicle Physics Sample Assets](http://projects.edy.es/trac/edy_vehicle-physics-sample-assets) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-sample-assets.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/vehicle-physics-sample-assets.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-sample-assets.git/shortlog/refs/heads/master-sdk?js=1) | Submodule with a set of assets and resources for prototyping and tests.<br>Requires Vehicle Physics Pro SDK.<br><br>**_Important:_** check-out or download the `master-sdk` branch instead of master for this repo to work with the VPP SDK files. |
+Repository      |  URLs  | Folder | Description
+----------------|--------|--------|--------------
+**[Vehicle&nbsp;Physics&nbsp;Pro&nbsp;-&nbsp;Professional](http://projects.edy.es/trac/edy_vehicle-physics-pro-professional)** | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-pro-professional.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-pro-professional.git/shortlog/refs/heads/master?js=1) | _(Unity Project)_ | Example project for Unity 3D with development assets, demos, vehicles and examples.<br><br>**_Note:_** The ZIP snapshot doesn't include the submodules. Downloading as ZIP requires the submodules below to be downloaded separately and placed in the corresponding folders under `Assets/Vehicle Physics Pro`.
+[Vehicle Physics Pro SDK](http://projects.edy.es/trac/edy_vehicle-physics-pro-sdk) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-pro-sdk.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/vehicle-physics-pro-sdk.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-pro-sdk.git/shortlog/refs/heads/master?js=1) | `VehiclePhysicsPro/Sdk` | Submodule with the Vehicle Physics Pro SDK files.<br>This repo contains everything needed to run VPP in existing projects. |
+[Vehicle Physics Sample Assets](http://projects.edy.es/trac/edy_vehicle-physics-sample-assets) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-sample-assets.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/vehicle-physics-sample-assets.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-sample-assets.git/shortlog/refs/heads/master-sdk?js=1) | `Vehicle Physics Pro/Sample Assets` | Submodule with a set of assets and resources for prototyping and tests.<br>Requires Vehicle Physics Pro SDK.<br><br>**_Important:_** check-out or download the `master-sdk` branch instead of master for this repo to work with the VPP SDK files. |
 
 ### Enterprise Edition
 
 ![VPP Enterprise Edition repositories](/img/user-guide/vpp-repository-enterprise.png)
 
-Repository      |  URLs  | Description
-----------------|--------|----------------
-**[Vehicle&nbsp;Physics&nbsp;Pro&nbsp;-&nbsp;Enterprise](http://projects.edy.es/trac/edy_vehicle-physics-pro)** | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-pro.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-pro.git/shortlog/refs/heads/master?js=1) | Example project for Unity 3D with source code, examples, development resources, etc.<br><br>**_Note:_** The ZIP snapshot doesn't include the submodules. Downloading as ZIP requires the submodules below to be downloaded separately and placed in the corresponding folders under `Assets/Core`.
-[Common Tools Core](http://projects.edy.es/trac/edy_common-tools-core) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/common-tools-core.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/common-tools-core.git)<br>[ZIP](http://projects.edy.es/git/edy/common-tools-core.git/shortlog/refs/heads/master?js=1) | Submodule with common tools and utility scripts.
-[Vehicle Physics Core](http://projects.edy.es/trac/edy_vehicle-physics-core) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-core.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/vehicle-physics-core.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-core.git/shortlog/refs/heads/master?js=1) | Submodule with the vehicle physics simulation scripts and components.<br>Requires Common Tools Core.<br>This repo together with Common Tools Core is everything needed to run VPP in existing projects.
-[Vehicle Physics Sample Assets](http://projects.edy.es/trac/edy_vehicle-physics-sample-assets) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-sample-assets.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/vehicle-physics-sample-assets.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-sample-assets.git/shortlog/refs/heads/master?js=1) | Submodule with a set of assets and resources for prototyping and tests.<br>Requires Common Tools Core and Vehicle Physics Core.
-[Vehicle&nbsp;Physics&nbsp;Specialized&nbsp;Assets](http://projects.edy.es/trac/edy_vehicle-physics-specialized-assets) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-specialized-assets.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/vehicle-physics-specialized-assets.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-specialized-assets.git/shortlog/refs/heads/master?js=1) | Submodule with specialized vehicle support (excavators, loaders, caterpillars, etc).<br>Requires Common Tools Core and Vehicle Physics Core.
+Repository      |  URLs  | Folder |Description
+----------------|--------|--------|-------------
+**[Vehicle&nbsp;Physics&nbsp;Pro&nbsp;-&nbsp;Enterprise](http://projects.edy.es/trac/edy_vehicle-physics-pro)** | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-pro.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-pro.git/shortlog/refs/heads/master?js=1) | _(Unity Project)_ | Example project for Unity 3D with source code, demos, vehicles, examples, etc.<br><br>**_Note:_** The ZIP snapshot doesn't include the submodules. Downloading as ZIP requires the submodules below to be downloaded separately and placed in the corresponding folders under `Assets/Core`.
+[Common Tools Core](http://projects.edy.es/trac/edy_common-tools-core) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/common-tools-core.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/common-tools-core.git)<br>[ZIP](http://projects.edy.es/git/edy/common-tools-core.git/shortlog/refs/heads/master?js=1) | `Core/Common Tools Core` | Submodule with common tools and utility scripts.
+[Vehicle Physics Core](http://projects.edy.es/trac/edy_vehicle-physics-core) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-core.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/vehicle-physics-core.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-core.git/shortlog/refs/heads/master?js=1) | `Core/Vehicle Physics Core` | Submodule with the vehicle physics simulation scripts and components.<br>Requires Common Tools Core.<br>This repo together with Common Tools Core is everything needed to run VPP in existing projects.
+[Vehicle Physics Sample Assets](http://projects.edy.es/trac/edy_vehicle-physics-sample-assets) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-sample-assets.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/vehicle-physics-sample-assets.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-sample-assets.git/shortlog/refs/heads/master?js=1) | `Core/Vehicle Physics Sample Assets` | Submodule with a set of assets and resources for prototyping and tests.<br>Requires Common Tools Core and Vehicle Physics Core.
+[Vehicle&nbsp;Physics&nbsp;Specialized&nbsp;Assets](http://projects.edy.es/trac/edy_vehicle-physics-specialized-assets) | [GIT&#8209;SSH](ssh://git@projects.edy.es/edy/vehicle-physics-specialized-assets.git)<br>[GIT&#8209;HTTP](http://projects.edy.es/git/edy/vehicle-physics-specialized-assets.git)<br>[ZIP](http://projects.edy.es/git/edy/vehicle-physics-specialized-assets.git/shortlog/refs/heads/master?js=1) | `Core/Vehicle Physics Specialized Assets` | Submodule with specialized vehicle support (electric, excavators, caterpillars, etc).<br>Requires Common Tools Core and Vehicle Physics Core.

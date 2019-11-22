@@ -1,9 +1,9 @@
 # Changelog
 
-This list is a brief summary of the most significant additions to Vehicle Physics Pro along time.
-It doesn't include minor changes or fixes.
+This list is a brief summary of the most significant additions to Vehicle Physics Pro over time. It
+doesn't include minor changes or fixes.
 
-Licensees may access the full development details via GIT revision logs (VPP subscription required):
+Full development details are available via GIT revision logs ([VPP subscription](/about/licensing) required):
 
 - [Vehicle Physics Core (Source Code version)](http://projects.edy.es/trac/edy_vehicle-physics-core/log/)
 - [Vehicle Physics Core (SDK version)](http://projects.edy.es/trac/edy_vehicle-physics-pro-sdk/log/)
@@ -11,6 +11,22 @@ Licensees may access the full development details via GIT revision logs (VPP sub
 - [Sample Assets](http://projects.edy.es/trac/edy_vehicle-physics-sample-assets/log/)
 
 <hr>
+
+#### November 2019 - SDK V7
+
+- New component **VPVehicleToolkit** providing an useful high-level interface to the most commonly used vehicle features.
+- New support for the **Fanatec Podium Wheel Base DD2** steering wheel.
+- Added support 3D vehicle models oriented in any axis, not necessarily "front +Z".
+- New **camera movement** option in first person (driver) view.
+- Splines may now be imported from **CSV** files.
+
+#### October 2019
+
+- New **electric vehicle controller** providing precise simulation of electric motors with regenerative braking. [Tweet](https://twitter.com/VehiclePhysics/status/1196435439588118529)
+- Added support **CXC** motion cueing systems. [Info on CXC](https://www.cxcsimulations.com)
+- New **automatic spring and damper setup** via context menu option in the VPWheelCollider component.
+- New **example scripts** for writing custom input logic, custom wheel effects and custom handling setup.
+- New components to precisely configure timing and inertias in the excavator controller.
 
 #### August 2019 - SDK V6
 

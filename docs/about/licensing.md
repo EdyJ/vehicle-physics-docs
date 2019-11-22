@@ -25,8 +25,8 @@ Full source code included																				|	|	| &fa-check; |
 Advanced simulation features: multi-body vehicles, solid and liquid cargo components					|	|	| &fa-check; |
 Advanced suspension features: damper bump & rebound, dynamic suspension, bump stop					|	|	| &fa-check; |
 Specialized vehicle support: motorbike, caterpillar, mining, excavators, hydraulic actuators. [Showcase](/about/showcase/)	|	|	| &fa-check; |
-Advanced vehicle controllers: two-wheeled, bulldozer, [diesel-electric](https://twitter.com/VehiclePhysics/status/1135951323629854721), tracked, hydraulic-tracked	|	|	| &fa-check; |
-Framework for autonomous vehicles: self-drive, automated tests, path follow, export data to CSV			|	|	| &fa-check; |
+Advanced vehicle controllers: electric, two-wheeled, bulldozer, [diesel-electric](https://twitter.com/VehiclePhysics/status/1135951323629854721), tracked, hydraulic-tracked	|	|	| &fa-check; |
+Framework for AI and autonomous vehicles: self-drive, automated tests, path follow, export data to CSV	|	|	| &fa-check; |
 Engine configuration tool to fit the engine settings to real data _(Experimental)_						|	|	| &fa-check; |
 Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/), [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/), [CXC](https://www.cxcsimulations.com)	|	|	| &fa-check; |
 Support by Skype / Discord																				|	|	| &fa-check; |
