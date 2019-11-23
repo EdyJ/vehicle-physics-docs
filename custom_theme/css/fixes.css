@@ -122,3 +122,11 @@ div.col-md-9
 	padding-bottom: 40px;
 	}
 
+
+/*	Prevent source code wordwrap
+*/
+
+pre code
+	{
+    white-space: pre;
+	}
