@@ -63,6 +63,7 @@ nav:
   - Telemetry: components/vehicle-telemetry.md
   - Ground Materials: components/ground-materials.md
   - Camera Controller: components/camera-controller.md
+  - Vehicle Toolkit: components/vehicle-toolkit.md
 - Blocks:
   - Inertia: blocks/inertia.md
   - Steering: blocks/steering.md

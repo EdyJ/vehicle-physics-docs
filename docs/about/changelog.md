@@ -14,7 +14,7 @@ Full development details are available via GIT revision logs ([VPP subscription]
 
 #### November 2019 - SDK V7
 
-- New component **VPVehicleToolkit** providing an useful high-level interface to the most commonly used vehicle features.
+- New component **[VPVehicleToolkit](/components/vehicle-toolkit)** providing an useful high-level interface to the most commonly used vehicle features.
 - New support for the **Fanatec Podium Wheel Base DD2** steering wheel.
 - Added support 3D vehicle models oriented in any axis, not necessarily "front +Z".
 - New **camera movement** option in first person (driver) view.
