@@ -37,7 +37,7 @@ Diff-->WRR
 end
 </div>
 
-The drive power is provided by a direct drive motor (think on an ideal electric engine) that
+The drive power is provided by a direct drive motor (think on an ideal electric motor) that
 provides up to a maximum torque (maxDriveTorque) and can reach a maximum RPMs (maxDriveRpm). Rear
 wheels are connected to the direct drive with a differential in the default configuration (Open).
 Steering, Brakes and Tires are parts of the Wheel blocks.

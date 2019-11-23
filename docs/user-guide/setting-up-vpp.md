@@ -151,7 +151,7 @@ Enterprise Edition
 
 	Additionally, you may include _Vehicle Physics Sample Assets_ for quick prototyping. The repository
 	_Vehicle Physics Specialized Assets_ includes utility scripts to run specialized vehicles such as
-	electric cars, excavators, dumpers, etc.
+	electric and hybrid cars, excavators, dumpers, etc.
 
 ## Repository reference
 

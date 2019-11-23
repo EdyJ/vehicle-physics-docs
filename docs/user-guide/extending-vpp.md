@@ -24,7 +24,7 @@ Then they may use the API exposed by ```VehicleBase``` and/or the vehicle's **Da
 The standard vehicle controller (```VPVehicleController```) implements the most common vehicle types.
 However, you can write a custom vehicle controller by writing a class that inherits from
 ```VehicleBase```. This way you car implement non-standard or unconventional vehicles not supported
-by the standard vehicle controller component, such as electric multi-motor cars.
+by the standard vehicle controller component, such as electric or hybrid multi-motor cars.
 
 Put it simple, VehicleBase implements the chassis and the wheels of the vehicle. You can then add
 functional components or **_Blocks_** arranged in any number and combination, then connect their
