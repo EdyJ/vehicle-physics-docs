@@ -95,6 +95,7 @@ component.
 - Select the four VPWheelCollider components under WheelColliders.
 - Click the context menu for the VPWheelCollider component and choose **Adjust position and radius
 	to the Wheel mesh**.
+- Repeat with **Configure spring and dampers to the vehicle's mass**.
 
 The VPWheelCollider components adjust their positions and radii to the visual wheels. See
 _"Configuring the VPWheelColliders manually"_ below if you need to do it manually.
