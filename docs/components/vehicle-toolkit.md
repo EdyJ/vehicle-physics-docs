@@ -21,6 +21,12 @@ VPVehicleToolkit may also be used to learn how to interact with the vehicle from
 	bool isEngineStarting
 	bool isEngineStarted
 	bool hasEngineStalled
+	float longitudinalG
+	float lateralG
+	float verticalG
+	float throttlePedal
+	float brakePedal
+	float clutchPedal
 
 #### Methods
 
@@ -202,6 +208,36 @@ public class VPVehicleToolkit : VehicleBehaviour
 		}
 
 
+	// Acceleration readings in G factors
+
+	public float longitudinalG
+		{
+		get
+			{
+			if (vehicle == null) return 0.0f;
+			return vehicle.localAcceleration.z / Gravity.reference;
+			}
+		}
+
+	public float lateralG
+		{
+		get
+			{
+			if (vehicle == null) return 0.0f;
+			return vehicle.localAcceleration.x / Gravity.reference;
+			}
+		}
+
+	public float verticalG
+		{
+		get
+			{
+			if (vehicle == null) return 0.0f;
+			return vehicle.localAcceleration.y / Gravity.reference;
+			}
+		}
+
+
 	// Start the engine
 
 	[ContextMenu("Start Engine")]
@@ -301,6 +337,64 @@ public class VPVehicleToolkit : VehicleBehaviour
 		if (vehicle == null) return;
 
 		vehicle.data.Set(Channel.Input, InputData.Clutch, (int)(clutch * 10000.0f));
+		}
+
+
+	// Current positions of the pedals
+	//
+	// These are the "physical" pedal positions, but they don't necessarily represent the
+	// input being applied to the vehicle. For example, the gas pedal may not be pressed but the
+	// engine could be receiving throttle from cruise control or self-driving systems.
+	//
+	// Positions may also be set here instead of calling the methods above
+
+
+	// Throttle: 0.0f to 1.0f
+
+	public float throttlePedal
+		{
+		get
+			{
+			if (vehicle == null) return 0.0f;
+			return Mathf.Clamp01(vehicle.data.Get(Channel.Input, InputData.Throttle));
+			}
+
+		set
+			{
+			SetThrottle(value);
+			}
+		}
+
+	// Brake: 0.0f to 1.0f
+
+	public float brakePedal
+		{
+		get
+			{
+			if (vehicle == null) return 0.0f;
+			return Mathf.Clamp01(vehicle.data.Get(Channel.Input, InputData.Brake));
+			}
+
+		set
+			{
+			SetBrake(value);
+			}
+		}
+
+	// Clutch: 0.0f to 1.0f
+
+	public float clutchPedal
+		{
+		get
+			{
+			if (vehicle == null) return 0.0f;
+			return Mathf.Clamp01(vehicle.data.Get(Channel.Input, InputData.Clutch));
+			}
+
+		set
+			{
+			SetClutch(value);
+			}
 		}
 
 
