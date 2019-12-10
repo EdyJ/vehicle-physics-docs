@@ -36,10 +36,6 @@ VPVehicleToolkit may also be used to learn how to interact with the vehicle from
 
 #### Methods
 
-&fa-info-circle:lg; All methods that don't require arguments are also available via component's
-	context menu.
-	{: .alert .alert-info }
-
 	void StartEngine ()
 	void StopEngine ()
 	void ToggleStartStopEngine ()
@@ -59,6 +55,10 @@ VPVehicleToolkit may also be used to learn how to interact with the vehicle from
 	void SetGear (int gear)
 	void ShiftGearUp ()
 	void ShiftGearDown ()
+
+&fa-info-circle:lg; All methods that don't require arguments are also available via component's
+	context menu.
+	{: .alert .alert-info }
 
 ### Source code
 
