@@ -24,6 +24,12 @@ VPVehicleToolkit may also be used to learn how to interact with the vehicle from
 	float longitudinalG
 	float lateralG
 	float verticalG
+	float pitch
+	float roll
+	float yaw
+	float pitchVelocity
+	float rollVelocity
+	float yawVelocity
 	float throttlePedal
 	float brakePedal
 	float clutchPedal
@@ -81,6 +87,7 @@ The full source code in VPVehicleToolkit.cs is provided here for reference.
 
 
 using UnityEngine;
+using EdyCommonTools;
 
 
 namespace VehiclePhysics
@@ -184,7 +191,7 @@ public class VPVehicleToolkit : VehicleBehaviour
 		}
 
 
-    // Returns true when the engine is switched on and running
+	// Returns true when the engine is switched on and running
 
 	public bool isEngineStarted
 		{
@@ -234,6 +241,66 @@ public class VPVehicleToolkit : VehicleBehaviour
 			{
 			if (vehicle == null) return 0.0f;
 			return vehicle.localAcceleration.y / Gravity.reference;
+			}
+		}
+
+
+	// Pitch and roll in degrees in range -180..+180
+
+	public float pitch
+		{
+		get
+			{
+			Vector3 angles = vehicle.cachedTransform.eulerAngles;
+			return MathUtility.ClampAngle(angles.x);
+			}
+		}
+
+	public float roll
+		{
+		get
+			{
+			Vector3 angles = vehicle.cachedTransform.eulerAngles;
+			return MathUtility.ClampAngle(angles.z);
+			}
+		}
+
+
+	// Yaw in degrees in range 0..360
+
+	public float yaw
+		{
+		get
+			{
+			Vector3 angles = vehicle.cachedTransform.eulerAngles;
+			return angles.y;
+			}
+		}
+
+
+	// Pitch, roll and yaw velocities in radians per second
+
+	public float pitchVelocity
+		{
+		get
+			{
+			return vehicle.cachedRigidbody.angularVelocity.x;
+			}
+		}
+
+	public float rollVelocity
+		{
+		get
+			{
+			return vehicle.cachedRigidbody.angularVelocity.z;
+			}
+		}
+
+	public float yawVelocity
+		{
+		get
+			{
+			return vehicle.cachedRigidbody.angularVelocity.y;
 			}
 		}
 
