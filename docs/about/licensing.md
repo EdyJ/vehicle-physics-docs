@@ -68,7 +68,7 @@ May be licensed by companies with annual revenue / funds / budget in excess of �
 The subscription model allows continuous development, feature updates, and product support in the
 long term.
 
-### Additional Services
+### Professional Services
 
 Vehicle Rig and Setup
 
@@ -90,7 +90,7 @@ Training and Learning
 - 120 €/hour, with a limit of 8 hours per week per customer.
 - Extra hours, or support provided outside the available time slots: 240 €/hour
 - Traveling to the customer's location: 1200 €/day + expenses, with a limit of 5 work days per month.
-- Training (on site or online): 1200 €/day
+- Online training: 1200 €/day
 
 ##### Notes
 
