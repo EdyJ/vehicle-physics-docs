@@ -36,7 +36,7 @@ Realistic and coherent
 
 	[More features and details](about/features)
 
-&fa-thumbs-up:lg; &nbsp; Stay tunned! Follow [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link}
+&fa-thumbs-up:lg; &nbsp; Stay tuned! Follow [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link}
 on Twitter for the latest news and announcements.
 {: .alert .alert-success }
 
