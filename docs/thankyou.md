@@ -18,6 +18,6 @@ Also follow [@vehiclephysics](https://twitter.com/VehiclePhysics) on Twitter fo
 updates. Most announcements are posted first to the [#vppdev](https://mail.google.com/mail/u/0/?zx=6n7z2cj0zoj6#inbox?compose=new)
 hashtag.
 
-Please let me know if you have any questions!
+As always, let me know if you have any questions!
 
 edy@vehiclephysics.com
