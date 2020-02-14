@@ -2,7 +2,118 @@
 
 ![VP Vehicle Controller gearbox](/img/blocks/vpp-gearbox-inspector.png){: .clickview }
 
-(Documentation Work In Progress)
+#### Transmission Type
+
+Manual
+:	Each gear is either engaged or disengaged. Smooth gear shifting requires engaging the clutch or
+	configuring a Torque Converter.
+
+	The **Auto shift** option in the Gearbox configuration provides automatic gear shifting.
+
+Automatic
+:	Gears are engaged via clutches inside the gearbox, so shifting gears provide a smooth transition
+	between them. Automatic transmissions are typically used in combination with a Torque Converter
+	as clutch.
+
+	The **[D]** mode provides auto-shifting, while the **[M]** mode requires gears to be engaged
+	manually.
+
+#### Gear Ratios
+
+Forward Gear Ratios
+:	Forward gears (positive ratios). 0 is the first gear, 1 the second gear, and so on. Ratios should
+	be configured in descending order for the automatic shifting features to work.
+
+Reverse Gear Ratios
+:	Reverse gears (negative ratios). 0 is the first reverse gear, 1 the second reverse gear, and so
+	on. If _Auto-shift in Reverse_ is enabled then ratios should be specified in ascending order
+	(i.e. -3, -2, -1).
+
+#### Manual Transmission
+
+Each gear is either engaged or disengaged. Smooth gear shifting requires engaging the clutch or
+configuring a Torque Converter.
+
+![VP Manual Transmission](/img/blocks/vpp-gearbox-manual-transmission.png){: .clickview }
+
+Gear Change Time
+:	Time in seconds that takes shifting to current gear to another. Gearbox stays in Neutral during
+	this time.
+
+Auto Shift
+:	Enables automatic gear shifting
+
+	Neutral Rpm
+	:	Engages Neutral when rpm falls below this value
+
+	First Gear Rpm
+	:	First Gear is engaged from Neutral above this rpm
+
+	Gear Down Rpm
+	:	Shifts gear down below this rpm
+
+	Gear Up Rpm
+	:	Shifts gear up above this rpm
+
+	Gear Up Interval
+	:	Minimum time in seconds between two consecutive gear up shifts.
+
+	Gear Down Interval
+	:	Minimum time in seconds between two consecutive gear down shifts.
+
+	2nd Gear Min Speed
+	:	Minimum speed of the vehicle in m/s to allow automatic gear shifting above the 2nd gear.
+		Useful to prevent gear shifting when the drive wheels are heavily slipping in 1st gear.
+
+Allow Park Mode
+:	Park mode [P] is typical of automatic transmissions. This option enables park mode in the manual
+	transmission.
+
+	Strict Park Mode
+	:	If enabled the park mode [P] can be engaged or disengaged only when the brake is strongly
+		pressed.
+
+#### Automatic Transmission
+
+Gears are engaged via clutches inside the gearbox, so shifting gears provide a smooth transition
+between them. Automatic transmissions are typically used in combination with a Torque Converter
+as clutch.
+
+![VP Automatic Transmission](/img/blocks/vpp-gearbox-automatic-transmission.png){: .clickview }
+
+Gear Transition Time
+:	Duration in seconds of the smooth transition from a gear to another.
+
+Shift Interval
+:	Minimum time in seconds between two consecutive gear changes.
+
+Gear Down Rpm
+:	A shorter gear is selected below this rpm.
+
+Gear Up Rpm
+:	A longer gear is selected above this rpm.
+
+Initial Gear Forward
+:	The forward gear to engage when selecting the [D] mode. Typically is 1, but some vehicles with
+	many gears may engage the 2nd, 3rd or even 4rd. In these cases the shorter gears can be
+	selected in [L] mode and with the shift-up / shift-down inputs.
+
+Initial Gear Reverse
+:	The reverse gear to engage when selecting the [R] mode. Typically is -1, but some vehicles with
+	several reverse gears may engage any other initially. Other reverse gears may be selected with
+	the shift-up / shift-down inputs.
+
+Next Gear Min Speed
+:	Minimum speed of the vehicle in m/s to allow automatic engagement of gears based on current
+	speed. Note that above this min speed the system may select a gear shorter than the initial ones.
+
+Auto-Shift In Reverse
+:	Applies auto-shifting in reverse mode [R]. Reverse gear ratios should be in ascending order for
+	this feature to work properly (i.e. -3, -2, -1).
+
+Strict Park Mode
+:	If enabled the park mode [P] can be engaged or disengaged only when the brake is strongly
+	pressed.
 
 ### Data Bus parameters
 
@@ -33,20 +144,23 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 
 #### The AutoShiftOverride value
 
-The behavior of AutoShiftOverride depends on the vehicle's transmission type:
+The automatic shifting feature in both Manual and Automatic transmissions may be overridden from
+scripting via Data Bus by modifying the AutoShiftOverride value in the Settings channel.
 
-- Automatic transmission: the override value switches among modes Manual [M] and Drive [D], but
+The effect of the AutoShiftOverride value depends on the vehicle's transmission type:
+
+- **Automatic transmission:** the override value switches among modes Manual [M] and Drive [D], but
 	does nothing if any other mode is selected (i.e. Neutral [N] or Reverse [R]). It's also subject
 	to the conditions of each mode. For example, [D] can't be selected if the vehicle is moving
 	backwards faster than a threshold speed.
-- Manual transmission: the override value enables or disables the auto-shift feature.
+- **Manual transmission:** the override value enables or disables the auto-shift feature.
 
-AutoShiftOverride is intended to temporary overrides in specific situations. For example, it's used
-for preventing gear shifting during replays, as the replay data already includes the currently
-engaged gear.
+AutoShiftOverride is intended to temporarily override auto-shifting in specific situations. For
+example, it's used for preventing gear shifting during replays, as the replay data already includes
+the currently engaged gear.
 
 AutoShiftOverride is not a reliable way of implementing an auto-shift / manual-shift selector in the
-vehicle because the value might be overwritten by other components. See below.
+vehicle because the value might be overwritten by other components. Read below.
 
 ### Auto-shift / manual-shift selection
 
