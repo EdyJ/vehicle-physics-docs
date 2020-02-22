@@ -93,10 +93,10 @@ This setting will be moved to Tire Friction at some point.
 
 The default value of 0.5 works correctly on most vehicles.
 
-- It may be raised on vehicles with low center of mass (e.g. F1 and racing cars) for enhancing the
-effect of the transition from slip to adherent.
-- It should be lowered on vehicles with elevated center of mass and/or heavy load if they experiment
-visible jittering at rest.
+- It may be raised above 0.5 on vehicles with low center of mass (e.g. F1 and racing cars) for
+enhancing the effect of the transition from slip to adherent.
+- It should be lowered to 0.4 or less on vehicles with elevated center of mass and/or heavy load
+if they experiment visible jittering at rest.
 
 !!! Info "&fa-gear; Tech details"
 	The VPP solver calculates the impulses that keep the tires adherent to the surface. These are the
