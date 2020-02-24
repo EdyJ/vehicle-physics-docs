@@ -24,7 +24,7 @@ Number of developers 				 																	| 	| 1 | up to 10 |
 Full source code included																				|	|	| &fa-check; |
 Advanced simulation features: multi-body vehicles, solid and liquid cargo components					|	|	| &fa-check; |
 Advanced suspension features: damper bump & rebound, dynamic suspension, bump stop					|	|	| &fa-check; |
-Specialized vehicle support: motorbike, caterpillar, mining, excavators, hydraulic actuators. [Showcase](/about/showcase/)	|	|	| &fa-check; |
+Specialized vehicle controllers: motorbike, caterpillar, mining, excavators, hydraulic actuators. [Showcase](/about/showcase/)	|	|	| &fa-check; |
 Advanced vehicle controllers: electric, hybrid, two-wheeled, bulldozer, [diesel-electric](https://twitter.com/VehiclePhysics/status/1135951323629854721), tracked, hydraulic-tracked	|	|	| &fa-check; |
 Framework for AI and autonomous vehicles: self-drive, automated tests, path follow, export data to CSV	|	|	| &fa-check; |
 Engine configuration tool to fit the engine settings to real data _(Experimental)_						|	|	| &fa-check; |
