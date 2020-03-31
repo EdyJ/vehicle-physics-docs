@@ -27,12 +27,13 @@ Advanced suspension features: damper bump & rebound, dynamic suspension, bump st
 Specialized vehicle controllers: motorbike, caterpillar, mining, excavators, hydraulic actuators. [Showcase](/about/showcase/)	|	|	| &fa-check; |
 Advanced vehicle controllers: electric, hybrid, two-wheeled, bulldozer, [diesel-electric](https://twitter.com/VehiclePhysics/status/1135951323629854721), tracked, hydraulic-tracked	|	|	| &fa-check; |
 Framework for AI and autonomous vehicles: self-drive, automated tests, path follow, export data to CSV	|	|	| &fa-check; |
+Unity Timeline integration for splines																	|	|	| &fa-check; |
 Engine configuration tool to fit the engine settings to real data _(Experimental)_						|	|	| &fa-check; |
 Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/), [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/), [CXC](https://www.cxcsimulations.com)	|	|	| &fa-check; |
 Support by Skype / Discord																				|	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
-**License Setup Fee**<br>_License is perpetual after this payment_									| **FREE** | **€590** | **€5900** |
-**Support & updates via GIT repository**<br>_First year included in the license setup fee_				| _n/a_ | €190<br>/year | €1900<br>/year |
+**License Setup Fee**<br>_One-time payment, perpetual license_											| **FREE** | **€ 590** | **€ 5900** |
+**Support and updates**<br>_First year included in the license setup fee_								| _n/a_ | € 190<br>/year | € 1900<br>/year |
 **GET LICENSE**							| [**Asset&nbsp;Store**](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556) | [**BUY&nbsp;NOW**](https://goo.gl/EoAe5v) | [**BUY&nbsp;NOW**](https://goo.gl/QzPdcu) |
 
 &fa-warning:lg; License versions, terms, content and pricing are subject to change without prior notice.
@@ -59,14 +60,13 @@ May be licensed by companies with annual revenue / funds / budget in excess of �
 
 ##### Subscription
 
+The subscription model allows continuous development, feature updates, and product support in the
+long term.
+
 - Professional and Enterprise licenses include a yearly subscription for support and updates.
 - First year of support and updates is included with license setup fee.
 - Customers may opt-out any time and keep the most recent VPP version at that time.
 - A grace period of 120 days is granted after opting-out to rejoin paying the subscription fee only.
-	Rejoining after the grace period requires paying the license setup fee in full.
-
-The subscription model allows continuous development, feature updates, and product support in the
-long term.
 
 ### Professional Services
 
