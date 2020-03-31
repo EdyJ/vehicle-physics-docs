@@ -7,7 +7,7 @@ VPP is shipped in three different ways:
 - **GIT repositories** that may reside in exiting Unity projects as GIT submodules.
 - **[Asset Store Package](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)** (Community Edition only).
 
-### Download and import VPP in Unity
+### Download and import VPP unitypackage
 
 1. Login with your VPP credentials to download the .unitypackage file:
 
