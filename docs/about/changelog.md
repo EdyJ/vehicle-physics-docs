@@ -12,6 +12,21 @@ Full development details are available via GIT revision logs ([VPP subscription]
 
 <hr>
 
+#### March 2020 - SDK V8
+
+- **Unitypackages** are now provided for downloading Vehicle Physics Pro and configuring the Project Settings. [Learn more](/user-guide/setting-up-vpp)
+- **Tire friction model improved** providing smoother and much more realistic behavior. [Video](https://twitter.com/VehiclePhysics/status/1239565257519050758)
+- **Anti-roll bar improved** for better control at high speeds. [Tweet](https://twitter.com/VehiclePhysics/status/1237023540722966531)
+- New **ground rumble effects** providing physics relief effects on flat geometry. [Tweet](https://twitter.com/VehiclePhysics/status/1242097538775334912)
+- New **Transmission Efficiency** parameter in the Driveline to simulate power loss due to internal frictions. [Tweet](https://twitter.com/VehiclePhysics/status/1234485207052562432)
+- New **VPTireAudio** component providing accurate tire skid audio per-wheel independently.
+
+#### February 2020
+
+- New fast and accurate Spline **projection** and **distance measurement** methods. [Video](https://twitter.com/VehiclePhysics/status/1225066029807800320)
+- New **PID-based** VPTargetChaser component for precisely follow a moving target. [Video](https://twitter.com/VehiclePhysics/status/1232680344404611077)
+- Spa-Francorchamps example track reworked and simplified.
+
 #### November 2019 - SDK V7
 
 - New component **[VPVehicleToolkit](/components/vehicle-toolkit)** providing an useful high-level interface to the most commonly used vehicle features.
