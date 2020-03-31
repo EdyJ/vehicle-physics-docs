@@ -5,9 +5,9 @@ doesn't include minor changes or fixes.
 
 Full development details are available via GIT revision logs ([VPP subscription](/about/licensing) required):
 
-- [Vehicle Physics Core (Source Code version)](http://projects.edy.es/trac/edy_vehicle-physics-core/log/)
-- [Vehicle Physics Core (SDK version)](http://projects.edy.es/trac/edy_vehicle-physics-pro-sdk/log/)
-- [Specialized Assets](http://projects.edy.es/trac/edy_vehicle-physics-specialized-assets/log/)
+- [Vehicle Physics Core (Source Code)](http://projects.edy.es/trac/edy_vehicle-physics-core/log/)
+- [Vehicle Physics Core (SDK DLL)](http://projects.edy.es/trac/edy_vehicle-physics-pro-sdk/log/)
+- [Specialized Assets (Enterprise edition only](http://projects.edy.es/trac/edy_vehicle-physics-specialized-assets/log/)
 - [Sample Assets](http://projects.edy.es/trac/edy_vehicle-physics-sample-assets/log/)
 
 <hr>
