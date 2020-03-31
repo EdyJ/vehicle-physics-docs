@@ -7,7 +7,7 @@ Full development details are available via GIT revision logs ([VPP subscription]
 
 - [Vehicle Physics Core (Source Code)](http://projects.edy.es/trac/edy_vehicle-physics-core/log/)
 - [Vehicle Physics Core (SDK DLL)](http://projects.edy.es/trac/edy_vehicle-physics-pro-sdk/log/)
-- [Specialized Assets (Enterprise edition only](http://projects.edy.es/trac/edy_vehicle-physics-specialized-assets/log/)
+- [Specialized Assets (Enterprise edition)](http://projects.edy.es/trac/edy_vehicle-physics-specialized-assets/log/)
 - [Sample Assets](http://projects.edy.es/trac/edy_vehicle-physics-sample-assets/log/)
 
 <hr>
