@@ -9,8 +9,9 @@ VPP is shipped in three different ways:
 
 ### Download and import VPP unitypackage
 
-1. Login with your VPP credentials to download the .unitypackage file:
+1. Download the .unitypackage file. Professional and Enterprise editions require a [VPP subscription](/about/licensing).
 
+	- **[Community Edition](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)**
 	- **[Professional Edition](https://edy.repositoryhosting.com/webdav/edy_vehicle-physics-pro-professional/)**
 	- **[Enterprise Edition](https://edy.repositoryhosting.com/webdav/edy_vehicle-physics-pro/)**
 
