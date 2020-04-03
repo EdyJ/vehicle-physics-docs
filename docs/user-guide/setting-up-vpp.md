@@ -1,19 +1,28 @@
 
 # Setting Up Vehicle Physics Pro
 
-VPP is shipped in three different ways:
+VPP may be downloaded as:
 
-- **Unitypackage** files to be imported directly in Unity.
-- **GIT repositories** that may reside in exiting Unity projects as GIT submodules.
+- **Unitypackage** file to be imported directly in Unity.
+- **GIT repositories** that may reside in existing Unity projects as GIT submodules.
 - **[Asset Store Package](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)** (Free Community Edition).
+
+### Requirements
+
+- Minimum Unity version: Unity 2017.1 _(core files only; demos and examples excluded)_
+- Recommended Unity version: **Unity 2018.4+**
+- Scripting Runtime Version: **.NET 4.x Equivalent**
+- API Compatibility Level: **.NET 4.x** _(required in the Enterprise edition only)_
+
+Scripting Runtime Version and API Compatibility Level may be configured in Project Settings > Player > Other Settings > Configuration section.
 
 ### Download and import VPP unitypackage
 
-1. Download the .unitypackage file. Professional and Enterprise editions require a [VPP subscription](/about/licensing).
+1. Download the .unitypackage file.
 
 	- **[Community Edition](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)**
-	- **[Professional Edition](https://edy.repositoryhosting.com/webdav/edy_vehicle-physics-pro-professional/)**
-	- **[Enterprise Edition](https://edy.repositoryhosting.com/webdav/edy_vehicle-physics-pro/)**
+	- **[Professional Edition](https://edy.repositoryhosting.com/webdav/edy_vehicle-physics-pro-professional/)** ([VPP subscription](/about/licensing) required)
+	- **[Enterprise Edition](https://edy.repositoryhosting.com/webdav/edy_vehicle-physics-pro/)** ([VPP subscription](/about/licensing) required)
 
 2. Import the .unitypackage file into an Unity 3D project.
 
