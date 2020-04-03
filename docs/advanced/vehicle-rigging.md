@@ -25,9 +25,8 @@ WheelColliders
 
 - Child WheelColliders GameObject with one VPWheelCollider child per wheel.
 - **Specify wheel meshes** in  VPWheelCollider.
-- Align VPWheelColliders with meshes. Verify alignment.
-- Spring: mass * g * 8 / number of wheels
-- Damper: spring / 20
+- Context menu > Adjust position and radius to meshes. Verify alignment.
+- Context menu > Configure Spring and Damper.
 - Configure wheels in VPVehicleController > Axles
 
 Center of Mass (CoM)
@@ -37,6 +36,9 @@ Center of Mass (CoM)
 - Preliminary: must be refined after configuring suspension.
 
 Inertia
+
+- Parametric. Configure dimensions.
+- Leave 0 bias for now (configure based on handling afterwards).
 
 ## Vehicle setup
 
@@ -57,14 +59,14 @@ Tires (Parametric Model)
 
 Single truck wheels:
 
-	Adherent: 0.5, 0.8
+	Adherent: 0.8
 	Peak: 1.6, 0.9
 	Limit: 8, 0.7
-	ABCD: 0.6, 0, 0.2, 0
+	ABCD: 0.7, 0, 0.2, 0
 
 Twin truck wheels (use VPTireFrictionModifier):
 
-	Adherent: 0.5, 0,9
+	Adherent: 0,9
 	Peak: 1.8, 1.1
 	Limit: 8, 0.9
 	ABCD: 0.8, 0, 0.15, 0
