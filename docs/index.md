@@ -1,5 +1,4 @@
 ![Vehicle Physics Pro](/img/vehicle-physics-pro.png)
-< pic Vehicle Physics Pro - no social >
 
 Advanced vehicle simulation kit for Unity 3D providing efficient, fully realistic and accurate
 vehicle physics for almost every type of vehicle and setup.
@@ -19,10 +18,6 @@ More actual pictures at the [Showcase](/about/showcase)
 - Integrated into Unity workflows
 - Mobile-capable
 
-#### Actual customers
-
-< non-clickable pic actual customers >
-
 #### Contact
 
 Get support
@@ -37,3 +32,8 @@ Contact
   <area shape="rect" coords="244,0,324,72" target="_blank" title="Facebook" alt="Facebook" href="https://www.facebook.com/vehiclephysics/">
   <area shape="rect" coords="324,0,400,72" target="_blank" title="Reddit" alt="Reddit" href="https://www.reddit.com/user/vehiclephysics/">
 </map>
+
+#### Actual customers
+
+![Vehicle Physics Pro clients](/img/vehicle-physics-pro-clients-1.png)
+![Vehicle Physics Pro clients](/img/vehicle-physics-pro-clients-2.png)
