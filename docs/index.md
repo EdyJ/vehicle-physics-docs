@@ -1,15 +1,13 @@
 ![Vehicle Physics Pro](/img/vehicle-physics-pro.png)
 
-Advanced vehicle simulation kit for Unity 3D providing efficient, fully realistic and accurate
+Advanced vehicle simulation kit for [Unity 3D](http://unity3d.com) providing efficient, fully realistic and accurate
 vehicle physics for almost every type of vehicle and setup.
+
+< Pictures >
 
 Try it! Free Community Edition available in the Unity Asset Store
 
 Other License options
-
-< Pictures >
-
-More actual pictures at the [Showcase](/about/showcase)
 
 #### Main features
 
@@ -53,3 +51,21 @@ Contact
   <area shape="rect" coords="355,0,455,90" title="Simumak">
   <area shape="rect" coords="464,0,564,90" title="CVedia">
 </map>
+
+&nbsp;
+
+> "As a result of spending few days with VPP, I'm really amazed about how much efforts inverted in
+> it. It's just not enough to be a good programmer to provide such a project, I can see a life time
+> experience that is modeled into code."<br>
+> (Fadi AlSamman)
+
+
+&nbsp;
+
+> "I tried some of the demos with a G27 wheel and it feels amazing! It is easily comparable to some
+> of the best racing sims out there. Also I love that you have real telemetry data which is essential
+> for us to use with the simulator."<br>
+> "I'm really enjoying your product. Developing on top of it is a lot of fun. The code is very
+> readable and things just work."<br>
+> (Samo Železnik)
+
