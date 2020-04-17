@@ -31,7 +31,7 @@ Full development details are available via GIT revision logs ([VPP subscription]
 
 - New component **[VPVehicleToolkit](/components/vehicle-toolkit)** providing an useful high-level interface to the most commonly used vehicle features.
 - New support for the **Fanatec Podium Wheel Base DD2** steering wheel.
-- Added support 3D vehicle models oriented in any axis, not necessarily "front +Z".
+- Added support to 3D vehicle models oriented in any axis, not necessarily "front +Z".
 - New **camera movement** option in first person (driver) view.
 - Splines may now be imported from **CSV** files.
 
