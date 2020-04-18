@@ -1,4 +1,4 @@
-# Vehicle Configuration Guide
+# Vehicle Setup Guide
 
 This guide assumes you have your vehicle working according to the [Creating a Vehicle](vehicle-creation.md)
 section.
@@ -101,7 +101,7 @@ component) _Susp_ column.
 
 ##### Springs and dampers
 
-The `VPWheelCollider` component includes an option to configure both spring and damper using the
+The `VPWheelCollider` component includes an option to configure both spring and damper based on the
 vehicle's mass, the number of wheels and the suspension distances:
 
 ![VP WheelCollider context menu](/img/components/vpp-wheelcollider-context-menu-suspension.png){: .clickview .img-small }
@@ -222,8 +222,8 @@ The **Transmission type** can be either manual or automatic:
 ![Transmission Types](/img/setup-guide/vpp-setup-transmission-types.png)
 
 **Manual**
-:	Gears are engaged individually, with a minimum interval among each change (**Gear change time
-	(s)**).
+:	Gears are engaged individually with a minimum interval among each change (**Gear change time
+	(s)**) where the gearbox passes thru Neutral.
 
 	- **Auto shift** is also available in Manual transmissions.
 	- Both clutch types (clutch and torque converter) are well supported in Manual Transmissions.
@@ -231,7 +231,7 @@ The **Transmission type** can be either manual or automatic:
 **Automatic**
 :	Gears are progressively engaged, with a smooth transition in both torque and rpm among each gear.
 
-	- Each gear change takes **Gear transition time (s)** to shift from a gear to another.
+	- Each gear change takes **Gear transition time (s)** to smoothly shift from a gear to another.
 	- A minimum of **Shift interval (s)** time is enforced between two consecutive gear shifts.
 	- Automatic transmissions should use a Torque Converter instead of a standard clutch.
 
@@ -240,13 +240,14 @@ ratio is 3.84, this means that the torque at the output of the gearbox in first 
 times the torque applied by the engine. The rotational velocity will be 3.84 times slower as well.
 
 Any number of gears and ratios can be configured for both forward and reverse gears. Standard cars
-typically have 4 - 6 gears. Trucks can have 12, 18 or even more.
+typically have 4 - 6 forward gears and one reverse. Trucks may have 12, 18 or even more and several
+reverse gears.
 
 Requirements for gear ratios are:
 
 - Gear ratios of zero are not permitted. This is what Neutral gear is for.
-- Automatic transmission and Auto-shift in Manual transmission require the forward gear ratios to
-	be sorted in decreasing order.
+- Automatic transmission and Auto-shift require the forward gear ratios to be sorted in decreasing
+	order.
 - Reverse gears are not automatically engaged. The automated modes engage the first reverse gear
 	when required, but other reverse gears should be manually engaged via manual gear shift.
 
@@ -323,9 +324,9 @@ position of the Ackerman reference:
 Good values for **Max Brake Torque** and **Brake Bias** (or _Brake Balance_) may be configured like
 this:
 
+- Ensure ABS is disabled.
 - Drive the car in a straight line and gain some speed (~100 km/h or 60 mph).
-- Press clutch (<kbd>Shift</kbd> key by default) and hit brakes (<kbd>S</kbd> or <kbd>Down</kbd>).
-	Pressing clutch is necessary so the engine doesn't affect the result.
+- Hit brakes (<kbd>S</kbd> or <kbd>Down</kbd> by default).
 - If both front and rear wheels lock, reduce Max Brake Torque.
 - If wheels don't lock, increase Max Brake Torque.
 
@@ -335,10 +336,11 @@ Then:
 - If only front wheels lock, reduce Brake Bias slightly.
 - If only rear wheels lock, increase Brake Bias slightly.
 
-Repeat until finding a value of Brake Bias where both front and rear wheels lock again.
+Repeat until finding a value of Brake Bias where both front and rear wheels lock again, but front
+wheels lock _before_ real wheels.
 
-Repeat the first procedure to refine the Max Brake Torque value. The final value should lock all
-wheels.
+Repeat the first procedure to refine the Max Brake Torque value. The final value should still lock
+all wheels, front wheels first.
 
 More information on brakes and ABS: [Brakes Helper](/blocks/brakes)
 
@@ -497,7 +499,7 @@ downforce is compressing the suspension, and which part of the car is being push
 !!! Warning "&fa-warning:lg; Warning: watch the suspension compression"
 	Ensure compression values as shown in the Telemetry never reach 1.0 at high speeds. If the extra
 	downforce caused by aerodynamics compresses the suspension beyond the limit then you need to
-	increase the suspension spring rate at the affected wheels.
+	increase the suspension spring rate in the affected wheels.
 
 !!! Info "&fa-thumbs-o-up; Advanced Tip: Front and Rear aerodynamics"
 	If the car heavily relies on the aerodynamics (i.e. a formula racing car) then you may configure

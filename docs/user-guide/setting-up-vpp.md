@@ -9,7 +9,7 @@ VPP may be downloaded as:
 
 ### Requirements
 
-- Minimum Unity version: Unity 2017.1 _(core files only; demos and examples excluded)_
+- Minimum Unity version: Unity 2017.1
 - Recommended Unity version: **Unity 2018.4+**
 - Scripting Runtime Version: **.NET 4.x Equivalent**
 - Enterprise Edition: API Compatibility Level: **.NET 4.x**
@@ -24,7 +24,7 @@ Scripting Runtime Version and API Compatibility Level may be configured in Proje
 	- **[Professional Edition](https://edy.repositoryhosting.com/webdav/edy_vehicle-physics-pro-professional/)** ([VPP subscription](/about/licensing) required)
 	- **[Enterprise Edition](https://edy.repositoryhosting.com/webdav/edy_vehicle-physics-pro/)** ([VPP subscription](/about/licensing) required)
 
-2. Import the .unitypackage file into an Unity 3D project.
+2. Import the package into an Unity 3D project.
 
 	- VPP is imported into the folder **Assets/Vehicle Physics Pro**. Feel free to move it to a
 		different location.
@@ -35,7 +35,7 @@ Scripting Runtime Version and API Compatibility Level may be configured in Proje
 It is recommended to use **Linear color space** (Project Settings > Player > Other Settings).
 
 The subfolder **VPP Project Settings** provides specific .unitypackage files that may be imported
-individually.
+individually to configure specific project sections.
 
 ![Project Settings files](/img/user-guide/vpp-project-settings.png){: .clickview }
 
@@ -78,6 +78,9 @@ Instead of importing the unitypackages you may clone the VPP repositories direct
 in your project. This allows your project to stay up-to-date with the latest changes in VPP as
 they're pushed to the repository.
 
+- **[Professional Edition repositories](https://edy.repositoryhosting.com/trac/edy_vehicle-physics-pro-professional)**
+- **[Enterprise Edition repositories](https://edy.repositoryhosting.com/trac/edy_vehicle-physics-pro)**
+
 First you have to configure your SSH keys in [your account in projects.edy.es](https://edy.repositoryhosting.com/users/my_profile#public_keys)
 (login with your VPP credentials).
 
@@ -91,11 +94,7 @@ Then you may either:
 - Clone the Unity project with the demos and example scenes already working.
 - Clone the submodules into an existing Unity project to provide the VPP functionality only.
 
-The GIT URLs for the Unity project and the submodules are listed here:
-
-- **[Professional Edition](https://edy.repositoryhosting.com/trac/edy_vehicle-physics-pro-professional)**
-- **[Enterprise Edition](https://edy.repositoryhosting.com/trac/edy_vehicle-physics-pro)**
-
 !!! Warning "&fa-warning:lg; Continuous Integration systems"
 	If you're using a CI system such as TeamCity, ensure to set the refresh interval to a reasonable
-	rate. 1-2 times per day is enough for VPP repositories (12 hours = 720 minutes = 43200 seconds).
+	rate. 1-2 times per day is enough to keep the VPP repositories updated (12 hours = 720 minutes
+	= 43200 seconds).

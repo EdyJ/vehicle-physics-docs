@@ -128,43 +128,6 @@ based on the target vehicle and several camera modes available.
 
 ![VP Camera Controller](/img/components/vpp-camera-controller-inspector.png){: .img-medium .clickview }
 
-## Source code and internal details
-
-These are the actual folders for the Vehicle Physics Pro project:
-
-![Vehicle Physics Pro project folders](/img/user-guide/vpp-project-folders.png)
-
-The VPP scripts are inside the **Vehicle Physics Core** folder. The vehicle dynamics model is
-implemented in the "Base" folder:
-
-- [VehicleBase](/advanced/vehiclebase-reference) is a standard MonoBehaviour that orchestrates all
-	the elements involved in the vehicle dynamics. All vehicle controllers inherit from this
-	component. The standard vehicle controller is [VPVehicleController](/components/vehicle-controller)
-	in the Components folder.
-- The wheel and tire model are implemented in the [Wheel and TireFriction](/blocks/tires) classes.
-	The component [VPWheelCollider](/components/wheel-collider) (Components folder) is the interface
-	with Unity's WheelCollider and also handles the visual elements of the wheel.
-- [Block](/advanced/block-reference) implements a functional unit in the vehicle's powertrain, from
-	the engine to the wheels. Every internal vehicle part inherits is from Block (Wheel, [Engine](/blocks/engine),
-	[Differential](/blocks/differential), etc).
-- [Solver](/advanced/misc-topics-explained/#solver-numeric-integration) is the dynamics solver that
-	computes the states of all the blocks. Euler and substeps are implemented here.
-- [DataBus](/advanced/databus-reference) defines the protocol to exchange data from-to the vehicle
-	(inputs, engine data such as rpm, torque, etc).
-- [GroundMaterial](/components/ground-materials/) defines the ground materials and the properties of
-	the tire-ground contact. Includes [GroundMaterialManagerBase](/components/ground-materials/#groundmaterialcs),
-	a MonoBehavior that is the base class for all the ground material managers. A simple ground
-	material manager component is provided (VPGroundMaterialManager, Components/Ground Materials
-	folder). Custom ground material managers may be easily implemented.
-- Gravity is a wrapper for Physics.gravity. Ensures vehicles use gravity properly, including gravity
-	forces in any direction.
-- [VehicleBehaviour](/advanced/vehiclebehaviour-reference) is a MonoBehaviour used as base class for
-	vehicle add-ons. VehicleBehaviour is aware of the vehicle it belongs to (`vehicle` property) so
-	it  handles initialization, finalization and other states of the vehicle properly.
-
-
-!!! info "&fa-info-circle; Some useful pages"
-
-	- [Miscellaneous topics explained](/advanced/misc-topics-explained)
-	- [Data Bus reference](/advanced/databus-reference)
-	- [Custom Vehicle Controller](/advanced/custom-vehicles)
+&fa-thumbs-up:lg; Now that you know how vehicles work in Vehicle Physics Pro, you can now
+[create and configure a vehicle](vehicle-creation.md){: .alert-link } youself.
+{: .alert .alert-success }
