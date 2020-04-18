@@ -1,26 +1,24 @@
 ![Vehicle Physics Pro](/img/vehicle-physics-pro.png)
 
-Advanced vehicle simulation kit for [Unity 3D](http://unity3d.com) providing efficient, fully realistic and accurate
-vehicle physics for almost every type of vehicle and setup.
+Vehicle Physics Pro (VPP for short) is an advanced vehicle simulation kit for [Unity 3D](http://unity3d.com)
+that provides efficient, fully realistic and accurate vehicle simulation for almost every type of
+vehicle and setup.
 
 < Pictures >
 
 Try it! Free Community Edition available in the Unity Asset Store
 
-Other License options
+[Professional and Enterprise licenses available](/about/licensing) for individuals and companies.
 
-#### Main features
+#### Features
 
+- Easy to integrate and setup
 - Documented
 - Extendable and customizable
 - Integrated into Unity workflows
 - Mobile-capable
 
-#### Contact
-
-Get support
-
-Contact
+[Full feature list](/about/features)
 
 <img alt="Vehicle Physics Pro Social Links" src="/img/vehicle-physics-pro-social-links.png" usemap="#social-links">
 <map name="social-links">
@@ -31,7 +29,13 @@ Contact
   <area shape="rect" coords="324,0,400,72" target="_blank" title="Reddit" alt="Reddit" href="https://www.reddit.com/user/vehiclephysics/">
 </map>
 
-#### Actual customers
+#### Contact
+
+Get support
+
+Contact
+
+#### Customers
 
 <img alt="Vehicle Physics Pro Clients" src="/img/vehicle-physics-pro-clients-1.png" usemap="#clients-1">
 <img alt="Vehicle Physics Pro Clients" src="/img/vehicle-physics-pro-clients-2.png" usemap="#clients-2">
@@ -54,18 +58,10 @@ Contact
 
 &nbsp;
 
-> "As a result of spending few days with VPP, I'm really amazed about how much efforts inverted in
-> it. It's just not enough to be a good programmer to provide such a project, I can see a life time
-> experience that is modeled into code."<br>
-> (Fadi AlSamman)
-
-
-&nbsp;
-
-> "I tried some of the demos with a G27 wheel and it feels amazing! It is easily comparable to some
-> of the best racing sims out there. Also I love that you have real telemetry data which is essential
-> for us to use with the simulator."<br>
-> "I'm really enjoying your product. Developing on top of it is a lot of fun. The code is very
-> readable and things just work."<br>
-> (Samo Železnik)
-
+> **Awesome. Accurate and Professional.**
+> I have been using VPP more than 4 years and all I can say is that this product is truly amazing.
+> It is well designed, everything makes sense. When you are simulating some feature and a secondary
+> effect appears, it is always a real physic or dynamic consequence. This is great, because
+> sometimes the result is counterintuitive, but VPP helps you to understand the reality more than
+> your own perception.<br>
+> (Manu Espino, Simumak)
