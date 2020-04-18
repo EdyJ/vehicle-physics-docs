@@ -1,21 +1,31 @@
 ![Vehicle Physics Pro](/img/vehicle-physics-pro.png)
 
 Vehicle Physics Pro (VPP for short) is an advanced vehicle simulation kit for [Unity 3D](http://unity3d.com)
-that provides efficient, fully realistic and accurate vehicle simulations for almost every type of
-vehicle and setup.
-
-< pictures carousel >
+that provides efficient, fully realistic and accurate vehicle simulations for almost all vehicle
+types and configurations.
+<div class="slick-carousel slick-home">
+<section class="slider-home">
+<div>
+![](/img/user-guide/vpp-rig-tutorial-01.png){: .clickview }
+</div>
+<div>
+![](/img/user-guide/vpp-rig-tutorial-02.png){: .clickview }
+</div>
+<div>
+![](/img/user-guide/vpp-rig-tutorial-03.png){: .clickview }
+</div>
+</section>
+</div>
 
 #### Features
 
 - Accurate and complete vehicle dynamics model
 - Easy to integrate and setup
 - Extensive, detailed documentation
-- Highly customizable (add-ons)
+- Highly customizable (add-on components)
 - Efficient, mobile-capable design
 - Full-time product support
-
-[Full feature list](/about/features)
+- [... detailed feature list](/about/features)
 
 Try the **free Community Edition** available in the Unity Asset Store:
 
@@ -41,6 +51,8 @@ Get support
 Contact
 
 #### Customers
+
+&nbsp;
 
 <img alt="Vehicle Physics Pro Clients" src="/img/vehicle-physics-pro-clients-1.png" usemap="#clients-1">
 <img alt="Vehicle Physics Pro Clients" src="/img/vehicle-physics-pro-clients-2.png" usemap="#clients-2">

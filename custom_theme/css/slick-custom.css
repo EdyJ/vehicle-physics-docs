@@ -29,7 +29,7 @@
 
 .slick-slide img
 	{
-	/* width: 100%; */
+	width: 100%;
 	margin: 5px auto 10px;
 	}
 
@@ -118,6 +118,29 @@
     -khtml-user-select: none;
 	}
 
+
+/* Home carousel */
+
+
+/* No background, top margin, width 90% */
+
+.slider-home.slick-slider
+	{
+	background-color: transparent;
+	margin-top: 30px;
+	}
+
+.slick-carousel.slick-home
+	{
+	max-width: 90%;
+	}
+
+/* Larger dots */
+
+.slick-dots li button:before
+	{
+    font-size: 12px;
+	}
 
 
 /* Reescritura de slick-dots para que aparezcan los numeros de imagen en los botones inferiores de seleccion */
