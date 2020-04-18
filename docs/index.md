@@ -1,24 +1,29 @@
 ![Vehicle Physics Pro](/img/vehicle-physics-pro.png)
 
 Vehicle Physics Pro (VPP for short) is an advanced vehicle simulation kit for [Unity 3D](http://unity3d.com)
-that provides efficient, fully realistic and accurate vehicle simulation for almost every type of
+that provides efficient, fully realistic and accurate vehicle simulations for almost every type of
 vehicle and setup.
 
-< Pictures >
-
-Try it! Free Community Edition available in the Unity Asset Store
-
-[Professional and Enterprise licenses available](/about/licensing) for individuals and companies.
+< pictures carousel >
 
 #### Features
 
+- Accurate and complete vehicle dynamics model
 - Easy to integrate and setup
-- Documented
-- Extendable and customizable
-- Integrated into Unity workflows
-- Mobile-capable
+- Extensive, detailed documentation
+- Highly customizable (add-ons)
+- Efficient, mobile-capable design
+- Full-time product support
 
 [Full feature list](/about/features)
+
+Try the **free Community Edition** available in the Unity Asset Store:
+
+< asset store logo and link >
+
+[Professional and Enterprise licenses available](/about/licensing) for individuals and companies.
+
+Get in touch:
 
 <img alt="Vehicle Physics Pro Social Links" src="/img/vehicle-physics-pro-social-links.png" usemap="#social-links">
 <map name="social-links">
@@ -29,7 +34,7 @@ Try it! Free Community Edition available in the Unity Asset Store
   <area shape="rect" coords="324,0,400,72" target="_blank" title="Reddit" alt="Reddit" href="https://www.reddit.com/user/vehiclephysics/">
 </map>
 
-#### Contact
+#### Support
 
 Get support
 
@@ -59,7 +64,7 @@ Contact
 &nbsp;
 
 > **Awesome. Accurate and Professional.**
-> I have been using VPP more than 4 years and all I can say is that this product is truly amazing.
+> I have been using VPP for over 4 years and all I can say is that this product is truly amazing.
 > It is well designed, everything makes sense. When you are simulating some feature and a secondary
 > effect appears, it is always a real physic or dynamic consequence. This is great, because
 > sometimes the result is counterintuitive, but VPP helps you to understand the reality more than
