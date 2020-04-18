@@ -12,9 +12,6 @@ types and configurations.
 ![](/img/carousel/02-sport-coupe-hdrp.jpg){: .clickview }
 </div>
 <div>
-![](/img/carousel/03-ferrari-458-italia.jpg){: .clickview }
-</div>
-<div>
 ![](/img/carousel/04-seat-leon-cup-racer-2016-tcr.jpg){: .clickview }
 </div>
 <div>
