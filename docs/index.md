@@ -6,13 +6,40 @@ types and configurations.
 <div class="slick-carousel slick-home">
 <section class="slider-home">
 <div>
-![](/img/user-guide/vpp-rig-tutorial-01.png){: .clickview }
+![](/img/carousel/01-nissan-primera-btcc.jpg){: .clickview }
 </div>
 <div>
-![](/img/user-guide/vpp-rig-tutorial-02.png){: .clickview }
+![](/img/carousel/02-sport-coupe-hdrp.jpg){: .clickview }
 </div>
 <div>
-![](/img/user-guide/vpp-rig-tutorial-03.png){: .clickview }
+![](/img/carousel/03-ferrari-458-italia.jpg){: .clickview }
+</div>
+<div>
+![](/img/carousel/04-seat-leon-cup-racer-2016-tcr.jpg){: .clickview }
+</div>
+<div>
+![](/img/carousel/05-volkswagen-amarok.jpg){: .clickview }
+</div>
+<div>
+![](/img/carousel/06-kenworth-t680.jpg){: .clickview }
+</div>
+<div>
+![](/img/carousel/07-komatsu-wa900.jpg){: .clickview }
+</div>
+<div>
+![](/img/carousel/08-jcb-3cx.jpg){: .clickview }
+</div>
+<div>
+![](/img/carousel/09-cat-d11.jpg){: .clickview }
+</div>
+<div>
+![](/img/carousel/10-argo-j8-amphibious-robotic-vehicle-wheeled.jpg){: .clickview }
+</div>
+<div>
+![](/img/carousel/11-solid-cargo-component.jpg){: .clickview }
+</div>
+<div>
+![](/img/carousel/12-telemery-suspension-travel.jpg){: .clickview }
 </div>
 </section>
 </div>
