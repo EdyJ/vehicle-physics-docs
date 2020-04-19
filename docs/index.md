@@ -47,9 +47,9 @@ types and configurations.
 - Easy to integrate and setup
 - Extensive, detailed documentation
 - Highly customizable (add-on components)
-- Efficient, mobile-capable design
+- Efficient, mobile-capable
 - Full-time product support
-- [... detailed feature list](/about/features)
+- **[Detailed feature list ...](/about/features)**
 
 Try the **free Community Edition** available in the Unity Asset Store:
 
