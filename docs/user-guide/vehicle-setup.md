@@ -8,7 +8,15 @@ values before exiting Play mode**. Either note them down to paper, or use the _C
 _Paste Component Values_ options in the component's context menu.
 {: .alert .alert-info }
 
----
+!!! Info "&fa-info-circle:lg; All magnitudes use International System of Units (SI)"
+	Unless explicitly noted otherwise, all magnitudes in Vehicle Physics Pro are in SI units:
+
+	- Mass and weight are kilograms (Kg)
+	- Distance is metres (m)
+	- Speed is metres per second (m/s)
+	- Acceleration is metres per second squared (m/s²)
+	- Force is newtons (N)
+	- Torque is newtons-metre (Nm)
 
 [TOC]
 
