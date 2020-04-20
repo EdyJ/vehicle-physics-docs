@@ -73,17 +73,17 @@ Try the **[free Community Edition!](https://assetstore.unity.com/packages/tools/
 
 #### Contact
 
-Got any question? Need any information? Feel free to write to **[info@vehiclephysics.com](mailto:info@vehiclephysics.com)**
+Questions? Feel free to write to **[info@vehiclephysics.com](mailto:info@vehiclephysics.com)**
 
-And/or follow Vehicle Physics in your favorite social site.
+Also follow Vehicle Physics in your favorite social site:
 
 <img alt="Vehicle Physics Pro Social Links" src="/img/vehicle-physics-pro-social-links.png" usemap="#social-links">
 <map name="social-links">
-  <area shape="rect" coords="0,0,77,72" target="_blank" title="Twitter" alt="Twitter" href="https://twitter.com/VehiclePhysics">
-  <area shape="rect" coords="77,0,165,72" target="_blank" title="Youtube" alt="Youtube" href="https://www.youtube.com/c/VehiclePhysics">
-  <area shape="rect" coords="165,0,244,72" target="_blank" title="Instagram" alt="Instagram" href="https://www.instagram.com/VehiclePhysics/">
-  <area shape="rect" coords="244,0,324,72" target="_blank" title="Facebook" alt="Facebook" href="https://www.facebook.com/vehiclephysics/">
-  <area shape="rect" coords="324,0,400,72" target="_blank" title="Reddit" alt="Reddit" href="https://www.reddit.com/user/vehiclephysics/">
+  <area shape="rect" coords="0,0,77,72" target="_blank" title="Twitter" alt="Twitter" href="https://twitter.com/VehiclePhysics" target="_blank">
+  <area shape="rect" coords="77,0,165,72" target="_blank" title="Youtube" alt="Youtube" href="https://www.youtube.com/c/VehiclePhysics" target="_blank">
+  <area shape="rect" coords="165,0,244,72" target="_blank" title="Instagram" alt="Instagram" href="https://www.instagram.com/VehiclePhysics/" target="_blank">
+  <area shape="rect" coords="244,0,324,72" target="_blank" title="Facebook" alt="Facebook" href="https://www.facebook.com/vehiclephysics/" target="_blank">
+  <area shape="rect" coords="324,0,400,72" target="_blank" title="Reddit" alt="Reddit" href="https://www.reddit.com/user/vehiclephysics/" target="_blank">
 </map>
 
 <br>
