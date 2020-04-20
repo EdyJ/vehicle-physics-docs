@@ -63,13 +63,19 @@ types and configurations.
 - Full-time product support
 - **[Detailed feature list ...](/about/features)**
 
-Try the **free Community Edition!**
+Try the **[free Community Edition!](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)**
 
-[![Vehicle Physics Pro Community Edition](/img/Unity_AS_Badge_RGB.png "Vehicle Physics Pro Community Edition")](/about/licensing){: target="_blank" style="display: block; margin: 0 auto; width: 173px;" }
+[![Vehicle Physics Pro Community Edition](/img/Unity_AS_Badge_RGB.png "Vehicle Physics Pro Community Edition")](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556){: target="_blank" style="display: block; margin: 0 auto; width: 173px;" }
 
 [Professional and Enterprise licenses available](/about/licensing) for individuals and companies.
 
-Get in touch:
+<br>
+
+#### Contact
+
+Got any question? Need any information? Feel free to write to **[info@vehiclephysics.com](mailto:info@vehiclephysics.com)**
+
+And/or follow Vehicle Physics in your favorite social site.
 
 <img alt="Vehicle Physics Pro Social Links" src="/img/vehicle-physics-pro-social-links.png" usemap="#social-links">
 <map name="social-links">
@@ -80,11 +86,7 @@ Get in touch:
   <area shape="rect" coords="324,0,400,72" target="_blank" title="Reddit" alt="Reddit" href="https://www.reddit.com/user/vehiclephysics/">
 </map>
 
-#### Support
-
-Get support
-
-Contact
+<br>
 
 #### Customers
 
