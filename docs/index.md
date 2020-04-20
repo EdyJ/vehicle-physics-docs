@@ -1,6 +1,6 @@
 ![Vehicle Physics Pro](/img/vehicle-physics-pro.png)
 
-Vehicle Physics Pro (VPP for short) is an advanced vehicle simulation kit for [Unity 3D](http://unity3d.com)
+**Vehicle Physics Pro** (_VPP_ for short) is an advanced vehicle simulation kit for [Unity 3D](http://unity3d.com)
 that provides efficient, fully realistic and accurate vehicle simulations for almost all vehicle
 types and configurations.
 <div class="slick-carousel slick-home">
@@ -9,34 +9,46 @@ types and configurations.
 ![](/img/carousel/01-nissan-primera-btcc.jpg){: .clickview }
 </div>
 <div>
-![](/img/carousel/02-sport-coupe-hdrp.jpg){: .clickview }
+![](/img/carousel/02-safety-aids-at-high-speed.jpg){: .clickview }
+</div>
+<div>
+![](/img/carousel/03-ferrari-hdrp-test.jpg){: .clickview }
 </div>
 <div>
 ![](/img/carousel/04-seat-leon-cup-racer-2016-tcr.jpg){: .clickview }
 </div>
 <div>
-![](/img/carousel/05-volkswagen-amarok.jpg){: .clickview }
+![](/img/carousel/05-mobile-replay-panel.jpg){: .clickview }
 </div>
 <div>
-![](/img/carousel/06-kenworth-t680.jpg){: .clickview }
+![](/img/carousel/06-jpickup-on-two-wheels.jpg){: .clickview }
 </div>
 <div>
-![](/img/carousel/07-komatsu-wa900.jpg){: .clickview }
+![](/img/carousel/07-vehicle-setup.jpg){: .clickview }
 </div>
 <div>
-![](/img/carousel/08-jcb-3cx.jpg){: .clickview }
+![](/img/carousel/08-graphic-telemetry.jpg){: .clickview }
 </div>
 <div>
-![](/img/carousel/09-cat-d11.jpg){: .clickview }
+![](/img/carousel/09-articulated-bus-with-rear-steering.jpg){: .clickview }
 </div>
 <div>
-![](/img/carousel/10-argo-j8-amphibious-robotic-vehicle-wheeled.jpg){: .clickview }
+![](/img/carousel/10-kenworth-t680.jpg){: .clickview }
 </div>
 <div>
-![](/img/carousel/11-solid-cargo-component.jpg){: .clickview }
+![](/img/carousel/11-komatsu-wa900.jpg){: .clickview }
 </div>
 <div>
-![](/img/carousel/12-telemery-suspension-travel.jpg){: .clickview }
+![](/img/carousel/12-jcb-3cx.jpg){: .clickview }
+</div>
+<div>
+![](/img/carousel/13-big-boys.jpg){: .clickview }
+</div>
+<div>
+![](/img/carousel/14-argo-j8-amphibious-robotic-vehicle-wheeled.jpg){: .clickview }
+</div>
+<div>
+![](/img/carousel/15-solid-cargo-component.jpg){: .clickview }
 </div>
 </section>
 </div>

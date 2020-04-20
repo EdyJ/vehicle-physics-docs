@@ -24,7 +24,7 @@ $(document).on('ready', function()
 	accessibility: false,
 	speed: 500,
 	autoplay: true,
-	autoplaySpeed: 5000,
+	autoplaySpeed: 4000,
 	pauseOnFocus: false,
 	pauseOnDotsHover: true,
 	pauseOnHover: true,
