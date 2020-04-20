@@ -63,9 +63,9 @@ types and configurations.
 - Full-time product support
 - **[Detailed feature list ...](/about/features)**
 
-Try the **free Community Edition** available in the Unity Asset Store:
+Try the **free Community Edition!**
 
-< asset store logo and link >
+[![Vehicle Physics Pro Community Edition](/img/Unity_AS_Badge_RGB.png "Vehicle Physics Pro Community Edition")](/about/licensing){: target="_blank" style="display: block; margin: 0 auto; width: 173px;" }
 
 [Professional and Enterprise licenses available](/about/licensing) for individuals and companies.
 
