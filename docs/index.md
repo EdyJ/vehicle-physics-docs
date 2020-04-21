@@ -78,7 +78,7 @@ Questions? Feel free to write to [info@vehiclephysics.com](mailto:info@vehicleph
 Also follow Vehicle Physics in your favorite social site:
 
 <div style="position: relative; display: block; margin: 0 auto; max-width: 320px;">
-	<img alt="Vehicle Physics Pro Social Links" src="/img/vehicle-physics-pro-social-links.png">
+	<img alt="Vehicle Physics Pro Social Links: Twitter, Youtube, Instagram, Facebook, Reddit" src="/img/vehicle-physics-pro-social-links.png">
 	<a href="https://twitter.com/VehiclePhysics" title="Twitter" target=_blank" style="position: absolute; left: 0%; top: 0%; width: 17.5%; height: 100%; z-index: 2;"></a>
 	<a href="https://www.youtube.com/c/VehiclePhysics" title="Youtube" target=_blank" style="position: absolute; left: 19.38%; top: 0%; width: 20.31%; height: 100%; z-index: 2;"></a>
 	<a href="https://www.instagram.com/VehiclePhysics" title="Instagram" target=_blank" style="position: absolute; left: 41.56%; top: 0%; width: 18.13%; height: 100%; z-index: 2;"></a>
