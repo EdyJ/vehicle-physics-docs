@@ -137,9 +137,9 @@ instead.
 - On-demand [Professional Services](/about/support/#professional-services) available at hourly rates
 - Dedicated [Support Q&A site](https://support.vehiclephysics.com "Vehicle Physics Pro Q&A"){: target="_blank" }
 - Updates delivered by GIT repositories and Unitypackages.
-- In continuous development since 2010
+- In continuous development since 2010 ([changelog](/about/changelog))
 
-### Application examples
+# Application examples
 
 Racing games and simulators
 :	Configure and fine-tune the vehicles applying real-world techniques and tricks.
@@ -164,7 +164,7 @@ Prototyping
 :	Experiment with any crazy idea you may have: two engines, one per front-rear axle? Sure!
 	Observe the behavior and all the side effects.
 
-## Feature examples
+# Feature examples
 
 Multi-body vehicles
 :	A vehicle may be composed of several rigidbodies, each one with several wheels attached.

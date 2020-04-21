@@ -6,49 +6,49 @@ types and configurations.
 <div class="slick-carousel slick-home">
 <section class="slider-home">
 <div>
-![](/img/carousel/01-nissan-primera-btcc.jpg){: .clickview }
+![](/img/carousel/01-nissan-primera-btcc.jpg "Nissan Primera P11 in the awesome Ascari Track Resort. Videos available on the Youtube channel."){: .clickview }
 </div>
 <div>
-![](/img/carousel/02-safety-aids-at-high-speed.jpg){: .clickview }
+![](/img/carousel/02-safety-aids-at-high-speed.jpg "Steering aids and ESC saving the day at 160 km/h (90 mph)"){: .clickview }
 </div>
 <div>
-![](/img/carousel/03-ferrari-hdrp-test.jpg){: .clickview }
+![](/img/carousel/03-ferrari-hdrp-test.jpg "Testing the Ferrari 458 Italia in Monza in HDRP"){: .clickview }
 </div>
 <div>
-![](/img/carousel/04-seat-leon-cup-racer-2016-tcr.jpg){: .clickview }
+![](/img/carousel/04-seat-leon-cup-racer-2016-tcr.jpg "Seat Leon Cup Racer 2016 using the actual racing setup"){: .clickview }
 </div>
 <div>
-![](/img/carousel/05-mobile-replay-panel.jpg){: .clickview }
+![](/img/carousel/05-mobile-replay-panel.jpg "Mobile UI controlling the Ferrari 458 Italia"){: .clickview }
 </div>
 <div>
-![](/img/carousel/06-jpickup-on-two-wheels.jpg){: .clickview }
+![](/img/carousel/06-jpickup-on-two-wheels.jpg "Extreme test for any vehicle dynamics simulation: driving on two wheels in equilibrium. Video available on the Youtube channel."){: .clickview }
 </div>
 <div>
-![](/img/carousel/07-vehicle-setup.jpg){: .clickview }
+![](/img/carousel/07-vehicle-setup.jpg "The demos provided with VPP include setup options configurable on the fly"){: .clickview }
 </div>
 <div>
-![](/img/carousel/08-graphic-telemetry.jpg){: .clickview }
+![](/img/carousel/08-graphic-telemetry.jpg "The graphic telemetry shows useful charts for many vehicle variables. Here showing the basic states."){: .clickview }
 </div>
 <div>
-![](/img/carousel/09-articulated-bus-with-rear-steering.jpg){: .clickview }
+![](/img/carousel/09-articulated-bus-with-rear-steering.jpg "Articulated bus with steering in the rearmost axle"){: .clickview }
 </div>
 <div>
-![](/img/carousel/10-kenworth-t680.jpg){: .clickview }
+![](/img/carousel/10-kenworth-t680.jpg "A Kenworth T680 tractor truck with attached trailer"){: .clickview }
 </div>
 <div>
-![](/img/carousel/11-komatsu-wa900.jpg){: .clickview }
+![](/img/carousel/11-komatsu-wa900.jpg "This articulated wheel loader (Komatsu WA900) carries an standard-sized car easily"){: .clickview }
 </div>
 <div>
-![](/img/carousel/12-jcb-3cx.jpg){: .clickview }
+![](/img/carousel/12-jcb-3cx.jpg "A typical backhoe loader handling a total of 8 articulations"){: .clickview }
 </div>
 <div>
-![](/img/carousel/13-big-boys.jpg){: .clickview }
+![](/img/carousel/13-big-boys.jpg "Left: Hitachi EH5000, diesel-electric dumper, 500 tons when fully loaded. Right: Hitachi EX5500, already weights 520 tons unloaded."){: .clickview }
 </div>
 <div>
-![](/img/carousel/14-argo-j8-amphibious-robotic-vehicle-wheeled.jpg){: .clickview }
+![](/img/carousel/14-argo-j8-amphibious-robotic-vehicle-wheeled.jpg "Amphibious robotic vehicle (Argo J8) in wheeled configuration. Tracked configuration also available."){: .clickview }
 </div>
 <div>
-![](/img/carousel/15-solid-cargo-component.jpg){: .clickview }
+![](/img/carousel/15-solid-cargo-component.jpg "The Solid Cargo component allows to configure the vehicle cargo with a few parameters."){: .clickview }
 </div>
 </section>
 </div>
@@ -73,7 +73,7 @@ Try the **[free Community Edition!](https://assetstore.unity.com/packages/tools/
 
 #### Contact
 
-Questions? Feel free to write to **[info@vehiclephysics.com](mailto:info@vehiclephysics.com)**
+Questions? Feel free to write to [info@vehiclephysics.com](mailto:info@vehiclephysics.com) | **[More support options](/about/support)**
 
 Also follow Vehicle Physics in your favorite social site:
 
