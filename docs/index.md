@@ -65,7 +65,7 @@ types and configurations.
 
 Try the **[free Community Edition!](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)**
 
-[![Vehicle Physics Pro Community Edition](/img/Unity_AS_Badge_RGB.png "Vehicle Physics Pro Community Edition")](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556){: target="_blank" style="display: block; margin: 0 auto; width: 173px;" }
+[![Vehicle Physics Pro Community Edition](/img/Unity_AS_Badge_RGB.png "Vehicle Physics Pro Community Edition")](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556){: target="_blank" style="display: block; margin: 0 auto; max-width: 173px;" }
 
 [Professional and Enterprise licenses available](/about/licensing) for individuals and companies.
 
@@ -77,8 +77,8 @@ Questions? Feel free to write to **[info@vehiclephysics.com](mailto:info@vehicle
 
 Also follow Vehicle Physics in your favorite social site:
 
-<div style="position: relative; display: block; margin: 0 auto; width: 320px;">
-	<img alt="Vehicle Physics Pro Social Links" src="/img/vehicle-physics-pro-social-links.png" usemap="#social-links">
+<div style="position: relative; display: block; margin: 0 auto; max-width: 320px;">
+	<img alt="Vehicle Physics Pro Social Links" src="/img/vehicle-physics-pro-social-links.png">
 	<a href="https://twitter.com/VehiclePhysics" title="Twitter" target=_blank" style="position: absolute; left: 0%; top: 0%; width: 17.5%; height: 100%; z-index: 2;"></a>
 	<a href="https://www.youtube.com/c/VehiclePhysics" title="Youtube" target=_blank" style="position: absolute; left: 19.38%; top: 0%; width: 20.31%; height: 100%; z-index: 2;"></a>
 	<a href="https://www.instagram.com/VehiclePhysics" title="Instagram" target=_blank" style="position: absolute; left: 41.56%; top: 0%; width: 18.13%; height: 100%; z-index: 2;"></a>
@@ -92,24 +92,23 @@ Also follow Vehicle Physics in your favorite social site:
 
 &nbsp;
 
-<img alt="Vehicle Physics Pro Clients" src="/img/vehicle-physics-pro-clients-1.png" usemap="#clients-1">
-<img alt="Vehicle Physics Pro Clients" src="/img/vehicle-physics-pro-clients-2.png" usemap="#clients-2">
+<div style="position: relative; display: block; margin: 0 auto; max-width: 680px">
+	<img alt="Take-Two Interactive, Toyota, BMW, Volkswagen, Scania, UPS" src="/img/vehicle-physics-pro-clients-1.png">
+	<a title="Take-Two Interactive" style="position: absolute; left: 0%; top: 0%; width: 14.71%; height: 100%; z-index: 2;"></a>
+	<a title="Toyota" style="position: absolute; left: 16.62%; top: 0%; width: 16.47%; height: 100%; z-index: 2;"></a>
+	<a title="BMW" style="position: absolute; left: 34.41%; top: 0%; width: 15.59%; height: 100%; z-index: 2;"></a>
+	<a title="Volkswagen" style="position: absolute; left: 52.65%; top: 0%; width: 14.41%; height: 100%; z-index: 2;"></a>
+	<a title="Scania" style="position: absolute; left: 69.71%; top: 0%; width: 15.59%; height: 100%; z-index: 2;"></a>
+	<a title="UPS" style="position: absolute; left: 86.91%; top: 0%; width: 15.15%; height: 100%; z-index: 2;"></a>
+</div>
 
-<map name="clients-1">
-  <area shape="rect" coords="0,0,100,90" title="Take-Two Interactive">
-  <area shape="rect" coords="110,0,225,90" title="Toyota">
-  <area shape="rect" coords="234,0,344,90" title="BMW">
-  <area shape="rect" coords="355,0,455,90" title="Volkswagen">
-  <area shape="rect" coords="474,0,574,90" title="Scania">
-  <area shape="rect" coords="592,0,680,90" title="UPS">
-</map>
-
-<map name="clients-2">
-  <area shape="rect" coords="110,0,225,90" title="Huawei">
-  <area shape="rect" coords="234,0,344,90" title="Metamoto">
-  <area shape="rect" coords="355,0,455,90" title="Simumak">
-  <area shape="rect" coords="464,0,564,90" title="CVedia">
-</map>
+<div style="position: relative; display: block; margin: 0 auto; max-width: 680px">
+	<img alt="Huawei, Metamoto, Simumak, CVedia" src="/img/vehicle-physics-pro-clients-2.png">
+	<a title="Huawei" style="position: absolute; left: 18.53%; top: 0%; width: 14.12%; height: 100%; z-index: 2;"></a>
+	<a title="Metamoto" style="position: absolute; left: 34.41%; top: 0%; width: 15.59%; height: 100%; z-index: 2;"></a>
+	<a title="Simumak" style="position: absolute; left: 52.35%; top: 0%; width: 14.41%; height: 100%; z-index: 2;"></a>
+	<a title="CVedia" style="position: absolute; left: 68.24%; top: 0%; width: 13.38%; height: 100%; z-index: 2;"></a>
+</div>
 
 &nbsp;
 
