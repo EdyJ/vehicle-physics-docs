@@ -188,8 +188,8 @@ Liquid & solid cargo
 	weight...
 
 	<div class="imagegallery" sm="1" md="2" lg="2" style="display:none">
-		<img class="clickview" src="/img/about/vpp-liquid-cargo.png" alt="Vehicle Physics Pro - Liquid Cargo component">
-		<img class="clickview" src="/img/about/vpp-solid-cargo.png" alt="Vehicle Physics Pro - Solid Cargo component">
+		![Vehicle Physics Pro - Liquid Cargo component](/img/about/vpp-liquid-cargo.jpg "Liquid cargo component"){: .clickview }
+		![Vehicle Physics Pro - Solid Cargo component](/img/about/vpp-solid-cargo.jpg "Solid cargo component"){: .clickview }
 	</div>
 
 Specialized vehicle support
@@ -197,9 +197,9 @@ Specialized vehicle support
 	(experimental), tracked	vehicles, bulldozer, and diesel-electric vehicles.
 
 	<div class="imagegallery" sm="1" md="2" lg="3" style="display:none">
-		<img class="clickview" src="/img/about/vpp-motorbike-controller.png" alt="Vehicle Physics Pro - Motorbike controller (experimental)">
-		<img class="clickview" src="/img/about/vpp-tracked-vehicle-controller.png" alt="Vehicle Physics Pro - Tracked vehicle controller">
-		<img class="clickview" src="/img/about/vpp-bulldozer-controller.png" alt="Vehicle Physics Pro - Bulldozer controller">
+		![Vehicle Physics Pro - Motorbike controller (experimental)](/img/about/vpp-motorbike-controller.jpg "Motorbike controller (experimental)"){: .clickview }
+		![Vehicle Physics Pro - Tracked vehicle controller](/img/about/vpp-tracked-vehicle-controller.jpg "Tracked vehicle controller"){: .clickview }
+		![Vehicle Physics Pro - Bulldozer controller](/img/about/vpp-bulldozer-controller.jpg "Bulldozer controller"){: .clickview }
 	</div>
 
 Articulated vehicles support
@@ -207,26 +207,30 @@ Articulated vehicles support
 	buckets, etc. found in typical machinery.
 
 	<div class="imagegallery" sm="1" md="2" lg="2" style="display:none">
-		<img class="clickview" src="/img/about/vpp-wheel-loader-control.png" alt="Vehicle Physics Pro - Wheel Loader control">
-		<img class="clickview" src="/img/about/vpp-excavator-control.png" alt="Vehicle Physics Pro - Excavator control">
+		![Vehicle Physics Pro - Wheel Loader controller](/img/about/vpp-wheel-loader-control.jpg "Articulated wheel loader"){: .clickview }
+		![Vehicle Physics Pro - Excavator controller](/img/about/vpp-excavator-control.jpg "Tracked excavator with diesel dumper in the background"){: .clickview }
 	</div>
 
 ### Framework for autonomous vehicles
 
 Target chasing and autonomous driving
-:	"Follow target" components that controls throttle, brake and steering for reaching or following
-	a static or moving target within the configured conditions. Waypoint systems, road lanes, and AI
-	algorithms may be implemented on top of these components.
+:	VPP provides "Follow target" components that controls throttle, brake and steering for reaching
+	or following a static or moving target within the configured conditions. A robust and highly
+	efficient spline component is also included. Waypoint systems, road lanes, and AI algorithms may
+	be implemented on top of these components.
 
-	![Vehicle Physics Pro - Self-drive component](/img/about/vpp-self-drive.png){: .img-small .clickview }
+	<div class="imagegallery" sm="1" md="2" lg="2" style="display:none">
+		![Vehicle Physics Pro - Target chaser component](/img/about/vpp-target-chaser.jpg "Target chaser component"){: .clickview }
+		![Vehicle Physics Pro - Self-drive component](/img/about/vpp-self-drive.jpg "Self-drive component"){: .clickview }
+	</div>
 
 Automated test framework
-:	A base class VPAutomatedTestBase providing an easy to use API for implementing automated and
+:	A base class VPAutomatedTestBase provides an easy to use API for implementing automated and
 	repeatable tests. Acceleration and braking tests are already provided.
 
 	<div class="imagegallery" sm="1" md="2" lg="2" style="display:none">
-		<img class="clickview" src="/img/about/vpp-acceleration-test.png" alt="Vehicle Physics Pro - Acceleration test">
-		<img class="clickview" src="/img/about/vpp-braking-test.png" alt="Vehicle Physics Pro - Braking test">
+		![Vehicle Physics Pro - Acceleration test](/img/about/vpp-acceleration-test.jpg "Acceleration test"){: .clickview }
+		![Vehicle Physics Pro - Acceleration test](/img/about/vpp-braking-test.jpg "Braking test"){: .clickview }
 	</div>
 
 	The complete telemetry data of each test may be recorded and exported to CSV for further
