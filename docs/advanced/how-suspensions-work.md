@@ -208,7 +208,7 @@ suspensionForce &= stiffness \cdot{contactDepth}
 
 $$\Longrightarrow naturalFrequency = \sqrt{\frac{gravity}{contactDepth}}$$
 
-So the most important factor that defines the frequency of the suspension is the **contact depth**.
+So the most important factor that defines the frequency of our suspension is the **contact depth**.
 Not the spring rate, not even the sprung mass. The frequency of the suspension will vary on the
 different situations (accelerating, braking, cornering...) according to the contact depth. Note
 that this _contact depth_ includes any pre-load of the spring inside the suspension strut.
