@@ -77,14 +77,14 @@ Questions? Feel free to write to **[info@vehiclephysics.com](mailto:info@vehicle
 
 Also follow Vehicle Physics in your favorite social site:
 
-<img alt="Vehicle Physics Pro Social Links" src="/img/vehicle-physics-pro-social-links.png" usemap="#social-links">
-<map name="social-links">
-  <area shape="rect" coords="0,0,77,72" target="_blank" title="Twitter" alt="Twitter" href="https://twitter.com/VehiclePhysics" target="_blank">
-  <area shape="rect" coords="77,0,165,72" target="_blank" title="Youtube" alt="Youtube" href="https://www.youtube.com/c/VehiclePhysics" target="_blank">
-  <area shape="rect" coords="165,0,244,72" target="_blank" title="Instagram" alt="Instagram" href="https://www.instagram.com/VehiclePhysics/" target="_blank">
-  <area shape="rect" coords="244,0,324,72" target="_blank" title="Facebook" alt="Facebook" href="https://www.facebook.com/vehiclephysics/" target="_blank">
-  <area shape="rect" coords="324,0,400,72" target="_blank" title="Reddit" alt="Reddit" href="https://www.reddit.com/user/vehiclephysics/" target="_blank">
-</map>
+<div style="position: relative; display: block; margin: 0 auto; width: 320px;">
+	<img alt="Vehicle Physics Pro Social Links" src="/img/vehicle-physics-pro-social-links.png" usemap="#social-links">
+	<a href="https://twitter.com/VehiclePhysics" title="Twitter" target=_blank" style="position: absolute; left: 0%; top: 0%; width: 17.5%; height: 100%; z-index: 2;"></a>
+	<a href="https://www.youtube.com/c/VehiclePhysics" title="Youtube" target=_blank" style="position: absolute; left: 19.38%; top: 0%; width: 20.31%; height: 100%; z-index: 2;"></a>
+	<a href="https://www.instagram.com/VehiclePhysics" title="Instagram" target=_blank" style="position: absolute; left: 41.56%; top: 0%; width: 18.13%; height: 100%; z-index: 2;"></a>
+	<a href="https://www.facebook.com/vehiclephysics" title="Facebook" target=_blank" style="position: absolute; left: 61.56%; top: 0%; width: 20%; height: 100%; z-index: 2;"></a>
+	<a href="https://www.reddit.com/user/vehiclephysics" title="Reddit" target=_blank" style="position: absolute; left: 83.13%; top: 0%; width: 18.44%; height: 100%; z-index: 2;"></a>
+</div>
 
 <br>
 
