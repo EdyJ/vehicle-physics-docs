@@ -84,7 +84,7 @@ following these instructions:
 4. Download and open the **JPickup Demo**.
 5. Open the **Input Config** section (_devices_ icon at the toolbar):
 
-	![VPP - Steering Wheel Device debug window](/img/about/vpp-live-steering-wheel-device-info.png){: .img-medium .clickview }
+	![VPP - Steering Wheel Device debug window](/img/about/vpp-live-steering-wheel-device-info.jpg){: .img-medium .clickview }
 
 6. Select **Wheel**. Your wheel should be initialized. Note down the information here: wheel model,
 	buttons, axes, and force feedback (ffb) motors.
@@ -112,7 +112,7 @@ following these instructions:
 	- Coupling = Clutch
 	- Engine Stall = Off
 
-	![VPP - Input Config for force-feedback tests](/img/about/vpp-input-config-force-feedback-test.png){: .img-medium .clickview }
+	![VPP - Input Config for force-feedback tests](/img/about/vpp-input-config-force-feedback-test.jpg){: .img-medium .clickview }
 
 	The engine starts and the car begins moving slowly.
 

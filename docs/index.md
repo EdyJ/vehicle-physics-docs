@@ -53,7 +53,7 @@ types and configurations.
 </section>
 </div>
 
-#### Features
+### Features
 
 - Accurate and complete vehicle dynamics model
 - Easy to integrate and setup
@@ -71,7 +71,7 @@ Try the **[free Community Edition!](https://assetstore.unity.com/packages/tools/
 
 <br>
 
-#### Contact
+### Contact
 
 Questions? Feel free to write to [info@vehiclephysics.com](mailto:info@vehiclephysics.com) | **[More support options](/about/support)**
 
@@ -88,7 +88,7 @@ Also follow Vehicle Physics in your favorite social site:
 
 <br>
 
-#### Customers
+### Customers
 
 &nbsp;
 

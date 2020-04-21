@@ -1,4 +1,4 @@
-# How suspensions work
+# How simple suspensions work
 
 A suspension is essentially a damped spring producing opposing force when being compressed. Springs
 sustain the weight of the vehicle. Dampers oppose the spring movement, dissipating their energy and
@@ -109,16 +109,16 @@ The suspension properties may be studied from the point of view of the oscillati
 ([Harmonic oscillator](http://en.wikipedia.org/wiki/Harmonic_oscillator)). The associated concepts
 are used to study the reactions of the suspension in different situations.
 
-!!! danger "&fa-times-circle:lg; Beware: a vehicle suspension is NOT a harmonic oscillator"
+!!! danger "&fa-times-circle:lg; Beware: a vehicle suspension is NOT a harmonic oscillator _per-se_"
 
 	A suspension **_behaves_** as harmonic oscillator under certain conditions, and may be studied
-	as a harmonic oscillator under those conditions only. Read [Application to real vehicles](#application-to-real-vehicles)
+	as a harmonic oscillator under those conditions. Read [Application to real vehicles](#application-to-real-vehicles)
 	below.
 
 	While a suspension based on specifying the oscillating properties (frequency, damping) is
-	possible, implementing it as a generic harmonic oscillator is a common mistake. Even the
-	suspensions in NVidia's PhysX Vehicles are wrongly designed and implemented as generic harmonic
-	oscillators. This causes set up issues, unrealistic behavior and unexpected results.
+	possible, implementing it as a generic harmonic oscillator is a common mistake and may
+	provide incoherent results. It's not just one, but four (or more) attached suspensions with
+	complex interactions among them: weight shifting, cargo, road conditions...
 
 Given the force produced by the suspension at a specific steady state (_contact speed_ = 0) the
 equivalent _**sprung mass**_ value for studying that situation may be calculated as:
