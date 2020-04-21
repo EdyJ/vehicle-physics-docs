@@ -143,6 +143,14 @@
 	}
 
 
+/* Increased distance with dots to prevent overlaps when they form two rows */
+
+.slider-home .slick-list
+	{
+	padding-bottom: 8px;
+	}
+
+
 /* Reescritura de slick-dots para que aparezcan los numeros de imagen en los botones inferiores de seleccion */
 
 .gusi-dots
