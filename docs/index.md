@@ -1,197 +1,121 @@
+![Vehicle Physics Pro](/img/vehicle-physics-pro.png)
 
-## Vehicle Physics Pro
-
-An advanced vehicle simulation kit for Unity 3D providing fully realistic and accurate vehicle physics.
-
-Quick links:
-
-- [Product walkthrough](/user-guide/getting-started)
-- [Demo downloads](/about/demos)
-- [Showcase](/about/showcase)
-- [Changelog](/about/changelog)
-- [Licensing](/about/licensing)
-
-Advanced AAA+ vehicle physics simulation
-
-:	Built on top of an accurate vehicle dynamics solver providing realistic results for all vehicle
-	types and setups.
-
-Modular powertrain design
-
-:	Vehicle dynamics core is implemented with functional blocks with inputs and/or outputs that can
-	be connected in any number and combination. Any vehicle setup can be emulated by arranging and
-	connecting blocks. VPP includes standard vehicle blocks such as engine, clutch, gearbox,
-	differential, torque splitter, and more.
-
-Advanced wheel and tire friction simulation
-
-:	Provides accurate friction values in all situations. All torques acting in the wheel are
-	properly combined resulting in accurate tire forces and correctly calculated wheel spin rate.
-
-Realistic and coherent
-
-: 	The underlying concept is a custom vehicle simulation model based on essential physics facts:
-	forces, torques and frictions. This model is easier to understand and simpler to calculate than
-	the commonly used models, yet providing physically accurate and realistic results.
-
-	[More features and details](about/features)
-
-&fa-thumbs-up:lg; &nbsp; Stay tuned! Follow [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link}
-on Twitter for the latest news and announcements.
-{: .alert .alert-success }
-
-<!-- Not good: keeps adjusting the height to the current slide. Breaks reading afterwards.
-
-div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-	<ol class="carousel-indicators">
-		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="3"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="4"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="5"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="6"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="7"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="8"></li>
-	</ol>
-
-	<div class="carousel-inner" role="listbox">
-		<div class="item active">
-			<img class="clickview, img-carousel" src="img/gallery/vpp-ferrari.jpg" alt="Ferrari 458 Italia">
-		</div>
-		<div class="item">
-			<img class="clickview, img-carousel" src="img/gallery/vpp-jpickup.jpg" alt="Japanese Pickup Truck - 3D model by Trevor Ley">
-		</div>
-		<div class="item">
-			<img class="clickview, img-carousel" src="img/gallery/vpp-ferrari-burnout.jpg" alt="Ferrari 458 doing some donuts and burnouts">
-		</div>
-		<div class="item">
-			<img class="clickview, img-carousel" src="img/gallery/vpp-ferrari-spa.jpg" alt="Ferrari 458 at 195 kph / 120 mph before riding Eau Rouge at Spa-Francorchamps">
-		</div>
-		<div class="item">
-			<img class="clickview, img-carousel" src="img/gallery/vpp-loop.jpg" alt="Riding a loop with the Ferrari 458">
-		</div>
-		<div class="item">
-			<img class="clickview, img-carousel" src="img/gallery/vpp-alpha-sandbox.jpg" alt="Early sandbox test with Vehicle Physics Pro">
-		</div>
-		<div class="item">
-			<img class="clickview, img-carousel" src="img/gallery/vpp-truck-trailer-setup.jpg" alt="Setting up a Mercedes-Benz Actros to attach to its trailer">
-		</div>
-		<div class="item">
-			<img class="clickview, img-carousel" src="img/gallery/vpp-truck-trailer-offroad.jpg" alt="Extreme offroad test for the Mercedes-Benz Actros + trailer">
-		</div>
-		<div class="item">
-			<img class="clickview, img-carousel" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials, three differential setups">
-		</div>
-	</div>
-
-	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		<span class="sr-only">Previous</span>
-	</a>
-	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
-	</a>
-</div -->
-
-
-<div class="imagegallery" sm="2" md="3" lg="4" style="display:none">
-	<img class="clickview" src="img/gallery/vpp-ferrari.jpg"  alt="Ferrari 458 Italia">
-	<img class="clickview" src="img/gallery/vpp-lancer.jpg" alt="Sports Sedan">
-	<img class="clickview" src="img/gallery/vpp-huracan.jpg" alt="Sports Supercar">
-	<img class="clickview" src="img/gallery/vpp-jpickup.jpg" alt="Japanese Pickup Truck - 3D model by Trevor Ley">
-
-	<img class="clickview" src="img/gallery/vpp-ferrari-burnout.jpg" alt="Ferrari 458 doing some donuts and burnouts">
-	<img class="clickview" src="img/gallery/vpp-ferrari-spa.jpg" alt="Ferrari 458 at 195 kph / 120 mph before riding Eau Rouge at Spa-Francorchamps">
-	<img class="clickview" src="img/gallery/vpp-truck-trailer-setup.jpg" alt="Setting up a Mercedes-Benz Actros to attach to its trailer">
-	<img class="clickview" src="img/gallery/vpp-truck-trailer-offroad.jpg" alt="Extreme offroad test for the Mercedes-Benz Actros + trailer">
-
-	<img class="clickview" src="img/gallery/vpp-loop.jpg" alt="Riding a loop with the Ferrari 458">
-	<img class="clickview" src="img/gallery/vpp-ferrari-monza.jpg" alt="Ferrari 458 taking the Variante del Rettifilo at Monza">
-	<img class="clickview" src="img/gallery/vpp-alpha-sandbox.jpg" alt="Early sandbox test with Vehicle Physics Pro">
-	<img class="clickview" src="img/gallery/vpp-apc-setup.jpg" alt="Extreme driveline setup: 8-wheel drive, seven differentials, three differential setups">
+**Vehicle Physics Pro** (_VPP_ for short) is an advanced vehicle simulation kit for [Unity 3D](http://unity3d.com)
+that provides efficient, fully realistic and accurate vehicle simulations for almost all vehicle
+types and configurations.
+<div class="slick-carousel slick-home">
+<section class="slider-home">
+<div>
+![](/img/carousel/01-nissan-primera-btcc.jpg "Nissan Primera P11 in the awesome Ascari Track Resort. Videos available on the Youtube channel."){: .clickview }
+</div>
+<div>
+![](/img/carousel/02-safety-aids-at-high-speed.jpg "Steering aids and ESC saving the day at 160 km/h (90 mph)"){: .clickview }
+</div>
+<div>
+![](/img/carousel/03-ferrari-hdrp-test.jpg "Testing the Ferrari 458 Italia in Monza in HDRP"){: .clickview }
+</div>
+<div>
+![](/img/carousel/04-seat-leon-cup-racer-2016-tcr.jpg "Seat Leon Cup Racer 2016 using the actual racing setup"){: .clickview }
+</div>
+<div>
+![](/img/carousel/05-mobile-replay-panel.jpg "Mobile UI controlling the Ferrari 458 Italia"){: .clickview }
+</div>
+<div>
+![](/img/carousel/06-jpickup-on-two-wheels.jpg "Extreme test for any vehicle dynamics simulation: driving on two wheels in equilibrium. Video available on the Youtube channel."){: .clickview }
+</div>
+<div>
+![](/img/carousel/07-vehicle-setup.jpg "The demos provided with VPP include setup options configurable on the fly"){: .clickview }
+</div>
+<div>
+![](/img/carousel/08-graphic-telemetry.jpg "The graphic telemetry shows useful charts for many vehicle variables. Here showing the basic states."){: .clickview }
+</div>
+<div>
+![](/img/carousel/09-articulated-bus-with-rear-steering.jpg "Articulated bus with steering in the rearmost axle"){: .clickview }
+</div>
+<div>
+![](/img/carousel/10-kenworth-t680.jpg "A Kenworth T680 tractor truck with attached trailer"){: .clickview }
+</div>
+<div>
+![](/img/carousel/11-komatsu-wa900.jpg "This articulated wheel loader (Komatsu WA900) carries an standard-sized car easily"){: .clickview }
+</div>
+<div>
+![](/img/carousel/12-jcb-3cx.jpg "A typical backhoe loader handling a total of 8 articulations"){: .clickview }
+</div>
+<div>
+![](/img/carousel/13-big-boys.jpg "Left: Hitachi EH5000, diesel-electric dumper, 500 tons when fully loaded. Right: Hitachi EX5500, already weights 520 tons unloaded."){: .clickview }
+</div>
+<div>
+![](/img/carousel/14-argo-j8-amphibious-robotic-vehicle-wheeled.jpg "Amphibious robotic vehicle (Argo J8) in wheeled configuration. Tracked configuration also available."){: .clickview }
+</div>
+<div>
+![](/img/carousel/15-solid-cargo-component.jpg "The Solid Cargo component allows to configure the vehicle cargo with a few parameters."){: .clickview }
+</div>
+</section>
 </div>
 
-#### Development roadmap
+### Features
 
-&fa-check; Base: Tire friction, solver, modular torque model
-{: .roadmap }
+- Accurate and complete vehicle dynamics model
+- Easy to integrate and setup
+- Extensive, detailed documentation
+- Highly customizable (add-on components)
+- Efficient, mobile-capable
+- Full-time product support
+- **[Detailed feature list ...](/about/features)**
 
-&fa-check; Differential
-{: .roadmap }
+Try the **[free Community Edition!](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)**
 
-&fa-check; Steering, Brakes
-{: .roadmap }
+[![Vehicle Physics Pro Community Edition](/img/Unity_AS_Badge_RGB.png "Vehicle Physics Pro Community Edition")](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556){: target="_blank" style="display: block; margin: 0 auto; max-width: 173px;" }
 
-&fa-check; Engine + clutch
-{: .roadmap }
+[Professional and Enterprise licenses available](/about/licensing) for individuals and companies.
 
-&fa-check; Gearbox
-{: .roadmap }
+<br>
 
-&fa-check; Driveline and axle setup
-{: .roadmap }
+### Contact
 
-&fa-check; Repository clean up and upgrade to Unity 5
-{: .roadmap }
+Questions? Feel free to write to [info@vehiclephysics.com](mailto:info@vehiclephysics.com) | **[More support options](/about/support)**
 
-&fa-check; [Skidmarks, smoke, tire trails](components/vehicle-addons#vptireeffects)
-{: .roadmap }
+Also follow Vehicle Physics in your favorite social site:
 
-&fa-check; [Vehicle audio: engine, turbo, impacts, tire skid...](components/vehicle-addons#vpaudio)
-{: .roadmap }
+<div style="position: relative; display: block; margin: 0 auto; max-width: 320px;">
+	<img alt="Vehicle Physics Pro Social Links" src="/img/vehicle-physics-pro-social-links.png">
+	<a href="https://twitter.com/VehiclePhysics" title="Twitter" target=_blank" style="position: absolute; left: 0%; top: 0%; width: 17.5%; height: 100%; z-index: 2;"></a>
+	<a href="https://www.youtube.com/c/VehiclePhysics" title="Youtube" target=_blank" style="position: absolute; left: 19.38%; top: 0%; width: 20.31%; height: 100%; z-index: 2;"></a>
+	<a href="https://www.instagram.com/VehiclePhysics" title="Instagram" target=_blank" style="position: absolute; left: 41.56%; top: 0%; width: 18.13%; height: 100%; z-index: 2;"></a>
+	<a href="https://www.facebook.com/vehiclephysics" title="Facebook" target=_blank" style="position: absolute; left: 61.56%; top: 0%; width: 20%; height: 100%; z-index: 2;"></a>
+	<a href="https://www.reddit.com/user/vehiclephysics" title="Reddit" target=_blank" style="position: absolute; left: 83.13%; top: 0%; width: 18.44%; height: 100%; z-index: 2;"></a>
+</div>
 
-&fa-check; Minor bug fixes and code polishing
-{: .roadmap }
+<br>
 
-&fa-check; Scenes and vehicles for tests
-{: .roadmap }
+### Customers
 
-&fa-check; **Enter the Beta stage!**
-{: .roadmap }
+&nbsp;
 
-&fa-check; Generic steering wheels support (DirectInput)
-{: .roadmap }
+<div style="position: relative; display: block; margin: 0 auto; max-width: 680px">
+	<img alt="Take-Two Interactive, Toyota, BMW, Volkswagen, Scania, UPS" src="/img/vehicle-physics-pro-clients-1.png">
+	<a title="Take-Two Interactive" style="position: absolute; left: 0%; top: 0%; width: 14.71%; height: 100%; z-index: 2;"></a>
+	<a title="Toyota" style="position: absolute; left: 16.62%; top: 0%; width: 16.47%; height: 100%; z-index: 2;"></a>
+	<a title="BMW" style="position: absolute; left: 34.41%; top: 0%; width: 15.59%; height: 100%; z-index: 2;"></a>
+	<a title="Volkswagen" style="position: absolute; left: 52.65%; top: 0%; width: 14.41%; height: 100%; z-index: 2;"></a>
+	<a title="Scania" style="position: absolute; left: 69.71%; top: 0%; width: 15.59%; height: 100%; z-index: 2;"></a>
+	<a title="UPS" style="position: absolute; left: 86.91%; top: 0%; width: 15.15%; height: 100%; z-index: 2;"></a>
+</div>
 
-&fa-check; [Performance Analysis Charts](components/vehicle-telemetry#vpperformanceanalysis)
-{: .roadmap }
+<div style="position: relative; display: block; margin: 0 auto; max-width: 680px">
+	<img alt="Huawei, Metamoto, Simumak, CVedia" src="/img/vehicle-physics-pro-clients-2.png">
+	<a title="Huawei" style="position: absolute; left: 18.53%; top: 0%; width: 14.12%; height: 100%; z-index: 2;"></a>
+	<a title="Metamoto" style="position: absolute; left: 34.41%; top: 0%; width: 15.59%; height: 100%; z-index: 2;"></a>
+	<a title="Simumak" style="position: absolute; left: 52.35%; top: 0%; width: 14.41%; height: 100%; z-index: 2;"></a>
+	<a title="CVedia" style="position: absolute; left: 68.24%; top: 0%; width: 13.38%; height: 100%; z-index: 2;"></a>
+</div>
 
-&fa-check; Replay system with rewind & continue
-{: .roadmap }
+&nbsp;
 
-&fa-check; Driving aids
-{: .roadmap }
-
-&fa-check; Demo scenes and examples
-{: .roadmap }
-
-&fa-check; Package for the Unity Asset Store
-{: .roadmap }
-
-&fa-check; **First release!**
-{: .roadmap }
-
-&fa-gear:spin; Complete the documentation
-{: .roadmap .wip }
-
-Anisotropic tire friction
-{: .roadmap .todo }
-
-Hybrid 3D wheel solution
-{: .roadmap .todo }
-
-
-!!! info "&fa-thumbs-o-up; Feedback is welcome!"
-
-	- General usage, workflow, integration in current projects.
-	- Simulation: components, settings, behavior.
-	- Documentation: things you would want to learn, know about, or are not fully understood.
-	- Documentation: typo and grammar fixes.
-
-	Feel free to write me to [edy@vehiclephysics.com](mailto:edy@vehiclephysics.com) or via Twitter
-	[@VehiclePhysics](https://twitter.com/VehiclePhysics).
-
-<a class="twitter-timeline" href="https://twitter.com/VehiclePhysics" data-widget-id="687956324773179396">Tweets by @VehiclePhysics</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+> **Awesome. Accurate and Professional.**
+> I have been using VPP for over 4 years and all I can say is that this product is truly amazing.
+> It is well designed, everything makes sense. When you are simulating some feature and a secondary
+> effect appears, it is always a real physic or dynamic consequence. This is great, because
+> sometimes the result is counterintuitive, but VPP helps you to understand the reality more than
+> your own perception.<br>
+> (Manuel Espino, Simumak)

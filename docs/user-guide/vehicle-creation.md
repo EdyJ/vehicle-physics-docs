@@ -12,7 +12,7 @@ Requirements
 Prepare a test scene, create the vehicle GameObject, add the basic VPP components, configure and
 test the vehicle.
 <div class="slick-carousel">
-<section class="test-slider slider">
+<section class="slider">
 <div>
 ![](/img/user-guide/vpp-rig-tutorial-01.png){: .clickview }
 

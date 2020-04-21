@@ -30,7 +30,7 @@ Framework for AI and autonomous vehicles: self-drive, automated tests, path foll
 Unity Timeline integration for splines																	|	|	| &fa-check; |
 Engine configuration tool to fit the engine settings to real data _(Experimental)_						|	|	| &fa-check; |
 Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/), [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/), [CXC](https://www.cxcsimulations.com)	|	|	| &fa-check; |
-Support by Skype / Discord																				|	|	| &fa-check; |
+Support by Skype / Discord / MS Teams																	|	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
 **License Setup Fee**<br>_One-time payment, perpetual license_											| **FREE** | **€ 590** | **€ 5900** |
 **Support and updates**<br>_First year included in the license setup fee_								| _n/a_ | € 190<br>/year | € 1900<br>/year |
@@ -58,49 +58,16 @@ May be licensed by companies with annual revenue / funds / budget in excess of �
 - Connections to the GIT repositories are logged per-account. Failure to keep the repository
 	connections under reasonable limits may result in the interruption of the service.
 
-##### Subscription
+### Subscription
 
-The subscription model allows continuous development, feature updates, and product support in the
-long term.
+The VPP license is perpetual. Only receiving support and updates requires an active subscription.
 
-- Professional and Enterprise licenses include a yearly subscription for support and updates.
-- First year of support and updates is included with license setup fee.
-- Customers may opt-out any time and keep the most recent VPP version at that time.
+- One year of support and updates is already included with license setup fee.
+- Customers may opt-out any time and keep the most recent VPP version when the subscription expires.
 - A grace period of 120 days is granted after opting-out to rejoin paying the subscription fee only.
 
-### Professional Services
-
-Vehicle Rig and Setup
-
-:	Send me your [3D model](/user-guide/3d-models) and the [vehicle specifications](/advanced/configuring-realistic-vehicles/).
-	I'll rig and configure it for you as closely as possible to the real vehicle.
-
-Custom Development
-
-:	Let me take a close look at your project and I'll propose solutions to your specific issues
-	with vehicles. I can also configure your vehicles to match your project's specifications.
-
-Training and Learning
-
-:	I can teach you or your team to work with Vehicle Physics Pro in any level. From basic rigging
-	and setup to advanced vehicle fine-tunning.
-
-##### Rates
-
-- 120 €/hour, with a limit of 8 hours per week per customer.
-- Extra hours, or support provided outside the available time slots: 240 €/hour
-- Traveling to the customer's location: 1200 €/day + expenses, with a limit of 5 work days per month.
-- Online training: 1200 €/day
-
-##### Notes
-
-- I'll sign an NDA upon request.
-- Time includes any task related to the Services including, but not limited to, setting up projects,
-	downloading resources, reviewing documentation or videos, meetings, writing documentation, and
-	any other task or procedure necessary to provide the Services.
-- A refundable retainer will be requested in advance for providing the services, with reimbursement
-	to the customer of any remaining amount following the completion of services. The minimum retainer
-	amount shall be €1200.
+The subscription fee allows continuous development, feature updates, and product support in the
+long term.
 
 ### Terms & Conditions
 
