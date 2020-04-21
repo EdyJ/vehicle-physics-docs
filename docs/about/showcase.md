@@ -1,7 +1,7 @@
 # Showcase
 
 These are actual vehicles simulated with Vehicle Physics Pro in different third-party projects.
-All vehicles use the specifications of the real model. Most of them are being used in certified
+All vehicles use the specifications of the real model. Many of them are being used in certified
 simulators for training drivers. Pictures are taken from live test scenes.
 
 &fa-warning:lg; Most of the vehicles shown here belong to third party customers and are **not**

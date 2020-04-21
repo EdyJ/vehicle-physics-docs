@@ -4,14 +4,15 @@ Got any question? Need any information? Feel free to write to **[info@vehiclephy
 
 ### Questions & Answers
 
-Use the Q&A site to ask specific questions. No sign-up needed!
+Use the Q&A site to find answers and ask questions. No sign-up required! **[support.vehiclephysics.com](https://support.vehiclephysics.com){: target="_blank" }**
 
-< image with link >
+[![Vehicle Physics Pro Support Questions & Answers](/img/vpp-support-qa-site.png "Vehicle Physics Pro Community Support Questions & Answers")](https://support.vehiclephysics.com){: target="_blank" style="display: block; margin: 0 auto; max-width: 500px;" }
+
 
 ### Product support
 
-Receiving product support requires a license and an active subscription. One year of support and
-updates is already included in the license fee.
+Getting support directly from the developer requires a license and an active subscription.
+One year of support and updates is already included in the license fee.
 
 Professional Edition
 :	Product support by email is provided to the licensee individual.
