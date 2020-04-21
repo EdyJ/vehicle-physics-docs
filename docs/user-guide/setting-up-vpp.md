@@ -10,7 +10,7 @@ VPP may be downloaded as:
 ### Requirements
 
 - Minimum Unity version: Unity 2017.1
-- Recommended Unity version: **Unity 2018.4+**
+- Recommended Unity version: **Unity 2018.4 an above**
 - Scripting Runtime Version: **.NET 4.x Equivalent**
 - Enterprise Edition: API Compatibility Level: **.NET 4.x**
 

@@ -119,4 +119,4 @@ Also follow Vehicle Physics in your favorite social site:
 > effect appears, it is always a real physic or dynamic consequence. This is great, because
 > sometimes the result is counterintuitive, but VPP helps you to understand the reality more than
 > your own perception.<br>
-> (Manu Espino, Simumak)
+> (Manuel Espino, Simumak)
