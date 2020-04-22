@@ -110,7 +110,7 @@ instead.
 - [Custom _Blocks_](/advanced/custom-blocks) or internal vehicle parts (e.g. custom differential type)
 - [Custom ground materials](/components/ground-materials/#vpgroundmaterialmanagercs) by overriding
 	the provided ground material manager
-- Custom automated tests for measuring the vehicle specifications
+- Custom automated tests for measuring vehicle specifications
 - Customization examples provided: input logic, custom handling, simple vehicle controllers, turbo charger ...
 
 #### Performance
@@ -118,7 +118,7 @@ instead.
 - Mobile and low-end systems supported
 - Efficient, scalable design
 - Supports physics update rates as low as 16 Hz (0.06 timestep)
-- Dynamics Solver exposes [_substeps_](/advanced/misc-topics-explained/#solver-numeric-integration) for any per-vehicle update rate: 50, 400, 1000, 2000 Hz
+- Dynamics Solver exposes [_substeps_](/advanced/misc-topics-explained/#solver-numeric-integration) per-vehicle for any update rate: 50, 400, 1000, 2000 Hz
 
 #### Integration
 
@@ -134,7 +134,7 @@ instead.
 
 - Extensive and detailed online documentation (this site)
 - [Customer support](/about/support) provided directly from the developer
-- On-demand [Professional Services](/about/support/#professional-services) available at hourly rates
+- [Professional Services](/about/support/#professional-services) available on-demand at hourly rates
 - Dedicated [Support Q&A site](https://support.vehiclephysics.com "Vehicle Physics Pro Q&A"){: target="_blank" }
 - Updates delivered by GIT repositories and Unitypackages.
 - In continuous development since 2010 ([changelog](/about/changelog))
