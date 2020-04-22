@@ -144,7 +144,7 @@ instead.
 Racing games and simulators
 :	Configure and fine-tune the vehicles applying real-world techniques and tricks.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SdeJcpWNHsw" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5RC4Rc-TbEk" frameborder="0" allowfullscreen></iframe>
 
 Training simulators
 :	Apply the specifications of real vehicles to Vehicle Physics Pro and build a simulator for
@@ -158,7 +158,7 @@ Learning and Teaching
 :	Learn how real vehicles and internal parts work: basics, requirements, behaviors, side-effects,
 	configuration techniques, performance tips...
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FuqO4gKDzKE" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PT5YMWqCLJc" frameborder="0" allowfullscreen></iframe>
 
 Prototyping
 :	Experiment with any crazy idea you may have: two engines, one per front-rear axle? Sure!
@@ -170,7 +170,7 @@ Multi-body vehicles
 :	A vehicle may be composed of several rigidbodies, each one with several wheels attached.
 	Articulations between rigidbodies are implemented with the VPVehicleJoint component.
 
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/2JHrWiQV5mI" frameborder="0" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/G29A1ezRMb0" frameborder="0" allowfullscreen></iframe>
 
 Dynamic suspension
 :	The suspension of a group of wheels is dynamically adjusted to adapt to the supported weight
@@ -180,7 +180,7 @@ Dynamic suspension
 	Example: when the truck starts in the video below (~sec 30) the rear wheels increase their
 	suspension stiffness to adapt to the trailer's weight.
 
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/QYRHoKYw_rA" frameborder="0" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/d4IE3-Vrr78" frameborder="0" allowfullscreen></iframe>
 
 Liquid & solid cargo
 :	The liquid cargo component simulates a fluid sloshing in a closed tank. The solid cargo
