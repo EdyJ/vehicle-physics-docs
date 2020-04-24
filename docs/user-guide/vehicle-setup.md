@@ -15,6 +15,7 @@ _Paste Component Values_ options in the component's context menu.
 	- Distance is metres (m)
 	- Speed is metres per second (m/s)
 	- Acceleration is metres per second squared (m/s²)
+	- Angular velocity is radians per second (rad/s) or rpm when specified
 	- Force is newtons (N)
 	- Torque is newtons-metre (Nm)
 

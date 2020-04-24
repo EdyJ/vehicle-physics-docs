@@ -17,7 +17,7 @@ instead.
 
 - Engine: torque curve, brake torque, fuel consumption, stall
 - Electric motor: torque curve, brake curve, regenerative braking
-- Clutch: disc friction, clutch slip
+- Clutch: lock ratio, disc friction, clutch slip
 - Torque Converter with locking curve
 - AWD (all-wheel-drive), RWD (rear-wheel-drive), FWD (front-wheel-drive)
 - Automatic Transmission with P-R-N-D and Manual modes

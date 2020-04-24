@@ -285,6 +285,8 @@ namespace VehiclePhysics
 
 	public class WheelState
 		{
+		public int wheelIndex;					// Index of this wheel within the vehicle
+
 		// Associated VPWheelCollider			----------------------------------------------------
 
 		public VPWheelCollider wheelCol;
@@ -292,7 +294,7 @@ namespace VehiclePhysics
 
 		// External input						----------------------------------------------------
 
-		public float steerAngle = 0.0f;
+		public float steerAngle;
 
 		// Collider state 						----------------------------------------------------
 
@@ -303,29 +305,31 @@ namespace VehiclePhysics
 
 		public GroundMaterial groundMaterial;
 		public GroundMaterialHit lastGroundHit;
+		public float linearGroundPosition;
 
 		// Suspension state
 
-		public float contactDepth = 0.0f;			// Depth of the suspension compression (m)
-		public float suspensionCompression = 0.0f;	// Compression ratio: 0.0 = fully elongated, 1.0 = 100% compressed
-		public float downforce;						// Amount of vertical force directly applied on the contact patch. May be translated to friction force.
-		public float normalizedLoad = 0.0f;			// Load for each tire relative to vehicle weight, normalized to 1 = rest in an evenly balanced car, 0 = in air
+		public float contactDepth;				// Depth of the suspension compression (m)
+		public float suspensionCompression;		// Compression ratio: 0.0 = fully elongated, 1.0 = 100% compressed
+		public float suspensionLoad;			// Total vertical load supported by the suspension and applied on the wheel
+		public float verticalForce;				// Amount of the vertical load that is directly applied on the contact patch. May be translated to friction force.
+		public float normalizedLoad;			// Load for each tire relative to vehicle weight, normalized to 1 = rest in an evenly balanced car, 0 = in air
 
-		public float contactAngle = 0.0f;			// Angle of the wheel with the surface (wheel's forward direction)
-		public float contactSpeed = 0.0f;			// Speed of movement of the suspension. Used for calculating the damper.
-		public float damperForce = 0.0f;			// Damper force applied
+		public float contactAngle;				// Angle of the wheel with the surface (wheel's forward direction)
+		public float contactSpeed;				// Speed of movement of the suspension. Used for calculating the damper.
+		public float damperForce;				// Damper force applied
 
-		public float lastContactDepth = 0.0f;		// Contact depth from the previous step (for contact speed)
+		public float lastContactDepth;			// Contact depth from the previous step (for contact speed)
 
 		// Local reference frame (from Hit)
 
-		public Vector3 wheelVelocity;				// Surface tangent velocity (forward-right plane)
-		public Vector3 surfaceForce;				// Force canceling surface slope in steady state
+		public Vector3 wheelVelocity;			// Surface tangent velocity (forward-right plane)
+		public Vector3 surfaceForce;			// Force canceling surface slope in steady state
 
-		public Vector2 localWheelVelocity;			// The above translated to the forwards-sideways local frame (y,x)
-		public Vector2 localSurfaceForce;			// (hit.forwardDir, hit.sidewaysDir).
+		public Vector2 localWheelVelocity;		// The above translated to the forwards-sideways local frame (y,x)
+		public Vector2 localSurfaceForce;		// (hit.forwardDir, hit.sidewaysDir).
 
-		public Vector2 externalTireForce;			// Local forces canceling the tire's sliding velocity over the surface
+		public Vector2 externalTireForce;		// Local forces canceling the tire's sliding velocity over the surface
 
 		// Integrated data (from the Solver)	----------------------------------------------------
 
