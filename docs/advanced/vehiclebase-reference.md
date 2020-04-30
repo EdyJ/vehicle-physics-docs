@@ -449,6 +449,10 @@ namespace VehiclePhysics
 
 	public TireFriction GetWheelTireFriction (int wheelIndex)
 
+	// Apply a multiplier to the friction of the tire
+
+	public void SetWheelTireFrictionMultiplier (int wheelIndex, float frictionMultiplier)
+
 	// Return the angular velocity that produces a specific slip in a given wheel
 
 	public float GetWheelAngularVelocityForSlip (int wheelIndex, float slip)

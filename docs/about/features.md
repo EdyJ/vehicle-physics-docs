@@ -68,7 +68,7 @@ instead.
 
 #### Advanced
 
-- Electric vehicles, single or multiple motors
+- Electric vehicles, single or multiple motors, regenerative braking
 - Advanced suspension dampers: bump/rebound, slow/fast
 - Dynamic suspension that automatically preserves the ride height
 - Variable-rate suspension springs
