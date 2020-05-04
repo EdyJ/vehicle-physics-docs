@@ -5,7 +5,7 @@
 | Features | <center>Community</center> | <center>Professional</center> | <center>Enterprise</center> |
 |----------|:----:|:--------:|:------------:|
 Full-featured [Vehicle Controller](/components/vehicle-controller) and [Wheel Collider](/components/wheel-collider/) components	| &fa-check; | &fa-check; | &fa-check; |
-Essential components:<br>[Telemetry](https://vehiclephysics.com/components/vehicle-telemetry/), [Audio](https://vehiclephysics.com/components/vehicle-addons/#vpaudio), [Anti-roll bar](https://vehiclephysics.com/components/vehicle-dynamics/#vpantirollbar), [keyboard input](https://vehiclephysics.com/components/vehicle-input/#vpstandardinput), [visual effects](https://vehiclephysics.com/components/vehicle-addons/#vpvisualeffects), rolling friction, [aerodynamics](https://vehiclephysics.com/components/vehicle-dynamics/#vpaerosurface) | &fa-check; | &fa-check; | &fa-check; |
+Essential components:<br>[Telemetry](/components/vehicle-telemetry/), [Audio](/components/vehicle-addons/#vpaudio), [Anti-roll bar](/components/vehicle-dynamics/#vpantirollbar), [keyboard input](/components/vehicle-input/#vpstandardinput), [visual effects](/components/vehicle-addons/#vpvisualeffects), rolling friction, [aerodynamics](/components/vehicle-dynamics/#vpaerosurface) | &fa-check; | &fa-check; | &fa-check; |
 Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-check; |
 Wheels per vehicle																		|		4	| 1-20		| 1&#8209;unlimited |
 Simultaneous vehicles in each scene														|		1	| unlimited | unlimited |
@@ -25,16 +25,16 @@ Full source code included																				|	|	| &fa-check; |
 Advanced simulation features: multi-body vehicles, solid and liquid cargo components					|	|	| &fa-check; |
 Advanced suspension features: damper bump & rebound, dynamic suspension, bump stop					|	|	| &fa-check; |
 Specialized vehicle controllers: motorbike, caterpillar, mining, excavators, hydraulic actuators. [Showcase](/about/showcase/)	|	|	| &fa-check; |
-Advanced vehicle controllers: electric, hybrid, two-wheeled, bulldozer, [diesel-electric](https://twitter.com/VehiclePhysics/status/1135951323629854721), tracked, hydraulic-tracked	|	|	| &fa-check; |
+Advanced vehicle controllers: electric, hybrid, two-wheeled, bulldozer, [diesel-electric](https://twitter.com/VehiclePhysics/status/1135951323629854721){: target="_blank" }, tracked, hydraulic-tracked	|	|	| &fa-check; |
 Framework for AI and autonomous vehicles: self-drive, automated tests, path follow, export data to CSV	|	|	| &fa-check; |
 Unity Timeline integration for splines																	|	|	| &fa-check; |
 Engine configuration tool to fit the engine settings to real data _(Experimental)_						|	|	| &fa-check; |
-Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/), [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/), [CXC](https://www.cxcsimulations.com)	|	|	| &fa-check; |
+Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/){: target="_blank" }, [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/){: target="_blank" }, [CXC](https://www.cxcsimulations.com){: target="_blank" }	|	|	| &fa-check; |
 Support by Skype / Discord / MS Teams																	|	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
 **License Setup Fee**<br>_One-time payment, perpetual license_											| **FREE** | **€ 590** | **€ 5900** |
 **Support and updates**<br>_First year included in the license setup fee_								| _n/a_ | € 190<br>/year | € 1900<br>/year |
-**GET LICENSE**							| [**Asset&nbsp;Store**](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556) | [**BUY&nbsp;NOW**](https://goo.gl/EoAe5v) | [**BUY&nbsp;NOW**](https://goo.gl/QzPdcu) |
+**GET LICENSE**							| [**Asset&nbsp;Store**](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556){: target="_blank" } | [**BUY&nbsp;NOW**](https://goo.gl/EoAe5v){: target="_blank" } | [**BUY&nbsp;NOW**](https://goo.gl/QzPdcu){: target="_blank" } |
 
 &fa-warning:lg; License versions, terms, content and pricing are subject to change without prior notice.
 {: .alert .alert-warning }
@@ -71,4 +71,4 @@ long term.
 
 ### Terms & Conditions
 
-[Vehicle Physics Pro SDK License Agreement (PDF)](/Vehicle%20Physics%20Pro%20SDK%20License%20Agreement.pdf)
+[Vehicle Physics Pro SDK License Agreement (PDF)](/Vehicle%20Physics%20Pro%20SDK%20License%20Agreement.pdf){: target="_blank" }
