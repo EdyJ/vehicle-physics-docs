@@ -75,7 +75,7 @@ Try the **[free Community Edition!](https://assetstore.unity.com/packages/tools/
 
 Questions? Feel free to write to [info@vehiclephysics.com](mailto:info@vehiclephysics.com) | **[More support options](/about/support)**
 
-Also follow Vehicle Physics in your favorite social site:
+Also follow Vehicle Physics for regular announcements and progress updates:
 
 <div style="position: relative; display: block; margin: 0 auto; max-width: 320px;">
 	<img alt="Vehicle Physics Pro Social Links: Twitter, Youtube, Instagram, Facebook, Reddit" src="/img/vehicle-physics-pro-social-links.png">
