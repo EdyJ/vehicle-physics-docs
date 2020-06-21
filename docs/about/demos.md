@@ -42,31 +42,6 @@ the most typical features in a standard car:
 
 The Setup dialog includes built-in help. Just move the mouse over an option to see its description.
 
-### Ascari Demo
-
-<div class="imagegallery" sm="2" md="2" lg="2" style="display:none">
-	<img class="clickview" src="/img/demos/vpp-ascari-golf-1.png" alt="Vehicle Physics Pro - Ascari Demo">
-	<img class="clickview" src="/img/demos/vpp-ascari-golf-2.png" alt="Vehicle Physics Pro - Ascari Demo">
-</div>
-
-<center>**Download Vehicle Physics Pro Ascari Demo<br>
-[PC/Windows&nbsp;(70&nbsp;MB)](https://www.edy.es/vehiclephysics/demos/2019-08-29-VPP-Ascari-Demo-PC-Windows.7z) | [Mac&nbsp;OS&nbsp;X&nbsp;(87&nbsp;MB, old version)](https://www.edy.es/vehiclephysics/demos/2019-05-04-VPP-Ascari-Demo-Mac-OS-X.zip)**</center>
-
-This is the demo I use to learn and memorize the key aspects of this awesome track in both day and
-night conditions. The car is a stock Volkswagen Golf. Not a racing car, not even a particularly
-powerful car, so the challenge is driving it to competitive level getting the maximum out of it.
-See the _Rules & Hints_ tab in the in-game Help for more.
-
-The demo features a beautiful day-night cycle. Time of the day is accelerated to the rate of 1 hour
-per minute, so an entire day takes 24 minutes of simulation time. Visibility is very poor on purpose
-at night, so you have to memorize the track as much as possible and drive by using the few
-references at all within your reach. Remember to turn the headlights on!
-
-Can you beat the 2:50 mark? My lap record at the time of writing this is 2:45.881.
-
-**Credits:** The 3D model of the Ascari Resort Track is my own adaptation to Unity of a mod for
-Assetto Corsa developed by the AC forum member **_liquido_** a few years ago. [Full story here](https://assettocorsamods.net/threads/ascari-race-resort-ronda-spain.235/).
-
 ## Steering Wheel Support
 
 Currently the demos support these steering wheel models:
