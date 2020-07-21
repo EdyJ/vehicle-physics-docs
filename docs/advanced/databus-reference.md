@@ -104,6 +104,7 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 |EscEngaged		| Is the ESC applying brakes for keeping stability?		|		|		| 0 = no, non-zero = yes
 |AsrEngaged		| Is the ASR applying brakes for reducing wheel slip?	|		|		| 0 = no, non-zero = yes
 |AidedSteer		| Steering wheel position after steering aids | %	| 10000	| -10000 = full left, 0 = center, +10000 = full right
+|FuelConsumption| Overall fuel consumption of the vehicles	| l/100km | 1000 | 20230 = 20.23 l/100km
 
 ### Settings channel
 
