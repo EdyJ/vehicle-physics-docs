@@ -53,6 +53,11 @@ Project Settings - Physics
 	Collision Matrix. You may restore your own collision matrix afterwards (VPP doesn't require
 	any special collision matrix).
 
+	&fa-exclamation-circle:lg; **WARNING:** Don't configure _Solver Type_ = _Temporal Gauss Seidel (TGS)_ in
+	the physics settings as this causes weird issues in vehicles. Always configure _Solver Type_ =
+	_Projected Gauss Seidel (PGS)_.
+	{: .alert .alert-danger }
+
 Project Settings - Quality
 :	Enhances the visual quality of the shadows and textures in large scenarios.
 
