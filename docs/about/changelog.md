@@ -12,6 +12,9 @@ Full development details are available via GIT revision logs ([VPP subscription]
 
 <hr>
 
+&fa-thumbs-up:lg; This page is updated from time to time. Check out [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link } on Twitter for weekly updates.
+{: .alert .alert-success }
+
 #### March 2020 - SDK V8
 
 - **Unitypackages** are now provided for downloading Vehicle Physics Pro and configuring the Project Settings. [Learn more](/user-guide/setting-up-vpp)
