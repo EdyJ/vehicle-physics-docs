@@ -175,3 +175,17 @@ a.headerlink, a.headerlink:hover
 	{
 	color: #bde5fd;
 	}
+
+
+/* Links too close at menu and sidebar */
+
+.dropdown-menu > li > a
+	{
+	padding: 6px 20px;
+	}
+
+
+.bs-sidebar .nav > li > a
+	{
+	padding: 7px 20px;
+	}
