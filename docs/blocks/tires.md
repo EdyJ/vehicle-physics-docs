@@ -155,51 +155,6 @@ means they are developing the minimum friction (a coefficient of friction of ~0.
 		rear wheels at high speeds. This may increase oversteer as well.
 		rear wheels at high speeds. This may increase oversteer as well.
 
-### Slip ratio and slip angle
-
-There are lots of papers, docs, etc. about tires and slip ratio / slip angle. _"Don't reinvent the
-wheel"_ is a good lesson, but this time I strongly believe that the wheel needed to be reinvented
-for most racing games and vehicle simulations.
-
-**The fact** is that slip ratio and slip angle concepts are *not* required at all for simulating
-tires and vehicles. Vehicle Physics Pro uses a tire simulation model that doesn't use these concepts
-at all, yet providing fully accurate and realistic results. I've conceived a tire model where all
-frictions, forces and torques can be calculated in a much easier and consistent way.
-
-Here's a quote from my article [Facts and Myths of the Pacejka curves](http://www.edy.es/dev/2011/12/facts-and-myths-on-the-pacejka-curves/),
-which is indeed based on Brian Beckman's thoughts about the Magic Formula not accounting for any
-variation of the force with speed (reference: [The Physics Of Racing, chapter 22](http://phors.locost7.info/phors22.htm)):
-
-> The lateral force is based on the slip angle. However the slip angle does not account for any
-> variation with the speed. Intuitively, the forces generated at high speed must be greater than
-> the forces at low speed with the same slip angles. But V = (0.2, 0.1) results in the same slip
-> angle (and thus the same force) as V = (20, 10).
-
-Also, the widely used slip ratio formulas fail to describe tire grip at very different speeds. At
-10 m/s a slip ratio of 10% represents 1 m/s of speed difference at the contact patch. But at 40 m/s
-the same slip ratio represents 4 m/s of speed difference at the contact patch. Intuitively, this
-slip ratio of 10% cannot result in the same tire grip in both situations.
-
-In my opinion the slip ratio and slip angle concepts belong to the automotive and tire industries.
-They are used to make studies, write standards, specifications, etc. but they are hard to fit into
-games and vehicle simulations in a coherent way. Slip ratio, slip angle and all their related
-stuff are required if you need your simulation to match exactly the real specifications and product
-details given by tire and automotive manufacturers, as they use these standards for exchanging
-information.
-
-For instance, if you want your simulation to reproduce exactly the tire model XXX from manufacturer
-YYY then you need to use the slip ratio and slip angle concepts because the manufacturer will
-provide the specifications and measures on that tire using these concepts and standards.
-
-Even so, these standards are not applicable to many common situations such as low speeds and steady
-states. These situations must still be "faked" and threated separately in the simulation. Racing
-games are mostly in the "high speed" mode, so they don't care. But many common non-racing situations
-produce incoherent results using the slip ratio and slip angle concepts.
-
-&fa-info-circle:lg; The tire model developed for Vehicle Physics Pro provides perfectly coherent behaviors at any speed,
-with perfectly defined continuous transitions between any state.
-{: .alert .alert-info }
-
 ### Converting an existing Pacejka set to VPP
 
 Standard Pacejka sets are based on _slip ratio_ and _slip angle_ while friction curves in VPP are
