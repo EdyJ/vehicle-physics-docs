@@ -141,6 +141,10 @@ instead.
 
 # Application examples
 
+&fa-warning:lg; Most of the 3D models shown here belong to third party customers and are **not**
+included in Vehicle Physics Pro.
+{: .alert .alert-warning }
+
 Racing games and simulators
 :	Configure and fine-tune the vehicles applying real-world techniques and tricks.
 
@@ -165,6 +169,10 @@ Prototyping
 	Observe the behavior and all the side effects.
 
 # Feature examples
+
+&fa-warning:lg; Most of the 3D models shown here belong to third party customers and are **not**
+included in Vehicle Physics Pro.
+{: .alert .alert-warning }
 
 Multi-body vehicles
 :	A vehicle may be composed of several rigidbodies, each one with several wheels attached.

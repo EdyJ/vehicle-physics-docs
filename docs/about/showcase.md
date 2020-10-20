@@ -4,7 +4,7 @@ These are actual vehicles simulated with Vehicle Physics Pro in different third-
 All vehicles use the specifications of the real model. Many of them are being used in certified
 simulators for training drivers. Pictures are taken from live test scenes.
 
-&fa-warning:lg; Most of the vehicles shown here belong to third party customers and are **not**
+&fa-warning:lg; Most of the 3D models shown here belong to third party customers and are **not**
 included in Vehicle Physics Pro.
 {: .alert .alert-warning }
 
