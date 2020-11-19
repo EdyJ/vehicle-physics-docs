@@ -4,22 +4,27 @@
 
 ## Vehicles
 
-A good vehicle 3D model mets these minimum standards:
+Rules for vehicle 3D models:
 
 - FBX file
 - Forward direction is +Z
 - Scale is 1 unit = 1 meter
-- Rotations are 0, 0, 0 excepting the parts that have a logical orientation (i.e. steering wheel)
-- Movable parts have their local origin placed at the rotation point (wheels, steering wheel...)
-- Movable parts should have zero logical rotation at their default/rest position (i.e. doors)
-- Wheels' origins should be at the geometric center of the wheel. Twin wheel groups (i.e. rear
+- Origin is the middle of the front axle.
+- Rotations are 0, 0, 0 excepting the parts that have a logical orientation (eg. steering wheel
+	pitch)
+- Movable parts have their local origin placed at the rotation point (eg. doors, steering wheel)
+- Movable parts should have zero logical rotation at their default/rest position (eg. doors)
+- Wheels' origins should be at the geometric center of the wheel. Twin wheel groups (eg. rear
 	wheels at trucks) should have their origin at the center of both wheels.
 - Wheel complements (brake calipers, suspension) should have the same origin as their corresponding
 	wheels.
-- All parts in hierarchy are named in plain _English_, so everyone can understand it (note that
+- All parts in hierarchy are named in plain _English_, so everyone can understand it (also note that
 	language-specific characters often cause missing meshes)
 
-Importing the FBX alone should comply with these rules without having to create a prefab first.
+!!! info "&fa-lightbulb-o:lg; Hints for modeling vehicles in Blender"
+	- The forward direction is -Y (negative Y). This translates to +Z in Unity.
+	- Use this [Blender To Unity FBX Exporter](https://github.com/EdyJ/blender-to-unity-fbx-exporter)
+		to export the FBX file correctly for Unity.
 
 A high quality vehicle 3D model also mets these conditions:
 
@@ -39,7 +44,8 @@ Dashboard gauges and steering wheel must meet these requirements:
 - Default Z rotation is zero. Other axis may have some rotation applied
 
 &fa-lightbulb-o:lg; Typically, the center of rotation of the steering wheel is the center of the
-external circumference. Using the central part or logo as center is a common mistake.
+external circumference. Using the center of the logo as center of rotation can result in a very
+off-center rotation of the steering wheel.
 {: .alert .alert-success }
 
 #### Vehicle collider
