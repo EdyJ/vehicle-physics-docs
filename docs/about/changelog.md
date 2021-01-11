@@ -15,13 +15,29 @@ Full development details are available via GIT revision logs ([VPP subscription]
 &fa-thumbs-up:lg; This page is updated from time to time. Check out [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link } on Twitter for weekly updates.
 {: .alert .alert-success }
 
-#### Now under development: Tire Friction Model 2.0 (SDK V9 alpha)
+#### Now under development:
 
-- Advanced industry-grade tire friction model: slip ratio, slip angle, load function.
-- Detailed editors with graphic charts for analysis.
-- Scriptable Tire Friction architecture: custom tire friction models may be implemented and used seamlessly.
-- New realtime telemetry plots: Slip Ratio, Slip Angle, Wheel Torque.
-- Reorganized telemetry window with slip and ground material properties always visible.
+Tire Friction Model 2.0 (SDK V9 alpha)
+:	- Advanced industry-grade tire friction model: slip ratio, slip angle, load function.
+	- Detailed editors with graphic charts for analysis.
+	- Scriptable Tire Friction architecture: custom tire friction models may be implemented and used seamlessly.
+	- New realtime telemetry plots: Slip Ratio, Slip Angle, Wheel Torque.
+	- Reorganized telemetry window with slip and ground material properties always visible.
+
+Electric MGU (Motor Generator Units)
+:	- Parametric torque maps
+	- Efficiency factor
+	- Regenerative braking
+	- Front-rear axle balancing
+	- Detailed editors with graphics charts
+	- Combination with mechanical brakes
+
+Advanced telemetry system
+:	- Multiple channels with different update frequencies and ranges
+	- Easily extensible from vehicle components (VehicleBehaviour)
+	- Different chart types: time/distance based, scatter plots, histogram
+
+<hr>
 
 #### December 2020
 
@@ -70,6 +86,8 @@ Full development details are available via GIT revision logs ([VPP subscription]
 #### January 2020
 
 - New **bucket auto-leveling system** in excavators [video](https://twitter.com/VehiclePhysics/status/1212743983497195520).
+
+## 2019
 
 #### November 2019 - SDK V7
 
@@ -142,6 +160,8 @@ Full development details are available via GIT revision logs ([VPP subscription]
 - New **rpm limiter mode selector** in the engine. The new **Injection Limit** reduces the throttle to keep the rpms under or at the limit. Previously, only Injection Cut mode was available to cut throttle at small intervals.
 - **Compatibility Upgrade** that requires applying a patch (included) to the Unity project. [More information](https://www.edy.es/dev/2019/01/2019-01-25-compatibility-upgrade-for-vehicle-physics-pro/)
 
+## 2018
+
 #### November 2018 - SDK V4
 
 - New **VPAdvancedDamper** component for detailed bump / rebound damper settings.
@@ -193,6 +213,8 @@ Full development details are available via GIT revision logs ([VPP subscription]
 - New automated tests: acceleration times, braking time and distance.
 - New feature to **export telemetry data to CSV** for further analysis. This is especially useful in automated tests.
 
+## 2017
+
 #### December 2017
 
 - New **minimal build mode** keeping the essential vehicle features only.
@@ -229,6 +251,8 @@ Full development details are available via GIT revision logs ([VPP subscription]
 
 - New component for **non-linear speed gauges** (i.e. Volkswagen Scirocco).
 - New **VPLiquidCargo** component for simulating sloshing liquids in confined tanks (liquid cargo, fuel tank...)
+
+## 2016
 
 #### December 2016
 
@@ -282,6 +306,8 @@ Full development details are available via GIT revision logs ([VPP subscription]
 
 - Major code refactoring.
 
+## 2015
+
 #### November 2015
 
 - New **retarder brake** feature. Mostly used on transport
@@ -303,7 +329,7 @@ Full development details are available via GIT revision logs ([VPP subscription]
 - New wheel sleep feature. Keeps the vehicle perfectly steady on slopes.
 - New custom gravity feature.
 
-#### From 2010 to 2015
+## From 2010 to 2015
 
 _Code name: NinjaVehicle_
 
