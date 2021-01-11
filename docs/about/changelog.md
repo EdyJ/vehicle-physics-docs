@@ -15,6 +15,43 @@ Full development details are available via GIT revision logs ([VPP subscription]
 &fa-thumbs-up:lg; This page is updated from time to time. Check out [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link } on Twitter for weekly updates.
 {: .alert .alert-success }
 
+#### Now under development: Tire Friction Model 2.0 (SDK V9 alpha)
+
+- Advanced industry-grade tire friction model: slip ratio, slip angle, load function.
+- Detailed editors with graphic charts for analysis.
+- Scriptable Tire Friction architecture: custom tire friction models may be implemented and used seamlessly.
+- New realtime telemetry plots: Slip Ratio, Slip Angle, Wheel Torque.
+- Reorganized telemetry window with slip and ground material properties always visible.
+
+#### December 2020
+
+- New **UpdateAfterFixedUpdate** event in VPVehicleBehavior. Called only on those Update events that happen right after a FixedUpdate event.
+- New **Combined Retarder Brake** option in the brakes section to apply retarder brake automatically from the brake pedal.
+
+#### November 2020
+
+- Fixed wheel suspension issues caused by Unity/PhysX faked **sprung mass model**.
+- New **VPAudioExtras** component for additional sound effects, starting with **engine starting sound**.
+
+#### October 2020
+
+- New **VPWheelFrameMonitor** component for calculating ride heights and roll angles.
+
+#### August 2020
+
+- New **Max Distance** parameter in VPVehicleJoint for limiting the maximum distance allowed between anchor points.
+- New **Limit Reverse Speed** option in Speed Control section.
+
+#### June 2020
+
+- New **Vehicle Creation Tool** for easily creating a working vehicle with all the essential components out of a 3D model.
+- New **Inertia Tensor Matrix** feature allowing to configure inertia using an actual inertia tensor matrix.
+- New **Throttle Sensitivity** setting for automatic gear shifts based on throttle pressure.
+
+#### April 2020
+
+- New **Aerial Control** system for hydraulic aerial devices (ladder, basket, stabilizers).
+
 #### March 2020 - SDK V8
 
 - **Unitypackages** are now provided for downloading Vehicle Physics Pro and configuring the Project Settings. [Learn more](/user-guide/setting-up-vpp)
@@ -27,8 +64,12 @@ Full development details are available via GIT revision logs ([VPP subscription]
 #### February 2020
 
 - New fast and accurate Spline **projection** and **distance measurement** methods. [Video](https://twitter.com/VehiclePhysics/status/1225066029807800320)
-- New **PID-based** VPTargetChaser component for precisely follow a moving target. [Video](https://twitter.com/VehiclePhysics/status/1232680344404611077)
+- New **PID-based VPTargetChaser** component for precisely follow a moving target. [Video](https://twitter.com/VehiclePhysics/status/1232680344404611077)
 - Spa-Francorchamps example track reworked and simplified.
+
+#### January 2020
+
+- New **bucket auto-leveling system** in excavators [video](https://twitter.com/VehiclePhysics/status/1212743983497195520).
 
 #### November 2019 - SDK V7
 

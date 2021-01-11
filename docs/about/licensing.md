@@ -26,9 +26,9 @@ Advanced simulation features: multi-body vehicles, solid and liquid cargo compon
 Advanced suspension features: damper bump & rebound, dynamic suspension, bump stop					|	|	| &fa-check; |
 Specialized vehicle controllers: motorbike, caterpillar, mining, excavators, hydraulic actuators. [Showcase](/about/showcase/)	|	|	| &fa-check; |
 Advanced vehicle controllers: electric, hybrid, two-wheeled, bulldozer, [diesel-electric](https://twitter.com/VehiclePhysics/status/1135951323629854721){: target="_blank" }, tracked, hydraulic-tracked	|	|	| &fa-check; |
+Advanced Editor tools: Engine configuration _(Experimental)_, Vehicle Creation from 3D model			|	|	| &fa-check; |
 Framework for AI and autonomous vehicles: self-drive, automated tests, path follow, export data to CSV	|	|	| &fa-check; |
 Unity Timeline integration for splines																	|	|	| &fa-check; |
-Engine configuration tool to fit the engine settings to real data _(Experimental)_						|	|	| &fa-check; |
 Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/){: target="_blank" }, [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/){: target="_blank" }, [CXC](https://www.cxcsimulations.com){: target="_blank" }	|	|	| &fa-check; |
 Support by Skype / Discord / MS Teams																	|	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
