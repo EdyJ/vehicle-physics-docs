@@ -16,18 +16,19 @@ https://github.com/squidfunk/mkdocs-material/issues/663#issuecomment-357743267
 
 {%- block site_meta %}
 	{{ super() }}
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="@VehiclePhysics">
-	<meta name="twitter:creator" content="@VehiclePhysics">
+	{% set title = config.site_name %}
 	{% if page and page.meta and page.meta.title %}
-		<meta property="twitter:title" content="{{ page.meta.title }}">
+		{% set title = title ~ " - " ~ page.meta.title %}
 	{% elif page and page.title and not page.is_homepage %}
-		<meta property="twitter:title" content="{{ page.title }} - {{ config.site_name }}">
-	{% else %}
-		<meta property="twitter:title" content="{{ config.site_name }}">
+		{% set title = title ~ " - " ~ page.title | striptags %}
 	{% endif %}
-	<meta name="twitter:description" content="{{ config.site_description }}">
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site:id" content="@VehiclePhysics" />
+	<meta name="twitter:creator:id" content="@VehiclePhysics" />
+	<meta name="twitter:image" content="img/favicon.ico" />
 
+	<meta name="twitter:title" content="{{ title }}" />
+	<meta name="twitter:description" content="{{ config.site_description }}" />
 {%- endblock %}
 
 
