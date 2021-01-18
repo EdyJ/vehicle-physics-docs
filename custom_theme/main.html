@@ -11,6 +11,12 @@ the blocks defined in base.html and its included child templates.
 
 
 {#
+EDY:
+Added Twitter cards so Twitter creates nice previews of the links, with VPP logo, description and such.
+
+https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started
+https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup
+https://cards-dev.twitter.com/validator
 https://github.com/squidfunk/mkdocs-material/issues/663#issuecomment-357743267
 #}
 
@@ -25,8 +31,8 @@ https://github.com/squidfunk/mkdocs-material/issues/663#issuecomment-357743267
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site:id" content="@VehiclePhysics" />
 	<meta name="twitter:creator:id" content="@VehiclePhysics" />
-	<meta name="twitter:image" content="https://vehiclephysics.com/img/vpp-logo-256.png" />
-
+	<meta name="twitter:image" content="https://vehiclephysics.com/img/vpp-logo.png" />
+	<meta name="twitter:image:alt" content="Vehicle Physics Pro">
 	<meta name="twitter:title" content="{{ title }}" />
 	<meta name="twitter:description" content="{{ config.site_description }}" />
 {%- endblock %}
