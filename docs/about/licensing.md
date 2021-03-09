@@ -32,8 +32,8 @@ Unity Timeline integration for splines																	|	|	| &fa-check; |
 Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/){: target="_blank" }, [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/){: target="_blank" }, [CXC](https://www.cxcsimulations.com){: target="_blank" }	|	|	| &fa-check; |
 Support by Skype / Discord / MS Teams																	|	|	| &fa-check; |
 May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
-**License Setup Fee**<br>_One-time payment, perpetual license_											| **FREE** | **€ 590** | **€ 5900** |
-**Support and updates**<br>_First year included in the license setup fee_								| _n/a_ | € 190<br>/year | € 1900<br>/year |
+**License Fee**<br>_One-time payment, perpetual license_											| **FREE** | **€ 590** | **€ 5900** |
+**Support and updates**<br>_First year included in the license fee_							| _n/a_ | € 190<br>/year | € 1900<br>/year |
 **GET LICENSE**							| [**Asset&nbsp;Store**](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556){: target="_blank" } | [**BUY&nbsp;NOW**](https://goo.gl/EoAe5v){: target="_blank" } | [**BUY&nbsp;NOW**](https://goo.gl/QzPdcu){: target="_blank" } |
 
 &fa-warning:lg; License versions, terms, content and pricing are subject to change without prior notice.
@@ -62,7 +62,7 @@ May be licensed by companies with annual revenue / funds / budget in excess of �
 
 The VPP license is perpetual. Only receiving support and updates requires an active subscription.
 
-- One year of support and updates is already included with license setup fee.
+- One year of support and updates is already included with license fee.
 - Customers may opt-out any time and keep the most recent VPP version when the subscription expires.
 - A grace period of 120 days is granted after opting-out to rejoin paying the subscription fee only.
 
