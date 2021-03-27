@@ -22,7 +22,7 @@ Tire Friction Model 2.0 (SDK V9 alpha)
 	- Detailed editors with graphic charts for analysis.
 	- Scriptable Tire Friction architecture: custom tire friction models may be implemented and used seamlessly.
 	- New realtime telemetry plots: Slip Ratio, Slip Angle, Wheel Torque.
-	- Reorganized telemetry window with slip and ground material properties always visible.
+	- Reorganized telemetry data widget with slip and ground material properties always visible.
 
 Electric MGU (Motor Generator Units)
 :	- Parametric torque maps
