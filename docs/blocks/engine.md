@@ -4,7 +4,7 @@ The Engine block simulates a standard combustion engine.
 
 ![VP Vehicle Controller engine](/img/blocks/vpp-engine-inspector.png){: .clickview }
 
-##### Legend
+#### Engine Graph
 
 Horizontal: rpm. Vertical: torque in Nm, power in Kw.
 
@@ -21,7 +21,20 @@ Horizontal: rpm. Vertical: torque in Nm, power in Kw.
 
 ##### Engine Specifications
 
-#### Torque curve
+- **Max Power:** maximum engine power in Kw and Hp and its rpm.
+- **Max Torque:** maximum engine torque in Nm and its rpm. If Torque Cap is enabled the rpm is
+	the first point where the torque cap is enforced.
+- **Limit Rpm:** beyond this rpm the engine is not producing any more torque, only friction torque.
+- **Stall Rpm:** the engine stalls if rpm fall below this value.
+- **Friction at stall:** engine friction when the engine is stalled
+- **Friction at idle:** engine friction at Idle Rpm. The engine must apply some torque (hence
+	consume some fuel) when idle to counteract this friction.
+- **Friction at limit:** engine friction at Limit Rpm. The engine cannot counteract any part of
+	this friction.
+- **Specific Fuel Consumption (BSFC):** The calculated value for [Brake Specific Fuel Consumption (BSFC)](https://en.wikipedia.org/wiki/Brake_specific_fuel_consumption). Sometimes the specifications of real
+	engines provide this value.
+
+#### Torque Curve
 
 The torque curve is mostly defined with the Idle, Peak and Max Rpm parameters. Circles in the graph
 represent these settings (horizontal: rpm, vertical: torque in Nm). **Curve Bias** adjusts the
@@ -80,32 +93,168 @@ Viscous
 
 #### Torque Cap
 
-&fa-warning:lg; Work In Progress
-{: .alert .alert-warning }
+Torque Cap configures an upper limit to the engine torque (Nm). Many engines have an electronic
+limitation in their torque across a range of rpm.
+
+Max Torque
+:	Maximum torque (Nm) the engine can provide. The "unused" torque above the limit is shown in the
+	graph as dashed green.
+
+Torque cap also reduces the fuel consumption in the rpm range where the limit is applied.
 
 #### Rpm Limiter
 
+Rpm limiter configures an upper limit to the rpm the engine can reach by actively producing torque.
+When enabled, the rpm limit is shown in the graph as vertical dashed orange.
+
+Mode
+:	Action to take when the engine reaches the Limit Rpm.
+
+	- **Injection Cut:** stops applying torque for an amount of time (Cut Off Time), allowing the
+		rpm to fall below the limit.
+	- **Injection Limit:** smoothly reduces the engine torque so the rpm stays steadily at
+		the limit.
+
+Limit Rpm
+:	Maximum rpm value allowed.
+
+Cut Off Time
+:	In Injection Cut mode, this is the time (s) the torque is stopped when reaching the Limit Rpm
+	value
+
 #### Idle Control
 
-The idle state can be enforced in two ways:
+Defines how to apply the torque that keeps the engine at idle rpm and prevent it to stall.
 
-- **Passive:** The engine applies the exact torque that compensates the friction at idle rpms.
-	Works better with a steep friction curve.
+- **Passive:** The engine applies the exact torque that compensates the friction torque at idle
+	rpm. Works better with a steep friction curve.
 - **Active:** Vehicle's electronic system actively applies as much torque as available for
-	keeping the idle rpms.
+	keeping the idle rpm.
 
-#### Stall
+Max Idle Torque
+:	Percent of the total engine torque that can be used to prevent the rpm to fall below Idle Rpm.
 
-With **Can Stall** enabled the engine stalls if the rpms fall below the calculated stall rpms. This
-is the point in the graph near the origin where the torque curve is negative. The **Stall
-Sensitivity** settings helps adjusting the stall point. Check out the calculated values in the
-inspector for the exact data.
+##### Active Idle
+
+Active Idle maps the throttle torque with respect to the torque at Idle Rpm. This avoids null or
+inactive zones in the throttle pedal range at Idle Rpm. These parameters also define the response of
+the throttle pedal at low rpm values. The Active Idle mapping curve is shown in the graph as dotted
+white.
+
+Active Idle Range
+:	Percent of the rpm range where the throttle torque is mapped with respect to the torque at Idle
+	Rpm.
+
+Active Idle Bias
+:	Shape of the throttle mapping curve with respect to the torque at Idle Rpm.
+
+#### Can Stall
+
+Can Stall allows the engine to stall. When the engine is stalled the ignition key may be used to
+start the engine. The engine may also be started "inertially", that is, leave the car roll on a
+slope to gain some velocity, press clutch, engage a gear and release clutch.
+
+Stall Sensitivity
+:	How easy is to stall the engine once the rpm fall below Idle Rpm. The more value, the easier
+	to stall.
+
+Extra Friction
+:	When the engine is stalled it applies this extra amount of friction torque (Nm).
+
+Starter Effectiveness
+:	How effective is the starter motor when starting a stalled engine. This is a somewhat
+	"subjective" value that behaves differently in each engine setup. The more value, the faster
+	and more reliably the engine starts. The lower value, the harder to start. Below some point
+	the engine won't start at all.
+
+	This may be used to simulate a drained battery or difficult weather conditions (i.e. start the
+	engine in low temperatures).
 
 #### Fuel Consumption
 
+The parameters for fuel consumption define the Instant Fuel Consumption rate in grams per second
+(g/s) that can be read in the [Data Bus (Vehicle channel, EngineFuelRate entry)](/advanced/databus-reference/#vehicle-channel).
+
+Max Fuel Per Rev
+:	Maximum amount of fuel in grams (g) the engine can "swallow" in a single rev when applying full
+	throttle. This parameter defines the specific fuel consumption (BSFC) of the engine.
+
+Fuel Density
+:	Fuel density (kg/l) for the instant fuel consumption calculation.
+
+	- Petrol (gasoline): 0.745 kg/l
+	- Diesel: 0.85 kg/l
+
+Correction Factor
+:	Efficiency correction factor that accounts for all factors that affect the fuel consumption
+	value as l/100km. Adjust for matching the fuel consumption rates observed in the real vehicle
+	or engine. Higher values report lower consumption rates.
+
+	- 3.6 seems to work fine for regular cars
+	- Trucks seem to use 1.8 - 3.5
 
 References:
 
 [Brake Specific Fuel Consumption (BSFC)](https://en.wikipedia.org/wiki/Brake_specific_fuel_consumption)<br>
 [Fuel consumption analysis of motor vehicle](http://www.posterus.sk/?p=14506)<br>
 [Fuel densities](https://en.wikipedia.org/wiki/Diesel_fuel#Fuel_value_and_price)<br>
+
+# Understanding Engine Curves
+
+The engine torque curve (green) is the sum of the raw combustion torque (dotted yellow) and the
+engine friction (red).
+
+![Vehicle Physics Pro Engine Curves](/img/blocks/vpp-engine-curves.png)
+
+[Dyno curves](https://blog.dundonmotorsports.com/how-to-read-a-dyno-graph) show only the final
+torque and power curves. They won't show the engine friction. The shape of the torque curve and is
+relationship with the power curve gives us clues on how the engine friction should be configured.
+Engine braking is a commonly ignored specification, yet a critical parameter that the shape of the
+torque curve and the engine behavior.
+
+The Engine parameters in Vehicle Physics Pro the define specific points (circles in the graph) that
+will be crossed by the final engine torque curve (green). But it doesn't mean these points will make
+a maximum or minimum torque, for example. The rpm range in the real dyno charts is typically
+cropped. Real tests won't likely push the engine until the torque actually results zero, as the rev
+limiter will be cutting down the injection first. So you must figure out which torque curve would
+result if the engine would be pushed beyond the rev limiter. Max Rpm is the rpm where the raw torque
+has decreased so much that is entirely canceled by the engine friction and the final torque results
+zero. Only friction torque can be produced beyond Max Rpms. This settings is deduced based on the
+shape of the real dyno chart.
+
+The peak point (white circle in the graph) represent the point where the raw combustion provides the
+maximum torque. This raw friction (dotted orange) always increases before the peak rpm, and
+decreases after it. Once the engine friction is subtracted from the raw torque you get the actual
+engine torque. The point of maximum engine torque the small vertical white line crossing the green
+torque curve.
+
+The difficulty on setting up the engine curves is that you need to figure out both the raw torque
+and the friction torque so they result in the final torque curve that fits the real specifications.
+It's not trivial and requires a bit of practice. But most engines can be configured with good
+precision.
+
+##### Example 1: peak torque
+
+This is the curve and specifications from the figure at the top:
+
+![Vehicle Physics Pro Engine Curves Example](/img/blocks/vpp-engine-parameters-example.png)
+
+Note how the maximum torque is reached at 3129 rpm while the "Peak Rpm" setting is 6515. This
+Peak Rpm is the point of maximum raw combustion torque (dotted yellow). Additionally, the rev
+limiter won't let the engine go beyond 6000 rpms. The original specifications are cropped just at
+that point.
+
+##### Example 2: engine curve vs. real specs
+
+![Vehicle Physics Pro Engine Parameters Versus Real Chart Example](/img/blocks/vpp-engine-parameters-versus-real-chart-example.png){: .clickview .img-medium-height }
+
+This is a very good curve fit. Max Torque matches the specifications exactly (540 Nm @ 6000 rpms),
+and the Max Power is very close as well (423.5 vs. 425 kW). The flat end in the power curve surely
+represents an electronically imposed power correction, as it doesn't fit with the other curve data.
+
+##### Example 3: truck engine
+
+A radically different example is a truck engine. These parameters closely match the specifications
+of the real model:
+
+![Vehicle Physics Pro Truck Engine Parameters](/img/blocks/vpp-engine-truck-example.png){: .clickview .img-medium-height }
