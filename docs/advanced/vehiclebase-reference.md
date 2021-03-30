@@ -275,6 +275,7 @@ namespace VehiclePhysics
 	public Action onPreDynamicsStep;			// Invoked before computing each dynamics step
 	public Action onBeforeUpdateBlocks;			// Invoked before calling DoUpdateBlocks
 	public Action onBeforeIntegrationStep;		// Invoked before the solver integration
+	public Action onDynamicsStepCompleted;		// Invoked after each dynamics step is completed
 	public Action onPreVisualUpdate;			// Invoked before updating visual stuff
 ```
 
