@@ -1,6 +1,11 @@
 # Engine block
 
-The Engine block simulates a standard combustion engine.
+The Engine block simulates a standard combustion engine. It provides output torque in Nm based on
+the configuration (green curve in the graph). As result of the torque and the rpm range the engine
+develops the corresponding power in kW or HP (blue curve in the graph).
+
+The simulation includes torque curve, inertia, engine friction curve, rpm limiter, idle control with
+throttle mapping, stall, engine ignition and fuel consumption.
 
 ![VP Vehicle Controller engine](/img/blocks/vpp-engine-inspector.png){: .clickview }
 
