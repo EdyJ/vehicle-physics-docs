@@ -12,8 +12,8 @@ configuration under the [Driveline section](/components/vehicle-controller/#driv
 selected [driveline layout](/blocks/driveline) includes a torque splitter.
 
 This block simulates some AWD transmissions such as the [Haldex Traction](https://en.wikipedia.org/wiki/Haldex_Traction)
-available in some 4x4 models (i.e. Audi Quattro), which engages drive torque the second axle when
-main driven axle starts to slip.
+available in some 4x4 models (i.e. Audi Quattro), which engages drive torque in the second axle when
+the main axle starts to slip.
 
 ![VP Vehicle Controller torque splitter](/img/blocks/vpp-torque-splitter-inspector.png){: .clickview }
 
