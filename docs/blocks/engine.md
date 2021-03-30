@@ -259,7 +259,7 @@ represents an electronically imposed power correction, as it doesn't fit with th
 
 ##### Example 3: truck engine
 
-A radically different example is a truck engine. These parameters closely match the specifications
-of the real model:
+A radically different example is a truck engine. These engines provide a lot of torque at very low
+rpm. These parameters closely match the specifications of the real model:
 
 ![Vehicle Physics Pro Truck Engine Parameters](/img/blocks/vpp-engine-truck-example.png){: .clickview .img-medium-height }
