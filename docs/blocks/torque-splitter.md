@@ -1,4 +1,4 @@
-# Torque splitter block
+# Torque Splitter block
 
 The torque splitter block consists of one input and two outputs. Input is coupled to the first
 output, and the parameters configure the coupling to the second output.
