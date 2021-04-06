@@ -1,10 +1,14 @@
 # Configuring Realistic Vehicles
 
-This is a checklist of technical specifications you would need out of a real vehicle for mapping
-it to Vehicle Physics Pro.
+This is a checklist of the main technical specifications you would need out of a real vehicle for
+configuring them in Vehicle Physics Pro.
 
 Some values are not widely available, but they may be estimated out of other specs and performance
 data.
+
+!!! Info "&fa-thumbs-o-up; Pro-Tip"
+	For an exhaustive list of technical specifications and measurements that can be configured in
+	VPP check out this [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1C5jLs_0o_vLlOCDswjhdPFsQxQOvcsOPRXyJgmTMaXs/edit?usp=sharing).
 
 Links:
 :	[Cars-Data](https://www.cars-data.com)<br>
