@@ -448,6 +448,8 @@ speed.
 
 ![Rolling Friction](/img/setup-guide/vpp-setup-rolling-friction.png)
 
+The static coefficient brings the car to a stop at low speeds (below Static Speed Threshold).
+
 ### Anti-roll bars
 
 The `VPAntiRollBar` component links the left-right suspensions of an axle to reduce the body roll of
@@ -506,9 +508,12 @@ Check out the _Susp_ column in the Telemetry window (`VPTelemetry` component) to
 downforce is compressing the suspension, and which part of the car is being pushed further.
 
 !!! Warning "&fa-warning:lg; Warning: watch the suspension compression"
-	Ensure compression values as shown in the Telemetry never reach 1.0 at high speeds. If the extra
+	Ensure compression values as shown in the [Telemetry](/components/vehicle-telemetry/#vptelemetry)
+	never reach 1.0 at high speeds. Otherwise weird physics effects will occur. If the extra
 	downforce caused by aerodynamics compresses the suspension beyond the limit then you need to
 	increase the suspension spring rate in the affected wheels.
+
+	![Suspension compression warning](/img/setup-guide/vpp-setup-suspension-warning.png)
 
 !!! Info "&fa-thumbs-o-up; Advanced Tip: Front and Rear aerodynamics"
 	If the car heavily relies on the aerodynamics (i.e. a formula racing car) then you may configure
