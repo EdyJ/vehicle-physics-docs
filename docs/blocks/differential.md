@@ -38,7 +38,7 @@ refuse to steer.
 Outputs are coupled together based on the parameters. The lock state and and the torque transfer
 depend on the difference of speed between both outputs.
 
-![VPP Viscous Differential](/img/blocks/vpp-differential-inspector.png)
+![VPP Viscous Differential](/img/blocks/vpp-differential-viscous.png)
 
 Preload (Nm)
 :	The minimum torque that couples both outputs.
