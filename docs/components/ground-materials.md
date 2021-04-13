@@ -191,6 +191,22 @@ RandomColor, Color 2
 :	If RandomColor is checked, a random color in the range Color1 - Color2 will be applied to each
 	new particle.
 
+### Custom Ground Materials
+
+By inheriting from ```GroundMaterialManagerBase``` you could write your own Ground Material Manager
+component that provides VPP vehicles with the ground properties based on your own criteria.
+
+```GroundMaterialManagerBase.GetGroundMaterial``` receives the information on the contact in
+```GroundMaterialHit```, including contacted collider, physics material and contact point. The
+method then returns a ```GroundMaterial``` instance with the ground properties (grip, drag,
+effects...).
+
+Once you've written your custom Ground Material Manager component, simply add it to some GameObject
+in the scene and ensure to disable or remove the stock ```VPGroundMaterialManager```. VPP Vehicles
+will find and use your component automatically.
+
+See the comments in the code below for more details.
+
 # Scripting Reference
 
 ### GroundMaterial.cs

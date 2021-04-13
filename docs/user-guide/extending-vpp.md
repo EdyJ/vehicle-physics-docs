@@ -55,3 +55,16 @@ For example, the ```VPReplay``` component makes use of these events for recordin
 and tweak the simulation during the replay.
 
 - [VehicleBase Events](/advanced/vehiclebase-reference/#events)
+
+### Custom Ground Materials
+
+By inheriting from ```GroundMaterialManagerBase``` you could write your own Ground Material Manager
+component that provides VPP vehicles with the ground properties based on your own criteria.
+
+```GroundMaterialManagerBase.GetGroundMaterial``` receives the information on the contact in
+```GroundMaterialHit```, including contacted collider, physics material and contact point. The
+method then returns a ```GroundMaterial``` instance with the ground properties (grip, drag,
+effects...).
+
+- [Ground Materials reference and API](/components/ground-materials/)
+
