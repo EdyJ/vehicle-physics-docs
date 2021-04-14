@@ -51,6 +51,7 @@
 	- Hides the GitHub link.
 	- Moves the Search, Next, Prev links to the right.
 	- Fixes the max height of the nav menu for preventing scrollbar when everything is folded.
+	- Sub-menu links too close together, increased line height.
 */
 
 @media (max-width: 767px)
@@ -70,6 +71,27 @@
 		{
 		max-height: 345px;
 		}
+
+	.navbar-nav .open .dropdown-menu > li > a
+		{
+    	line-height: 30px;
+		padding-left: 40px;
+		}
+	}
+
+
+/* Links too close at menu and sidebar
+*/
+
+.dropdown-menu > li > a
+	{
+	padding: 6px 20px;
+	}
+
+
+.bs-sidebar .nav > li > a
+	{
+	padding: 7px 20px;
 	}
 
 
