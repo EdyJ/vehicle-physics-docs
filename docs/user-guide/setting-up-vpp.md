@@ -84,7 +84,7 @@ section for start using Vehicle Physics Pro.
 
 Instead of importing the unitypackages you may clone the VPP repositories directly as submodules
 in your project. This allows your project to stay up-to-date with the latest changes in VPP as
-they're pushed to the repository.
+they're pushed to the repository. Accessing the repositories requires an active [VPP subscription](/about/licensing).
 
 - **[Professional Edition repositories](https://edy.repositoryhosting.com/trac/edy_vehicle-physics-pro-professional)**
 	{ .spacer }
