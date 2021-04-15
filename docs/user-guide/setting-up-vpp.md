@@ -18,11 +18,14 @@ Scripting Runtime Version and API Compatibility Level may be configured in Proje
 
 ### Download and import VPP unitypackage
 
-1. Download the .unitypackage file.
+1. Download the .unitypackage file. Professional and Enterprise editions require an active [VPP subscription](/about/licensing).
 
 	- **[Community Edition](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)**
-	- **[Professional Edition](https://edy.repositoryhosting.com/webdav/edy_vehicle-physics-pro-professional/)** ([VPP subscription](/about/licensing) required)
-	- **[Enterprise Edition](https://edy.repositoryhosting.com/webdav/edy_vehicle-physics-pro/)** ([VPP subscription](/about/licensing) required)
+	{: .spacer }
+	- **[Professional Edition](https://edy.repositoryhosting.com/webdav/edy_vehicle-physics-pro-professional/)**
+	{: .spacer }
+	- **[Enterprise Edition](https://edy.repositoryhosting.com/webdav/edy_vehicle-physics-pro/)**
+	{: .spacer }
 
 2. Import the package into an Unity 3D project.
 

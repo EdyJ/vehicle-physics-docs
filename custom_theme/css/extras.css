@@ -175,3 +175,11 @@ a.headerlink, a.headerlink:hover
 	{
 	color: #bde5fd;
 	}
+
+/* Spaced list items (i.e. links) */
+
+li.spacer
+	{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	}
