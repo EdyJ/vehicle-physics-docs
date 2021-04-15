@@ -9,7 +9,7 @@ Essential components:<br>[Telemetry](/components/vehicle-telemetry/), [Audio](/c
 Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-check; |
 Wheels per vehicle																		|		4	| 1-20		| 1&#8209;unlimited |
 Simultaneous vehicles in each scene														|		1	| unlimited | unlimited |
-Supported platforms																		| Desktop	| Any		| Any	|
+Supported platforms																		| Desktop	| All		| All	|
 [Multiple ground materials](/components/ground-materials/) with tire effects (tire marks, smoke...)	|	| &fa-check; | &fa-check; |
 [Custom extensions support](/user-guide/extending-vpp/): custom add-ons, custom vehicles, custom parts	|	| &fa-check; | &fa-check; |
 Frame-exact replay system with pause, forward/reverse playback, flashback...					|	| &fa-check; | &fa-check; |
@@ -31,7 +31,7 @@ Framework for AI and autonomous vehicles: self-drive, automated tests, path foll
 Unity Timeline integration for splines																	|	|	| &fa-check; |
 Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/){: target="_blank" }, [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/){: target="_blank" }, [CXC](https://www.cxcsimulations.com){: target="_blank" }	|	|	| &fa-check; |
 Support by Skype / Discord / MS Teams																	|	|	| &fa-check; |
-May be licensed by companies with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
+May be licensed by organizations with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
 **License Fee**<br>_One-time payment, perpetual license_											| **FREE** | **€ 590** | **€ 5900** |
 **Support and updates**<br>_First year included in the license fee_							| _n/a_ | € 190<br>/year | € 1900<br>/year |
 **GET LICENSE**							| [**Asset&nbsp;Store**](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556){: target="_blank" } | [**BUY&nbsp;NOW**](https://goo.gl/EoAe5v){: target="_blank" } | [**BUY&nbsp;NOW**](https://goo.gl/QzPdcu){: target="_blank" } |
@@ -45,8 +45,8 @@ May be licensed by companies with annual revenue / funds / budget in excess of �
 	be charged VAT.
 - Once the payment is completed you'll receive the credentials and instructions for accessing the
 	VPP repositories by email. Please allow 24/48 hours for your order to be processed.
-- **Custom licenses available** for teams and companies with more than 10 developers. Please write
-	to [info@vehiclephysics.com](mailto:info@vehiclephysics.com) for a quote.
+- **Custom licenses available** for teams and organizations with more than 10 developers. Please
+	write to [info@vehiclephysics.com](mailto:info@vehiclephysics.com) for a quote.
 - Professional license may not be licensed by any commercial or non-commercial entity with annual
 	gross revenues, funds (including crowdfunding), or total annual budget in excess of €200,000.
 - Enterprise license is suitable for commercial entities with annual gross revenues (based on prior

@@ -63,11 +63,14 @@ types and configurations.
 - Full-time product support
 - **[Detailed feature list ...](/about/features)**
 
-Try the **[free Community Edition!](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)**
+### Free Edition
+
+Get the **[free Community Edition](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)**
+from the Unity Asset Store:
 
 [![Vehicle Physics Pro Community Edition](/img/Unity_AS_Badge_RGB.png "Vehicle Physics Pro Community Edition")](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556){: target="_blank" style="display: block; margin: 0 auto; max-width: 173px;" }
 
-[Professional and Enterprise licenses available](/about/licensing) for individuals and companies.
+[Professional and Enterprise licenses are available](/about/licensing) for individuals and organizations.
 
 <br>
 
@@ -75,7 +78,7 @@ Try the **[free Community Edition!](https://assetstore.unity.com/packages/tools/
 
 Questions? Feel free to write to [info@vehiclephysics.com](mailto:info@vehiclephysics.com) | **[More support options](/about/support)**
 
-Also follow Vehicle Physics for regular announcements and progress updates:
+Also follow Vehicle Physics for regular announcements and development updates:
 
 <div style="position: relative; display: block; margin: 0 auto; max-width: 320px;">
 	<img alt="Vehicle Physics Pro Social Links: Twitter, Youtube, Instagram, Facebook, Reddit" src="/img/vehicle-physics-pro-social-links.png">
@@ -103,11 +106,12 @@ Also follow Vehicle Physics for regular announcements and progress updates:
 </div>
 
 <div style="position: relative; display: block; margin: 0 auto; max-width: 680px">
-	<img alt="Huawei, Metamoto, Simumak, CVedia" src="/img/vehicle-physics-pro-clients-2.png">
-	<a title="Huawei" style="position: absolute; left: 18.53%; top: 0%; width: 14.12%; height: 100%; z-index: 2;"></a>
-	<a title="Metamoto" style="position: absolute; left: 34.41%; top: 0%; width: 15.59%; height: 100%; z-index: 2;"></a>
-	<a title="Simumak" style="position: absolute; left: 52.35%; top: 0%; width: 14.41%; height: 100%; z-index: 2;"></a>
-	<a title="CVedia" style="position: absolute; left: 68.24%; top: 0%; width: 13.38%; height: 100%; z-index: 2;"></a>
+	<img alt="Huawei, Metamoto, Unity, Simumak, CVedia" src="/img/vehicle-physics-pro-clients-2.png">
+	<a title="Huawei" style="position: absolute; left: 8.38%; top: 0%; width: 14.71%; height: 100%; z-index: 2;"></a>
+	<a title="Metamoto" style="position: absolute; left: 25.44%; top: 0%; width: 16.47%; height: 100%; z-index: 2;"></a>
+	<a title="Unity" style="position: absolute; left: 43.97%; top: 0%; width: 14.12%; height: 100%; z-index: 2;"></a>
+	<a title="Simumak" style="position: absolute; left: 60.29%; top: 0%; width: 15.15%; height: 100%; z-index: 2;"></a>
+	<a title="CVedia" style="position: absolute; left: 77.79%; top: 0%; width: 13.82%; height: 100%; z-index: 2;"></a>
 </div>
 
 &nbsp;
