@@ -87,7 +87,9 @@ in your project. This allows your project to stay up-to-date with the latest cha
 they're pushed to the repository.
 
 - **[Professional Edition repositories](https://edy.repositoryhosting.com/trac/edy_vehicle-physics-pro-professional)**
+	{ .spacer }
 - **[Enterprise Edition repositories](https://edy.repositoryhosting.com/trac/edy_vehicle-physics-pro)**
+	{ .spacer }
 
 First you have to configure your SSH keys in [your account in projects.edy.es](https://edy.repositoryhosting.com/users/my_profile#public_keys)
 (login with your VPP credentials).
