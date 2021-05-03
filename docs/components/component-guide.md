@@ -43,6 +43,9 @@ VPGroundMarksRenderer
 VPGroundParticleEmitter
 :	Controls a ParticleSystem component for a given ground material type.
 
+VPGroundRumbleEffect
+:	Simulates bumps when driving on a given ground material type.
+
 #### Input
 
 Add-on components for processing the vehicle input (throttle, brake, steer, ...)
