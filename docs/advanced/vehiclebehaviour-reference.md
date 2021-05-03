@@ -53,6 +53,30 @@ depends on physics values from the vehicle.
 
 It's always called after OnEnableVehicle. There are no further calls after OnDisableVehicle.
 
+#### UpdateAfterFixedUpdate
+
+Called in the Update cycle, but only if at least one FixedUpdate call (physics update) has happened
+right before this Update.
+
+UpdateAfterFixedUpdate allows efficient execution of visual updates that depend on physics under any
+combination of refresh rate and physics rate.
+
+This event solves the problems that may arise when using UpdateVehicle or FixedUpdateVehicle in
+these cases:
+
+- High refresh rate with standard physics rate: results in multiple Update calls between each
+ 	FixedUpdate call.
+	- Update would be redundant because the values aren't likely updated between consecutive
+		Update calls.
+	- FixedUpdate would work in this case, but wouldn't be efficient in the next case.
+
+- Standard refresh rate with high physics rate: results in multiple FixedUpdate calls between each
+	Update call.
+	- Update would work in this case, but wouldn't be efficient in the previous case.
+	- FixedUpdate would be redundant and highly inefficient. Visual stuff would be forcefully
+		updated every FixedUpdate (no frames skipped), but the result wouldn't be visible until the
+		next Update cycle.
+
 #### GetUpdateOrder
 
 Execution order for UpdateVehicle, FixedUpdateVehicle and the additional notification events with
