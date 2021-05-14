@@ -54,6 +54,8 @@ May be licensed by organizations with annual revenue / funds / budget in excess 
 	crowdfunding) in excess of €200,000 during the most recently completed fiscal year, or
 	non-commercial entities with a total annual budget in excess of €200,000 for the entire
 	non-commercial entity.
+- Professional licenses are assigned to one individual and are non-transferable. A single transfer
+	to another individual is allowed within 30 days of purchasing the license.
 - Email support in the Professional license shall be provided to the licensee individual only.
 - Connections to the GIT repositories are logged per-account. Failure to keep the repository
 	connections under reasonable limits may result in the interruption of the service.
