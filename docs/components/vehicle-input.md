@@ -170,13 +170,13 @@ Handbrake Locked
 ##### Force Feedback
 
 Logical Tire Width
-:	Tire width used for the force feedback calculations. More width causes more intense reactions.
+:	Tire width used for the force feedback calculations. More width causes more intense reactions. Doesn't need to match the width of the real tire.
 
 Force Intensity
 :	Overall multiplier for the force feedback.
 
 Weight Intensity
-:	How much the weight affects the self-alignment torque.
+:	How much the weight affects the force feedback.
 
 Damper Coefficient
 :	Applies resistance to the movement of the steering wheel.
@@ -196,8 +196,9 @@ Force Feedback GUI
 	saved, but may be used for configuring the force feedback later.
 
 : Enable Test Effects
-	Play the scene and move the Test Effect controls for experimenting with the different force
-	feedback effects. The vehicle doesn't apply force feedback.
+	Tool for experimenting with the different force	feedback effects. Play the scene and move the
+	Test Effect controls to see the reactions in the actual wheel. The vehicle doesn't apply force
+	feedback.
 
 Debug Gizmos
 :	Show the gizmos used for the force feedback at the Scene view in runtime.
