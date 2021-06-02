@@ -169,6 +169,8 @@ Handbrake Locked
 
 ##### Force Feedback
 
+Force feedback is based on the difference of slip at the sides of an hypothetical tire of certain width. When the vehicle is steering an edge of the tire slips more than the other edge. This difference causes a counter-force that tries to counter-steer the wheel to cancel such slip differences. This counter-force is calculated as torque that is applied to the wheel device.
+
 Logical Tire Width
 :	Tire width used for the force feedback calculations. More width causes more intense reactions. Doesn't need to match the width of the real tire.
 
