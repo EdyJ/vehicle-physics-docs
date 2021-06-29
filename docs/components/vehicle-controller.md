@@ -120,8 +120,8 @@ Steering settings for this axle:
 - Steerable: regular steering as configured in the Steering settings (below).
 - Ratio: this axle steers a fraction of the demanded steering. Useful for multi-axle vehicles
 	with several steering axles.
-- Reference: the steering ratio is defined by the relative longitudinal position of the axle to
-	the reference transform configured at the Steering settings (below).
+- Reference: the steering ratio is defined by the longitudinal position of the axle relative
+	to the Ratio Reference transform configured in the Steering settings (below).
 
 ### Steering
 

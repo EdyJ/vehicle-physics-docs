@@ -121,26 +121,42 @@ Rotates the vehicle's steering wheel object according to the actual steering val
 Steering Wheel
 :	Transform for the steering wheel geometry. It will be rotated locally around the Z axis.
 
-Degrees Of Rotation
-:	Total degrees of rotation of the steering wheel. It can be configured to match the value of
-	actual steering input controllers.
+Local Rotation Axis
+:	The local axis the steering wheel transform must be rotated around to provide the correct
+	rotation effect.
+
+&fa-info-circle:lg; The range of rotation of the steering wheel transform is configured in the
+	[Steering section](/blocks/steering){: .alert-link }
+{: .alert .alert-info }
 
 ##### Lights
 
 Shows or hides the given objects for simulating the various lights of the vehicle. All of them
 are optional.
 
-Brake Lights Glow
-:	Objects representing brake lights glowing
+Brake Lights On
+:	Objects representing brake lights on
 
 Brake Lights Off
-:	Object representing brake lights not glowing
+:	Objects representing brake lights off
 
-Reverse Lights Glow
-:	Objects representing reverse lights glowing
+Reverse Lights On
+:	Objects representing reverse lights on
 
-Brake Lights Off
-:	Object representing reverse lights not glowing
+Reverse Lights Off
+:	Objects representing reverse lights off
+
+Head Lights On
+:	Objects representing head lights on
+
+Head Lights Off
+:	Objects representing head lights off
+
+Head Lights Enabled
+:	Toggles head lights on or off
+
+Head Lights Toggle Key
+:	Key code for toggling head lights on and off
 
 ##### Dashboard
 
@@ -164,23 +180,21 @@ Speed Max Kph
 Speed Min Angle, Speed Max Angle
 :	Angles for the Speed Gauge at the minimum (0 rpm) and maximum (Speed Max Kph) values.
 
-These objects will be shown or hidden based on the actual state of the vehicle:
-
 Dashboard On
-:	Objects representing the dashboard turned on and glowing
+:	Objects representing the dashboard turned on
 
 Dashboard Off
 :	Objects representing the dashboard turned off
 
 Stalled Lights On
 :	Object representing the dashboard indicators for the stalled vehicle (typically battery, etc)
-	turned on and glowing.
+	turned on.
 
 Stalled Lights Off
-:	Object representing the above indicators turned off (not glowing).
+:	Object representing the above indicators turned off.
 
 Handbrake Lights On
-:	Object representing the dashboard indicator for the handbrake turned on and glowing.
+:	Object representing the dashboard indicator for the handbrake turned on.
 
 Handbrake Lights Off
-:	Object representing the dashboard indicator for the handbrake turned off (not glowing).
+:	Object representing the dashboard indicator for the handbrake turned off.
