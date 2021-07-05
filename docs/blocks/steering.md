@@ -20,7 +20,7 @@ Steerable
 
 Ratio
 :	This axle steers the given fraction of the demanded steering. Useful for additional steering
-	axles with smaller steering angle.
+	axles with smaller steering angle. Negative ratios are allowed (i.e. for rearmost axle in buses).
 
 Reference
 :	The steering ratio is defined by the longitudinal position of the axle relative to the Ratio
@@ -68,7 +68,7 @@ Steering Wheel Range
 
 # Scripting Reference
 
-### Brakes.Settings
+### Steering.Settings
 
 ```
 namespace VehiclePhysics
