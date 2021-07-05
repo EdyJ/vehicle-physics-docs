@@ -190,3 +190,118 @@ Still, existing Pacejka sets may be adapted to VPP following this procedure:
 3. Configure the tire friction in VPP to match the resulting curve as closely as possible. You may
 	use either a Pacejka model or any of the other modes (i.e. Parametric), which are typically
 	easier to fit to an existing curve.
+
+# Scripting Reference
+
+### TireFriction
+
+```
+namespace VehiclePhysics
+{
+[Serializable]
+public class TireFriction
+	{
+	// Friction model and settings. Editable at the inspector.
+	//
+	// Any changes here by scripting must be followed by a call to SetupFrictionCurves()
+	// for the changes to have effect.
+
+	public Model model = Model.Smooth;
+	public Settings settings = new Settings();
+
+	// Generic friction multiplier. Tire force is multiplied by this factor.
+
+	public float frictionMultiplier = 1.0f;
+
+	// Speed below which the adherent friction is completely faded out.
+
+	public float maxAdherentSpeed = 23.0f / 3.6f;
+
+	// Supported friction models
+
+	public enum Model
+		{
+		Flat,
+		Linear,
+		Smooth,
+		Parametric,
+		Pacejka
+		}
+
+	// Settings for defining any friction curve
+
+	[Serializable]
+	public class Settings
+		{
+		public float adherentFriction = 0.95f;					// Linear, Smooth, Parametric
+		public Vector2 peak	= new Vector2(1.5f, 1.1f);			// Flat, Linear, Smooth, Parametric
+		public Vector2 limit = new Vector2(6.0f, 0.8f);			// Linear, Smooth, Parametric
+
+		// Parametric only: sharpness ratios (0 = smooth, 1 = sharp).
+
+		[Range(0,1)] public float a = 0.9f;				// Sharpness of the ascending curve
+		[Range(0,1)] public float b = 0.0f;				// Sharpness before the peak point
+		[Range(0,1)] public float c = 0.0f;				// Sharpness after the peak point
+		[Range(0,1)] public float d = 0.0f;				// Sharpness before the limit point
+
+		// Pacejka (simplified version)
+
+		[Range(0.01f,2)] public float A = 0.95f;		// Adherent coefficient of friction
+		[Range(0.2f,4)]	public float B = 0.8f;			// Stiffness
+		[Range(1,2)]	public float C = 1.5f;			// Shape
+		[Range(0,2)]	public float D = 1.1f;			// Peak coefficient of friction
+		[Range(-20,1)]	public float E = -2.0f;			// Curvature
+		}
+	}
+
+	// Properties of the actual contact patch of the tire with the surface
+
+	public class ContactPatch
+		{
+		public float load = 1.0f;
+		public Vector2 slip = Vector2.zero;
+		public Vector2 localVelocity = Vector2.zero;
+		public float groundGrip = 1.0f;
+		}
+
+	// Configure the friction curve out of the actual settings
+
+	public void SetupFrictionCurves ()
+
+	// Isotropic friction implementation (single friction curve)
+
+	public Vector2 GetForce (ContactPatch cp)
+
+	// Returns whether current slip falls inside the adherent cone
+
+	public bool IsAdherentSlip (ContactPatch cp)
+	float GetAdherentSlip (ContactPatch cp)
+
+	// Compute the maximum forward adherent force (return value) as well as the maximum
+	// forward adherent slip (cp.slip.y) for the current sideways slip.
+	//
+	// Fordward force is signed.
+
+	public float ComputeAdherentForceForward (ContactPatch cp)
+
+	// Compute the maximum sideways adherent force (return value) as well as the maximum
+	// sideways adherent slip (cp.slip.x) for the current forward slip.
+	//
+	// Sideways force is unsigned (friction force)
+
+	public float ComputeAdherentForceSideways (ContactPatch cp)
+
+	// Return the slip bounds of the adherent circle (isotropic)
+
+	public Vector2 GetAdherentSlipBounds (ContactPatch cp)
+
+	// Return the slip bounds of the peak circle (isotropic)
+
+	public Vector2 GetPeakSlipBounds (ContactPatch cp)
+
+	// Return the slip bounds of the limit circle (isotropic)
+
+	public Vector2 GetLimitSlipBounds (ContactPatch cp)
+	}
+}
+```
