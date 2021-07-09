@@ -48,7 +48,21 @@ function drivelinechartcanvas (canvasId, canvasWidth, canvasHeight)
 	self.Wheel = function (x, y)
 		{
 		SetOrigin();
-		self.canvas.Rect([ x, y, 1, 2 ], { fill: "transparent", stroke: "black", strokeWidth: 3, rx: 6, ry: 6 });
+		self.canvas.Rect([ x, y, 1, 2 ], { fill: "gray", stroke: "black", strokeWidth: 3, rx: 6, ry: 6 });
+		}
+
+
+	// Debug
+
+	self.DrawRulers = function ()
+		{
+		self.canvas.originX = 0;
+		self.canvas.originY = canvasHeight;
+		for (var y = -1; y > -canvasHeight; y--)
+			self.canvas.Text([ 0, y, 0.5 ], (y - self.originY) + "", { fill: "black", originY: "top", originX: "left" });
+		for (var x = 1; x < canvasWidth; x++)
+			self.canvas.Text([ x, 0, 0.5 ], (x - self.originX) + "", { fill: "black", originY: "top", originX: "left" });
+		SetOrigin();
 		}
 
 

@@ -47,7 +47,7 @@ A single driven axle with a differential connecting both wheels.
 		chart.originY = -2;
 		chart.AxleTop ( 0, 0 );
 		chart.TorqueInputTop ( 4, 0 );
-		chart.Text ( 4, -4, "Axle Differential" );
+		chart.Text ( 4, -4, "Axle differential" );
 		}
 
 	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
@@ -80,7 +80,7 @@ H-Drive
 
 		chart.originX = 3;
 		chart.originY = -2;
-		chart.Text ( 4, -14, "Center Differential" );
+		chart.Text ( 4, -14, "Center differential" );
 
 		chart.AxleBottom ( 0, 0 );
 		chart.AxleTop ( 0, -10 );
@@ -94,7 +94,7 @@ H-Drive
 
 		chart.originX = 14;
 		chart.originY = -2;
-		chart.Text ( 4, -14, "Torque Splitter" );
+		chart.Text ( 4, -14, "Torque splitter" );
 
 		chart.AxleBottom ( 0, 0 );
 		chart.AxleTop ( 0, -10 );
@@ -131,6 +131,18 @@ H-Drive
 
 ### Three driven axles
 
+Inter-axle differential and center differential
+:	Second and third axles are linked to a single inter-axle differential. First axle is
+	connected to the inter-axle differential with a center differential.
+
+Inter-axle differential and torque splitter at linked axles
+:	Second and third axles are linked to a single inter-axle differential. Drive power goes to the
+ 	inter-axle differential. A torque splitter routes part of the power to the first axle.
+
+Inter-axle differential and torque splitter at independent axle
+:	Second and third axles are linked to a single inter-axle differential. Drive power goes to the
+ 	first axle. A torque splitter routes part of the power to the inter-axle differential.
+
 H-Drive and center differential
 :	Second and third axles are side-linked to a single differential. Drive power goes to a center
 	differential connecting the side-linked axles and the first axle.
@@ -143,7 +155,7 @@ H-Drive and torque splitter at independent axle
 :	Second and third axles are side-linked to a single differential. Drive power goes to the first
 	axle. A torque splitter routes part of the power to the second-third linked axles.
 
-<canvas id="fig3" class="img-responsive" width="608px" height="357px">
+<canvas id="fig3-1" class="img-responsive" width="608px" height="357px">
 <!-- width and height here must be the same as the canvas will have, being:
 	16 pixels per square in X
 	17 pixels per square in Y
@@ -152,11 +164,82 @@ H-Drive and torque splitter at independent axle
 <script type="text/javascript">
 	var drawCanvas = function()
 		{
-		var chart = new drivelinechartcanvas("fig3", 38, 21);
+		var chart = new drivelinechartcanvas("fig3-1", 38, 21);
 
 		chart.originX = 3;
 		chart.originY = -2;
-		chart.Text ( 4, -17, "H-Drive and\nCenter Differential" );
+		chart.Text ( 4, -17, "Inter-axle differential and\ncenter differential" );
+		<!-- chart.DrawRulers (); -->
+
+		chart.AxleBottom ( 0, 0 );
+		chart.InterAxleGroup ( 0, -8 );
+
+		chart.Differential ( 3, -5 );
+		chart.ShaftTop ( 3, -5 );
+		chart.ShaftBottom ( 3, -5 );
+		chart.ShaftRight ( 3, -5 );
+		chart.ConnectY ( 4, -2, -3 );
+		chart.ConnectX ( 4, -7, -2 );
+		chart.ConnectY ( 2, -7, -4 );
+		chart.ConnectX ( 2, -11, 1 );
+		chart.TorqueInputRightTop ( 5, -6 );
+
+		chart.originX = 15;
+		chart.originY = -2;
+		chart.Text ( 4, -18, "Inter-axle differential and\ntorque splitter\nat linked axles" );
+		<!-- chart.DrawRulers (); -->
+
+		chart.AxleBottom ( 0, 0 );
+		chart.InterAxleGroup ( 0, -8 );
+
+		chart.TorqueSplitterDown ( 3, -5 );
+		chart.ShaftTop ( 3, -5 );
+		chart.ShaftBottom ( 3, -5 );
+		chart.ShaftRight ( 3, -5 );
+		chart.ConnectY ( 4, -2, -3 );
+		chart.ConnectX ( 4, -7, -2 );
+		chart.ConnectY ( 2, -7, -4 );
+		chart.ConnectX ( 2, -11, 1 );
+		chart.TorqueInputRightTop ( 5, -6 );
+
+		chart.originX = 27;
+		chart.originY = -2;
+		chart.Text ( 4, -18, "Inter-axle differential and\ntorque splitter at\nindependent axle" );
+		<!-- chart.DrawRulers (); -->
+
+		chart.AxleBottom ( 0, 0 );
+		chart.InterAxleGroup ( 0, -8 );
+
+		chart.TorqueSplitter ( 3, -3 );
+		chart.ShaftTop ( 3, -3 );
+		chart.ShaftBottom ( 3, -3 );
+		chart.ShaftRight ( 3, -3 );
+		chart.ConnectY ( 4, -2, -1 );
+		chart.ConnectY ( 4, -5, -2 );
+		chart.ConnectX ( 4, -7, -2 );
+		chart.ConnectY ( 2, -7, -4 );
+		chart.ConnectX ( 2, -11, 1 );
+		chart.TorqueInputRightTop ( 5, -4 );
+		}
+
+	if (window.addEventListener) window.addEventListener('load', drawCanvas, false);
+	else if (window.attachEvent) window.attachEvent('onload', drawCanvas);
+</script>
+
+<canvas id="fig3-2" class="img-responsive" width="608px" height="357px">
+<!-- width and height here must be the same as the canvas will have, being:
+	16 pixels per square in X
+	17 pixels per square in Y
+-->
+</canvas>
+<script type="text/javascript">
+	var drawCanvas = function()
+		{
+		var chart = new drivelinechartcanvas("fig3-2", 38, 21);
+
+		chart.originX = 3;
+		chart.originY = -2;
+		chart.Text ( 4, -17, "H-Drive and\ncenter differential" );
 
 		chart.AxleBottom ( 0, 0 );
 		chart.HDriveGroupTop ( 0, -8 );
@@ -170,7 +253,7 @@ H-Drive and torque splitter at independent axle
 
 		chart.originX = 15;
 		chart.originY = -2;
-		chart.Text ( 4, -18, "H-Drive and\nTorque Splitter\nat H-Drive" );
+		chart.Text ( 4, -18, "H-Drive and\ntorque splitter\nat linked axles" );
 
 		chart.AxleBottom ( 0, 0 );
 		chart.HDriveGroupTop ( 0, -8 );
@@ -184,7 +267,7 @@ H-Drive and torque splitter at independent axle
 
 		chart.originX = 27;
 		chart.originY = -2;
-		chart.Text ( 4, -18, "H-Drive and\nTorque Splitter at\nindependent axle" );
+		chart.Text ( 4, -18, "H-Drive and\ntorque splitter at\nindependent axle" );
 
 		chart.AxleBottom ( 0, 0 );
 		chart.HDriveGroupTop ( 0, -8 );
@@ -226,7 +309,7 @@ Full H-Drive
 :	Wheels on each side of all axles are linked together. A single center differential connects both
 	sides.
 
-<canvas id="fig4" class="img-responsive" width="432px" height="374px">
+<canvas id="fig4-1" class="img-responsive" width="432px" height="374px">
 <!-- width and height here must be the same as the canvas will have, being:
 	16 pixels per square in X
 	17 pixels per square in Y
@@ -235,7 +318,7 @@ Full H-Drive
 <script type="text/javascript">
 	var drawCanvas = function()
 		{
-		var chart = new drivelinechartcanvas("fig4", 27, 22);
+		var chart = new drivelinechartcanvas("fig4-1", 27, 22);
 
 		chart.originX = 3;
 		chart.originY = -2;
@@ -274,7 +357,7 @@ Full H-Drive
 	else if (window.attachEvent) window.attachEvent('onload', drawCanvas);
 </script>
 
-<canvas id="fig5" class="img-responsive" width="640px" height="374px">
+<canvas id="fig4-2" class="img-responsive" width="640px" height="374px">
 <!-- width and height here must be the same as the canvas will have, being:
 	16 pixels per square in X
 	17 pixels per square in Y
@@ -283,7 +366,7 @@ Full H-Drive
 <script type="text/javascript">
 	var drawCanvas = function()
 		{
-		var chart = new drivelinechartcanvas("fig5", 40, 22);
+		var chart = new drivelinechartcanvas("fig4-2", 40, 22);
 
 		chart.originX = 3;
 		chart.originY = -2;
