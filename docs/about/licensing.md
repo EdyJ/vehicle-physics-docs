@@ -30,7 +30,7 @@ Advanced Editor tools: Engine configuration _(Experimental)_, Quick Vehicle Crea
 Framework for AI and autonomous vehicles: self-drive, automated tests, path follow, export data to CSV	|	|	| &fa-check; |
 Unity Timeline integration for splines																	|	|	| &fa-check; |
 Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/){: target="_blank" }, [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/){: target="_blank" }, [CXC](https://www.cxcsimulations.com){: target="_blank" }	|	|	| &fa-check; |
-Support by Skype / Discord / MS Teams																	|	|	| &fa-check; |
+Support by Skype / Discord / MS Teams. [All support options](/about/support)																	|	|	| &fa-check; |
 May be licensed by organizations with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
 **License Fee**<br>_One-time payment, perpetual license_											| **FREE** | **€ 590** | **€ 5900** |
 **Support and updates**<br>_First year included in the license fee_							| _n/a_ | € 190<br>/year | € 1900<br>/year |
@@ -56,6 +56,9 @@ May be licensed by organizations with annual revenue / funds / budget in excess 
 	non-commercial entity.
 - Professional licenses are assigned to one individual and are non-transferable. A single transfer
 	to another individual is allowed within 30 days of purchasing the license.
+- Product support does not include configuring vehicles, working on the customer's project, or
+	custom developments. See [Professional Services](/about/support/#professional-services) for this
+	kind of support.
 - Email support in the Professional license shall be provided to the licensee individual only.
 - Connections to the GIT repositories are logged per-account. Failure to keep the repository
 	connections under reasonable limits may result in the interruption of the service.
