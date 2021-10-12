@@ -5,7 +5,7 @@ Add-on components modifying the vehicle's handling and behavior.
 You could [write your own add-on components](../advanced/custom-addons.md) easily if the provided
 components don't fit your needs or you need other features.
 
-### VPAntirollBar
+### VPAntiRollBar
 
 [Anti-roll bars](https://en.wikipedia.org/wiki/Anti-roll_bar) (also "stabilizer bars" or "sway bars")
 _connect_ the two wheels of the same axle allowing a limited degree of freedom between their
