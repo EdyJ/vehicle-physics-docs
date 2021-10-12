@@ -37,15 +37,22 @@ Spring Rate
 	if the difference in the suspension travel is 10 cm, then the transferred rate will be 0.1 x
 	Spring Rate.
 
-Rigidity
-:	When one suspension is compressed the other is lifted as much as specified in this parameter.
-	0 means the less compressed wheel is untouched. 1 means the less compressed wheel is lifted as
-	much as the most compressed wheel, so both "bounce" at the same position. This typically causes
-	instabilities. Recommended value is 0.5.
-
 Anti-roll rate
 :	Legacy mode only: amount of spring rate transferred between suspensions based on the difference
 	in their compression ratios.
+
+Emit Telemetry
+:	Includes this component in the telemetry system. These channels are added: CompressionLeft,
+	CompressionRight, CompressionDiff, SpringLeft, SpringRight.
+
+Here's an example of the effect of the anti-roll bar in the front axle. It shifts the weight of the
+vehicle to the rear axle so it gains traction in corners. Without front anti-roll bar the rear inner
+wheel just lifts up:
+
+<div class="imagegallery" sm="2" md="2" lg="2" style="display:none">
+	<img class="clickview" src="/img/components/vpp-anti-roll-bar-effect-01.jpg" alt="Without front anti-roll bar">
+	<img class="clickview" src="/img/components/vpp-anti-roll-bar-effect-02.jpg" alt="With front anti-roll bar">
+</div>
 
 ### VPAeroSurface
 
