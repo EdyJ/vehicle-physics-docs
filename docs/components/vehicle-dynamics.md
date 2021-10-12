@@ -16,7 +16,8 @@ body lean in turns at that axle.
 ![VP Anti Roll Bar](/img/components/vpp-anti-roll-bar.png){: .img-medium .clickview }
 
 Axle
-:	The axle this anti-roll bar component will be attached to.
+:	The axle this anti-roll bar component will be attached to. 0 is first axle, 1 is second axle and
+	so on.
 
 Mode
 :	Several working modes are provided:
