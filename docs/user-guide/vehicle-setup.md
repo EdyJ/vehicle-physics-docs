@@ -379,44 +379,55 @@ Default parameters are a good starting point in all these.
 	Safety aids may trigger frequently when testing the car with keyboard or gamepad. This is normal,
 	as you're pushing the car to its limits constantly (full throttle, full steer, full brakes).
 
-	Still, this gives you hints on where the setup should be improved. For example, ECS triggers on
+	Still, this gives you hints on where the setup should be improved. For example, ESC triggers on
 	oversteer and understeer. You may improve these behaviors by configuring suspension to reduce
-	the chances of the ECS to activate.
+	the chances of the ESC to activate.
 
-**Anti-Lock Braking (ABS)** reduces brake pressure dynamically to prevent wheels to lock while
-braking.
+##### Anti-Lock Braking (ABS)
+
+Reduces brake pressure dynamically to prevent wheels to lock while braking.
 
 ![Anti-lock Braking System (ABS)](/img/setup-guide/vpp-setup-safety-abs.png)
 
-**Traction Control (TCS)** in **Sport** mode limits throttle when drive wheels slip to ensure they
-provide the maximum traction.
+##### Traction Control System (TCS)
+
+The **Sport** mode limits throttle when drive wheels slip beyond the tire's Peak friction to
+ensure they provide the maximum traction.
 
 ![Traction Control System (TCS)](/img/setup-guide/vpp-setup-safety-tcs.png)
 
-!!! Info "&fa-thumbs-o-up; Hints for minimizing the activation of the TCS"
-	- Use the TCS _Custom Slip_ mode with a value slightly beyond the tire's peak slip.
-	- Use a locking differential, or configure stiffer parameters for it.
-	- Configure stiffer suspension in the opposite axle. I.e. stiffer front suspension and/or front
-		anti-roll bar in RWD cars. Use real-world techniques here.
-	- In manual transmissions with _Disc Friction_ clutch: reduce the _Torque Transfer_ value, so
-		the clutch is allowed to slip slightly when switching gears.
+Hints for minimizing the activation of the TCS:
 
-**Stability Control (ESC)** selectively applies individual brakes to specific wheels to compensate
-understeering / oversteering.
+- Use the TCS _Custom Slip_ mode with a value slightly beyond the tire's peak slip.
+- Use a locking differential, or configure stiffer parameters for it.
+- Configure stiffer suspension in the opposite axle. I.e. stiffer front suspension and/or front
+	anti-roll bar in RWD cars. Use real-world techniques here.
+- In manual transmissions with _Disc Friction_ clutch: reduce the _Torque Transfer_ value, so
+	the clutch is allowed to slip slightly when switching gears.
+
+##### Electronic Stability Control (ESC)
+
+Selectively applies individual brakes to specific wheels to compensate understeering / oversteering.
 
 ![Electronic Stability Control (ESC)](/img/setup-guide/vpp-setup-safety-esc.png)
 
-!!! Info "&fa-thumbs-o-up; Hints for minimizing the activation of the ECS"
-	- Configure the ECS parameters to better fit the behavior of the vehicle. Use the _Stability Control
-		(ESC)_ section in the Telemetry window.
-	- Tweak the suspension to reduce the grip at the part that doesn't slide. I.e. if the car
-		understeers (front wheels slide), a stiffer rear suspension should reduce the rear grip
-		providing a better front-rear grip balance. Use real-world techniques here.
-	- Tweak the _Inertia Bias_ parameter in the _Inertia_ section of `VPVehicleController` so it
-		better fits the expected handling of the vehicle.
+Hints for minimizing the activation of the ESC:
 
-**Anti-Spin Regulation (ASR)** works at low speeds by applying brakes to one drive wheel when it
-loses traction, allowing the other wheel to gain more traction and pushing the vehicle.
+- Configure the ESC parameters to better fit the behavior of the vehicle. Use the _Stability Control
+	(ESC)_ section in the Telemetry window.
+- Tweak the suspension to reduce the grip at the part that doesn't slide. I.e. if the car
+	understeers (front wheels slide), a stiffer rear suspension should reduce the rear grip
+	providing a better front-rear grip balance. Use real-world techniques here.
+- Tweak the _Inertia Bias_ parameter in the _Inertia_ section of `VPVehicleController` so it
+	better fits the expected handling of the vehicle.
+- Configure the minimum speeds _Min Speed_ to prevent premature activations. A procedure for finding
+	good values is moderately accelerating (50%) while steering (limited steering enabled). Increase
+	_MinSpeed_ if ESC is suddenly activated above the current minimum speed.
+
+##### Anti-Spin Regulation (ASR)
+
+Works at low speeds by applying brakes to one drive wheel when it loses traction, allowing the other
+wheel to gain more traction and pushing the vehicle.
 
 ![Anti-Spin Regulation (ASR)](/img/setup-guide/vpp-setup-safety-asr.png)
 
