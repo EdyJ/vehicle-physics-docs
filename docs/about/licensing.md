@@ -19,7 +19,7 @@ High-quality locations and vehicles _(WIP)_														|	| &fa-check; | &fa-ch
 Mobile touch-based controller _(WIP)_															|	| &fa-check; | &fa-check; |
 DirectInput controller with force feedback _(Windows only)_										|	| &fa-check; | &fa-check; |
 XBox gamepad support (360 and One) _(Windows only)_												|	| &fa-check; | &fa-check; |
-Support by email. [All support options](/about/support)												|	| individual | team |
+Support by email. [Other support options](/about/support)											|	| individual | team |
 Number of developers 				 																	| 	| 1 | up to 10 |
 Full source code included																				|	|	| &fa-check; |
 Advanced simulation features: multi-body vehicles, solid and liquid cargo components					|	|	| &fa-check; |
