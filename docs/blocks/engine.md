@@ -263,3 +263,216 @@ A radically different example is a truck engine. These engines provide a lot of 
 rpm. These parameters closely match the specifications of the real model:
 
 ![Vehicle Physics Pro Truck Engine Parameters](/img/blocks/vpp-engine-truck-example.png){: .clickview .img-medium-height }
+
+# Scripting Reference
+```cs
+namespace VehiclePhysics
+{
+	public class Engine : Block
+}
+```
+### Properties
+```cs
+	public enum IdleControlType { Passive, Active };
+	public enum ClutchType { LockRatio, FrictionDisc, TorqueConverter, TorqueConverterLimited };
+	public enum RpmLimiterMode { InjectionCut, InjectionLimit };
+
+	public float throttleInput = 0.0f;			// 0.0 = no throtle, 1.0 = full throttle
+	public float clutchInput = 0.0f;			// 0.0 = disengaged, 1.0 = engaged
+	public int ignitionInput = 0;				// -1 = off, 0 = acc-on, 1 = start
+
+	public float allowedFuelRatio = 1.0f;		// 0.0 = no fuel consumption allowed. 1.0 = regular operation
+
+	public float tcsRpms = -1.0f;				// Hinted RPMs come from TCS and similar systems.
+	public float tcsRatio = 1.0f;				// "Effectiveness" of the hinted RPMs.
+	public float tcsThrottleFactor = 1.0f;		// TCS-computed throttle will be limited by this factor.
+
+	public bool autoRpms = false;				// AutoRpms overrides all other throttle considerations
+	public float targetRpms = -1.0f;			// (rpm limiter, throttleInput, TCS, ...)
+
+	public Settings settings = new Settings();
+	public ClutchSettings clutchSettings = new ClutchSettings();
+
+	public static float KwToHp = 1.341022f;		// Mechanical Horsepower
+												// https://www.rapidtables.com/convert/power/kw-to-hp.html
+	// Sensors exposing internal data
+
+	public float sensorRpm				{ get { return (m_stateVars.L / settings.inertia) * WToRpm ; } }
+	public bool sensorStalled			{ get { return m_sensorStalled && ignitionInput >= 0; } }
+	public bool sensorWorking			{ get { return !m_sensorStalled && ignitionInput >= 0; } }
+	public bool sensorStarting			{ get { return m_sensorStalled && ignitionInput == 1; } }
+	public float sensorFlywheelTorque	{ get { return m_sensorFlywheelTorque; } }
+	public float sensorOutputTorque		{ get { return m_output != null? m_output.outTd : 0.0f; } }
+	public float sensorPower			{ get { return m_sensorPower; } }
+	public bool sensorRpmLimiter		{ get { return m_stateVars.rpmLimiterActive; } }
+	public bool sensorTcsEngaged		{ get { return m_sensorTcsEngaged; } }
+	public float sensorFuelRate			{ get { return m_sensorFuelRate; } }
+
+	// Load and clutch lock return NaN when the info is not available.
+
+	public float sensorLoad				{ get { return m_sensorLoad; } }
+	public float sensorClutchLock		{ get { return m_sensorClutchLock; } }
+
+	// Numerical damping heps preventing resonances, but also reduces the precision of the values.
+
+	public float damping = 1.0f;
+```
+### Nested classes
+```cs
+	// Engine settings
+
+	[Serializable]
+	public class Settings
+		{
+		public float idleRpm = 1000.0f;
+		public float peakRpm = 4200.0f;
+		public float maxRpm = 6500.0f;
+
+		public float idleRpmTorque = 135.0f;
+		public float peakRpmTorque = 188.0f;
+
+		[Range(0,1)]
+		public float idleRpmCurveBias = 0.0f;
+		[Range(0,1)]
+		public float peakRpmCurveBias = 0.0f;
+
+		public float inertia = 0.5f;
+
+		public float frictionTorque = 20.0f;		// Passive friction torque in Nm, constant
+		[Range(0,3.0f)]
+		public float rotationalFriction = 0.1f;		// Rotational friction coefficient, lineal, based on w
+		[Range(0,0.2f)]
+		public float viscousFriction = 0.01f;		// Viscous friction coefficient, cuadratic, based on w^2
+
+		public bool torqueCap = false;
+		public float torqueCapLimit = 200.0f;
+
+		// Rev limiter
+
+		public bool rpmLimiter = false;
+		public RpmLimiterMode rpmLimiterMode = RpmLimiterMode.InjectionCut;
+		public float rpmLimiterMax = 6000.0f;
+		[Range(0,1)]
+		public float rpmLimiterCutoffTime = 0.075f;
+
+		// Idle
+
+		public IdleControlType idleControl = IdleControlType.Active;
+		[Range(0,1)]
+		public float maxIdleThrottle = 1.0f;
+		[Range(0,1)]
+		public float activeIdleRange = 0.5f;
+		[Range(0.0001f,0.9999f)]
+		public float activeIdleBias = 0.25f;
+
+		// Stall
+
+		public bool canStall = false;
+		[Range(0,1)]
+		public float stallBias = 0.5f;
+		public float stalledFrictionTorque = 25.0f;	// Torque (Nm) added to the friction when engine is stalled
+		[Range(0,1)]
+		public float starterMotorBias = 0.6f;		// "Reliability" factor of the starter motor
+
+		// Fuel consumption
+		// Maximum fuel consumed by the engine in a single rev at full load (grams / rev).
+		// This parameter defines the specific fuel consumption (BSFC) of the engine.
+
+		public float maxFuelPerRev = 0.16f;
+
+		// Fuel density for the consumption calculation (l/100km) in Kg/l
+		// - Petrol (gasoline): 0.745f
+		// - Diesel: 0.85f
+
+		public float fuelDensity = 0.745f;
+
+		// Efficiency correction factor that account for all factors that affect the fuel consumption value as l/100km.
+		// Adjust for matching the fuel consumption rates observed in real vehicles.
+		//
+		// - 3.6 seems to work fine for regular cars
+		// - Trucks seem to use 1.8 - 3.5
+		//
+		// (higher values report lower consumption rates)
+
+		public float fuelConsumptionCorrection = 3.6f;
+		}
+
+	// Read-only specifications of the engine based on the settings
+
+	public struct EngineSpecs
+		{
+		public float idleRpm;					// Rpm at idle
+		public float maxTorqueAtIdle;			// Max torque provided at idle rpm
+		public float frictionTorqueAtIdle;		// Engine friction at idle rpm when no throttle is applied
+
+		public float peakRpm;					// Rpm with max torque
+		public float maxTorqueAtPeak;			// Maximum torque of the engine. It's provided at peakRpm.
+		public float frictionTorqueAtPeak;		// Engine friction at peak rpm when no throttle is applied
+		public float specificFuelConsumption;	// Specific fuel consumption (fuel / kWh)
+		public float specificFuelConsumptionRpm;// Rpms
+
+		public float maxPowerRpm;				// Rpm with max power
+		public float maxPowerInKw;				// Max engine power in Kw. It's developed at maxPowerRpm.
+		public float maxPowerInHp;				// The previous value converted to HP.
+
+		public float limitRpm;					// Beyond this limit combustion cannot produce any further torque even at full throttle
+		public float frictionTorqueAtLimit;		// Engine friction at the operational limit
+		public float stallRpm;					// Below this limit engine is unable to keep a minimum torque and stalls
+		public float frictionTorqueAtStall;		// Engine friction that must be surpassed for the engine to start
+
+		// Information flags for malformed engine curves
+
+		public bool malformedTorque;			// Torque (green) cannot be negative before maxRpm
+		public bool malformedRawPower;			// Raw engine power (dotted orange) must be decreasing after peakRpm
+		}
+```
+### Methods
+```cs
+	// Retrieve engine specifications for the current settings
+
+	public void GetEngineSpecifications (ref EngineSpecs data, float deltaRpm = -1.0f)
+
+	// Calculate maximum torque
+	//
+	// Given the input rpms calculate and return the actual torque produced by the engine.
+	//
+	// Used for informative purposes only (specifications, graphics). The real curve is
+	// calculated in EvaluateTorqueDownstream.
+
+	public float CalculateTorque (float rpm, float throttle = 1.0f)
+
+	// Calculate engine power
+	//
+	// Used for drawing the power curve and find the maximum engine power.
+	// It has no other practical utility.
+
+	public float CalculatePowerInKw (float rpm)
+
+	// Calculate specific fuel consumption (g/kWh)
+	//
+	// Detailed calculation based on https://en.wikipedia.org/wiki/Brake_specific_fuel_consumption
+	//
+	// float fuelConsumptionRate = m_engine.GetMaxFuelRate(y);
+	// float torque = m_engine.CalculateTorque(y);
+	// float w = y * Block.RpmToW;
+	// float bsfc = fuelConsumptionRate / (w * torque);  // grams per joule (g/J)
+	// return bsfc * 3.6f * 1000000f;
+
+	public float CalculateSpecificFuelConsumption (float rpm)
+
+	// Calculate the instant fuel consumption in l/100km at the current fuel rate for the given speed.
+
+	public float CalculateInstantFuelConsumption (float speed)
+
+	// Apply friction torque externally by calling AddFrictionTorque on each fixed frame step
+
+	public float AddFrictionTorque (float frictionTorque)
+	public void ResetFrictionTorque ()
+
+	// Get / set the state vars
+	//
+	// Used for getting the state of the engine and restoring it exactly.
+
+	public StateVars GetStateVars ()
+	public void SetStateVars (StateVars stateVars)
+```
