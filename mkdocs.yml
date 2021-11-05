@@ -77,7 +77,7 @@ nav:
   - Clutch: blocks/clutch.md
   - Gearbox: blocks/gearbox.md
   - Retarder: blocks/retarder.md
-  - Other blocks: blocks/extra-blocks.md
+  - Other blocks: blocks/other-blocks.md
 - Advanced:
   - Creating add-on components: advanced/custom-addons.md
   - Creating custom vehicles: advanced/custom-vehicles.md

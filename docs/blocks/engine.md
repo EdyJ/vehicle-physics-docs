@@ -297,21 +297,21 @@ namespace VehiclePhysics
 												// https://www.rapidtables.com/convert/power/kw-to-hp.html
 	// Sensors exposing internal data
 
-	public float sensorRpm				{ get { return (m_stateVars.L / settings.inertia) * WToRpm ; } }
-	public bool sensorStalled			{ get { return m_sensorStalled && ignitionInput >= 0; } }
-	public bool sensorWorking			{ get { return !m_sensorStalled && ignitionInput >= 0; } }
-	public bool sensorStarting			{ get { return m_sensorStalled && ignitionInput == 1; } }
-	public float sensorFlywheelTorque	{ get { return m_sensorFlywheelTorque; } }
-	public float sensorOutputTorque		{ get { return m_output != null? m_output.outTd : 0.0f; } }
-	public float sensorPower			{ get { return m_sensorPower; } }
-	public bool sensorRpmLimiter		{ get { return m_stateVars.rpmLimiterActive; } }
-	public bool sensorTcsEngaged		{ get { return m_sensorTcsEngaged; } }
-	public float sensorFuelRate			{ get { return m_sensorFuelRate; } }
+	public float sensorRpm				{ get; }
+	public bool sensorStalled			{ get; }
+	public bool sensorWorking			{ get; }
+	public bool sensorStarting			{ get; }
+	public float sensorFlywheelTorque	{ get; }
+	public float sensorOutputTorque		{ get; }
+	public float sensorPower			{ get; }
+	public bool sensorRpmLimiter		{ get; }
+	public bool sensorTcsEngaged		{ get; }
+	public float sensorFuelRate			{ get; }
 
 	// Load and clutch lock return NaN when the info is not available.
 
-	public float sensorLoad				{ get { return m_sensorLoad; } }
-	public float sensorClutchLock		{ get { return m_sensorClutchLock; } }
+	public float sensorLoad				{ get; }
+	public float sensorClutchLock		{ get; }
 
 	// Numerical damping heps preventing resonances, but also reduces the precision of the values.
 
@@ -478,11 +478,12 @@ namespace VehiclePhysics
 ```
 ### Populating the Data bus
 
-A custom vehicle controller using the Engine block should populate the vehicle's data bus so all other
-components attached to the vehicle can read the engine and clutch state from the bus.
+A [custom vehicle controller](/advanced/custom-vehicles) using the Engine block should populate the
+vehicle's [data bus](/advanced/databus-reference) so all other components attached to the vehicle
+can read the engine and clutch state from the bus.
 
-Add this code to the overridden `VehicleBase.DoUpdateData()` method in your controller. `m_engine` is
-the private var with the Engine block instance.
+Add this code to the overridden `VehicleBase.DoUpdateData()` method in your controller to populate
+the data bus correctly. `m_engine` is the private var with the Engine block instance.
 ```cs
 protected override void DoUpdateData ()
 	{
