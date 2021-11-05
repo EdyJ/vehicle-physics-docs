@@ -476,3 +476,45 @@ namespace VehiclePhysics
 	public StateVars GetStateVars ()
 	public void SetStateVars (StateVars stateVars)
 ```
+### Populating the Data bus
+
+A custom vehicle controller using the Engine block should populate the vehicle's data bus so all other
+components attached to the vehicle can read the engine and clutch state from the bus.
+
+Add this code to the overridden `VehicleBase.DoUpdateData()` method in your controller. `m_engine` is
+the private var with the Engine block instance.
+```cs
+protected override void DoUpdateData ()
+	{
+	// Access to the vehicle info channel
+	int[] vehicleData = data.Get(Channel.Vehicle);
+
+	// speed is inherited from VehicleBase
+	vehicleData[VehicleData.Speed] = (int)(speed * 1000.0f);
+
+	// Engine state
+	vehicleData[VehicleData.EngineRpm] = (int)(m_engine.sensorRpm * 1000.0f);
+	vehicleData[VehicleData.EngineStalled] = m_engine.sensorStalled? 1 : 0;
+	vehicleData[VehicleData.EngineWorking] = m_engine.sensorWorking? 1 : 0;
+	vehicleData[VehicleData.EngineStarting] = m_engine.sensorStarting? 1 : 0;
+	vehicleData[VehicleData.EngineLimiter] = m_engine.sensorRpmLimiter? 1 : 0;
+	vehicleData[VehicleData.EngineTorque] = (int)(m_engine.sensorFlywheelTorque * 1000.0f);
+	vehicleData[VehicleData.EnginePower] = (int)(m_engine.sensorPower * 1000.0f);
+	vehicleData[VehicleData.EngineLoad] = m_engine.sensorLoad < 0.0f? -1 : (int)(m_engine.sensorLoad * 1000.0f);
+	vehicleData[VehicleData.EngineFuelRate] = (int)(m_engine.sensorFuelRate * 1000.0f);
+	vehicleData[VehicleData.FuelConsumption] = (int)(m_engine.CalculateInstantFuelConsumption(speed) * 1000.0f);
+
+	// Clutch state
+	vehicleData[VehicleData.ClutchTorque] = (int)(m_engine.sensorOutputTorque * 1000.0f);
+	vehicleData[VehicleData.ClutchLock] = (int)(m_engine.sensorClutchLock * 1000.0f);
+
+	// TCS state
+	vehicleData[VehicleData.TcsEngaged] = m_engine.sensorTcsEngaged? 1 : 0;
+
+	// Actual inputs applied to engine and clutch
+	vehicleData[VehicleData.ThrottleSignal] = (int)(m_engine.throttleInput * 10000.0f);
+	vehicleData[VehicleData.ClutchSignal] = (int)(m_engine.clutchInput * 10000.0f);
+	}
+```
+
+
