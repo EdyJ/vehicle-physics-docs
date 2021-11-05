@@ -3,7 +3,7 @@
 These are not used by [VPVehicleController](/components/vehicle-controller), but they're still
 available for [custom vehicle controllers](/advanced/custom-vehicles).
 
-[Learn more about the Block protocol](advanced/block-reference)
+[Learn more about the Block protocol](/advanced/block-reference)
 
 ### DirectDrive
 
