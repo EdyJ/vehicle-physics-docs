@@ -15,16 +15,29 @@ Full development details are available via GIT revision logs ([VPP subscription]
 &fa-thumbs-up:lg; This page is updated from time to time. Check out [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link } on Twitter for weekly updates.
 {: .alert .alert-success }
 
-#### Now under development:
+#### Now under development (2021 - mid 2022):
 
-Tire Friction Model 2.0 (SDK V9 alpha)
+Tire Friction Model 2.0 (SDK V10 alpha)
 :	- Advanced industry-grade tire friction model: slip ratio, slip angle, load function.
 	- Detailed editors with graphic charts for analysis.
 	- Scriptable Tire Friction architecture: custom tire friction models may be implemented and used seamlessly.
 	- New realtime telemetry plots: Slip Ratio, Slip Angle, Wheel Torque.
 	- Reorganized telemetry data widget with slip and ground material properties always visible.
+	- New traction and steering aids designed for this model.
 
-Electric MGU (Motor Generator Units)
+Scriptable Wheel Contact model
+:	- Study and implement alternatives to the WheelCollider.
+	- Support custom wheel contact models to be plugged into VPP as add-ons.
+	- Choose a reliable and efficient wheel contact model and get rid of the WheelCollider.
+
+New Input Devices Manager
+:	- Learn and configure any device in minutes.
+	- Support any number of simultaneous devices.
+	- Load and save device setup to file / JSON.
+	- As simple to use as current Unity Input.
+	- Support for hot plugging devices.
+
+Electric MGU (Motor Generator Units) _(completed, will be deployed with the tire friction model 2.0)_
 :	- Parametric torque maps
 	- Efficiency factor
 	- Regenerative braking
@@ -32,12 +45,29 @@ Electric MGU (Motor Generator Units)
 	- Detailed editors with graphics charts
 	- Combination with mechanical brakes
 
-Advanced telemetry system
+Advanced telemetry system _(completed, pending of integration into the master branch)_
 :	- Multiple channels with different update frequencies and ranges
 	- Easily extensible from vehicle components (VehicleBehaviour)
 	- Different chart types: time/distance based, scatter plots, histogram
 
 <hr>
+
+#### July 2021
+
+- New **6x6 driveline layouts** for vehicles with [three driven axles](/blocks/driveline/#three-driven-axles).
+- New: VPP source code may now be built to **assemblies** by importing an unitypackage with the assembly definitions.
+
+#### June 2021
+
+- New **Aerodynamic Drag Models** added: cubic, mixed. Allows matching the simulated aerodynamic profile with actual data.
+- New **Power Analysis Tool** for analyzing the effects of the aerodynamic and rolling drags with the speed. [Tweet](https://twitter.com/VehiclePhysics/status/1404430618218356736?cxt=HHwWgICz6ZmNxf0mAAAA)
+
+#### February 2021 - SDK V9
+
+- Vehicles now support **Floating Origin** and soft reposition with preservation of the physics state.
+- New **Hard Reposition** feature for translating/respawning vehicles while restarting their physics state.
+
+## 2020
 
 #### December 2020
 
