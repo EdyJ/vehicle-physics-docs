@@ -52,6 +52,10 @@ Advanced telemetry system _(completed, pending of integration into the master br
 
 <hr>
 
+#### September 2021
+
+- New **Multi-vehicle telemetry** display allowing convenient analysis of multiple vehicles at once. This is specially useful to monitor articulated and multi-articulated vehicles. [Tweet](https://twitter.com/VehiclePhysics/status/1443205817055039490)
+
 #### July 2021
 
 - New **6x6 driveline layouts** for vehicles with [three driven axles](/blocks/driveline/#three-driven-axles).
