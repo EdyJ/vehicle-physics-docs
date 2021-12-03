@@ -66,51 +66,51 @@ The full source code in VPVehicleToolkit.cs is provided here for reference.
 
 
 ```
-//--------------------------------------------------------------
+﻿//--------------------------------------------------------------
 //      Vehicle Physics Pro: advanced vehicle physics kit
-//          Copyright © 2011-2019 Angel Garcia "Edy"
+//          Copyright © 2011-2022 Angel Garcia "Edy"
 //        http://vehiclephysics.com | @VehiclePhysics
 //--------------------------------------------------------------
 
-// VPVehicleToolkit: useful high-level tools
+// VPVehicleToolkit: useful high-level vehicle tools
 //
-// Useful tools, procedures and data exposed in a single place.
+// Useful tools, common procedures and common data exposed in a single place.
 // Also an example on dealing with the vehicle from scripting.
-
-// NOTE:
-//		For the input methods to have effect there should be no other components sending
-// 		input data to the vehicle, for example VPStandardInput. Disable or remove these from the
-// 		vehicle for the input methods in this component to have effect.
-//
-// 		Otherwise, both components will be overriding the same values in the data bus and the
-//		result will be undefinded (sometimes one will work, sometimes the other will work).
-
 
 using UnityEngine;
 using EdyCommonTools;
-
 
 namespace VehiclePhysics
 {
 
 public class VPVehicleToolkit : VehicleBehaviour
 	{
-	public enum AutomaticMode { M, P, R, N, D, L };
+	[Header("On Vehicle Startup")]
+	[Tooltip("Start the engine when the vehicle is enabled")]
+	[UnityEngine.Serialization.FormerlySerializedAs("startEngineOnEnable")]
+	public bool startEngine = false;
 
-	[Header("Startup")]
-	public bool pressBrake = false;
-	[Space(5)]
-	public bool setAutomaticMode = false;
-	public AutomaticMode defaultAutomaticMode = AutomaticMode.P;
-	[Space(5)]
-	public bool startEngineOnEnable = false;
+	[Tooltip("Press brakes. Note that if the vehicle has other input components, they will override brakes immediately afterwards. Brakes are also pressed if Set Automatic Mode is enabled regardless of this option.")]
+	[UnityEngine.Serialization.FormerlySerializedAs("pressBrake")]
+	public bool pressBrakes = false;
 
+	[Space(5)]
+	[Tooltip("Specify the default gear mode (P, R, N, D) in Automatic tranmsissions. Brakes are pressed so P mode can be set.")]
+	[UnityEngine.Serialization.FormerlySerializedAs("setAutomaticMode")]
+	public bool setAutomaticGear = false;
+
+	[UnityEngine.Serialization.FormerlySerializedAs("defaultAutomaticMode")]
+	[Tooltip("Default gear mode (P, R, N, D) in Automatic tranmsissions. Applied when Set Automatic Gear is enabled.")]
+	public Gearbox.AutomaticGear automaticGearMode = Gearbox.AutomaticGear.P;
+
+	// Private fields
+
+	bool m_engineStarting = false;
 
 	// Commonly used vehicle data
 	//
 	// The units and the resolution of the data (dividers) are taken from the data bus specification:
 	// https://vehiclephysics.com/advanced/databus-reference/
-
 
 	// Speed is m/s. Use speedInKph or speedInMph to get the speed in km/h or mph respectively.
 
@@ -166,18 +166,16 @@ public class VPVehicleToolkit : VehicleBehaviour
 			}
 		}
 
-
 	// The automatic mode will always be M in manual transmissions.
 
-	public AutomaticMode automaticMode
+	public Gearbox.AutomaticGear automaticMode
 		{
 		get
 			{
-			if (vehicle == null) return AutomaticMode.M;
-			return (AutomaticMode)vehicle.data.Get(Channel.Vehicle, VehicleData.GearboxMode);
+			if (vehicle == null) return Gearbox.AutomaticGear.M;
+			return (Gearbox.AutomaticGear)vehicle.data.Get(Channel.Vehicle, VehicleData.GearboxMode);
 			}
 		}
-
 
 	// Return true when the engine is starting but hasn't reached the working rpms yet
 
@@ -190,7 +188,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 			}
 		}
 
-
 	// Returns true when the engine is switched on and running
 
 	public bool isEngineStarted
@@ -202,7 +199,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 			}
 		}
 
-
 	// Returns true when the engine is stopped but hasn't been switched off
 
 	public bool hasEngineStalled
@@ -213,7 +209,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 			return vehicle.data.Get(Channel.Vehicle, VehicleData.EngineStalled) != 0;
 			}
 		}
-
 
 	// Acceleration readings in G factors
 
@@ -244,7 +239,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 			}
 		}
 
-
 	// Pitch and roll in degrees in range -180..+180
 
 	public float pitch
@@ -265,7 +259,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 			}
 		}
 
-
 	// Yaw in degrees in range 0..360
 
 	public float yaw
@@ -276,7 +269,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 			return angles.y;
 			}
 		}
-
 
 	// Pitch, roll and yaw velocities in radians per second
 
@@ -304,7 +296,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 			}
 		}
 
-
 	// Start the engine
 
 	[ContextMenu("Start Engine")]
@@ -314,14 +305,17 @@ public class VPVehicleToolkit : VehicleBehaviour
 
 		// Already started? do nothing
 
-		if (isEngineStarted) return;
+		if (isEngineStarted)
+			{
+			m_engineStarting = false;
+			return;
+			}
 
-		// Move the ignition key to Start.
-		// When the engine starts the key is moved back to Acc-On (see UpdateVehicle below)
+		// The engine start procedure is performed in both UpdateVehicle and FixedUpdateVehicle
+		// to override any previous settings coming from other input scripts.
 
-		vehicle.data.Set(Channel.Input, InputData.Key, 1);
+		m_engineStarting = true;
 		}
-
 
 	// Stop the engine
 
@@ -334,7 +328,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 
 		vehicle.data.Set(Channel.Input, InputData.Key, -1);
 		}
-
 
 	// Start or stop the engine based on current state.
 	// Useful for implementing a toggle start/stop button.
@@ -351,12 +344,10 @@ public class VPVehicleToolkit : VehicleBehaviour
 			StopEngine();
 		}
 
-
 	// Steering and pedals
 	//
 	// Units, ranges and resolution (multipliers) are defined in the data bus specification:
 	// https://vehiclephysics.com/advanced/databus-reference/
-
 
 	// Steering:
 	//	-1.0	full left
@@ -406,7 +397,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 		vehicle.data.Set(Channel.Input, InputData.Clutch, (int)(clutch * 10000.0f));
 		}
 
-
 	// Current positions of the pedals
 	//
 	// These are the "physical" pedal positions, but they don't necessarily represent the
@@ -414,7 +404,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 	// engine could be receiving throttle from cruise control or self-driving systems.
 	//
 	// Positions may also be set here instead of calling the methods above
-
 
 	// Throttle: 0.0f to 1.0f
 
@@ -464,7 +453,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 			}
 		}
 
-
 	// Switching modes in the automatic transmission may require additional conditions.
 	//
 	//	- If "Strict P Mode" is enabled in the Gearbox section, then brakes must be pressed to
@@ -475,8 +463,7 @@ public class VPVehicleToolkit : VehicleBehaviour
 	// The numbers sent to the data bus are taken from the data bus specification:
 	// https://vehiclephysics.com/advanced/databus-reference/
 	//
-	// The L mode (Low) is rarely used so it's excluded from this utility component.
-
+	// D1 to D5 modes are rarely used so they're excluded from this utility component.
 
 	[ContextMenu("Set Automatic Mode M")]
 	public void SetAutomaticModeM ()
@@ -523,19 +510,17 @@ public class VPVehicleToolkit : VehicleBehaviour
 		{
 		if (vehicle == null) return;
 
-		if (automaticMode == AutomaticMode.P)
+		if (automaticMode == Gearbox.AutomaticGear.P)
 			SetAutomaticModeN();
 		else
 			SetAutomaticModeP();
 		}
-
 
 	// Switch to the next or previous automatic gear mode with these rules:
 	//
 	//	- Will switch the sequence R - N - D modes only.
 	//	- From P will always switch to N.
 	//  - Won't engage P - the SetAutomaticModeP method must be called explicitly for that.
-
 
 	[ContextMenu("Set Next Automatic Mode")]
 	public void SetNextAutomaticMode ()
@@ -561,7 +546,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 		inputChannel[InputData.AutomaticGear] = newMode;
 		}
 
-
 	[ContextMenu("Set Previous Automatic Mode")]
 	public void SetPreviousAutomaticMode ()
 		{
@@ -586,7 +570,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 		inputChannel[InputData.AutomaticGear] = newMode;
 		}
 
-
 	// Engage a specific gear
 	//
 	//	0		Neutral gear
@@ -596,14 +579,12 @@ public class VPVehicleToolkit : VehicleBehaviour
 	// In auto-shift or automatic modes the requested gear may not be engaged if it doesn't
 	// fit within the configured rpm range.
 
-
 	public void SetGear (int gear)
 		{
 		if (vehicle == null) return;
 
 		vehicle.data.Set(Channel.Input, InputData.ManualGear, gear);
 		}
-
 
 	// Shifting gears up / down in manual transmission or in the M mode of automatic transmissions
 	//
@@ -612,7 +593,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 	//
 	// This way this method may be called twice (or more) quickly, meaning shifting two gears up
 	// or down at once.
-
 
 	[ContextMenu("Shift Gear Up")]
 	public void ShiftGearUp ()
@@ -627,7 +607,6 @@ public class VPVehicleToolkit : VehicleBehaviour
 		inputChannel[InputData.GearShift] += 1;
 		}
 
-
 	[ContextMenu("Shift Gear Down")]
 	public void ShiftGearDown ()
 		{
@@ -641,48 +620,69 @@ public class VPVehicleToolkit : VehicleBehaviour
 		inputChannel[InputData.GearShift] -= 1;
 		}
 
-
 	// Component's OnEnable
-
 
 	public override void OnEnableVehicle ()
 		{
 		// Set default values
 
-		if (setAutomaticMode)
+		if (setAutomaticGear)
 			{
-			// Note: if "Strict Park Mode" is enabled in the Gearbox, then changing mode
-			// from/to P requires brakes to be pressed.
-			//
-			// Enable "Press Brake" in this component to ensure the P mode may be set on startup.
-
-			vehicle.data.Set(Channel.Input, InputData.AutomaticGear, (int)defaultAutomaticMode);
+			vehicle.data.Set(Channel.Input, InputData.AutomaticGear, (int)automaticGearMode);
 			}
 
-		if (pressBrake)
+		// Brakes may also be necessary to set P mode, so they're applied in this case.
+
+		if (pressBrakes || setAutomaticGear && automaticGearMode == Gearbox.AutomaticGear.P)
 			{
 			vehicle.data.Set(Channel.Input, InputData.Brake, 10000);
 			}
 
-		if (startEngineOnEnable)
+		m_engineStarting = false;
+		if (startEngine)
 			StartEngine();
 		}
 
-
-	// Component's per-frame update.
-	// Vehicle is guaranteed to be non-null here.
-
+	// Component's per-frame update. "vehicle" is guaranteed to be non-null here.
+	//
+	// The engine start procedure is performed in both UpdateVehicle and FixedUpdateVehicle
+	// after the default time to ensure any other settings coming from other input scripts
+	// are overriden.
 
 	public override void UpdateVehicle ()
 		{
-		// If starting the engine (Ignition Key = 1) move the ignition key back to Acc-On when the engine is started
+		StartEngineProcedure();
+		}
 
-		if (vehicle.data.Get(Channel.Input, InputData.Key) == 1 && isEngineStarted)
+	public override void FixedUpdateVehicle ()
+		{
+		StartEngineProcedure();
+		}
+
+	public override int GetUpdateOrder ()
+		{
+		// Execute after the input components (0) for overriding the input
+
+		return 50;
+		}
+
+	void StartEngineProcedure ()
+		{
+		if (m_engineStarting)
 			{
-			vehicle.data.Set(Channel.Input, InputData.Key, 0);
+			// Ensure manual gear is neutral and move the ignition key to Start.
+			// When the engine starts the key is moved back to Acc-On
+
+			vehicle.data.Set(Channel.Input, InputData.ManualGear, 0);
+			vehicle.data.Set(Channel.Input, InputData.Key, 1);
+
+			if (isEngineStarted)
+				{
+				vehicle.data.Set(Channel.Input, InputData.Key, 0);
+				m_engineStarting = false;
+				}
 			}
 		}
 	}
-
 }
 ```

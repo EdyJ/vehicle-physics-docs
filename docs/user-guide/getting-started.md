@@ -32,7 +32,7 @@ Key(s)                              | Function          | Notes
 <kbd>Tab</kbd> 						| Gear&nbsp;Up 		| Auto-shift might discard the change.
 <kbd>Caps Lock</kbd> 				| Gear&nbsp;Down 	| Auto-shift might discard the change.
 <kbd>1</kbd>-<kbd>5</kbd> 			| Engage&nbsp;gear 	| Auto-shift might discard the change and choose a more convenient gear.
-<kbd>Page&nbsp;up</kbd><kbd>Page&nbsp;down</kbd> | Gear&nbsp;mode	| Select the different gear modes if the vehicle has Automatic transmission (M P R N D L). The actual modes may be engaged or not depending on specific conditions (i.e. Reverse requires the vehicle to stop).
+<kbd>Page&nbsp;up</kbd><kbd>Page&nbsp;down</kbd> | Gear&nbsp;mode	| Select the different gear modes if the vehicle has Automatic transmission (M P R N D). The actual modes may be engaged or not depending on specific conditions (i.e. Reverse requires the vehicle to stop).
 <kbd>B</kbd> 						| Toggle&nbsp;telemetry&nbsp;data					|
 <kbd>C</kbd> 						| Change&nbsp;camera								|
 <kbd>F1-F4</kbd>					| Select&nbsp;different&nbsp;camera&nbsp;modes		|

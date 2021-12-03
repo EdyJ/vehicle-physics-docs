@@ -15,6 +15,15 @@ Automatic
 	between them. Automatic transmissions are typically used in combination with a Torque Converter
 	as clutch.
 
+	Automatic gearbox can work in several modes, engaged via the [Data Bus](#data-bus-parameters):
+
+	- **[M]** Manual. Do not automatically shift gears. Use manual gear shifting.
+	- **[P]** Park. Transmission is locked.
+	- **[R]** Reverse. Gear shifting is supported for more than one reverse gears.
+	- **[N]** Neutral. Transmission is disengaged.
+	- **[D]** Drive. Automatically engage forward gears. Gear shifting is supported for forward gears.
+	- **[D1]** to **[D5]**: As Drive but using up to the specified gear. E.g. **[D3]** uses gears 1-2-3 only.
+
 	The **[D]** mode provides auto-shifting, while the **[M]** mode requires gears to be engaged
 	manually.
 
@@ -66,12 +75,12 @@ Auto Shift
 		Useful to prevent gear shifting when the drive wheels are heavily slipping in 1st gear.
 
 Allow Park Mode
-:	Park mode [P] is typical of automatic transmissions. This option enables park mode in the manual
-	transmission.
+:	Park mode **[P]** is typical of automatic transmissions. This option enables park mode in the
+	manual transmission.
 
-	Strict Park Mode
-	:	If enabled the park mode [P] can be engaged or disengaged only when the brake is strongly
-		pressed.
+Strict Park Mode
+:	If enabled the park mode **[P]** can be engaged or disengaged only when the brake is
+	strongly pressed. Otherwise this mode may be selected anytime.
 
 #### Automatic Transmission
 
@@ -94,48 +103,48 @@ Gear Up Rpm
 :	A longer gear is selected above this rpm.
 
 Initial Gear Forward
-:	The forward gear to engage when selecting the [D] mode. Typically is 1, but some vehicles with
-	many gears may engage the 2nd, 3rd or even 4rd. In these cases the shorter gears can be
-	selected in [L] mode and with the shift-up / shift-down inputs.
+:	The forward gear to engage when selecting the **[D]** mode. Typically is 1, but some vehicles
+	with many gears may engage the 2nd, 3rd or even 4rd. In these cases the shorter gears are used
+	in **[D1]** to **[D5]** modes and with the shift-up / shift-down inputs.
 
 Initial Gear Reverse
-:	The reverse gear to engage when selecting the [R] mode. Typically is -1, but some vehicles with
-	several reverse gears may engage any other initially. Other reverse gears may be selected with
-	the shift-up / shift-down inputs.
+:	The reverse gear to engage when selecting the **[R]** mode. Typically is -1, but some vehicles
+	with several reverse gears may engage any other initially. Other reverse gears may be selected
+	with the shift-up / shift-down inputs.
 
 Next Gear Min Speed
 :	Minimum speed of the vehicle in m/s to allow automatic engagement of gears based on current
 	speed. Note that above this min speed the system may select a gear shorter than the initial ones.
 
 Auto-Shift In Reverse
-:	Applies auto-shifting in reverse mode [R]. Reverse gear ratios should be in ascending order for
-	this feature to work properly (i.e. -3, -2, -1).
+:	Applies auto-shifting in reverse mode **[R]**. Reverse gear ratios should be in ascending order
+	for this feature to work properly (i.e. -3, -2, -1).
 
 Strict Park Mode
-:	If enabled the park mode [P] can be engaged or disengaged only when the brake is strongly
-	pressed.
+:	If enabled the park mode **[P]** can be engaged or disengaged only when the brake is strongly
+	pressed. Otherwise this mode may be selected anytime.
 
 ### Data Bus parameters
 
 | Data Bus Value | Description | Notes |
 | -------------- | ----------- | ----- |
 |InputData.ManualGear 		| Manual gear lever position 					| -1 (reverse), 0 (neutral), 1, 2, 3, ...
-|InputData.AutomaticGear	| Automatic transmission mode <sup>1</sup> 		| 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_
+|InputData.AutomaticGear	| Automatic transmission mode <sup>1</sup> 		| 0, 1, 2, 3, 4 = _M, P, R, N, D_<br>5, 6, 7, 8, 9 = _D1, D2, D3, D4, D5_
 |InputData.GearShift		| Incremental gear shifting value <sup>2</sup>	| Add +1 for gear up or -1 for gear down
 |VehicleData.GearboxGear 	| Currently engaged gear						| Negative = reverse, 0 = Neutral or Park, Positive = forward.
-|VehicleData.GearboxMode	| Actual transmission mode						| 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_
+|VehicleData.GearboxMode	| Actual transmission mode <sup>1</sup>			| 0, 1, 2, 3, 4 = _M, P, R, N, D_<br>5, 6, 7, 8, 9 = _D1, D2, D3, D4, D5_
 |VehicleData.GearboxShifting| Is the gearbox in the middle of a gear shift operation? | 0 = no, 1 = yes
 |SettingsData.AutoShiftOverride	| Auto-shift override setting <sup>3</sup>	| 0 = no override, 1 = force auto shift, 2 = force manual shift
 
 See [Data Bus Reference](/advanced/databus-reference) for more information.
 
 <sup>1</sup> Automatic transmission modes:
-:	- M (0): Manual: do not automatically engage gears. Use manual gear shifting.
-	- P (1): Park
+:	- M (0): Manual: do not automatically shift gears. Use manual gear shifting.
+	- P (1): Park. Transmission is locked.
 	- R (2): Reverse. Gear shifting is supported for more than one reverse gears.
-	- N (3): Neutral
+	- N (3): Neutral. Transmission is disengaged.
 	- D (4): Drive: automatically engage forward gears. Gear shifting is supported for forward gears.
-	- L (5): Low: first gear only.
+	- D1 (5) to D5 (9): As Drive but using up to the specified gear. E.g. D3 uses gears 1-2-3 only.
 
 **<sup>2</sup> GearShift** value is reset to 0 when the vehicle has acknowledged and processed the
 input. Successive gear shift commands can be grouped by adding/subtracting +-1 to this bus value.
@@ -149,10 +158,10 @@ scripting via Data Bus by modifying the AutoShiftOverride value in the Settings 
 
 The effect of the AutoShiftOverride value depends on the vehicle's transmission type:
 
-- **Automatic transmission:** the override value switches among modes Manual [M] and Drive [D], but
-	does nothing if any other mode is selected (i.e. Neutral [N] or Reverse [R]). It's also subject
-	to the conditions of each mode. For example, [D] can't be selected if the vehicle is moving
-	backwards faster than a threshold speed.
+- **Automatic transmission:** the override value switches among modes Manual **[M]** and Drive
+	**[D]**, but does nothing if any other mode is selected (i.e. Neutral **[N]** or Reverse
+	**[R]**). It's also subject to the conditions of each mode. For example, **[D]** can't be
+	selected if the vehicle is moving backwards faster than a threshold speed.
 - **Manual transmission:** the override value enables or disables the auto-shift feature.
 
 AutoShiftOverride is intended to temporarily override auto-shifting in specific situations. For
@@ -167,14 +176,14 @@ vehicle because the value might be overwritten by other components. Read below.
 !!! info "&fa-info-circle; Determining the transmission type"
 
 	If you want to configure the shift mode externally to the vehicle (i.e. via UI or hotkey) then
-	you should probably use a **Manual transmission** and modify the auto-shift flag. The Automatic
-	transmission is intended to allow users to select among Drive [D] (automatic) or Manual [M]
-	themselves using the vehicle input.
+	you should probably use a **Manual transmission** and modify the auto-shift flag. The
+	Automatic transmission is intended to allow users to select among Drive **[D]** (automatic) or
+	Manual **[M]** themselves using the vehicle input.
 
 The behavior of the automated gear shifting is different between Automatic and Manual transmissions:
 
-- Automatic Transmission: auto-shift is enabled in Drive [D] mode. Gears must be shifted
-	manually in the Manual [M] mode.
+- Automatic Transmission: auto-shift is enabled in Drive **[D]** mode. Gears must be shifted
+	manually in the Manual **[M]** mode.
 - Manual Transmission: auto-shift is enabled with the _Auto Shift_ flag in the Gearbox settings.
 
 Example: Add-on component that modifies the Gearbox settings in runtime in any transmission type.

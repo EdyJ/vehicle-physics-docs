@@ -60,18 +60,18 @@ float engineRpm = vehicle.data[Channel.Vehicle][VehicleData.EngineRpm] / 1000.0f
 |Handbrake		| Handbrake position		| %		|10000	|5000 = 0.5 = 50%
 |Clutch			| Clutch pedal position		| %		|10000	|5000 = 0.5 = 50%
 |ManualGear		| Manual gear lever position | gear number | | -1 (reverse), 0 (neutral), 1, 2, 3, ...
-|AutomaticGear	| Automatic transmission mode <sup>1</sup> | gear mode | | 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_ <sup>1</sup>
+|AutomaticGear	| Automatic transmission mode <sup>1</sup> | gear mode | | 0, 1, 2, 3, 4 = _M, P, R, N, D_ <sup>1</sup><br>5, 6, 7, 8, 9 = _D1, D2, D3, D4, D5_ <sup>1</sup>
 |GearShift		| Incremental gear shifting value <sup>2</sup> | gear increment | | Add +1 for gear up or -1 for gear down <sup>2</sup>
 |Retarder		| Retarder brake stick position <sup>3</sup> | retarder level | | 0 (off), 1, 2, 3, ...
 |Key			| Ignition key position | key position | | -1 = off, 0 = acc-on, 1 = start
 
 <sup>1</sup> Automatic transmission modes:
-:	- M (0): Manual: do not automatically engage gears. Use manual gear shifting.
-	- P (1): Park
+:	- M (0): Manual: do not automatically shift gears. Use manual gear shifting.
+	- P (1): Park. Transmission is locked.
 	- R (2): Reverse. Gear shifting is supported for more than one reverse gears.
-	- N (3): Neutral
+	- N (3): Neutral. Transmission is disengaged.
 	- D (4): Drive: automatically engage forward gears. Gear shifting is supported for forward gears.
-	- L (5): Low: first gear only.
+	- D1 (5) to D5 (9): As Drive but using up to the specified gear. E.g. D3 uses gears 1-2-3 only.
 
 **<sup>2</sup> GearShift** value is reset to 0 when the vehicle has acknowledged and processed the
 input. Successive gear shift commands can be grouped by adding/subtracting +-1 to this bus value.
@@ -95,7 +95,7 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 |ClutchTorque	| Torque at the output of the clutch in Nm	| Nm	| 1000	| 150000 = 150 Nm
 |ClutchLock		| Lock ratio of the clutch					| %		| 1000	| 800 = 0.8 = 80%
 |GearboxGear 	| Engaged gear								| gear number	|		| Negative = reverse, 0 = Neutral or Park, Positive = forward.
-|GearboxMode	| Actual transmission mode					| gear mode		|		| 0, 1, 2, 3, 4, 5 = _M, P, R, N, D, L_
+|GearboxMode	| Actual transmission mode					| gear mode		|		| 0, 1, 2, 3, 4 = _M, P, R, N, D_<br>5, 6, 7, 8, 9 = _D1, D2, D3, D4, D5_
 |GearboxShifting| Is the gearbox in the middle of a gear shift operation?	|		|		| 0 = no, 1 = yes
 |RetarderTorque	| Brake torque injected in the driveline by the retarder	| Nm	| 1000	| 2000000 = 2000 Nm
 |TransmissionRpm| Rpms at the output of the gearbox			| rpm	| 1000	| 100000 = 100 rpm
