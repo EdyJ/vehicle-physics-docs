@@ -52,7 +52,7 @@ Advanced telemetry system _(completed, pending of integration into the master br
 
 <hr>
 
-#### December 2021
+#### December 2021 - SDK V9.2
 
 - New **Limited Drive modes (D1-D5)** in automatic gearbox. These modes work like the regular D
 	mode but using up to the specified gear only (i.e. up to 3nd gear in D3). [Gearbox](/blocks/gearbox)
