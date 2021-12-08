@@ -56,6 +56,8 @@ Advanced telemetry system _(completed, pending of integration into the master br
 
 - New **Limited Drive modes (D1-D5)** in automatic gearbox. These modes work like the regular D
 	mode but using up to the specified gear only (i.e. up to 3nd gear in D3). [Gearbox](/blocks/gearbox)
+- New **Variable Vehicle Cargo** component that simulates cargo in any vehicle easily by
+	modifying mass and center of mass.
 
 #### September 2021
 
