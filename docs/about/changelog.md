@@ -59,7 +59,7 @@ Advanced telemetry system _(completed, pending of integration into the master br
 - New **Variable Vehicle Cargo** component that simulates cargo in any vehicle easily by
 	modifying mass and center of mass.
 - New **DirectInput Steer, Pedals and Shifter** components to configure individual
-	DirectInput devices separately, each device providing a different functionality.
+    DirectInput devices separately, each device providing a different functionality.
 
 #### September 2021
 
