@@ -9,9 +9,9 @@ VPP may be downloaded as:
 
 ### Requirements
 
-- Unity 2018.4 or newer
-- Scripting Runtime Version: **.NET 4.x Equivalent**
+- Unity 2018.4 LTS or newer LTS version
 - API Compatibility Level: **.NET 4.x**
+- Scripting Runtime Version: **.NET 4.x Equivalent** (Unity 2018 only)
 
 Scripting Runtime Version and API Compatibility Level may be configured in Project Settings > Player > Other Settings > Configuration section.
 
