@@ -52,6 +52,11 @@ Advanced telemetry system _(completed, pending of integration into the master br
 
 <hr>
 
+#### January 2022
+
+- New **front / rear differential lock settings** allowing to specify which	differential(s)
+	should be locked or open. [Databus](/advanced/databus-reference#settings-channel)
+
 #### December 2021 - SDK V9.2
 
 - New **Limited Drive modes (D1-D5)** in automatic gearbox. These modes work like the regular D

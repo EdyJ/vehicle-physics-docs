@@ -108,18 +108,22 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 
 ### Settings channel
 
-| SettingsData | Description | Units  | Resolution | Example |
-| ------------ | ----------- |:------:|:----------:| ------- |
-|DifferentialLock	| Override lock setting at the differential<sup>1</sup>	|	|	| 0 = no override, 1 = force locked differential, 2 = force open differential
-|DrivelineLock		| Override lock setting at the driveline<sup>2</sup>	|	|	| 0 = no override, 1 = force locked driveline, 2 = force unlocked / open driveline
-|AutoShiftOverride	| Auto-shift override setting							|	|	| 0 = no override, 1 = force auto shift, 2 = force manual shift
-|AbsOverride		| ABS override setting									|	|	| 0 = no override, 1 = force ABS enabled, 2 = force ABS disabled
-|EscOverride		| ESC override setting									|	|	| 0 = no override, 1 = force ESC enabled, 2 = force ESC disabled
-|TcsOverride		| TCS override setting									|	|	| 0 = no override, 1 = force TCS enabled, 2 = force TCS disabled
-|AsrOverride		| ASR override setting									|	|	| 0 = no override, 1 = force ASR enabled, 2 = force ASR disabled
-|SteeringAidsOverride|Steering Aids override setting						|	|	| 0 = no override. 2 = force all steering aids disabled.
+| SettingsData | Description | Usage |
+| ------------ | ----------- | ----- |
+|DifferentialLock	| Override lock setting at the differential<sup>1</sup>	| 0 = no override, 1 = force locked differential, 2 = force open differential
+|FrontDifferentialLock	| Override lock setting at the front differential only<sup>2</sup>	| 0 = no override, 1 = force locked differential, 2 = force open differential
+|RearDifferentialLock	| Override lock setting at the rear differential only<sup>2</sup>	| 0 = no override, 1 = force locked differential, 2 = force open differential
+|DrivelineLock		| Override lock setting at the driveline<sup>3</sup>	| 0 = no override, 1 = force locked driveline, 2 = force unlocked / open driveline
+|AbsOverride		| ABS override setting									| 0 = no override, 1 = force ABS enabled, 2 = force ABS disabled
+|EscOverride		| ESC override setting									| 0 = no override, 1 = force ESC enabled, 2 = force ESC disabled
+|TcsOverride		| TCS override setting									| 0 = no override, 1 = force TCS enabled, 2 = force TCS disabled
+|AsrOverride		| ASR override setting									| 0 = no override, 1 = force ASR enabled, 2 = force ASR disabled
+|AutoShiftOverride	| Auto-shift override setting							| 0 = no override, 1 = force auto shift, 2 = force manual shift
+|SteeringAidsOverride|Steering Aids override setting						| 0 = no override. 2 = force all steering aids disabled.
 
 **<sup>1</sup> DifferentialLock** affects the [axle differentials](/blocks/driveline) only.
 
-**<sup>2</sup> DrivelineLock** affects the element connecting the front-rear regions of the
-[driveline](/blocks/driveline). This element might be either a differential or a torque splitter.
+**<sup>2</sup> FrontDifferentialLock / RearDifferentialLock** takes priority over DifferentialLock. Affects front/rear [axle differentials](/blocks/driveline) only.
+
+**<sup>3</sup> DrivelineLock** affects the element connecting the front-rear regions of the
+[driveline](/blocks/driveline). This element may be either a center differential or a torque splitter.
