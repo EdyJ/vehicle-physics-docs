@@ -68,13 +68,6 @@ Project Settings - Tags And Layers
 	probes.	Note that this Vehicles layer is _not_ a requirement of VPP. Only the demos and examples
 	use it.
 
-!!! Warning "&fa-warning:lg; Unity 2019.3"
-	A bug causes an error when importing the _Tags And Layers_ settings in Unity 2019.3. You may
-	configure the vehicles layer manually instead:
-
-	1. Go to Project Settings > Tags And Layers > Layers
-	2. Name <kbd>User Layer 8</kbd> as **Vehicles**
-
 &fa-thumbs-up:lg; You can now head to the [Getting Started](getting-started.md){: .alert-link }
 section for start using Vehicle Physics Pro.
 {: .alert .alert-success }
