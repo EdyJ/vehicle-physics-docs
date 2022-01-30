@@ -31,7 +31,7 @@ Vehicle Configuration
 
 Custom Development
 :	Custom features or specific functionalities may be implemented on request. This includes custom
-	vehicles, add-on components, custom integrations, etc.
+	vehicles, add-on components, scripts, custom integrations, etc.
 
 Consulting
 :	Let me take a close look at your project and I'll propose solutions tailored to your specific
