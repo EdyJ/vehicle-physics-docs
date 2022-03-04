@@ -90,7 +90,7 @@ OnEnableComponent, or OnDisableComponent.
 Specialized vehicle suspension update method. Allows the component to modify the suspension
 parameters in runtime. Called from inside the vehicle dynamics code at the proper time.
 
-These parameters have been already updated and are available to read:
+These values have been already updated and are available to read:
 
 	vehicle.speed
 	vehicle.speedAngle
@@ -100,22 +100,24 @@ These parameters have been already updated and are available to read:
 	wheelState.hit
 	wheelState.contactDepth
 	wheelState.lastContactDepth
+	wheelState.contactSpeed
 	wheelState.suspensionCompression
+	wheelState.groundMaterial
+	wheelState.lastGroundHit
 
 	wheelState.wheelCol.lastRuntimeSpringRate
 	wheelState.wheelCol.lastRuntimeDamperRate
-	wheelState.wheelCol.lastRuntimeSuspensionTravel
 
 All other parameters contain the state from the previous physics step. The component should leave
 the new suspension parameters in these properties:
 
 	wheelState.wheelCol.runtimeSpringRate
 	wheelState.wheelCol.runtimeDamperRate
-	wheelState.wheelCol.runtimeSuspensionTravel
+	wheelState.wheelCol.runtimeExtraSuspensionForce
 
-These properties are reset to 0 at the beginning of each dynamics step. Note that other components
-may have already modified them. It's up to the component to override the properties with its own
-values or add them to the existing ones.
+These properties are reset to their default values at the beginning of each dynamics step. Note that
+other components may have already modified them. It's up to the component to override the properties
+with its own values or add them to the existing ones.
 
 #### OnEnableComponent<br>OnDisableComponent
 
