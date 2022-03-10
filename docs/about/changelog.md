@@ -15,7 +15,7 @@ Full development details are available via GIT revision logs ([VPP subscription]
 &fa-thumbs-up:lg; This page is updated from time to time. Check out [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link } on Twitter for weekly updates.
 {: .alert .alert-success }
 
-#### Now under development (2021 - mid 2022):
+#### Now under development (2022):
 
 Tire Friction Model 2.0 (SDK V10 alpha)
 :	- Advanced industry-grade tire friction model: slip ratio, slip angle, load function.
@@ -52,10 +52,18 @@ Advanced telemetry system _(completed, pending of integration into the master br
 
 <hr>
 
-#### January 2022
+#### March 2022 - SDK V9.3
 
 - New **front / rear differential lock settings** allowing to specify which	differential(s)
 	should be locked or open. [Databus](/advanced/databus-reference#settings-channel)
+- Improved **downshifting in Limited Drive Modes (D1-D5)**, allowing better use of engine brake. [Gearbox](/blocks/gearbox)
+- New **Steering wheel range** property per vehicle. [Steering](/blocks/steering)
+- New **physical steering wheel range** setting (_configuredWheelRange_) in the device input components.
+- New **force feedback rumble effects** based in engine rpm, speed, and suspension bumps.
+- Major **DirectInput overhaul**: support device reconnection, improved reliability, more force feedback effects.
+- New **rpm scaling** property in VPAudio. Better handing of engine rpm audio.
+
+Check the file **Changelist.txt** in the Unity project for compatibility-breaking changes.
 
 #### December 2021 - SDK V9.2
 
