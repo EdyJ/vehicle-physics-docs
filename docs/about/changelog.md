@@ -52,6 +52,15 @@ Advanced telemetry system _(completed, pending of integration into the master br
 
 <hr>
 
+#### June 2022
+
+- Major **DirectInput** review for reliability. Among other improvements, now supports hot device connect/disconnect.
+- New **rumble effects** for steering wheel devices.
+- New event method **UpdateVehicleInput** in [VehicleBehaviour](/advanced/vehiclebehaviour-reference) to implement vehicle input. This ensures the input devices to be read and applied to the vehicle within the same simulation step.
+- New **gearbox options** to protect the engine by shifting up above the given Max Rpm.
+- [VehicleBase](/advanced/vehiclebase-reference/#properties) now exposes **angular accelerations**.
+- The Professional edition is now **compatible with IL2CPP** scripting backend.
+
 #### March 2022 - SDK V9.3
 
 - New **front / rear differential lock settings** allowing to specify which	differential(s)

@@ -77,10 +77,16 @@ these cases:
 		updated every FixedUpdate (no frames skipped), but the result wouldn't be visible until the
 		next Update cycle.
 
+#### UpdateVehicleInput
+
+Called in the FixedUpdate cycle right before the vehicle physics step. This is the place to read
+the state of the input devices and apply them to the vehicle, so the input has effect in the same
+simulation step.
+
 #### GetUpdateOrder
 
-Execution order for UpdateVehicle, FixedUpdateVehicle and the additional notification events with
-respect to other VehicleBehaviours. Smaller order executes first. Default is 0 (default order).
+Execution order the event methods with respect to other VehicleBehaviours. Smaller order
+executes first. Default is 0 (default order).
 
 This order does NOT affect the execution order for OnEnableVehicle, OnDisableVehicle,
 OnEnableComponent, or OnDisableComponent.

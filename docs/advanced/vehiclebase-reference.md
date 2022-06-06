@@ -251,9 +251,10 @@ namespace VehiclePhysics
 	public float speed { get; }
 	public float speedAngle { get; }
 
-	// Public access to the local acceleration
+	// Public access to the local accelerations
 
 	public Vector3 localAcceleration { get; }
+	public Vector3 localAngularAcceleration { get; }
 
 	// Public Pause feature
 	//
