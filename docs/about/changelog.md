@@ -52,7 +52,7 @@ Advanced telemetry system _(completed, pending of integration into the master br
 
 <hr>
 
-#### June 2022
+#### June 2022 - SDK V9.3-R2
 
 - Major **DirectInput** review for reliability. Among other improvements, now supports hot device connect/disconnect.
 - New **rumble effects** for steering wheel devices.
