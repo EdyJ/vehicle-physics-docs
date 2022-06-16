@@ -118,8 +118,10 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 |EscOverride		| ESC override setting									| 0 = no override, 1 = force ESC enabled, 2 = force ESC disabled
 |TcsOverride		| TCS override setting									| 0 = no override, 1 = force TCS enabled, 2 = force TCS disabled
 |AsrOverride		| ASR override setting									| 0 = no override, 1 = force ASR enabled, 2 = force ASR disabled
-|AutoShiftOverride	| Auto-shift override setting							| 0 = no override, 1 = force auto shift, 2 = force manual shift
 |SteeringAidsOverride|Steering Aids override setting						| 0 = no override. 2 = force all steering aids disabled.
+|AutoShiftOverride	| Auto-shift override setting							| 0 = no override, 1 = force auto shift, 2 = force manual shift
+|MinGearOverride	| Shortest gear override								| 0 = no override, n = minimum gear allowed (forward or reverse), excepting neutral.
+|MaxGearOverride	| Largest gear override 								| 0 = no override, n = top gear allowed (forward or reverse).
 
 **<sup>1</sup> DifferentialLock** affects the [axle differentials](/blocks/driveline) only.
 
