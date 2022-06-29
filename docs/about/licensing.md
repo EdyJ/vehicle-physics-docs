@@ -75,6 +75,12 @@ requires an active subscription.
 The subscription fee allows continuous development, feature updates, and product support in the
 long term.
 
+##### Germany-based users
+
+- The subscription cancellation form is available [here](https://account.mycommerce.com/SubscriptionCancellationRequest/index){: target="_blank" }.
+- Receiving support and upgrades during the first year requires actively confirming the yearly renewal plan when purchasing the license.
+- If the yearly renewal plan is not confirmed the subscription will change to monthly automatic renewals. In such case, 1) updates and support will be available only while the subscription is active, and 2) support and updates will cease at the moment the subscription is canceled.
+
 ### Terms & Conditions
 
 [Vehicle Physics Pro SDK License Agreement (PDF)](/Vehicle%20Physics%20Pro%20SDK%20License%20Agreement.pdf){: target="_blank" }
