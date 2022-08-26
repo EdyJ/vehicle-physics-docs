@@ -52,6 +52,8 @@ Advanced telemetry system _(completed, pending of integration into the master br
 
 <hr>
 
+- New **gearbox range override** setting in the [Data Bus](/advanced/databus-reference/#settings-channel). Allows add-on components to define a custom range of gears in the gearbox.
+
 #### June 2022 - SDK V9.3-R2
 
 - Major **DirectInput** review for reliability. Among other improvements, now supports hot device connect/disconnect.

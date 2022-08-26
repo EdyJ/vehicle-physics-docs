@@ -43,8 +43,8 @@ Training and Learning
 
 ##### Rates
 
-- 120 €/hour, with a limit of 8 hours per week per customer.
-- Additional hours in the same week or services provided outside the available time slots: 240 €/hour
+- 140 €/hour, with a limit of 8 hours per week per customer.
+- Additional hours in the same week or services provided outside the available time slots: 280 €/hour
 - Traveling to the customer's location: 1200 €/day + expenses, with a limit of 5 work days per month.<br>
 	_Expenses include: plane ticket, lodging, transportation, meals, insurance and any unforeseen
 	expense that may arise as reasonably necessary._
@@ -56,9 +56,9 @@ Training and Learning
 - Time includes any task related to providing the services including, but not limited to, setting up
 	projects, downloading resources, reviewing documentation or videos, meetings, writing
 	documentation, and any other task or procedure that deems necessary.
-- A refundable retainer will be requested in advance for providing the services, with reimbursement
+- A refundable retainer will be requested upfront for providing the services, with reimbursement
 	to the customer of any remaining amount following the completion of services. The minimum
-	retainer amount shall be €1200.
+	retainer amount shall be €1400.
 
 ##### Terms & Conditions
 
