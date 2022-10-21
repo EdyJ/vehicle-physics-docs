@@ -48,7 +48,6 @@ Training and Learning
 - Traveling to the customer's location: 1200 €/day + expenses, with a limit of 5 work days per month.<br>
 	_Expenses include: plane ticket, lodging, transportation, meals, insurance and any unforeseen
 	expense that may arise as reasonably necessary._
-- Online training: 1200 €/day
 
 ##### Notes
 
