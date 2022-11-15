@@ -55,7 +55,8 @@ May be licensed by organizations with annual revenue / funds / budget in excess 
 	non-commercial entities with a total annual budget in excess of €200,000 for the entire
 	non-commercial entity.
 - Professional licenses are assigned to one individual and are non-transferable. A single transfer
-	to another individual is allowed within 30 days of purchasing the license.
+	to another individual is allowed. Additional license transfers involve a fee of the 50% of the initial
+	license fee.
 - Product support does not include configuring vehicles, working on the customer's project, or
 	custom developments. See [Professional Services](/about/support/#professional-services) for this
 	kind of support.
