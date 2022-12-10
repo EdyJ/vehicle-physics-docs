@@ -1,8 +1,8 @@
 # VPVehicleJoint
 
 Encapsulates a [ConfigurableJoint](https://docs.unity3d.com/Manual/class-ConfigurableJoint.html)
-component in a comprehensive and easy to use wrapper suitable to use in multi-part and articulated
-vehicles.
+component in a comprehensive and easy to use wrapper suitable to use in multi-part vehicles, and
+articulated vehicles and hydraulic components.
 
 VPVehicleJoint should be in the same GameObject as the Rigidbody that is to be joined to another one.
 For example, an excavator arm should have a VPVehicleJoint beside the Rigidbody of the Arm, and
@@ -12,8 +12,40 @@ Unlike ConfigurableJoint, VPVehicleJoint may be enabled and disabled anytime in 
 
 ![Vehicle Physics Pro - VPVehicleJoint inspector](/img/components/vpp-vehicle-joint-inspector.png){: .clickview }
 
+### Anchors
+
 This Anchor, Other Anchor
-:	Define the junction point in each object to be joined. When using position constraints these
+:	Define the junction point in each Rigidbody to be joined.
+
+	- This Anchor is optional. If omitted, will use the same transform as the component.
+	- Other Anchor is mandatory, represents the other part of the joint.
+
+	Each anchor must have a Rigidbody in their component or their ancestors. Anchors must have
+	different rigidbodies. Rigidbodies may be parented.
+
+Linear Constraints
+
+Free: no action.
+
+Locked: anchors are tied together in the given axis local to "this" Rigidbody (? verify)
+
+Damped Spring: enforces This Anchor to be in the position defined by Other Anchor + Target Position.
+For that, it applies a force defined by the spring and damper parameters.
+
+Target Position may change in runtime with physically correct effects.
+
+Angular Constraints
+
+Free: no action.
+
+Locked: the rotation of "this" rigidbody is forced to match the "other" rigidbody in the given local axis (? verify)
+
+
+
+
+
+This Anchor, Other Anchor
+:	Define the junction point in each Rigidbody to be joined. When using position constraints these
 	Transforms will be enforced to have the same world position. It's expected these transforms to
 	be in the same position (or very close) when the VPVehicleJoint component is enabled. Otherwise
 	they may be suddenly moved by the joint constraints.
@@ -26,15 +58,15 @@ This Anchor, Other Anchor
 		result for GetComponentInParent<Rigidbody>()). Both Rigidbodies may be in the same hierarchy,
 		or even parented.
 
-Update Mode
-:	When to update the underlying ConfigurableJoint properties.
+Setup Constraints
+:	When to configure the constraints in the ConfigurableJoint.
 
-	- On Enable: once when the VPVehicleJoint component is enabled.
-	- On Fixed Update: every physics step. Use this when the component's parameters (constraints,
-		target position or rotation, etc) are expected to change in runtime.
+	- On Enable: once when the VPVehicleJoint component is enabled. This is the optimal mode.
+	- On Fixed Update: every physics step. Use this when the constraint settings (constraint mode,
+		spring, damper, etc) are expected to change in runtime.
 	- On Fixed Update In Editor Only: Works as On Fixed Update in the editor but as On Enable in
-		builds. Useful for finding the proper values during development in the Editor, but once set
-		they won't change in runtime.
+		builds. Useful for finding the proper constraint parameters during development in the Editor,
+		but once set here they won't change in runtime.
 
 Enable Collision
 :	Allows collisions between the colliders of the joined bodies.
@@ -59,7 +91,7 @@ Damped Spring
  	spring and damper values.
 
 	In this mode Target Position may be used to dynamically move the Rigidbody the given offset in
-	local coordinates with respect to the anchor. This requires Update Mode = On Fixed Update.
+	local coordinates with respect to the anchor.
 
 	If the force required to apply the constraint exceeds Max Force then the joint breaks. Use the
 	standard event method [OnJointBreak](https://docs.unity3d.com/ScriptReference/Joint.OnJointBreak.html)
@@ -85,7 +117,7 @@ Damped Spring
 	damper values.
 
 	In this mode Target Rotation may be used to dynamically rotate the Rigidbody in local
-	coordinates. This requires Update Mode = On Fixed Update.
+	coordinates.
 
 	Max Angle limits the maximum rotation angle from the initial pose. No effect if 0.
 
