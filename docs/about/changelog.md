@@ -1,7 +1,6 @@
 # Changelog
 
-This list is a brief summary of the most significant additions to Vehicle Physics Pro over time. It
-doesn't include minor changes or fixes.
+Brief summary of the most significant additions to Vehicle Physics Pro over time.
 
 Full development details are available via GIT revision logs ([VPP subscription](/about/licensing) required):
 
@@ -12,10 +11,18 @@ Full development details are available via GIT revision logs ([VPP subscription]
 
 <hr>
 
-&fa-thumbs-up:lg; This page is updated from time to time. Check out [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link } on Twitter for weekly updates.
+&fa-thumbs-up:lg; This page is updated from time to time. Check out [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link } on Twitter for weekly updates ([#vppdev](https://twitter.com/search?q=%23vppdev&src=hashtag_click&f=live)).
 {: .alert .alert-success }
 
-#### Now under development (2022):
+#### Now under development (2023):
+
+Scriptable Wheel Contact model
+:	- Study and implement alternatives to the WheelCollider.
+	- Support custom wheel contact models to be plugged into VPP as add-ons.
+	- Test suspensions implemented with joints.
+	- Choose a reliable and efficient wheel contact model and get rid of the WheelCollider.
+
+##### Already in the _develop_ branch
 
 Tire Friction Model 2.0 (SDK V10 alpha)
 :	- Advanced industry-grade tire friction model: slip ratio, slip angle, load function.
@@ -25,19 +32,14 @@ Tire Friction Model 2.0 (SDK V10 alpha)
 	- Reorganized telemetry data widget with slip and ground material properties always visible.
 	- New traction and steering aids designed for this model.
 
-Scriptable Wheel Contact model
-:	- Study and implement alternatives to the WheelCollider.
-	- Support custom wheel contact models to be plugged into VPP as add-ons.
-	- Choose a reliable and efficient wheel contact model and get rid of the WheelCollider.
-
 New Input Devices Manager
-:	- Learn and configure any device in minutes.
-	- Support any number of simultaneous devices.
-	- Load and save device setup to file / JSON.
-	- As simple to use as current Unity Input.
-	- Support for hot plugging devices.
+:	- Learn and configure any device in minutes
+	- Support any number of simultaneous devices
+	- Load and save device setup to file / JSON
+	- As simple to use as current Unity Input
+	- Support for hot plugging devices
 
-Electric MGU (Motor Generator Units) _(completed, will be deployed with the tire friction model 2.0)_
+Electric MGU (Motor Generator Units)
 :	- Parametric torque maps
 	- Efficiency factor
 	- Regenerative braking
@@ -45,14 +47,34 @@ Electric MGU (Motor Generator Units) _(completed, will be deployed with the tire
 	- Detailed editors with graphics charts
 	- Combination with mechanical brakes
 
-Advanced telemetry system _(completed, pending of integration into the master branch)_
+Advanced telemetry system
 :	- Multiple channels with different update frequencies and ranges
 	- Easily extensible from vehicle components (VehicleBehaviour)
 	- Different chart types: time/distance based, scatter plots, histogram
 
 <hr>
 
+
+#### Jannuary 2023
+
+- New **Motor Grader Control** component to control all the features and mechanisms of a motor grader ([Tweet](https://twitter.com/VehiclePhysics/status/1613543552386048000)).
+
+#### December 2022
+
+- New methods **ResetTargetPosition** and **ResetTargetRotation** in [VPVehicleJoint](/components/vehicle-joint/) to teleport the rigidbody to a given position or rotation of the joint without physics effects.
+- Major improvements in the [**Vehicle Joint**](/components/vehicle-joint/) component for stability and consistency.
+- New **Actuator** classes to simulate mechanisms with vehicle joints ([Example: motor grader](https://twitter.com/VehiclePhysics/status/1613543552386048000)).
+- New **Linear** and **Rotary** actuator classes to simulate articulations in mechanisms.
+
+#### November 2022
+
+- New **IAudioSourceSettings** interface that unifies the audio settings of all audio sources in a vehicle.
+
+#### August 2022
+
 - New **gearbox range override** setting in the [Data Bus](/advanced/databus-reference/#settings-channel). Allows add-on components to define a custom range of gears in the gearbox.
+- New **DirectInput Buttons** component to read inputs from buttons in any DirectInput device.
+- New virtual methods in **VPWheelDeviceInput** to allow custom implementations of input and force feedback algorithms.
 
 #### June 2022 - SDK V9.3-R2
 
@@ -75,6 +97,8 @@ Advanced telemetry system _(completed, pending of integration into the master br
 - New **rpm scaling** property in VPAudio. Better handing of engine rpm audio.
 
 Check the file **Changelist.txt** in the Unity project for compatibility-breaking changes.
+
+## 2021
 
 #### December 2021 - SDK V9.2
 
