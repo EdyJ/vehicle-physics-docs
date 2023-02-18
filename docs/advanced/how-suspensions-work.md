@@ -109,16 +109,16 @@ The suspension properties may be studied from the point of view of the oscillati
 ([Harmonic oscillator](http://en.wikipedia.org/wiki/Harmonic_oscillator)). The associated concepts
 are used to study the reactions of the suspension in different situations.
 
-!!! warning "&fa-times-circle:lg; Beware: vehicle suspension as harmonic oscillator"
+!!! warning "&fa-warning:lg; Understanding vehicle suspension as harmonic oscillator"
 
 	A suspension behaves as harmonic oscillator _under certain conditions_, and may be studied
 	as a harmonic oscillator under those conditions. Read [Application to real vehicles](#application-to-real-vehicles)
 	below.
 
 	While a suspension based on specifying the oscillating properties (frequency, damping) is
-	possible, implementing it as a generic harmonic oscillator is generally a bad idea and may
-	provide incoherent results. It's not just one, but four (or more) attached suspensions with
-	complex interactions among them: weight shifting, cargo, chassis flex, road conditions...
+	possible, simulating a suspension as a generic harmonic oscillator is generally a bad idea and may
+	easily provide incoherent results. It's not just one, but four (or more) attached suspensions with
+	complex interactions among them: weight shifting, cargo, aerodynamic downforce, road conditions...
 
 Given the force produced by the suspension at a specific steady state (_contact speed_ = 0) the
 _**effective sprung mass**_ value for studying that situation may be calculated as:
