@@ -7,9 +7,9 @@ $(document).on('ready', function()
 	infinite: false,
 	draggable: false,
 	accessibility: false,
-	speed: 0,
+	speed: 300,
 	pauseOnDotsHover: true,
-	fade: true,
+	fade: false,
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	dotsClass: 'gusi-dots'
