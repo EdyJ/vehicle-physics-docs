@@ -1,8 +1,9 @@
-Get the path to MkDocs and Python:
+Recommended: install the packages via pip:
 
-mkdocs --version
+	pip install https://github.com/MadLittleMods/markdown-icons/archive/master.zip
+	pip install https://github.com/mitya57/python-markdown-math/archive/master.zip
 
-Copy these files to <Python>\Lib\site-packages
+Alternative: copy these files to <Python>\Lib\site-packages
 
-mdx_math.py
-iconfonts.py
+	mdx_math.py
+	iconfonts.py

@@ -13,8 +13,26 @@ theme:
 
 # HighlightJS is being configured in (js/highlightjs-setup.js)
 
-extra_css: [ 'css/tables.css', 'css/admonitions.css', 'css/fixes.css', 'css/extras.css', 'css/clickview.css', 'css/slick.css', 'css/slick-theme.css', 'css/slick-custom.css' ]
-extra_javascript: [ 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML', 'js/fabric.custom.min.js', 'js/texturecanvas.js', 'js/imagegallery.js', 'js/clickview.js', 'https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js', 'js/drivelinechartcanvas.js', 'js/slick.min.js', 'js/slick-launcher.js', 'js/highlightjs-setup.js' ]
+extra_css:
+  - 'css/tables.css'
+  - 'css/admonitions.css'
+  - 'css/fixes.css'
+  - 'css/extras.css'
+  - 'css/clickview.css'
+  - 'css/slick.css'
+  - 'css/slick-theme.css'
+  - 'css/slick-custom.css'
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML'
+  - 'js/fabric.custom.min.js'
+  - 'js/texturecanvas.js'
+  - 'js/imagegallery.js'
+  - 'js/clickview.js'
+  - 'https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js'
+  - 'js/drivelinechartcanvas.js'
+  - 'js/slick.min.js'
+  - 'js/slick-launcher.js'
+  - 'js/highlightjs-setup.js'
 
 # Extension instructions:
 # Install iconfonts and mdx_math from their master, or from the local files in the extensions folder.
