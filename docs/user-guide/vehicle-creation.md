@@ -207,26 +207,26 @@ Good (left) and bad (right) positions for the wheel collider with respect to the
 
 </div>
 <div markdown=1>
-![](/img/user-guide/vpp-colliders-and-wheels-01.png){: .clickview }
+![](/img/user-guide/vpp-colliders-and-wheels-02.png){: .clickview }
 
 Solution 1 (recommended)
+{: .header}
+
+Modify **center.x** in the four wheel colliders to **-0.03** (left wheels) or **0.03** (right
+wheels). This moves the wheel to the interior of the collider, but also reduces the wheelbase. As
+result, the vehicle will be more prone to rolling over.
+
+</div>
+<div markdown=1>
+![](/img/user-guide/vpp-colliders-and-wheels-01.png){: .clickview }
+
+Solution 2
 {: .header}
 
 Modify **scale.x** in L200-collider to **1.1**. In this case this is enough for the vehicle collider
 to enclose the top half of the wheel colliders.
 
 Ideally, the collider should have been designed for including the top half of the wheel meshes.
-
-</div>
-<div markdown=1>
-![](/img/user-guide/vpp-colliders-and-wheels-02.png){: .clickview }
-
-Solution 2
-{: .header}
-
-Modify **center.x** in the four wheel colliders to **-0.03** (left wheels) or **0.03** (right
-wheels). This moves the wheel to the interior of the collider, but also reduces the wheelbase. As
-result, the vehicle will be more prone to rolling over.
 
 </div>
 </section>
