@@ -11,9 +11,9 @@ Requirements
 
 Prepare a test scene, create the vehicle GameObject, add the basic VPP components, configure and
 test the vehicle.
-<div class="slick-carousel">
-<section class="slider">
-<div>
+<div markdown=1 class="slick-carousel">
+<section markdown=1 class="slider">
+<div markdown=1>
 ![](/img/user-guide/vpp-rig-tutorial-01.png){: .clickview }
 
 1- Prepare the environment
@@ -26,7 +26,7 @@ test the vehicle.
 This scene contains everything you need: test scenario, camera, light, ground materials.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-rig-tutorial-02.png){: .clickview }
 
 2- Create the vehicle GameObject and add the basic components
@@ -41,7 +41,7 @@ This scene contains everything you need: test scenario, camera, light, ground ma
 	- Component > Vehicle Physics > Input > **Standard Input**
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-rig-tutorial-03.png){: .clickview }
 
 3- Create the GameObjects for the wheels
@@ -51,7 +51,7 @@ This scene contains everything you need: test scenario, camera, light, ground ma
 - Add four children GameObjects to it. Name them **WheelFL, WheelFR, WheelRL, WheelRR**.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-rig-tutorial-04.png){: .clickview }
 
 4- Add the wheel components
@@ -62,7 +62,7 @@ Select the four Wheel GameObjects, then add a **VPWheelCollider** component to t
 - Component > Vehicle Physics > **Wheel Collider**
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-rig-tutorial-05.png){: .clickview }
 
 5- Add the visual mesh
@@ -75,7 +75,7 @@ Select the four Wheel GameObjects, then add a **VPWheelCollider** component to t
 information and requirements of the 3D models.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-rig-tutorial-06.png){: .clickview }
 
 6- Assign the visual wheels to their physic counterparts
@@ -86,7 +86,7 @@ Drag the corresponding visual wheel from the L200-Pickup mesh to the Wheel prope
 component.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-rig-tutorial-07.png){: .clickview }
 
 7- Adjust the physic wheels to match the visual wheels
@@ -101,7 +101,7 @@ The VPWheelCollider components adjust their positions and radii to the visual wh
 _"Configuring the VPWheelColliders manually"_ below if you need to do it manually.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-rig-tutorial-08.png){: .clickview }
 
 8- Configure the vehicle Axles
@@ -112,7 +112,7 @@ _"Configuring the VPWheelColliders manually"_ below if you need to do it manuall
 - Drag each wheel under WheelColliders to their corresponding slot as front/rear, left/right wheel.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-rig-tutorial-09.png){: .clickview }
 
 9- Add the vehicle collision mesh
@@ -127,7 +127,7 @@ The collision mesh is a simplified version of the vehicle mesh.
 for important information and requirements on the collision mesh for your vehicles.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-rig-tutorial-10.png){: .clickview }
 
 10- Configure the collision mesh as Collider
@@ -141,7 +141,7 @@ for important information and requirements on the collision mesh for your vehicl
 The vehicle is now ready for the first test drive.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-rig-tutorial-11.png){: .clickview }
 
 11- Configure the camera to follow the car
@@ -151,7 +151,7 @@ The vehicle is now ready for the first test drive.
 - Drag the **L200** GameObject from the Hierarchy to the **Target** property in the camera controller.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-rig-tutorial-12.png){: .clickview }
 
 12- First test drive: Click Play &fa-play:lg; in the editor!
@@ -198,15 +198,15 @@ collider for avoiding the described effects. [More information on vehicle collid
 
 Check out the description of the issue and possible solutions below. Choose one of the solutions and
 apply it.
-<div class="slick-carousel">
-<section class="test-slider slider">
-<div>
+<div markdown=1 class="slick-carousel">
+<section markdown=1 class="test-slider slider">
+<div markdown=1>
 ![Good (left) and bad (right) positions for the wheel collider with respect to the vehicle collider](/img/user-guide/vpp-colliders-and-wheels.png){: .clickview .img-medium }
 
 Good (left) and bad (right) positions for the wheel collider with respect to the vehicle collider.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-colliders-and-wheels-01.png){: .clickview }
 
 Solution 1 (recommended)
@@ -218,7 +218,7 @@ to enclose the top half of the wheel colliders.
 Ideally, the collider should have been designed for including the top half of the wheel meshes.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-colliders-and-wheels-02.png){: .clickview }
 
 Solution 2
@@ -245,9 +245,9 @@ Telemetry, Audio, Tires, and Driver's View.
 	create and dispose them in runtime.
 
 You may Play &fa-play; the scene after each step for testing how it works.
-<div class="slick-carousel">
-<section class="test-slider slider">
-<div>
+<div markdown=1 class="slick-carousel">
+<section markdown=1 class="test-slider slider">
+<div markdown=1>
 ![](/img/user-guide/vpp-effects-tutorial-01.png){: .clickview }
 
 1- Telemetry
@@ -263,7 +263,7 @@ issues and configuring the effects properly.
 recommended.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-effects-tutorial-02.png){: .clickview }
 
 2- Audio effects
@@ -276,7 +276,7 @@ _Car Audio_ includes the [VPAudio](/components/vehicle-addons/#vpaudio) componen
 with a set of AudioSources of standard audio effects.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-effects-tutorial-03.png){: .clickview }
 
 3- Tire effects
@@ -289,7 +289,7 @@ with a set of AudioSources of standard audio effects.
 effects (i.e. dust).
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-effects-tutorial-04.png){: .clickview }
 
 4- Configure the driver's view (1/2)
@@ -301,7 +301,7 @@ effects (i.e. dust).
 - Configure Longitudinal and Lateral motions as **Tilt**.
 
 </div>
-<div>
+<div markdown=1>
 ![](/img/user-guide/vpp-effects-tutorial-05.png){: .clickview }
 
 4- Configure the driver's view (2/2)
