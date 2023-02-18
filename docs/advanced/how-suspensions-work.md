@@ -109,34 +109,34 @@ The suspension properties may be studied from the point of view of the oscillati
 ([Harmonic oscillator](http://en.wikipedia.org/wiki/Harmonic_oscillator)). The associated concepts
 are used to study the reactions of the suspension in different situations.
 
-!!! danger "&fa-times-circle:lg; Beware: a vehicle suspension is NOT a harmonic oscillator _per-se_"
+!!! warning "&fa-times-circle:lg; Beware: vehicle suspension as harmonic oscillator"
 
-	A suspension **_behaves_** as harmonic oscillator under certain conditions, and may be studied
+	A suspension behaves as harmonic oscillator _under certain conditions_, and may be studied
 	as a harmonic oscillator under those conditions. Read [Application to real vehicles](#application-to-real-vehicles)
 	below.
 
 	While a suspension based on specifying the oscillating properties (frequency, damping) is
-	possible, implementing it as a generic harmonic oscillator is a common mistake and may
+	possible, implementing it as a generic harmonic oscillator is generally a bad idea and may
 	provide incoherent results. It's not just one, but four (or more) attached suspensions with
-	complex interactions among them: weight shifting, cargo, road conditions...
+	complex interactions among them: weight shifting, cargo, chassis flex, road conditions...
 
 Given the force produced by the suspension at a specific steady state (_contact speed_ = 0) the
-equivalent _**sprung mass**_ value for studying that situation may be calculated as:
+_**effective sprung mass**_ value for studying that situation may be calculated as:
 
 $$sprungMass = \frac{suspensionForce}{gravity}$$
 
-When the vehicle is at rest, cruising at constant speed or under constant acceleration the sum of
-the sprung masses of all the wheels matches the mass of the vehicle exactly.
+When the vehicle is at rest, cruising at constant speed or under constant acceleration on a flat surface
+the sum of the sprung masses of all the wheels matches the mass of the vehicle exactly.
 
-Using the _sprung mass_ you may calculate the _**natural frequency**_ for the spring under that
-load. The _natural frequency_ is the speed at which the spring can respond to changes in load:
+Using the _sprung mass_ you may calculate the _**natural frequency**_ for the spring under those
+conditions. The _natural frequency_ is the rate at which the spring can respond to changes in load:
 
 $$naturalFrequency = \sqrt{\frac{stiffness}{sprungMass}}$$
 
-The _natural frequency_ defines the oscillating behavior of the suspension. A typical family car is
-set up to exhibit a natural frequency somewhere between 5 and 10.
+The _natural frequency_ defines the oscillating behavior of the suspension. For example, a typical family
+car is set up to exhibit a natural frequency somewhere between 5 and 10.
 
-The _sprung mass_ is also used for studying the [damping behavior](http://en.wikipedia.org/wiki/Damping),
+The _effective sprung mass_ may also be used for studying the [damping behavior](http://en.wikipedia.org/wiki/Damping),
 that is, the rate at which the suspension dissipates the energy stored at the spring. We may
 calculate the _**damping ratio**_ for learning whether the suspension will be under-damped,
 over-damped or critically-damped:
@@ -163,32 +163,31 @@ during each spring oscillation. This number is given by the _**alpha**_ ratio:
 $$alpha = \frac{1}{timestep} \sqrt{\frac{sprungMass}{stiffness}}$$
 
 Applying the [Nyquist theorem](http://en.wikipedia.org/wiki/Nyquist–Shannon_sampling_theorem) we
-deduct that a physically correct simulation should have _alpha_ >= 2. Smaller values won't likely
-cause noticeable artifacts, only the produced forces won't be physically precise.
+deduct that a physically correct simulation should have _alpha_ >= 2. Smaller values means that the
+simulation sampling rate is not enough to simulate the given spring rate.
 
 ### Application to real vehicles
 
 Suspensions in real vehicles don't have constant frequency and damping ratio at all times. You may
 calculate and study the oscillating behavior in specific situations separately: at rest,
 accelerating, braking... Weight transfer on some of these situations actually affects the behavior
-of the suspension. That's the challenge of configuring suspensions in real vehicles: you have to
-find a good balance for most situations.
+of the suspension. That's the challenge of configuring suspensions in real vehicles: finding a good
+balance for most situations.
 
 If the vehicle is under constant acceleration (accelerating / braking / cornering) the _weight_ is
-redistributed among the wheels. Wheels will be supporting more or less load than in rest position.
+redistributed among the wheels. Wheels will be supporting more or less load than in their positions at rest.
 This effectively modifies the oscillating properties of the suspensions at those specific situations,
-thus having different reactions. For instance, imagine a racing car heavily braking at the end of a
+therefore producing different reactions. For instance, imagine a racing car heavily braking at the end of a
 long straight before entering a slow curve. If that part of the track is a bumpy surface then the
 suspension must be set up properly for ensuring correct handling while braking over the bumps.
 Another example is the downforce caused by aerodynamic surfaces. Suspension will have different
-behavior on high speeds due to the additional sustained load. Studying the oscillating behavior of
-the suspension in this detail is critical for setting up racing cars that react properly on every
-situation.
+behavior on high speeds due to the additional load. Studying the oscillating behavior of the suspension in
+this detail is critical for setting up racing cars that react properly on every situation.
 
-The most important facts in a vehicle suspension are:
+We may summarize the role of the vehicle suspension as:
 
 - **Springs** sustain the weight of the vehicle.
-- **Dampers** dissipate the energy in the springs when the suspension moves (_weight transfers_).
+- **Dampers** dissipate the energy in the springs when the suspension moves (_weight transfers_, bumps).
 
 When the suspension is not moving the dampers have no effect. This happens when the vehicle is at
 rest, cruising at constant speed, or under constant acceleration. Otherwise, weight transfers occur
@@ -208,25 +207,30 @@ suspensionForce &= stiffness \cdot{contactDepth}
 
 $$\Longrightarrow naturalFrequency = \sqrt{\frac{gravity}{contactDepth}}$$
 
-So the most important factor that defines the frequency of our suspension is the **contact depth**.
-Not the spring rate, not even the sprung mass. The frequency of the suspension will vary on the
-different situations (accelerating, braking, cornering...) according to the contact depth. Note
-that this _contact depth_ includes any pre-load of the spring inside the suspension strut.
+So the single factor that defines the frequency of our suspension is the **contact depth**. The frequency
+of the suspension will vary on the different situations (accelerating, braking, cornering...) according to
+the contact depth. Note that this _contact depth_ includes any pre-load of the spring inside the suspension
+strut.
 
-This is where dynamic suspension systems kick in. Some high-end modern cars have electronically
-controlled suspensions which dynamically modify the suspension setup to keep the _contact depth_
-(also _ride height_) constant in every situation. This preserves the original properties of the
-suspension when accelerating, braking, cornering, or carrying variable cargo or passengers.
+As a result, configuring the vehicle suspension for a similar behavior in a broad range of conditions
+requires minimizing the changes in the _contact depth_ in those conditions. There are several strategies
+for this:
+
+- Harder springs and anti-roll bars, reducing weight transfers on accelerating, braking, cornering, etc.
+- A lower center of mass reduces the weight transfers without modifying the suspension properties.
+- Electronically controlled suspension which dynamically modify the suspension properties to preserve the
+	_contact depth_ (and the _ride height_) constant in all situations: accelerating, braking, cornering
+	 or carrying variable cargo or passengers.
 
 Vehicle Physics Pro includes a variety of suspension components allowing different ways of
 configuring the suspension:
 
+- **VPWheelCollider** component with standard spring and damper settings.
 - **VPAntiRollBar:** links the suspension of the wheels in the same axle in order to control the
 	lateral roll in curves.
 - **VPAdvancedDamper:** configures dampers with bump / rebound parameters: slow bump, fast bump,
 	slow rebound, fast rebound.
 - **VPDynamicSuspension:** modifies the suspension spring in runtime order to preserve a given
 	_contact depth_ (or _ride height_).
-- **VPProgressiveSuspension:** Modifies the suspension properties along the suspension travel. For
-	example, this allows simulating [leaf spring suspensions](https://en.wikipedia.org/wiki/Leaf_spring)
-	or bump stops.
+- **VPProgressiveSuspension:** Modifies the suspension properties along the suspension travel. This
+ 	allows simulating bump stops or [leaf spring suspensions](https://en.wikipedia.org/wiki/Leaf_spring).
