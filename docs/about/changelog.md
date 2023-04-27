@@ -54,8 +54,12 @@ Advanced telemetry system
 
 <hr>
 
+#### April 2023 - SDK V9.4
 
-#### Jannuary 2023
+- New force feedback effect in **VPWheelDeviceInput** to simulate vibrations due to engine stall.
+- New example scrips for new features: GearRangeLimit.cs, SetEngineRpm.cs.
+
+#### January 2023
 
 - New **Motor Grader Control** component to control all the features and mechanisms of a motor grader ([Tweet](https://twitter.com/VehiclePhysics/status/1613543552386048000)).
 
@@ -69,6 +73,8 @@ Advanced telemetry system
 #### November 2022
 
 - New **IAudioSourceSettings** interface that unifies the audio settings of all audio sources in a vehicle.
+- New components **MasterAudioSourceSettings** and **AudioClipSource** to configure multiple audio sources in the vehicle easily with the audio settings centralized in a single place.
+- **VPAudioExtras** and **VPTireAudio** components now make use of the centralized audio settings.
 
 #### August 2022
 
