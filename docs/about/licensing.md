@@ -15,8 +15,6 @@ Supported platforms																		| Desktop	| All		| All	|
 Frame-exact replay system with pause, forward/reverse playback, flashback...					|	| &fa-check; | &fa-check; |
 Vehicle damage with mesh deformation and degradation of handling								|	| &fa-check; | &fa-check; |
 [Advanced telemetry tools](/components/vehicle-telemetry/#vpperformancedisplay): real-time performance charts, weight distribution	|	| &fa-check; | &fa-check; |
-High-quality locations and vehicles _(WIP)_														|	| &fa-check; | &fa-check; |
-Mobile touch-based controller _(WIP)_															|	| &fa-check; | &fa-check; |
 DirectInput controller with force feedback _(Windows only)_										|	| &fa-check; | &fa-check; |
 XBox gamepad support (360 and One) _(Windows only)_												|	| &fa-check; | &fa-check; |
 Support by email. [Other support options](/about/support)											|	| individual | team |
@@ -66,15 +64,15 @@ May be licensed by organizations with annual revenue / funds / budget in excess 
 
 ### Subscription
 
-The license to use VPP is perpetual after the first payment. Only receiving support and updates
-requires an active subscription.
+The license to use VPP is perpetual after the first payment. An active subscription is required to receive
+support and updates.
 
-- One year of support and updates is already included with the first payment.
-- Customers may opt-out any time and keep the most recent VPP version when the subscription expires.
-- A grace period of 120 days is granted after opting-out to rejoin paying the yearly fee only.
+- One year of support and updates is included with the first payment.
+- Customers may opt-out at any time and keep the most recent VPP version when the subscription expires.
+- A grace period of 120 days is granted after opting out to rejoin and pay the yearly fee only.
+- Rejoining more than 2 years after the subscription expired requires paying the full license fee.
 
-The subscription fee allows continuous development, feature updates, and product support in the
-long term.
+The subscription fee allows for continuous development, feature updates, and long-term product support.
 
 ##### Germany-based users
 
