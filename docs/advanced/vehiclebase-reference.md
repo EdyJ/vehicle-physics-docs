@@ -175,8 +175,7 @@ namespace VehiclePhysics
 	// Solver substeps
 
 	[Range(1, 20)]
-	public int integrationSteps = 2;
-	public bool integrationUseRK4 = false;
+	public int solverSubsteps = 2;
 
 	// Note: changing the CoM position at runtime causes the sprung mass values to be recomputed
 	// on the WheelColliders. The recalculation is also triggered when changing mass, enabling/

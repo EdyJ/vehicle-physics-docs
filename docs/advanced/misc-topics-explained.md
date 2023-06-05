@@ -6,21 +6,11 @@
 
 ## Solver / Numeric Integration
 
-#### Euler or Runge-Kutta 4 (RK4)?
+#### Solver substeps
 
-RK4 adds a kind smoothing to the calculations, so rapid changes in the integrated data
-are smoothed in some amount. On the other hand, Euler allow fast changing values, provide
-immediate response, and the number of substeps can be raised for better accuracy. RK4 always
-takes 4 integration substeps
-
-Personally I prefer to use Euler with 4 substeps rather than RK4.
-
-#### Euler substeps
-
-**Substeps** are subdivisions of the Unity physics time steps that are used for calculating the
-internal torques, forces and momentums at every block in the vehicle. Euler can use from 1 to any
-number of substeps. Runge-Kutta 4 (RK4) takes 4 substeps always. This setting can be configured
-per-vehicle.
+**Solver Substeps** are subdivisions of the Unity physics time steps that are used for calculating the
+internal torques, forces and momentums at every block in the vehicle. The solver in VPP can use from 1 to
+any number of substeps. This setting can be configured per-vehicle.
 
 The more substeps, the more precise are the results but CPU usage is increased. However I've noticed
 no significant penalty on using 1 to 8 substeps. CPU usage as shown at the profiler gets increased
@@ -50,7 +40,7 @@ precision...
 #### Should I change the Unity's physics timestep?
 
 There's no need for changing Unity's default physics/fixed timestep (0.02, 50Hhz). Within Vehicle
-Physics Pro you can configure the number of integration substeps in a per-vehicle basis.
+Physics Pro you can configure the number of solver substeps in a per-vehicle basis.
 
 Some calculations and data are extracted out of the Unity physics engine: _velocity_ and
 _downforce_. These are calculated at the Unity's physics rate. Tire forces are also applied at
@@ -59,7 +49,7 @@ this rate.
 If you really need to get the most precision out of the vehicle physics then you can modify the
 Unity's fixed timestep to 0.01 (100Hz) or 0.005 (200Hz). This is NOT recommended because it can
 dramatically increase the CPU usage footprint because of the physics. Also ensure the
-integration substeps are adjusted accordingly: if fixed timestep is 0.01 (100Hz) and your
+solver substeps are adjusted accordingly: if fixed timestep is 0.01 (100Hz) and your
 vehicle is set to 10 substeps, then the calculations for that vehicle are done at 1000Hz.
 
 #### How to measure the precision of the integration?
@@ -67,7 +57,7 @@ vehicle is set to 10 substeps, then the calculations for that vehicle are done a
 Ensure you understand the [difference among _accuracy_ (or _trueness_) and _precision_](http://en.wikipedia.org/wiki/Accuracy_and_precision).
 **Vehicle Physics Pro is fully accurate in its design, implementation and behavior** giving
 reasonably precise results. _Precision_ affects the the specific numeric values only, and depends
-on the integration method and substeps.
+on solver substeps.
 
 A simple way to measure the precision is setting the **Differential Type** to **Locked** in a RWD
 (rear wheel drive) vehicle. This enforces both drive wheels to rotate at the same rate. Then drive
@@ -90,8 +80,7 @@ resonance with lateral forces destabilizing the vehicle.
 	low rates become difficult to drive at high speeds.
 
 If you observe values that are quickly oscillating at the telemetry in a way that visibly affects
-the vehicle (shakes) then either change the integration method or adjust the substeps in the
-Euler method:
+the vehicle (shakes) then adjust the solver substeps:
 
 - A single substep is likely to cause oscillating values, but usually they don't have a noticeable
 effect.
@@ -120,10 +109,9 @@ This includes Engine, Gearbox (for the Park mode) and Differential, among others
 ##### Viscous coupling rate
 
 The viscous couplings (a.k.a. "lock ratio") should be always integrated at a given rate. Otherwise,
-the computed torque would depend of the current integration rate and substeps. Defining a
+the computed torque would depend of the current integration rate and solver substeps. Defining a
 fixed rate (`VehiclePhysics.Solver.viscousCouplingRate`) ensures viscous couplings to result in the
-same torque values for a given lock ratio, independently of the actual integration rate, substeps
-or integration method.
+same torque values for a given lock ratio, independently of the actual integration rate or substeps.
 
 !!! warning "&fa-warning; Important:"
 
@@ -224,7 +212,7 @@ change faster.
 
 #### Too much engine friction makes the wheels rotate backwards
 
-This might be either a correct behavior, or an indication that more integration steps/substeps are
+This might be either a correct behavior, or an indication that more solver substeps are
 required.
 
 !!! Info "&fa-thumbs-o-up; Real driving tip"
@@ -243,10 +231,10 @@ You can verify whether the behavior is correct or not by setting the differentia
 **Locked**. If now the wheels spin forwards when engine friction is applied, then the behavior
 with the other differential type is correct.
 
-If the effect can be observed even with a locked differential then try increasing the integration
+If the effect can be observed even with a locked differential then try increasing the solver
 substeps (up to 20, assuming a default Unity physics timestep of 0.02). Wheels should rotate
 forwards but at less speed than the road when releasing the throttle. As extreme fix, you could
-try setting the Unity physics time step to 0.01 and 10 integration steps in the Vehicle
+try setting the Unity physics time step to 0.01 and 10 solver substeps in the Vehicle
 Physics solver. Note that this will increase the overall impact of physics in the CPU usage.
 
 #### Understanding engine curves
