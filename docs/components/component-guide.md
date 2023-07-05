@@ -105,6 +105,9 @@ VPDynamicSuspension
 VPProgressiveSuspension
 :	Progressively increases the suspension spring based on the contact depth.
 
+VPAdvancedDamper
+:	Provides advanced damper features: bump, rebound, slow/fast bump, slow/fast rebound.
+
 #### Dynamics
 
 Add-on components that implement specific dynamic behaviors.
