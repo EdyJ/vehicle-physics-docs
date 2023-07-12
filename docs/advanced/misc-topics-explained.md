@@ -258,8 +258,8 @@ Inertia
 
 Low speed
 
-:	The behavior at low speed may be configured with the suspension (springs, dampers, anti-roll
-	bars) and weight distribution (center of mass).
+:	The behavior at low speed may be configured with the [suspension](/components/vehicle-suspension)
+	(springs, dampers, anti-roll bars) and weight distribution (center of mass).
 
 High speed
 

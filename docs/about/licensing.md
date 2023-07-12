@@ -5,7 +5,7 @@
 | Features | <center>Community</center> | <center>Professional</center> | <center>Enterprise</center> |
 |----------|:----:|:--------:|:------------:|
 Full-featured [Vehicle Controller](/components/vehicle-controller) and [Wheel Collider](/components/wheel-collider/) components	| &fa-check; | &fa-check; | &fa-check; |
-Essential components:<br>[Telemetry](/components/vehicle-telemetry/), [Audio](/components/vehicle-addons/#vpaudio), [Anti-roll bar](/components/vehicle-dynamics/#vpantirollbar), [keyboard input](/components/vehicle-input/#vpstandardinput), [visual effects](/components/vehicle-addons/#vpvisualeffects), rolling friction, [aerodynamics](/components/vehicle-dynamics/#vpaerosurface) | &fa-check; | &fa-check; | &fa-check; |
+Essential components:<br>[Telemetry](/components/vehicle-telemetry/), [Audio](/components/vehicle-addons/#vpaudio), [Anti-roll bar](/components/vehicle-suspension/#vpantirollbar), [keyboard input](/components/vehicle-input/#vpstandardinput), [visual effects](/components/vehicle-addons/#vpvisualeffects), [rolling friction](/components/vehicle-dynamics/#vprollingfriction), [aerodynamics](/components/vehicle-dynamics/#vpaerosurface) | &fa-check; | &fa-check; | &fa-check; |
 Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-check; |
 Wheels per vehicle																		|		4	| 1-20		| 1&#8209;unlimited |
 Simultaneous vehicles in each scene														|		1	| unlimited | unlimited |
@@ -22,7 +22,7 @@ Number of developers 				 																	| 	| 1 | up to 10 |
 Full source code included																				|	|	| &fa-check; |
 Access to new features in the _development_ branch														|	|	| &fa-check; |
 Advanced simulation features: multi-body vehicles, solid and liquid cargo components					|	|	| &fa-check; |
-Advanced suspension features: damper bump & rebound, dynamic suspension, bump stop					|	|	| &fa-check; |
+Advanced suspension features: [damper bump & rebound](/components/vehicle-suspension#vpadvanceddamper), [dynamic suspension](/components/vehicle-suspension#vpdynamicsuspension), [bump stops](/components/vehicle-suspension#vpprogressivesuspension)	|	|	| &fa-check; |
 Specialized vehicle controllers: motorbike, caterpillar, mining, excavators, hydraulic actuators. [Showcase](/about/showcase/)	|	|	| &fa-check; |
 Advanced vehicle controllers: electric, hybrid, two-wheeled, bulldozer, [diesel-electric](https://twitter.com/VehiclePhysics/status/1135951323629854721){: target="_blank" }, tracked, hydraulic-tracked	|	|	| &fa-check; |
 Advanced Editor tools: Engine configuration _(Experimental)_, Quick Vehicle Creation tool			|	|	| &fa-check; |

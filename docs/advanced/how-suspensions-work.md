@@ -222,7 +222,7 @@ for this:
 	_contact depth_ (and the _ride height_) constant in all situations: accelerating, braking, cornering
 	 or carrying variable cargo or passengers.
 
-Vehicle Physics Pro includes a variety of suspension components allowing different ways of
+Vehicle Physics Pro includes a variety of [suspension components](/components/vehicle-suspension) allowing different ways of
 configuring the suspension:
 
 - **VPWheelCollider** component with standard spring and damper settings.

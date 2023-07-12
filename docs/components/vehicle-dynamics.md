@@ -2,7 +2,7 @@
 
 Add-on components modifying the vehicle's handling and behavior.
 
-You could [write your own add-on components](../advanced/custom-addons.md) easily if the provided
+You can [write your own add-on components](../advanced/custom-addons.md) easily if the provided
 components don't fit your needs or you need other features.
 
 ### VPAntiRollBar
@@ -15,45 +15,48 @@ body lean in turns at that axle.
 
 ![VP Anti Roll Bar](/img/components/vpp-anti-roll-bar.png){: .img-medium .clickview }
 
-Axle
-:	The axle this anti-roll bar component will be attached to. 0 is first axle, 1 is second axle and
-	so on.
+[Full details on VPAntiRollBar](/components/vehicle-suspension#vpantirollbar) in the Suspension section.
 
-Mode
-:	Several working modes are provided:
+### VPRollingFriction
 
-	- Stiffness: configures the stiffness ratio of the bar.
-	- Spring rate: configures the spring rate of the bar. The spring is applied based on the
-		difference of travel between both suspensions.
-	- Legacy: applies an anti-roll rate based on the difference of compression ratio between both
-		suspensions.
+Applies rolling resistance as per the wheels rolling on the ground.
 
-Stiffness
-:	0 removes the anti-roll effect (fully elastic bar). 1 means a rigid, totally inelastic bar. The
-	effect is achieved by shifting the given ratio of suspension properties (spring, rate) among
-	the wheels depending on their relative contact depths.
+![VP Rolling Resistance](/img/components/vpp-rolling-friction-inspector.png)
 
-Spring Rate
-:	Spring rate transferred from the less compressed to the most compressed suspension. For example,
-	if the difference in the suspension travel is 10 cm, then the transferred rate will be 0.1 x
-	Spring Rate.
+Dynamic Model
+:	Model to use to calculate the rolling friction force: Constant, Linear, Tire Pressure. Each model uses
+	the corresponding parameters as described below.
 
-Anti-roll rate
-:	Legacy mode only: amount of spring rate transferred between suspensions based on the difference
-	in their compression ratios.
+Constant Coefficient
+:	In the Constant model, rolling friction is calculated as this coefficient multiplied by the vertical
+	force.
 
-Emit Telemetry
-:	Includes this component in the telemetry system. These channels are added: CompressionLeft,
-	CompressionRight, CompressionDiff, SpringLeft, SpringRight.
+Linear Coefficient
+:	In the Linear model, rolling friction is calculated as the constant coefficient plus this coefficient
+	multiplied by the ground speed, and the result multiplied by the vertical force.
 
-Here's an example of the effect of the anti-roll bar in the front axle. It shifts the weight of the
-vehicle to the rear axle so it gains traction in corners. Without front anti-roll bar the rear inner
-wheel just lifts up:
+Tire Pressure
+:	In the Tire Pressure model the rolling friction force is calculated [as described here](https://www.engineeringtoolbox.com/rolling-friction-resistance-d_1303.html). This model uses the specified tire pressure.
 
-<div class="imagegallery" sm="2" md="2" lg="2" style="display:none">
-	<img class="clickview" src="/img/components/vpp-anti-roll-bar-effect-01.jpg" alt="Without front anti-roll bar">
-	<img class="clickview" src="/img/components/vpp-anti-roll-bar-effect-02.jpg" alt="With front anti-roll bar">
-</div>
+Static Coefficient
+:	Rolling friction coefficient applied when the vehicle is stopped. This allows the vehicle to come to a
+	stop when rolling freely on a flat surface.
+
+Static Speed Threshold
+:	Progressively apply the static coefficient to calculate the rolling friction below the specified speed.
+
+Axle Friction Factors
+:	Optionally specify rolling friction factors to each individual axle.
+
+	For example, if the vehicle is a truck with three axles and twin wheels in the two rear axles, then you
+	may double the rolling friction factors in these wheels by adding three elements here, one per axle:
+
+	- \#0: 1 _(no change in the front wheels)_
+	- \#1: 2 _(double rolling friction in second axle)_
+	- \#2: 2 _(double rolling friction in third axle)_
+
+Show Debug Label
+:	Show debug labels with the current rolling friction forces applied to each wheel.
 
 ### VPAeroSurface
 
@@ -61,8 +64,8 @@ Stand-alone component (it doesn't require a VehicleBase-derived component) provi
 downforce based on the velocity of the vehicle. The forces are applied to the vehicle at the
 position of the GameObject containing this component.
 
-The recommended setup is having a VPAeroSurface GameObject at the middle of each axle, at least
-at front and rear. These components can configure the behavior of the vehicle at high speeds.
+The recommended setup is having a VPAeroSurface GameObject at the middle of the front and rear axles.
+These components can configure the behavior of the vehicle at high speeds.
 
 ![VP Aero Surface](/img/components/vpp-aero-surface.png){: .img-medium .clickview }
 

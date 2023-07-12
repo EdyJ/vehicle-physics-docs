@@ -75,6 +75,7 @@ nav:
   - Component Guide: components/component-guide.md
   - Vehicle Controller: components/vehicle-controller.md
   - Wheel Collider: components/wheel-collider.md
+  - Suspension: components/vehicle-suspension.md
   - Dynamics: components/vehicle-dynamics.md
   - Input: components/vehicle-input.md
   - Add-ons: components/vehicle-addons.md
