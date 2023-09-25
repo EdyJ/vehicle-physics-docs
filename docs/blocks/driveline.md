@@ -7,8 +7,8 @@ torque splitters based on the number of drive wheels and the specified configura
 
 Each differential or torque splitter in the driveline can be configured independently:
 
-- [Differential](/blocks/differential)
-- [Torque Splitter](/blocks/torque-splitter)
+- [Differential](/blocks/differential/)
+- [Torque Splitter](/blocks/torque-splitter/)
 
 Axle Differential or _Differential_ alone.
 :	The standard differential that connects the two wheels in the same axle.

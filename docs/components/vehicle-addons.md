@@ -2,7 +2,7 @@
 
 Optional components each one adding new functionality and features to the vehicle.
 
-You could [write your own add-on components](../advanced/custom-addons.md) easily if the provided
+You could [write your own add-on components](/advanced/custom-addons/) easily if the provided
 components don't cover your needs or you need other features.
 
 ### VPAudio
@@ -37,14 +37,14 @@ Wheels
 	- Offroad Audio Source: played when rolling over soft surfaces.
 	- Bump Audio Clip: the wheel hits bumps or makes a strong contact with the ground.
 
-	The surface type (Hard or Soft) is defined at the [GroundMaterial](ground-materials.md).
+	The surface type (Hard or Soft) is defined at the [GroundMaterial](/components/ground-materials/).
 
 Impacts
 :	AudioClips to be played when the car collides. Clips for hard and soft surfaces can be defined.
 	If the soft clip is missing, the hard clip will be used also at soft surfaces (but not the
 	opposite).
 
-	The surface type (Hard or Soft) is defined at the [GroundMaterial](ground-materials.md).
+	The surface type (Hard or Soft) is defined at the [GroundMaterial](/components/ground-materials/).
 
 Drags
 :	AudioSources played while the vehicle's body is dragging on another surface. They must be
@@ -56,7 +56,7 @@ Drags
 	- Scratch Audio Clip: one-shot random audio clip that is occasionally played when dragging
 		on a hard surface.
 
-	The surface type (Hard or Soft) is defined at the [GroundMaterial](ground-materials.md).
+	The surface type (Hard or Soft) is defined at the [GroundMaterial](/components/ground-materials/).
 
 Wind
 :	AudioSource played based on the vehicle's velocity. It must be part of the hierarchy of the
@@ -67,7 +67,7 @@ Wind
 Triggers the tire marks and particle effects based on the state of the tire and the ground material
 being contacted.
 
-The actual particle emitters and tire marks renderers are managed at the [Ground Material Manager](ground-materials.md).
+The actual particle emitters and tire marks renderers are managed at the [Ground Material Manager](/components/ground-materials/).
 
 ![VP Tire Effects](/img/components/vpp-tire-effects-inspector.png){: .img-small .clickview }
 
@@ -78,7 +78,7 @@ Min Slip, Max Slip
 :	Slip range in m/s to be considered minimum and maximum for all the effects. For example, the
 	skid marks are most intense above Max Slip, and they vanish below Min Slip.
 
-	The effect use the _combined slip_ which can be seen in runtime in the [Telemetry](vehicle-telemetry.md):
+	The effect use the _combined slip_ which can be seen in runtime in the [Telemetry](/components/vehicle-telemetry/):
 
 	![VP Telemetry combined slip](/img/components/vpp-telemetry-combined-slip.png){: .img-medium .clickview }
 
@@ -126,7 +126,7 @@ Local Rotation Axis
 	rotation effect.
 
 &fa-info-circle:lg; The range of rotation of the steering wheel transform is configured in the
-	[Steering section](/blocks/steering){: .alert-link }
+	[Steering section](/blocks/steering/){: .alert-link }
 {: .alert .alert-info }
 
 ##### Lights

@@ -25,7 +25,7 @@ Enterprise Edition
 Dedicated professional services are available on-demand at hourly rates.
 
 Vehicle Configuration
-:	Send us your [3D model](/user-guide/3d-models) and the [vehicle specifications](/advanced/configuring-realistic-vehicles/).
+:	Send us your [3D model](/user-guide/3d-models/) and the [vehicle specifications](/advanced/configuring-realistic-vehicles/).
 	We'll prepare and configure it for you as closely as possible to the available specifications.
 
 Custom Development

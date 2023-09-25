@@ -7,7 +7,7 @@ any number and combination.
 A block derives from `VehiclePhysics.Block`. It implements the logic of the block by overriding the
 virtual methods for simulating the state and torque flow within that block.
 
-The virtual methods in `VehiclePhysics.Block` and their roles are detailed in [Block reference](block-reference.md).
+The virtual methods in `VehiclePhysics.Block` and their roles are detailed in [Block reference](/advanced/block-reference/).
 
 Simple Block
 :	Parts with negligible inertia such as shafts and gears. Write the events Initialize,
@@ -15,25 +15,25 @@ Simple Block
 	the [example below](#example-source-code).
 
 Standard Block
-:	Parts with negligible inertia following the [Block Protocol](/advanced/block-reference#public-interface)
+:	Parts with negligible inertia following the [Block Protocol](/advanced/block-reference/#public-interface)
 	for Settings, Inputs, States and Sensors. Implement the same events as in the Simple Block and
 	apply the protocol for the exposed fields.
 
-	The [Differential block](/blocks/differential) is an example of standard block.
+	The [Differential block](/blocks/differential/) is an example of standard block.
 
 Inertial Block
 :	Parts with noticeable inertia such as flywheels or wheels. These parts must solve the inertial
 	part by implementing the events GetState, SetSubstepState, GetSubstepDerivative and SetState
 	additionally to the other events.
 
-	The [Engine block]/blocks/engine) is an example of inertial block.
+	The [Engine block](/blocks/engine/) is an example of inertial block.
 
 ## Example: simple gear
 
 This code implements a simple gear block (SimpleGear) that constrains the input and output to
 corotate with the given ratio.
 
-A [custom vehicle controller](/advanced/custom-vehicles) using this SimpleGear block may look like
+A [custom vehicle controller](/advanced/custom-vehicles/) using this SimpleGear block may look like
 this:
 
 <div class="mermaid">
@@ -60,7 +60,7 @@ Diff-->WRR
 end
 </div>
 
-Check out [Creating custom vehicles](/advanced/custom-vehicles) for a full implementation of a
+Check out [Creating custom vehicles](/advanced/custom-vehicles/) for a full implementation of a
 custom vehicle controller.
 
 **SimpleGear.cs**

@@ -35,7 +35,7 @@ If engine or transmission demand more torque than the supported amount then the 
 engine and transmission rpms won't match, even in "fully engaged" state.
 
 &fa-thumbs-up:lg; A good value for _Max Torque Transfer_ is about twice the maximum engine torque.
-Check out the engine specs under the [engine curve](/blocks/engine){: .alert.link } for the
+Check out the engine specs under the [engine curve](/blocks/engine/){: .alert.link } for the
 _Max Torque_ value.
 {: .alert .alert-success }
 

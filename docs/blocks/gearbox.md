@@ -136,7 +136,7 @@ Strict Park Mode
 |VehicleData.GearboxShifting| Is the gearbox in the middle of a gear shift operation? | 0 = no, 1 = yes
 |SettingsData.AutoShiftOverride	| Auto-shift override setting <sup>3</sup>	| 0 = no override, 1 = force auto shift, 2 = force manual shift
 
-See [Data Bus Reference](/advanced/databus-reference) for more information.
+See [Data Bus Reference](/advanced/databus-reference/) for more information.
 
 <sup>1</sup> Automatic transmission modes:
 :	- M (0): Manual: do not automatically shift gears. Use manual gear shifting.

@@ -5,7 +5,7 @@ Physics Pro. You will be configuring and rigging the L200 Pickup Truck, but you 
 vehicle following the same steps.
 
 Requirements
-:	An Unity 3D project with the VPP core and sample assets (see [Setting Up Vehicle Physics Pro](/user-guide/setting-up-vpp)).
+:	An Unity 3D project with the VPP core and sample assets (see [Setting Up Vehicle Physics Pro](/user-guide/setting-up-vpp/)).
 
 ### Basic working vehicle
 
@@ -71,7 +71,7 @@ Select the four Wheel GameObjects, then add a **VPWheelCollider** component to t
 - Locate the L200-Pickup mesh (_Sample Assets > Art > Models > L200 Pickup Truck > Meshes_).
 - Drag it to the L200 GameObject in the Hierarchy so it becomes a child of L200.
 
-&fa-hand-o-right:lg;&nbsp; Check out [3D models and environments](/user-guide/3d-models) for more
+&fa-hand-o-right:lg;&nbsp; Check out [3D models and environments](/user-guide/3d-models/) for more
 information and requirements of the 3D models.
 
 </div>
@@ -123,7 +123,7 @@ The collision mesh is a simplified version of the vehicle mesh.
 - Locate the L200-Collider mesh (_Sample Assets > Art > Models > L200 Pickup Truck > Meshes_).
 - Drag it to the L200 GameObject in the Hierarchy so it becomes a child of L200.
 
-&fa-warning:lg;&nbsp; **A collider is mandatory in the vehicle.** Check out [3D models and environments](/user-guide/3d-models)
+&fa-warning:lg;&nbsp; **A collider is mandatory in the vehicle.** Check out [3D models and environments](/user-guide/3d-models/)
 for important information and requirements on the collision mesh for your vehicles.
 
 </div>
@@ -172,7 +172,7 @@ doesn't work or you get some error.
 
 Note that vehicle dynamics are not configured at all - the car is using the default values for all
 components. This allows some fun driving, but the handling and behavior will be poor. The next
-chapter [Configuring Vehicles](https://vehiclephysics.com/user-guide/vehicle-setup/) describes
+chapter [Configuring Vehicles](/user-guide/vehicle-setup/) describes
 everything you need to know to configure the car properly.
 
 !!! info "&fa-info-circle:lg; Configuring the VPWheelColliders manually"
@@ -285,7 +285,7 @@ with a set of AudioSources of standard audio effects.
 - Components > Vehicle Physics > Effects > **Tire Effects**.
 
 [VPTireEffects](/components/vehicle-addons/#vptireeffects) includes tire marks and smoke. Different
-[ground materials](components/ground-materials/) may show different marks, smoke, or particle
+[ground materials](/components/ground-materials/) may show different marks, smoke, or particle
 effects (i.e. dust).
 
 </div>
@@ -333,6 +333,6 @@ component for:
 Check out the _VPP JPickup_ vehicle in the scene _Getting Started - JPickup_ for learning how this
 component works.
 
-&fa-thumbs-up:lg; You can now head to the [Vehicle Setup Guide](vehicle-setup.md){: .alert-link }
+&fa-thumbs-up:lg; You can now head to the [Vehicle Setup Guide](/user-guide/vehicle-setup/){: .alert-link }
 for configuring the vehicle dynamics (center of mass, engine, brakes, etc).
 {: .alert .alert-success }

@@ -27,7 +27,7 @@ VehicleBehaviours support these runtime situations:
 - Disabled inside notifications (enabled=false): Supported but discouraged. No errors, but other
 	components might be skipped for that notification that frame.
 
-Check out [Creating add-on components](/advanced/custom-addons) for an example add-on with source
+Check out [Creating add-on components](/advanced/custom-addons/) for an example add-on with source
 code. Most components included in VPP are already VehicleBehaviours.
 
 ## VehicleBehaviour events
@@ -163,12 +163,12 @@ You may access the vehicle with the `vehicle` property (VehicleBase) in VehicleB
 VehicleBase exposes these properties among others:
 
 VehicleBase.data
-:	Access to the internal [Data Bus](databus-reference.md), which provides a lot of internal
+:	Access to the internal [Data Bus](/advanced/databus-reference), which provides a lot of internal
 	information that may be read and modified.
 
 VehicleBase.wheelState
-:	Access to the individual [WheelState](/advanced/vehiclebase-reference#nested-classes) data of
-	each wheel. There's a lot of information per wheel available. For example, the [VPAudio](../components/vehicle-addons.md#vpaudio)
+:	Access to the individual [WheelState](/advanced/vehiclebase-reference/#nested-classes) data of
+	each wheel. There's a lot of information per wheel available. For example, the [VPAudio](/components/vehicle-addons/#vpaudio)
 	component reads the sliding state of each wheel here and produces the tire skid sound.
 
 	&fa-thumbs-up:lg; The number of wheels and the size of the wheelState array are guaranteed not
@@ -178,7 +178,7 @@ VehicleBase.wheelState
 VehicleBase.cachedTransform<br>VehicleBase.cachedRigidbody
 :	Optimized access to the Transform and Rigidbody components in the vehicle.
 
-Check out [VehicleBase's Scripting Reference](/advanced/vehiclebase-reference#scripting-reference)
+Check out [VehicleBase's Scripting Reference](/advanced/vehiclebase-reference/#scripting-reference)
 for a full list.
 
 # Scripting reference

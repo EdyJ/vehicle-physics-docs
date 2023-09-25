@@ -1,6 +1,6 @@
 # Vehicle Setup Guide
 
-This guide assumes you have your vehicle working according to the [Creating a Vehicle](vehicle-creation.md)
+This guide assumes you have your vehicle working according to the [Creating Vehicles](/user-guide/vehicle-creation/)
 section.
 
 &fa-thumbs-o-up:lg; If you're modifying the values in runtime in the Editor, **remember to backup your
@@ -83,7 +83,7 @@ Inertia plays a critical role in the handling of the vehicle. Configure the iner
 	use between -1.5 and +1.5. Use small positive values for front engines, and small negative
 	values for rear engines.
 
-More details and information on configuring the Inertia: [Inertia Helper](/blocks/inertia)
+More details and information on configuring the Inertia: [Inertia Helper](/blocks/inertia/)
 
 ### Suspension
 
@@ -282,9 +282,9 @@ the gearbox and the drive wheels.
 		axle, but if this one slips, a portion of the torque given by the **Stiffness** parameter is
 		routed to the Secondary axle.
 
-More information on the differential types: [Differential Block](/blocks/differential).
+More information on the differential types: [Differential Block](/blocks/differential/).
 
-More information on the driveline configurations: [Driveline Helper](/blocks/driveline).
+More information on the driveline configurations: [Driveline Helper](/blocks/driveline/).
 
 ### Tires
 
@@ -305,7 +305,7 @@ Examples:
 	<img class="clickview" src="/img/setup-guide/vpp-setup-tires-truck-twin.png" alt="Truck (twin wheels)">
 </div>
 
-More information: [Tire block](/blocks/tires)
+More information: [Tire block](/blocks/tires/)
 
 ### Steering
 
@@ -351,7 +351,7 @@ wheels lock _before_ real wheels.
 Repeat the first procedure to refine the Max Brake Torque value. The final value should still lock
 all wheels, front wheels first.
 
-More information on brakes and ABS: [Brakes Helper](/blocks/brakes)
+More information on brakes and ABS: [Brakes Helper](/blocks/brakes/)
 
 ### Driving Assists
 

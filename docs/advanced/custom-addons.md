@@ -1,6 +1,6 @@
 # Creating add-on components
 
-You may write an add-component for your vehicles easily by deriving from [VehicleBehaviour](/advanced/vehiclebehaviour-reference)
+You may write an add-component for your vehicles easily by deriving from [VehicleBehaviour](/advanced/vehiclebehaviour-reference/)
 instead of MonoBehaviour. VehicleBehaviours are similar to standard MonoBehaviour components, but
 they expose virtual methods that are invoked in sync with the vehicle's state. VehicleBehaviours may
 be added anywhere in the hierarchy of the vehicle.
@@ -10,7 +10,7 @@ be added anywhere in the hierarchy of the vehicle.
 - Implement FixedUpdateVehicle for stuff that depends on or modifies the vehicle's simulation values.
 - Implement UpdateVehicle for stuff that must be updated each visual frame.
 
-Other events are available. Check out [VehicleBehaviour reference](/advanced/vehiclebehaviour-reference)
+Other events are available. Check out [VehicleBehaviour reference](/advanced/vehiclebehaviour-reference/)
 for full details.
 
 &fa-exclamation-triangle:lg; **Never override OnEnable or OnDisable in a VehicleBehaviour!** Use

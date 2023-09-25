@@ -5,8 +5,8 @@ inherits from Unity's MonoBehaviour so vehicle controllers are standard componen
 classes implement the vehicle's internal parts by instancing, connecting and managing Block classes
 (engine, gearbox, etc) in VehicleBase's overridden methods.
 
-The standard vehicle controller in VPP, [VPVehicleController](/components/vehicle-controller),
-already inherits from VehicleBase. Here's an example of a [custom vehicle controller with source code](/advanced/custom-vehicles).
+The standard vehicle controller in VPP, [VPVehicleController](/components/vehicle-controller/),
+already inherits from VehicleBase. Here's an example of a [custom vehicle controller with source code](/advanced/custom-vehicles/).
 
 ## VehicleBase events
 
@@ -44,7 +44,7 @@ Important: you must configure each WheelState with the corresponding WheelCollid
 `WheelState.wheelCol`. Also, ensure to flag the steering wheels as steerable (this is used by the
 force feedback calculations).
 
-Check out the [source code example here](/advanced/custom-vehicles) for a comprehensive example on
+Check out the [source code example here](/advanced/custom-vehicles/) for a comprehensive example on
 initializing a custom vehicle controller.
 
 #### OnFinalize
@@ -121,7 +121,7 @@ precise are the numeric results but CPU usage is increased.
 A minimum value of 2 substeps is recommended. Multi-driven-axle vehicles should configure at least
 two substeps per driven axle.
 
-Detailed information: [Solver substeps explained](../advanced/misc-topics-explained.md#solver-numeric-integration)
+Detailed information: [Solver substeps explained](/advanced/misc-topics-explained/#solver-numeric-integration)
 
 # Scripting Reference
 
@@ -533,13 +533,13 @@ namespace VehiclePhysics
 
 ### See also
 
-[Block](/advanced/block-reference)<br>
-[GroundMaterial](/components/ground-materials#groundmaterial)<br>
-[GroundMaterialHit](/components/ground-materials#groundmaterialcs)<br>
-[GroundMaterialManagerBase](/components/ground-materials#groundmaterialcs)<br>
-[TireFriction](/blocks/tires)<br>
-[VehicleBehaviour](/advanced/vehiclebehaviour-reference)<br>
-[VPWheelCollider](/components/wheel-collider)<br>
+[Block](/advanced/block-reference/)<br>
+[GroundMaterial](/components/ground-materials/#groundmaterial)<br>
+[GroundMaterialHit](/components/ground-materials/#groundmaterialcs)<br>
+[GroundMaterialManagerBase](/components/ground-materials/#groundmaterialcs)<br>
+[TireFriction](/blocks/tires/)<br>
+[VehicleBehaviour](/advanced/vehiclebehaviour-reference/)<br>
+[VPWheelCollider](/components/wheel-collider/)<br>
 Wheel<br>
 
 # Contact Processing Reference

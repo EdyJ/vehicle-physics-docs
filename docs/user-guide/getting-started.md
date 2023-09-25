@@ -1,11 +1,11 @@
 # Getting started
 
 Type _Getting Started_ in your Project's search box and open any of the scenes in the results. You
-should have Vehicle Physics Pro set up already ([See Setting Up VPP](/user-guide/setting-up-vpp)).
+should have Vehicle Physics Pro set up already ([See Setting Up VPP](/user-guide/setting-up-vpp/)).
 
 ![Getting Started Scenes](/img/user-guide/vpp-getting-started-scenes.png)
 
-&fa-thumbs-up:lg; If you haven't setup the Unity project yet, you can still [download and play the demos](/about/demos){: .alert-link }
+&fa-thumbs-up:lg; If you haven't setup the Unity project yet, you can still [download and play the demos](/about/demos/){: .alert-link }
 {: .alert .alert-info }
 
 The vehicles in all these scenes typically start with the engine off. For starting the engine:
@@ -41,7 +41,7 @@ Key(s)                              | Function          | Notes
 
 #### Vehicle setup
 
-The main component that implements the vehicle simulation is **[VP Vehicle Controller](/components/vehicle-controller)**.
+The main component that implements the vehicle simulation is **[VP Vehicle Controller](/components/vehicle-controller/)**.
 The object **VPP Pickup** in the pickup test scene contains this component with all its settings to
 play with:
 
@@ -60,12 +60,12 @@ play with:
 	clutch simulation (_Friction Disc_) is not required.
 - **Gearbox:** transmission type, gear ratios, auto-shift parameters.
 - **Retarder:** typically used by heavy vehicles, not used at the pickup (zero levels).
-- **Advanced / Experimental settings:** leave then untouched for now. [Learn more](/advanced/vehiclebase-reference#advanced-experimental-settings)
+- **Advanced / Experimental settings:** leave then untouched for now. [Learn more](/advanced/vehiclebase-reference/#advanced-experimental-settings)
 
 The mass of the vehicle is configured at the Rigidbody component.
 
 Wheel properties (radius, mass) and suspension settings (spring, damper) are handled per-wheel at
-the [VP Wheel Collider](/components/wheel-collider) components:
+the [VP Wheel Collider](/components/wheel-collider/) components:
 
 ![VP Wheel Collider](/img/components/vpp-wheelcollider.png){: .img-medium .clickview }
 
@@ -76,43 +76,43 @@ features:
 
 ![VP Vehicle add-on components](/img/user-guide/vpp-vehicle-components.png){: .img-medium .clickview }
 
-[VP Standard Input](/components/vehicle-input#vpstandardinput)
+[VP Standard Input](/components/vehicle-input/#vpstandardinput)
 
 :	Reads the user input from the standard Unity Input class, then converts it into input for the
 	vehicle: steering, throttle, brake, etc.
 
-[VP Audio](/components/vehicle-addons#vpaudio)
+[VP Audio](/components/vehicle-addons/#vpaudio)
 
 :	Plays various audio effects based on the state of the vehicle and the wheels.
 
-[VP Tire Effects](/components/vehicle-addons#vptireeffects)
+[VP Tire Effects](/components/vehicle-addons/#vptireeffects)
 
 :	Triggers the tire-related effects such as marks, trails, smoke, and dust based on the state
-	of each wheel and the underlying [Ground Material](/components/ground-materials).
+	of each wheel and the underlying [Ground Material](/components/ground-materials/).
 
-[VP Visual Effects](/components/vehicle-addons#vpvisualeffects)
+[VP Visual Effects](/components/vehicle-addons/#vpvisualeffects)
 
 :	Plays various visual effects such as the steering wheel rotation, brake and reverse lights, and
 	dashboard gauges.
 
-[VP Telemetry](/components/vehicle-telemetry#vptelemetry)
+[VP Telemetry](/components/vehicle-telemetry/#vptelemetry)
 
 :	Displays a overlay window with detailed numeric data on the wheels and the vehicle. Toggle with
 	the <kbd>B</kbd> key.
 
-[VP Camera Target Setup](/components/camera-controller#vpcameratargetsetup)
+[VP Camera Target Setup](/components/camera-controller/#vpcameratargetsetup)
 
-:	Configures the parameters for this vehicle to be properly looked at with the [Camera Controller](/components/camera-controller)
+:	Configures the parameters for this vehicle to be properly looked at with the [Camera Controller](/components/camera-controller/)
 	component, such as minimum distance, view height, and more.
 
 #### Ground Materials
 
-The component [VP Ground Material Manager](/components/ground-materials#vpgroundmaterialmanager)
+The component [VP Ground Material Manager](/components/ground-materials/#vpgroundmaterialmanager)
 manages the ground materials present at the scene.
 
 ![VP Ground Materials](/img/user-guide/vpp-ground-materials.png){: .img-medium .clickview }
 
-Each [Ground Material](/components/ground-materials#groundmaterial) defines the material properties
+Each [Ground Material](/components/ground-materials/#groundmaterial) defines the material properties
 such as grip, drag, and the objects used for playing the tire effects (marks, smoke...) on that
 material.
 
@@ -123,11 +123,11 @@ affect the tire friction.
 
 #### Camera Controller
 
-The component [VP Camera Controller](/components/camera-controller) controls the camera movement
+The component [VP Camera Controller](/components/camera-controller/) controls the camera movement
 based on the target vehicle and several camera modes available.
 
 ![VP Camera Controller](/img/components/vpp-camera-controller-inspector.png){: .img-medium .clickview }
 
 &fa-thumbs-up:lg; Now that you know how vehicles work in Vehicle Physics Pro, you can now
-[create and configure a vehicle](vehicle-creation.md){: .alert-link } youself.
+[create and configure a vehicle](/user-guide/vehicle-creation/){: .alert-link } youself.
 {: .alert .alert-success }

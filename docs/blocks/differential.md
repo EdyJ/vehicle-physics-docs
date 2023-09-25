@@ -4,10 +4,10 @@ The differential block consists of one input and two outputs. Differentials alwa
 torque 50% to each output. Torque transfer among outputs takes place afterwards depending on the
 type of differential and the state of the input and the outputs.
 
-The standard [Vehicle Controller](/components/vehicle-controller) exposes the differential
+The standard [Vehicle Controller](/components/vehicle-controller/) exposes the differential
 configuration under the [Driveline section](/components/vehicle-controller/#driveline).
 
-Differential blocks may be used in any number and combination ([driveline examples](/blocks/driveline)).
+Differential blocks may be used in any number and combination ([driveline examples](/blocks/driveline/)).
 All expected and unexpected effects are simulated.
 
 ![VPP Differential](/img/blocks/vpp-differential-inspector.png)

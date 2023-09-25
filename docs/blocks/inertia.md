@@ -28,7 +28,7 @@ It is advised to configure the inertia and not to leave the Default mode, as the
 likely unrealistic.
 
 Alternatively, you may use the VPVehicleInertia component anywhere in the vehicle to configure the
-inertia separately from the VPVehicleController component (i.e. in [custom vehicles](/advanced/custom-vehicles)).
+inertia separately from the VPVehicleController component (i.e. in [custom vehicles](/advanced/custom-vehicles/)).
 
 #### Parametric (recommended)
 

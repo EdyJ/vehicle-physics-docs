@@ -1,6 +1,6 @@
 # Creating custom vehicles
 
-Vehicle Physics Pro includes [VPVehicleController](../components/vehicle-controller.md), a
+Vehicle Physics Pro includes [VPVehicleController](/components/vehicle-controller/), a
 full-featured vehicle controller ready for simulating most types of vehicles. If you need a kind of
 vehicle not supported by VPVehicleController then you can write your own vehicle controller easily.
 
@@ -8,7 +8,7 @@ A vehicle controller derives from `VehiclePhysics.VehicleBase`. It implements th
 vehicle by overriding the virtual methods and instancing and connecting the _Blocks_ representing
 the internal parts of the vehicle.
 
-The virtual methods in `VehiclePhysics.VehicleBase` and their roles are detailed in [VehicleBase reference](vehiclebase-reference.md).
+The virtual methods in `VehiclePhysics.VehicleBase` and their roles are detailed in [VehicleBase reference](/advanced/vehiclebase-reference/).
 
 ## Example source code
 
@@ -42,7 +42,7 @@ provides up to a maximum torque (maxDriveTorque) and can reach a maximum RPMs (m
 wheels are connected to the direct drive with a differential in the default configuration (Open).
 Steering, Brakes and Tires are parts of the Wheel blocks.
 
-This example doesn't make use of the [data bus](databus-reference.md). Instead, it exposes the
+This example doesn't make use of the [data bus](/advanced/databus-reference/). Instead, it exposes the
 properties driveInput, brakeInput and steerInput. The SimpleVehicleControllerInput.cs script reads
 the standard Unity Input and modifies these properties for controlling the vehicle.
 

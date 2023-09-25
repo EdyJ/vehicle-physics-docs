@@ -478,8 +478,8 @@ namespace VehiclePhysics
 ```
 ### Populating the Data bus
 
-A [custom vehicle controller](/advanced/custom-vehicles) using the Engine block should populate the
-vehicle's [data bus](/advanced/databus-reference) so all other components attached to the vehicle
+A [custom vehicle controller](/advanced/custom-vehicles/) using the Engine block should populate the
+vehicle's [data bus](/advanced/databus-reference/) so all other components attached to the vehicle
 can read the engine and clutch state from the bus.
 
 Add this code to the overridden `VehicleBase.DoUpdateData()` method in your controller to populate

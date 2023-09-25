@@ -10,7 +10,7 @@ instead.
 {: .alert .alert-info }
 
 &fa-warning:lg; Some features are available in specific VPP editions only. Check out the
-[Licensing section](/about/licensing){: .alert-link } for details.
+[Licensing section](/about/licensing/){: .alert-link } for details.
 {: .alert .alert-warning }
 
 #### Vehicle dynamics
@@ -77,7 +77,7 @@ instead.
 - Tracked vehicles (caterpillars)
 - Hydraulic articulations: excavators, stabilizers, cranes, etc
 - Two-wheeled vehicles (experimental)
-- OBD-II inspired protocol ([Data Bus](/advanced/databus-reference)) for communication with vehicles
+- OBD-II inspired protocol ([Data Bus](/advanced/databus-reference/)) for communication with vehicles
 
 #### Automation and autonomous vehicles
 
@@ -105,9 +105,9 @@ instead.
 
 - Up to 10 axles (20 wheels) in standard vehicles
 - Unlimited wheels per vehicle in custom vehicles
-- [Custom add-ons](/advanced/custom-addons) for external features (e.g. custom gearbox logic)
-- [Custom vehicles](/advanced/custom-vehicles) and configurations (e.g. number and type of motors)
-- [Custom _Blocks_](/advanced/custom-blocks) or internal vehicle parts (e.g. custom differential type)
+- [Custom add-ons](/advanced/custom-addons/) for external features (e.g. custom gearbox logic)
+- [Custom vehicles](/advanced/custom-vehicles/) and configurations (e.g. number and type of motors)
+- [Custom _Blocks_](/advanced/custom-blocks/) or internal vehicle parts (e.g. custom differential type)
 - [Custom ground materials](/components/ground-materials/#vpgroundmaterialmanagercs) by overriding
 	the provided ground material manager
 - Custom automated tests for measuring vehicle specifications
@@ -133,11 +133,11 @@ instead.
 #### Support
 
 - Extensive and detailed online documentation (this site)
-- [Customer support](/about/support) provided directly from the developer
+- [Customer support](/about/support/) provided directly from the developer
 - [Professional Services](/about/support/#professional-services) available on-demand at hourly rates
 - Dedicated [Support Q&A site](https://support.vehiclephysics.com "Vehicle Physics Pro Q&A"){: target="_blank" }
 - Updates delivered by GIT repositories and Unitypackages.
-- In continuous development since 2010 ([changelog](/about/changelog))
+- In continuous development since 2010 ([changelog](/about/changelog/))
 
 # Application examples
 

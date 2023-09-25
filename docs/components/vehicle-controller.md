@@ -7,7 +7,7 @@ The vehicle-equivalent of Unity's character controller. Simulates most types of 
 The vehicle controller exposes the settings for the center of mass, inertia, axles, steering, brakes,
 tires, powertrain (engine, clutch, gearbox, retarder, driveline), driving aids and safety aids.
 Other settings for the wheels (radius, mass) and suspension (spring, damper) are configured at each
-[VP Wheel Collider](wheel-collider) component independently.
+[VP Wheel Collider](/components/wheel-collider/) component independently.
 
 This is the block layout of an AWD vehicle in VPVehicleController:
 
@@ -50,7 +50,7 @@ Notes:
 - The Retarder Brake is typically used in heavy transport vehicles (trucks, buses). It stays
 disabled on regular cars, SUVs, vans, etc.
 
-&fa-thumbs-o-up; You can [write your own custom vehicle controller](/advanced/custom-vehicles){: .alert-link }
+&fa-thumbs-o-up; You can [write your own custom vehicle controller](/advanced/custom-vehicles/){: .alert-link }
 for special types of vehicles not directly covered by the stock Vehicle Controller component.
 {: .alert .alert-info }
 
@@ -93,18 +93,18 @@ handling (understeer / oversteer).
 
 	Feel free to play with the vehicle and modify Inertia Bias in runtime for adjusting the handling.
 
-Details: [Inertia helper](/blocks/inertia)
+Details: [Inertia helper](/blocks/inertia/)
 
 ### Axles
 
-Each axle references the left-right wheels ([VPWheelCollider](/components/wheel-collider)
+Each axle references the left-right wheels ([VPWheelCollider](/components/wheel-collider/)
 components) and configure its features.
 
 ![VP Vehicle Controller axles](/img/components/vpp-vehicle-controller-axles.png){: .img-small .clickview }
 
 ##### Left-right wheels
 
-The [VPWheelCollider](/components/wheel-collider) component for each wheel of the axle.
+The [VPWheelCollider](/components/wheel-collider/) component for each wheel of the axle.
 Radius, mass, suspension distance, suspension spring, suspension damper and visual meshes are
 configured at the VPWheelCollider.
 
@@ -129,7 +129,7 @@ Steering parameters for the vehicle: angle, Ackerman, toe...
 
 ![VP Vehicle Controller steering](/img/blocks/vpp-steering-inspector.png){: .img-small .clickview }
 
-Details: [Steering helper](/blocks/steering)
+Details: [Steering helper](/blocks/steering/)
 
 ### Brakes
 
@@ -137,7 +137,7 @@ Brake parameters for the vehicle, including brake power, brake balance and handb
 
 ![VP Vehicle Controller brakes](/img/blocks/vpp-brakes-inspector.png){: .img-small .clickview }
 
-Details: [Brakes helper](/blocks/brakes)
+Details: [Brakes helper](/blocks/brakes/)
 
 ### Tires
 
@@ -145,7 +145,7 @@ Tire friction model and settings for the wheels of the vehicle.
 
 ![VP Vehicle Controller tires](/img/blocks/vpp-tires-inspector.png){: .img-small .clickview }
 
-Details: [Tire friction](/blocks/tires)
+Details: [Tire friction](/blocks/tires/)
 
 ### Driveline and differential(s)
 
@@ -179,9 +179,9 @@ Torque Splitter
 
 Details:
 
-- [Driveline helper](/blocks/driveline)
-- [Differential block](/blocks/differential)
-- [Torque Splitter block](/blocks/torque-splitter)
+- [Driveline helper](/blocks/driveline/)
+- [Differential block](/blocks/differential/)
+- [Torque Splitter block](/blocks/torque-splitter/)
 
 ### Engine
 
@@ -194,7 +194,7 @@ performance data in the graph and below it. If the combination of values is not 
 will be displayed.
 {: .alert .alert-info }
 
-Details: [Engine block](/blocks/engine)
+Details: [Engine block](/blocks/engine/)
 
 ### Clutch
 
@@ -209,7 +209,7 @@ The clutch couples the engine with the transmission and driveline.
 - Torque Converter Limited: same as Torque Converter but with a limit in the torque than can pass
 	through the clutch.
 
-Details: [Clutch block](/blocks/clutch)
+Details: [Clutch block](/blocks/clutch/)
 
 ### Gearbox
 
@@ -225,7 +225,7 @@ Transmission type, gear ratios and transmission settings.
 Automatic transmissions are different than manual with auto-shift. An automatic transmission
 provides smooth transitions without neutral gap among gears.
 
-Details: [Gearbox block](/blocks/gearbox)
+Details: [Gearbox block](/blocks/gearbox/)
 
 ### Retarder Brake
 
@@ -234,11 +234,11 @@ and heavy vehicles.
 
 ![VP Vehicle Controller retarder](/img/blocks/vpp-retarder-inspector.png){: .img-small .clickview }
 
-Details: [Retarder block](/blocks/retarder)
+Details: [Retarder block](/blocks/retarder/)
 
 ### Advanced / Experimental settings
 
-More settings are detailed at the [VehicleBase reference](/advanced/vehiclebase-reference#advanced-experimental-settings).
+More settings are detailed at the [VehicleBase reference](/advanced/vehiclebase-reference/#advanced-experimental-settings).
 
 #### Engine reaction factor
 
@@ -361,19 +361,19 @@ public class VPAxle
 ### See also
 
 AntiSpin<br>
-[Brakes](/blocks/brakes)<br>
-[Driveline](/blocks/driveline)<br>
-[Differential](/blocks/differential)<br>
-[Engine](/blocks/engine)<br>
-[Gearbox](/blocks/gearbox)<br>
-[Inertia](/blocks/inertia)<br>
-[Retarder](/blocks/retarder)<br>
+[Brakes](/blocks/brakes/)<br>
+[Driveline](/blocks/driveline/)<br>
+[Differential](/blocks/differential/)<br>
+[Engine](/blocks/engine/)<br>
+[Gearbox](/blocks/gearbox/)<br>
+[Inertia](/blocks/inertia/)<br>
+[Retarder](/blocks/retarder/)<br>
 SpeedControl<br>
 StabilityControl<br>
-[Steering](/blocks/steering)<br>
+[Steering](/blocks/steering/)<br>
 SteeringAids<br>
-[TireFriction](/blocks/tires)<br>
-[TorqueSplitter](/blocks/torque-splitter)<br>
+[TireFriction](/blocks/tires/)<br>
+[TorqueSplitter](/blocks/torque-splitter/)<br>
 TractionControl<br>
-[VehicleBase](/advanced/vehiclebase-reference)<br>
-[VPWheelCollider](/components/wheel-collider)<br>
+[VehicleBase](/advanced/vehiclebase-reference/)<br>
+[VPWheelCollider](/components/wheel-collider/)<br>

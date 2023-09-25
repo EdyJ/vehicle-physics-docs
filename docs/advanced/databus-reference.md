@@ -10,18 +10,18 @@ inspired in the [ODB-II standard](http://en.wikipedia.org/wiki/OBD-II_PIDs):
 - NaN is gracefully supported as integer: <code>(int)NaN = -2147483647</code>
 - Full forwards-backwards compatibility along versions.
 
-[Add-on components (VehicleBehaviour)](/advanced/custom-addons) may use the data bus for
+[Add-on components (VehicleBehaviour)](/advanced/custom-addons/) may use the data bus for
 reading/writing values. _Values_ are arranged into _channels_. Accessing a specific value requires
 the pair `ChannelId, ValueId`. The standard Channels and their available values are referenced below.
 
-[Vehicle controllers](/advanced/vehiclebase-reference) are responsible of reading the data bus,
-feeding the internal components ([Blocks](/advanced/block-reference)), collecting the result, and
+[Vehicle controllers](/advanced/vehiclebase-reference/) are responsible of reading the data bus,
+feeding the internal components ([Blocks](/advanced/block-reference/)), collecting the result, and
 populating back the relevant values in the bus.
 
 #### Accessing the data bus
 
-The bus is accessed via public property `data` exposed in [VehicleBase](/advanced/vehiclebase-reference#properties).
-Use code like this within a [VehicleBehaviour-derived component](/advanced/custom-addons) (or any
+The bus is accessed via public property `data` exposed in [VehicleBase](/advanced/vehiclebase-reference/#properties).
+Use code like this within a [VehicleBehaviour-derived component](/advanced/custom-addons/) (or any
 other component with a reference to the vehicle controller):
 
 ```
@@ -123,9 +123,9 @@ input. Successive gear shift commands can be grouped by adding/subtracting +-1 t
 |MinGearOverride	| Shortest gear override								| 0 = no override, n = minimum gear allowed (forward or reverse), excepting neutral.
 |MaxGearOverride	| Largest gear override 								| 0 = no override, n = top gear allowed (forward or reverse).
 
-**<sup>1</sup> DifferentialLock** affects the [axle differentials](/blocks/driveline) only.
+**<sup>1</sup> DifferentialLock** affects the [axle differentials](/blocks/driveline/) only.
 
-**<sup>2</sup> FrontDifferentialLock / RearDifferentialLock** takes priority over DifferentialLock. Affects front/rear [axle differentials](/blocks/driveline) only.
+**<sup>2</sup> FrontDifferentialLock / RearDifferentialLock** takes priority over DifferentialLock. Affects front/rear [axle differentials](/blocks/driveline/) only.
 
 **<sup>3</sup> DrivelineLock** affects the element connecting the front-rear regions of the
-[driveline](/blocks/driveline). This element may be either a center differential or a torque splitter.
+[driveline](/blocks/driveline/). This element may be either a center differential or a torque splitter.

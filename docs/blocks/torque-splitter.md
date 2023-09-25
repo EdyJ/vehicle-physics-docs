@@ -7,9 +7,9 @@ When both outputs rotate at the same rate the torque from the input is applied t
 When there's a difference of angular velocity between the outputs then part of the torque is routed
 to the second output.
 
-The standard [Vehicle Controller](/components/vehicle-controller) exposes the torque splitter
+The standard [Vehicle Controller](/components/vehicle-controller/) exposes the torque splitter
 configuration under the [Driveline section](/components/vehicle-controller/#driveline) when the
-selected [driveline layout](/blocks/driveline) includes a torque splitter.
+selected [driveline layout](/blocks/driveline/) includes a torque splitter.
 
 This block simulates some AWD transmissions such as the [Haldex Traction](https://en.wikipedia.org/wiki/Haldex_Traction)
 available in some 4x4 models (i.e. Audi Quattro), which engages drive torque in the second axle when

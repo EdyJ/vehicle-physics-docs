@@ -3,11 +3,11 @@
 The input components read the input values from the user and passes them to the vehicle. This
 includes steering, throttle, brakes, gear lever, etc.
 
-The vehicle receives the input data in the [data bus](../advanced/databus-reference.md),
+The vehicle receives the input data in the [data bus](/advanced/databus-reference/),
 Input channel (`VehiclePhysics.Channel.Input`).
 
-&fa-thumbs-o-up; You could write your own input component easily by [writing an add-on component](../advanced/custom-addons.md)
-that modifies the values of the [Input channel in the Data Bus](../advanced/databus-reference.md#input-channel).
+&fa-thumbs-o-up; You could write your own input component easily by [writing an add-on component](/advanced/custom-addons/)
+that modifies the values of the [Input channel in the Data Bus](/advanced/databus-reference/#input-channel).
 For example, an AI controller or a remote player.
 {: .alert .alert-info }
 

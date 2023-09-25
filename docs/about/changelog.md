@@ -2,7 +2,7 @@
 
 Brief summary of the most significant additions to Vehicle Physics Pro over time.
 
-Full development details are available via GIT revision logs ([VPP subscription](/about/licensing) required):
+Full development details are available via GIT revision logs ([VPP subscription](/about/licensing/) required):
 
 - [Vehicle Physics Core (Professional Edition)](http://projects.edy.es/trac/edy_vehicle-physics-pro-sdk/log/)
 - [Vehicle Physics Core (Enterprise Edition)](http://projects.edy.es/trac/edy_vehicle-physics-core/log/)
@@ -86,7 +86,7 @@ Advanced telemetry system
 
 - Major **DirectInput** review for reliability. Among other improvements, now supports hot device connect/disconnect.
 - New **rumble effects** for steering wheel devices.
-- New event method **UpdateVehicleInput** in [VehicleBehaviour](/advanced/vehiclebehaviour-reference) to implement vehicle input. This ensures the input devices to be read and applied to the vehicle within the same simulation step.
+- New event method **UpdateVehicleInput** in [VehicleBehaviour](/advanced/vehiclebehaviour-reference/) to implement vehicle input. This ensures the input devices to be read and applied to the vehicle within the same simulation step.
 - New **gearbox options** to protect the engine by shifting up above the given Max Rpm.
 - [VehicleBase](/advanced/vehiclebase-reference/#properties) now exposes **angular accelerations**.
 - The Professional edition is now **compatible with IL2CPP** scripting backend.
@@ -94,9 +94,9 @@ Advanced telemetry system
 #### March 2022 - SDK V9.3
 
 - New **front / rear differential lock settings** allowing to specify which	differential(s)
-	should be locked or open. [Databus](/advanced/databus-reference#settings-channel)
-- Improved **downshifting in Limited Drive Modes (D1-D5)**, allowing better use of engine brake. [Gearbox](/blocks/gearbox)
-- New **Steering wheel range** property per vehicle. [Steering](/blocks/steering)
+	should be locked or open. [Databus](/advanced/databus-reference/#settings-channel)
+- Improved **downshifting in Limited Drive Modes (D1-D5)**, allowing better use of engine brake. [Gearbox](/blocks/gearbox/)
+- New **Steering wheel range** property per vehicle. [Steering](/blocks/steering/)
 - New **physical steering wheel range** setting (_configuredWheelRange_) in the device input components.
 - New **force feedback rumble effects** based in engine rpm, speed, and suspension bumps.
 - Major **DirectInput overhaul**: support device reconnection, improved reliability, more force feedback effects.
@@ -109,7 +109,7 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 #### December 2021 - SDK V9.2
 
 - New **Limited Drive modes (D1-D5)** in automatic gearbox. These modes work like the regular D
-	mode but using up to the specified gear only (i.e. up to 3nd gear in D3). [Gearbox](/blocks/gearbox)
+	mode but using up to the specified gear only (i.e. up to 3nd gear in D3). [Gearbox](/blocks/gearbox/)
 - New **Variable Vehicle Cargo** component that simulates cargo in any vehicle easily by
 	modifying mass and center of mass.
 - New **DirectInput Steer, Pedals and Shifter** components to configure individual
@@ -167,7 +167,7 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 
 #### March 2020 - SDK V8
 
-- **Unitypackages** are now provided for downloading Vehicle Physics Pro and configuring the Project Settings. [Learn more](/user-guide/setting-up-vpp)
+- **Unitypackages** are now provided for downloading Vehicle Physics Pro and configuring the Project Settings. [Learn more](/user-guide/setting-up-vpp/)
 - **Tire friction model improved** providing smoother and much more realistic behavior. [Video](https://twitter.com/VehiclePhysics/status/1239565257519050758)
 - **Anti-roll bar improved** for better control at high speeds. [Tweet](https://twitter.com/VehiclePhysics/status/1237023540722966531)
 - New **ground rumble effects** providing physics relief effects on flat geometry. [Tweet](https://twitter.com/VehiclePhysics/status/1242097538775334912)
@@ -188,7 +188,7 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 
 #### November 2019 - SDK V7
 
-- New component **[VPVehicleToolkit](/components/vehicle-toolkit)** providing an useful high-level interface to the most commonly used vehicle features.
+- New component **[VPVehicleToolkit](/components/vehicle-toolkit/)** providing an useful high-level interface to the most commonly used vehicle features.
 - New support for the **Fanatec Podium Wheel Base DD2** steering wheel.
 - Added support to 3D vehicle models oriented in any axis, not necessarily "front +Z".
 - New **camera movement** option in first person (driver) view.
@@ -228,11 +228,11 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 
 - Improved the **Xbox input component** now providing customizable smooth steering.
 - Improved the **Custom Cameras** feature, now allowing several cameras to share the same activation key.
-- UI: **Ignition Key UI** for switching the engine on/off with mouse or touch. Added to the [demos](/about/demos).
+- UI: **Ignition Key UI** for switching the engine on/off with mouse or touch. Added to the [demos](/about/demos/).
 
 #### April 2019
 
-- **[New VPP Demos Released!](/about/demos)** Available for PC/Windows and Mac OS X.
+- **[New VPP Demos Released!](/about/demos/)** Available for PC/Windows and Mac OS X.
 - New **Optimal gear shift calculation** feature. Computes the exact point where shifting up (or down) provides more acceleration than current gear. Used in the [Ascari Demo](/about/demos/#ascari-demo).
 - UI: Timer display component provides **sector times**.
 - UI: **Quick Start** pop up.
@@ -386,13 +386,13 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 
 - New **fuel consumption model** for combustion engine
 - New **VPVehicleJoint** component for easily rigging articulated vehicles
-- New **VPDeviceInput** component [[documentation]](https://veh	iclephysics.com/components/vehicle-input/#vpdeviceinput) for using any DirectInput device including force feedback
+- New **VPDeviceInput** component [[documentation]](/components/vehicle-input/#vpdeviceinput) for using any DirectInput device including force feedback
 - New **anti-roll bar** component providing suspension linkage between two wheels
 - New **dynamic suspension** component for adjusting suspension with load dynamically
 
 #### March 2016
 
-- New **VPPerformanceDisplay** component [[documentation]](https://vehiclephysics.com/components/vehicle-telemetry/#vpperformancedisplay) providing live performance charts for a variety of data from the vehicle.
+- New **VPPerformanceDisplay** component [[documentation]](/components/vehicle-telemetry/#vpperformancedisplay) providing live performance charts for a variety of data from the vehicle.
 
 #### February 2016
 

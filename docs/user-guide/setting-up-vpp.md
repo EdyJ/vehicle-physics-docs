@@ -17,7 +17,7 @@ Scripting Runtime Version and API Compatibility Level may be configured in Proje
 
 ### Download and import VPP unitypackage
 
-1. Download the .unitypackage file. Professional and Enterprise editions require an active [VPP subscription](/about/licensing).
+1. Download the .unitypackage file. Professional and Enterprise editions require an active [VPP subscription](/about/licensing/).
 
 	- **[Community Edition](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)**
 	{: .spacer }
@@ -68,7 +68,7 @@ Project Settings - Tags And Layers
 	probes.	Note that this Vehicles layer is _not_ a requirement of VPP. Only the demos and examples
 	use it.
 
-&fa-thumbs-up:lg; You can now head to the [Getting Started](getting-started.md){: .alert-link }
+&fa-thumbs-up:lg; You can now head to the [Getting Started](/user-guide/getting-started/){: .alert-link }
 section for start using Vehicle Physics Pro.
 {: .alert .alert-success }
 
@@ -76,7 +76,7 @@ section for start using Vehicle Physics Pro.
 
 Instead of importing the unitypackages you may clone the VPP repositories directly as submodules
 in your project. This allows your project to stay up-to-date with the latest changes in VPP as
-they're pushed to the repository. Accessing the repositories requires an active [VPP subscription](/about/licensing).
+they're pushed to the repository. Accessing the repositories requires an active [VPP subscription](/about/licensing/).
 
 - **[Professional Edition repositories](https://edy.repositoryhosting.com/trac/edy_vehicle-physics-pro-professional)**
 	{ .spacer }

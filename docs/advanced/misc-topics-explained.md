@@ -174,7 +174,7 @@ Two methods:
 
 - Disable **Can Stall**. Engine will be always on, without possibility of stall.
 
-- Keep sending the value "1" to `InputData.Key` (Input channel) via the [Data Bus](databus-reference.md)
+- Keep sending the value "1" to `InputData.Key` (Input channel) via the [Data Bus](/advanced/databus-reference/)
 	until the value `VehicleData.EngineStalled` (Vehicle channel) returns "0". Then send a "0" to
 	`InputData.Key`.
 
@@ -258,21 +258,21 @@ Inertia
 
 Low speed
 
-:	The behavior at low speed may be configured with the [suspension](/components/vehicle-suspension)
+:	The behavior at low speed may be configured with the [suspension](/components/vehicle-suspension/)
 	(springs, dampers, anti-roll bars) and weight distribution (center of mass).
 
 High speed
 
 :	Behavior at high speed may be adjusted with aerodynamics.
 
-	- Configure a couple of [VPAeroSurface components](/components/vehicle-dynamics#vpaerosurface)
+	- Configure a couple of [VPAeroSurface components](/components/vehicle-dynamics/#vpaerosurface)
 		in your vehicle. One should be positioned at the front axle, and the other at rear axle.
 	- Configure _Downforce Coefficient_ at both components. This will define how much weight
 		(= downforce) will be added to each axle as the speed increases. If the front axle receives
 		more aerodynamic downforce than the rear axle, then the vehicle will get oversteered at high
 		speeds. If the opposite applies, the vehicle will get understeered at hight speeds.
 
-	You can use the [Performance Analysis component](/components/vehicle-telemetry#vpperformanceanalysis)
+	You can use the [Performance Analysis component](/components/vehicle-telemetry/#vpperformanceanalysis)
 	in the _Wheel Load_ mode so you could see the effects of the aerodynamic components graphically:
 
 	![Suspension Travel chart](/img/components/vpp-performance-chart-wheel-load.jpg){: .clickview .img-medium }
@@ -301,7 +301,7 @@ Configure the vehicle inertia
 
 Automatic steering angle limit
 
-:	This setting in [VPVehicleController](/components/vehicle-controller.md) limits the maximum
+:	This setting in [VPVehicleController](/components/vehicle-controller/) limits the maximum
 	steering angle to the value that provides the most lateral grip at the actual vehicle speed.
 	This ensures the wheels are performing to their maximum grip, thus allowing to experience and
 	configure the vehicle's handling properly.
@@ -561,7 +561,7 @@ disengaging it when the handbrake is applied. This disconnects the rear axle fro
 front axle.
 
 The option for disengaging the central driveline element when handbrake is applied can be found
-at the component [VPStandardInput](../components/vehicle-input.md).
+at the component [VPStandardInput](/components/vehicle-input/#vpstandardinput).
 
 In addition you can use the splitter's _preload_ settings for configure how much torque is allowed
 to be transmitted while handbraking. This allows a great control on how much the vehicle gets
@@ -635,9 +635,9 @@ effect.
 #### How to control the vehicle my way? (mobile controller, AI, ...)
 
 Create your own input component, i.e. CustomInput, for sending your input values (throttle, brakes
-steering...) to the vehicle via [Data Bus](databus-reference.md). Use the included standard input
+steering...) to the vehicle via [Data Bus](/advanced/databus-reference/). Use the included standard input
 component `VPStandardInput.cs` as example on how to send the values. Add your custom input component
-to the vehicle GameObject instead of [VPStandardInput](../components/vehicle-input.md).
+to the vehicle GameObject instead of [VPStandardInput](/components/vehicle-input/#vpstandardinput).
 
 Do not modify the original scripts, as future updates may override your changes. The package is
 designed so any functionality could be added via custom scripts.
@@ -646,7 +646,7 @@ designed so any functionality could be added via custom scripts.
 
 Use of scale has these conditions:
 
-- Scale must be 1 in the vehicle's root GameObject, which holds the Rigidbody and the [VPVehicleController](/components/vehicle-controller.md)
+- Scale must be 1 in the vehicle's root GameObject, which holds the Rigidbody and the [VPVehicleController](/components/vehicle-controller/)
 components.
 - Scale must be 1 in all VPWhelColliders components and along their ancestor lines up to vehicle's
 root.
@@ -665,7 +665,7 @@ Check out the property `wheelState` in any controller that inherits from `Vehicl
 It lets you access the array of state variables for all wheels. You can use foreach () and count how
 many wheels have the flag `wheelState.grounded` enabled.
 
-[VPVehicleController](/components/vehicle-controller.md) (derived from `VehiclePhysics.VehicleBase`)
+[VPVehicleController](/components/vehicle-controller/) (derived from `VehiclePhysics.VehicleBase`)
 adds the wheels to the `wheelState` array in the same order as they're specified in the `Axles`
 property. Typically, the order is front to rear, left and right. But this order not strictly
 enforced, it might vary if the user specifies axes in a different order. Also, custom vehicle

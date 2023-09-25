@@ -61,7 +61,7 @@ types and configurations.
 - Highly customizable (add-on components)
 - Efficient, mobile-capable
 - Full-time product support
-- **[Detailed feature list ...](/about/features)**
+- **[Detailed feature list ...](/about/features/)**
 
 ### Free Edition
 
@@ -70,7 +70,7 @@ from the Unity Asset Store:
 
 [![Vehicle Physics Pro Community Edition](/img/Unity_AS_Badge_RGB.png "Vehicle Physics Pro Community Edition")](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556){: target="_blank" style="display: block; margin: 0 auto; max-width: 173px;" }
 
-[Professional and Enterprise licenses are available](/about/licensing) for individuals and organizations.
+[Professional and Enterprise licenses are available](/about/licensing/) for individuals and organizations.
 
 <br>
 

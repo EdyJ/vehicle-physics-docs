@@ -2,7 +2,7 @@
 
 Add-on components modifying the vehicle's handling and behavior.
 
-You can [write your own add-on components](../advanced/custom-addons.md) easily if the provided
+You can [write your own add-on components](/advanced/custom-addons/) easily if the provided
 components don't fit your needs or you need other features.
 
 ### VPAntiRollBar
@@ -15,7 +15,7 @@ body lean in turns at that axle.
 
 ![VP Anti Roll Bar](/img/components/vpp-anti-roll-bar.png){: .img-medium .clickview }
 
-[Full details on VPAntiRollBar](/components/vehicle-suspension#vpantirollbar) in the Suspension section.
+[Full details on VPAntiRollBar](/components/vehicle-suspension/#vpantirollbar) in the Suspension section.
 
 ### VPRollingFriction
 

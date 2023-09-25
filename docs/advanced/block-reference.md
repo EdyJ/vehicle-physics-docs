@@ -4,12 +4,12 @@ The drivetrain in Vehicle Physics Pro is designed as a tree of connected _Blocks
 implementing an internal mechanical part of the vehicle. The drivetrain may use any number and
 combination of connected blocks.
 
-VPP provides blocks for the most common parts: engine, gearbox, differential, etc. The provided [Vehicle Controller component](/components/vehicle-controller)
+VPP provides blocks for the most common parts: engine, gearbox, differential, etc. The provided [Vehicle Controller component](/components/vehicle-controller/)
 internally connects the necessary blocks based on the vehicle configuration (i.e front-wheel-drive,
 all-wheel-drive, h-drive, etc).
 
 Also, you may write custom blocks if your vehicle requires specific parts not provided in VPP. Check
-out [Creating custom blocks](/advanced/custom-blocks) for an example of a custom block with source
+out [Creating custom blocks](/advanced/custom-blocks/) for an example of a custom block with source
 code.
 
 Example of drivetrain in a vehicle controller:
@@ -46,7 +46,7 @@ A block inherits from the base class `VehiclePhysics.Block`. Blocks are hosted b
 controller (_host_), such as `VPVehicleController` on any other component derived from
 `VehiclePhysics.VehicleBase`.
 
-See [Creating Custom Vehicles](custom-vehicles.md) for an example source code on a vehicle
+See [Creating Custom Vehicles](/advanced/custom-vehicles/) for an example source code on a vehicle
 controller creating and connecting Blocks.
 
 ### Input and Output connections

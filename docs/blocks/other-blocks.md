@@ -1,9 +1,9 @@
 # Other blocks
 
-These are not used by [VPVehicleController](/components/vehicle-controller), but they're still
-available for [custom vehicle controllers](/advanced/custom-vehicles).
+These are not used by [VPVehicleController](/components/vehicle-controller/), but they're still
+available for [custom vehicle controllers](/advanced/custom-vehicles/).
 
-[Learn more about the Block protocol](/advanced/block-reference)
+[Learn more about the Block protocol](/advanced/block-reference/)
 
 ### DirectDrive
 
@@ -133,7 +133,7 @@ public class TorqueInjector : Block
 A simple lock-ratio based clutch that may be inserted anywhere in the drivetrain. Intended for
 disengaging parts of the transmission (i.e. as in a bulldozer).
 
-The [Engine block](/blocks/engine) includes its own, more complete, clutch implementation.
+The [Engine block](/blocks/engine/) includes its own, more complete, clutch implementation.
 
 ```cs
 namespace VehiclePhysics
@@ -160,7 +160,7 @@ public class Clutch : Block
 Block providing a brake between the input and the wheel. Requires its output to be connected
 directly to a Wheel block.
 
-For most vehicles it's better to Use the [Brakes helper](/blocks/brakes) class instead, which
+For most vehicles it's better to Use the [Brakes helper](/blocks/brakes/) class instead, which
 controls all brakes once providing brake balancing, handbrake and ABS as well.
 
 ```cs

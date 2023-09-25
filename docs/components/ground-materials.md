@@ -79,20 +79,20 @@ Drag
 
 Marks Renderer
 :	Optional reference to a [VPGroundMarksRenderer](#vpgroundmarksrenderer) component for drawing the
-	tire marks on this ground material. Marks will be triggered by the component [VPTireEffects](vehicle-addons.md#vptireeffects)
+	tire marks on this ground material. Marks will be triggered by the component [VPTireEffects](/components/vehicle-addons/#vptireeffects)
 	if available in the vehicle.
 
 Particle Emitter
 :	Optional reference to a [VPGroundParticleEmitter](#vpgroundparticleemitter) component for
 	emitting particles on this ground material. Particles will be triggered by the component
-	[VPTireEffects](vehicle-addons.md#vptireeffects) if available in the vehicle.
+	[VPTireEffects](/components/vehicle-addons/#vptireeffects) if available in the vehicle.
 
 Rumble Effect
 :	Optional reference to a [VPGroundRumbleEffect](#vpgroundrumbleeffect) component for simulating
 	rumble and ground relief in the wheels without depending on the collision geometry.
 
 Surface Type
-:	A _hint_ on the type of surface. Mostly used by vehicle add-on components such as [VPAudio](vehicle-addons.md#vpaudio)
+:	A _hint_ on the type of surface. Mostly used by vehicle add-on components such as [VPAudio](/components/vehicle-addons/#vpaudio)
 	for playing different effects:
 
  	- **Hard**: tire skid audio, hard impacts, hard body drag, body scratches (asphalt, tarmac, concrete, metal...)
