@@ -11,7 +11,18 @@ Full development details are available via GIT revision logs ([VPP subscription]
 
 <hr>
 
-&fa-thumbs-up:lg; This page is updated from time to time. Check out [@VehiclePhysics](https://twitter.com/VehiclePhysics){: .alert-link } on Twitter for weekly updates ([#vppdev](https://twitter.com/search?q=%23vppdev&src=hashtag_click&f=live)).
+!!! success "&fa-thumbs-o-up; Advanced Tip: Front and Rear aerodynamics"
+	If the car heavily relies on the aerodynamics (i.e. a formula racing car) then you may configure
+	front and rear aerodynamics independently.
+
+	- Use two GameObjects with an `VPAeroSurface` each.
+	- Put them at the longitudinal positions of the front axle and the rear axle, respectively.
+	- The vertical positions should be the middle of the height of the car the corresponding
+		position.
+
+	You may then configure drag and downforce independently at each position.
+
+&fa-thumbs-up:lg; This page is updated from time to time.<br><br>Check out [@VehiclePhysics on X](https://twitter.com/VehiclePhysics){: .alert-link } or [@VehiclePhysics on Mastodon](https://mastodon.gamedev.place/@VehiclePhysics){: .alert-link } for weekly updates. The hashtag #VPPDev shows the recent developments.<br>[#VPPDev on X](https://twitter.com/search?q=%23vppdev&src=hashtag_click&f=live)<br>[#VPPDev on Mastodon](https://mastodon.gamedev.place/tags/VPPDev).
 {: .alert .alert-success }
 
 #### Now under development (2023):
@@ -53,6 +64,40 @@ Advanced telemetry system
 	- Different chart types: time/distance based, scatter plots, histogram
 
 <hr>
+
+#### September 2023
+
+- Started working on the **foundation for upcoming engine-independent developments** in Vehicle
+	Physics Pro. Initially, a new wheel collider implementation **replacing Unity's WheelCollider**
+	will be developed on top of this foundation. Other Wheel contact models will follow. In the long term,
+	this will allow porting VPP to other engines in the future.
+
+	More information:<br>
+	[https://twitter.com/VehiclePhysics/status/1706293552571920804](https://twitter.com/VehiclePhysics/status/1706293552571920804)<br>
+	[https://mastodon.gamedev.place/@VehiclePhysics/111261878091480607](https://mastodon.gamedev.place/@VehiclePhysics/111261878091480607)
+
+#### August 2023
+
+- New **VPTirePressureEmulator** component which emulates changes in the tire pressure by modifying
+	wheel radius, suspension rates, and tire friction.
+- New **panning feature** in Orbit camera mode. Also new initialization options. ([Post](https://mastodon.gamedev.place/@VehiclePhysics/111046746970239518))
+- New **VPWindAudio** component featuring a better model to simulate the wind audio volume. ([Post](https://mastodon.gamedev.place/@VehiclePhysics/110888181172676984))
+- New **dual torque map model for MGUs** in 100% electric cars, allowing to configure front-rear power
+	balance with a single settings file. ([Post](https://mastodon.gamedev.place/@VehiclePhysics/110967418197376127))
+- New empty scene which uses **built-in lighting settings** added to the Examples repo. This scene
+	doesn't require or generate a separate lighting file in Unity 2021+.
+- New features for the **LapTimer** component: best lap, ideal lap, lap list. ([Post](https://mastodon.gamedev.place/@VehiclePhysics/110769296823684249))
+
+#### June 2023
+
+- The FFB component **VPWheelDeviceInput** can now actively limit the wheel's range when configured to a
+	value larger than vehicle's steering wheel range.
+
+#### May 2023
+
+- New **electric motor block** for electric/hybrid vehicles ([Post](https://mastodon.gamedev.place/@VehiclePhysics/110491883492084042))
+- Precise torque control in the new electric motor block allowing **accurate Traction Control (TCS)**. ([Post](https://mastodon.gamedev.place/@VehiclePhysics/110593039176650363))
+- New sensor implementation for reading accurate telemetry values from the powertrain.
 
 #### April 2023 - SDK V9.4
 
