@@ -11,17 +11,6 @@ Full development details are available via GIT revision logs ([VPP subscription]
 
 <hr>
 
-!!! success "&fa-thumbs-o-up; Advanced Tip: Front and Rear aerodynamics"
-	If the car heavily relies on the aerodynamics (i.e. a formula racing car) then you may configure
-	front and rear aerodynamics independently.
-
-	- Use two GameObjects with an `VPAeroSurface` each.
-	- Put them at the longitudinal positions of the front axle and the rear axle, respectively.
-	- The vertical positions should be the middle of the height of the car the corresponding
-		position.
-
-	You may then configure drag and downforce independently at each position.
-
 &fa-thumbs-up:lg; This page is updated from time to time.<br><br>Check out [@VehiclePhysics on X](https://twitter.com/VehiclePhysics){: .alert-link } or [@VehiclePhysics on Mastodon](https://mastodon.gamedev.place/@VehiclePhysics){: .alert-link } for weekly updates. The hashtag #VPPDev shows the recent developments.<br>[#VPPDev on X](https://twitter.com/search?q=%23vppdev&src=hashtag_click&f=live)<br>[#VPPDev on Mastodon](https://mastodon.gamedev.place/tags/VPPDev).
 {: .alert .alert-success }
 
