@@ -2,7 +2,7 @@
 
 Brief summary of the most significant additions to Vehicle Physics Pro over time.
 
-Full development details are available via GIT revision logs ([VPP subscription](/about/licensing/) required):
+Full development details are available via GIT revision logs ([VPP subscription required](/about/licensing/)):
 
 - [Vehicle Physics Core (Professional Edition)](http://projects.edy.es/trac/edy_vehicle-physics-pro-sdk/log/)
 - [Vehicle Physics Core (Enterprise Edition)](http://projects.edy.es/trac/edy_vehicle-physics-core/log/)
@@ -14,13 +14,23 @@ Full development details are available via GIT revision logs ([VPP subscription]
 &fa-thumbs-up:lg; This page is updated from time to time.<br><br>Check out [@VehiclePhysics on X](https://twitter.com/VehiclePhysics){: .alert-link } or [@VehiclePhysics on Mastodon](https://mastodon.gamedev.place/@VehiclePhysics){: .alert-link } for weekly updates. The hashtag #VPPDev shows the recent developments.<br>[#VPPDev on X](https://twitter.com/search?q=%23vppdev&src=hashtag_click&f=live)<br>[#VPPDev on Mastodon](https://mastodon.gamedev.place/tags/VPPDev).
 {: .alert .alert-success }
 
-#### Now under development (2023):
+#### Now under development (2024):
 
-Scriptable Wheel Contact model
-:	- Study and implement alternatives to the WheelCollider.
-	- Support custom wheel contact models to be plugged into VPP as add-ons.
-	- Test suspensions implemented with joints.
-	- Choose a reliable and efficient wheel contact model and get rid of the WheelCollider.
+Kinematic suspension model
+:	- Simulation of the suspension geometry for true wheel motions.
+	- Configuration of instant centers, instant axis, roll center.
+	- Unsprung mass.
+	- Steering axis and caster via configurable kingpin.
+	- Hard collisions (wheel rim) and soft collisions (tire).
+	- Separate suspension and tire stiffness properties.
+
+Advanced tire contact patch
+:	- Compute the contact patch out of several contact points.
+	- Vertical tire stiffness.
+	- Longitudinal (radial) and lateral tire stiffness properties.
+	- Carcass simulation (relevant when riding kerbs).
+	- Tire deformation.
+	- Static adherency when stopped.
 
 ##### Already in the _develop_ branch
 
@@ -31,6 +41,11 @@ Tire Friction Model 2.0 (SDK V10 alpha)
 	- New realtime telemetry plots: Slip Ratio, Slip Angle, Wheel Torque.
 	- Reorganized telemetry data widget with slip and ground material properties always visible.
 	- New traction and steering aids designed for this model.
+
+Scriptable Wheel Collision model
+:	- New VPP WheelCollider component completely replacing Unity's.
+	- Custom wheel collision models may be implemented and plugged into VPP vehicles.
+	- Vehicles may use different wheel collision models simultaneously.
 
 New Input Devices Manager
 :	- Learn and configure any device in minutes
@@ -53,6 +68,11 @@ Advanced telemetry system
 	- Different chart types: time/distance based, scatter plots, histogram
 
 <hr>
+
+#### January 2024
+
+- New **VPP Wheel Collider** component completely replacing Unity's WheelCollider.
+- **Custom Wheel Collision Models** may be implemented as vehicle add-ons and used by VPP.
 
 #### September 2023
 
