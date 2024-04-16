@@ -37,7 +37,7 @@ Supported control methods are keyboard, XBox gamepads, and these steering wheel 
 ![Seat Leon Cup Racer 2016 TCR](/img/demos/seat-leon-cup-racer-2016-tcr-01.jpg){: .clickview .img-medium }
 
 <center>**Download Vehicle Physics Pro Seat Leon Cup Demo<br>
-[PC/Windows&nbsp;(28&nbsp;MB)](https://www.edy.es/vehiclephysics/demos/2019-08-29-VPP-Sport-Coupe-Demo-PC-Windows.7z) | [Android&nbsp;APK&nbsp;(79&nbsp;MB)](https://www.edy.es/vehiclephysics/demos/Cloudsport-Seat-Demo-v0.apk)**</center>
+[Android&nbsp;APK&nbsp;(79&nbsp;MB)](https://www.edy.es/vehiclephysics/demos/Cloudsport-Seat-Demo-v0.apk)**</center>
 
 - Seat Leon Cup Racer 2016 TCR
 - Replay driving, driving aids
