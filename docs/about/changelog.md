@@ -30,7 +30,13 @@ Advanced tire contact patch
 	- Longitudinal (radial) and lateral tire stiffness properties.
 	- Carcass simulation (relevant when riding kerbs).
 	- Tire deformation.
-	- Static adherency when stopped.
+	- Elastic adherence when stopped.
+
+Engine-independent code
+:	- Custom API exposing all elements and features required by VPP.
+	- Interoperability with the equivalent elements in the host engine (i.e. Vector3, Transform...)
+	- Math, physics, graphics, application, etc.
+	- All engine-dependent code resides in a single location. Easily portable to other engines.
 
 ##### Already in the _develop_ branch
 
