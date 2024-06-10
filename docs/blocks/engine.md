@@ -82,7 +82,7 @@ Engine friction configures:
 
 Engine friction torque is calculated as:
 
-$$Tf = frictionTorque + w \cdot{rollingFriction} + (w \cdot{rollingFriction})^2$$
+$$Tf = frictionTorque + w \cdot{rotationalFriction} + (w \cdot{viscousFriction})^2$$
 
 Where $Tf$ is the resulting engine friction torque in Nm and $w$ is the angular velocity of the
 engine in rad/s.
@@ -91,7 +91,7 @@ Torque
 :	_frictionTorque_ in the formula. Minimum friction torque (Nm) always applied by the engine.
 
 Rotational
-:	_rollingFriction_ in the formula. Coefficient multiplied by the angular velocity.
+:	_rotationalFriction_ in the formula. Coefficient multiplied by the angular velocity.
 
 Viscous
 :	_viscousFriction_ in the formula. Coefficient multiplied by the angular velocity squared.
