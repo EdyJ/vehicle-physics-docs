@@ -10,7 +10,7 @@ Try Vehicle Physics Pro yourself with these demos for Windows / Mac OS X / Andro
 </div>
 
 <center>**Download Vehicle Physics Pro JPickup Demo<br>
-[PC/Windows&nbsp;(29&nbsp;MB)](https://www.edy.es/vehiclephysics/demos/2019-08-29-VPP-JPickup-Demo-PC-Windows.7z) | [Mac&nbsp;OS&nbsp;X&nbsp;(34&nbsp;MB, old version)](https://www.edy.es/vehiclephysics/demos/2019-05-04-VPP-JPickup-Demo-Mac-OS-X.zip)**</center>
+[PC/Windows&nbsp;(42&nbsp;MB)](https://www.edy.es/vehiclephysics/demos/2024-09-03-VPP-JPickup-Demo-PC-Windows.zip) | [Mac&nbsp;OS&nbsp;X&nbsp;(34&nbsp;MB, old version)](https://www.edy.es/vehiclephysics/demos/2019-05-04-VPP-JPickup-Demo-Mac-OS-X.zip)**</center>
 
 The reviewed City scenery with the VPP-based JPickup truck. Includes a Setup dialog for configuring
 the most typical features in a standard car:
