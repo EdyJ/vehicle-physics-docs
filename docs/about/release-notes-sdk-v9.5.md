@@ -1,4 +1,4 @@
-# Readme - SDK v9.5
+# Release Notes - SDK v9.5
 
 ### Main Changes from v9.4
 
