@@ -35,6 +35,7 @@ Improved force feedback model
 - `VPTelemetry`: Improved fuel consumption display.
 - `VPTireAudio`: Fixed errors when audio components already exist in the wheel `GameObject`.
 - Fixed errors related to the 32/64-bit versions of `xinput1_3.dll`.
+- Camera Orbit mode: By default, right mouse button is now required to rotate the view.
 
 ### Project Upgrade Guide
 
