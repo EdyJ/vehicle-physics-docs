@@ -21,7 +21,6 @@ Improved force feedback model
 
 - New tire pressure emulator component (`VPTirePressureEmulator`).
 - New wind audio component with an improved speed-based audio model (`VPWindAudio`).
-- New camera options in some camera modes.
 - New `ParkingLock` block, which simulates a transmission lock.
 - Wheel radius can now change dynamically.
 - Brake-assist driving aids improved (ABS, ASR, ESC).
