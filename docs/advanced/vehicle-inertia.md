@@ -1,7 +1,7 @@
-#### Vehicle Inertia
+# Page changed!
 
-!!! Info "Page Replaced"
+New location: [Setting Up VPP](/blocks/inertia/)
 
-	- New page: **[Blocks > Inertia](/blocks/inertia/)**
-
-	Please update your bookmarks.
+<script>
+window.location.replace("/blocks/inertia/");
+</script>

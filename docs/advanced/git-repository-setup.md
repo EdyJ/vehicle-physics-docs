@@ -1,8 +1,7 @@
-#### GIT Repository Setup
+# Page changed!
 
-!!! Info "Page Moved"
+New location: [Setting Up VPP](/user-guide/setting-up-vpp/)
 
-	- Instructions for setting up Vehicle Phyisics Pro: **[User Guide > Setting Up VPP](/user-guide/setting-up-vpp/)**
-	- Procedures for migrating projects between Source Code and SDK: **[Advanced > Source Code vs. SDK](/advanced/source-code-vs-sdk/)**
-
-	Please update your bookmarks.
+<script>
+window.location.replace("/user-guide/setting-up-vpp/");
+</script>
