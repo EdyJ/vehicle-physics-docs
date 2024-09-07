@@ -36,6 +36,7 @@ Improved force feedback model
 - `VPTireAudio`: Fixed errors when audio components already exist in the wheel `GameObject`.
 - Fixed errors related to the 32/64-bit versions of `xinput1_3.dll`.
 - Camera Orbit mode: By default, right mouse button is now required to rotate the view.
+- Camera Orbit mode now supports Target Relative rotation and panning.
 
 ### Project Upgrade Guide
 
