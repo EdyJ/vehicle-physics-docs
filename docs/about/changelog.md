@@ -9,12 +9,18 @@ Full development details are available via GIT revision logs ([VPP subscription 
 - [Specialized Assets (Enterprise edition)](http://projects.edy.es/trac/edy_vehicle-physics-specialized-assets/log/)
 - [Sample Assets (all editions)](http://projects.edy.es/trac/edy_vehicle-physics-sample-assets/log/)
 
-<hr>
+Release notes and upgrade guides:
+
+- [SDK v9.5 Release Notes](/about/release-notes-sdk-v9.5)
+
+----
 
 &fa-thumbs-up:lg; This page is updated from time to time.<br><br>Check out [@VehiclePhysics on X](https://twitter.com/VehiclePhysics){: .alert-link } or [@VehiclePhysics on Mastodon](https://mastodon.gamedev.place/@VehiclePhysics){: .alert-link } for weekly updates. The hashtag #VPPDev shows the recent developments.<br>[#VPPDev on X](https://twitter.com/search?q=%23vppdev&src=hashtag_click&f=live)<br>[#VPPDev on Mastodon](https://mastodon.gamedev.place/tags/VPPDev).
 {: .alert .alert-success }
 
-#### Now under development (2024):
+#### Now in the _develop_ branch (2024):
+
+These features are working in the [PERRINN 424 project](https://github.com/PERRINN/project-424-unity), available on GitHub.
 
 Kinematic suspension model
 :	- Simulation of the suspension geometry for true wheel motions.
@@ -31,14 +37,6 @@ Advanced tire contact patch
 	- Carcass simulation (relevant when riding kerbs).
 	- Tire deformation.
 	- Elastic adherence when stopped.
-
-Engine-independent code
-:	- Custom API exposing all elements and features required by VPP.
-	- Interoperability with the equivalent elements in the host engine (i.e. Vector3, Transform...)
-	- Math, physics, graphics, application, etc.
-	- All engine-dependent code resides in a single location. Easily portable to other engines.
-
-##### Already in the _develop_ branch
 
 Tire Friction Model 2.0 (SDK V10 alpha)
 :	- Advanced industry-grade tire friction model: slip ratio, slip angle, load function.
@@ -73,7 +71,26 @@ Advanced telemetry system
 	- Easily extensible from vehicle components (VehicleBehaviour)
 	- Different chart types: time/distance based, scatter plots, histogram
 
-<hr>
+Engine-independent code (in process)
+:	- Custom API exposing all elements and features required by VPP.
+	- Interoperability with the equivalent elements in the host engine (i.e. Vector3, Transform...)
+	- Math, physics, graphics, application, etc.
+	- All engine-dependent code resides in a single location. Easily portable to other engines.
+
+----
+
+#### September 2024 - SDK V9.5
+
+Significant changes in the stable branch (_master_) of Vehicle Physics Pro.
+
+See the **[Release notes for the SDK v9.5](/about/release-notes-sdk-v9.5)** for more details and
+upgrade guide.
+
+- New contact point model
+- Improved wheel integration model
+- Improved rolling friction model
+- New Electric Motor model (MGU)
+- Improved force feedback model
 
 #### January 2024
 

@@ -11,13 +11,13 @@ Read the Getting Started guide for a quick walkthrough:
 
 [User's Guide](/user-guide/getting-started/)
 
-Feel free to contact me if you need product support. Note that the Professional license includes
+Feel free to contact us if you need product support. Note that the Professional license includes
 individual support by email, so please ensure that the support queries are sent from the subscriber's email.
 
-Also follow [@vehiclephysics](https://twitter.com/VehiclePhysics) on Twitter for instant news and
-updates. Most announcements are posted first to the [#vppdev](https://mail.google.com/mail/u/0/?zx=6n7z2cj0zoj6#inbox?compose=new)
+Also follow [@vehiclephysics](https://x.com/VehiclePhysics) on Twitter/X for instant news and
+updates. Most announcements are posted first to the [#vppdev](https://x.com/search?q=%23vppdev&src=hashtag_click&f=live)
 hashtag.
 
-As always, let me know if you have any questions!
+As always, let us know if you have any questions!
 
-edy@vehiclephysics.com
+info@vehiclephysics.com
