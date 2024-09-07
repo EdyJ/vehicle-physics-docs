@@ -9,7 +9,11 @@ Full development details are available via GIT revision logs ([VPP subscription 
 - [Specialized Assets (Enterprise edition)](http://projects.edy.es/trac/edy_vehicle-physics-specialized-assets/log/)
 - [Sample Assets (all editions)](http://projects.edy.es/trac/edy_vehicle-physics-sample-assets/log/)
 
-<hr>
+Release notes and upgrade guides:
+
+- [SDK v9.5 Release Notes](/about/release-notes-sdk-v9.5)
+
+----
 
 &fa-thumbs-up:lg; This page is updated from time to time.<br><br>Check out [@VehiclePhysics on X](https://twitter.com/VehiclePhysics){: .alert-link } or [@VehiclePhysics on Mastodon](https://mastodon.gamedev.place/@VehiclePhysics){: .alert-link } for weekly updates. The hashtag #VPPDev shows the recent developments.<br>[#VPPDev on X](https://twitter.com/search?q=%23vppdev&src=hashtag_click&f=live)<br>[#VPPDev on Mastodon](https://mastodon.gamedev.place/tags/VPPDev).
 {: .alert .alert-success }
@@ -74,6 +78,19 @@ Engine-independent code (in process)
 	- All engine-dependent code resides in a single location. Easily portable to other engines.
 
 ----
+
+#### September 2024 - SDK V9.5
+
+Significant changes in the stable branch (_master_) of Vehicle Physics Pro.
+
+See the **[Release notes for the SDK v9.5](/about/release-notes-sdk-v9.5)** for more details and
+upgrade guide.
+
+- New contact point model
+- Improved wheel integration model
+- Improved rolling friction model
+- New Electric Motor model (MGU)
+- Improved force feedback model
 
 #### January 2024
 

@@ -8,7 +8,7 @@ New contact point model
 Improved wheel integration model
 : The numerical model that integrates the wheel momentum (from throttle, brake, tire) has been significantly improved. The wheel momentum is now highly accurate, often requiring less than half the solver substeps needed in the previous version. The simulation of vehicles with complex transmissions and a high number of differentials is now much more precise, with a reduced CPU footprint.
 
-Rolling friction model
+Improved rolling friction model
 : Rolling friction is now calculated and applied within the wheel integration model. This enables the simulation of situations where the vehicle can get stuck in loose terrain, such as sand, mud, etc.
 
 New electric motor model (MGU)
