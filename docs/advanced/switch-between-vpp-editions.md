@@ -1,5 +1,11 @@
 # Switch Between VPP Editions
 
+This guide describes how to migrate an existing Unity project from an edition of Vehicle Physics Pro to a different edition.
+
+- Community
+- Professional
+- Enterprise
+
 The Enterprise edition of Vehicle Physics Pro includes full source code, while the Professional and Community editions provide a pre-compiled DLL with the VPP components. As a result, changing the VPP edition in a project requires upgrading the project files and metadata to use the components from the new edition. All existing VPP settings, prefabs, etc., are preserved.
 
 !!! Warning "&fa-warning:lg;Ensure you have a backup or VCS snapshot of the Assets folder"

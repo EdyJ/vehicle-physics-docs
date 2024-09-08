@@ -15,6 +15,10 @@ VPP may be downloaded as:
 
 Scripting Runtime Version and API Compatibility Level may be configured in Project Settings > Player > Other Settings > Configuration section.
 
+If upgrading the package, check the [Changelog](/about/changelog) for Release Notes and upgrade guides on the newer versions.
+
+If switching between VPP editions (i.e. from Professional to Enterprise), then check out [Switch Between VPP Editions](https://vehiclephysics.com/advanced/switch-between-vpp-editions/).
+
 ### Download and import VPP unitypackage
 
 1. Download the .unitypackage file. Professional and Enterprise editions require an active [VPP subscription](/about/licensing/).
