@@ -1,5 +1,7 @@
 # Release Notes - SDK v9.5
 
+Check out the section [Setting Up Vehicle Physics Pro](/user-guide/setting-up-vpp) for download links and instructions.
+
 ### Main Changes from v9.4
 
 New contact point model
