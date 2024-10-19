@@ -32,10 +32,15 @@ Support by Skype / Discord / MS Teams. [All support options](/about/support/)			
 May be licensed by organizations with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
 **License Fee**<br>_First year, perpetual license_												 | **FREE** | **€ 590** | **€ 5900** |
 **Support and updates**<br>_Yearly subscription, automatic renewal, opt-out anytime_			| _n/a_ | € 190<br>/year | € 1900<br>/year |
-**GET LICENSE**							| [**Asset&nbsp;Store**](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556){: target="_blank" } | [**BUY&nbsp;NOW**](https://goo.gl/EoAe5v){: target="_blank" } | [**BUY&nbsp;NOW**](https://goo.gl/QzPdcu){: target="_blank" } |
+**GET LICENSE**							| [**Asset&nbsp;Store**](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556){: target="_blank" } | _Temporarily disabled,<br>see update below_ | _Temporarily disabled,<br>see update below_ |
 
-&fa-warning:lg; License versions, terms, content and pricing are subject to change without prior notice.
-{: .alert .alert-warning }
+!!! Warning "Update - October 2024"
+	The purchase links are temporarily disabled as we transition from MyCommerce to a different payment processor.
+	If you need a license urgently, please contact us at [info@vehiclephysics.com](mailto:info@vehiclephysics.com), and we will provide an alternative
+	payment method. This message will be removed once the purchase links are available again.
+
+&fa-info-circle:lg; License versions, terms, content and pricing are subject to change without prior notice.
+{: .alert .alert-info }
 
 #### Notes
 
