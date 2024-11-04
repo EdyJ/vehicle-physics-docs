@@ -38,13 +38,13 @@ Consulting
 
 Training and Learning
 :	We can teach you or your team to work with Vehicle Physics Pro in any level. From basic vehicle
-	creation and configuration to advanced diagnostics and fine-tunning.
+	creation and configuration to advanced diagnostics and fine-tuning.
 
 ##### Rates
 
-- 180 €/hour, with a limit of 8 hours per week per customer.
-- Additional hours in the same week or services provided outside the available time slots: 320 €/hour
-- Traveling to the customer's location: 1600 €/day + expenses, with a limit of 5 work days per month.<br>
+- 180 EUR /hour, with a limit of 8 hours per week per customer.
+- Additional hours in the same week or services provided outside the available time slots: 320 EUR /hour
+- Traveling to the customer's location: 1600 EUR /day + expenses, with a limit of 5 work days per month.<br>
 	_Expenses include: plane ticket, lodging, transportation, meals, insurance and any unforeseen
 	expense that may arise as reasonably necessary._
 
@@ -56,7 +56,7 @@ Training and Learning
 	documentation, and any other task or procedure that deems necessary.
 - A refundable retainer will be requested upfront for providing the services, with reimbursement
 	to the customer of any remaining amount following the completion of services. The minimum
-	retainer amount shall be €1400.
+	retainer amount shall be 1800 EUR.
 
 ##### Terms & Conditions
 
