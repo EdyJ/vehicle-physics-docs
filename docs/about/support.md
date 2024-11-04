@@ -42,9 +42,9 @@ Training and Learning
 
 ##### Rates
 
-- 140 €/hour, with a limit of 8 hours per week per customer.
-- Additional hours in the same week or services provided outside the available time slots: 280 €/hour
-- Traveling to the customer's location: 1200 €/day + expenses, with a limit of 5 work days per month.<br>
+- 180 €/hour, with a limit of 8 hours per week per customer.
+- Additional hours in the same week or services provided outside the available time slots: 320 €/hour
+- Traveling to the customer's location: 1600 €/day + expenses, with a limit of 5 work days per month.<br>
 	_Expenses include: plane ticket, lodging, transportation, meals, insurance and any unforeseen
 	expense that may arise as reasonably necessary._
 
