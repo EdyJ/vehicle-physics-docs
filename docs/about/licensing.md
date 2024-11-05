@@ -30,22 +30,18 @@ Framework for AI and autonomous vehicles: self-drive, automated tests, path foll
 Motion platform support: [D-Box](http://www.d-box.com/training-and-simulation/){: target="_blank" }, [Simtools 2.0](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/){: target="_blank" }, [CXC](https://www.cxcsimulations.com){: target="_blank" }	|	|	| &fa-check; |
 Support by Skype / Discord / MS Teams. [All support options](/about/support/)																	|	|	| &fa-check; |
 May be licensed by organizations with annual revenue / funds / budget in excess of €200,000					|	| 	| &fa-check; |
-**License Fee**<br>_First year, perpetual license_												 | **FREE** | **€ 590** | **€ 5900** |
-**Support and updates**<br>_Yearly subscription, automatic renewal, opt-out anytime_			| _n/a_ | € 190<br>/year | € 1900<br>/year |
-**GET LICENSE**							| [**Asset&nbsp;Store**](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556){: target="_blank" } | _Temporarily disabled,<br>see update below_ | _Temporarily disabled,<br>see update below_ |
-
-!!! Warning "Update - October 2024"
-	The purchase links are temporarily disabled as we transition from MyCommerce to a different payment processor.
-	If you need a license urgently, please contact us at [info@vehiclephysics.com](mailto:info@vehiclephysics.com), and we will provide an alternative
-	payment method. This message will be removed once the purchase links are available again.
+**License Fee**<br>_First payment, one year of updates & support, perpetual license_												 | **FREE** | **€ 590** | **€ 5900** |
+**Support and updates**<br>_Yearly subscription for updates & support, automatic renewal, opt-out anytime_			| _n/a_ | € 190<br>/year | € 1900<br>/year |
+**GET LICENSE**							| [**Asset&nbsp;Store**](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556){: target="_blank" } | **[BUY NOW](https://store.payproglobal.com/checkout?products[1][id]=100505)** | **[BUY NOW](https://store.payproglobal.com/checkout?products[1][id]=100500)** |
 
 &fa-info-circle:lg; License versions, terms, content and pricing are subject to change without prior notice.
 {: .alert .alert-info }
 
 #### Notes
 
-- Customers in European Union should supply VAT number. Without valid VAT number, EU customers will
-	be charged VAT.
+- [PayPro Global](https://payproglobal.com){: target="_blank" } is the official reseller of Vehicle Physics
+	products and services. Feel free to [reach out to them](https://payproglobal.com/customer-support/){: target="_blank" }
+	for	any questions regarding your order, the payment or the subscription.
 - Once the payment is completed you'll receive the credentials and instructions for accessing the
 	VPP repositories by email. Please allow 24/48 hours for your order to be processed.
 - **Custom licenses available** for teams and organizations with more than 10 developers. Please
@@ -81,9 +77,9 @@ The subscription fee allows for continuous development, feature updates, and lon
 
 ##### Germany-based users
 
-- The subscription cancellation form is available [here](https://account.mycommerce.com/SubscriptionCancellationRequest/index){: target="_blank" }.
-- Receiving support and upgrades during the first year requires actively confirming the yearly renewal plan when purchasing the license.
-- If the yearly renewal plan is not confirmed the subscription will change to monthly automatic renewals. In such case, 1) updates and support will be available only while the subscription is active, and 2) support and updates will cease at the moment the subscription is canceled.
+- You can access the subscription cancellation form in the [PayPro Global Customer Portal](https://payproglobal.com/customer-support/){: target="_blank" }.
+- Receiving support and upgrades during the first year requires actively confirming the yearly renewal plan
+	when purchasing the license.
 
 ### Terms & Conditions
 
