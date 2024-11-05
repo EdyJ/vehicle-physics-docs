@@ -43,7 +43,7 @@ May be licensed by organizations with annual revenue / funds / budget in excess 
 	products and services. Feel free to [reach out to them](https://payproglobal.com/customer-support/){: target="_blank" }
 	for	any questions regarding your order, the payment or the subscription.
 - Once the payment is completed you'll receive the credentials and instructions for accessing the
-	VPP repositories by email. Please allow 24/48 hours for your order to be processed.
+	VPP repositories by email. Please allow 1-2 business days for your order to be processed.
 - **Custom licenses available** for teams and organizations with more than 10 developers. Please
 	write to [info@vehiclephysics.com](mailto:info@vehiclephysics.com) for a quote.
 - Professional license may not be licensed by any commercial or non-commercial entity with annual
