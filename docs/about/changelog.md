@@ -15,7 +15,7 @@ Release notes and upgrade guides:
 
 ----
 
-&fa-thumbs-up:lg; This page is updated from time to time.<br><br>Check out [@VehiclePhysics on X](https://twitter.com/VehiclePhysics){: .alert-link } or [@VehiclePhysics on Mastodon](https://mastodon.gamedev.place/@VehiclePhysics){: .alert-link } for weekly updates. The hashtag #VPPDev shows the recent developments.<br>[#VPPDev on X](https://twitter.com/search?q=%23vppdev&src=hashtag_click&f=live)<br>[#VPPDev on Mastodon](https://mastodon.gamedev.place/tags/VPPDev).
+&fa-thumbs-up:lg; This page is updated from time to time.<br><br>Check out [@VehiclePhysics on X](https://x.com/VehiclePhysics){: .alert-link } for weekly updates. The hashtag [#VPPDev](https://twitter.com/search?q=%23vppdev&src=hashtag_click&f=live) shows the recent developments.
 {: .alert .alert-success }
 
 #### Now in the _develop_ branch (2024):
