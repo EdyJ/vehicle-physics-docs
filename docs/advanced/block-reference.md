@@ -83,9 +83,11 @@ classDef NoFill fill:#FFF
 class BO0,BO1,BON,BI0 NoFill
 </div>
 
-While it's possible to have multiple inputs in a Block, the specific math and physics considerations
-for this haven't been developed yet. There are no examples of a physically correct block using
-more than one input in VPP.
+While it's possible for a Block to have multiple inputs, this is typically only applicable in rare
+situations. One example is [regenerative steering](https://x.com/VehiclePhysics/status/1853437788978352623){: target="_blank" }
+(also [double differential steering](https://en.wikipedia.org/wiki/Tank_steering_systems#Double_differential){: target="_blank" }),
+a mechanism used to steer a vehicle by shifting power between the left and right sides, commonly employed
+in tanks.
 
 ### Block connections and torque flow
 
