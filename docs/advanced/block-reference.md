@@ -247,7 +247,7 @@ Apply the provided state to the block for further calculations within this subst
 will typically receive the state already returned in GetState. Other substeps will receive states
 computed by the solver.
 
-The provided states might not have coherency in time (i.e., in RK4 calculations).
+`Solver.time` and `Solver.deltaTime` return the timing values for the current substep.
 
 #### ComputeStateUpstream
 
