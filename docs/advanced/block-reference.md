@@ -5,10 +5,10 @@ implementing an internal mechanical part of the vehicle. The drivetrain may use 
 combination of connected blocks.
 
 VPP provides blocks for the most common parts: engine, gearbox, differential, etc. The provided [Vehicle Controller component](/components/vehicle-controller/)
-internally connects the necessary blocks based on the vehicle configuration (i.e front-wheel-drive,
+internally connects the necessary blocks based on the vehicle configuration (i.e., front-wheel-drive,
 all-wheel-drive, h-drive, etc).
 
-Also, you may write custom blocks if your vehicle requires specific parts not provided in VPP. Check
+You may also write custom blocks if your vehicle requires specific parts not provided in VPP. Check
 out [Creating custom blocks](/advanced/custom-blocks/) for an example of a custom block with source
 code.
 
@@ -38,20 +38,20 @@ Diff-->WRR
 end
 </div>
 
-Wheel blocks include Steering, Brakes and Tire Friction.
+Wheel blocks include Steering, Brakes, and Tire Friction.
 
 ## Block protocol
 
 A block inherits from the base class `VehiclePhysics.Block`. Blocks are hosted by a vehicle
-controller (_host_), such as `VPVehicleController` on any other component derived from
+controller (_host_), such as `VPVehicleController` or any other component derived from
 `VehiclePhysics.VehicleBase`.
 
-See [Creating Custom Vehicles](/advanced/custom-vehicles/) for an example source code on a vehicle
+See [Creating Custom Vehicles](/advanced/custom-vehicles/) for example source code of a vehicle
 controller creating and connecting Blocks.
 
 ### Input and Output connections
 
-Block have inputs and outputs that connect them. Each connection is a `Block.Connection` object
+Blocks have inputs and outputs that connect them. Each connection is a `Block.Connection` object
 simulating the physical shaft that connects two blocks in a vehicle's powertrain. For example,
 the shaft connecting the gearbox with the differential, or the halfshafts connecting the
 differential with the wheels, are simulated via inputs and outputs.
@@ -90,11 +90,11 @@ more than one input in VPP.
 ### Block connections and torque flow
 
 The `Block.Connect` method connects an input of a block to an output of a different block. For this,
-the Connect method creates a `Block.Connection` object an ensures both blocks have access to it.
+the Connect method creates a `Block.Connection` object and ensures both blocks have access to it.
 This `Connection` object is the placeholder for the torque and momentum values that are transmitted
 upstream and downstream between the connected blocks.
 
-The actual torque and momentum flow is a two-stage process in the `Block` class, specifically at the
+The actual torque and momentum flow is a two-stage process in the `Block` class, specifically in the
 methods `ComputeStateUpstream` and `EvaluateTorqueDownstream`.
 
 #### 1. ComputeStateUpstream
@@ -120,11 +120,11 @@ class DOTS NoBox
 
 From left to right, each block collects **angular momentum (L)**, **inertia (I)** and **reaction
 torque (Tr)** from the `Connection` objects at each output. Blocks downstream have already left the
-values there. The block computes the resulting momentum, inertia and reaction torque and puts them
-at the `Connection` object at the input. The block upstream in the chain will collect them for
+values there. The block computes the resulting momentum, inertia, and reaction torque and puts them
+in the `Connection` object at the input. The block upstream in the chain will collect them for
 processing, and so on.
 
-The ending point is the **Engine**, which has no inputs. It takes momentum, inertia and reaction
+The ending point is the **Engine**, which has no inputs. It takes momentum, inertia, and reaction
 torque from its output, processes them, then generates a **drive torque** and puts it back at the
 output.
 
@@ -150,11 +150,11 @@ class DOTS NoBox
 </div>
 
 From right to left, each block reads the amount of **drive torque (Td)** left by the block upstream
-at the `Connection` object at its input. After processing it, puts the resulting torque values at
-the outputs for the blocks downstream to get them.
+in the `Connection` object at its input. After processing it, it puts the resulting torque values at
+the outputs for the blocks downstream to receive.
 
 The ending points are the **Wheels**, which have no outputs. They receive the final drive torque
-at their inputs and do the final tasks:
+at their inputs and perform the final tasks:
 
 - combine the drive torque with the brake torque and tire friction
 - compute a **new momentum value** (this defines the wheel's new angular velocity)
@@ -180,24 +180,24 @@ Inputs
 	(`Gearbox` block) or the position of the throttle pedal (`Engine` block). Inputs are
 	the values that are typically adjusted by the driver while driving.
 
-	In some cases the block can constrain an input value for preventing it to go out of range.
-	This happens at the manual gearbox, for instance. Gear lever is not allowed to have an invalid
+	In some cases, the block can constrain an input value to prevent it from going out of range.
+	This happens in the manual gearbox, for instance. The gear lever is not allowed to have an invalid
 	value (non-existing gear).
 
 States
-:	States are a special kind of inputs that must be fed continuously with data coming from the
+:	States are a special kind of input that must be fed continuously with data coming from the
 	vehicle and other blocks. Blocks use this data for their own logic. For example, the
-	automatic gearbox requires knowing the actual speed of the vehicle for deciding whether is
-	correct to engage a gear or not.
+	automatic gearbox requires knowing the actual speed of the vehicle to decide whether it is
+	appropriate to engage a gear or not.
 
 Sensors
 :	Sensors expose internal values from the block to the vehicle controller. These values might
-	be used to feed the _States_ of other blocks, take part of the vehicle's logic, or exposed at
+	be used to feed the _States_ of other blocks, take part in the vehicle's logic, or be exposed in
 	the dashboard.
-	Examples: the rpm values of the engine, the actually engaged gear in the gearbox, the torque
+	Examples: the rpm values of the engine, the currently engaged gear in the gearbox, the torque
 	transmitted by the clutch, etc.
 
-The Vehicle Controller host is responsible of feeding the blocks with the appropriate inputs and
+The Vehicle Controller host is responsible for feeding the blocks with the appropriate inputs and
 states, as well as exposing and using the sensors correctly. These values are typically to be
 read, exposed and exchanged through the data bus.
 
@@ -205,7 +205,7 @@ read, exposed and exchanged through the data bus.
 
 #### Initialize
 
-Define the number of inputs and output here by calling `Block.SetInputs(n)` and `Block.SetOutputs(n)`.
+Define the number of inputs and outputs here by calling `Block.SetInputs(n)` and `Block.SetOutputs(n)`.
 
 #### CheckConnections
 
@@ -217,7 +217,7 @@ Verify whether the connections required for the block to work are established. E
 		return inputs[0] != null;
 		}
 
-This method is called after Initialize and prior to any integration, so yo could also set up
+This method is called after Initialize and prior to any integration, so you could also set up
 internal variables for caching the connections.
 
 #### PreStep
@@ -225,39 +225,39 @@ internal variables for caching the connections.
 Set up the block before each time step. This is the place for reading externally modified inputs and
 configuring the block accordingly for the upcoming integration step.
 
-`Solver.time` is linealy coherent in time: you can assume each _t_ will be greater than the value in
+`Solver.time` is linearly coherent in time: you can assume each _t_ will be greater than the value in
 the previous call. `Solver.deltaTime` is typically the fixed time step in the host physics engine.
 
 #### GetState
 
-Override this for blocks with inertial part only.
+Override this for blocks with inertial parts only.
 
 Returns the actual state of the inertial part of the block. This is the state considered "actual":
-spin rate of a wheel, rmp of an engine...
+spin rate of a wheel, rpm of an engine...
 
 	L	angular momentum of the inertial part
-	P	lineal momentum
+	P	linear momentum
 	Lr	reactive angular momentum
 
 #### SetSubstepState
 
-Override this for blocks with inertial part only.
+Override this for blocks with inertial parts only.
 
-Apply the provided state to the block for further calculations within this substep. First substep
+Apply the provided state to the block for further calculations within this substep. The first substep
 will typically receive the state already returned in GetState. Other substeps will receive states
 computed by the solver.
 
-The provided states might not have coherency in time (i.e. in RK4 calculations).
+The provided states might not have coherency in time (i.e., in RK4 calculations).
 
 #### ComputeStateUpstream
 
-Override this in blocks with inputs (i.e. motors would be excluded as they have outputs only).
+Override this in blocks with inputs (i.e., motors would be excluded as they have outputs only).
 
 Given the L-I-Tr states at the outputs, compute and report the L-I-Tr state at the inputs:
 
 - Wheels: report the L-I-Tr state of the wheel.
 - Motors: do nothing.
-- Other: pass-thru L-I-Tr from outputs to inputs applying the block's logic.
+- Other: pass-through L-I-Tr from outputs to inputs applying the block's logic.
 
 This defines L, I and Tr of the system (and thus the angular velocity along all the shafts).
 
@@ -268,13 +268,13 @@ Given the outTd values received at the inputs, compute the outTd values at the o
 
 - Motors: calculate the output torque outTd.
 - Wheels: calculate the final derivatives T and F given the state at the inputs.
-- Other: pass-thru outTd from inputs to outputs applying the block's logic.
+- Other: pass-through outTd from inputs to outputs applying the block's logic.
 
 This simulates the actual torque flow along the entire drivetrain.
 
 #### GetSubstepDerivative
 
-Override this for blocks with inertial part only.
+Override this for blocks with inertial parts only.
 
 Must return the derivatives that affected the inertial part's state in this substep based on the
 state already provided by SetSubstepState and the block's inputs and logic.
@@ -285,12 +285,12 @@ Typically the derivative has already been calculated in EvaluateTorqueDownstream
 torque at the outputs.
 
 	T	derivative of the angular momentum L (torque)
-	F	derivative of the lineal momentum P (force)
+	F	derivative of the linear momentum P (force)
 	Tr	derivative of the reactive angular momentum (reaction torque)
 
 #### SetState
 
-Override this for blocks with inertial part only.
+Override this for blocks with inertial parts only.
 
 Receive the new integrated values for this integration interval `Solver.deltaTime`.
 
@@ -341,14 +341,14 @@ namespace VehiclePhysics
 	public struct State
 		{
 		public float L;			// Angular momentum
-		public Vector2 P;		// Lineal momentum
+		public Vector2 P;		// Linear momentum
 		public float Lr;		// Reactive angular momentum
 		}
 
 	public struct Derivative
 		{
 		public float T;			// Torque is the derivative of angular momentum		dL/dt = T
-		public Vector2 F;		// Force is the derivative of lineal momentum		dP/dt = F
+		public Vector2 F;		// Force is the derivative of linear momentum		dP/dt = F
 		public float Tr;		// Reaction torque is the derivative of Lr			dLr/dt= Tr
 		}
 ```
@@ -357,7 +357,7 @@ namespace VehiclePhysics
 
 ```
 	// Utility
-	// Angular velocity in radians/s = 2pi * frequency in revs/ second  = 2pi * f / 60 in revs/min
+	// Angular velocity in radians/s = 2pi * frequency in revs/second = 2pi * f / 60 in revs/min
 
 	public static float RpmToW = (2.0f * Mathf.PI) / 60.0f;
 	public static float WToRpm = 60.0f / (2.0f * Mathf.PI);
@@ -372,7 +372,7 @@ namespace VehiclePhysics
 	// Blocks without inertial parts:
 	// ------------------------------
 	//
-	// Torque transmitters/multipliers with neglicible inertia such as shafts, gears,
+	// Torque transmitters/multipliers with negligible inertia such as shafts, gears,
 	// differentials...
 	//
 	//		Initialize
