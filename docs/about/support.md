@@ -22,7 +22,7 @@ Enterprise Edition
 
 ### Professional Services
 
-Dedicated professional services are available on-demand at hourly rates.
+Comprehensive services for vehicle simulation, including configuration, development, consulting, and training.
 
 Vehicle Configuration
 :	Send us your [3D model](/user-guide/3d-models/) and the [vehicle specifications](/advanced/configuring-realistic-vehicles/).
