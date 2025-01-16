@@ -112,6 +112,8 @@ upgrade guide.
 - New **VPP Wheel Collider** component completely replacing Unity's WheelCollider.
 - **Custom Wheel Collision Models** may be implemented as vehicle add-ons and used by VPP.
 
+## 2023
+
 #### September 2023
 
 - Started working on the **foundation for upcoming engine-independent developments** in Vehicle
@@ -154,6 +156,8 @@ upgrade guide.
 #### January 2023
 
 - New **Motor Grader Control** component to control all the features and mechanisms of a motor grader ([Tweet](https://twitter.com/VehiclePhysics/status/1613543552386048000)).
+
+## 2022
 
 #### December 2022
 
