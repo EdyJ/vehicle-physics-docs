@@ -18,7 +18,7 @@ Release notes and upgrade guides:
 &fa-thumbs-up:lg; This page is updated from time to time.<br><br>Check out [@VehiclePhysics on X](https://x.com/VehiclePhysics){: .alert-link } for weekly updates. The hashtag [#VPPDev](https://twitter.com/search?q=%23vppdev&src=hashtag_click&f=live) shows the recent developments.
 {: .alert .alert-success }
 
-#### Now in the _develop_ branch (2024):
+#### Now in the _develop_ branch (2025):
 
 These features are working in the [PERRINN 424 project](https://github.com/PERRINN/project-424-unity), available on GitHub.
 
@@ -52,7 +52,7 @@ Scriptable Wheel Collision model
 	- Vehicles may use different wheel collision models simultaneously.
 
 New Input Devices Manager
-:	- Learn and configure any device in minutes
+:	- Learn and configure any device in seconds
 	- Support any number of simultaneous devices
 	- Load and save device setup to file / JSON
 	- As simple to use as current Unity Input
@@ -78,6 +78,21 @@ Engine-independent code (in process)
 	- All engine-dependent code resides in a single location. Easily portable to other engines.
 
 ----
+
+#### January 2025 - SDK V9.6
+
+- Up to 50% more performance in Professional and Community Editions.
+- Fixed **IL2CPP** errors in the Professional edition.
+- New components for simulating massive diesel-electric mining dumper trucks: **VPDieselElectricController2**, **DumperControl**, **DumperExtendedControl**.
+- New Engine **Power Cap** setting for realistic power curves in combustion engines.
+- New **VPRetarderBrakeAudio** component for implementing the sound caused by the retarder brake.
+- **Brake** block may now be used anywhere in a custom driveline layout.
+- New **DryClutch** block implementing a standard friction clutch that may be used anywhere in a custom driveline layout.
+- New **PowerDiverter** helper block to distribute power between two paths in custom driveline layouts.
+- New **RegenerativeSteering** block for simulating regenerative steering system as typically used in tanks.
+- Improved **VPBlockDebugger** component for better readability.
+- Improved **VPTireAudio** to play the audio based on the contacted surface.
+- Minimum Unity version supported: 2019.4.
 
 #### September 2024 - SDK V9.5
 
