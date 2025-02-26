@@ -7,17 +7,16 @@ VPP may be downloaded as:
 - **GIT repositories** that may reside in existing Unity projects as GIT submodules.
 - **[Asset Store Package](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)** (Free Community Edition).
 
-### Requirements
-
-- **Unity 2019.4 LTS** or newer LTS version
-- API Compatibility Level: **.NET 4.x**
-- Scripting Runtime Version: **.NET 4.x Equivalent** (Unity 2018 only)
-
-Scripting Runtime Version and API Compatibility Level may be configured in Project Settings > Player > Other Settings > Configuration section.
-
-If upgrading the package, check the [Changelog](/about/changelog) for Release Notes and upgrade guides on the newer versions.
+When upgrading VPP, check the [Changelog](/about/changelog) for Release Notes and upgrade guides on the newer versions.
 
 If switching between VPP editions (i.e. from Professional to Enterprise), then check out [Switch Between VPP Editions](https://vehiclephysics.com/advanced/switch-between-vpp-editions/).
+
+### Supported Unity versions
+
+- **LTS releases** in 20XX versions (from Unity 2019 LTS)
+- **Stabilized Update releases** in generational versions (Unity 6.1+, 7.1+, ...)
+
+Vehicle Physics Pro may work in other Unity versions, but we can only provide official support on these versions.
 
 ### Download and import VPP unitypackage
 
