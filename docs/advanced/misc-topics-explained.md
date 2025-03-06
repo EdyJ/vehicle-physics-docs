@@ -54,7 +54,7 @@ vehicle is set to 10 substeps, then the calculations for that vehicle are done a
 
 #### How to measure the precision of the integration?
 
-Ensure you understand the [difference among _accuracy_ (or _trueness_) and _precision_](http://en.wikipedia.org/wiki/Accuracy_and_precision).
+Ensure you understand the [difference among _accuracy_ (or _trueness_) and _precision_](https://en.wikipedia.org/wiki/Accuracy_and_precision).
 **Vehicle Physics Pro is fully accurate in its design, implementation and behavior** giving
 reasonably precise results. _Precision_ affects the the specific numeric values only, and depends
 on solver substeps.
@@ -324,8 +324,8 @@ Force feedback
 
 Still, note that most real vehicles tend to understeer as natural behavior.
 
-I'd like to quote [this forum post from Stefano Cassillo](http://www.gamedev.net/topic/631886-car-physics-sharing-work-ideas-formulas-and-car-parameters/page-2#entry4986662),
-developer of the [Assetto Corsa](http://www.assettocorsa.net) simulator, regarding lateral friction:
+I'd like to quote [this forum post from Stefano Cassillo](https://www.gamedev.net/topic/631886-car-physics-sharing-work-ideas-formulas-and-car-parameters/page-2#entry4986662),
+developer of the [Assetto Corsa](https://www.assettocorsa.net) simulator, regarding lateral friction:
 
 > Tire lateral grip
 >
@@ -450,7 +450,7 @@ sharper turns. In this extreme case it can reach even 6 - 7G. The springs get co
 supporting up to 5x the original weight of the vehicle.
 
 The springs should either have room enough or be strong enough for supporting all the extra
-downforce at high speeds. The [Performance Analysis component](http://vehiclephysics.com/components/vehicle-telemetry/#vpperformanceanalysis)
+downforce at high speeds. The [Performance Analysis component](/components/vehicle-telemetry/#vpperformanceanalysis)
 in _Suspension Travel_ mode is perfect for checking this out. Here you can see how the suspension
 height decreases (suspension gets compressed) as the speed increases. When the suspension charts
 cross the bottom line the suspension has reached its limit:
@@ -546,7 +546,7 @@ Driveline
 	Any value in between (default is 0.25) configures the behavior of the vehicle when rear wheels
 	are skidding. A good value gives the driver a nice control on the drifting direction.
 
-This is quoted from [WhateverMan at gamedev.net](http://www.gamedev.net/topic/664785-car-physics-turbochargers-and-friends/#entry5205193):
+This is quoted from [WhateverMan at gamedev.net](https://www.gamedev.net/topic/664785-car-physics-turbochargers-and-friends/#entry5205193):
 
 > ALSO about drift cars, what I said earlier, 52/48 was 52% on the front and 48% on the back.
 > Drift cars are Front Rear Layout cars. You need more weight on the front because you control

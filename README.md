@@ -1,6 +1,6 @@
 # vehicle-physics-docs
 
-Sources for the documentation at [Vehicle Physics Pro](http://vehiclephysics.com). This repository
+Sources for the documentation at [Vehicle Physics Pro](https://vehiclephysics.com). This repository
 contains the sources for the documentation site only.
 
 Follow [@VehiclePhysics](https://twitter.com/VehiclePhysics) for latest news and updates on the

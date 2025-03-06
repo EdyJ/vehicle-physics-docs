@@ -4,10 +4,10 @@ Brief summary of the most significant additions to Vehicle Physics Pro over time
 
 Full development details are available via GIT revision logs ([VPP subscription required](/about/licensing/)):
 
-- [Vehicle Physics Core (Professional Edition)](https://edy.repositoryhosting.com/trac/edy_vehicle-physics-pro-sdk/log/)
-- [Vehicle Physics Core (Enterprise Edition)](https://edy.repositoryhosting.com/trac/edy_vehicle-physics-core/log/)
-- [Specialized Assets (Enterprise edition)](https://edy.repositoryhosting.com/trac/edy_vehicle-physics-specialized-assets/log/)
-- [Sample Assets (all editions)](https://edy.repositoryhosting.com/trac/edy_vehicle-physics-sample-assets/log/)
+- [Vehicle Physics Core (Professional Edition)](https://vehiclephysics.repositoryhosting.com/trac/edy_vehicle-physics-pro-sdk/log/)
+- [Vehicle Physics Core (Enterprise Edition)](https://vehiclephysics.repositoryhosting.com/trac/edy_vehicle-physics-core/log/)
+- [Specialized Assets (Enterprise edition)](https://vehiclephysics.repositoryhosting.com/trac/edy_vehicle-physics-specialized-assets/log/)
+- [Sample Assets (all editions)](https://vehiclephysics.repositoryhosting.com/trac/edy_vehicle-physics-sample-assets/log/)
 
 Release notes and upgrade guides:
 
@@ -396,7 +396,7 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 
 - New **snapshot save / restore** feature. Allows to save the full state of the vehicle and completely restore it later. Very useful on automated tests.
 - New engine type: **Synchronous Drive**. Simulates a synchronous electric motor that enforces a specific RPMs in the output applying up to a given amount of torque.
-- Support for **D-BOX motion platforms** [[D-BOX site]](http://tech.d-box.com/training-and-simulation/automotive/). The new add-on component VPDboxOutput sends all the vehicle telemetry and state to the D-BOX API.
+- Support for **D-BOX motion platforms** [[D-BOX site]](https://catalogue.d-box.com/en/video-games/3910932/). The new add-on component VPDboxOutput sends all the vehicle telemetry and state to the D-BOX API.
 - New **dual-drive steering** vehicle setup for caterpillars (TrackVehicleController). Supports smooth speed transitions and neutral rotation.
 - New **Bulldozer controller** (VPBulldozerController) for simulating this very special type of vehicle: engine, torque converter, locked differential, two clutches and two caterpillars.
 

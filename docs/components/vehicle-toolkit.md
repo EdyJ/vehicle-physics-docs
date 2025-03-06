@@ -69,7 +69,7 @@ The full source code in VPVehicleToolkit.cs is provided here for reference.
 ﻿//--------------------------------------------------------------
 //      Vehicle Physics Pro: advanced vehicle physics kit
 //          Copyright © 2011-2022 Angel Garcia "Edy"
-//        http://vehiclephysics.com | @VehiclePhysics
+//        https://vehiclephysics.com | @VehiclePhysics
 //--------------------------------------------------------------
 
 // VPVehicleToolkit: useful high-level vehicle tools

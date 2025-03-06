@@ -21,7 +21,7 @@ match the colliders without physic material assigned.
 
 !!! warning "&fa-warning; Loading scenes and objects from asset bundles"
 
-	[Unity asset bundles](http://docs.unity3d.com/Manual/AssetBundlesIntro.html) store copies of the
+	[Unity asset bundles](https://docs.unity3d.com/Manual/AssetBundlesIntro.html) store copies of the
 	physic materials. When the bundle loaded, the physic materials are loaded as new _instances_,
 	not references to the original. Thus, a GroundMaterialManager existing in the scene wouldn't
 	recognize those materials.

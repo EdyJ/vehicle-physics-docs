@@ -67,7 +67,7 @@ real vehicle, if available:
 A precise configuration requires comparing the real reactions of the vehicle in different situations
 and fitting the tire friction parameters in the simulation for matching them.
 
-Ideally, the best tire friction data is the one extracted from real tires ([example](http://white-smoke.wikifoundry.com/page/Traction+ellipse+and+tyre+force)).
+Ideally, the best tire friction data is the one extracted from real tires (i.e. a Pacejka set).
 The resulting forces divided by the normal load result in the coefficient of friction under each
 situation.
 

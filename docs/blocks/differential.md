@@ -131,11 +131,8 @@ better acceleration:
 
 ## References
 
-[http://www.taylor-race.com/sites/default/files/understanding_differentials.pdf](http://www.taylor-race.com/sites/default/files/understanding_differentials.pdf)<br>
 [http://www.racer.nl/tutorial/differentials.htm](http://www.racer.nl/tutorial/differentials.htm)<br>
-[http://www.teamhealeytexas.com/Technical%20Articles/Differentials1.htm](http://www.teamhealeytexas.com/Technical%20Articles/Differentials1.htm)<br>
-[http://www.intothered.dk/simracing/differential.html](http://www.intothered.dk/simracing/differential.html)<br>
-[http://www.zhome.com/ZCMnL/tech/Torsen/Torsen.htm](http://www.zhome.com/ZCMnL/tech/Torsen/Torsen.htm)
+[https://www.zhome.com/ZCMnL/tech/Torsen/Torsen.htm](https://www.zhome.com/ZCMnL/tech/Torsen/Torsen.htm)
 
 #### Videos
 

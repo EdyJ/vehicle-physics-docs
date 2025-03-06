@@ -5,7 +5,7 @@ sustain the weight of the vehicle. Dampers oppose the spring movement, dissipati
 preventing them to bounce without control.
 
 The force produced by the springs depends on the distance they are compressed and it's given by
-[Hooke's Law](http://en.wikipedia.org/wiki/Hooke%27s_law):
+[Hooke's Law](https://en.wikipedia.org/wiki/Hooke%27s_law):
 
 $$F=-Kx$$
 
@@ -106,7 +106,7 @@ where $weight$ is the actual weight being supported by that wheel.
 ### Studying the oscillating behavior
 
 The suspension properties may be studied from the point of view of the oscillating behavior
-([Harmonic oscillator](http://en.wikipedia.org/wiki/Harmonic_oscillator)). The associated concepts
+([Harmonic oscillator](https://en.wikipedia.org/wiki/Harmonic_oscillator)). The associated concepts
 are used to study the reactions of the suspension in different situations.
 
 !!! warning "&fa-warning:lg; Understanding vehicle suspension as harmonic oscillator"
@@ -136,7 +136,7 @@ $$naturalFrequency = \sqrt{\frac{stiffness}{sprungMass}}$$
 The _natural frequency_ defines the oscillating behavior of the suspension. For example, a typical family
 car is set up to exhibit a natural frequency somewhere between 5 and 10.
 
-The _effective sprung mass_ may also be used for studying the [damping behavior](http://en.wikipedia.org/wiki/Damping),
+The _effective sprung mass_ may also be used for studying the [damping behavior](https://en.wikipedia.org/wiki/Damping),
 that is, the rate at which the suspension dissipates the energy stored at the spring. We may
 calculate the _**damping ratio**_ for learning whether the suspension will be under-damped,
 over-damped or critically-damped:
@@ -162,7 +162,7 @@ during each spring oscillation. This number is given by the _**alpha**_ ratio:
 
 $$alpha = \frac{1}{timestep} \sqrt{\frac{sprungMass}{stiffness}}$$
 
-Applying the [Nyquist theorem](http://en.wikipedia.org/wiki/Nyquist–Shannon_sampling_theorem) we
+Applying the [Nyquist theorem](https://en.wikipedia.org/wiki/Nyquist–Shannon_sampling_theorem) we
 deduct that a physically correct simulation should have _alpha_ >= 2. Smaller values means that the
 simulation sampling rate is not enough to simulate the given spring rate.
 

@@ -1,7 +1,7 @@
 # Data Bus reference
 
 The **Data Bus** is the standard method for communicating with vehicles in Vehicle Physics Pro. It's
-inspired in the [ODB-II standard](http://en.wikipedia.org/wiki/OBD-II_PIDs):
+inspired in the [ODB-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs):
 
 - Immediate access O(1)
 - Direct, non-blocking read/write access from all clients
