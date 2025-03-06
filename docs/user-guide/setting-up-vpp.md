@@ -24,9 +24,9 @@ Vehicle Physics Pro may work in other Unity versions, but we can only provide of
 
 	- **[Community Edition](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)**
 	{: .spacer }
-	- **[Professional Edition](https://vehiclephysics.repositoryhosting.com/webdav/edy_vehicle-physics-pro-professional/)**
+	- **[Professional Edition](https://vehiclephysics.repositoryhosting.com/webdav/vehiclephysics_vehicle-physics-pro-professional/)**
 	{: .spacer }
-	- **[Enterprise Edition](https://vehiclephysics.repositoryhosting.com/webdav/edy_vehicle-physics-pro/)**
+	- **[Enterprise Edition](https://vehiclephysics.repositoryhosting.com/webdav/vehiclephysics_vehicle-physics-pro/)**
 	{: .spacer }
 
 2. Import the package into an Unity 3D project.
@@ -81,9 +81,9 @@ Instead of importing the unitypackages you may clone the VPP repositories direct
 in your project. This allows your project to stay up-to-date with the latest changes in VPP as
 they're pushed to the repository. Accessing the repositories requires an active [VPP subscription](/about/licensing/).
 
-- **[Professional Edition repositories](https://vehiclephysics.repositoryhosting.com/trac/edy_vehicle-physics-pro-professional)**
+- **[Professional Edition repositories](https://vehiclephysics.repositoryhosting.com/trac/vehiclephysics_vehicle-physics-pro-professional)**
 	{ .spacer }
-- **[Enterprise Edition repositories](https://vehiclephysics.repositoryhosting.com/trac/edy_vehicle-physics-pro)**
+- **[Enterprise Edition repositories](https://vehiclephysics.repositoryhosting.com/trac/vehiclephysics_vehicle-physics-pro)**
 	{ .spacer }
 
 First you have to configure your SSH keys in [your account in vehiclephysics.repositoryhosting.com](https://vehiclephysics.repositoryhosting.com/users/my_profile#public_keys)

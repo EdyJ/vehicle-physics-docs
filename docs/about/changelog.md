@@ -4,10 +4,10 @@ Brief summary of the most significant additions to Vehicle Physics Pro over time
 
 Full development details are available via GIT revision logs ([VPP subscription required](/about/licensing/)):
 
-- [Vehicle Physics Core (Professional Edition)](https://vehiclephysics.repositoryhosting.com/trac/edy_vehicle-physics-pro-sdk/log/)
-- [Vehicle Physics Core (Enterprise Edition)](https://vehiclephysics.repositoryhosting.com/trac/edy_vehicle-physics-core/log/)
-- [Specialized Assets (Enterprise edition)](https://vehiclephysics.repositoryhosting.com/trac/edy_vehicle-physics-specialized-assets/log/)
-- [Sample Assets (all editions)](https://vehiclephysics.repositoryhosting.com/trac/edy_vehicle-physics-sample-assets/log/)
+- [Vehicle Physics Core (Professional Edition)](https://vehiclephysics.repositoryhosting.com/trac/vehiclephysics_vehicle-physics-pro-sdk/log/)
+- [Vehicle Physics Core (Enterprise Edition)](https://vehiclephysics.repositoryhosting.com/trac/vehiclephysics_vehicle-physics-core/log/)
+- [Specialized Assets (Enterprise edition)](https://vehiclephysics.repositoryhosting.com/trac/vehiclephysics_vehicle-physics-specialized-assets/log/)
+- [Sample Assets (all editions)](https://vehiclephysics.repositoryhosting.com/trac/vehiclephysics_vehicle-physics-sample-assets/log/)
 
 Release notes and upgrade guides:
 
