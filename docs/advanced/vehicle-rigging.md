@@ -61,15 +61,15 @@ Single truck wheels:
 
 	Adherent: 0.8
 	Peak: 1.6, 0.9
-	Limit: 8, 0.7
-	ABCD: 0.7, 0, 0.2, 0
+	Limit: 10, 0.7
+	ABCD: 0.8, 0, 0.1, 0
 
 Twin truck wheels (use VPTireFrictionModifier):
 
 	Adherent: 0,9
 	Peak: 1.8, 1.1
-	Limit: 8, 0.9
-	ABCD: 0.8, 0, 0.15, 0
+	Limit: 10, 0.9
+	ABCD: 0.8, 0, 0.3, 0
 
 Engine
 
