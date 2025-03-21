@@ -10,6 +10,7 @@ Example locations and vehicles		 													| &fa-check; | &fa-check; | &fa-ch
 Wheels per vehicle																		|		4	| 1-20		| 1&#8209;unlimited |
 Simultaneous vehicles in each scene														|		1	| unlimited | unlimited |
 Supported build targets																	| Desktop	| All		| All	|
+WebGL support																					| 	| Limited	| Full	|
 [Multiple ground materials](/components/ground-materials/) with tire effects (tire marks, smoke...)	|	| &fa-check; | &fa-check; |
 [Custom extensions support](/user-guide/extending-vpp/): custom add-ons, custom vehicles, custom parts	|	| &fa-check; | &fa-check; |
 Frame-exact replay system with pause, forward/reverse playback, flashback...					|	| &fa-check; | &fa-check; |
