@@ -11,6 +11,7 @@ Full development details are available via GIT revision logs ([VPP subscription 
 
 Release notes and upgrade guides:
 
+- [SDK v9.7 Release Notes](/about/release-notes-sdk-v9.7)
 - [SDK v9.5 Release Notes](/about/release-notes-sdk-v9.5)
 
 ----
@@ -78,6 +79,12 @@ Engine-independent code (in process)
 	- All engine-dependent code resides in a single location. Easily portable to other engines.
 
 ----
+
+#### April 2025 - SDK V9.7
+
+**Unity 6 API compatibility** without requiring script updates.<br>
+See the **[Release notes for the SDK v9.7](/about/release-notes-sdk-v9.7)** for more details and
+upgrade guide.
 
 #### January 2025 - SDK V9.6
 
