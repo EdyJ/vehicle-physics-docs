@@ -27,6 +27,7 @@ If you get an error when using some cachedRigidbody member, just assign the cach
 ### Other Additions, Improvements, and Changes
 
 - New helper class **MethodInvokerThread** to call any method in a dedicated thread at a precise frequency. Will be used for real-time communications with hardware devices, for example steering wheels with force feedback.
+- New font **DejaVu Sans Mono** replacing the old Veramono. The new font has significantly more glyphs available, including many useful symbols.
 - New **VPEngineBrakeAudio** component for emulating the sound caused by combustion engines in braking mode.
 - Many updates to **DumperExtendedControl**:
 	- Brake Bias and ARC improvements
