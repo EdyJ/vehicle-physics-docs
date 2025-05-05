@@ -14,7 +14,7 @@ If switching between VPP editions (i.e. from Professional to Enterprise), then c
 ### Supported Unity versions
 
 - **LTS releases** in 20XX versions (from Unity 2019 LTS)
-- **Supported Update releases** in generational versions (Unity 6.1+, 7.1+, ...)
+- **Stable LTS releases** in generational versions (Unity 6.3+, 7.3+, ...)
 
 Vehicle Physics Pro may work in other Unity versions, but we can only provide official support on these versions.
 
