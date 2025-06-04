@@ -80,6 +80,9 @@ Engine-independent code (in process)
 
 ----
 
+
+- Improved **VPWheelDeviceInput** with new settings for configuring wheel axle and range.
+
 #### April 2025 - SDK V9.7
 
 **Unity 6 API compatibility** without requiring script updates.<br>
