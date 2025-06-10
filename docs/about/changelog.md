@@ -82,6 +82,7 @@ Engine-independent code (in process)
 
 
 - Improved **VPWheelDeviceInput** with new settings for configuring wheel axle and range.
+- New Gearbox **Brake Sensitivity** setting for auto-shift (manual transmission).
 
 #### April 2025 - SDK V9.7
 
