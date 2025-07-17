@@ -9,7 +9,7 @@ Rules for vehicle 3D models:
 - FBX file
 - Forward direction is +Z
 - Scale is 1 unit = 1 meter
-- Origin is the middle of the front axle.
+- Origin is the middle of the front axle at ground level
 - Rotations are 0, 0, 0 excepting the parts that have a logical orientation (eg. steering wheel
 	pitch)
 - Movable parts have their local origin placed at the rotation point (eg. doors, steering wheel)
