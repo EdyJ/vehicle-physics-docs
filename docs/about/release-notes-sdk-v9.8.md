@@ -6,7 +6,7 @@ Refer to the [Setting Up Vehicle Physics Pro](/user-guide/setting-up-vpp) sectio
 
 ## Removed Dependency on Unity's Legacy Input Manager
 
-### Input Axes
+#### Input Axes
 
 VPP no longer requires Unity’s legacy Input Manager to be enabled. As a result, any axis configurations in the legacy Input Manager are now ignored.
 
@@ -56,13 +56,13 @@ If you're using any of the following components from **Vehicle Common Tools**, y
 
 ---
 
-### Keyboard Keys
+#### Keyboard Keys
 
 All references to `KeyCode` have been replaced with `EdyCommonTools.UnityKey`, a key subset specifically used by VPP. These values are directly compatible with `KeyCode`, so existing properties are automatically upgraded to their `UnityKey` equivalents.
 
 ---
 
-### Configuring Predefined Axes
+#### Configuring Predefined Axes
 
 Predefined axes are accessible via the static class `EdyCommonTools.UnityInput` in the **Common Tools Core** repository:
 
@@ -99,6 +99,29 @@ UnityInput.steerAxis.sensitivity = 5.0f;
 
 ---
 
+#### Using the Legacy Input Manager
+
+If you need to use the original axes from Unity’s legacy Input Manager, you can enable **legacy mode** on
+any of the `UnityInput` axes. This forces the selected axis to read from a named axis in the legacy Input
+Manager and ignore all other built-in `UnityInput` settings.
+
+**Note:** This feature is only available when the legacy Input Manager is enabled in the project settings.
+
+Example: Forcing the `UnityAxis.Steer` axis to read the legacy `"Horizontal"` axis:
+
+```csharp
+UnityInput.steer.legacyMode = true;
+UnityInput.steer.legacyAxis = "Horizontal";
+```
+
+This allows, for example, to read the inputs from joysticks via the legacy Input Manager.
+
+---
+
 ## Other Additions, Improvements, and Changes
 
-AQUI - TODO
+- **VPWheelDeviceInput** updates:
+    - Added a setting to specify the steering axis number and range.
+    - Force feedback now remains active when the application is not in focus, if Run In Background mode is enabled.
+- Added new **Gearbox** options to improve engine braking in manual auto-shift mode.
+- Added new **VPBlockDebugger** options to display net torque per block.

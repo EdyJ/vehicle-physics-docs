@@ -39,7 +39,7 @@ Advanced tire contact patch
 	- Tire deformation.
 	- Elastic adherence when stopped.
 
-Tire Friction Model 2.0 (SDK V10 alpha)
+Tire Friction Model 2.0
 :	- Advanced industry-grade tire friction model: slip ratio, slip angle, load function.
 	- Detailed editors with graphic charts for analysis.
 	- Scriptable Tire Friction architecture: custom tire friction models may be implemented and used seamlessly.
@@ -80,14 +80,15 @@ Engine-independent code (in process)
 
 ----
 
+#### August 2025 - SDK V9.8
 
-- Improved **VPWheelDeviceInput** with new settings for configuring wheel axle and range.
-- New Gearbox **Brake Sensitivity** setting for auto-shift (manual transmission).
+- **Removed dependency on unity's legacy Input Manager**.<br>
+- See the **[Release notes for the SDK v9.8](/about/release-notes-sdk-v9.8)** for more details.
 
 #### April 2025 - SDK V9.7
 
-**Unity 6 API compatibility** without requiring script updates.<br>
-See the **[Release notes for the SDK v9.7](/about/release-notes-sdk-v9.7)** for more details and
+- **Unity 6 API compatibility** without requiring script updates.
+- See the **[Release notes for the SDK v9.7](/about/release-notes-sdk-v9.7)** for more details and
 upgrade guide.
 
 #### January 2025 - SDK V9.6
