@@ -11,23 +11,28 @@ When upgrading VPP, check the [Changelog](/about/changelog) for Release Notes an
 
 If switching between VPP editions (i.e. from Professional to Enterprise), then check out [Switch Between VPP Editions](https://vehiclephysics.com/advanced/switch-between-vpp-editions/).
 
-### Supported Unity versions
+### Requirements
 
-- **LTS releases** in 20XX versions (from Unity 2019 LTS)
-- **Stable LTS releases** in generational versions (Unity 6.3+, 7.3+, ...)
+- **Minimum supported Unity version:** Unity 2021 LTS  
+- **Physics for Game Objects:** Simulation Mode set to *FixedUpdate*<br/>(Auto Simulation = *true* on Unity 2021)
 
-Vehicle Physics Pro may work in other Unity versions, but we can only provide official support on these versions.
+**Recommended Unity versions:**
+
+- **LTS releases** in 20XX versions.
+- **Stable LTS releases** in generational versions (e.g., Unity 6.3+, 7.3+, …).
+
+Vehicle Physics Pro may work in other Unity versions, but official support might not be guaranteed for non-stable Unity releases.
 
 ### Download and import VPP unitypackage
 
 1. Download the .unitypackage file. Professional and Enterprise editions require an active [VPP subscription](/about/licensing/).
 
 	- **[Community Edition](https://assetstore.unity.com/packages/tools/physics/vehicle-physics-pro-community-edition-153556)**
-	{: .spacer }
+	<!-- {: .spacer } -->
 	- **[Professional Edition](https://vehiclephysics.repositoryhosting.com/webdav/vehiclephysics_vehicle-physics-pro-professional/)**
-	{: .spacer }
+	<!-- {: .spacer } -->
 	- **[Enterprise Edition](https://vehiclephysics.repositoryhosting.com/webdav/vehiclephysics_vehicle-physics-pro/)**
-	{: .spacer }
+	<!-- {: .spacer } -->
 
 2. Import the package into an Unity 3D project.
 
@@ -48,11 +53,6 @@ individually to configure specific project sections.
 	Each file overrides the project’s settings in the corresponding section. Ensure to have a backup
 	or note down your values for combining them with the VPP settings.
 
-Project Settings - Input
-:	_Required_ for the keyboard input to work correctly (i.e. switch gears in the included demos).
-	Alternatively, you could manually configure the input axes <kbd>Horizontal</kbd>, <kbd>Vertical</kbd>,
-	<kbd>Fire2</kbd> and <kbd>Fire3</kbd> [as described here](/components/vehicle-input/#vpstandardinput).
-
 Project Settings - Physics
 :	Physics settings used in VPP. Note that importing this file overrides your project’s Layer
 	Collision Matrix. You may restore your own collision matrix afterwards (VPP doesn't require
@@ -70,6 +70,12 @@ Project Settings - Tags And Layers
 :	VPP demos and examples use <kbd>User Layer 8</kbd> as **Vehicles** for visibility and reflection
 	probes.	Note that this Vehicles layer is _not_ a requirement of VPP. Only the demos and examples
 	use it.
+
+Project Settings - Assembly Definitions
+:	Assembly Definitions to compile Vehicle Physics Pro into its own assemblies. You can then
+	reference "VehiclePhysicsPro" to use VPP from your assemblies.
+
+	If this package is not imported (default) then VPP is compiled into the main Unity assemblies.
 
 &fa-thumbs-up:lg; You can now head to the [Getting Started](/user-guide/getting-started/){: .alert-link }
 section for start using Vehicle Physics Pro.
