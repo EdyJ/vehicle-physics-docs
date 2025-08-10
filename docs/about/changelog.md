@@ -11,6 +11,7 @@ Full development details are available via GIT revision logs ([VPP subscription 
 
 Release notes and upgrade guides:
 
+- [SDK v9.8 Release Notes](/about/release-notes-sdk-v9.8)
 - [SDK v9.7 Release Notes](/about/release-notes-sdk-v9.7)
 - [SDK v9.5 Release Notes](/about/release-notes-sdk-v9.5)
 
