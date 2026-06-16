@@ -6,7 +6,7 @@ Refer to the [Setting Up Vehicle Physics Pro](/user-guide/setting-up-vpp) sectio
 
 ## Removed Dependency on Unity's Legacy Input Manager
 
-SDK v9.8 features a new namespace and assembly, `UnityVersionCompatibility`, to provide an unified API for
+SDK v9.8 features a new namespace and assembly, `VersionCompatibility`, to provide an unified API for
 the engine features that change among versions. This includes basic input features that provide the same
 functionality regardless the input setup in the Unity project.
 
@@ -14,7 +14,7 @@ functionality regardless the input setup in the Unity project.
 
 VPP no longer requires Unity’s legacy Input Manager to be enabled. As a result, any axis configurations in the legacy Input Manager are now ignored.
 
-Instead, VPP uses a set of predefined and preconfigured axes available in the enum `UnityVersionCompatibility.UnityAxis`:
+Instead, VPP uses a set of predefined and preconfigured axes available in the enum `VersionCompatibility.UnityAxis`:
 
 ```csharp
 public enum UnityAxis
@@ -62,7 +62,7 @@ If you're using any of the following components from **Vehicle Common Tools**, y
 
 #### Keyboard Keys
 
-All references to `KeyCode` have been replaced with `UnityVersionCompatibility.UnityKey`, a key subset
+All references to `KeyCode` have been replaced with `VersionCompatibility.UnityKey`, a key subset
 specifically used by VPP. These values are directly compatible with `KeyCode`, so existing properties are
 automatically upgraded to their `UnityKey` equivalents.
 
@@ -70,7 +70,7 @@ automatically upgraded to their `UnityKey` equivalents.
 
 #### Configuring Predefined Axes
 
-Predefined axes are now accessible via the static class `UnityVersionCompatibility.UnityInput`:
+Predefined axes are now accessible via the static class `VersionCompatibility.UnityInput`:
 
 ```csharp
 UnityInput.steerAxis
@@ -99,7 +99,7 @@ Example: To set the sensitivity of the steer axis to 5:
 
 ```csharp
 using UnityEngine;
-using UnityVersionCompatibility;
+using VersionCompatibility;
 
 public class SteerAxisSettings : MonoBehaviour
 {
@@ -127,7 +127,7 @@ Example: Forcing the `UnityAxis.Steer` axis to read the legacy `"Horizontal"` ax
 
 ```csharp
 using UnityEngine;
-using UnityVersionCompatibility;
+using VersionCompatibility;
 
 public class SteerLegacyMode : MonoBehaviour
 {
