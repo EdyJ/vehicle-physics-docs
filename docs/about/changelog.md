@@ -20,7 +20,7 @@ Release notes and upgrade guides:
 &fa-thumbs-up:lg; This page is updated from time to time.<br><br>Check out [@VehiclePhysics on X](https://x.com/VehiclePhysics){: .alert-link } for weekly updates. The hashtag [#VPPDev](https://twitter.com/search?q=%23vppdev&src=hashtag_click&f=live) shows the recent developments.
 {: .alert .alert-success }
 
-#### Now in the _develop_ branch (2025):
+#### Now in the _develop_ branch (2026):
 
 These features are working in the [PERRINN 424 project](https://github.com/PERRINN/project-424-unity), available on GitHub.
 
