@@ -2,7 +2,7 @@
 
 Brief summary of the most significant additions to Vehicle Physics Pro over time.
 
-Full development details are available via GIT revision logs ([VPP subscription required](/about/licensing/)):
+Full development details are available via Git revision logs ([VPP subscription required](/about/licensing/)):
 
 - [Vehicle Physics Core (Professional Edition)](https://vehiclephysics.repositoryhosting.com/trac/vehiclephysics_vehicle-physics-pro-sdk/log/)
 - [Vehicle Physics Core (Enterprise Edition)](https://vehiclephysics.repositoryhosting.com/trac/vehiclephysics_vehicle-physics-core/log/)
@@ -22,7 +22,7 @@ Release notes and upgrade guides:
 
 #### Now in the _develop_ branch (2026):
 
-These features are working in the [PERRINN 424 project](https://github.com/PERRINN/project-424-unity), available on GitHub.
+Some of these features are working in the [PERRINN 424 project](https://github.com/PERRINN/project-424-unity), available on GitHub.
 
 Kinematic suspension model
 :	- Simulation of the suspension geometry for true wheel motions.
@@ -39,6 +39,14 @@ Advanced tire contact patch
 	- Carcass simulation (relevant when riding kerbs).
 	- Tire deformation.
 	- Elastic adherence when stopped.
+	- Improved tire damping and compliance, including steering motion.
+
+Wheel dynamics model
+:	- New longitudinal and rotational wheel dynamics with a continuous stick-slip transition.
+	- Low-speed slip ratio and slip angle formulas.
+	- Stable behavior with braked wheels, at standstill, and on slopes.
+	- Rolling and ground resistance computed at the tire contact.
+	- Per-wheel shaft friction torque: lifted wheels spin down naturally.
 
 Tire Friction Model 2.0
 :	- Advanced industry-grade tire friction model: slip ratio, slip angle, load function.
@@ -46,7 +54,30 @@ Tire Friction Model 2.0
 	- Scriptable Tire Friction architecture: custom tire friction models may be implemented and used seamlessly.
 	- New realtime telemetry plots: Slip Ratio, Slip Angle, Wheel Torque.
 	- Reorganized telemetry data widget with slip and ground material properties always visible.
-	- New traction and steering aids designed for this model.
+	- New TCS and ABS designed for this model. Steering aids in progress.
+
+Driving aids
+:	- Traction Control (TCS) redesigned for the new wheel model, holding the target slip ratio while accelerating.
+	- New Anti-lock Braking (ABS) based on wheel slip control, with Pulsed and Continuous modes.
+	- New Hill Start Assist (HSA): holds the brakes after the brake pedal is released on a slope.
+	- Cruise control and speed limiter hold the configured speed exactly (PI controllers).
+
+Engine block
+:	- Torque curve defined by the engine specs: idle, max torque and max power (as rpm ranges), max rpm.
+	- Selectable throttle model: Torque or Power.
+	- Torque build-up lag.
+	- Existing setups upgraded automatically. The previous engine is available as EngineLegacy.
+
+Driveline
+:	- All blocks follow a consistent block model: exact torque transfer through clutches, gearboxes, differentials, and splitters.
+	- New ShaftFriction block simulating the driveline efficiency as friction, with a new friction torque setting.
+	- Automatic gearbox: clutch-to-clutch shifts in a single transition, including forward-reverse.
+	- Improved stability with very unequal inertias.
+	- New primary retarder brake.
+
+Control Units
+:	- New ControlUnitBehaviour base class for add-on electronic control units (ECUs) between the driver and the powertrain.
+	- Several units may be stacked. Units receive the engine specs and gear ratios.
 
 Scriptable Wheel Collision model
 :	- New VPP WheelCollider component completely replacing Unity's.
@@ -54,36 +85,47 @@ Scriptable Wheel Collision model
 	- Vehicles may use different wheel collision models simultaneously.
 
 New Input Devices Manager
-:	- Learn and configure any device in seconds
-	- Support any number of simultaneous devices
-	- Load and save device setup to file / JSON
-	- As simple to use as current Unity Input
-	- Support for hot plugging devices
+:	- Learn and configure any device in seconds.
+	- Support for any number of simultaneous devices.
+	- Load and save device setup to file / JSON.
+	- As simple to use as Unity's legacy Input Manager.
+	- Support for hot plugging devices.
 
 Electric MGU (Motor Generator Units)
-:	- Parametric torque maps
-	- Efficiency factor
-	- Regenerative braking
-	- Front-rear axle balancing
-	- Detailed editors with graphics charts
-	- Combination with mechanical brakes
+:	- Parametric torque maps.
+	- Efficiency factor.
+	- Regenerative braking.
+	- Front-rear axle balancing.
+	- Detailed editors with graphic charts.
+	- Combination with mechanical brakes.
 
 Advanced telemetry system
-:	- Multiple channels with different update frequencies and ranges
-	- Easily extensible from vehicle components (VehicleBehaviour)
-	- Different chart types: time/distance based, scatter plots, histogram
+:	- Multiple channels with different update frequencies and ranges.
+	- Easily extensible from vehicle components (VehicleBehaviour).
+	- Different chart types: time/distance based, scatter plots, histogram.
 
-Engine-independent code (in process)
+Automated tests
+:	- VPAccelerationTest and VPBrakingTest rewritten: launch throttle settings, braking settings per test.
+	- Target values shown as deviation %.
+
+Engine-independent code (in progress)
 :	- Custom API exposing all elements and features required by VPP.
-	- Interoperability with the equivalent elements in the host engine (i.e. Vector3, Transform...)
+	- Interoperability with the equivalent elements in the host engine (e.g. Vector3, Transform...).
 	- Math, physics, graphics, application, etc.
 	- All engine-dependent code resides in a single location. Easily portable to other engines.
 
 ----
 
+#### November 2026 - SDK V9.8-R3
+
+- **Unity 6.5 API compatibility**.
+- Improved reliability of **ResetTargetPosition** and **ResetTargetRotation** in VPVehicleJoint.
+- Removed the legacy sprung mass fix from the wheel suspension.
+- Fixed error handling in the SDK upgrade tools.
+
 #### August 2025 - SDK V9.8
 
-- **Removed dependency on unity's legacy Input Manager**.<br>
+- **Removed dependency on Unity's legacy Input Manager**.
 - See the **[Release notes for the SDK v9.8](/about/release-notes-sdk-v9.8)** for more details.
 
 #### April 2025 - SDK V9.7
@@ -102,7 +144,7 @@ upgrade guide.
 - **Brake** block may now be used anywhere in a custom driveline layout.
 - New **DryClutch** block implementing a standard friction clutch that may be used anywhere in a custom driveline layout.
 - New **PowerDiverter** helper block to distribute power between two paths in custom driveline layouts.
-- New **RegenerativeSteering** block for simulating regenerative steering system as typically used in tanks.
+- New **RegenerativeSteering** block for simulating regenerative steering systems, as typically used in tanks.
 - Improved **VPBlockDebugger** component for better readability.
 - Improved **VPTireAudio** to play the audio based on the contacted surface.
 - Minimum Unity version supported: 2019.4.
@@ -120,19 +162,14 @@ upgrade guide.
 - New Electric Motor model (MGU)
 - Improved force feedback model
 
-#### January 2024
-
-- New **VPP Wheel Collider** component completely replacing Unity's WheelCollider.
-- **Custom Wheel Collision Models** may be implemented as vehicle add-ons and used by VPP.
-
 ## 2023
 
 #### September 2023
 
 - Started working on the **foundation for upcoming engine-independent developments** in Vehicle
 	Physics Pro. Initially, a new wheel collider implementation **replacing Unity's WheelCollider**
-	will be developed on top of this foundation. Other Wheel contact models will follow. In the long term,
-	this will allow porting VPP to other engines in the future.
+	will be developed on top of this foundation. Other wheel contact models will follow. In the long term,
+	this will allow porting VPP to other engines.
 
 	More information:<br>
 	[https://twitter.com/VehiclePhysics/status/1706293552571920804](https://twitter.com/VehiclePhysics/status/1706293552571920804)<br>
@@ -144,8 +181,8 @@ upgrade guide.
 	wheel radius, suspension rates, and tire friction.
 - New **panning feature** in Orbit camera mode. Also new initialization options. ([Post](https://mastodon.gamedev.place/@VehiclePhysics/111046746970239518))
 - New **VPWindAudio** component featuring a better model to simulate the wind audio volume. ([Post](https://mastodon.gamedev.place/@VehiclePhysics/110888181172676984))
-- New **dual torque map model for MGUs** in 100% electric cars, allowing to configure front-rear power
-	balance with a single settings file. ([Post](https://mastodon.gamedev.place/@VehiclePhysics/110967418197376127))
+- New **dual torque map model for MGUs** in 100% electric cars, allowing the front-rear power
+	balance to be configured with a single settings file. ([Post](https://mastodon.gamedev.place/@VehiclePhysics/110967418197376127))
 - New empty scene which uses **built-in lighting settings** added to the Examples repo. This scene
 	doesn't require or generate a separate lighting file in Unity 2021+.
 - New features for the **LapTimer** component: best lap, ideal lap, lap list. ([Post](https://mastodon.gamedev.place/@VehiclePhysics/110769296823684249))
@@ -153,7 +190,7 @@ upgrade guide.
 #### June 2023
 
 - The FFB component **VPWheelDeviceInput** can now actively limit the wheel's range when configured to a
-	value larger than vehicle's steering wheel range.
+	value larger than the vehicle's steering wheel range.
 
 #### May 2023
 
@@ -164,7 +201,7 @@ upgrade guide.
 #### April 2023 - SDK V9.4
 
 - New force feedback effect in **VPWheelDeviceInput** to simulate vibrations due to engine stall.
-- New example scrips for new features: GearRangeLimit.cs, SetEngineRpm.cs.
+- New example scripts for new features: GearRangeLimit.cs, SetEngineRpm.cs.
 
 #### January 2023
 
@@ -195,43 +232,43 @@ upgrade guide.
 
 - Major **DirectInput** review for reliability. Among other improvements, now supports hot device connect/disconnect.
 - New **rumble effects** for steering wheel devices.
-- New event method **UpdateVehicleInput** in [VehicleBehaviour](/advanced/vehiclebehaviour-reference/) to implement vehicle input. This ensures the input devices to be read and applied to the vehicle within the same simulation step.
+- New event method **UpdateVehicleInput** in [VehicleBehaviour](/advanced/vehiclebehaviour-reference/) to implement vehicle input. This ensures that the input devices are read and applied to the vehicle within the same simulation step.
 - New **gearbox options** to protect the engine by shifting up above the given Max Rpm.
 - [VehicleBase](/advanced/vehiclebase-reference/#properties) now exposes **angular accelerations**.
 - The Professional edition is now **compatible with IL2CPP** scripting backend.
 
 #### March 2022 - SDK V9.3
 
-- New **front / rear differential lock settings** allowing to specify which	differential(s)
-	should be locked or open. [Databus](/advanced/databus-reference/#settings-channel)
-- Improved **downshifting in Limited Drive Modes (D1-D5)**, allowing better use of engine brake. [Gearbox](/blocks/gearbox/)
+- New **front / rear differential lock settings** for specifying which differentials
+	should be locked or open. [Data Bus](/advanced/databus-reference/#settings-channel)
+- Improved **downshifting in Limited Drive Modes (D1-D5)**, allowing better use of engine braking. [Gearbox](/blocks/gearbox/)
 - New **Steering wheel range** property per vehicle. [Steering](/blocks/steering/)
 - New **physical steering wheel range** setting (_configuredWheelRange_) in the device input components.
-- New **force feedback rumble effects** based in engine rpm, speed, and suspension bumps.
+- New **force feedback rumble effects** based on engine rpm, speed, and suspension bumps.
 - Major **DirectInput overhaul**: support device reconnection, improved reliability, more force feedback effects.
-- New **rpm scaling** property in VPAudio. Better handing of engine rpm audio.
+- New **rpm scaling** property in VPAudio. Better handling of engine rpm audio.
 
-Check the file **Changelist.txt** in the Unity project for compatibility-breaking changes.
+Check the file **ChangeList.txt** in the Unity project for compatibility-breaking changes.
 
 ## 2021
 
 #### December 2021 - SDK V9.2
 
 - New **Limited Drive modes (D1-D5)** in automatic gearbox. These modes work like the regular D
-	mode but using up to the specified gear only (i.e. up to 3nd gear in D3). [Gearbox](/blocks/gearbox/)
+	mode but using up to the specified gear only (e.g. up to 3rd gear in D3). [Gearbox](/blocks/gearbox/)
 - New **Variable Vehicle Cargo** component that simulates cargo in any vehicle easily by
 	modifying mass and center of mass.
 - New **DirectInput Steer, Pedals and Shifter** components to configure individual
-    DirectInput devices separately, each device providing a different functionality.
+	DirectInput devices separately, each device providing a different functionality.
 
 #### September 2021
 
-- New **Multi-vehicle telemetry** display allowing convenient analysis of multiple vehicles at once. This is specially useful to monitor articulated and multi-articulated vehicles. [Tweet](https://twitter.com/VehiclePhysics/status/1443205817055039490)
+- New **Multi-vehicle telemetry** display allowing convenient analysis of multiple vehicles at once. This is especially useful to monitor articulated and multi-articulated vehicles. [Tweet](https://twitter.com/VehiclePhysics/status/1443205817055039490)
 
 #### July 2021
 
 - New **6x6 driveline layouts** for vehicles with [three driven axles](/blocks/driveline/#three-driven-axles).
-- New: VPP source code may now be built to **assemblies** by importing an unitypackage with the assembly definitions.
+- New: VPP source code may now be built to **assemblies** by importing a unitypackage with the assembly definitions.
 
 #### June 2021
 
@@ -247,12 +284,12 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 
 #### December 2020
 
-- New **UpdateAfterFixedUpdate** event in VPVehicleBehavior. Called only on those Update events that happen right after a FixedUpdate event.
+- New **UpdateAfterFixedUpdate** event in VehicleBehaviour. Called only on those Update events that happen right after a FixedUpdate event.
 - New **Combined Retarder Brake** option in the brakes section to apply retarder brake automatically from the brake pedal.
 
 #### November 2020
 
-- Fixed wheel suspension issues caused by Unity/PhysX faked **sprung mass model**.
+- Fixed wheel suspension issues caused by the simplified Unity/PhysX **sprung mass model**.
 - New **VPAudioExtras** component for additional sound effects, starting with **engine starting sound**.
 
 #### October 2020
@@ -286,7 +323,7 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 #### February 2020
 
 - New fast and accurate Spline **projection** and **distance measurement** methods. [Video](https://twitter.com/VehiclePhysics/status/1225066029807800320)
-- New **PID-based VPTargetChaser** component for precisely follow a moving target. [Video](https://twitter.com/VehiclePhysics/status/1232680344404611077)
+- New **PID-based VPTargetChaser** component for precisely following a moving target. [Video](https://twitter.com/VehiclePhysics/status/1232680344404611077)
 - Spa-Francorchamps example track reworked and simplified.
 
 #### January 2020
@@ -297,23 +334,23 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 
 #### November 2019 - SDK V7
 
-- New component **[VPVehicleToolkit](/components/vehicle-toolkit/)** providing an useful high-level interface to the most commonly used vehicle features.
+- New component **[VPVehicleToolkit](/components/vehicle-toolkit/)** providing a useful high-level interface to the most commonly used vehicle features.
 - New support for the **Fanatec Podium Wheel Base DD2** steering wheel.
-- Added support to 3D vehicle models oriented in any axis, not necessarily "front +Z".
+- Added support for 3D vehicle models oriented in any axis, not necessarily "front +Z".
 - New **camera movement** option in first person (driver) view.
 - Splines may now be imported from **CSV** files.
 
 #### October 2019
 
 - New **electric vehicle controller** providing precise simulation of electric motors with regenerative braking. [Tweet](https://twitter.com/VehiclePhysics/status/1196435439588118529)
-- Added support **CXC** motion cueing systems. [Info on CXC](https://www.cxcsimulations.com)
+- Added support for **CXC** motion cueing systems. [Info on CXC](https://www.cxcsimulations.com)
 - New **automatic spring and damper setup** via context menu option in the VPWheelCollider component.
 - New **example scripts** for writing custom input logic, custom wheel effects and custom handling setup.
 - New components to precisely configure timing and inertias in the excavator controller.
 
 #### August 2019 - SDK V6
 
-- **The City scenery** reworked, including a 5km (3mi) long, 6-lanes highway for high speed tests. [Twitter announcement](https://twitter.com/VehiclePhysics/status/1167067113128960001)
+- **The City scenery** reworked, including a 5km (3mi) long, 6-lane highway for high speed tests. [Twitter announcement](https://twitter.com/VehiclePhysics/status/1167067113128960001)
 - New **Sport Coupe Demo** scene featuring the new **Sport Coupe** car in the improved The City scenery.
 - New **Simtools** motion platform support. [Info on Simtools](https://www.xsimulator.net/community/threads/how-to-write-a-game-plugin-for-simtools-2-0-api-documentation.9107/)
 - VPP Demos now include support for **D-BOX** and **Simtools** motion platforms.
@@ -351,7 +388,7 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 #### March 2019
 
 - New **auto-shift in reverse gears** option, in both manual and automatic transmissions.
-- UI: **Driver Assists panel** showing the available assists and allowing to selectively disable them.
+- UI: **Driver Assists panel** showing the available assists and allowing them to be disabled selectively.
 
 #### February 2019
 
@@ -363,7 +400,7 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 #### January 2019 - SDK V5
 
 - New **Engine Curve Fitting Tool** providing a procedure for configuring the Engine curves based on real curve data. Unity menu > Tools > Vehicle Physics > Engine Curve Fit Tool.
-- New **rpm limiter mode selector** in the engine. The new **Injection Limit** reduces the throttle to keep the rpms under or at the limit. Previously, only Injection Cut mode was available to cut throttle at small intervals.
+- New **rpm limiter mode selector** in the engine. The new **Injection Limit** reduces the throttle to keep the rpm at or below the limit. Previously, only Injection Cut mode was available to cut throttle at small intervals.
 - **Compatibility Upgrade** that requires applying a patch (included) to the Unity project. [More information](https://www.edy.es/dev/2019/01/2019-01-25-compatibility-upgrade-for-vehicle-physics-pro/)
 
 ## 2018
@@ -385,19 +422,19 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 
 #### August 2018
 
-- New **MatchInertia** utility to help rigging complex multi-body vehicles (i.e. excavators).
+- New **MatchInertia** utility to help rigging complex multi-body vehicles (e.g. excavators).
 - Improvements in a variety of components: VPWheelCollider, VPVehicleJoint, VPSolidCargo.
 
 #### July 2018
 
 - New **VPSolidCargo** component for easily configuring the cargo in the vehicle (volume, mass and position).
 - New **VPWeightData** telemetry component that displays the weight per axle or group of axles.
-- New **bump stops** feature preventing the suspension to reach its limits.
+- New **bump stops** feature preventing the suspension from reaching its limits.
 - New **Truck Audio** prefab with complete audio settings for trucks.
 
 #### June 2018
 
-- New **VPChassisInertia** component that configures a specific set of colliders to represent the inertia of the vehicle chassis. The inertia defines the understeer / oversteer behaviour.
+- New **VPChassisInertia** component that configures a specific set of colliders to represent the inertia of the vehicle chassis. The inertia defines the understeer / oversteer behavior.
 - Support for the **Logitech G29** steering wheel.
 
 #### May 2018
@@ -407,8 +444,8 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 
 #### April 2018 - SDK V3
 
-- New **snapshot save / restore** feature. Allows to save the full state of the vehicle and completely restore it later. Very useful on automated tests.
-- New engine type: **Synchronous Drive**. Simulates a synchronous electric motor that enforces a specific RPMs in the output applying up to a given amount of torque.
+- New **snapshot save / restore** feature. Allows saving the full state of the vehicle and completely restore it later. Very useful on automated tests.
+- New engine type: **Synchronous Drive**. Simulates a synchronous electric motor that enforces a specific rpm in the output applying up to a given amount of torque.
 - Support for **D-BOX motion platforms** [[D-BOX site]](https://catalogue.d-box.com/en/video-games/3910932/). The new add-on component VPDboxOutput sends all the vehicle telemetry and state to the D-BOX API.
 - New **dual-drive steering** vehicle setup for caterpillars (TrackVehicleController). Supports smooth speed transitions and neutral rotation.
 - New **Bulldozer controller** (VPBulldozerController) for simulating this very special type of vehicle: engine, torque converter, locked differential, two clutches and two caterpillars.
@@ -438,8 +475,8 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 #### April 2017
 
 - New component **VPTireFrictionModifier** for configuring tire friction for specific wheels.
-- New **damper calculation** replacing PhysX's (faulty by design)
-- New high-level component for managing the vehicle settings in a comprehensive way (i.e. safe, sport, race...)
+- New **damper calculation** replacing PhysX's
+- New high-level component for managing the vehicle settings in a comprehensive way (e.g. safe, sport, race...)
 - New experimental **bike controller** (two-wheeled vehicle)
 - New **leaf spring** suspension simulation.
 
@@ -455,7 +492,7 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 
 #### January 2017
 
-- New component for **non-linear speed gauges** (i.e. Volkswagen Scirocco).
+- New component for **non-linear speed gauges** (e.g. Volkswagen Scirocco).
 - New **VPLiquidCargo** component for simulating sloshing liquids in confined tanks (liquid cargo, fuel tank...)
 
 ## 2016
@@ -481,7 +518,7 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 #### August 2016
 
 - New **Replay system** with rewind & continue, playback forwards / reverse, jump, fast forward / reverse, save and load.
-- New VPHeadMotion component for easily setup the driver's view with inertial movements.
+- New VPHeadMotion component for easily setting up the driver's view with inertial movements.
 
 #### July 2016
 
@@ -516,7 +553,7 @@ Check the file **Changelist.txt** in the Unity project for compatibility-breakin
 
 #### November 2015
 
-- New **retarder brake** feature. Mostly used on transport
+- New **retarder brake** feature. Mostly used in transport vehicles.
 - New inspector drawers for blocks and components
 
 #### October 2015
@@ -542,7 +579,7 @@ _Code name: NinjaVehicle_
 - Engine (incl. torque curves, inertia, idle control, stall)
 - Clutch (incl. torque converter)
 - Gearbox (incl. manual, automatic, auto-shift, parking mode)
-- Steering (incl. ackerman, toe, multi-axle steering)
+- Steering (incl. Ackermann, toe, multi-axle steering)
 - Transmission (incl. differential and transfer case settings)
 - Axles (incl. brake circuits and steering modes)
 - Differential (incl. open, locked, viscous, LSD, torsen)
